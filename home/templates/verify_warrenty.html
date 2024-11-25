@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}    
+<title>Check Advance Dental Export's warranty </title>
+<meta name="description" content="By contacting customer service or reviewing your warranty documents for details on coverage and terms." />
+<link rel="canonical" href="https://advancedentalexport.com/verify-warranty/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Check Advance Dental Export's warranty " />
+<meta property="og:description" content="Check Advance Dental Export's warranty by contacting customer service or reviewing your warranty documents for details on coverage and terms." />
+<meta property="og:url" content="https://advancedentalexport.com/" />
+<meta property="og:site_name" content="@advancedentalexport" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Check Advance Dental Export's warranty by contacting customer service or reviewing your warranty documents for details on coverage and terms." />
+<meta name="twitter:title" content="Check Advance Dental Export's warranty " />
+
+{% endblock seo %}
+
+{% block css %}
+{% endblock css %}
+    
+
+
+{% block body %}
+	    
+			<div id="breadcrumb" class="division">
+				<div class="container">
+					<div class="row">						
+						<div class="col">
+							<div class=" breadcrumb-holder">
+
+								<!-- Breadcrumb Nav -->
+								<nav aria-label="breadcrumb">
+								  	<ol class="breadcrumb">
+								    	<li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+								    	<li class="breadcrumb-item active" aria-current="page">Verify Warranty</li>
+								  	</ol>
+								</nav>
+
+								<!-- Title -->
+								<h1 class="h4-sm steelblue-color">Verify Warranty Advance Dental Export</h1>
+
+							</div>
+						</div>
+					</div>  <!-- End row -->	
+				</div>	<!-- End container -->		
+			</div>	<!-- END BREADCRUMB -->	
+
+
+			<!-- CONTACTS-1
+			============================================= -->
+			<section id="contacts-1" class="wide-60 contacts-section division">				
+				<div class="container">
+					
+					<div class="row">	
+						
+						<!-- CONTACT FORM -->	
+				 		<div class="col-md-12 col-lg-12">
+				 			<div class="form-holder mb-40">
+				 				<form  method="POST" 
+								 action="" class="row contact-form2">
+								 {% csrf_token %}
+				                                            
+					                <!-- Contact Form Input -->
+					                <div id="input-name" class="col-md-12 col-lg-6">
+					                    <label>Order ID</label>
+					                	<input type="text" name="id" class="form-control name" placeholder="Enter Your Order ID*" required> 
+					                </div>
+					                        
+					                <div id="input-email" class="col-md-12 col-lg-6">
+					                    <label>Authentication ID</label>
+					                	<input type="text" name="auth" class="form-control email" placeholder="Enter Your Authentication ID*" required> 
+					                </div>
+
+					                
+					                                            
+					                <!-- Contact Form Button -->
+					                <div class="col-lg-12 mt-15 form-btn">  
+					                	<button type="submit" class="btn btn-blue blue-hover submit">Verify Now</button> 
+					                </div>
+					                                                              
+					                
+				                                              
+				                </form> 
+
+				 			</div>	
+				 		</div> 	<!-- END CONTACT FORM -->	
+
+
+				 	</div>	<!-- End row -->			  
+ 
+
+				</div>	   <!-- End container -->		
+			</section>	<!-- END CONTACTS-1 -->
+
+
+
+
+{% endblock body %}
+    
+
+
+{% block javascript %}
+		
+{% endblock javascript %}
+    
