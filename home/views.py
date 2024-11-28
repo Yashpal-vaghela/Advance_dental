@@ -125,10 +125,38 @@ def contact_new(request):
 
 
 def connect(request):
-    context = {
-
-    }
+    ip_address = get_client_ip(request)
+    country_code = get_country_code(ip_address)
+    default_whatsapp_url = "https://wa.me/918469888877"
+    if country_code == "UNKNOWN" or country_code is None :
+        return redirect(default_whatsapp_url)
+    elif country_code == 'IN':
+        whatsapp_link = 'https://wa.me/918469888877'
+    else:
+        whatsapp_link = 'https://wa.me/15513800385'
+    context = {'whatsapp_link': whatsapp_link}
     return render(request, 'connect.html', context)
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+def get_country_code(ip_address):
+    api_key = 'ipb_live_nSNrI1ffpJzunbujQBk4J4CIl9mobm42YULSyeE1'
+    url = f'https://api.ipbase.com/v2/info?apikey={api_key}&ip={ip_address}'
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Will raise an error for bad status codes
+        data = response.json()
+        country_code = data.get('data', {}).get('country', {}).get('alpha2')
+        return country_code if country_code else 'UNKNOWN'
+    except requests.exceptions.RequestException as e:
+        print(f"Error: {e}")
+        return 'UNKNOWN'
     
 def career(request):
     context = {
