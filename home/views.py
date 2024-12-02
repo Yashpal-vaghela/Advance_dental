@@ -127,13 +127,13 @@ def contact_new(request):
 def connect(request):
     ip_address = get_client_ip(request)
     country_code = get_country_code(ip_address)
-    default_whatsapp_url = "https://wa.me/918469888877"
-    if country_code == "UNKNOWN" or country_code is None :
-        return redirect(default_whatsapp_url)
+    
+    if country_code == "UNKNOWN" or country_code is None:
+        whatsapp_link = "https://wa.link/apuf2y"
     elif country_code == 'IN':
-        whatsapp_link = 'https://wa.me/918469888877'
+        whatsapp_link = 'https://wa.link/apuf2y'
     else:
-        whatsapp_link = 'https://wa.me/15513800385'
+        whatsapp_link = 'https://wa.link/wf0r4d'
     context = {'whatsapp_link': whatsapp_link}
     return render(request, 'connect.html', context)
 
