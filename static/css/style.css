@@ -5019,11 +5019,12 @@
  .footer-contact-wrapper .row {
    height: 100%;
    box-shadow: 5px -2px 13px -2px #00a3c8;
+   background-color: #fff;
  }
  .footer-contact-wrapper .col-4 {
    height: 100%;
-   padding: 10px 15px;
-   background-color: #fff;
+   padding: 20px 30px;
+   /* background-color: #fff; */
  }
  /* .footer-contact-wrapper .col-4 .d-flex{
    padding: 10px 15px;
@@ -5077,7 +5078,7 @@
  }
  .footer-contact-section{
    margin-top: 0px;
-   margin-bottom: -57px;
+   margin-bottom: -70px;
    padding: 0px 10px 0px 10px;
    z-index: 1;
  }
