@@ -1,98 +1,126 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block seo %}    
-<title>Advanced Dental Export - Social Media Channels</title>
-<meta name="description" content="Follow Advanced Dental Export on social media for updates, promotions, and dental care tips!" />
-<link rel="canonical" href="https://www.myoneblog.com/" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Advanced Dental Export - Social Media Channels" />
-<meta property="og:description" content="Follow Advanced Dental Export on social media for updates, promotions, and dental care tips!" />
-<meta property="og:url" content="https://www.myoneblog.com/" />
-<meta property="og:site_name" content="My One Blog" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Follow Advanced Dental Export on social media for updates, promotions, and dental care tips!" />
-<meta name="twitter:title" content="Advanced Dental Export - Social Media Channels" />
-{% endblock seo %}
+{% block seo %}
+  <title>Advanced Dental Export - Social Media Channels</title>
+  <meta name="description" content="Follow Advanced Dental Export on social media for updates, promotions, and dental care tips!" />
+  <link rel="canonical" href="https://www.myoneblog.com/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Advanced Dental Export - Social Media Channels" />
+  <meta property="og:description" content="Follow Advanced Dental Export on social media for updates, promotions, and dental care tips!" />
+  <meta property="og:url" content="https://www.myoneblog.com/" />
+  <meta property="og:site_name" content="My One Blog" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="Follow Advanced Dental Export on social media for updates, promotions, and dental care tips!" />
+  <meta name="twitter:title" content="Advanced Dental Export - Social Media Channels" />
+{% endblock %}
 
 {% block css %}
-<style>
-  .custom-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .custom-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .list-group {
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 0;
-  }
-  
-  .list-group-item {
-    border: none;
-    padding: 15px;
-    border-radius: 0;
-    background-color: transparent;
-  }
-  
-  .list-group-item a {
-    display: block;
-    color: #333;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .list-group-item a:hover {
-    color: #25A58F;
-  }
-</style>
-{% endblock css %}
+  <style>
+    .custom-card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
     
+    .custom-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .list-group {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+    
+    .list-group-item {
+      border: none;
+      padding: 15px;
+      border-radius: 0;
+      background-color: transparent;
+    }
+    
+    .list-group-item a {
+      display: block;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .list-group-item a:hover {
+      color: #25a58f;
+    }
+    .virtual-lab-tour-button {
+      background-color: #25a58f;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .virtual-lab-tour-button:hover {
+      background-color: #00a3c8;
+      transform: scale(1.1);
+    }
+  </style>
+{% endblock %}
+
 {% block body %}
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 mt-4">
-      <p class="text-center">Advanced Dental Export is a dental lab based in Surat, Gujarat, India. Follow us on social media for updates, promotions, and dental care tips!</p>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 mt-4">
+        <p class="text-center">Advanced Dental Export is a dental lab based in Surat, Gujarat, India. Follow us on social media for updates, promotions, and dental care tips!</p>
+      </div>
     </div>
-  </div>
-  
-  <div class="row justify-content-center mt-4 mb-4">
-    <div class="col-md-6">
-      <div class="card custom-card">
-        <div class="card-body">
-          <h2 class="card-title text-center mb-4" style="color: #25A58F;">ADE Social Media Channels</h2>
-          
-          <ul class="list-group text-center">
-            <li class="list-group-item">
-              <a href="https://www.facebook.com/advance.dental.exports" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook"></i> Facebook</a>
-            </li>
-            <li class="list-group-item">
-              <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" style="color: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </li>
-            <li class="list-group-item">
-              <a href="https://www.instagram.com/advance_dental_export/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram"></i> Instagram</a>
-            </li>
-            <li class="list-group-item">
-              <a href="tel:+918488888877" target="_blank" style="color: #007bff;"><i class="fas fa-phone"></i> Phone</a>
-            </li>
-            <li class="list-group-item">
-              <a href="{{ whatsapp_link }}" target="_blank" style="color: #25d366;"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-            </li>
-            
-          </ul>
+    <div class="text-center mt-4">
+      {% if show_button %}
+        <button class="virtual-lab-tour-button" onclick="handleButtonClick()">Virtual Lab tour</button>
+      {% endif %}
+    </div>
+    <div id="lab-tour-video" style="display: none; justify-content: center; align-items: center; height: 100vh;">
+      <video controls width="200" height="360">
+        <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/Advance+Dental+Exportnew.mp4" type="video/mp4" />Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="row justify-content-center mt-4 mb-4">
+      <div class="col-md-6">
+        <div class="card custom-card">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4" style="color: #25A58F;">ADE Social Media Channels</h2>
+
+            <ul class="list-group text-center">
+              <li class="list-group-item">
+                <a href="https://www.facebook.com/advance.dental.exports" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook"></i> Facebook</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" style="color: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.instagram.com/advance_dental_export/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram"></i> Instagram</a>
+              </li>
+              <li class="list-group-item">
+                <a href="tel:+918488888877" target="_blank" style="color: #007bff;"><i class="fas fa-phone"></i> Phone</a>
+              </li>
+              <li class="list-group-item">
+                <a href="{{ whatsapp_link }}" target="_blank" style="color: #25d366;"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-{% endblock body %}
+{% endblock %}
 
 {% block javascript %}
-		
-{% endblock javascript %}
+  <script>
+    function handleButtonClick() {
+      const videoElement = document.getElementById('lab-tour-video')
+      videoElement.style.display = 'flex'
+    }
+  </script>
+{% endblock %}

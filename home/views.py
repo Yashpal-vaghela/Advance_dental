@@ -134,7 +134,11 @@ def connect(request):
         whatsapp_link = 'https://wa.link/apuf2y'
     else:
         whatsapp_link = 'https://wa.link/wf0r4d'
-    context = {'whatsapp_link': whatsapp_link}
+    show_button = country_code not in ['IN', 'UNKNOWN']
+    context = {
+        'whatsapp_link': whatsapp_link,
+        'show_button' : show_button
+        }
     return render(request, 'connect.html', context)
 
 def get_client_ip(request):
@@ -144,13 +148,14 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
 def get_country_code(ip_address):
     api_key = 'ipb_live_nSNrI1ffpJzunbujQBk4J4CIl9mobm42YULSyeE1'
     url = f'https://api.ipbase.com/v2/info?apikey={api_key}&ip={ip_address}'
     
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Will raise an error for bad status codes
+        response.raise_for_status()
         data = response.json()
         country_code = data.get('data', {}).get('country', {}).get('alpha2')
         return country_code if country_code else 'UNKNOWN'

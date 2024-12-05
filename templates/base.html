@@ -32,7 +32,6 @@
     <link href="{% static 'css/jquery.datetimepicker.min.css' %}" rel="stylesheet" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
 
     {% block css %}
 
@@ -334,25 +333,25 @@
         <section class="footer-contact-section">
           <div class="container">
             <div class="footer-contact-wrapper">
-              <div class="row mx-0 align-items-center">
-                <div class="col-lg-4 col-4">
-                  <div class="d-flex justify-content-between align-items-center">
+              <div class="row mx-0">
+                <div class="col-lg-4  col-md-4 col-sm-4 col-12 px-2 px-sm-4">
+                  <div class="d-flex footer-content-wrapper">
                     <i aria-hidden="true" class="fas fa-map-marked-alt footer-contact-icon"></i>
                     <p class="footer-contact-title mb-0">Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA</p>
                   </div>
                 </div>
-                <div class="col-lg-4 col-4">
-                  <div class="d-flex align-items-center" style="height: 100">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
+                  <div class="d-flex footer-content-wrapper">
                     <i aria-hidden="true" class="fas fa-envelope-open-text footer-contact-icon"></i>
                     <p class="footer-contact-title mb-0">info@advancedentalexport.com</p>
                   </div>
                 </div>
-                <div class="col-lg-4 col-4">
-                  <div class="d-flex align-items-center" style="height: 100">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
+                  <div class="d-flex footer-content-wrapper">
                     <i aria-hidden="true" class="fas fa-phone-alt footer-contact-icon"></i>
-                    <div class="footer-contact-title d-block">
-                      <p>+91 84888 88877</p>
-                      <p>+91 84888 88877</p>
+                    <div class="d-block">
+                      <p class="footer-contact-title">+91 84888 88877</p>
+                      <p class="footer-contact-title">+91 84888 88877</p>
                     </div>
                   </div>
                 </div>
@@ -389,7 +388,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-md-6 col-lg-3">
               <div class="footer-links mb-40">
                 <h5 class="h5-xs">Important Links</h5>
@@ -412,6 +410,9 @@
                   <li>
                     <a href="{% url 'home:testimonals' %}">Testimonials</a>
                   </li>
+                  <li>
+                    <a href="https://ultimatesmiledesign.com" target="_blank">Ultimate Smile Design</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -422,6 +423,9 @@
                   <li>
                     <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
                   </li>
+                  <li class="nl-simple header-btn clss">
+                    <a href="https://client.advancedentalexport.com/">Client Login</a>
+                  </li>
                   <li>
                     <a href="{% url 'home:gallery' %}">Gallery</a>
                   </li>
@@ -431,6 +435,9 @@
                   <li>
                     <a href="{% url 'home:beforeafter' %}">Before After</a>
                   </li>
+                  <li class="nl-simple header-btn" aria-haspopup="true">
+                    <a href="{% url 'home:stl' %}">Submit STL File</a>
+                  </li>
                   <!-- <li><a href="{% url 'home:cookie' %}">Cookie Policy</a></li> -->
                   <li>
                     <a href="https://app.advancedentalexport.com/sitemap.xml">Site Map</a>
@@ -439,6 +446,14 @@
               </div>
             </div>
           </div>
+          <div class="bottom-footer">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="footer-copyright">
+                  &copy; 2024 <span><a href="https://advancedentalexport.com/">Advance Dental Export</a></span>. All Rights Reserved
+                </p>
+              </div>
+            </div>
         </div>
       </footer>
     </div>
@@ -525,5 +540,6 @@
         })
       </script>
     {% endfor %}
+    {% block javascript %}{% endblock %}
   </body>
 </html>
