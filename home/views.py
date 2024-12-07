@@ -134,10 +134,20 @@ def connect(request):
         whatsapp_link = 'https://wa.link/apuf2y'
     else:
         whatsapp_link = 'https://wa.link/wf0r4d'
+
+    if country_code == 'UNKNOWN' or country_code is None:
+        phone_number = '+918469888877'
+    elif country_code == 'IN':
+        phone_number = '+918469888877'
+    else:
+        phone_number = '+15513800385'    
+
     show_button = country_code not in ['IN', 'UNKNOWN']
     context = {
         'whatsapp_link': whatsapp_link,
-        'show_button' : show_button
+        'show_button' : show_button,
+        'phone_number' : phone_number,
+        'hide_social_image': True
         }
     return render(request, 'connect.html', context)
 

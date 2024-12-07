@@ -18,13 +18,18 @@
 
 {% block css %}
   <style>
+    body {
+      background: linear-gradient(135deg, #e8f5f9, #ffffff);
+    }
     .custom-card {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .custom-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
     
     .list-group {
@@ -38,6 +43,7 @@
       padding: 15px;
       border-radius: 0;
       background-color: transparent;
+      transition: background-color 0.3s ease;
     }
     
     .list-group-item a {
@@ -45,9 +51,14 @@
       color: #333;
       font-weight: bold;
       text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       transition: color 0.3s ease;
     }
-    
+    .list-group-item:hover {
+      background-color: #e6e6e6;
+    }
     .list-group-item a:hover {
       color: #25a58f;
     }
@@ -58,12 +69,41 @@
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
     
     .virtual-lab-tour-button:hover {
       background-color: #00a3c8;
       transform: scale(1.1);
+    }
+    .social-media-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px; 
+      margin-bottom: 20px;
+    }
+    .social-icon-box {
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .social-icon-box img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 576px) {
+      .social-media-row{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .social-icon-box {
+        margin-bottom: 5px;
+        width: calc(60% -10px);
+      }
     }
   </style>
 {% endblock %}
@@ -76,11 +116,11 @@
       </div>
     </div>
     <div class="text-center mt-4">
-      {% if show_button %}
-        <button class="virtual-lab-tour-button" onclick="handleButtonClick()">Virtual Lab tour</button>
-      {% endif %}
+    {% if show_button %}
+      <button class="virtual-lab-tour-button" onclick="handleButtonClick()">Virtual Lab Tour</button>
+    {% endif %}
     </div>
-    <div id="lab-tour-video" style="display: none; justify-content: center; align-items: center; height: 100vh;">
+    <div id="lab-tour-video" style="display: none; justify-content: center; align-items: center; margin-top: 2rem;">
       <video controls width="200" height="360">
         <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/Advance+Dental+Exportnew.mp4" type="video/mp4" />Your browser does not support the video tag.
       </video>
@@ -90,24 +130,53 @@
       <div class="col-md-6">
         <div class="card custom-card">
           <div class="card-body">
-            <h2 class="card-title text-center mb-4" style="color: #25A58F;">ADE Social Media Channels</h2>
-
+            <h2 class="card-title text-center mb-4" style="color: #25A58F;">Explore ADE’s Digital Presence</h2>
+            
             <ul class="list-group text-center">
-              <li class="list-group-item">
-                <a href="https://www.facebook.com/advance.dental.exports" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook"></i> Facebook</a>
-              </li>
-              <li class="list-group-item">
-                <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" style="color: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              </li>
-              <li class="list-group-item">
-                <a href="https://www.instagram.com/advance_dental_export/" target="_blank" style="color: #c32aa3;"><i class="fab fa-instagram"></i> Instagram</a>
-              </li>
-              <li class="list-group-item">
-                <a href="tel:+918488888877" target="_blank" style="color: #007bff;"><i class="fas fa-phone"></i> Phone</a>
-              </li>
-              <li class="list-group-item">
-                <a href="{{ whatsapp_link }}" target="_blank" style="color: #25d366;"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-              </li>
+              <div class="social-media-row">
+                <li class="list-group-item">
+                  <a href="https://www.facebook.com/advance.dental.exports" target="_blank" style="color: #333; display: flex; flex-direction: column; align-items: center;">
+                    <div class="social-icon-box">
+                      <img src ="/static/img/facebook.png" alt="Facebook"/>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" style="color: #333; display: flex; flex-direction: column; align-items: center;">
+                    <div class="social-icon-box">
+                      <img src ="/static/img/linkedin.png" alt="LinkedIn"/>
+                    </div> 
+                    LinkedIn
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://www.instagram.com/advance_dental_export/" target="_blank" style="color: #333; display: flex; flex-direction: column; align-items: center;">
+                    <div class="social-icon-box">
+                      <img src ="/static/img/instagram.png" alt="instagram"/>
+                    </div> 
+                    Instagram
+                  </a>
+                </li>
+              </div>
+              <div class="social-media-row">
+                <li class="list-group-item">
+                  <a href="tel:{{phone_number}}" target="_blank" style="color: #333; display: flex; flex-direction: column; align-items: center;">
+                    <div class="social-icon-box">
+                      <img src ="/static/img/apple.png" alt="phone"/>
+                    </div> 
+                    Phone
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="{{ whatsapp_link }}" target="_blank" style="color: #333; display: flex; flex-direction: column; align-items: center;">
+                    <div class="social-icon-box">
+                      <img src ="/static/img/whatsapp.png" alt="whatsapp"/>
+                    </div>
+                    Whatsapp
+                  </a>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
@@ -120,7 +189,16 @@
   <script>
     function handleButtonClick() {
       const videoElement = document.getElementById('lab-tour-video')
-      videoElement.style.display = 'flex'
-    }
+      const buttonElement = document.querySelector('.virtual-lab-tour-button')
+
+      if (buttonElement.textContent === 'Virtual Lab Tour') {  
+        videoElement.style.display = 'flex'
+        buttonElement.textContent = 'Close Video'
+      } else {
+        videoElement.style.display = 'none'
+        buttonElement.textContent = 'Virtual Lab Tour'
+        videoElement.querySelector('video').pause()
+      }
+    }  
   </script>
 {% endblock %}

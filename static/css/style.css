@@ -5072,6 +5072,7 @@
     color: #1d907c;
     margin-bottom: 0;
     word-break: break-word;
+    font-size: 0.9rem;
  }
  /* new footer */
  .footer-section {
@@ -5099,7 +5100,7 @@
     padding: 0px 10px 0px 10px;
     z-index: 1;
  }
-
+ 
  @media only screen and (max-width:991px) {
     .footer-contact-section {
        margin-bottom: -100px;
@@ -5172,7 +5173,7 @@
          font-size: 3rem !important;
       }
       .footer-contact-title{
-         font-size: 1rem !important;
+         font-size: 0.9rem !important;
       }
    }
  } 

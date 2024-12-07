@@ -59,6 +59,7 @@
 		</div>
 	</div>     -->
     <!-- sidebar -->
+    {% if not hide_social_image %}
     <div id="fixed-social">
       {% comment %} <div>
         <a href="https://www.facebook.com/advance.dental.exports" class="fixed-facebook" target="_blank">
@@ -93,6 +94,7 @@
         </a>
       </div>
     </div>
+    {% endif %}
     <!-- end -->
     <div id="page" class="page">
       <header id="header" class="header">
@@ -370,9 +372,9 @@
                   <a href="https://advancedentalexport.com/">Advance Dental Export</a>
                   is a full service dental lab that specializes in dental implants, cosmetic dentistry and digital dentistry. Haresh Savani, CEO, started’ ADE’ in 2009 with a vision to fabricate only the highest quality dental prosthetics to ensure long-lasting and esthetically pleasing outcomes for every dental lab product.
                 </p>
-                <p>
+                {% comment %} <p>
                   <a href="https://play.google.com/store/apps/details?id=com.dental.doctore_app" target="_blank"><img src="{% static 'lo.png' %}" class="download" alt="Download" /></a>
-                </p>
+                </p> {% endcomment %}
                 <div class="footer-socials-links mt-20">
                   <ul class="foo-socials text-center clearfix">
                     <li>
@@ -391,7 +393,7 @@
             <div class="col-md-6 col-lg-3">
               <div class="footer-links mb-40">
                 <h5 class="h5-xs">Important Links</h5>
-                <ul class="foo-links clearfix">
+                <ul class="foo-links clearfix" style="margin-top: 30px;">
                   <li>
                     <a href="{% url 'home:about' %}">About us</a>
                   </li>
@@ -419,7 +421,7 @@
             <div class="col-md-6 col-lg-3">
               <div class="footer-links mb-40">
                 <h5 class="h5-xs">Discover</h5>
-                <ul class="clearfix">
+                <ul class="clearfix" style="margin-top: 30px;">
                   <li>
                     <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
                   </li>
