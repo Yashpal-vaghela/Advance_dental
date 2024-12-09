@@ -160,14 +160,13 @@ def get_client_ip(request):
     return ip
 
 def get_country_code(ip_address):
-    api_key = 'ipb_live_nSNrI1ffpJzunbujQBk4J4CIl9mobm42YULSyeE1'
-    url = f'https://api.ipbase.com/v2/info?apikey={api_key}&ip={ip_address}'
+    url = f'https://api.iplocation.net/?ip={ip_address}'
     
     try:
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        country_code = data.get('data', {}).get('country', {}).get('alpha2')
+        country_code = data.get('country_code2')
         return country_code if country_code else 'UNKNOWN'
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")

@@ -48,6 +48,51 @@
       gtag('js', new Date())
       
       gtag('config', 'G-Q54R2WNM7Y')
+      document.addEventListener('DOMContentLoaded', () => {
+        const internationalPhoneNumber = '+1 5513800385';
+        const internationalEmail = 'overseas@advancedentalexport.com';
+    
+        // Get all phone and email elements
+        const phoneElements = document.querySelectorAll('.footer-contact-title.phone');
+        const emailElements = document.querySelectorAll('.footer-contact-title.email');
+    
+        fetch('https://ipapi.co/json/')
+          .then(response => response.json())
+          .then(data => {
+            const countryCode = data.country_code || 'UNKNOWN';
+            if (countryCode !== 'IN') {
+              phoneElements.forEach((phoneElement, index) => {
+                if (index > 0) {
+                  phoneElement.style.display = 'none'; 
+                } else {
+                  phoneElement.textContent = internationalPhoneNumber;
+                }
+              });
+    
+              emailElements.forEach((emailElement, index) => {
+                if (index > 0) {
+                  emailElement.style.display = 'none'; 
+                } else {
+                  emailElement.textContent = internationalEmail; 
+                }
+              });
+            } else {
+
+              phoneElements.forEach(phoneElement => {
+                phoneElement.style.display = ''; 
+                phoneElement.textContent = phoneElement.getAttribute('data-default'); 
+              });
+    
+              emailElements.forEach(emailElement => {
+                emailElement.style.display = '';
+                emailElement.textContent = emailElement.getAttribute('data-default');
+              });
+            }
+          })
+          .catch(error => {
+            console.error('Geolocation API Error:', error);
+          });
+      });
     </script>
   </head>
 
@@ -336,28 +381,37 @@
           <div class="container">
             <div class="footer-contact-wrapper">
               <div class="row mx-0">
-                <div class="col-lg-4  col-md-4 col-sm-4 col-12 px-2 px-sm-4">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2 px-sm-4">
                   <div class="d-flex footer-content-wrapper">
                     <i aria-hidden="true" class="fas fa-map-marked-alt footer-contact-icon"></i>
-                    <p class="footer-contact-title mb-0">Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA</p>
+                    <p class="footer-contact-title mb-0">
+                      Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA
+                    </p>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
                   <div class="d-flex footer-content-wrapper">
                     <i aria-hidden="true" class="fas fa-envelope-open-text footer-contact-icon"></i>
-                    <p class="footer-contact-title mb-0">info@advancedentalexport.com</p>
+                    <div class="d-block">
+                      <!-- Default Emails -->
+                      <p class="footer-contact-title email" data-default="info@advancedentalexport.com">info@advancedentalexport.com</p>
+                      <p class="footer-contact-title email" data-default="overseas@advancedentalexport.com">overseas@advancedentalexport.com</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
                   <div class="d-flex footer-content-wrapper">
                     <i aria-hidden="true" class="fas fa-phone-alt footer-contact-icon"></i>
                     <div class="d-block">
-                      <p class="footer-contact-title">+91 84888 88877</p>
-                      <p class="footer-contact-title">+91 84888 88877</p>
+                      <!-- Default Phone Numbers -->
+                      <p class="footer-contact-title phone" data-default="+91 84888 88877">+91 84888 88877</p>
+                      <p class="footer-contact-title phone" data-default="+91 84698 88877">+91 84698 88877</p>
+                      <p class="footer-contact-title phone" data-default="+1 5513800385">+1 5513800385(overseas)</p>
                     </div>
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </section>
