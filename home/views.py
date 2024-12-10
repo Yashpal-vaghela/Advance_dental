@@ -126,28 +126,19 @@ def contact_new(request):
 
 def connect(request):
     country_code = get_country_code()
-    print("country_code",country_code)
-    if country_code == "UNKNOWN" or country_code is None:
-        whatsapp_link = "https://wa.link/apuf2y"
-    elif country_code == 'IN':
-        whatsapp_link = 'https://wa.link/apuf2y'
-    else:
-        whatsapp_link = 'https://wa.link/wf0r4d'
+    # country_code = 'IN'
+    print("country_code", country_code)
+    
+    whatsapp_link = "https://wa.link/apuf2y" if country_code in ["UNKNOWN", "IN"] else "https://wa.link/wf0r4d"
+    phone_number = "+918469888877" if country_code in ["UNKNOWN", "IN"] else "+15513800385"
+    show_lab_tour = country_code not in ["IN", "UNKNOWN"]
 
-    if country_code == 'UNKNOWN' or country_code is None:
-        phone_number = '+918469888877'
-    elif country_code == 'IN':
-        phone_number = '+918469888877'
-    else:
-        phone_number = '+15513800385'    
-
-    show_button = country_code not in ['IN', 'UNKNOWN']
     context = {
         'whatsapp_link': whatsapp_link,
-        'show_button' : show_button,
-        'phone_number' : phone_number,
-        'hide_social_image': True
-        }
+        'phone_number': phone_number,
+        'hide_social_image': True,
+        'show_lab_tour': show_lab_tour
+    }
     return render(request, 'connect.html', context)
 def get_country_code():
     url = 'https://ipapi.co/json/'

@@ -115,17 +115,16 @@
         <p class="text-center">Advanced Dental Export is a dental lab based in Surat, Gujarat, India. Follow us on social media for updates, promotions, and dental care tips!</p>
       </div>
     </div>
-    <div class="text-center mt-4">
-    {% if show_button %}
-      <button class="virtual-lab-tour-button" onclick="handleButtonClick()">Virtual Lab Tour</button>
+    {% if show_lab_tour %}
+      <div class="text-center mt-4">
+        <button class="virtual-lab-tour-button" onclick="handleButtonClick()">Virtual Lab Tour</button>
+      </div>
+      <div id="lab-tour-video" style="display: none; justify-content: center; align-items: center; margin-top: 2rem;">
+        <video controls width="200" height="360">
+          <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/Advance+Dental+Export+new.mp4" type="video/mp4" />Your browser does not support the video tag.
+        </video>
+      </div>
     {% endif %}
-    </div>
-    <div id="lab-tour-video" style="display: none; justify-content: center; align-items: center; margin-top: 2rem;">
-      <video controls width="200" height="360">
-        <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/Advance+Dental+Export+new.mp4" type="video/mp4" />Your browser does not support the video tag.
-      </video>
-    </div>
-
     <div class="row justify-content-center mt-4 mb-4">
       <div class="col-md-6">
         <div class="card custom-card">

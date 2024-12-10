@@ -33,10 +33,10 @@
     <link href="{% static 'css/jquery.datetimepicker.min.css' %}" rel="stylesheet" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-   
+
     {% block css %}
 
-    {% endblock %} 
+    {% endblock %}
     <script src="{% static 'js/lazy.js' %}"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"></script>
@@ -47,7 +47,7 @@
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-      
+
       gtag('config', 'G-Q54R2WNM7Y')
       document.addEventListener('DOMContentLoaded', () => {
         const internationalPhoneNumber = '+1 5513800385';
@@ -78,7 +78,6 @@
                 }
               });
             } else {
-
               phoneElements.forEach(phoneElement => {
                 phoneElement.style.display = ''; 
                 phoneElement.textContent = phoneElement.getAttribute('data-default'); 
@@ -407,7 +406,7 @@
                       <!-- Default Phone Numbers -->
                       <p class="footer-contact-title phone" data-default="+91 84888 88877">+91 84888 88877</p>
                       <p class="footer-contact-title phone" data-default="+91 84698 88877">+91 84698 88877</p>
-                      <p class="footer-contact-title phone" data-default="+1 5513800385 (overseas)">+1 5513800385</p>
+                      <p class="footer-contact-title phone" data-default="+1 5513800385">+1 5513800385(overseas)</p>
                     </div>
                   </div>
                 </div>
@@ -530,7 +529,8 @@
     <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'js/wow.js' %}"></script>
     {% block js %}
-    {% endblock %} 
+
+    {% endblock %}
     <script src="{% static 'js/custom.js' %}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
