@@ -114,6 +114,9 @@
     margin: 0px 5px;
     color: #1d907c;
   }
+  .review-section .review-user-txt p .fa-quote-right{
+    margin:0px -23px 0px 0px;
+  }
   
   .review-user-name {
     text-align: right;
