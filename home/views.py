@@ -125,9 +125,8 @@ def contact_new(request):
 
 
 def connect(request):
-    ip_address = get_client_ip(request)
-    country_code = get_country_code(ip_address)
-    
+    country_code = get_country_code()
+    print("country_code",country_code)
     if country_code == "UNKNOWN" or country_code is None:
         whatsapp_link = "https://wa.link/apuf2y"
     elif country_code == 'IN':
@@ -150,23 +149,14 @@ def connect(request):
         'hide_social_image': True
         }
     return render(request, 'connect.html', context)
-
-def get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
-
-def get_country_code(ip_address):
-    url = f'https://api.iplocation.net/?ip={ip_address}'
+def get_country_code():
+    url = 'https://ipapi.co/json/'
     
     try:
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        country_code = data.get('country_code2')
+        country_code = data.get('country_code')
         return country_code if country_code else 'UNKNOWN'
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")

@@ -865,7 +865,6 @@ video {
   .wsmenu>.wsmenu-list {
     height: auto;
     min-height: 100%;
-    width: 240px;
     width: 300px;
     background: #fff;
     padding-bottom: 0;
@@ -909,7 +908,7 @@ video {
     border-bottom-color: rgba(0, 0, 0, 0.13);
     position: static;
   }
-
+  
   .wsmenu>.wsmenu-list>li a.menuhomeicon {
     padding-left: 17px;
     padding-right: 17px;
@@ -1203,7 +1202,6 @@ video {
   }
 
   .wsactive .wsmobileheader {
-    margin-left: 240px;
     margin-left: 300px;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -1332,7 +1330,6 @@ video {
   /* ================== Mobile Overlay/Drawer CSS ================== */
   .overlapblackbg {
     right: 0;
-    width: calc(100% - 240px);
     width: calc(100% - 300px);
     height: 100vh;
     min-height: 100%;
@@ -1463,7 +1460,32 @@ video {
 
   /*End Media Query*/
 }
+@media only screen and (max-width: 768px) {
+  .wsactive .wsmenucontainer {
+    margin-left: 240px;
+  }
+  .wsactive .wsmobileheader {
+    margin-left: 240px;
+  }
+  .wsmenu>.wsmenu-list {
+    height: auto;
+    min-height: 100%;
+    width: 240px;
+  }
 
+  .overlapblackbg {
+    right: 0;
+    width: calc(100% - 240px);
+    height: 100vh;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+}
 /* Extra @Media Query*/
 @media only screen and (min-width: 992px) and (max-width:1162px) {
   .desktoplogo {

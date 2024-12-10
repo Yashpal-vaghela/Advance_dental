@@ -588,7 +588,7 @@
   .wsactive .wsanimated-arrow span:after { width: 28px; top: 0; }
 
   .callusbtn { font-size: 20px; padding: 20px 20px; }
-  .header-button span, .wsmenu > .wsmenu-list > li.header-btn a { height: 50px; line-height: 50px; padding: 0 17px; margin: 0; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+  .header-button span, .wsmenu > .wsmenu-list > li.header-btn a { height: 50px; line-height: 50px; text-align: center; padding: 0 17px; margin: 10px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 20px; }
 
   /*------------------------------------------*/
   /*   HERO
@@ -964,7 +964,7 @@
   .wsactive .wsanimated-arrow span:after { width: 28px; top: 0; }
 
   .callusbtn { font-size: 20px; padding: 20px 20px; }
-  .header-button span, .wsmenu > .wsmenu-list > li.header-btn a { height: 50px; line-height: 50px; padding: 0 17px; margin: 0; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+  .header-button span, .wsmenu > .wsmenu-list > li.header-btn a { height: 50px; line-height: 50px; text-align: center; padding: 0 17px; margin: 10px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 20px; }
 
   /*------------------------------------------*/
   /*   HERO
