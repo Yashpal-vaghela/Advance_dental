@@ -123,35 +123,12 @@ def contact_new(request):
     }
     return render(request, 'contact_new.html', context)
 
-
+        
 def connect(request):
-    country_code = get_country_code()
-    # country_code = 'IN'
-    print("country_code", country_code)
-    
-    whatsapp_link = "https://wa.link/apuf2y" if country_code in ["UNKNOWN", "IN"] else "https://wa.link/wf0r4d"
-    phone_number = "+918469888877" if country_code in ["UNKNOWN", "IN"] else "+15513800385"
-    show_lab_tour = country_code not in ["IN", "UNKNOWN"]
-
     context = {
-        'whatsapp_link': whatsapp_link,
-        'phone_number': phone_number,
         'hide_social_image': True,
-        'show_lab_tour': show_lab_tour
     }
     return render(request, 'connect.html', context)
-def get_country_code():
-    url = 'https://ipapi.co/json/'
-    
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        country_code = data.get('country_code')
-        return country_code if country_code else 'UNKNOWN'
-    except requests.exceptions.RequestException as e:
-        print(f"Error: {e}")
-        return 'UNKNOWN'
     
 def career(request):
     context = {

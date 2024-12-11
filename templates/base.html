@@ -57,10 +57,10 @@
         const phoneElements = document.querySelectorAll('.footer-contact-title.phone');
         const emailElements = document.querySelectorAll('.footer-contact-title.email');
     
-        fetch('https://ipapi.co/json/')
+        fetch('https://ipinfo.io/json?token=718446798cd1d4')
           .then(response => response.json())
           .then(data => {
-            const countryCode = data.country_code || 'UNKNOWN';
+            const countryCode = data.country || 'UNKNOWN';
             if (countryCode !== 'IN') {
               phoneElements.forEach((phoneElement, index) => {
                 if (index > 0) {
@@ -406,7 +406,7 @@
                       <!-- Default Phone Numbers -->
                       <p class="footer-contact-title phone" data-default="+91 84888 88877">+91 84888 88877</p>
                       <p class="footer-contact-title phone" data-default="+91 84698 88877">+91 84698 88877</p>
-                      <p class="footer-contact-title phone" data-default="+1 5513800385">+1 5513800385(overseas)</p>
+                      <p class="footer-contact-title phone" data-default="+1 5513800385 (overseas)">+1 5513800385</p>
                     </div>
                   </div>
                 </div>
