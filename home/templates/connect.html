@@ -21,6 +21,9 @@
   body {
     background: linear-gradient(135deg, #e8f5f9, #ffffff);
   }
+  .container {
+    margin-top: 3rem;
+  }
   .custom-card {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -95,6 +98,9 @@
     object-fit: cover;
   }
   @media (max-width: 576px) {
+    .container{
+      margin-top: 5rem;
+    }
     .social-media-row{
       flex-direction: row;
       flex-wrap: wrap;
@@ -109,7 +115,7 @@
 {% endblock %}
 
 {% block body %}
-  <div class="container mt-5">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 mt-4">
         <p class="text-center">Advanced Dental Export is a dental lab based in Surat, Gujarat, India. Follow us on social media for updates, promotions, and dental care tips!</p>
