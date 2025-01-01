@@ -80,7 +80,7 @@
 								<img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="info-image">
 							</div>
                             <!-- Singnature -->
-								<div class="singnature mt-35">
+								<div class="singnature mt-35 ml-25">
 
 									<!-- Text -->
 									<p class="p-small mb-15">
@@ -145,7 +145,7 @@
                                         <div class="doctors-2">	
 
                                             <!-- Doctor Photo -->
-                                            <div class="hover-overlay"> 
+                                            <div class="hover-overlay-about"> 
                                                 <img class="img-fluid" src="{{ie.image.url}}" alt="doctor-foto">	
                                             </div>								
                                                                     
@@ -174,12 +174,6 @@
 							</div>
 						</div>									
 					</div>	<!-- END SERVICES CONTENT --> 
-                       
-                    
-                 
-
-				</div>	   <!-- End container -->
-			</section>	<!-- END INFO-4 -->
 
 			<section class="mt-5">
 				<div id="statistic-1" class="bg-scroll mt-3 mb-5 statistic-section division">
@@ -192,7 +186,7 @@
 								<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
 
 									<!-- Icon  -->
-									<span class="flaticon-062-cardiogram-3"></span>
+									<span class="flaticon-062-cardiogram-3" style="color: #333;"></span>
 
 									<!-- Text -->
 									<h5 class="statistic-number"><span class="count-element">6</span>L+</h5>
@@ -207,7 +201,7 @@
 								<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
 
 									<!-- Icon  -->
-									<span class="flaticon-132-medicine-book"></span>
+									<span class="flaticon-132-medicine-book" style="color: #333;"></span>
 
 									<!-- Text -->
 									<h5 class="statistic-number"><span class="count-element">500</span>+</h5>	
@@ -240,7 +234,7 @@
 								<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">	
 
 									<!-- Icon  -->
-									<span class="flaticon-040-placeholder"></span>
+									<span class="flaticon-040-placeholder" style="color: #333;"></span>
 
 									<!-- Text -->	
 									<h5 class="statistic-number"><span class="count-element">500</span>+</h5>
@@ -308,8 +302,6 @@
 								<h3 class="h3-md  white-color">Our Associates in Cad Cam Equipment
 								</h3>
 
-							
-
 							</div>
 						</div>	<!-- END INFO TEXT -->	
 						<div class="col-md-12">					
@@ -352,18 +344,17 @@
 
 								<!-- SERVICE BOX #1 -->
 			 					<div class="col-md-4">
-			 						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+			 						<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 			 							<a href="javascript:void(0);">
 
 				 							<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
 				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">CAD/CAM Technology</h5>
-													
+												<div class="sbox-service-txt">	
 												<!-- Text -->
 												<p class="p-sm">
 													Advance Dental Export remains the leader in offering digital technology to our clients. We currently support 3M True Definition, Cadent Itero, as well as many other open architecture systems.
@@ -377,23 +368,20 @@
 
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
-				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Cosmetic Restoration Service
 												</h5>
-													
+											<div class="sbox-service-txt">		
 												<!-- Text -->
 												<p class="p-sm">
 													Esthetic diagnostic wax-ups, silicone matrices for intraoral mock-ups and temporaries. We use the latest materials and technologies to achieve predictable results for your patients.
-
 												</p>
 
 											</div>
@@ -404,24 +392,22 @@
 
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
+											
 				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Implant Specialists
-
 												</h5>
-													
+											<div class="sbox-service-txt">		
 												<!-- Text -->
 												<p class="p-sm">
 													Assistance with implant cases, including diagnostic wax-up, stent fabrication and components for implant systems. In house design for custom abutments and denture bars.
-
 												</p>
 
 											</div>
@@ -432,25 +418,22 @@
 
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
+											
 				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Custom Milling
-
-
 												</h5>
-													
+											<div class="sbox-service-txt">		
 												<!-- Text -->
 												<p class="p-sm">
 													Custom milling of zirconia, implant abutments, overdenture bars, temporaries and ceramics.
-
 												</p>
 
 											</div>
@@ -460,27 +443,22 @@
 								</div>  <!-- END SERVICE BOX #1 -->
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
+											
 				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Laser Welding
-
-
-
-
 												</h5>
-													
+											<div class="sbox-service-txt">		
 												<!-- Text -->
 												<p class="p-sm">
 													Laser welding for quick repairs of partial dentures
-
 												</p>
 
 											</div>
@@ -491,23 +469,21 @@
 
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
+											
 				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Diagnostic Wax-Ups</h5>
-													
+											<div class="sbox-service-txt">		
 												<!-- Text -->
 												<p class="p-sm">
 													Complete diagnostic wax-up service for treatment planning.
-
-
 												</p>
 
 											</div>
@@ -518,22 +494,19 @@
 								
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
+											
 				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Case Planning Assistance
-
-
-
 												</h5>
-													
+											<div class="sbox-service-txt">		
 												<!-- Text -->
 												<p class="p-sm">
 													Personal consultations with doctors and staff for treatment options with recommendations from a technical perspective.
@@ -547,22 +520,17 @@
 								</div>  <!-- END SERVICE BOX #1 -->
 								<!-- SERVICE BOX #1 -->
 								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+									<div class="sbox-service icon-xs wow fadeInUp" data-wow-delay="0.4s">
 										<a href="javascript:void(0);">
 
 											<!-- Icon -->
-											<span class="flaticon-132-medicine-book blue-color"></span>
+											{% comment %} <span class="flaticon-132-medicine-book blue-color"></span> {% endcomment %}
 
 											<!-- Text -->
-											<div class="sbox-7-txt">
-				
 												<!-- Title -->
 												<h5 class="h5-sm steelblue-color">Shade Analysis
-
-
-
 												</h5>
-													
+											<div class="sbox-service-txt">	
 												<!-- Text -->
 												<p class="p-sm">
 													We can match the most difficult shades using your digital photos or in-lab consultation. - Send digital photos to: color@advancedentalexport.com

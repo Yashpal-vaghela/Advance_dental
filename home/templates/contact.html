@@ -252,83 +252,160 @@
     			        </div>
     			    </div>  
     			     
-					<div class="row">	
+					<div class="row contact-wrapper mx-0">	
 						<!-- CONTACTS INFO -->
 		 				<div class="col-md-5 col-lg-4">
-                            <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s" style="visibility:visible;animation-delay:.4s;animation-name:fadeInUp">
-            							
-		 					<!-- General Information -->
-		 					<div class="contact-box mb-40">
-								<h5 class="h5-sm steelblue-color">India Office
-								</h5>
-								{% comment %} <p>Plot No.3/ 3-3/4, Dhuna House, Opp. Patel Nagar, A.K.Road, Varachha, Surat (Gujarat) India. Pincode-395008</p> {% endcomment %}
-                                <p>Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat ,Gujarat ,India. Pincode-394130</p>
-								<p>Line 1: +91 84 88 88 88 77 </p>
-								<p>Line 2: +91 84 69 88 88 77</p>
-								<p>Email: <a href="mailto:info@advancedentalexport.com" class="blue-color">info@advancedentalexport.com
-								</a></p>
-		 					</div>
+                            <div class=" icon-xs wow fadeInUp" data-wow-delay="0.4s" style="visibility:visible;animation-delay:.4s;animation-name:fadeInUp">
+            				    <div class="contact-main-content">			
+                                    <!-- General Information -->
+                                    <div class="contact-box mb-40">
+                                        <h5 class="h5-sm contact-content">India Office</h5>
+                                        {% comment %} <p>Plot No.3/ 3-3/4, Dhuna House, Opp. Patel Nagar, A.K.Road, Varachha, Surat (Gujarat) India. Pincode-395008</p> {% endcomment %}
+                                        <p>
+                                            Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel
+                                            Royal, Velanja Road, Umra, Surat, Gujarat, India - 394 130.
+                                        </p>
+                                        <p style="display: flex; flex-direction: column;">
+                                            <div>
+                                                <i class="fa-sharp fa-solid fa-phone"></i>
+                                                 :+91 84 88 88 88 77
+                                            </div>
+                                            <div>
+                                                <i class="fa-sharp fa-solid fa-phone"></i>
+                                                 :+91 84 69 88 88 77
+                                            </div>
+                                        </p>
+                                        <p>
+                                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                                            <a href="mailto:info@advancedentalexport.com" class="blue-color"
+                                            >: info@advancedentalexport.com</a
+                                            >
+                                        </p>
+                                    </div>
 
-		 					<!-- Patient Experience -->
-		 					<div class="contact-box mb-40">
-								<h5 class="h5-sm steelblue-color">Canada Office
-								</h5>
-								<p>Phone: +1 306-290-9222</p>
-								<p>Email: <a href="mailto:advancedentalservice@gmail.com" class="blue-color">advancedentalservice@gmail.com</a></p>
-		 					</div>
-                             <div class="contact-box">
-								<h5 class="h5-sm steelblue-color">USA Office</h5>
-								<p>Phone: +1 551-380-0385 </p>
-								<p>Email: <a href="mailto:overseas@advancedentalexport.com" class="blue-color">overseas@advancedentalexport.com</a></p>
-							</div>
+                                    <!-- Patient Experience -->
+                                    <div class="contact-box mb-40">
+                                        <h5 class="h5-sm contact-content">Canada Office</h5>
+                                        <p>
+                                            <i class="fa-sharp fa-solid fa-phone"></i>
+                                            : +1 306-290-9222
+                                        </p>
+                                        <p>
+                                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                                            <a
+                                            href="mailto:advancedentalservice@gmail.com"
+                                            class="blue-color"
+                                            >: advancedentalservice@gmail.com</a
+                                            >
+                                        </p>
+                                    </div>
+                                    <div class="contact-box mb-15">
+                                        <h5 class="h5-sm contact-content">USA Office</h5>
+                                        <p>
+                                            <i class="fa-sharp fa-solid fa-phone"></i>
+                                            : +1 551-380-0385
+                                        </p>
+                                        <p>
+                                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                                            <a
+                                            href="mailto:overseas@advancedentalexport.com"
+                                            class="blue-color"
+                                            >: overseas@advancedentalexport.com</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>    
 		 					</div>
 						</div>	<!-- END CONTACTS INFO -->
 
 
 						<!-- CONTACT FORM -->	
-				 		<div class="col-md-7 col-lg-8">
-				 		    <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s" style="visibility:visible;animation-delay:.4s;animation-name:fadeInUp">
-            							
-				 			<div class="form-holder mb-40">
-				 				<form  method="POST" 
-								 action="{% url 'enquiry:contactd' %}" class="row contact-form2">
-								 {% csrf_token %}
-				                                            
-					                <!-- Contact Form Input -->
-					                <div id="input-name" class="col-md-12 col-lg-6">
-					                	<input type="text" name="name" class="form-control name" placeholder="Enter Your Name*" required> 
-					                </div>
-					                        
-					                <div id="input-email" class="col-md-12 col-lg-6">
-					                	<input type="text" name="email" class="form-control email" placeholder="Enter Your Email*" required> 
-					                </div>
-
-					                <div id="input-phone" class="col-md-12 col-lg-6">
-					                	<input type="tel" name="contact" class="form-control phone" placeholder="Enter Your Phone Number*" required> 
-					                </div>	
-
-					               
-
-					                <div id="input-subject" class="col-lg-6">
-					                	<input type="text" name="subject" class="form-control subject" placeholder="Subject*" required> 
-					                </div>					                          
-					                        
-					                <div id="input-message" class="col-lg-12 input-message">
-					                	<textarea class="form-control message" name="message" rows="6" placeholder="Your Message ..." required></textarea>
-					                </div> 
-					                                            
-					                <!-- Contact Form Button -->
-					                <div class="col-lg-12 mt-15 form-btn">  
-					                	<button type="submit" class="btn btn-blue blue-hover submit">Send Your Message</button> 
-					                </div>
-					                                                              
-					                
-				                                              
-				                </form> 
-
-				 			</div>	
-				 			</div>
-				 		</div> 	<!-- END CONTACT FORM -->	
+                        <div class="col-md-7 col-lg-8">
+							<div
+								class="form-holder mb-40 d-flex align-items-center justify-content-center h-100">
+								<form
+								class="row contact-form2 form align-items-center justify-content-center"
+								method="post"
+								action="{% url 'enquiry:contactd' %}"
+								>
+								{% csrf_token %}
+								<div class="col-md-12 col-lg-6">
+									<div class="form-group">
+									<input
+										id="form_name"
+										name="name"
+										class="form-control name"
+										placeholder="Your Name*"
+										required
+										data-error="Enter no more than (2) characters."
+									/>
+									<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6">
+									<div class="form-group">
+									<input
+										id="form_email"
+										class="form-control email"
+										type="email"
+										name="email"
+										placeholder="Your Email"
+										required
+										data-error="Email is required"
+									/>
+									<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6">
+									<div class="form-group">
+									<input
+										id="form_phone"
+										class="form-control phone"
+										type="tel"
+										name="contact"
+										placeholder="Your Phone Number"
+										required
+										data-error="Please enter only digits."
+									/>
+									<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6">
+									<div class="form-group">
+									<input
+										id="form_subject"
+										class="form-control subject"
+										name="subject"
+										placeholder="Subject*"
+										required
+										data-error="Subject is required"
+									/>
+									<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-12 input-message">
+									<div class="form-group">
+									<textarea
+										id="form-message"
+										class="form-control message"
+										name="message"
+										rows="8"
+										placeholder="Your Message ..."
+										required  
+										data-error="Enter no more than (10) characters."
+									></textarea>
+									<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="messages"></div>
+								<div class="col-md-12 mt-15 form-btn">
+									<button type="submit" class="btn-blue submit">
+									Send Your Message
+									</button>
+								</div>
+								</form>
+							</div>
+						</div> 	<!-- END CONTACT FORM -->	
 
 
 				 	</div>	<!-- End row -->			  
