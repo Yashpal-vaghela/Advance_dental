@@ -3974,14 +3974,15 @@
    background-image: url(../images/countsbg.jpg);
    background-size: cover;
    background-position: center;
-   /* padding: 80px 0 40px; */
    text-align: center;
  }
  #statistic-1 .container {
    position: relative;
-   z-index: 2;
    background-color: rgb(36, 169, 146,0.7);
-   padding: 80px 0 40px;
+   z-index: 2;
+ }
+ #statistic-1 .container-content {
+   padding : 80px 0 40px;
  }
  .statistic-block {
    background: #fff;
@@ -4021,11 +4022,11 @@
    color: #222;
    position: relative;
    top: -20px;
-   left: -15px;
+   left: -10px;
  }
  .statistic-block .txt-400 {
    font-size: 16px;
-   color: #777;
+   color: #1b8976;
  }
  
  #statistic-2 {
