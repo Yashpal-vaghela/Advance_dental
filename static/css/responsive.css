@@ -587,7 +587,7 @@
   .wsactive .wsanimated-arrow span:before, .wsactive .wsanimated-arrow.active span:after {  width: 28px; top:0px; }
   .wsactive .wsanimated-arrow span:after { width: 28px; top: 0; }
 
-  .callusbtn { font-size: 20px; padding: 20px 20px; }
+  .callusbtn { font-size: 20px; padding: 12px 12px; }
   .header-button span, .wsmenu > .wsmenu-list > li.header-btn a { height: 50px; line-height: 50px; text-align: center; padding: 0 17px; margin: 10px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 20px; }
 
   /*------------------------------------------*/
@@ -963,7 +963,7 @@
   .wsactive .wsanimated-arrow span:before, .wsactive .wsanimated-arrow.active span:after {  width: 28px; top:0px; }
   .wsactive .wsanimated-arrow span:after { width: 28px; top: 0; }
 
-  .callusbtn { font-size: 20px; padding: 20px 20px; }
+  .callusbtn { font-size: 20px; padding: 12px 12px; }
   .header-button span, .wsmenu > .wsmenu-list > li.header-btn a { height: 50px; line-height: 50px; text-align: center; padding: 0 17px; margin: 10px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 20px; }
 
   /*------------------------------------------*/

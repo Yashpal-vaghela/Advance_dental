@@ -1174,7 +1174,7 @@
     text-transform: uppercase;
     display: block;
     letter-spacing: 0.5px;
-    margin-bottom: 28px;
+    margin-bottom: 8px;
  }
 
  span.id-color {
@@ -1192,7 +1192,7 @@
 
  .section-title h3.h3-md {
     line-height: 1;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
  }
 
  .section-title p {
@@ -1472,13 +1472,13 @@
  }
 
  .headertopleft {
-    width: 50%;
+    width: 80%;
     float: left;
     padding-left: 15px;
  }
 
  .headertopright {
-    width: 50%;
+    width: 20%;
     float: right;
     text-align: right;
     padding-right: 15px;
@@ -2345,6 +2345,7 @@
  .abox-3 .steelblue-color {
    color: #00a3c8;
    font-weight: 600;
+   height: 13%;
  }
  .abox-3:hover {
    transform: translateY(-10px);
@@ -2449,7 +2450,7 @@
  .abox-3 h5,
  .abox-4 h5 {
     font-size: 1.05rem;
-    line-height: 1;
+    line-height: 1.4;
     font-weight: 900;
     letter-spacing: 0.25px;
     text-transform: uppercase;
@@ -2598,11 +2599,11 @@
    gap:20px;
  }
  .services-section{
-   padding-top: 40px !important;
+   padding-top: 60px !important;
    padding-bottom: 35px !important;
  }
  .services-section .section-title {
-   margin-bottom: 40px !important;
+   margin-bottom: 25px !important;
  }
  .services-section .section-title p {
    padding: 0 24% !important;
@@ -3975,14 +3976,17 @@
    background-size: cover;
    background-position: center;
    text-align: center;
+ 
  }
+
  #statistic-1 .container {
    position: relative;
-   background-color: rgb(36, 169, 146,0.7);
+   /* background-color: rgb(36, 169, 146,0.7); */
    z-index: 2;
  }
  #statistic-1 .container-content {
    padding : 80px 0 40px;
+   
  }
  .statistic-block {
    background: #fff;
