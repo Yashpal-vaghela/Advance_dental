@@ -2596,7 +2596,7 @@
  }
  .second{
    flex-direction:column;
-   gap:20px;
+   gap: 8px;
  }
  .services-section{
    padding-top: 60px !important;
@@ -2615,7 +2615,7 @@
    margin-top: 8px;
  }
  .second .sbox-6:nth-child(3) h5{
-   margin-top: -20px;
+   margin-top: 8px;
  }
  #services-8 {
     position: relative;
@@ -2721,7 +2721,8 @@
  .sbox-51{
    display: flex;
    flex-direction: column;
-   height: 650px;
+   height: 500px; 
+   width: 350px; 
    overflow: hidden;
    text-align: center;
    background-color: #fff;
@@ -2732,25 +2733,29 @@
    transition: transform 0.3s, box-shadow 0.3s;
  }
  .sbox-51:hover {
-   transform: translateY(-10px);
+   transform: translateY(-5 px);
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
  }
+ .sbox-51-img {
+   display: flex;
+   justify-content: center;
+ }
  .sbox-51-img img{
-   width: 100%;
-   border-top-left-radius: 10px;
-   border-top-right-radius: 10px;
+   align-items: center;
+   width: 90% !important;
+   height: 90%;
  }
  .sbox-51-txt {
    flex-grow: 1;
-   padding: 20px;
-   height: calc(100% - 200px);
+   padding: 15px;
+   height: calc(100% - 150px);
    overflow: hidden;
  }
  .card-title {
-   font-size: 1.25rem;
+   font-size: 1rem;
    color: #1b8976;
    font-weight: 700;
-   margin-bottom: 10px;
+   margin-bottom: 8px;
  }
  .card-title a{
    text-decoration: none;
@@ -2783,11 +2788,11 @@
    width: 100%;
 }
  .card-desc {
-   font-size: 0.85rem;
+   font-size: 0.75rem;
    color: #555;
-   margin-top: 15px;
-   margin-bottom: 10px;
-   line-height: 1.5;
+   margin-top: 10px;
+   margin-bottom: 8px;
+   line-height: 1.4;
  }
  
  .card-link {
@@ -7205,3 +7210,40 @@ h5.h5-sm {
  }
 
  /*font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif*/
+ .gbox {
+   text-align: center;
+    align-content: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 15px 30px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 5px 5px rgba(0, 0, 0, 0.05);
+ }
+ .gbox img {
+   -webkit-border-radius: 6px 6px 0 0;
+   -moz-border-radius: 6px 6px 0 0;
+   border-radius: 6px 6px 0 0;
+}
+
+ .animated.zoomSlider {
+   animation-duration: 3s;
+ }
+ @keyframes zoomSlider {
+   from {
+      -webkit-transform: scale(1.7);
+      transform: scale(1.7);
+   }
+ 
+   to {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+   }
+ }
+ 
+ .zoomSlider {
+   animation-name: zoomSlider;
+ }
+ 

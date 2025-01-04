@@ -134,7 +134,7 @@ $(document).ready(function() {
 			loop:true,
 			autoplay:true,
 			navBy: 1,
-			autoplayTimeout: 4500,
+			autoplayTimeout: 3000,
 			autoplayHoverPause: true,
 			smartSpeed: 1500,
 			responsive:{

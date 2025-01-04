@@ -392,7 +392,8 @@
   </div>
   </div>
 
-</div>
+</div> 
+{% comment %} {% include 'static_counts.html' %} {% endcomment %}
 <!-- All Product sort information -->
 <section
   id="services-5"
@@ -412,7 +413,7 @@
             <div class="sbox-51">
               <div class="sbox-51-img">
                 <img 
-                  class="mb-3 "
+                  class="mb-3 mt-3"
                   src="{% static 'fn.png' %}"
                   alt="Advance Dental Image"
                   srcset=""
@@ -449,7 +450,7 @@
               <div class="sbox-51-img">
                 <img
                   src="{% static 'img/12.jpg' %}"
-                  class="mb-3 "
+                  class="mb-3 mt-3"
                   alt="Image"
                 />
               </div>
@@ -487,7 +488,7 @@
               <div class="sbox-51-img">
                 <img
                   src="{% static 'img/13.png' %}"
-                  class="mb-3 "
+                  class="mb-3 mt-3"
                   alt="Advance Dental Image"
                   srcset=""
                 />
@@ -525,7 +526,7 @@
               <div class="sbox-51-img">
                 <img
                   src="{% static 'img/14.png' %}"
-                  class="mb-3"
+                  class="mb-3 mt-3"
                   alt="Advance Dental Image"
                   srcset=""
                 />
@@ -562,7 +563,7 @@
               <div class="sbox-51-img">
                 <img
                   src="{% static 'img/17.png' %}"
-                  class="mb-3 "
+                  class="mb-3 mt-3"
                   alt="Advance Dental Image"
                   srcset=""
                 />
@@ -600,7 +601,7 @@
               <div class="sbox-51-img">
                 <img
                   src="{% static 'img/15.png' %}"
-                  class="mb-3 "
+                  class="mb-3 mt-3"
                   alt="Advance Dental Image"
                   srcset=""
                 />
@@ -636,7 +637,7 @@
               <div class="sbox-51-img">
                 <img
                   src="{% static 'img/16.png' %}"
-                  class="mb-3 "
+                  class="mb-3 mt-3"
                   alt="Advance Dental Image"
                   srcset=""
                 />
@@ -908,10 +909,10 @@
           <div class="col-md-4">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.4s"
+              data-wow-delay="0.2s"
               style="
                 visibility: visible;
-                animation-delay: 0.4s;
+                animation-delay: 0.2s;
                 animation-name: fadeInUp;
               "
             >
@@ -932,10 +933,10 @@
           <div class="col-md-4">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.6s"
+              data-wow-delay="0.4s"
               style="
                 visibility: visible;
-                animation-delay: 0.6s;
+                animation-delay: 0.4s;
                 animation-name: fadeInUp;
               "
             >
@@ -956,10 +957,10 @@
           <div class="col-md-4">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.8s"
+              data-wow-delay="0.2s"
               style="
                 visibility: visible;
-                animation-delay: 0.8s;
+                animation-delay: 0.2s;
                 animation-name: fadeInUp;
               "
             >
@@ -981,17 +982,16 @@
                     ensures you always receive the absolute highest quality
                     dental prosthesis and materials available in the industry.
                   </p>
-                </div></a
-              >
+                </div></a>
             </div>
           </div>
           <div class="col-md-4">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="1s"
+              data-wow-delay="0.2s"
               style="
                 visibility: visible;
-                animation-delay: 1s;
+                animation-delay: 0.2s;
                 animation-name: fadeInUp;
               "
             >
@@ -1018,10 +1018,10 @@
           <div class="col-md-4">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="1s"
+              data-wow-delay="0.4s"
               style="
                 visibility: visible;
-                animation-delay: 1s;
+                animation-delay: 0.4s;
                 animation-name: fadeInUp;
               "
             >
@@ -1046,10 +1046,10 @@
           <div class="col-md-4">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="1s"
+              data-wow-delay="0.6s"
               style="
                 visibility: visible;
-                animation-delay: 1s;
+                animation-delay: 0.6s;
                 animation-name: fadeInUp;
               "
             >
@@ -1112,8 +1112,13 @@
     <div class="row d-flex">
       <div class="col-md-6 col-lg-4 d-flex first">
         <div
-          class="sbox-6 text-md-left text-lg-right wow fadeInRight"
-          data-wow-delay="0.4s"
+          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+          data-wow-delay="0.2s"
+          style="
+            visibility: visible;
+            animation-delay: 0.2s;
+            animation-name: fadeInRight;
+          "
         >
           <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">CAD/CAM Technology</h5>
           <p>
@@ -1124,8 +1129,13 @@
           </p>
         </div>
         <div
-          class="sbox-6 text-lg-right wow fadeInRight"
-          data-wow-delay="0.6s"
+          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+          data-wow-delay="0.4s"
+          style="
+            visibility: visible;
+            animation-delay: 0.4s;
+            animation-name: fadeInRight;
+          "
         >
           <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Shade Analysis</h5>
           <p>
@@ -1137,8 +1147,14 @@
           </p>
         </div>
         <div
-          class="sbox-6 text-lg-right wow fadeInRight"
-          data-wow-delay="0.8s">
+          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+          data-wow-delay="0.6s"
+          style="
+            visibility: visible;
+            animation-delay: 0.6s;
+            animation-name: fadeInRight;
+          "
+          >
           <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Case Planning Assistance</h5>
           <p>
             Personal consultations with doctors and staff for treatment options
@@ -1146,8 +1162,13 @@
           </p>
         </div>
         <div
-          class="sbox-6 text-lg-right wow fadeInLeft"
+          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
           data-wow-delay="0.8s"
+          style="
+            visibility: visible;
+            animation-delay: 0.8s;
+            animation-name: fadeInRight;
+          "
         >
           <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Diagnostic Wax-Ups</h5>
           <p>Complete diagnostic wax-up service for treatment planning.</p>
@@ -1167,7 +1188,13 @@
         </div>
       </div>
       <div class="col-md-6 col-lg-4 d-flex second">
-        <div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.8s">
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" data-wow-delay="0.2s"
+          style="
+          visibility: visible;
+          animation-delay: 0.2s;
+          animation-name: fadeInLeft;
+        "
+        >
           <h5 class="h5-md">Cosmetic Restoration Service</h5>
           <p>
             Esthetic diagnostic wax-ups, silicone matrices for intraoral
@@ -1176,8 +1203,13 @@
           </p>
         </div>
         <div
-          class="sbox-6 pl-30 wow fadeInLeft"
-          data-wow-delay="0.8s"
+          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+          data-wow-delay="0.4s"
+          style="
+            visibility: visible;
+            animation-delay: 0.4s;
+            animation-name: fadeInLeft;
+          "
         >
           <h5 class="h5-md">Implant Specialists</h5>
           <p>
@@ -1186,14 +1218,28 @@
             custom abutments and denture bars.
           </p>
         </div>
-        <div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.4s">
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" 
+             data-wow-delay="0.6s"
+             style="
+              visibility: visible;
+              animation-delay: 0.6s;
+              animation-name: fadeInLeft;
+            "
+             >
           <h5 class="h5-md">Custom Milling</h5>
           <p>
             Custom milling of zirconia, implant abutments, overdenture bars,
             temporaries and ceramics.
           </p>
         </div>
-        <div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.6s">
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" 
+             data-wow-delay="0.8s"
+             style="
+              visibility: visible;
+              animation-delay: 0.8s;
+              animation-name: fadeInLeft;
+            "
+             >
           <h5 class="h5-md">Laser Welding</h5>
           <p>Laser welding for quick repairs of partial dentures</p>
         </div>
@@ -1366,7 +1412,7 @@
   </div>
 </section>
 <!-- Gallery -->
-{% comment %} <div id="gallery-1" class="gallery-section division pt-100">
+<div id="gallery-1" class="gallery-section division pt-100">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 offset-lg-1 section-title">
@@ -1374,19 +1420,21 @@
       </div>
     </div>
   </div>
-  <div class="row gallery-items-list text-center">
-    <div class="owl-carousel owl-theme services-holder2">
-      {% for ie in gallery %}
-      <!-- SERVICE BOX #1 -->
-      <div class="sbox-5">
-        <div class="doctors-2">
-          <!-- Doctor Photo -->
-          <div class="hover-overlay">
-            <img class="img-fluid" src="{{ie.image.url}}" alt="doctor-foto" />
+  <div class="container">
+    <div class="row gallery-items-list text-center">
+      <div class="owl-carousel owl-theme services-holder">
+        {% for ie in gallery %}
+        <!-- SERVICE BOX #1 -->
+        <div class="gbox">
+          <div class="hover03 wow zoomSlider">
+            <!-- Doctor Photo -->
+            <div class="image-item">
+              <img class="img-fluid" src="{{ie.image.url}}" alt="doctor-foto" />
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
   <div class="row">
@@ -1402,8 +1450,8 @@
       </div>
     </div>
   </div>
-</div> {% endcomment %}
-<div id="gallery-1" class="gallery-section division pt-100">
+</div>
+{% comment %} <div id="gallery-1" class="gallery-section division pt-100">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 offset-lg-1 section-title">
@@ -1418,7 +1466,7 @@
       <div class="sbox-5 listing-gallery-link-block">
         <div class="doctors-2 gallery_3d-block">
           <!-- Doctor Photo -->
-          {% comment %} gallery-image-animation-trigger gallery-cover-image {% endcomment %}
+          <!-- gallery-image-animation-trigger gallery-cover-image -->
           <div class="hover-overlay gallery-image-animation-trigger" >
             <div class="gallery-animation-color-bg"></div>
             <img
@@ -1445,7 +1493,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> {% endcomment %}
 
 <!-- Contact us -->
 {% comment %} <section id="contacts-1" class="bg-lightgrey wide-60 contacts-section division">
@@ -1584,159 +1632,7 @@
   </div>
 </section> {% endcomment %}
 
-<section class="contact-section">
-  <div class="container p-0">
-    <div class="row">
-      <div class="col-lg-12 section-title">
-        <h3 class="h3-md steelblue-color">Have a Question? Get In Touch</h3>
-        <p>
-          Have queries or need our price list? Interested in a lab visit? Fill
-          out our form, and we'll assist promptly!
-        </p>
-      </div>
-      <div class="row contact-wrapper mx-0">
-        <div class="col-md-5 col-lg-4">
-          <div class="contact-main-content">
-            <h3 class="mb-3 contact-title">Contact Address</h3>
-            <div class="contact-box mb-40">
-              <h5 class="h5-sm contact-content">India Office</h5>
-              <p>
-                Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel
-                Royal, Velanja Road, Umra, Surat, Gujarat, India - 394 130.
-              </p>
-              <p>
-                <i class="fa-sharp fa-solid fa-phone"></i>
-                +91 84 88 88 88 77
-              </p>
-              <p>
-                <i class="fa-sharp fa-solid fa-envelope"></i>
-                <a href="mailto:info@advancedentalexport.com" class="blue-color"
-                  >info@advancedentalexport.com</a
-                >
-              </p>
-            </div>
-            <div class="contact-box mb-40">
-              <h5 class="h5-sm contact-content">Canada Office</h5>
-              <p>
-                <i class="fa-sharp fa-solid fa-phone"></i>
-                +1 306-290-9222
-              </p>
-              <p>
-                <i class="fa-sharp fa-solid fa-envelope"></i>
-                <a
-                  href="mailto:advancedentalservice@gmail.com"
-                  class="blue-color"
-                  >advancedentalservice@gmail.com</a
-                >
-              </p>
-            </div>
-            <div class="contact-box mb-15">
-              <h5 class="h5-sm contact-content">USA Office</h5>
-              <p>
-                <i class="fa-sharp fa-solid fa-phone"></i>
-                +1 551-380-0385
-              </p>
-              <p>
-                <i class="fa-sharp fa-solid fa-envelope"></i>
-                <a
-                  href="mailto:overseas@advancedentalexport.com"
-                  class="blue-color"
-                  >overseas@advancedentalexport.com</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7 col-lg-8">
-          <div
-            class="form-holder mb-40 d-flex align-items-center justify-content-center h-100">
-            <form
-              class="row contact-form2 form align-items-center justify-content-center"
-              method="post"
-              action="{% url 'enquiry:contactd' %}"
-            >
-              {% csrf_token %}
-              <div class="col-md-12 col-lg-6">
-                <div class="form-group">
-                  <input
-                    id="form_name"
-                    name="name"
-                    class="form-control name"
-                    placeholder="Your Name*"
-                    required
-                    data-error="Enter no more than (2) characters."
-                  />
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-6">
-                <div class="form-group">
-                  <input
-                    id="form_email"
-                    class="form-control email"
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                    data-error="Email is required"
-                  />
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-6">
-                <div class="form-group">
-                  <input
-                    id="form_phone"
-                    class="form-control phone"
-                    type="tel"
-                    name="contact"
-                    placeholder="Your Phone Number"
-                    required
-                    data-error="Please enter only digits."
-                  />
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-6">
-                <div class="form-group">
-                  <input
-                    id="form_subject"
-                    class="form-control subject"
-                    name="subject"
-                    placeholder="Subject*"
-                    required
-                    data-error="Subject is required"
-                  />
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="col-md-12 input-message">
-                <div class="form-group">
-                  <textarea
-                    id="form-message"
-                    class="form-control message"
-                    name="message"
-                    rows="8"
-                    placeholder="Your Message ..."
-                    required  
-                    data-error="Enter no more than (10) characters."
-                  ></textarea>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="messages"></div>
-              <div class="col-md-12 mt-15 form-btn">
-                <button type="submit" class="btn-blue submit">
-                  Send Your Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include 'contact_section.html' %}
 
 {% comment %} <section id="blog-1" class="wide-60 blog-section division">
   <div class="container">
@@ -1929,4 +1825,5 @@ $(document).ready(function () {
 });
 </script>
 <script src="{% static 'js/galleryanimation.js'%}"></script>
+<script src="{% static 'js/modernizr.custom.js' %}"></script>
 {% endblock javascript %}
