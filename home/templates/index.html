@@ -1297,26 +1297,29 @@
       </div>
     </div>
   </div>
-  <div class="row gallery-items-list text-center listing-gallery-img-items">
-    <div class="owl-carousel owl-theme services-holder2 listing-gallery-img-item">
-      {% for ie in gallery21 %}
-      <!-- SERVICE BOX #1 -->
-      <div class="sbox-5 listing-gallery-link-block">
-        <div class="doctors-2 gallery_3d-block">
-          <!-- Doctor Photo -->
-          <div class="hover-overlay gallery-image-animation-trigger">
-            <div class="gallery-animation-color-bg"></div>
-            <img
-              class="gallery-cover-image img-fluid"
-              src="{{ie.image.url}}"
-              alt="Before & After"
-            />
+  <div class="container">
+    <div class="row gallery-items-list text-center listing-gallery-img-items">
+      <div class="owl-carousel owl-theme services-holder listing-gallery-img-item">
+        {% for ie in gallery21 %}
+        <!-- SERVICE BOX #1 -->
+        <div class="gbox listing-gallery-link-block">
+          <div class="hover03 wow zoomSlider gallery_3d-block">
+            <!-- Doctor Photo -->
+            {% comment %} <div class="hover-overlay gallery-image-animation-trigger"> {% endcomment %}
+              {% comment %} <div class="gallery-animation-color-bg"></div> {% endcomment %}
+              <img
+                class="gallery-cover-image img-fluid"
+                src="{{ie.image.url}}"
+                alt="Before & After"
+              />
+            {% comment %} </div> {% endcomment %}
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
+  
   <div class="row">
     <div class="col-md-12 text-center">
       <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
@@ -1785,6 +1788,7 @@
 <script>
 $(document).ready(function () {
   var $customerLogos = $(".customer-logos");
+  var owl = $('.services-holder');
 
   $customerLogos.slick({
       slidesToShow: 6,
@@ -1822,6 +1826,30 @@ $(document).ready(function () {
       }, 1000); 
     }
   });
+
+    if (owl.length) {
+      owl.owlCarousel({
+          items: 2,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          smartSpeed: 1500,
+          navBy: 1,
+          responsive: {
+              0: { items: 1 },
+              767: { items: 1 },
+              768: { items: 2 },
+              991: { items: 2 },
+              1000: { items: 3 }
+          }
+      });
+
+      // Debugging autoplay issues
+      owl.on('changed.owl.carousel', function () {
+          console.log('Carousel changed');
+      });
+  }
 });
 </script>
 <script src="{% static 'js/galleryanimation.js'%}"></script>
