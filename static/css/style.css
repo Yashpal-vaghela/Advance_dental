@@ -2459,12 +2459,13 @@
 
  .abox-1 p,
  .abox-2 p,
- .abox-3 p,
  .abox-4 p {
     font-size: 0.925rem;
     margin-bottom: 0;
  }
-
+ .abox-3 p {
+   font-size: 0.825rem;
+ }
  .abox-3 p.blue-color {
     font-size: 0.975rem;
     font-weight: 400;
@@ -2792,7 +2793,7 @@
    color: #555;
    margin-top: 10px;
    margin-bottom: 8px;
-   line-height: 1.4;
+   line-height: 1.5;
  }
  
  .card-link {
