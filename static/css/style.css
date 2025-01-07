@@ -3030,7 +3030,7 @@
  .sbox-7-txt {
     overflow: hidden;
     text-align: center;
-    padding-left: 20px;
+    /* padding-left: 20px; */
  }
 
  .sbox-1 h5 {
@@ -7247,4 +7247,195 @@ h5.h5-sm {
  .zoomSlider {
    animation-name: zoomSlider;
  }
+ .contacts {
+   /* width: 1568px; */
+   /* height: 816px; */
+   display: none;
+   background-color: white;
+   
+   padding: 150px 86px 150px 86px;
+   margin: 0px;
+
+}
+
+@media (min-width: 1200px) {
+
+  .contacts {
+     border-radius: 20px;
+   border: 4px solid #5AB3A3;
+   position: relative;
+     display: block;
+  }
+  .contacts::before {
+     content: "Get In Touch With Us";
+     font-size: 43px;
+     font-weight: 500;
+     position: absolute;
+     top: -35px;
+     left: 30%;
+     color: #1D907C;
+     transform: translateX(-50%);
+     background: white;
+     padding: 0 15px;
+  }
  
+  .contacts::after {
+     content: "We Are Here To Help You";
+     font-size: 20px;
+     font-weight: 400;
+     position: absolute;
+     top: 25px;
+     left: 30%;
+     align-content: start;
+     color: #1D907C;
+     transform: translateX(-50%);
+     background: white;
+     padding: 0 15px;
+  }
+}
+
+
+.contacts-types-card {
+   /* height: 500px; */
+   background: #FFFFFF;
+   box-shadow: 0px 0px 96.2px 7px rgba(29, 144, 124, 0.33);
+   border-radius: 20px;
+   display: inline-block;
+   width: 35%;
+   vertical-align: top;
+   padding: 35px 24px;
+   justify-content: center;
+}
+
+.contacts-types-card .contact-type {
+   color: rgba(29, 144, 124, 1);
+   display: flex;
+   justify-content: space-between;
+   font-size: 15px;
+   font-weight: 500;
+   /* line-height: 24px; */
+   text-align: center;
+   text-underline-position: from-font;
+   text-decoration-skip-ink: none;
+   padding: 18px 12px;
+   border: none;
+   background-color: transparent;
+   width: 100%;
+
+}
+
+
+
+.contacts-types-card .contact-type:hover {
+   background-color: #f0f0f0;
+   cursor: pointer;
+}
+
+.contacts-types-details {
+   border-radius: 20px;
+   display: inline-block;
+   width: 63%;
+   vertical-align: top;
+   padding: 35px 24px;
+   justify-content: center;
+
+}
+
+.contacts-types-details .inner-card-for-details {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+
+}
+
+ .contacts-types-details .inner-card-for-details .content {
+   display: none;
+}
+
+.contacts-types-details .inner-card-for-details .output-content.active {
+
+   width: 100%;
+
+   box-sizing: border-box;
+   padding: 10px;
+}
+
+.output-content {
+   display: none;
+}
+
+.output-content.active {
+   display: block;
+}
+
+.contacts-types-card button.active {
+   background-color: #0e4c41;
+   border: none;
+}
+
+.content-title-row {
+   display: flex;
+   align-items: center;
+   /* padding: 0 20px; */
+   padding-left: 30px;
+}
+
+.inner-card-for-details-title {
+   display: inline-block;
+   color: rgba(29, 144, 124, 1);
+   font-weight: bold;
+   font-size: 20px;
+   font-weight: 500;
+   text-align: center;
+   text-decoration-skip-ink: none;
+   padding: 0 20px;
+}
+
+.inner-card-for-details-line {
+   background: rgba(90, 179, 163, 1);
+   width: 30%;
+   display: inline-block;
+   padding: 0.5px;
+}
+
+.content-items {
+
+   padding-top: 44px;
+}
+
+@media (min-width: 1200px) {
+
+  .content-items {
+     padding-left: 30px;
+     padding-top: 44px;
+  }
+}
+
+.content-item-inner-box {
+   background-color: white;
+   margin-bottom: 10px;
+   width: 100%;
+   border-radius: 20px;
+   border: 2px solid rgba(29, 144, 124, 1);
+   padding: 12px 17px;
+}
+
+@media (min-width: 538px) {
+  .content-item-inner-box {
+     padding: 24px 34px;
+  }
+}
+
+.rounded-number {
+  background: rgba(29, 144, 124, 0.19);
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  padding-top: 3px;
+  padding-left: 9px;
+  color: rgba(29, 144, 124, 1);
+}

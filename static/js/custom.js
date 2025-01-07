@@ -128,34 +128,57 @@ $(document).ready(function() {
 	/*	Services Rotator
 	/*----------------------------------------------------*/
 
-	var owl = $('.services-holder');
-		owl.owlCarousel({
-			items: 2,
-			loop:true,
-			autoplay:true,
-			navBy: 1,
-			autoplayTimeout: 3000,
-			autoplayHoverPause: true,
-			smartSpeed: 1500,
-			responsive:{
-				0:{
-					items:1
-				},
-				767:{
-					items:1
-				},
-				768:{
-					items:2
-				},
-				991:{
-					items:2
-				},
-				1000:{
-					items:3
-				}
-			}
-	});
+	// var owl = $('.services-holder');
+	// 	owl.owlCarousel({
+	// 		items: 2,
+	// 		loop:true,
+	// 		autoplay:true,
+	// 		navBy: 1,
+	// 		autoplayTimeout: 3000,
+	// 		autoplayHoverPause: true,
+	// 		smartSpeed: 1500,
+	// 		responsive:{
+	// 			0:{
+	// 				items:1
+	// 			},
+	// 			767:{
+	// 				items:1
+	// 			},
+	// 			768:{
+	// 				items:2
+	// 			},
+	// 			991:{
+	// 				items:2
+	// 			},
+	// 			1000:{
+	// 				items:3
+	// 			}
+	// 		}
+	// });
 
+	// if (owl.length) {
+    //     owl.owlCarousel({
+    //         items: 2,
+    //         loop: true,
+    //         autoplay: true,
+    //         autoplayTimeout: 3000,
+    //         autoplayHoverPause: true,
+    //         smartSpeed: 1500,
+    //         navBy: 1,
+    //         responsive: {
+    //             0: { items: 1 },
+    //             767: { items: 1 },
+    //             768: { items: 2 },
+    //             991: { items: 2 },
+    //             1000: { items: 3 }
+    //         }
+    //     });
+
+    //     // Debugging autoplay issues
+    //     owl.on('changed.owl.carousel', function () {
+    //         console.log('Carousel changed');
+    //     });
+    // }
 	var owl = $('.services-holder2');
 		owl.owlCarousel({
 			items: 2,
@@ -208,6 +231,33 @@ $(document).ready(function() {
 				},
 				1000:{
 					items:2
+				}
+			}
+	});
+	var owl = $('.services-holder4');
+		owl.owlCarousel({
+			items: 4,
+			loop:true,
+			autoplay:true,
+			navBy: 1,
+			autoplayTimeout: 4500,
+			autoplayHoverPause: true,
+			smartSpeed: 1500,
+			responsive:{
+				0:{
+					items:1
+				},
+				576:{
+					items:2
+				},
+				768:{
+					items:3
+				},
+				991:{
+					items:3
+				},
+				1000:{
+					items:4
 				}
 			}
 	});
@@ -346,8 +396,4 @@ $(document).ready(function() {
 
 
 	// $('#datetimepicker').datetimepicker();
-
-
-
-
 });
