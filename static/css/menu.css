@@ -175,12 +175,15 @@ video {
 
 .wsmenu > .wsmenu-list > li > a {
   display: block;
-  padding: 10px 32px 10px 0px;
+  padding: 10px 15px 10px 15px;
   line-height: 50px;
   text-decoration: none;
   position: relative;
 }
 
+.wsmenu > .wsmenu-list > li > a .wsarrow{
+  padding:0px 7px;
+}
 #header-2 .wsmenu > .wsmenu-list > li > a {
   padding: 10px 40px 10px 10px;
 }
