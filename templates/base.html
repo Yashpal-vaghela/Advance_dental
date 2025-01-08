@@ -117,8 +117,8 @@
 	</div>     -->
     <!-- sidebar -->
     {% if not hide_social_image %}
-    <div id="fixed-social">
-     <div>
+    <div class="social">
+     {% comment %} <div>
         <a href="https://www.facebook.com/advance.dental.exports" class="fixed-facebook" target="_blank">
           <i class="fab fa-facebook"></i>
           <span>Facebook</span>
@@ -146,11 +146,18 @@
         <a href="https://wa.link/u0qly1" class="fixed-gplus" target="_blank" id="whatsappLink">
           <i class="fab fa-whatsapp"></i>
           <span>Whatsapp</span>
-          {% comment %} <img src="{% static 'img/social.png' %}" /> {% endcomment %}
           
         </a>
-      </div>
+      </div> {% endcomment %}
+      <ul>
+        <li><a href="https://www.facebook.com/advance.dental.exports">Facebook <i class="fa-brands fa-facebook-f" style="font-size: 15px; "></i></a></li>
+      <li><a href="https://www.instagram.com/advance_dental_export/">Instagram <i class="fa-brands fa-instagram" style="font-size: 15px; font-weight: 600; "></i></a></li>
+      <li><a href="https://www.linkedin.com/company/advance-dental-export/">Linkedin <i class="fa-brands fa-linkedin" style="font-size: 15px; "></i></a></li>
+      <li><a href="https://wa.link/u0qly1">Whatsapp <i  class="fa-brands fa-whatsapp"  style="font-size: 15px;  font-weight: 600;"></i></a></li>
+      <li><a href="tel:+918469888877">Phone <i  class="fa-solid fa-phone" style="font-size: 15px; "></i></a></li>
+        </ul>
     </div>
+    {% comment %} <img src="{% static 'img/social.png' %}" /> {% endcomment %}
     {% endif %}
     <!-- end -->
     <div id="page" class="page">
