@@ -24,7 +24,7 @@ def home(request):
     data = Testimonials.objects.all().order_by('-id')[:20]
     data2 = Blog.objects.all().order_by('-id')[:3]
     client = Client.objects.all().order_by('-id')
-    gallery = Gallery.objects.all().order_by('-id')[:9]
+    gallery = Gallery.objects.all().order_by('-id')[:7]
     gallery21 = BeforeAfter.objects.all().order_by('-id')[:7]
     video      =VideoTestimonals.objects.all().order_by('-id')[:4]
     context = {

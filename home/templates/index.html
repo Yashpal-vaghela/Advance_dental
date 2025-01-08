@@ -265,16 +265,16 @@
               <span class="section-id blue-color"
                 >Welcome to Advance Dental Export</span
               >
-              <h3 class="h3-md steelblue-color" style="font-size: 2rem;">
+              <h3 class="h3-md steelblue-color" style="font-size: 1.6rem;">
                 The Art Of Esthetic Laboratories
               </h3>
-              <p class="mb-4">
+              <p class="mb-4" style="font-size: 14px;">
                 “As an accomplished founder and CEO, seasoned digital dental
                 technician, experienced ceramist, and a guide to thousands of
                 budding professionals, my vision is to bring a dental renaissance to
                 the global canvas.
               </p>
-              <p class="mb-4">
+              <p class="mb-3" style="font-size: 14px;">
                 For the past 20 years, we have toiled and carved our path to
                 becoming a leading dental lab for providing the latest products,
                 innovative materials, and state-of-the-art digital technology. Today
@@ -301,7 +301,7 @@
               <img
                 class="img-fluid lazy"
                 src="https://unsplash.it/12/8?image=777"
-                data-src="{% static 'hareshnew2.png' %}"
+                data-src="{% static 'hresh-about.png' %}"
                 alt="Haresh Savani, Founder"
                 title="Haresh Savani, Founder"
               />
@@ -860,7 +860,7 @@
   </div>
 </section>
 <!-- Testimonials-video  -->
-<div id="gallery-1" class="gallery-section division pt-100">
+<div id="gallery-1" class="gallery-section division pt-50">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 offset-lg-1 section-title">
@@ -894,7 +894,7 @@
 <!-- Introduction for the lab  -->
 <section
   id="services-7"
-  class="bg-lightgrey wide-75 servicess-section division">
+  class="bg-lightgrey wide-601 servicess-section division">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mx-auto  section-title">
@@ -906,7 +906,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
@@ -954,7 +954,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
@@ -985,7 +985,7 @@
                 </div></a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
@@ -1015,7 +1015,7 @@
               >
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.4s"
@@ -1043,7 +1043,7 @@
               >
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.6s"
@@ -1289,7 +1289,7 @@
   </div>
 </div> {% endcomment %}
 <!--new desgine of before & after-->
-<div id="gallery-2" class="gallery-section division pt-100">
+<div id="gallery-2" class="gallery-section division ">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mx-auto section-title">
@@ -1303,12 +1303,12 @@
         {% for ie in gallery21 %}
         <!-- SERVICE BOX #1 -->
         <div class="gbox listing-gallery-link-block">
-          <div class="hover03 wow zoomSlider gallery_3d-block">
+          <div class="hover03 wow zoomSlider">
             <!-- Doctor Photo -->
             {% comment %} <div class="hover-overlay gallery-image-animation-trigger"> {% endcomment %}
               {% comment %} <div class="gallery-animation-color-bg"></div> {% endcomment %}
               <img
-                class="gallery-cover-image img-fluid"
+                class=" img-fluid"
                 src="{{ie.image.url}}"
                 alt="Before & After"
               />
@@ -1415,7 +1415,7 @@
   </div>
 </section>
 <!-- Gallery -->
-<div id="gallery-1" class="gallery-section division pt-100">
+<div id="gallery-1" class="gallery-section division pt-50">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mx-auto section-title">
@@ -1445,7 +1445,7 @@
       <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
         <a
           href="{% url 'home:gallery' %}"
-          class="btn btn-blue blue-hover"
+          class="btn btn-blue blue-hover submit"
           aria-label="See more in the Ade Gallery"
         >
           See More in the Gallery

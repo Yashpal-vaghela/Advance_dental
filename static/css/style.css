@@ -65,8 +65,7 @@
  }
 
  .wide-601 {
-   padding-top: 60px;
-   padding-bottom: 50px;
+   padding-top: 50px;
  }
 
  .wide-50 {
@@ -1196,9 +1195,9 @@
  }
 
  span.section-id {
-    font-size: 0.825rem;
+    font-size: 0.77rem;
     font-family: 'Lato', sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     display: block;
     letter-spacing: 0.5px;
@@ -2884,11 +2883,13 @@
    margin-bottom: 20px;
    transition: background-color 1s ease-in-out;
  }
- .hexagon:hover {
+ .future-card:hover .hexagon {
    background-color: #1b8976;
    animation: fill-animation 1s ease-in-out;
+
  }
- .hexagon:hover .blue-color {
+
+ .future-card:hover .blue-color {
    color: #fff;
  }
  @keyframes fill-animation {
@@ -3064,7 +3065,9 @@
  .sbox-7-txt {
     overflow: hidden;
     text-align: center;
-    /* padding-left: 20px; */
+ }
+ .sbox-7-p{
+   font-size: 0.82rem;
  }
 
  .sbox-1 h5 {
@@ -3762,7 +3765,7 @@
   position: relative;
 }
 
-.gallery_3d-block{
+/* .gallery_3d-block{
   z-index: 8;
   width: 100%;
   height: 100%;
@@ -3777,7 +3780,7 @@
   left: 0%;
   right: 0%;
   overflow: hidden;
-}
+} */
 
 .gallery-image-animation-trigger{
   z-index: 10;
@@ -5345,10 +5348,9 @@
    padding: 20px;
 }
 .contact-title{
-   font-size: 28px;
+   font-size: 24px;
    text-align: center;
    font-weight: bold;
-   /* margin-left: 20px; */
    color: #fff;
 }
 .contact-box{
@@ -5363,9 +5365,13 @@ h5.h5-sm {
    font-size: 1.1875rem;
 }
 .contact-box p{
+   font-size: 12px;
    margin-bottom: 0.5rem;
 }
-
+.contact-phone {
+   display: flex;
+   flex-direction: column;
+}
 .contact-box p a{
    color: #fff;
    text-decoration: none;
@@ -5430,6 +5436,13 @@ h5.h5-sm {
 
 .mt-15 {
    margin-top: 15px;
+}
+.submit-btn {
+   text-align: center;
+}
+.submit-btn .submit {
+   display: inline-block;
+   margin: 0 auto;
 }
 .submit{
    font-size: 15px;
@@ -7505,4 +7518,26 @@ h5.h5-sm {
   padding-top: 3px;
   padding-left: 9px;
   color: rgba(29, 144, 124, 1);
+}
+.play-button-circle {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #E9EBF0;
+   /* Black with 50% opacity */
+   border-radius: 50%;
+   /* Makes the button circular */
+   padding: 25px;
+   /* Adjust size of the circle */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+.intro_card_ADE {
+   height: auto;
+   border-radius: 16px;
+   background-color: black;
+   box-shadow: 2px 4px 12px #00000014;
 }
