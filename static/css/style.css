@@ -6011,9 +6011,9 @@ h5.h5-sm {
     .footer-contact-section {
        margin-bottom: -100px;
     }
-    .container {
+    /* .container {
        max-width: 960px;
-    }
+    } */
     .footer-contact-wrapper {
       display: flex;
       align-items: center;
