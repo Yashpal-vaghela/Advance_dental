@@ -2396,6 +2396,7 @@ td.text-right {
 .future-card:hover .blue-color {
   color: #fff;
 }
+
 @keyframes fill-animation {
   0% {
     background-color: #b3ecdb;
@@ -2409,6 +2410,50 @@ td.text-right {
     background-color: #1b8976;
     box-shadow: inset 0 0 0 0 #1b8976;
   }
+}
+.swiper-container {
+   width: 100%;
+   height: auto;
+   margin-bottom: 40px;
+ }
+
+ .swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .swiper-slide img {
+   display: block;
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   border-radius: 8px;
+ }
+
+ /* Style the pagination */
+ .swiper-container .swiper-pagination {
+   position: relative; /* Place below the Swiper container */
+   margin-top: 20px;
+   text-align: center;
+ }
+
+/* Default bullet styling */
+.swiper-container .swiper-pagination-bullet {
+   background-color: #E0E0E0; /* Light gray for default bullets */
+   opacity: 0.8;
+   transition: all 0.3s ease;
+ }
+ 
+ /* Active bullet styling */
+ .swiper-container .swiper-pagination-bullet-active {
+   background-color: #FFD700 !important; /* Bright yellow for active bullet */
+   opacity: 1;
+   transform: scale(1.5); /* Make the active bullet bigger */
+   transition: all 0.3s ease;
 }
 .sbox-71 {
   background-color: #fff;
@@ -3102,6 +3147,49 @@ td.text-right {
 .gallery-items-list {
   margin: 0 -10px;
   padding: 0;
+}
+.about_video{
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   border-radius: 12px;
+   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3), -6px -6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.index-video {
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+  
+}
+
+.video-thumbnail {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.play-button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+   color: white;
+   border: none;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   font-size: 24px;
+   line-height: 60px;
+   text-align: center;
+   cursor: pointer;
+   z-index: 2; /* Ensure it appears above the thumbnail */
+}
+
+.video-wrapper:hover .play-button {
+   background: rgba(0, 0, 0, 0.9); /* Darker background on hover */
 }
 
 #gallery-1 .gallery-items-list {

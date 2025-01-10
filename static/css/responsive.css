@@ -158,7 +158,7 @@
   .img-65 { width: 60px; height: 60px; }
 
   /* Section Id */
-  span.section-id { font-size: 0.8rem; margin-bottom: 23px; }
+  span.section-id { font-size: 0.8rem; margin-bottom: 23px; margin-top: 24px;}
 
   /* Section Title */
   .section-title p { padding: 0 14%; }
@@ -558,7 +558,7 @@
   .img-65 { width: 60px; height: 60px; }
 
   /* Section Id */
-  span.section-id { font-size: 0.915rem; margin-bottom: 23px; }
+  span.section-id { font-size: 0.915rem; margin-bottom: 23px; margin-top: 24px;}
 
   /* Section Title */
   .section-title { margin-bottom: 50px; }
@@ -736,7 +736,7 @@
   .info-section .btn.mt-25 { margin-top: 20px; }
 
   #info-5 .txt-block { padding-left: 30px; }
-  .top-row .info-4-img, #info-9 .txt-block {margin-bottom: 40px; }
+  .top-row .info-4-img, #info-9 .txt-block {margin-bottom: 20px; }
 
   #info-8 .table td, #info-8 .table th { font-size: 17px; padding: 16px 0; }
 
@@ -1071,7 +1071,7 @@
   .img-65 { width: 60px; height: 60px; }
 
   /* Section Id */
-  span.section-id { font-size: 0.915rem; margin-bottom: 25px; }
+  span.section-id { font-size: 0.915rem; margin-bottom: 25px; margin-top: 24px;}
 
   /* Section Title */
   /* .section-title { margin-bottom: 50px; } */
@@ -1227,7 +1227,7 @@
   .info-section .btn.mt-25 { margin-top: 20px; }
 
   #info-5 .txt-block { padding-left: 0; }
-  .top-row .info-4-img, #info-9 .txt-block {margin-bottom: 40px; }
+  .top-row .info-4-img, #info-9 .txt-block {margin-bottom: 20px; }
 
   #info-8 .table td, #info-8 .table th { font-size: 17px; padding: 16px 0; }
 
@@ -1541,7 +1541,7 @@
   .img-65 { width: 60px; height: 60px; }
 
   /* Section Id */
-  span.section-id { font-size: 1rem; margin-bottom: 3px; }
+  span.section-id { font-size: 1rem; margin-bottom: 3px; margin-top: 24px; }
 
   /* Section Title */
   .section-title { margin-bottom: 25px; }
@@ -1721,7 +1721,7 @@
   .info-section .btn.mt-25 { margin-top: 20px; }
 
   #info-5 .txt-block { padding-left: 0; }
-  .top-row .info-4-img, #info-9 .txt-block {margin-bottom: 40px; }
+  .top-row .info-4-img, #info-9 .txt-block {margin-bottom: 20px; }
 
   #info-8 .txt-block { padding: 40px 20px; }
   #info-8 .table td, #info-8 .table th { font-size: 17px; padding: 16px 0; }

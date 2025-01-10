@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="{% static 'img/11.jpg' %}">
 <link rel="canonical" href="https://advancedentalexport.com/about-us/">
 {% endblock seo %}
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 {% block css %}
 <style>
 	.ytbe{
@@ -66,7 +66,7 @@
 			<section id="info-4" class="wide-75 info-section division">
 				<div class="container">
 					<!-- TOP ROW -->
-					<div class="top-row mb-80">
+					<div class="top-row mb-50">
 						<div class="row d-flex">
 							<!-- INFO IMAGE -->
 							<div class="col-lg-4">
@@ -74,10 +74,10 @@
 									<img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="info-image">
 								</div>
 								<!-- Singnature -->
-								<div class="singnature mt-35 ml-25">
+								<div class="singnature mt-20 text-center">
 									<!-- Text -->
-									<p class="p-small mb-15">Haresh Savani -  (K.L.E. Belgaum)</p>
 									<p><b>CEO – Founder</b></p>
+									<p class="p-small mb-15 blue-color fw-700">Haresh Savani -  (K.L.E. Belgaum)</p>
 									<!-- Singnature Image -->
 									<!-- Recommended sizes for Retina Ready displays is 400x68px; -->
 									<img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="34" alt="signature-image" />	
@@ -88,9 +88,9 @@
 							<div class="col-lg-8">
 								<div class="txt-block  wow fadeInUp" data-wow-delay="0.4s">
 									<!-- Section ID -->	
-									<span class="mb-2 section-id blue-color">Welcome to Advance Dental Export</span>
+									<span class="mb-2 section-id blue-color" style="text-align: center;"><u>Welcome to Advance Dental Export</u></span>
 									<!-- Title -->
-									<h4 class="mb-4 h4-md steelblue-color">Best Dental Lab Services & Leader in Dental Implant Prosthesis, Cosmetic Dentistry and Digital Dentistry</h4>
+									<h4 class="mb-4 h4-md steelblue-color" style="text-align: center;">Best Dental Lab Services & Leader in Dental Implant Prosthesis, Cosmetic Dentistry and Digital Dentistry</h4>
 									<!-- Text -->
 									<p style="text-align:justify">Advance Dental Export, often referred to as 'ADE', stands as a premier dental lab with a forte in dental implant Prosthesis, cosmetic dentistry, and the nuances of digital dentistry. Established in 2009 by our visionary CEO, Haresh Savani, our singular mission has been to craft top-tier dental implant Prosthesis, emphasizing durability and impeccable aesthetics. We take immense pride in producing 100% of our dental implant products in-house at ADE, ensuring swift delivery coupled with minimal adjustments and remakes. Over the past 8 years, our unwavering commitment to merging stunning aesthetics with long-term resilience has stemmed from recognizing the universal desire for a radiant and healthy smile. We share a collective goal with our partnered dentists: to rejuvenate the health and charm in every patient's smile.</p>
 									<!-- Text -->
@@ -102,14 +102,19 @@
 
 					<div class="row mb-5 mt-3">
 						<div class="col-md-12">
-							<iframe  src="https://www.youtube.com/embed/vYkVXmQgqUI" class="w-100 ytbe" style="height:80vh;" title="Advance Dental Export Corporate Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<div class="w-100 ytbe  about_video" style="height: 80vh;" data-video-id="vYkVXmQgqUI">
+								<img src="https://img.youtube.com/vi/vYkVXmQgqUI/sddefault.jpg" alt="Video Thumbnail"
+									class="video-thumbnail" />
+								<button class="play-button">▶</button>
+							</div>
 						</div>
 					</div>
+			
 					
                     <!-- SERVICES CONTENT -->
 					<div class="row">
 						<div class="col-md-12">					
-							<div class="owl-carousel owl-theme services-holder2">		
+							<div class="owl-carousel owl-theme services-holder4">		
                                 {% for ie in team %}
                                     <!-- SERVICE BOX #1 -->
                                     <div class="sbox-5">
@@ -142,7 +147,7 @@
 				{% include 'static_counts.html' %}
 			</section>		
 
-			<section class="pb-4 mb-5 mt-5">
+			<section class="mb-5 mt-5">
 				<div class="container">
 					<!-- BOTTOM ROW -->
 					<div class="bottom-row">
@@ -184,21 +189,23 @@
 								</h3>
 							</div>
 						</div>	<!-- END INFO TEXT -->	
-						<div class="col-md-12">					
-							<div class="owl-carousel owl-theme services-holder4">					
-								{% for ie in imagez %}
-									<!-- SERVICE BOX #1 -->
-									<div class="sbox-5">
-										<div class="doctors-2">	
-										<!-- Doctor Photo -->
-											<div class="hover-overlay"> 
-												<img class="img-thumbnail" src="{{ie.image.url}}" alt="{{ie.name}}">	
-											</div>								
-										</div>
-									</div>
-								{% endfor %}
+			<swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true" space-between="10"
+				loop="true">
+
+				{% for ie in imagez %}
+				<swiper-slide>
+					<!-- SERVICE BOX #1 -->
+					<div class="sbox-5">
+						<div class="doctors-2">
+							<!-- Doctor Photo -->
+							<div class="hover-overlay">
+								<img class="img-thumbnail" src="{{ie.image.url}}" alt="{{ie.name}}">
 							</div>
-						</div>									
+						</div>
+					</div>
+				</swiper-slide>
+				{% endfor %}
+			</swiper-container>									
 					</div>	<!-- END SERVICES CONTENT --> 
 				</div> 
 			</section>
@@ -352,5 +359,67 @@
   }
 }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<script>
+	const swiper = document.querySelector('.mySwiper');
+
+	// Initialize Swiper with breakpoints
+	Object.assign(swiper, {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: true,
+		},
+		autoplay: {
+			delay: 2500, // Delay between slides in milliseconds (2.5 seconds)
+			disableOnInteraction: false, // Autoplay will not stop after interaction
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 2, // 2 images per slide on small screens
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3, // 3 images per slide on medium screens
+				spaceBetween: 15,
+			},
+			1024: {
+				slidesPerView: 4, // 4 images per slide on large screens
+				spaceBetween: 20,
+			},
+		},
+	});
+
+	swiper.initialize();
+</script>
+<script>
+    // Select the container of the video
+    const videoWrapper = document.querySelector(".ytbe.about_video");
+
+    // Find the play button inside the container
+    const playButton = videoWrapper.querySelector(".play-button");
+
+    // Add an event listener to the play button
+    if (playButton) {
+        playButton.onclick = () => {
+            const videoId = videoWrapper.getAttribute("data-video-id");
+            const iframe = document.createElement("iframe");
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+
+            // Replace the thumbnail and button with the iframe
+            videoWrapper.innerHTML = "";
+            videoWrapper.appendChild(iframe);
+        };
+    }
+</script>
+
 {% endblock js %}
     

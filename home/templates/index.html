@@ -638,17 +638,18 @@
         <div class="owl-carousel owl-theme services-holder3">
           <!-- SERVICE BOX #1 -->
           {% for ie in video %}
-          <div class="sbox-5">
-            <iframe
-              width="100%"
-              height="350"
-              src="{{ie.link}}"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+          <div class="sbox-5 index-video" data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}">
+              <img 
+                  src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"  
+                  alt="Video Thumbnail" 
+                  class="video-thumbnail"
+                  width="100%"
+                  height="350px"
+              />
+              <button class="play-button">▶</button>
           </div>
-          {% endfor %}
+        {% endfor %}
+
         </div>
       </div>
     </div>
@@ -1343,6 +1344,28 @@
     }
   });
 </script>
+<script>
+  // Select all video wrapper elements
+  const videoWrappers = document.querySelectorAll(".index-video");
+
+  videoWrappers.forEach(wrapper => {
+      wrapper.onclick = () => {
+          const videoId = wrapper.getAttribute("data-video-id");
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          iframe.width = "100%";
+          iframe.height = "350";
+          iframe.frameBorder = "0";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          iframe.allowFullscreen = true;
+
+          // Replace the placeholder with the iframe
+          wrapper.innerHTML = "";
+          wrapper.appendChild(iframe);
+      };
+  });
+</script>
+
 <script src="{% static 'js/galleryanimation.js'%}"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>
 {% endblock javascript %}

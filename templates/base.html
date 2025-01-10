@@ -118,37 +118,6 @@
     <!-- sidebar -->
     {% if not hide_social_image %}
     <div class="social">
-     {% comment %} <div>
-        <a href="https://www.facebook.com/advance.dental.exports" class="fixed-facebook" target="_blank">
-          <i class="fab fa-facebook"></i>
-          <span>Facebook</span>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/company/advance-dental-export/" class="fixed-linkedin" target="_blank">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.instagram.com/advance_dental_export/" class="fixed-instagrem" target="_blank">
-          <i class="fab fa-instagram"></i>
-          <span>Instagram</span>
-        </a>
-      </div>
-      <div>
-        <a href="tel:+918469888877" class="fixed-tumblr" target="_blank" id="phoneLink">
-          <i class="fas fa-phone"></i>
-          <span>Phone</span>
-        </a>
-      </div> 
-      <div class="fixed-instagrem2">
-        <a href="https://wa.link/u0qly1" class="fixed-gplus" target="_blank" id="whatsappLink">
-          <i class="fab fa-whatsapp"></i>
-          <span>Whatsapp</span>
-          
-        </a>
-      </div> {% endcomment %}
       <div class="social-all-items">
         <div class="social-item">
           <a href="https://www.facebook.com/advance.dental.exports" target="_blank">
@@ -169,13 +138,13 @@
           </a>
         </div>
         <div class="social-item">
-          <a href="https://wa.link/u0qly1" target="_blank">
+          <a href="https://wa.link/u0qly1" target="_blank" id="whatsappLink">
             Whatsapp 
             <i  class="fa-brands fa-whatsapp"  style="font-size: 15px;  font-weight: 600;"></i>
           </a>
         </div>
         <div class="social-item">
-          <a href="tel:+918469888877" target="_blank">
+          <a href="tel:+918469888877" target="_blank" id="phoneLink">
             Phone 
             <i  class="fa-solid fa-phone" style="font-size: 15px; "></i>
           </a>
@@ -218,208 +187,6 @@
       {% block body %}
 
       {% endblock %}
-      {% comment %} <footer id="footer-3" class="bg-image wide-40 footer division">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="footer-info mb-40">
-                <img src="{% static 'img/logo.png' %}" width="auto" height="90" alt="footer-logo" />
-                <p class="p-sm mt-20">
-                  <a href="https://advancedentalexport.com/">Advance Dental Export</a>
-                  is a full service dental lab that specializes in dental implants, cosmetic dentistry and digital dentistry. Haresh Savani, CEO, started’ ADE’ in 2009 with a vision to fabricate only the highest quality dental prosthetics to ensure long-lasting and esthetically pleasing outcomes for every dental lab product.
-                </p>
-                <p>
-                  <a href="https://play.google.com/store/apps/details?id=com.dental.doctore_app" target="_blank"><img src="{% static 'lo.png' %}" class="download" alt="Download" /></a>
-                </p>
-                <div class="footer-socials-links mt-20">
-                  <ul class="foo-socials text-center clearfix">
-                    <li>
-                      <a href="https://www.facebook.com/advance.dental.exports" target="_blank" class="ico-facebook"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/advance_dental_export/" target="_blank" class="ico-twitter"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" class="ico-google-plus"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-2">
-              <div class="footer-links mb-40">
-                <h5 class="h5-xs">Important Links</h5>
-                <ul class="foo-links clearfix">
-                  <li>
-                    <a href="{% url 'home:about' %}">About Us</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:blogs' %}">Blogs</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:career' %}">Careers</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:contact_new' %}">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:privacy' %}">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:testimonals' %}">Testimonials</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-2">
-              <div class="footer-links mb-40">
-                <h5 class="h5-xs">Discover</h5>
-                <ul class="clearfix">
-                  <li>
-                    <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:gallery' %}">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:exhibition' %}">Exhibition Gallery</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:beforeafter' %}">Before After</a>
-                  </li>
-                  <!-- <li><a href="{% url 'home:cookie' %}">Cookie Policy</a></li> -->
-                  <li>
-                    <a href="https://app.advancedentalexport.com/sitemap.xml">Site Map</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="footer-box mb-40">
-                <h5 class="h5-xs">Our Location</h5>
-                <p>Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA</p>
-                <!-- <p>Plot No.3/ 3-3/4, Dhuna House, Opp. Patel Nagar, -->
-                <!-- A.K.Road, Varachha, Surat (Gujarat) India - 395008</p> -->
-                <p class="foo-email mt-20">
-                  E:
-                  <a href="mailto:info@advancedentalexport.com">info@advancedentalexport.com</a>
-                </p>
-                <p>P: +91 84 88 88 88 77</p>
-                <p>P: +91 84 69 88 88 77</p>
-              </div>
-            </div>
-          </div>
-          <div class="bottom-footer">
-            <div class="row">
-              <div class="col-md-12">
-                <p class="footer-copyright">
-                  &copy; 2024 <span><a href="https://advancedentalexport.com/">Advance Dental Export</a></span>. All Rights Reserved
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer> {% endcomment %}
-      {% comment %} <footer id="footer-3" class="bg-image wide-40 footer division">
-        <div class="container">
-          <div class="big-card">
-            <div class="row">
-              <!-- Location Section -->
-              <div class="col-md-4">
-                <div class="footer-card mb-40 text-black">
-                  <div class="d-flex align-items-center mb-3">
-                    <img src="{% static 'img/map.png' %}" alt="footer-logo" />
-                    <p class="ms-3 mb-0">Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat - 394 130, Gujrat, India</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Contact Information Section -->
-              <div class="col-md-4">
-                <div class="footer-card mb-40 text-black">
-                  <div class="d-flex align-items-center mb-3">
-                    <img src="{% static 'img/mail.png' %}" alt="mail" />
-                    <p class="ms-3 mb-0">
-                      <a href="mailto:info@info.com" class="text-black">info@info.com</a><br />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Phone Section -->
-              <div class="col-md-4">
-                <div class="footer-card mb-40 text-black">
-                  <div class="d-flex align-items-center mb-3">
-                    <img src="{% static 'img/call.png' %}" alt="phone" />
-                    <p class="ms-3 mb-0">
-                      01213-456-7890<br />
-                      01213-456-7890
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row" style="padding-top: 50px;">
-            <!-- About Us Section -->
-            <div class="col-md-4">
-              <h5 class="h5-xs text-black">About Us</h5>
-              <p class="text-black">Our expert cleaners are carefully selected and screened and then fully trained to give them a deep.</p>
-              <ul class="d-flex list-unstyled">
-                <li class="me-3">
-                  <a href="https://www.facebook.com/" target="_blank" class="text-black"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="me-3">
-                  <a href="https://twitter.com/" target="_blank" class="text-black"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="me-3">
-                  <a href="https://www.linkedin.com/" target="_blank" class="text-black"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Quick Links Section -->
-            <div class="col-md-4">
-              <h5 class="h5-xs text-black">Quick Links</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-black">Hospital</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black">About Us</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black">Services</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black">Portfolio</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Clinic Hours Section -->
-            <div class="col-md-4">
-              <h5 class="h5-xs text-white">Clinic Hours</h5>
-              <ul class="list-unstyled text-white">
-                <li>Mon - Thurs - 9:00 AM - 7:00 PM</li>
-                <li>Friday - 9:00 AM - 6:00 PM</li>
-                <li>Saturday - Closed</li>
-                <li>Sunday - Closed</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bottom-footer mt-5">
-            <div class="row">
-              <div class="col-md-12">
-                <p class="footer-copyright text-white text-center">
-                  &copy; 2024 <a href="#" class="text-white">Your Company</a>. All Rights Reserved.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer> {% endcomment %}
       <div class="container mt-5 pt-5">
         <section class="footer-contact-section">
           <div class="container">
