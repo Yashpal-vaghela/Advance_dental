@@ -5,7 +5,6 @@
   content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports"
 />
 <link rel="canonical" href="https://advancedentalexport.com/" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Advance Dental Export" />
@@ -23,219 +22,136 @@
 
 {% endblock seo %} {% block css %} {% endblock css %} {% block body %}
 <h1 class="d-none">Best Dental Labs In India, US & Canada</h1>
-<div
-  style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-  class="swiper mySwiper"
->
-  <div class="parallax-bg" data-swiper-parallax="-23%"></div>
-  <div class="swiper-wrapper">
-    <!-- <div class="swiper-slide"><img src="{% static 'banner.jpg' %}" class="w-100" alt="Advance Dental Export Images">
-			<div class="texts">
-				<div class="title h1s text-black" data-swiper-parallax="-300">Bringing Digital Revolution In</div>
-				<div class="subtitle h2s text-black" data-swiper-parallax="-200">Digital Dentistry</div>
-			</div>
-		</div> -->
-    <div class="swiper-slide">
-      <img
-        src="{% static 'aa.jpg' %}"
-        class="w-100"
-        alt="Advance Dental Export Images"
-      />
-      <div class="texts">
-        <div class="title h1s text-black" data-swiper-parallax="-300">
-          Bringing Digital Revolution In
-        </div>
-        <div class="subtitle h2s text-black" data-swiper-parallax="-200">
-          Digital Dentistry
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</div>
-<!-- hero section -->
-{% comment %} <section id="about-3" class="about-section division">
-  <div class="container">
-    <div class="abox-3-holder">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-4">
-          <div
-            class="abox-3 b-right wow fadeInUp"
-            data-wow-delay="0.4s"
-            style="
-              visibility: visible;
-              animation-delay: 0.4s;
-              animation-name: fadeInUp;
-            "
-          >
-            <div class="row">
-              <div class="col-4">
-                <span
-                  ><img
-                    src="{% static 'shield.png' %}"
-                    class="pt-2"
-                    style="width: 80px"
-                    alt="Dentist"
-                /></span>
+
+<section class="hero-section1">
+  <div
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+    class="swiper mySwiper"
+  >
+    <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          src="{% static 'aa.jpg' %}"
+          class="w-100"
+          alt="Advance Dental Export Images"
+        />
+        <div class="container">
+          <div class="row">
+            <div class="texts col-lg-8 col-md-10 col-sm-9">
+              <div class="title h1s text-black" data-swiper-parallax="-300">
+                Bringing Digital Revolution In
               </div>
-              <div class="col-8">
-                <p class="blue-color">Uncompromised Quality</p>
-                <h5 class="h5-xs steelblue-color">
-                  Highest Quality Dental Implant Prosthetics
-                </h5>
+              <div class="subtitle h2s text-black" data-swiper-parallax="-200">
+                Digital Dentistry
               </div>
             </div>
-            <p class="mt-3">
-              Advance Dental Export is a Dental Laboratory that has been in the
-              market for more than 20+ years. We provide high quality dental
-              implant prosthetics, including dental implants, crowns, bridges
-              and dentures, to patients in both the U.S. and worldwide.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div
-            class="abox-3 b-right wow fadeInUp"
-            data-wow-delay="0.6s"
-            style="
-              visibility: visible;
-              animation-delay: 0.6s;
-              animation-name: fadeInUp;
-            "
-          >
-            <div class="row">
-              <div class="col-4">
-                <span
-                  ><img
-                    src="{% static 'internet.png' %}"
-                    class="pt-1"
-                    style="width: 80px"
-                    alt="Dentist"
-                /></span>
-              </div>
-              <div class="col-8">
-                <p class="blue-color">World Wide Presence</p>
-                <h5 class="h5-xs steelblue-color">
-                  Services Now Available In Canada
-                </h5>
-              </div>
-            </div>
-            <p class="mt-3">
-              With a global presence, we export dental prosthesis and other
-              dental supplies all over the world since 2009. We have customers
-              in Asia, Europe, USA and Canada, who are satisfied with our
-              services and products.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div
-            class="abox-3 wow fadeInUp"
-            data-wow-delay="0.8s"
-            style="
-              visibility: visible;
-              animation-delay: 0.8s;
-              animation-name: fadeInUp;
-            "
-          >
-            <div class="row">
-              <div class="col-3">
-                <span
-                  ><img
-                    src="https://unsplash.it/12/8?image=777"
-                    data-src="{% static 'fdaa.png' %}"
-                    class="pt-2 lazy"
-                    style="width: 80px"
-                    alt="Dentist"
-                /></span>
-              </div>
-              <div class="col-9">
-                <p class="blue-color">FDA Registered</p>
-                <h5 class="h5-xs steelblue-color">
-                  Bringing The Best Technology To Dental Labs
-                </h5>
-              </div>
-            </div>
-            <p class="mt-3">
-              With our FDA registration, we are able to provide your clients
-              with the latest dental equipment and techniques.
-            </p>
           </div>
         </div>
       </div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
-</section> {% endcomment %}
+</section>
+
 <section id="about-3" class="about-section division">
   <div class="container">
     <div class="abox-3-holder">
       <div class="row">
         <div class="col-lg-12">
-          <div class="abox-3 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <div class="row ">
+          <div
+            class="abox-3 wow fadeInUp"
+            style="visibility: visible; animation-name: fadeInUp"
+          >
+            <div class="row">
               <!-- First Column -->
               <div class="col-lg-4 col-md-6 text-center">
                 <div class="w-100 h-auto d-flex justify-content-center">
-                    <img
-                      src="{% static 'premium.png' %}"
-                      class="pt-2 mb-0"
-                      style="width: 100px"
-                      alt="Uncompromised Quality"
-                    />
+                  <img
+                    src="{% static 'premium.png' %}"
+                    class="pt-2 mb-0"
+                    style="width: 100px"
+                    alt="Uncompromised Quality"
+                  />
                 </div>
-                <p class="blue-color mt-3 d-flex justify-content-center">Uncompromised Quality</p>
-                <h5 class="h5-xs steelblue-color d-flex mt-3">
+                <p
+                  class="blue-color my-2 mt-sm-2 mt-md-2 mt-lg-3 d-flex justify-content-center align-items-center"
+                >
+                  Uncompromised Quality
+                </p>
+                <h5
+                  class="h5-xs steelblue-color d-flex my-2 my-sm-2 my-md-2 my-lg-3 align-items-center"
+                >
                   Highest Quality Dental Implant Prosthetics
                 </h5>
-                <p class="mt-3 d-flex w-100 mb-3">
+                <p class="my-2 my-sm-2 my-md-2 my-lg-3 d-flex w-100">
                   Advance Dental Export is a Dental Laboratory that has been in
                   the market for more than 20+ years. We provide high quality
                   dental implant prosthetics, including dental implants, crowns,
-                  bridges and dentures, to patients in both the U.S. and worldwide.
+                  bridges and dentures, to patients in both the U.S. and
+                  worldwide.
                 </p>
               </div>
 
               <!-- Second Column -->
               <div class="col-lg-4 col-md-6 text-center">
-                <div class="w-100 h-auto d-flex justify-content-center">
-                    <img
+                <div
+                  class="w-100 h-auto d-flex justify-content-center align-items-center"
+                >
+                  <img
                     src="{% static 'locations.png' %}"
                     class="pt-2 mb-0"
                     style="width: 100px"
                     alt="World Wide Presence"
                   />
                 </div>
-            
-                <p class="blue-color mt-3 d-flex justify-content-center">World Wide Presence</p>
-                <h5 class="h5-xs steelblue-color d-flex justify-content-center mt-3">
+
+                <p
+                  class="blue-color my-2 mt-sm-2 mt-md-2 mt-lg-3 d-flex justify-content-center align-items-center"
+                >
+                  World Wide Presence
+                </p>
+                <h5
+                  class="h5-xs steelblue-color my-2 my-sm-2 my-md-2 my-lg-3 d-flex justify-content-center align-items-center"
+                >
                   Services Now Available In Canada
                 </h5>
-                <p class="mt-3 d-flex w-100 mb-3">
+                <p class="my-2 my-sm-2 my-md-2 my-lg-3 d-flex w-100">
                   With a global presence, we export dental prosthesis and other
-                  dental supplies all over the world since 2009. We have customers
-                  in Asia, Europe, USA and Canada, who are satisfied with our
-                  services and products.
+                  dental supplies all over the world since 2009. We have
+                  customers in Asia, Europe, USA and Canada, who are satisfied
+                  with our services and products.
                 </p>
               </div>
 
               <!-- Third Column -->
               <div class="col-lg-4 col-md-6 text-center">
-                <div class="w-100 h-auto d-flex justify-content-center">
+                <div
+                  class="w-100 h-auto d-flex justify-content-center align-items-center"
+                >
                   <img
-                    src="{% static 'updatedfda.png' %}"
+                    src="{% static 'updatedfda (1).png' %}"
                     class="pt-2 mb-0"
-                    style="width: 150px"
+                    style="width: 165px"
                     alt="FDA Registered"
                   />
                 </div>
-                
-                <p class="blue-color mt-4 d-flex justify-content-center">FDA Registered</p>
-                <h5 class="h5-xs steelblue-color d-flex mt-3">
+
+                <p
+                  class="blue-color my-2 mt-sm-2 mt-md-2 mt-lg-3 d-flex justify-content-center align-items-center"
+                >
+                  FDA Registered
+                </p>
+                <h5
+                  class="h5-xs steelblue-color d-flex my-2 my-sm-2 my-md-2 my-lg-3"
+                >
                   Bringing The Best Technology To Dental Labs
                 </h5>
-                <p class="mt-3 d-flex w-100 h-auto mb-3">
+                <p
+                  class="my-2 my-sm-2 my-md-2 my-lg-3 d-flex w-100 h-auto align-items-center"
+                >
                   With our FDA registration, we are able to provide your clients
                   with the latest dental equipment and techniques.
                 </p>
@@ -250,74 +166,11 @@
 
 <!-- About us -->
 <section id="about-6" class="pb-50 about-section division">
-     <div class="container">
-        <div class="row d-flex align-items-center mt-0">
-          <div class="col-lg-7 d-flex ">
-            <div
-              class="txt-block pc-30 wow fadeInUp pt-5"
-              data-wow-delay="0.4s"
-              style="
-                visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
-              "
-            >
-              <span class="section-id blue-color"
-                >Welcome to Advance Dental Export</span
-              >
-              <h3 class="h3-md steelblue-color" style="font-size: 1.6rem;">
-                The Art Of Esthetic Laboratories
-              </h3>
-              <p class="mb-4" style="font-size: 14px;">
-                “As an accomplished founder and CEO, seasoned digital dental
-                technician, experienced ceramist, and a guide to thousands of
-                budding professionals, my vision is to bring a dental renaissance to
-                the global canvas.
-              </p>
-              <p class="mb-3" style="font-size: 14px;">
-                For the past 20 years, we have toiled and carved our path to
-                becoming a leading dental lab for providing the latest products,
-                innovative materials, and state-of-the-art digital technology. Today
-                it fills us with pride when the dental fraternity considers ADE to
-                be synonymous with international quality. I am confident that we
-                will continue to provide you with innovative, precise, and supremely
-                esthetic products even in the future.”
-              </p>
-              <div class="singnature mt-25">
-                <p class="p-small mb-15 fw-bold">Haresh Savani, Founder</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 d-flex">
-            <div
-              class="about-img text-center wow fadeInUp"
-              data-wow-delay="0.6s"
-              style="
-                visibility: visible;
-                animation-delay: 0.6s;
-                animation-name: fadeInUp;
-              "
-            >
-              <img
-                class="img-fluid lazy"
-                src="https://unsplash.it/12/8?image=777"
-                data-src="{% static 'hresh-about.png' %}"
-                alt="Haresh Savani, Founder"
-                title="Haresh Savani, Founder"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-</section>
-<!-- Static counts -->
-<div id="statistic-1" class="bg-scroll statistic-section division">
-  <div class="" style="background-color:rgb(36, 169, 146,0.7)">
-        <div class="container white-color">
-    <div class="row container-content">
-      <div class="col-md-6 col-lg-3">
+  <div class="container">
+    <div class="row d-flex align-items-center mt-0 mx-0">
+      <div class="col-lg-7 d-flex">
         <div
-          class="statistic-block icon-lg wow fadeInUp"
+          class="txt-block pc-30 wow fadeInUp pt-5"
           data-wow-delay="0.4s"
           style="
             visibility: visible;
@@ -325,16 +178,35 @@
             animation-name: fadeInUp;
           "
         >
-          <span class="flaticon-143-teeth" style="color: #333;"></span>
-          <h5 class="statistic-number">
-            <span class="count-element">6</span>L
-          </h5>
-          <p class="txt-400">Cases</p>
+          <span class="section-id blue-color"
+            >Welcome to Advance Dental Export</span
+          >
+          <h3 class="h3-md steelblue-color mb-0" style="font-size: 1.6rem">
+            The Art Of Esthetic Laboratories
+          </h3>
+          <p class="mb-4" style="font-size: 14px">
+            “As an accomplished founder and CEO, seasoned digital dental
+            technician, experienced ceramist, and a guide to thousands of
+            budding professionals, my vision is to bring a dental renaissance to
+            the global canvas.
+          </p>
+          <p class="mb-3" style="font-size: 14px">
+            For the past 20 years, we have toiled and carved our path to
+            becoming a leading dental lab for providing the latest products,
+            innovative materials, and state-of-the-art digital technology. Today
+            it fills us with pride when the dental fraternity considers ADE to
+            be synonymous with international quality. I am confident that we
+            will continue to provide you with innovative, precise, and supremely
+            esthetic products even in the future.”
+          </p>
+          <div class="singnature mt-25">
+            <p class="p-small mb-15 fw-bold">Haresh Savani, Founder</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
+      <div class="col-lg-5 d-flex">
         <div
-          class="statistic-block icon-lg wow fadeInUp"
+          class="about-img text-center wow fadeInUp"
           data-wow-delay="0.6s"
           style="
             visibility: visible;
@@ -342,495 +214,389 @@
             animation-name: fadeInUp;
           "
         >
-          <span class="flaticon-137-doctor" style="color: #333;"></span>
-          <h5 class="statistic-number">
-            <span class="count-element">400</span>
-          </h5>
-          <p class="txt-400">Qualified Professionals</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div
-          class="statistic-block icon-lg wow fadeInUp"
-          data-wow-delay="0.8s"
-          style="
-            visibility: visible;
-            animation-delay: 0.8s;
-            animation-name: fadeInUp;
-          "
-        >
-          <span
-            ><img
-              src="{% static 'dentistlogo.png' %}"
-              style="width: 70px"
-              alt="Dentist"
-          /></span>
-          <h5 class="statistic-number">
-            <span class="count-element" style="color: #333;">3500</span>
-          </h5>
-          <p class="txt-400">Trusted Dentist</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div
-          class="statistic-block icon-lg wow fadeInUp"
-          data-wow-delay="1s"
-          style="
-            visibility: visible;
-            animation-delay: 1s;
-            animation-name: fadeInUp;
-          "
-        >
-          <span class="flaticon-040-placeholder" style="color: #333;"></span>
-          <h5 class="statistic-number">
-            <span class="count-element">500</span>
-          </h5>
-          <p class="txt-400">Local Partners</p>
+          <img
+            class="img-fluid lazy"
+            src="https://unsplash.it/12/8?image=777"
+            data-src="{% static 'hresh-about.png' %}"
+            alt="Haresh Savani, Founder"
+            title="Haresh Savani, Founder"
+          />
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
-</div> 
-{% comment %} {% include 'static_counts.html' %} {% endcomment %}
-<!-- All Product sort information -->
-<section
-  id="services-5"
-  class="bg-lightgrey wide-75 services-section division">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md steelblue-color">
-          The Complete Dental Solution <br />
-          Pioneering Modern Technology for Dentists
-        </h3>
-      </div>
-    </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="owl-carousel owl-theme services-holder">
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img 
-                  class="mb-3 mt-3"
-                  src="{% static 'fn.png' %}"
-                  alt="Advance Dental Image"
-                  srcset=""
-                />
-              </div>
-              <div class="sbox-51-txt">
-                <h3 class="card-title">
-                  <a 
-                    href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}" 
-                    class="title-link"
-                  >
-                    Porcelain fused to metal (PFM)<br />
-                    {% comment %} <span style="opacity: 0">Porcelain fused to metal(PFM)</span> {% endcomment %}
-                  </a>
-                </h3>
-                <p class="card-desc">
-                  Porcelain bonded to metal has reminded one of the most
-                  predictable and strongest choices for dental restoration. Our
-                  dental laboratory specializes in crafting traditional PFMS.
-                  These resolutions bring esthetic’s white providing amazing
-                  strength and function in the area of the posterior.
-                </p>
-                <a href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}" class="card-link">Learn more
-                  <img 
-                    src="{% static 'img/right-arrow.png' %}"
-                    alt="Arrow Icon"
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img
-                  src="{% static 'img/zirconi-advance.png' %}"
-                  class="mb-3 mt-3"
-                  alt="Image"
-                />
-              </div>
-              <div class="sbox-51-txt">
-                <h3 class="card-title">
-                  {% comment %} Zir-icon CAD/CAM Full Contour Milled Zirconia Crowns and Bridges {% endcomment %}
-                  <a 
-                    href="{% url 'blogd' 'zir-icon' %}" 
-                    class="title-link"
-                    style="text-decoration: none; color: inherit;"
-                  >
-                    Advance Zirconia<br />
-                    {% comment %} <span style="opacity: 0"> 
-                      Porcelain fused to metal(PFM)
-                    </span> {% endcomment %}
-                  </a>
-                </h3>       
-                <p class="card-desc">
-                  Zir-icon is a high strength, milled to full contour, highly
-                  translucent zirconia restoration with NO porcelain layering.
-                  Zir-icon utilizes the latest. The technology available in our
-                  CAD/CAM product line. Ideal for posterior crowns and bridges.
-                </p>
-                <a href="{% url 'blogd' 'zir-icon' %}" class="card-link">Learn more
-                  <img 
-                    src="{% static 'img/right-arrow.png'%}"
-                    alt="Arrow Icon"
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img
-                  src="{% static 'img/IPS.png' %}"
-                  class="mb-3 mt-3"
-                  alt="Advance Dental Image"
-                  srcset=""
-                />
-              </div>
-              <div class="sbox-51-txt">
-                <h3 class="card-title">
-                  <a 
-                    href="{% url 'blogd' 'aesthetic-maxima'%}" 
-                    class="title-link"
-                    style="text-decoration: none; color: inherit;"
-                  >
-                    IPS e.max All Ceramic Restorations<br />
-                    {% comment %} <span style="opacity: 0">Porcelain fused to metal(PFM)</span> {% endcomment %}
-                  </a>
-                </h3>
-                <p class="card-desc">
-                  Our revolutionary new e.max CAD/CAM ceramic restorations offer
-                  the latest in digital design technology and ceramic engineering
-                  science. IPS e.max is the ultimate in metal-free esthetics and
-                  strength, offering a wide range of restorative options for
-                  veneers, inlays, onlays, crowns, bridges and implants
-                  prosthetics.
-                </p>
-                <a href="{% url 'blogd' 'aesthetic-maxima' %}" class="card-link">Learn more
-                  <img
-                    src="{% static 'img/right-arrow.png' %}" 
-                    alt="Arrow Icon" 
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img
-                  src="{% static 'img/Implant.png' %}"
-                  class="mb-3 mt-3"
-                  alt="Advance Dental Image"
-                  srcset=""
-                />
-              </div>
-              <div class="sbox-51-txt">
-                <h3 class="card-title">
-                  <a 
-                    href="{% url 'blogd' 'ad-abutments' %}" 
-                    class="title-link"
-                    style="text-decoration: none; color: inherit;"
-                  >
-                    Ad- Abutments Product Implant<br />
-                    {% comment %} <span style="opacity: 0">Porcelain fused to metal(PFM)</span> {% endcomment %}
-                </a>
-                </h3>
-                <p class="card-desc">
-                  AD- abutments are custom engineered to best meet each patient’s
-                  case needs. ADE uses the most advanced design and milling
-                  technologies to deliver the most precise fits available. ADE has
-                  developed the technology in order to deliver abutments that are
-                  compatible with most major implant prosthetics platforms.
-                </p>
-                <a href="{% url 'blogd' 'ad-abutments' %}" class="card-link">Learn more
-                  <img
-                    src="{% static 'img/right-arrow.png' %}" 
-                    alt="Arrow Icon" 
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img
-                  src="{% static 'img/17.png' %}"
-                  class="mb-3 mt-3"
-                  alt="Advance Dental Image"
-                  srcset=""
-                />
-              </div>
-              <div class="sbox-5-txt">
-                <h3 class="card-title">
-                  <a 
-                    href="{% url 'blogd' 'digital-crown-bridge' %}" 
-                    class="title-link"
-                    style="text-decoration: none; color: inherit;"
-                  >
-                    Digital Crown & Bridges<br />
-                    {% comment %} <span style="opacity: 0">Porcelain fused to metal(PFM)</span> {% endcomment %}
-                  </a>
-                </h3>
-                <p class="card-desc">
-                  Digital dentistry at advance dental export CAD/CAM milling and
-                  3D printing Full Service Dental Laboratory The world of Cad-Cam
-                  and digital dentistry has changed and improved dramatically in
-                  the last few years. Advance dental export has invested heavily
-                  in this new digital market and has taken time to study these
-                  advancements in the dental Industry.
-                </p>
-                <a href="{% url 'blogd' 'digital-crown-bridge' %}" class="card-link">Learn more
-                  <img
-                    src="{% static 'img/right-arrow.png' %}" 
-                    alt="Arrow Icon" 
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img
-                  src="{% static 'img/BPS.png' %}"
-                  class="mb-3 mt-3"
-                  alt="Advance Dental Image"
-                  srcset=""
-                />
-              </div>
-              <div class="sbox-5-txt">
-                <h3 class="card-title">
-                  <a 
-                    href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" 
-                    class="title-link"
-                    style="text-decoration: none; color: inherit;"
-                  >
-                    BPS – Biofunctional Prosthetic System<br />
-                    {% comment %} <span style="opacity: 0">Porcelain fused to metal(PFM)</span> {% endcomment %}
-                  </a>
-                </h3>
-                <p class="card-desc">
-                  They provide you with self-confidence, charisma, and
-                  self-assurance. Therefore, you want to gather all the necessary
-                  information before you make the decision regarding the optimum
-                  dentures for you.
-                </p>
-                <a href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" class="card-link">Learn more
-                  <img
-                    src="{% static 'img/right-arrow.png' %}" 
-                    alt="Arrow Icon" 
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="sbox-51">
-              <div class="sbox-51-img">
-                <img
-                  src="{% static 'img/nolbel-procera.png' %}"
-                  class="mb-3 mt-3"
-                  alt="Advance Dental Image"
-                  srcset=""
-                />
-              </div>
-              <div class="sbox-5-txt">
-                <h3 class="card-title">
-                  <a 
-                    href="{% url 'blogd' 'nobelprocera' %}" 
-                    class="title-link"
-                    style="text-decoration: none; color: inherit;"
-                  >
-                    NobelProcera Solution<br />
-                    {% comment %} <span style="opacity: 0">Porcelain fused to metal(PFM)</span> {% endcomment %}
-                </a>
-                </h3>
-                
-                <p class="card-desc">
-                  No one knows industrially produced CAD/CAM dental prosthetics
-                  like we do. Nobel Biocare was the first to produce dental
-                  restorations in this way. Over 30 years and more than 11 million
-                  units later, NobelProcera remains a leader in the precision
-                  engineering and manufacturing of dental implant prosthetics.
-                </p>
-                <a href="nobelprocera" class="card-link">Learn more
-                  <img
-                    src="{% static 'img/right-arrow.png' %}" 
-                    alt="Arrow Icon" 
-                    class="arrow-icon ms-2"
-                    style="width: 25px;"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> 
-        {% comment %} <div class="col-md-12">
-          <div class="owl-carousel owl-theme services-holder">
-            <div class="card-product">
-              <img 
-              class="img-fluid"
-                  src="{% static 'fn.png' %}"
-                alt="Advance Dental Image"
-                srcset=""
-              />
-              <div class="card-product-body">
-                <h3 class="card-product-title"> Porcelain fused to metal(PFM)</h3>
-                <p class="card-product-text">
-                  Porcelain bonded to metal has reminded one of the most
-                  predictable and strongest choices for dental restoration. Our
-                  dental laboratory specializes in crafting traditional PFMS.
-                  These resolutions bring esthetic’s white providing amazing
-                  strength and function in the area of the posterior.
-                </p>
-                <a href="#" class="btn-learn-more">Learn More</a>
-              </div>
-            </div>
-          </div>  
-        </div> {% endcomment %}
-      </div>
   </div>
 </section>
 
-{% comment %} <section
-  id="services-5"
-  class="bg-lightgrey wide-100 services-section division"
->
+<!-- Static counts -->
+<div id="statistic-1" class="bg-scroll statistic-section division">
+  <div class="" style="background-color: rgb(36, 169, 146, 0.7)">
+    <div class="container white-color">
+      <div class="row container-content">
+        <div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+          <div
+            class="statistic-block icon-lg wow fadeInUp"
+            data-wow-delay="0.4s"
+            style="
+              visibility: visible;
+              animation-delay: 0.4s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="flaticon-143-teeth" style="color: #333"></span>
+            <h5 class="statistic-number">
+              <span class="count-element">6</span>L
+            </h5>
+            <p class="txt-400">Cases</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+          <div
+            class="statistic-block icon-lg wow fadeInUp"
+            data-wow-delay="0.6s"
+            style="
+              visibility: visible;
+              animation-delay: 0.6s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="flaticon-137-doctor" style="color: #333"></span>
+            <h5 class="statistic-number">
+              <span class="count-element">400</span>
+            </h5>
+            <p class="txt-400">Qualified Professionals</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+          <div
+            class="statistic-block icon-lg wow fadeInUp"
+            data-wow-delay="0.8s"
+            style="
+              visibility: visible;
+              animation-delay: 0.8s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span
+              ><img
+                src="{% static 'dentistlogo.png' %}"
+                style="width: 70px"
+                alt="Dentist"
+            /></span>
+            <h5 class="statistic-number">
+              <span class="count-element" style="color: #333">3500</span>
+            </h5>
+            <p class="txt-400">Trusted Dentist</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+          <div
+            class="statistic-block icon-lg wow fadeInUp"
+            data-wow-delay="1s"
+            style="
+              visibility: visible;
+              animation-delay: 1s;
+              animation-name: fadeInUp;
+            "
+          >
+            <span class="flaticon-040-placeholder" style="color: #333"></span>
+            <h5 class="statistic-number">
+              <span class="count-element">500</span>
+            </h5>
+            <p class="txt-400">Local Partners</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- All Product sort information -->
+<section id="services-5" class="bg-lightgrey wide-75 services-section division">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1 section-title">
-        <h3 class="h3-md steelblue-color">
+    <div class="row align-items-center justify-content-center mx-auto">
+      <div class="col-lg-12 mx-auto section-title">
+        <h3 class="h3-md steelblue-color mb-0">
           The Complete Dental Solution <br />
           Pioneering Modern Technology for Dentists
         </h3>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 col-sm-12 col-12 px-0">
         <div class="owl-carousel owl-theme services-holder">
-          <div class="card-product">
-            <img 
-              src="{% static 'fn.png' %}" 
-              alt="Porcelain fused to metal (PFM)"
-              class="img-fluid"
-            />
-            <div class="card-product-body">
-              <h3 class="card-product-title">Porcelain fused to metal (PFM)</h3>
-              <p class="card-product-text">
-                Porcelain bonded to metal has remained one of the most
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                class="mb-3 mt-3"
+                src="{% static 'fn.png' %}"
+                alt="Advance Dental Image"
+                srcset=""
+              />
+            </div>
+            <div class="sbox-51-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}"
+                  class="title-link"
+                >
+                  Porcelain fused to metal (PFM)<br />
+                </a>
+              </h3>
+              <p class="card-desc">
+                Porcelain bonded to metal has reminded one of the most
                 predictable and strongest choices for dental restoration. Our
                 dental laboratory specializes in crafting traditional PFMS.
-                These resolutions bring esthetics while providing amazing
+                These resolutions bring esthetic’s white providing amazing
                 strength and function in the area of the posterior.
               </p>
-              <a href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}" class="btn-learn-more">Learn More</a>
+              <a
+                href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}"
+                class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png' %}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
             </div>
           </div>
-
-          <div class="card-product">
-            <img
-              src="{% static 'img/12.jpg' %}" 
-              alt="Zir-icon CAD/CAM Full Contour Milled Zirconia"
-              class="img-fluid"
-            />
-            <div class="card-product-body">
-              <h3 class="card-product-title">
-                Zir-icon CAD/CAM Full Contour Milled Zirconia Crowns and Bridges
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                src="{% static 'img/zirconi-advance.png' %}"
+                class="mb-3 mt-3"
+                alt="Image"
+              />
+            </div>
+            <div class="sbox-51-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'zir-icon' %}"
+                  class="title-link"
+                  style="text-decoration: none; color: inherit"
+                >
+                  Advance Zirconia<br />
+                </a>
               </h3>
-              <p class="card-product-text">
-                Zir-icon is a high-strength, milled-to-full-contour, highly
-                translucent zirconia restoration with no porcelain layering.
-                Zir-icon utilizes the latest CAD/CAM technology. Ideal for
-                posterior crowns and bridges.
+              <p class="card-desc">
+                Zir-icon is a high strength, milled to full contour, highly
+                translucent zirconia restoration with NO porcelain layering.
+                Zir-icon utilizes the latest. The technology available in our
+                CAD/CAM product line. Ideal for posterior crowns and bridges.
               </p>
-              <a href="{% url 'blogd' 'zir-icon' %}" class="btn-learn-more">Learn More</a>
+              <a href="{% url 'blogd' 'zir-icon' %}" class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png'%}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
             </div>
           </div>
-
-          <div class="card-product">
-            <img
-              src="{% static 'img/13.png' %}" 
-              alt="IPS e.max All Ceramic Restorations"
-              class="img-fluid"
-            />
-            <div class="card-product-body">
-              <h3 class="card-product-title">IPS e.max All Ceramic Restorations</h3>
-              <p class="card-product-text">
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                src="{% static 'img/IPS.png' %}"
+                class="mb-3 mt-3"
+                alt="Advance Dental Image"
+                srcset=""
+              />
+            </div>
+            <div class="sbox-51-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'aesthetic-maxima'%}"
+                  class="title-link"
+                  style="text-decoration: none; color: inherit"
+                >
+                  IPS e.max All Ceramic Restorations<br />
+                </a>
+              </h3>
+              <p class="card-desc">
                 Our revolutionary new e.max CAD/CAM ceramic restorations offer
                 the latest in digital design technology and ceramic engineering
                 science. IPS e.max is the ultimate in metal-free esthetics and
                 strength, offering a wide range of restorative options for
-                veneers, inlays, onlays, crowns, bridges, and implant
+                veneers, inlays, onlays, crowns, bridges and implants
                 prosthetics.
               </p>
-              <a href="{% url 'blogd' 'aesthetic-maxima' %}" class="btn-learn-more">Learn More</a>
+              <a href="{% url 'blogd' 'aesthetic-maxima' %}" class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png' %}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
             </div>
           </div>
-
-          <div class="card-product">
-            <img
-              src="{% static 'img/14.png' %}" 
-              alt="Ad-Abutments Product Implant"
-              class="img-fluid"
-            />
-            <div class="card-product-body">
-              <h3 class="card-product-title">Ad-Abutments Product Implant</h3>
-              <p class="card-product-text">
-                AD-abutments are custom engineered to meet each patient’s case
-                needs. ADE uses advanced design and milling technologies to
-                deliver precise fits compatible with most major implant
-                prosthetics platforms.
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                src="{% static 'img/Implant.png' %}"
+                class="mb-3 mt-3"
+                alt="Advance Dental Image"
+                srcset=""
+              />
+            </div>
+            <div class="sbox-51-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'ad-abutments' %}"
+                  class="title-link"
+                  style="text-decoration: none; color: inherit"
+                >
+                  Ad- Abutments Product Implant<br />
+                </a>
+              </h3>
+              <p class="card-desc">
+                AD- abutments are custom engineered to best meet each patient’s
+                case needs. ADE uses the most advanced design and milling
+                technologies to deliver the most precise fits available. ADE has
+                developed the technology in order to deliver abutments that are
+                compatible with most major implant prosthetics platforms.
               </p>
-              <a href="{% url 'blogd' 'ad-abutments' %}" class="btn-learn-more">Learn More</a>
+              <a href="{% url 'blogd' 'ad-abutments' %}" class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png' %}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
             </div>
           </div>
-
-          <div class="card-product">
-            <img
-              src="{% static 'img/17.png' %}" 
-              alt="Digital Crown & Bridges"
-              class="img-fluid"
-            />
-            <div class="card-product-body">
-              <h3 class="card-product-title">Digital Crown & Bridges</h3>
-              <p class="card-product-text">
-                Digital dentistry at Advance Dental Export CAD/CAM milling and
-                3D printing Full Service Dental Laboratory. Advance dental
-                export has invested heavily in the digital market and has
-                taken time to study advancements in the dental industry.
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                src="{% static 'img/17.png' %}"
+                class="mb-3 mt-3"
+                alt="Advance Dental Image"
+                srcset=""
+              />
+            </div>
+            <div class="sbox-5-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'digital-crown-bridge' %}"
+                  class="title-link"
+                  style="text-decoration: none; color: inherit"
+                >
+                  Digital Crown & Bridges<br />
+                </a>
+              </h3>
+              <p class="card-desc">
+                Digital dentistry at advance dental export CAD/CAM milling and
+                3D printing Full Service Dental Laboratory The world of Cad-Cam
+                and digital dentistry has changed and improved dramatically in
+                the last few years. Advance dental export has invested heavily
+                in this new digital market and has taken time to study these
+                advancements in the dental Industry.
               </p>
-              <a href="{% url 'blogd' 'digital-crown-bridge' %}" class="btn-learn-more">Learn More</a>
+              <a
+                href="{% url 'blogd' 'digital-crown-bridge' %}"
+                class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png' %}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                src="{% static 'img/BPS.png' %}"
+                class="mb-3 mt-3"
+                alt="Advance Dental Image"
+                srcset=""
+              />
+            </div>
+            <div class="sbox-5-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}"
+                  class="title-link"
+                  style="text-decoration: none; color: inherit"
+                >
+                  BPS – Biofunctional Prosthetic System<br />
+                </a>
+              </h3>
+              <p class="card-desc">
+                They provide you with self-confidence, charisma, and
+                self-assurance. Therefore, you want to gather all the necessary
+                information before you make the decision regarding the optimum
+                dentures for you.
+              </p>
+              <a
+                href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}"
+                class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png' %}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="sbox-51 mx-auto">
+            <div class="sbox-51-img">
+              <img
+                src="{% static 'img/nolbel-procera.png' %}"
+                class="mb-3 mt-3"
+                alt="Advance Dental Image"
+                srcset=""
+              />
+            </div>
+            <div class="sbox-5-txt">
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'nobelprocera' %}"
+                  class="title-link"
+                  style="text-decoration: none; color: inherit"
+                >
+                  NobelProcera Solution<br />
+                </a>
+              </h3>
+
+              <p class="card-desc">
+                No one knows industrially produced CAD/CAM dental prosthetics
+                like we do. Nobel Biocare was the first to produce dental
+                restorations in this way. Over 30 years and more than 11 million
+                units later, NobelProcera remains a leader in the precision
+                engineering and manufacturing of dental implant prosthetics.
+              </p>
+              <a href="nobelprocera" class="card-link"
+                >Learn more
+                <img
+                  src="{% static 'img/right-arrow.png' %}"
+                  alt="Arrow Icon"
+                  class="arrow-icon ms-2"
+                  style="width: 25px"
+                />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> {% endcomment %}
-
-{% comment %} <section class="">
-  <img
-    src="https://unsplash.it/12/8?image=777"
-    data-src="{% static 'image-07.png' %}"
-    class="w-100 d-bbnone lazy"
-    alt="Image"
-  />
-</section> {% endcomment %}
-
+</section>
 
 <!-- About team -->
 <section id="banner-7" class="bg-fixed banner-section division">
-  <div class="container white-color">
-    <div class="row d-flex align-items-center">
-      <div class="col-md-8 col-lg-6 col-xl-5">
+  <div class="container white-color px-0">
+    <div class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto">
+      <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
         <div
           class="banner-txt wow fadeInUp"
           data-wow-delay="0.4s"
@@ -840,18 +606,18 @@
             animation-name: fadeInUp;
           "
         >
-          <h2 class="h2-xs" style="font-size: 2.1rem;">
+          <h2 class="h2-xs" style="font-size: 2.1rem">
             Where Quality <br />
             Meets Excellence
           </h2>
-          <p >
-            One common dream fuels us:<br/>
-            Elevating Digital Dentistry to
-            unparalleled <br/> heights worldwide
+          <p>
+            One common dream fuels us:<br />
+            Elevating Digital Dentistry to unparalleled <br />
+            heights worldwide
           </p>
           <a
             href="{% url 'home:contact' %}"
-            class="btn btn-blue tra-white-hover mt-20 "
+            class="btn btn-blue tra-white-hover mt-20"
             >Get In Touch</a
           >
         </div>
@@ -862,51 +628,52 @@
 <!-- Testimonials-video  -->
 <div id="gallery-1" class="gallery-section division pt-50">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1 section-title">
-        <h3 class="h3-md steelblue-color">
+    <div class="row gallery-items-list">
+      <div class="col-lg-12 mx-auto section-title">
+        <h3 class="h3-md steelblue-color mb-0">
           In Their Own Words: Tales of Trust from Our Clientele
         </h3>
       </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row gallery-items-list">
-      <div class="owl-carousel owl-theme services-holder3">
-        <!-- SERVICE BOX #1 -->
-
-        {% for ie in video %}
-        <div class="sbox-5">
-          <iframe
-            width="100%"
-            height="350"
-            src="{{ie.link}}"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+      <div class="col-12">
+        <div class="owl-carousel owl-theme services-holder3">
+          <!-- SERVICE BOX #1 -->
+          {% for ie in video %}
+          <div class="sbox-5">
+            <iframe
+              width="100%"
+              height="350"
+              src="{{ie.link}}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
+  {% comment %}
+  <div class="container">
+    <div class="row"></div>
+  </div>
+  {% endcomment %}
 </div>
 <!-- Introduction for the lab  -->
 <section
   id="services-7"
-  class="bg-lightgrey wide-601 servicess-section division">
+  class="bg-lightgrey wide-601 servicess-section division"
+>
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 mx-auto  section-title">
-        <h3 class="h3-md steelblue-color">
+      <div class="col-lg-12 mx-auto section-title">
+        <h3 class="h3-md steelblue-color mb-0">
           Building The Future Of Digital Dentistry
         </h3>
       </div>
-    </div>
-    <div class="row">
       <div class="col-lg-12">
-        <div class="row">
-          <div class="col-md-4 future-card">
+        <div class="row mx-sm-0">
+          <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
@@ -916,12 +683,12 @@
                 animation-name: fadeInUp;
               "
             >
-            <div class="hexagon">
-              <span class="flaticon-137-doctor blue-color"></span>
-            </div>
+              <div class="hexagon">
+                <span class="flaticon-137-doctor blue-color"></span>
+              </div>
               <div class="sbox-7-txt">
                 <h5 class="h5-sm steelblue-color">Top Level Technician</h5>
-                <p class="p-sm" style="font-size: 14px;">
+                <p class="p-sm" style="font-size: 14px">
                   We are dedicated to provide our dentist with the highest level
                   of care, quality products and top notch services. We have a
                   team of highly qualified dental technicians who are committed
@@ -930,7 +697,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.4s"
@@ -940,12 +707,12 @@
                 animation-name: fadeInUp;
               "
             >
-            <div class="hexagon">
-              <span class="flaticon-076-microscope blue-color"></span>
-            </div>
+              <div class="hexagon">
+                <span class="flaticon-076-microscope blue-color"></span>
+              </div>
               <div class="sbox-7-txt">
                 <h5 class="h5-sm steelblue-color">Modern Equipment</h5>
-                <p class="p-sm" style="font-size: 14px;">
+                <p class="p-sm" style="font-size: 14px">
                   Advance Dental Export makes the use of the latest technologies
                   in digital dentistry to manufacture all the dental
                   prosthetics. We are committed to providing high-quality,
@@ -954,7 +721,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 future-card">
+          <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
@@ -967,25 +734,20 @@
               <a href="#">
                 <div class="hexagon">
                   <span class="flaticon-080-shield blue-color"></span>
-                  {% comment %} <img 
-                    src="{% static 'shield.png' %}" 
-                    class="img-fluid"
-                    max-width: "65px"
-                    alt="qualified"
-                  /> {% endcomment %}
                 </div>
                 <div class="sbox-7-txt">
                   <h5 class="h5-sm steelblue-color">Qualified Facilities</h5>
-                  <p class="p-sm" style="font-size: 14px;">
+                  <p class="p-sm" style="font-size: 14px">
                     We firmly prioritize quality foremost. Every dedicated
                     member on our passionate, committed team consistently
                     ensures you always receive the absolute highest quality
                     dental prosthesis and materials available in the industry.
                   </p>
-                </div></a>
+                </div></a
+              >
             </div>
           </div>
-          <div class="col-md-4 future-card">
+          <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
@@ -997,13 +759,11 @@
             >
               <a href="#">
                 <div class="hexagon">
-                  <span
-                    class="flaticon-113-clinic-history-4 blue-color"
-                  ></span>
+                  <span class="flaticon-113-clinic-history-4 blue-color"></span>
                 </div>
-                <div class="sbox-7-txt"> 
+                <div class="sbox-7-txt">
                   <h5 class="h5-sm steelblue-color">Professional Services</h5>
-                  <p class="p-sm" style="font-size: 14px;">
+                  <p class="p-sm" style="font-size: 14px">
                     We offer specialized services in dental care, focusing on
                     crown and bridge preparation. Our team is committed to
                     providing customized smile designs, ensuring each patient
@@ -1015,7 +775,7 @@
               >
             </div>
           </div>
-          <div class="col-md-4 future-card">
+          <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.4s"
@@ -1031,7 +791,7 @@
                 </div>
                 <div class="sbox-7-txt">
                   <h5 class="h5-sm steelblue-color">Precision Craftsmanship</h5>
-                  <p class="p-sm" style="font-size: 14px;">
+                  <p class="p-sm" style="font-size: 14px">
                     We at Advance Dental Export pride ourselves on precision
                     craftsmanship. Our team meticulously designs and fabricates
                     each dental product, ensuring exceptional quality in fit,
@@ -1043,7 +803,7 @@
               >
             </div>
           </div>
-          <div class="col-md-4 future-card">
+          <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.6s"
@@ -1053,13 +813,12 @@
                 animation-name: fadeInUp;
               "
             >
-            <div class="hexagon">
-              {% comment %} <span class="flaticon-150-clipboard blue-color"></span> {% endcomment %}
-              <span class="flaticon-079-safebox blue-color"></span>
-            </div>  
+              <div class="hexagon">
+                <span class="flaticon-079-safebox blue-color"></span>
+              </div>
               <div class="sbox-7-txt">
                 <h5 class="h5-sm steelblue-color">Client-Centric Approach</h5>
-                <p class="p-sm" style="font-size: 14px;">
+                <p class="p-sm" style="font-size: 14px">
                   We maintain an open channel for communication, ensuring that
                   each dental solution is tailored to your specific needs and
                   preferences. We view our collaboration as a partnership,
@@ -1069,36 +828,14 @@
               </div>
             </div>
           </div>
-          {% comment %} <div class="col-md-4">
-            <div
-              class="sbox-71 icon-xs wow fadeInUp card-product-bg-1"
-              data-wow-delay="1.2s"
-              style="
-                visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
-              "
-            >
-               <span class="flaticon-137-doctor blue-color"></span>
-              
-                <h5 class="h5-sm steelblue-color" style="position: absolute; left: 50%;z-index: 1; transform: translate(-50%, 50%);">Top Level Technician</h5>
-                <div class="sbox-71-txt">
-                  <p class="p-sm" style="font-size: 14px;">
-                    We are dedicated to provide our dentist with the highest level
-                    of care, quality products and top notch services. We have a
-                    team of highly qualified dental technicians who are committed
-                    to provide you with the best services possible.
-                  </p>
-              </div>
-            </div>
-          </div> {% endcomment %}
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!--- SERVICE SECTION -->
-<section id="services-6" class="bg-blue wide-40 servicess-section division my-5">
+<section id="services-6" class="bg-blue wide-40 servicess-section division">
   <div class="container white-color">
     <div class="row">
       <div class="col-lg-12 mx-auto section-title">
@@ -1108,8 +845,6 @@
           Professional's Needs Today!
         </p>
       </div>
-    </div>
-    <div class="row d-flex">
       <div class="col-md-6 col-lg-4 d-flex first">
         <div
           class="sbox-6 text-md-start text-lg-end wow fadeInRight"
@@ -1120,7 +855,11 @@
             animation-name: fadeInRight;
           "
         >
-          <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">CAD/CAM Technology</h5>
+          <h5
+            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            CAD/CAM Technology
+          </h5>
           <p>
             Advance Dental Export remains the leader in offering digital
             technology to our clients. We currently support 3M True Definition,
@@ -1137,7 +876,11 @@
             animation-name: fadeInRight;
           "
         >
-          <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Shade Analysis</h5>
+          <h5
+            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            Shade Analysis
+          </h5>
           <p>
             We can match the most difficult shades using your digital photos or
             in-lab consultation. – Send digital photos to:
@@ -1154,8 +897,12 @@
             animation-delay: 0.6s;
             animation-name: fadeInRight;
           "
+        >
+          <h5
+            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
           >
-          <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Case Planning Assistance</h5>
+            Case Planning Assistance
+          </h5>
           <p>
             Personal consultations with doctors and staff for treatment options
             with recommendations from a technical perspective.
@@ -1170,15 +917,16 @@
             animation-name: fadeInRight;
           "
         >
-          <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Diagnostic Wax-Ups</h5>
+          <h5
+            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            Diagnostic Wax-Ups
+          </h5>
           <p>Complete diagnostic wax-up service for treatment planning.</p>
         </div>
       </div>
       <div class="col-lg-4 d-lg-flex align-items-center s6-img">
-        <div
-          class="sbox-6-img text-center wow fadeInUp"
-          data-wow-delay="0.8s"
-        >
+        <div class="sbox-6-img text-center wow fadeInUp" data-wow-delay="0.8s">
           <img
             class="img-fluid lazy"
             src="https://unsplash.it/12/8?image=777"
@@ -1188,12 +936,14 @@
         </div>
       </div>
       <div class="col-md-6 col-lg-4 d-flex second">
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" data-wow-delay="0.2s"
+        <div
+          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+          data-wow-delay="0.2s"
           style="
-          visibility: visible;
-          animation-delay: 0.2s;
-          animation-name: fadeInLeft;
-        "
+            visibility: visible;
+            animation-delay: 0.2s;
+            animation-name: fadeInLeft;
+          "
         >
           <h5 class="h5-md">Cosmetic Restoration Service</h5>
           <p>
@@ -1218,28 +968,30 @@
             custom abutments and denture bars.
           </p>
         </div>
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" 
-             data-wow-delay="0.6s"
-             style="
-              visibility: visible;
-              animation-delay: 0.6s;
-              animation-name: fadeInLeft;
-            "
-             >
+        <div
+          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+          data-wow-delay="0.6s"
+          style="
+            visibility: visible;
+            animation-delay: 0.6s;
+            animation-name: fadeInLeft;
+          "
+        >
           <h5 class="h5-md">Custom Milling</h5>
           <p>
             Custom milling of zirconia, implant abutments, overdenture bars,
             temporaries and ceramics.
           </p>
         </div>
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" 
-             data-wow-delay="0.8s"
-             style="
-              visibility: visible;
-              animation-delay: 0.8s;
-              animation-name: fadeInLeft;
-            "
-             >
+        <div
+          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+          data-wow-delay="0.8s"
+          style="
+            visibility: visible;
+            animation-delay: 0.8s;
+            animation-name: fadeInLeft;
+          "
+        >
           <h5 class="h5-md">Laser Welding</h5>
           <p>Laser welding for quick repairs of partial dentures</p>
         </div>
@@ -1247,23 +999,23 @@
     </div>
   </div>
 </section>
-<!-- Before & After Gallery -->
-{% comment %} <div id="gallery-2" class="gallery-section division pt-100">
+
+<!--new desgine of before & after-->
+<div id="gallery-2" class="gallery-section division">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1 section-title">
-        <h3 class="h3-md steelblue-color">Before & After</h3>
+    <div class="row gallery-items-list text-center listing-gallery-img-items">
+      <div class="col-lg-12 mx-auto section-title">
+        <h3 class="h3-md steelblue-color mb-0">Before & After</h3>
       </div>
-    </div>
-  </div>
-  <div class="row gallery-items-list text-center">
-    <div class="owl-carousel owl-theme services-holder2">
-      {% for ie in gallery21 %}
-      <!-- SERVICE BOX #1 -->
-      <div class="sbox-5">
-        <div class="doctors-2">
-          <!-- Doctor Photo -->
-          <div class="hover-overlay">
+
+      <div
+        class="owl-carousel owl-theme services-holder listing-gallery-img-item"
+      >
+        {% for ie in gallery21 %}
+        <!-- SERVICE BOX #1 -->
+        <div class="gbox listing-gallery-link-block">
+          <div class="hover03 wow zoomSlider">
+            <!-- Doctor Photo -->
             <img
               class="img-fluid"
               src="{{ie.image.url}}"
@@ -1271,71 +1023,27 @@
             />
           </div>
         </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-        <a
-          href="{% url 'home:beforeafter' %}"
-          class="btn btn-blue blue-hover"
-          aria-label="See more in the Ade after befor"
-          >See More</a
-        >
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}
-<!--new desgine of before & after-->
-<div id="gallery-2" class="gallery-section division ">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md steelblue-color">Before & After</h3>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row gallery-items-list text-center listing-gallery-img-items">
-      <div class="owl-carousel owl-theme services-holder listing-gallery-img-item">
-        {% for ie in gallery21 %}
-        <!-- SERVICE BOX #1 -->
-        <div class="gbox listing-gallery-link-block">
-          <div class="hover03 wow zoomSlider">
-            <!-- Doctor Photo -->
-            {% comment %} <div class="hover-overlay gallery-image-animation-trigger"> {% endcomment %}
-              {% comment %} <div class="gallery-animation-color-bg"></div> {% endcomment %}
-              <img
-                class=" img-fluid"
-                src="{{ie.image.url}}"
-                alt="Before & After"
-              />
-            {% comment %} </div> {% endcomment %}
-          </div>
-        </div>
         {% endfor %}
       </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-        <a
-          href="{% url 'home:beforeafter' %}"
-          class="btn btn-blue blue-hover submit"
-          aria-label="See more in the Ade after befor"
-          >See More</a>
+
+      <div class="col-md-12 text-center">
+        <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+          <a
+            href="{% url 'home:beforeafter' %}"
+            class="btn btn-blue blue-hover submit"
+            aria-label="See more in the Ade after befor"
+            >See More</a
+          >
+        </div>
       </div>
     </div>
-  </div>  
+  </div>
 </div>
+
 <!-- client reviews -->
 <section id="reviews-2">
   <div class="section-title text-center">
-    <h3 class="h3-md steelblue-color">
+    <h3 class="h3-md steelblue-color mb-0">
       Client Chronicles: Their Stories, Their Experiences
     </h3>
   </div>
@@ -1346,7 +1054,7 @@
     ></div>
     <div class="container position-relative text-center">
       <div class="row justify-content-center carousel-row">
-        <div class="col-sm-11 col-md-11 col-lg-10 col-11">
+        <div class="col-sm-12 col-md-11 col-lg-11 col-11">
           <div
             class="carousel slide"
             data-bs-ride="carousel"
@@ -1354,7 +1062,6 @@
           >
             <div class="review-slider-testimonials">
               <div class="carousel-inner">
-        
                 {% for ie in data %}
                 <div
                   class="{% if forloop.first %}active{% endif %} carousel-item"
@@ -1414,312 +1121,99 @@
     </div>
   </div>
 </section>
+
 <!-- Gallery -->
 <div id="gallery-1" class="gallery-section division pt-50">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md steelblue-color">Gallery - Advance Dental Export</h3>
-      </div>
-    </div>
-  </div>
-  <div class="container">
     <div class="row gallery-items-list text-center">
-      <div class="owl-carousel owl-theme services-holder">
-        {% for ie in gallery %}
-        <!-- SERVICE BOX #1 -->
-        <div class="gbox">
-          <div class="hover03 wow zoomSlider">
-            <!-- Doctor Photo -->
-            <div class="image-item">
-              <img class="img-fluid" src="{{ie.image.url}}" alt="doctor-foto" />
+      <div class="col-lg-12 mx-auto section-title">
+        <h3 class="h3-md steelblue-color mb-0">
+          Gallery - Advance Dental Export
+        </h3>
+      </div>
+      <div class="col-12">
+        <div class="owl-carousel owl-theme services-holder">
+          {% for ie in gallery %}
+          <!-- SERVICE BOX #1 -->
+          <div class="gbox">
+            <div class="hover03 wow zoomSlider">
+              <!-- Doctor Photo -->
+              <div class="image-item">
+                <img
+                  class="img-fluid"
+                  src="{{ie.image.url}}"
+                  alt="doctor-foto"
+                />
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-        <a
-          href="{% url 'home:gallery' %}"
-          class="btn btn-blue blue-hover submit"
-          aria-label="See more in the Ade Gallery"
-        >
-          See More in the Gallery
-        </a>
+      <div class="col-md-12 text-center">
+        <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+          <a
+            href="{% url 'home:gallery' %}"
+            class="btn btn-blue blue-hover submit"
+            aria-label="See more in the Ade Gallery"
+          >
+            See More in the Gallery
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </div>
-{% comment %} <div id="gallery-1" class="gallery-section division pt-100">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1 section-title">
-        <h3 class="h3-md steelblue-color">Gallery - Advance Dental Export</h3>
-      </div>
-    </div>
-  </div>
-  <div class="row gallery-items-list text-center listing-gallery-img-items">
-    <div class="owl-carousel owl-theme services-holder2 listing-gallery-img-item">
-      {% for ie in gallery %}
-      <!-- SERVICE BOX #1 -->
-      <div class="sbox-5 listing-gallery-link-block">
-        <div class="doctors-2 gallery_3d-block">
-          <!-- Doctor Photo -->
-          <!-- gallery-image-animation-trigger gallery-cover-image -->
-          <div class="hover-overlay gallery-image-animation-trigger" >
-            <div class="gallery-animation-color-bg"></div>
-            <img
-              class="gallery-cover-image img-fluid"
-              src="{{ie.image.url}}"
-              alt="doctor-foto"
-            />
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-        <a
-          href="{% url 'home:gallery' %}"
-          class="btn btn-blue blue-hover submit"
-          aria-label="See more in the Ade Gallery"
-        >
-          See More in the Gallery
-        </a>
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}
 
 <!-- Contact us -->
-{% comment %} <section id="contacts-1" class="bg-lightgrey wide-60 contacts-section division">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1 section-title">
-        <h3 class="h3-md steelblue-color">Have a Question? Get In Touch</h3>
-        <p>
-          Have queries or need our price list? Interested in a lab visit? Fill
-          out our form, and we'll assist promptly!
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-5 col-lg-4">
-        <div class="contact-box mb-40 ml-25">
-          <h5 class="h5-sm steelblue-color">Contact Address</h5>
-          <p>
-            Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal,
-            Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA
-          </p>
-          <p>Phone: +91 84 88 88 88 77</p>
-          <p>
-            Email:
-            <a href="mailto:info@advancedentalexport.com" class="blue-color"
-              >info@advancedentalexport.com</a
-            >
-          </p>
-        </div>
-        <div class="contact-box mb-40 ml-25">
-          <h5 class="h5-sm steelblue-color">Canada Office</h5>
-          <p>Phone: +1 306-290-9222</p>
-          <p>Email: <a href="mailto:advancedentalservice@gmail.com" class="blue-color">advancedentalservice@gmail.com</a></p>
-        </div>
-        <div class="contact-box mb-15 ml-25">
-          <h5 class="h5-sm steelblue-color">USA Office</h5>
-          <p>Phone: +1 551-380-0385 </p>
-          <p>Email: <a href="mailto:overseas@advancedentalexport.com" class="blue-color">overseas@advancedentalexport.com</a></p>
-        </div> 
-        <div class="contact-box mb-40">
-          <h5 class="h5-sm steelblue-color">Working Hours</h5>
-          <p>Monday – Friday: 9:00 AM - 8:30 PM</p>
-          <p>Saturday : 9:00 AM - 8:30 PM</p>
-          <p>Sunday : Closed</p>
-        </div> 
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <div class="form-holder mb-40">
-          <form
-            class="row contact-form2"
-            method="post"
-            action="{% url 'enquiry:contactd' %}"
-          >
-            {% csrf_token %}
-            <div class="col-md-12 col-lg-6">
-              <div class="form-group">
-                <input
-                  id="form_name"
-                  name="name"
-                  class="form-control name"
-                  placeholder="Your Name*"
-                  required
-                  data-error="Enter no more than (2) characters."
-                />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-6">
-              <div class="form-group">
-                <input
-                  id="form_email"
-                  class="form-control email"
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                  data-error="Email is required"
-                />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-6">
-              <div class="form-group">
-                <input
-                  id="form_phone"
-                  class="form-control phone"
-                  type="tel"
-                  name="contact"
-                  placeholder="Your Phone Number"
-                  required
-                  data-error="Please enter only digits."
-                />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-6">
-              <div class="form-group">
-                <input
-                  id="form_subject"
-                  class="form-control subject"
-                  name="subject"
-                  placeholder="Subject*"
-                  required
-                  data-error="Subject is required"
-                />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-md-12 input-message">
-              <div class="form-group">
-                <textarea
-                  id="form-message"
-                  class="form-control message"
-                  name="message"
-                  rows="6"
-                  placeholder="Your Message ..."
-                  required
-                  data-error="Enter no more than (10) characters."
-                ></textarea>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="messages"></div>
-            <div class="col-md-12 mt-15 form-btn">
-              <button
-                type="submit"
-                class="btn btn-md btn-blue blue-hover submit"
-              >
-                Send Your Message
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> {% endcomment %}
-
 {% include 'contact_section.html' %}
 
-{% comment %} <section id="blog-1" class="wide-60 blog-section division">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1 section-title">
-        <h3 class="h3-md steelblue-color">Our Stories, Tips & Latest News</h3>
-      </div>
-    </div>
-    <div class="row">
-      {% for ie in data2 %}
-      <div class="col-lg-4">
-        <div class="blog-post wow fadeInUp" data-wow-delay="0.4s">
-          <div class="blog-post-img">
-            <img
-              class="img-fluid lazy"
-              src="https://unsplash.it/12/8?image=777"
-              data-src="{{ie.image.url}}"
-              alt="blog-post-image"
-            />
-          </div>
-          <div class="blog-post-txt">
-            <h5 class="h5-sm steelblue-color">
-              <a href="{% url 'home:blogd' ie.slug %}">{{ie.h1}}</a>
-            </h5>
-            <span>{{ie.published}} by <span>{{ie.author}}</span></span>
-            <p>{{ie.description}}</p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-          <a href="{% url 'home:blogs' %}" class="btn btn-blue blue-hover"
-            >Read More Posts</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</section> {% endcomment %}
 <!-- Blogs section -->
 <section class="news1-wrapper">
-  <div class="news-blog-wrapper my-5 container">
+  <div class="news-blog-wrapper mt-5 mb-3 container">
     <div class="section-title">
-      <h1 class="h3-md steelblue-color">Our Stories, Tips & Latest News</h1>
+      <h1 class="h3-md steelblue-color mb-0">
+        Our Stories, Tips & Latest News
+      </h1>
     </div>
-    <div
-      class="row mx-0  g-4 justify-content-center">
+    <div class="row mx-0 mt-3 g-4 justify-content-center">
       {% for blog in data2 %}
-         <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt-0">
+      <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt-0">
         <div class="news-blog-card card">
           <img
-           src="{{blog.image.url}}"
+            src="{{blog.image.url}}"
             class="news-img img-fluid"
             alt="news-blog-1"
           />
           <div class="card-body">
-            <div class="d-flex align-items-center position-relative justify-content-between">
-              <h2 style="font-size:16px;color:#24a992" class="mb-0">
-              <i class="fa-solid fa-calendar-days me-1"></i> {{blog.published}}</h2>
+            <div
+              class="d-flex align-items-center position-relative justify-content-between"
+            >
+              <h2 style="font-size: 16px; color: #24a992" class="mb-0">
+                <i class="fa-solid fa-calendar-days me-1"></i>
+                {{blog.published}}
+              </h2>
               <div class="news-blogs-admin-title">
                 <i class="fas fa-user-alt me-2"></i>
                 <span>{{blog.author}}</span>
               </div>
             </div>
             <a href="{% url 'home:blogd' blog.slug %}">
-              <h5 class="blogs-title card-title fw-bold">
-               {{blog.h1}}
-              </h5>
+              <h5 class="blogs-title card-title fw-bold">{{blog.h1}}</h5>
             </a>
           </div>
-          <div class="card-footer  border-0 d-flex">
-            <a href="{% url 'home:blogd' blog.slug %}">Read More </a><i class="fa-solid fa-arrow-right ms-2"></i>
+          <div class="card-footer border-0 d-flex">
+            <a href="{% url 'home:blogd' blog.slug %}">Read More </a
+            ><i class="fa-solid fa-arrow-right ms-2"></i>
           </div>
         </div>
       </div>
       {% endfor %}
-    </div>
-    <div class="row">
       <div class="col-md-12 text-center">
         <div class="all-posts-btn mb-40 mt-20 wow fadeInUp" data-wow-delay="1s">
-          <a href="{% url 'home:blogs' %}" class="btn btn-blue blue-hover submit"
+          <a
+            href="{% url 'home:blogs' %}"
+            class="btn btn-blue blue-hover submit"
             >Read More Posts</a
           >
         </div>
@@ -1727,6 +1221,8 @@
     </div>
   </div>
 </section>
+
+<!-- company parter logo -->
 <section class="customer-logos slider mb-4" style="height: auto !important">
   {% for ie in client %}
   <div class="slide">
@@ -1738,7 +1234,7 @@
   </div>
   {% endfor %}
 </section>
-{% endblock body %} 
+{% endblock body %}
 
 <!-- jQuery (required by Owl Carousel) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -1781,16 +1277,16 @@
     ]
   }
 </script>
+
 {% block javascript %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
 <script>
-$(document).ready(function () {
-  var $customerLogos = $(".customer-logos");
-  var owl = $('.services-holder');
+  $(document).ready(function () {
+    var $customerLogos = $(".customer-logos");
+    var owl = $(".services-holder");
 
-  $customerLogos.slick({
+    $customerLogos.slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       autoplay: true,
@@ -1800,57 +1296,52 @@ $(document).ready(function () {
       pauseOnHover: false,
       infinite: true,
       responsive: [
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 4,
-              },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4,
           },
-          {
-              breakpoint: 520,
-              settings: {
-                  slidesToShow: 3,
-              },
+        },
+        {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3,
           },
+        },
       ],
-  });
+    });
 
-  $customerLogos.on('afterChange', function (event, slick, currentSlide) {
-    var totalSlides = slick.$slides.length;
-    var slidesToShow = slick.options.slidesToShow;
+    $customerLogos.on("afterChange", function (event, slick, currentSlide) {
+      var totalSlides = slick.$slides.length;
+      var slidesToShow = slick.options.slidesToShow;
 
-    // When the last 5 slides are displayed
-    if (currentSlide >= totalSlides - slidesToShow - 1) {
-      setTimeout(function () {
-        $customerLogos.slick('slickGoTo', 0, true);
-      }, 1000); 
-    }
-  });
+      // When the last 5 slides are displayed
+      if (currentSlide >= totalSlides - slidesToShow - 1) {
+        setTimeout(function () {
+          $customerLogos.slick("slickGoTo", 0, true);
+        }, 1000);
+      }
+    });
 
     if (owl.length) {
       owl.owlCarousel({
-          items: 2,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-          smartSpeed: 1500,
-          navBy: 1,
-          responsive: {
-              0: { items: 1 },
-              767: { items: 1 },
-              768: { items: 2 },
-              991: { items: 2 },
-              1000: { items: 3 }
-          }
+        items: 2,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        navBy: 1,
+        responsive: {
+          0: { items: 1 },
+          767: { items: 1 },
+          768: { items: 2 },
+          991: { items: 2 },
+          1200: { items: 3 },
+        },
       });
-
-      // Debugging autoplay issues
-      owl.on('changed.owl.carousel', function () {
-          console.log('Carousel changed');
-      });
-  }
-});
+    }
+  });
 </script>
 <script src="{% static 'js/galleryanimation.js'%}"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>

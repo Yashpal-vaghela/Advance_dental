@@ -185,7 +185,7 @@
 <section id="services-7" class="bg-lightgrey wide-70 servicess-section division">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-10 offset-lg-1 section-title">
+			<div class="col-lg-12 offset-lg-1 section-title">
 				<h3 class="h3-md steelblue-color">What Makes a Advance Dental Lab - The Best Lab in {{pk.name}}</h3></div>
 		</div>
 		<div class="row">
@@ -315,8 +315,7 @@ who are committed to provide you with the best services possible. </p></div></a>
 		</div>
 	</div>
 	<div class="row gallery-items-list text-center">
-		<div class="owl-carousel owl-theme services-holder2">		
-								
+		<div class="owl-carousel owl-theme services-holder2">					
 			{% for ie in gallery21 %}
 				<!-- SERVICE BOX #1 -->
 				<div class="sbox-5">
@@ -329,10 +328,6 @@ who are committed to provide you with the best services possible. </p></div></a>
 					</div>
 				</div>
 			{% endfor %}
-				
-
-			
-		
 		</div>
 		
 	</div>
@@ -471,24 +466,18 @@ who are committed to provide you with the best services possible. </p></div></a>
                                           Hardware and Custom CAD/CAM Abutments. This protects the Warranty of the Implant you are restoring.
 								</p>
 
-								
 
 							</div>
 						</div>	<!-- END TEXT BLOCK -->	
 
-						
 						</div>    <!-- End row -->
 					</div>	<!-- END TOP ROW -->
 
-				
-					
-                
-                    
-                 
-
 				</div>	   <!-- End container -->
 			</section>	<!-- END INFO-4 -->
-            <section id="contacts-1" class="bg-lightgrey wide-60 contacts-section division">
+			{% comment %} {% include 'static_contact.html' %} {% endcomment %}
+			{% include 'contact_section.html' %}
+            {% comment %} <section id="contacts-1" class="bg-lightgrey wide-60 contacts-section division">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-10 offset-lg-1 section-title">
@@ -553,7 +542,7 @@ who are committed to provide you with the best services possible. </p></div></a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> {% endcomment %}
 {% endblock body %}
 {% block js %}
 
