@@ -189,7 +189,7 @@
 								</h3>
 							</div>
 						</div>	<!-- END INFO TEXT -->	
-			<swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true" space-between="10"
+			<swiper-container class="mySwiper1" pagination="true" pagination-dynamic-bullets="true" space-between="10"
 				loop="true">
 
 				{% for ie in imagez %}
@@ -362,10 +362,10 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 <script>
-	const swiper = document.querySelector('.mySwiper');
+	const swiper1 = document.querySelector('.mySwiper1');
 
 	// Initialize Swiper with breakpoints
-	Object.assign(swiper, {
+	Object.assign(swiper1, {
 		slidesPerView: 1,
 		spaceBetween: 10,
 		pagination: {
@@ -393,7 +393,7 @@
 		},
 	});
 
-	swiper.initialize();
+	swiper1.initialize();
 </script>
 <script>
     // Select the container of the video

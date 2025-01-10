@@ -165,7 +165,7 @@
 </section>
 
 <!-- About us -->
-<section id="about-6" class="pb-50 about-section division">
+<section id="about-6" class="pb-0 about-section division">
   <div class="container">
     <div class="row d-flex align-items-center mt-0 mx-0">
       <div class="col-lg-7 d-flex">
@@ -595,7 +595,9 @@
 <!-- About team -->
 <section id="banner-7" class="bg-fixed banner-section division">
   <div class="container white-color px-0">
-    <div class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto">
+    <div
+      class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto"
+    >
       <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
         <div
           class="banner-txt wow fadeInUp"
@@ -625,747 +627,758 @@
     </div>
   </div>
 </section>
+
 <!-- Testimonials-video  -->
 <div id="gallery-1" class="gallery-section division pt-50">
   <div class="container">
-    <div class="row gallery-items-list">
+    <div class="row">
       <div class="col-lg-12 mx-auto section-title">
         <h3 class="h3-md steelblue-color mb-0">
           In Their Own Words: Tales of Trust from Our Clientele
         </h3>
       </div>
-      <div class="col-12">
-        <div class="owl-carousel owl-theme services-holder3">
-          <!-- SERVICE BOX #1 -->
-          {% for ie in video %}
-          <div class="sbox-5 index-video" data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}">
-              <img 
-                  src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"  
-                  alt="Video Thumbnail" 
+      <div class="owl-carousel owl-theme services-holder3">
+            <!-- SERVICE BOX #1 -->
+            {% for ie in video %}
+            <div
+              class="sbox-5 index-video1"
+              data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
+            >
+              <div class="video-container">
+                <img
+                  src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
+                  alt="Video Thumbnail"
                   class="video-thumbnail"
-                  width="100%"
-                  height="350px"
-              />
-              <button class="play-button">▶</button>
+                />
+                <button class="play-button">▶</button>
+              </div>
+            </div>
+            {% endfor %}
           </div>
-        {% endfor %}
-
-        </div>
-      </div>
     </div>
   </div>
-  {% comment %}
-  <div class="container">
-    <div class="row"></div>
-  </div>
-  {% endcomment %}
+
 </div>
-<!-- Introduction for the lab  -->
-<section
-  id="services-7"
-  class="bg-lightgrey wide-601 servicess-section division"
->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md steelblue-color mb-0">
-          Building The Future Of Digital Dentistry
-        </h3>
-      </div>
-      <div class="col-lg-12">
-        <div class="row mx-sm-0">
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.2s"
-              style="
-                visibility: visible;
-                animation-delay: 0.2s;
-                animation-name: fadeInUp;
-              "
-            >
-              <div class="hexagon">
-                <span class="flaticon-137-doctor blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h5 class="h5-sm steelblue-color">Top Level Technician</h5>
-                <p class="p-sm" style="font-size: 14px">
-                  We are dedicated to provide our dentist with the highest level
-                  of care, quality products and top notch services. We have a
-                  team of highly qualified dental technicians who are committed
-                  to provide you with the best services possible.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.4s"
-              style="
-                visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
-              "
-            >
-              <div class="hexagon">
-                <span class="flaticon-076-microscope blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h5 class="h5-sm steelblue-color">Modern Equipment</h5>
-                <p class="p-sm" style="font-size: 14px">
-                  Advance Dental Export makes the use of the latest technologies
-                  in digital dentistry to manufacture all the dental
-                  prosthetics. We are committed to providing high-quality,
-                  affordable products and services to all our dentist.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.2s"
-              style="
-                visibility: visible;
-                animation-delay: 0.2s;
-                animation-name: fadeInUp;
-              "
-            >
-              <a href="#">
+  <!-- Introduction for the lab  -->
+  <section
+    id="services-7"
+    class="bg-lightgrey wide-601 servicess-section division"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md steelblue-color mb-0">
+            Building The Future Of Digital Dentistry
+          </h3>
+        </div>
+        <div class="col-lg-12">
+          <div class="row mx-sm-0">
+            <div class="col-md-6 col-lg-4 future-card">
+              <div
+                class="sbox-7 icon-xs wow fadeInUp"
+                data-wow-delay="0.2s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInUp;
+                "
+              >
                 <div class="hexagon">
-                  <span class="flaticon-080-shield blue-color"></span>
+                  <span class="flaticon-137-doctor blue-color"></span>
                 </div>
                 <div class="sbox-7-txt">
-                  <h5 class="h5-sm steelblue-color">Qualified Facilities</h5>
-                  <p class="p-sm" style="font-size: 14px">
-                    We firmly prioritize quality foremost. Every dedicated
-                    member on our passionate, committed team consistently
-                    ensures you always receive the absolute highest quality
-                    dental prosthesis and materials available in the industry.
+                  <h5 class="h5-sm steelblue-color">Top Level Technician</h5>
+                  <p class="p-sm" style="font-size: 12px">
+                    We are dedicated to provide our dentist with the highest
+                    level of care, quality products and top notch services. We
+                    have a team of highly qualified dental technicians who are
+                    committed to provide you with the best services possible.
                   </p>
-                </div></a
-              >
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.2s"
-              style="
-                visibility: visible;
-                animation-delay: 0.2s;
-                animation-name: fadeInUp;
-              "
-            >
-              <a href="#">
-                <div class="hexagon">
-                  <span class="flaticon-113-clinic-history-4 blue-color"></span>
                 </div>
-                <div class="sbox-7-txt">
-                  <h5 class="h5-sm steelblue-color">Professional Services</h5>
-                  <p class="p-sm" style="font-size: 14px">
-                    We offer specialized services in dental care, focusing on
-                    crown and bridge preparation. Our team is committed to
-                    providing customized smile designs, ensuring each patient
-                    achieves their ideal smile. With a dedication to quality and
-                    patient-specific care, we stand out as a leading dental
-                    laboratory.
-                  </p>
-                </div></a
-              >
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.4s"
-              style="
-                visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
-              "
-            >
-              <a href="#">
-                <div class="hexagon">
-                  <span class="flaticon-143-teeth blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h5 class="h5-sm steelblue-color">Precision Craftsmanship</h5>
-                  <p class="p-sm" style="font-size: 14px">
-                    We at Advance Dental Export pride ourselves on precision
-                    craftsmanship. Our team meticulously designs and fabricates
-                    each dental product, ensuring exceptional quality in fit,
-                    functionality, and aesthetics. This attention to detail,
-                    combined with the latest technology, sets us apart in the
-                    dental industry as a premier laboratory.
-                  </p>
-                </div></a
-              >
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.6s"
-              style="
-                visibility: visible;
-                animation-delay: 0.6s;
-                animation-name: fadeInUp;
-              "
-            >
-              <div class="hexagon">
-                <span class="flaticon-079-safebox blue-color"></span>
               </div>
-              <div class="sbox-7-txt">
-                <h5 class="h5-sm steelblue-color">Client-Centric Approach</h5>
-                <p class="p-sm" style="font-size: 14px">
-                  We maintain an open channel for communication, ensuring that
-                  each dental solution is tailored to your specific needs and
-                  preferences. We view our collaboration as a partnership,
-                  aiming to support every dentist in delivering smiles that not
-                  only look natural but also stand the test of time.
-                </p>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div
+                class="sbox-7 icon-xs wow fadeInUp"
+                data-wow-delay="0.4s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.4s;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="hexagon">
+                  <span class="flaticon-076-microscope blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Modern Equipment</h5>
+                  <p class="p-sm" style="font-size: 12px">
+                    Advance Dental Export makes the use of the latest
+                    technologies in digital dentistry to manufacture all the
+                    dental prosthetics. We are committed to providing
+                    high-quality, affordable products and services to all our
+                    dentist.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div
+                class="sbox-7 icon-xs wow fadeInUp"
+                data-wow-delay="0.2s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInUp;
+                "
+              >
+                <a href="#">
+                  <div class="hexagon">
+                    <span class="flaticon-080-shield blue-color"></span>
+                  </div>
+                  <div class="sbox-7-txt">
+                    <h5 class="h5-sm steelblue-color">Qualified Facilities</h5>
+                    <p class="p-sm" style="font-size: 12px">
+                      We firmly prioritize quality foremost. Every dedicated
+                      member on our passionate, committed team consistently
+                      ensures you always receive the absolute highest quality
+                      dental prosthesis and materials available in the industry.
+                    </p>
+                  </div></a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div
+                class="sbox-7 icon-xs wow fadeInUp"
+                data-wow-delay="0.2s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInUp;
+                "
+              >
+                <a href="#">
+                  <div class="hexagon">
+                    <span
+                      class="flaticon-113-clinic-history-4 blue-color"
+                    ></span>
+                  </div>
+                  <div class="sbox-7-txt">
+                    <h5 class="h5-sm steelblue-color">Professional Services</h5>
+                    <p class="p-sm" style="font-size: 12px">
+                      We offer specialized services in dental care, focusing on
+                      crown and bridge preparation. Our team is committed to
+                      providing customized smile designs, ensuring each patient
+                      achieves their ideal smile. With a dedication to quality
+                      and patient-specific care, we stand out as a leading
+                      dental laboratory.
+                    </p>
+                  </div></a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div
+                class="sbox-7 icon-xs wow fadeInUp"
+                data-wow-delay="0.4s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.4s;
+                  animation-name: fadeInUp;
+                "
+              >
+                <a href="#">
+                  <div class="hexagon">
+                    <span class="flaticon-143-teeth blue-color"></span>
+                  </div>
+                  <div class="sbox-7-txt">
+                    <h5 class="h5-sm steelblue-color">
+                      Precision Craftsmanship
+                    </h5>
+                    <p class="p-sm" style="font-size: 12px">
+                      We at Advance Dental Export pride ourselves on precision
+                      craftsmanship. Our team meticulously designs and
+                      fabricates each dental product, ensuring exceptional
+                      quality in fit, functionality, and aesthetics. This
+                      attention to detail, combined with the latest technology,
+                      sets us apart in the dental industry as a premier
+                      laboratory.
+                    </p>
+                  </div></a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div
+                class="sbox-7 icon-xs wow fadeInUp"
+                data-wow-delay="0.6s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.6s;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="hexagon">
+                  <span class="flaticon-079-safebox blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Client-Centric Approach</h5>
+                  <p class="p-sm" style="font-size: 12px">
+                    We maintain an open channel for communication, ensuring that
+                    each dental solution is tailored to your specific needs and
+                    preferences. We view our collaboration as a partnership,
+                    aiming to support every dentist in delivering smiles that
+                    not only look natural but also stand the test of time.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!--- SERVICE SECTION -->
-<section id="services-6" class="bg-blue wide-40 servicess-section division">
-  <div class="container white-color">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md">Our Core Dental Services</h3>
-        <p>
-          Experience an Unmatched Spectrum of Services: Catering to Every Dental
-          Professional's Needs Today!
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4 d-flex first">
-        <div
-          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
-          data-wow-delay="0.2s"
-          style="
-            visibility: visible;
-            animation-delay: 0.2s;
-            animation-name: fadeInRight;
-          "
-        >
-          <h5
-            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
-          >
-            CAD/CAM Technology
-          </h5>
+  <!--- SERVICE SECTION -->
+  <section id="services-6" class="bg-blue wide-40 servicess-section division">
+    <div class="container white-color">
+      <div class="row">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md">Our Core Dental Services</h3>
           <p>
-            Advance Dental Export remains the leader in offering digital
-            technology to our clients. We currently support 3M True Definition,
-            Cadent Itero, as well as many other open architecture systems.
-            Contact our dedicated staff for further assistance.
+            Experience an Unmatched Spectrum of Services: Catering to Every
+            Dental Professional's Needs Today!
           </p>
         </div>
-        <div
-          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
-          data-wow-delay="0.4s"
-          style="
-            visibility: visible;
-            animation-delay: 0.4s;
-            animation-name: fadeInRight;
-          "
-        >
-          <h5
-            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+        <div class="col-md-6 col-lg-4 d-flex first">
+          <div
+            class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+            data-wow-delay="0.2s"
+            style="
+              visibility: visible;
+              animation-delay: 0.2s;
+              animation-name: fadeInRight;
+            "
           >
-            Shade Analysis
-          </h5>
-          <p>
-            We can match the most difficult shades using your digital photos or
-            in-lab consultation. – Send digital photos to:
-            <a href="mailto:color@advancedentalexport.com"
-              >color@advancedentalexport.com</a
+            <h5
+              class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
             >
-          </p>
-        </div>
-        <div
-          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
-          data-wow-delay="0.6s"
-          style="
-            visibility: visible;
-            animation-delay: 0.6s;
-            animation-name: fadeInRight;
-          "
-        >
-          <h5
-            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+              CAD/CAM Technology
+            </h5>
+            <p>
+              Advance Dental Export remains the leader in offering digital
+              technology to our clients. We currently support 3M True
+              Definition, Cadent Itero, as well as many other open architecture
+              systems. Contact our dedicated staff for further assistance.
+            </p>
+          </div>
+          <div
+            class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+            data-wow-delay="0.4s"
+            style="
+              visibility: visible;
+              animation-delay: 0.4s;
+              animation-name: fadeInRight;
+            "
           >
-            Case Planning Assistance
-          </h5>
-          <p>
-            Personal consultations with doctors and staff for treatment options
-            with recommendations from a technical perspective.
-          </p>
-        </div>
-        <div
-          class="sbox-6 text-md-start text-lg-end wow fadeInRight"
-          data-wow-delay="0.8s"
-          style="
-            visibility: visible;
-            animation-delay: 0.8s;
-            animation-name: fadeInRight;
-          "
-        >
-          <h5
-            class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+            <h5
+              class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+            >
+              Shade Analysis
+            </h5>
+            <p>
+              We can match the most difficult shades using your digital photos
+              or in-lab consultation. – Send digital photos to:
+              <a href="mailto:color@advancedentalexport.com"
+                >color@advancedentalexport.com</a
+              >
+            </p>
+          </div>
+          <div
+            class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+            data-wow-delay="0.6s"
+            style="
+              visibility: visible;
+              animation-delay: 0.6s;
+              animation-name: fadeInRight;
+            "
           >
-            Diagnostic Wax-Ups
-          </h5>
-          <p>Complete diagnostic wax-up service for treatment planning.</p>
+            <h5
+              class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+            >
+              Case Planning Assistance
+            </h5>
+            <p>
+              Personal consultations with doctors and staff for treatment
+              options with recommendations from a technical perspective.
+            </p>
+          </div>
+          <div
+            class="sbox-6 text-md-start text-lg-end wow fadeInRight"
+            data-wow-delay="0.8s"
+            style="
+              visibility: visible;
+              animation-delay: 0.8s;
+              animation-name: fadeInRight;
+            "
+          >
+            <h5
+              class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
+            >
+              Diagnostic Wax-Ups
+            </h5>
+            <p>Complete diagnostic wax-up service for treatment planning.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-4 d-lg-flex align-items-center s6-img">
-        <div class="sbox-6-img text-center wow fadeInUp" data-wow-delay="0.8s">
-          <img
-            class="img-fluid lazy"
-            src="https://unsplash.it/12/8?image=777"
-            data-src="{% static 'img/teeth-img93.jpg' %}"
-            alt="services-image"
-          />
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 d-flex second">
-        <div
-          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
-          data-wow-delay="0.2s"
-          style="
-            visibility: visible;
-            animation-delay: 0.2s;
-            animation-name: fadeInLeft;
-          "
-        >
-          <h5 class="h5-md">Cosmetic Restoration Service</h5>
-          <p>
-            Esthetic diagnostic wax-ups, silicone matrices for intraoral
-            mock-ups and temporaries. We use the latest materials and
-            technologies to achieve predictable results for your patients.
-          </p>
-        </div>
-        <div
-          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
-          data-wow-delay="0.4s"
-          style="
-            visibility: visible;
-            animation-delay: 0.4s;
-            animation-name: fadeInLeft;
-          "
-        >
-          <h5 class="h5-md">Implant Specialists</h5>
-          <p>
-            Assistance with implant cases, including diagnostic wax-up, stent
-            fabrication and components for implant systems. In house design for
-            custom abutments and denture bars.
-          </p>
-        </div>
-        <div
-          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
-          data-wow-delay="0.6s"
-          style="
-            visibility: visible;
-            animation-delay: 0.6s;
-            animation-name: fadeInLeft;
-          "
-        >
-          <h5 class="h5-md">Custom Milling</h5>
-          <p>
-            Custom milling of zirconia, implant abutments, overdenture bars,
-            temporaries and ceramics.
-          </p>
-        </div>
-        <div
-          class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
-          data-wow-delay="0.8s"
-          style="
-            visibility: visible;
-            animation-delay: 0.8s;
-            animation-name: fadeInLeft;
-          "
-        >
-          <h5 class="h5-md">Laser Welding</h5>
-          <p>Laser welding for quick repairs of partial dentures</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--new desgine of before & after-->
-<div id="gallery-2" class="gallery-section division">
-  <div class="container">
-    <div class="row gallery-items-list text-center listing-gallery-img-items">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md steelblue-color mb-0">Before & After</h3>
-      </div>
-
-      <div
-        class="owl-carousel owl-theme services-holder listing-gallery-img-item"
-      >
-        {% for ie in gallery21 %}
-        <!-- SERVICE BOX #1 -->
-        <div class="gbox listing-gallery-link-block">
-          <div class="hover03 wow zoomSlider">
-            <!-- Doctor Photo -->
+        <div class="col-lg-4 d-lg-flex align-items-center s6-img">
+          <div
+            class="sbox-6-img text-center wow fadeInUp"
+            data-wow-delay="0.8s"
+          >
             <img
-              class="img-fluid"
-              src="{{ie.image.url}}"
-              alt="Before & After"
+              class="img-fluid lazy"
+              src="https://unsplash.it/12/8?image=777"
+              data-src="{% static 'img/teeth-img93.jpg' %}"
+              alt="services-image"
             />
           </div>
         </div>
-        {% endfor %}
-      </div>
-
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-          <a
-            href="{% url 'home:beforeafter' %}"
-            class="btn btn-blue blue-hover submit"
-            aria-label="See more in the Ade after befor"
-            >See More</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- client reviews -->
-<section id="reviews-2">
-  <div class="section-title text-center">
-    <h3 class="h3-md steelblue-color mb-0">
-      Client Chronicles: Their Stories, Their Experiences
-    </h3>
-  </div>
-  <div class="review-section testimonials-slider">
-    <div
-      class="review-overlay"
-      style="opacity: 0.7; background-color: rgb(36, 169, 146)"
-    ></div>
-    <div class="container position-relative text-center">
-      <div class="row justify-content-center carousel-row">
-        <div class="col-sm-12 col-md-11 col-lg-11 col-11">
+        <div class="col-md-6 col-lg-4 d-flex second">
           <div
-            class="carousel slide"
-            data-bs-ride="carousel"
-            id="carouselExampleControls"
+            class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+            data-wow-delay="0.2s"
+            style="
+              visibility: visible;
+              animation-delay: 0.2s;
+              animation-name: fadeInLeft;
+            "
           >
-            <div class="review-slider-testimonials">
-              <div class="carousel-inner">
-                {% for ie in data %}
-                <div
-                  class="{% if forloop.first %}active{% endif %} carousel-item"
-                  aria-label="Slide {{ forloop.counter }}"
-                >
-                  <div
-                    class="review-user mx-auto col-lg-8 col-md-10 col-sm-11 col-12"
-                  >
-                    <div class="user_image">
-                      <img
-                        src="{% static 'img/profile-user-3.png' %}"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="review-user-txt">
-                      <p>
-                        <i class="fa-solid fa-quote-left"></i>
-                        {{ie.review}}
-                        <i class="fa-solid fa-quote-right"></i>
-                      </p>
-                    </div>
-                    <div class="review-user-name">{{ie.name}}</div>
-                    <div class="review-user-desk">{{ie.position}}</div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-              <div class="carousel-controls">
-                <button
-                  class="carousel-control-prev review-prev-button"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                </button>
-                <button
-                  class="carousel-control-next review-next-button"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                </button>
-              </div>
-            </div>
+            <h5 class="h5-md">Cosmetic Restoration Service</h5>
+            <p>
+              Esthetic diagnostic wax-ups, silicone matrices for intraoral
+              mock-ups and temporaries. We use the latest materials and
+              technologies to achieve predictable results for your patients.
+            </p>
+          </div>
+          <div
+            class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+            data-wow-delay="0.4s"
+            style="
+              visibility: visible;
+              animation-delay: 0.4s;
+              animation-name: fadeInLeft;
+            "
+          >
+            <h5 class="h5-md">Implant Specialists</h5>
+            <p>
+              Assistance with implant cases, including diagnostic wax-up, stent
+              fabrication and components for implant systems. In house design
+              for custom abutments and denture bars.
+            </p>
+          </div>
+          <div
+            class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+            data-wow-delay="0.6s"
+            style="
+              visibility: visible;
+              animation-delay: 0.6s;
+              animation-name: fadeInLeft;
+            "
+          >
+            <h5 class="h5-md">Custom Milling</h5>
+            <p>
+              Custom milling of zirconia, implant abutments, overdenture bars,
+              temporaries and ceramics.
+            </p>
+          </div>
+          <div
+            class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
+            data-wow-delay="0.8s"
+            style="
+              visibility: visible;
+              animation-delay: 0.8s;
+              animation-name: fadeInLeft;
+            "
+          >
+            <h5 class="h5-md">Laser Welding</h5>
+            <p>Laser welding for quick repairs of partial dentures</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Gallery -->
-<div id="gallery-1" class="gallery-section division pt-50">
-  <div class="container">
-    <div class="row gallery-items-list text-center">
-      <div class="col-lg-12 mx-auto section-title">
-        <h3 class="h3-md steelblue-color mb-0">
-          Gallery - Advance Dental Export
-        </h3>
-      </div>
-      <div class="col-12">
-        <div class="owl-carousel owl-theme services-holder">
-          {% for ie in gallery %}
+  <!--new desgine of before & after-->
+  <div id="gallery-2" class="gallery-section division">
+    <div class="container">
+      <div class="row gallery-items-list text-center listing-gallery-img-items">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md steelblue-color mb-0">Before & After</h3>
+        </div>
+
+        <div
+          class="owl-carousel owl-theme services-holder listing-gallery-img-item"
+        >
+          {% for ie in gallery21 %}
           <!-- SERVICE BOX #1 -->
-          <div class="gbox">
+          <div class="gbox listing-gallery-link-block">
             <div class="hover03 wow zoomSlider">
               <!-- Doctor Photo -->
-              <div class="image-item">
-                <img
-                  class="img-fluid"
-                  src="{{ie.image.url}}"
-                  alt="doctor-foto"
-                />
-              </div>
+              <img
+                class="img-fluid"
+                src="{{ie.image.url}}"
+                alt="Before & After"
+              />
             </div>
           </div>
           {% endfor %}
         </div>
-      </div>
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
-          <a
-            href="{% url 'home:gallery' %}"
-            class="btn btn-blue blue-hover submit"
-            aria-label="See more in the Ade Gallery"
-          >
-            See More in the Gallery
-          </a>
+
+        <div class="col-md-12 text-center">
+          <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+            <a
+              href="{% url 'home:beforeafter' %}"
+              class="btn btn-blue blue-hover submit"
+              aria-label="See more in the Ade after befor"
+              >See More</a
+            >
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Contact us -->
-{% include 'contact_section.html' %}
-
-<!-- Blogs section -->
-<section class="news1-wrapper">
-  <div class="news-blog-wrapper mt-5 mb-3 container">
-    <div class="section-title">
-      <h1 class="h3-md steelblue-color mb-0">
-        Our Stories, Tips & Latest News
-      </h1>
+  <!-- client reviews -->
+  <section id="reviews-2">
+    <div class="section-title text-center">
+      <h3 class="h3-md steelblue-color mb-0">
+        Client Chronicles: Their Stories, Their Experiences
+      </h3>
     </div>
-    <div class="row mx-0 mt-3 g-4 justify-content-center">
-      {% for blog in data2 %}
-      <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt-0">
-        <div class="news-blog-card card">
-          <img
-            src="{{blog.image.url}}"
-            class="news-img img-fluid"
-            alt="news-blog-1"
-          />
-          <div class="card-body">
+    <div class="review-section testimonials-slider">
+      <div
+        class="review-overlay"
+        style="opacity: 0.7; background-color: rgb(36, 169, 146)"
+      ></div>
+      <div class="container position-relative text-center">
+        <div class="row justify-content-center carousel-row">
+          <div class="col-sm-12 col-md-11 col-lg-11 col-11">
             <div
-              class="d-flex align-items-center position-relative justify-content-between"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              id="carouselExampleControls"
             >
-              <h2 style="font-size: 16px; color: #24a992" class="mb-0">
-                <i class="fa-solid fa-calendar-days me-1"></i>
-                {{blog.published}}
-              </h2>
-              <div class="news-blogs-admin-title">
-                <i class="fas fa-user-alt me-2"></i>
-                <span>{{blog.author}}</span>
+              <div class="review-slider-testimonials">
+                <div class="carousel-inner">
+                  {% for ie in data %}
+                  <div
+                    class="{% if forloop.first %}active{% endif %} carousel-item"
+                    aria-label="Slide {{ forloop.counter }}"
+                  >
+                    <div
+                      class="review-user mx-auto col-lg-8 col-md-10 col-sm-11 col-12"
+                    >
+                      <div class="user_image">
+                        <img
+                          src="{% static 'img/profile-user-3.png' %}"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="review-user-txt">
+                        <p>
+                          <i class="fa-solid fa-quote-left"></i>
+                          {{ie.review}}
+                          <i class="fa-solid fa-quote-right"></i>
+                        </p>
+                      </div>
+                      <div class="review-user-name">{{ie.name}}</div>
+                      <div class="review-user-desk">{{ie.position}}</div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="carousel-controls">
+                  <button
+                    class="carousel-control-prev review-prev-button"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                  <button
+                    class="carousel-control-next review-next-button"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
               </div>
             </div>
-            <a href="{% url 'home:blogd' blog.slug %}">
-              <h5 class="blogs-title card-title fw-bold">{{blog.h1}}</h5>
-            </a>
-          </div>
-          <div class="card-footer border-0 d-flex">
-            <a href="{% url 'home:blogd' blog.slug %}">Read More </a
-            ><i class="fa-solid fa-arrow-right ms-2"></i>
           </div>
         </div>
       </div>
-      {% endfor %}
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 mt-20 wow fadeInUp" data-wow-delay="1s">
-          <a
-            href="{% url 'home:blogs' %}"
-            class="btn btn-blue blue-hover submit"
-            >Read More Posts</a
-          >
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <div id="gallery-1" class="gallery-section division pt-50">
+    <div class="container">
+      <div class="row gallery-items-list text-center">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md steelblue-color mb-0">
+            Gallery - Advance Dental Export
+          </h3>
+        </div>
+        <div class="col-12">
+          <div class="owl-carousel owl-theme services-holder">
+            {% for ie in gallery %}
+            <!-- SERVICE BOX #1 -->
+            <div class="gbox">
+              <div class="hover03 wow zoomSlider">
+                <!-- Doctor Photo -->
+                <div class="image-item">
+                  <img
+                    class="img-fluid"
+                    src="{{ie.image.url}}"
+                    alt="doctor-foto"
+                  />
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-12 text-center">
+          <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+            <a
+              href="{% url 'home:gallery' %}"
+              class="btn btn-blue blue-hover submit"
+              aria-label="See more in the Ade Gallery"
+            >
+              See More in the Gallery
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- company parter logo -->
-<section class="customer-logos slider mb-4" style="height: auto !important">
-  {% for ie in client %}
-  <div class="slide">
-    <img
-      alt="Client Of ADE"
-      src="{{ie.image.url}}"
-      style="filter: grayscale(100%); border-radius: 5px"
-    />
-  </div>
-  {% endfor %}
-</section>
-{% endblock body %}
+  <!-- Contact us -->
+  {% include 'contact_section.html' %}
 
-<!-- jQuery (required by Owl Carousel) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Blogs section -->
+  <section class="news1-wrapper">
+    <div class="news-blog-wrapper mt-5 mb-3 container">
+      <div class="section-title">
+        <h1 class="h3-md steelblue-color mb-0">
+          Our Stories, Tips & Latest News
+        </h1>
+      </div>
+      <div class="row mx-0 mt-3 g-4 justify-content-center">
+        {% for blog in data2 %}
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt-0">
+          <div class="news-blog-card card">
+            <img
+              src="{{blog.image.url}}"
+              class="news-img img-fluid"
+              alt="news-blog-1"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex align-items-center position-relative justify-content-between"
+              >
+                <h2 style="font-size: 16px; color: #24a992" class="mb-0">
+                  <i class="fa-solid fa-calendar-days me-1"></i>
+                  {{blog.published}}
+                </h2>
+                <div class="news-blogs-admin-title">
+                  <i class="fas fa-user-alt me-2"></i>
+                  <span>{{blog.author}}</span>
+                </div>
+              </div>
+              <a href="{% url 'home:blogd' blog.slug %}">
+                <h5 class="blogs-title card-title fw-bold">{{blog.h1}}</h5>
+              </a>
+            </div>
+            <div class="card-footer border-0 d-flex">
+              <a href="{% url 'home:blogd' blog.slug %}">Read More </a
+              ><i class="fa-solid fa-arrow-right ms-2"></i>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <div class="col-md-12 text-center">
+          <div
+            class="all-posts-btn mb-40 mt-20 wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            <a
+              href="{% url 'home:blogs' %}"
+              class="btn btn-blue blue-hover submit"
+              >Read More Posts</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- company parter logo -->
+  <section class="customer-logos slider mb-4" style="height: auto !important">
+    {% for ie in client %}
+    <div class="slide">
+      <img
+        alt="Client Of ADE"
+        src="{{ie.image.url}}"
+        style="filter: grayscale(100%); border-radius: 5px"
+      />
+    </div>
+    {% endfor %}
+  </section>
+  {% endblock body %}
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "WebSite",
-    "name": "Advance Dental Export",
-    "url": "https://advancedentalexport.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{search_term_string}",
-      "query-input": "required name=search_term_string"
+  <!-- jQuery (required by Owl Carousel) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Advance Dental Export",
+      "url": "https://advancedentalexport.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
-  }
-</script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Advance Dental Export",
-    "alternateName": "Advance Dental Export",
-    "url": "https://advancedentalexport.com/",
-    "logo": "https://advancedentalexport.com/static/img/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91 84 88 88 88 77",
-      "contactType": "customer service",
-      "areaServed": ["US", "IN"],
-      "availableLanguage": "en"
-    },
-    "sameAs": [
-      "https://www.facebook.com/advance.dental.surat/",
-      "https://www.instagram.com/advance_dental_export/",
-      "https://www.linkedin.com/company/advance-dental-export/"
-    ]
-  }
-</script>
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Advance Dental Export",
+      "alternateName": "Advance Dental Export",
+      "url": "https://advancedentalexport.com/",
+      "logo": "https://advancedentalexport.com/static/img/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 84 88 88 88 77",
+        "contactType": "customer service",
+        "areaServed": ["US", "IN"],
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://www.facebook.com/advance.dental.surat/",
+        "https://www.instagram.com/advance_dental_export/",
+        "https://www.linkedin.com/company/advance-dental-export/"
+      ]
+    }
+  </script>
 
-{% block javascript %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  {% block javascript %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
-<script>
-  $(document).ready(function () {
-    var $customerLogos = $(".customer-logos");
-    var owl = $(".services-holder");
+  <script>
+    $(document).ready(function () {
+      var $customerLogos = $(".customer-logos");
+      var owl = $(".services-holder");
 
-    $customerLogos.slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000,
-      arrows: false,
-      dots: false,
-      pauseOnHover: false,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 4,
+      $customerLogos.slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+            },
           },
-        },
-        {
-          breakpoint: 520,
-          settings: {
-            slidesToShow: 3,
+          {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 3,
+            },
           },
-        },
-      ],
-    });
+        ],
+      });
 
-    $customerLogos.on("afterChange", function (event, slick, currentSlide) {
-      var totalSlides = slick.$slides.length;
-      var slidesToShow = slick.options.slidesToShow;
+      $customerLogos.on("afterChange", function (event, slick, currentSlide) {
+        var totalSlides = slick.$slides.length;
+        var slidesToShow = slick.options.slidesToShow;
 
-      // When the last 5 slides are displayed
-      if (currentSlide >= totalSlides - slidesToShow - 1) {
-        setTimeout(function () {
-          $customerLogos.slick("slickGoTo", 0, true);
-        }, 1000);
+        // When the last 5 slides are displayed
+        if (currentSlide >= totalSlides - slidesToShow - 1) {
+          setTimeout(function () {
+            $customerLogos.slick("slickGoTo", 0, true);
+          }, 1000);
+        }
+      });
+
+      if (owl.length) {
+        owl.owlCarousel({
+          items: 2,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          smartSpeed: 1500,
+          navBy: 1,
+          responsive: {
+            0: { items: 1 },
+            767: { items: 1 },
+            768: { items: 2 },
+            991: { items: 2 },
+            1200: { items: 3 },
+          },
+        });
       }
     });
+  </script>
 
-    if (owl.length) {
-      owl.owlCarousel({
-        items: 2,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        navBy: 1,
-        responsive: {
-          0: { items: 1 },
-          767: { items: 1 },
-          768: { items: 2 },
-          991: { items: 2 },
-          1200: { items: 3 },
-        },
-      });
-    }
-  });
-</script>
-<script>
-  // Select all video wrapper elements
-  const videoWrappers = document.querySelectorAll(".index-video");
+  <script src="{% static 'js/galleryanimation.js'%}"></script>
+  <script src="{% static 'js/modernizr.custom.js' %}"></script>
 
-  videoWrappers.forEach(wrapper => {
+  <script>
+    const videoWrappers = document.querySelectorAll(".index-video1");
+    videoWrappers.forEach((wrapper) => {
       wrapper.onclick = () => {
-          const videoId = wrapper.getAttribute("data-video-id");
-          const iframe = document.createElement("iframe");
-          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-          iframe.width = "100%";
-          iframe.height = "350";
-          iframe.frameBorder = "0";
-          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-          iframe.allowFullscreen = true;
+        const videoId = wrapper.getAttribute("data-video-id");
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.frameBorder = "0";
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
 
-          // Replace the placeholder with the iframe
-          wrapper.innerHTML = "";
-          wrapper.appendChild(iframe);
+        // Ensure iframe maintains aspect ratio
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+
+        const videoContainer = wrapper.querySelector(".video-container");
+        videoContainer.innerHTML = ""; // Clear the thumbnail and button
+        videoContainer.appendChild(iframe); // Add the iframe
       };
-  });
-</script>
-
-<script src="{% static 'js/galleryanimation.js'%}"></script>
-<script src="{% static 'js/modernizr.custom.js' %}"></script>
-{% endblock javascript %}
+    });
+  </script>
+  {% endblock javascript %}

@@ -25,9 +25,8 @@
   .slider { height: 650px; }
   .slider .slides { height: 650px;}
 
-  #hero-3 .slider, #hero-10 .slider, #hero-3 .slider .slides, #hero-10 .slider .slides { height: 700px; }
+  #hero-10 .slider, #hero-10 .slider .slides { height: 700px; }
 
-  #hero-1 .hero-txt { margin-top: -80px; }
   #hero-6 .caption-txt { margin-top: -100px; }
   #hero-11 .caption-txt { margin-top: -120px; }
 
@@ -52,9 +51,8 @@
   .slider { height: 650px; }
   .slider .slides { height: 650px;}
 
-  #hero-3 .slider, #hero-10 .slider, #hero-3 .slider .slides, #hero-10 .slider .slides { height: 700px; }
+  #hero-10 .slider, #hero-10 .slider .slides { height: 700px; }
 
-  #hero-1 .hero-txt { margin-top: -80px; }
   #hero-6 .caption-txt { margin-top: -100px; }
   #hero-11 .caption-txt { margin-top: -120px; }
 
@@ -64,21 +62,6 @@
 
 
 }
-
-
-
-
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-
-@media (min-width: 1200px) {
-
-
-
-}
-
-
 
 
 /* ------------------------------------------------------------------------ */
@@ -176,7 +159,7 @@
   #hero-12 { padding-top: 80px; padding-bottom: 180px; }
 
   /* Slider */
-  #hero-3 .slider, #hero-10 .slider, #hero-3 .slider .slides, #hero-10 .slider .slides { height: 620px; }
+  #hero-10 .slider, #hero-10 .slider .slides { height: 620px; }
 
   /* Hero Carousel */
   #heroCarousel .carousel-item { min-height: 580px; }
@@ -186,22 +169,14 @@
   .carousel-control-prev { left: 0; }
 
   /* Hero Text */
-  #hero-1 .hero-txt { margin-top: -100px; margin-bottom: 0; }
-  #hero-3 .caption-txt { padding-left: 0; }
-  .hero-5-strip { padding: 20px 40px; }
-  #hero-5 .hero-txt { padding: 45px 40px; }
   #hero-10 .caption-txt { margin-top: -100px; }
   #hero-12 .hero-txt { padding-right: 30px; padding-left: 20px }
 
   /* Hero Headers */
-  #hero-1 h2 { font-size: 4.25rem; margin-bottom: 20px; }
-  #hero-1 h5, #hero-4 h5, .hero-5-strip h5, #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 0.835rem; margin-bottom: 25px; }
-  #hero-2 h2 { font-size: 3rem; margin-bottom: 20px; }
-  #hero-3 h2 { font-size: 4.5rem; letter-spacing: -1px; margin-bottom: 20px; }
-  #hero-4 h2 {font-size: 3.15rem; margin-bottom: 25px; }
+
+  #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 0.835rem; margin-bottom: 25px; }
   #hero-5 h3 { font-size: 2rem; margin-bottom: 20px; }
   #hero-5 h4 { font-size: 1.5rem; margin-bottom: 15px; }
-  .hero-5-strip h5 { line-height: 1;margin-bottom: 0; }
   #hero-6 h2 { font-size: 3.25rem; letter-spacing: 1px; margin-bottom: 15px; }
   #hero-6 h5 { font-size: 0.835rem; margin-bottom: 30px; }
   #hero-7 h2 { font-size: 3.75rem; margin-bottom: 20px; padding-right: 3%; }
@@ -213,17 +188,13 @@
   #hero-12 h2 { font-size: 3.35rem; margin-bottom: 25px; }
 
   /* Hero Paragraphs */
-  #hero-1 .hero-txt p { padding-right: 8%; }
-  #hero-2 .caption p { font-size: 1rem; padding-right: 0; }
-  #hero-4 .hero-txt p, #hero-8 .caption p, #hero-9 .hero-txt p, #hero-10 .caption p { padding-right: 0; }
+  #hero-8 .caption p, #hero-9 .hero-txt p, #hero-10 .caption p { padding-right: 0; }
   #hero-6 .caption p { padding: 0 14%; }
   #hero-12 .hero-txt p { font-size: 1rem; }
 
   /* Hero Register Form */
   .hero-form { padding: 35px 30px; margin: 0 0 0 20px; }
 
-  /* Hero Image */
-  .hero-1-img { margin-left: -80px; }
 
   /*------------------------------------------*/
   /*   CONTENT
@@ -233,20 +204,10 @@
   #about-6 .txt-block.pc-30 { padding-right: 0; padding-left: 5px; }
   .abox-3-holder { padding: 50px 0; }
 
-  .abox-1 { height: 300px; padding: 40px 20px; }
-  .abox-2 { padding: 45px 25px 50px; }
   .abox-3 { padding: 0 25px; }
 
-  .abox-1 h5, .abox-2 h5 { margin-bottom: 20px; }
-  .abox-1 h5.h5-lg.emergency-call { font-size: 1.3rem; margin-top: 30px; }
   .abox-3 h5 { font-size: 1rem; margin-bottom: 15px;}
   .abox-3 p.blue-color { font-size: 0.95rem; margin-bottom: 15px; }
-  .abox-2 .btn.mt-25 { margin-top: 20px; }
-
-  .abox-1 i { font-size: 1rem; }
-
-  .abox-1 .table td, .abox-1 .table th { font-size: 13px;padding: 13px 0; }
-  
 
   .singnature.mt-35 { margin-top: 30px; }
   #about-6 .btn.mt-25 { margin-top: 15px; }
@@ -263,8 +224,6 @@
   .sbox-7 { padding: 25px 20px; margin-bottom: 30px; } 
 
   .sbox-8 h5 { margin-top: 20px; margin-bottom: 10px; }
-  /* .sbox-2 h5 { margin-top: 20px; } */
-  /* .sbox-3 h5, .sbox-5 h5 { font-size: 1rem;margin-top: 25px; margin-bottom: 15px; } */
   .sbox-4 h5 { margin-top: 20px; margin-bottom: 10px; }
   .sbox-6 h5 { margin-top: 20px; margin-bottom: 10px; }
   .sbox-6 p { font-size: 0.925rem; }
@@ -338,7 +297,7 @@
   .doctor-info .table span i { font-size: 11px; }
   
   /* Pricing */
-  #pricing-3 .txt-block.pc-30 { padding-right: 0; padding-left: 0; }
+  /* #pricing-3 .txt-block.pc-30 { padding-right: 0; padding-left: 0; } */
   .pricing-table span.price { font-size: 60px; }
   .pricing-table sup { font-size: 40px; }
   #pricing-1 .pricing-table ul.features { padding: 15px 0 25px; }
@@ -465,10 +424,6 @@
 
 
 }
-
-
-
-
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
@@ -596,12 +551,11 @@
   .hero-section { margin-top: 70px; }
 
   #hero-5 { padding-top: 80px; padding-bottom: 145px; }
-  #hero-4 { background-position: left center; padding-bottom: 0; margin-bottom: 100px; }
   #hero-12 { padding-top: 80px; padding-bottom: 130px; }
 
   /* Slider */
   .slider, .slider .slides { height: 560px; }
-  #hero-3 .slider, #hero-10 .slider, #hero-3 .slider .slides, #hero-10 .slider .slides { height: 560px; }
+  #hero-10 .slider, #hero-10 .slider .slides { height: 560px; }
   #hero-6 .slider,  #hero-6 .slider .slides { height: 520px; }
 
   /* Hero Carousel */
@@ -612,9 +566,6 @@
   .carousel-control-prev { left: 0; }
 
   /* Hero Text */
-  #hero-1 .hero-txt { margin-top: -60px; margin-bottom: 0; }
-  #hero-3 .caption-txt { margin-top: -70px; padding-left: 0; }
-  .hero-5-strip { padding: 20px 40px; }
   #hero-5 .hero-txt { padding: 45px 30px; }
   #hero-6 .caption-txt { margin-top: -70px; }
   #hero-10 .caption-txt { margin-top: -70px; }
@@ -622,14 +573,9 @@
   #hero-12 .hero-txt { padding-right: 20px; padding-left: 0; }
 
   /* Hero Headers */
-  #hero-1 h2 { font-size: 3.75rem; margin-bottom: 20px; }
-  #hero-1 h5, #hero-4 h5, .hero-5-strip h5, #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 0.85rem; margin-bottom: 25px; }
-  #hero-2 h2 { font-size: 3rem; letter-spacing: 0; margin-bottom: 20px; }
-  #hero-3 h2 { font-size: 4rem; letter-spacing: -1px; margin-bottom: 20px; }
-  #hero-4 h2 {font-size: 3.65rem; margin-bottom: 25px; padding-right: 5%; }
+  #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 0.85rem; margin-bottom: 25px; }
   #hero-5 h3 { font-size: 2rem; margin-bottom: 20px; }
   #hero-5 h4 { font-size: 1.75rem; margin-bottom: 15px; }
-  .hero-5-strip h5 { line-height: 1;margin-bottom: 0; }
   #hero-6 h2 { font-size: 2.5rem; letter-spacing: 1px; margin-bottom: 15px; }
   #hero-6 h5 { font-size: 0.835rem; margin-bottom: 30px; }
   #hero-7 h2 { font-size: 3.3rem; margin-bottom: 20px; }
@@ -641,7 +587,7 @@
   #hero-12 h2 { font-size: 2.75rem; letter-spacing: 0; margin-bottom: 25px; }
 
   /* Hero Paragraphs */
-  #hero-1 .hero-txt p, #hero-2 .caption p, #hero-3 .caption p, #hero-4 .hero-txt p, #hero-7 .caption p, 
+  #hero-7 .caption p, 
   #hero-8 .caption p, #hero-9 .hero-txt p, #hero-10 .caption p, #hero-11 .caption p { font-size: 1rem; padding-right: 0; }
 
   #hero-6 .caption p { padding: 0 2%; }
@@ -658,8 +604,6 @@
   .hero-form .form-control, .hero-form .custom-select { height: 52px; }
 
   /* Hero Image */
-  .hero-1-img { margin-left: -80px; }
-  .hero-1-img img { width: 200%; }
   .hero-12-img { width: 40%; left: 60%; }
 
   /*------------------------------------------*/
@@ -667,45 +611,28 @@
   /*------------------------------------------*/
 
   /* About */
-  #about-1, #about-2 { margin-top: -60px; }
-  /* #about-3 { margin-top: -80px; } */
-
-  #about-5 { padding-bottom: 80px; }
-  #about-5 .txt-block { margin-top: 40px; }
   #about-6 .txt-block { margin-bottom: 40px; }
 
-  .abox-1 {height: 340px; padding: 40px 30px 35px; }
-  #abox-1 { border-radius: 6px 0 0 0; }
-  #abox-2 { border-radius: 0 6px 0 0; }
   #abox-3 { border-radius: 0 0 0 6px; }
-
-  .abox-2-holder { padding: 15px 0; }
-  .abox-2 { padding: 25px 30px; }
 
   .abox-3-holder { padding: 40px 0 10px; }
   .abox-3 { text-align: center; padding: 0 15%; margin-bottom: 30px; }
 
-  .abox-1 h5, .abox-2 h5 { margin-bottom: 20px; }
-  .abox-1 h5.h5-lg.emergency-call, .abox-2 h4.h4-sm.emergency-call { font-size: 1.7rem; margin-top: 30px; }
   .abox-3 h5{ font-size: 0.9rem; margin-bottom: 12px; }
-  .abox-1 p, .abox-2 p, .abox-3 p { font-size: 1rem; }
+  /* .abox-3 p { font-size: 1rem; } */
   .abox-3 p{
     font-size: 0.85rem;
     line-height: 1.3;
   }
   .abox-3 p.blue-color { font-size: 1rem; margin-bottom: 10px; }
 
-  .abox-1 .table td, .abox-1 .table th,
-  .abox-2 .table td, .abox-2 .table th { font-size: 17px; padding: 16px 0; }
-
   .singnature.mt-35 { margin-top: 25px; }
   #about-6 .btn.mt-25 { margin-top: 20px; }
 
-  #about-5 .about-img, #about-6 .about-img { margin: 0 10%; }
+  #about-6 .about-img { margin: 0 10%; }
 
   /* Services */
   #services-6, #services-8 { padding-bottom: 50px; }
-
 
   /* .sbox-3 { margin: 0 10px 40px; padding: 60px 35px; } */
   .sbox-5 { margin: 0 10px 40px; }
@@ -802,7 +729,7 @@
   #pricing-1 .pricing-table { margin-left: 10%; margin-right: 10%; }
   .all-pricing-btn p { padding: 0; }
 
-  #pricing-3 .pricing-img { display: none; }
+  /* #pricing-3 .pricing-img { display: none; } */
   .all-pricing-btn, #pricing-1 .all-pricing-btn { margin-top: 10px; }
 
   /* Brands */
@@ -1089,34 +1016,25 @@
 
   .hero-section { margin-top: 70px; }
 
-  #hero-1 { text-align: center; padding-top: 80px; }
-  #hero-4 { padding-bottom: 0; margin-bottom: 100px; }
   #hero-5 { padding-top: 80px; padding-bottom: 160px; }
   #hero-12 { text-align: center; padding-top: 80px; padding-bottom: 0; }
 
   /* Slider */
   .slider, .slider .slides { height: 540px; }
-  #hero-3 .slider, #hero-10 .slider, #hero-3 .slider .slides, #hero-10 .slider .slides { height: 560px; }
+  #hero-10 .slider, #hero-10 .slider .slides { height: 560px; }
 
   /* Hero Carousel */
   #heroCarousel .carousel-item { min-height: 540px; }
 
   /* Hero Text */
-  #hero-1 .hero-txt { margin-top: 0; margin-bottom: 0; }
-  #hero-3 .caption-txt { margin-top: -70px; padding-left: 0; }
   #hero-10 .caption-txt { padding-left: 30px; }
   #hero-11 .caption-txt { margin-top: -60px; }
   #hero-12 .hero-txt { padding-right: 0; padding-left: 0; }
 
   /* Hero Headers */
-  #hero-1 h2 { font-size: 3.75rem; margin-bottom: 15px; }
-  #hero-1 h5, #hero-4 h5, .hero-5-strip h5, #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 0.915rem; margin-bottom: 25px; }
-  #hero-2 h2 { font-size: 3rem; margin-bottom: 20px; }
-  #hero-3 h2 { font-size: 4rem; letter-spacing: -1px; margin-bottom: 20px; padding-right: 10px; }
-  #hero-4 h2 { font-size: 2.85rem; margin-bottom: 20px; }
+  #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 0.915rem; margin-bottom: 25px; }
   #hero-5 h3 { font-size: 2rem; margin-bottom: 20px; }
   #hero-5 h4 { font-size: 1.65rem; margin-bottom: 15px; }
-  .hero-5-strip h5 { line-height: 1;margin-bottom: 0; }
   #hero-6 h2 { font-size: 3.25rem; margin-bottom: 15px; }
   #hero-6 h5 { font-size: 0.915rem;margin-bottom: 25px; }
   #hero-7 h2 { font-size: 2.85rem; margin-bottom: 20px; }
@@ -1128,8 +1046,7 @@
   #hero-12 h2 { font-size: 3rem; letter-spacing: 0.5px; margin-bottom: 20px; }
 
   /* Hero Paragraphs */
-  #hero-1 .hero-txt p { padding-right: 0; }
-  #hero-2 .caption p, #hero-3 .caption p, #hero-4 .hero-txt p, #hero-7 .caption p, #hero-8 .caption p, 
+  #hero-7 .caption p, #hero-8 .caption p, 
   #hero-9 .hero-txt p, #hero-10 .caption p, #hero-11 .caption p, #hero-12 .hero-txt p { font-size: 1rem; padding-right: 0; }
 
   #hero-6 .caption p { font-size: 1rem; padding: 0 10%; margin-bottom: 30px; }
@@ -1149,8 +1066,6 @@
   .hero-form .form-control, .hero-form .custom-select { height: 52px; }
 
   /* Hero Image */
-  .hero-1-img { margin: 40px 5% 0; }
-  .hero-1-img img { position: relative; width: 100%; height: 100%; }
   .hero-12-img  { background-position: top center; position: relative; left: 0; height: 350px; width: auto!important; margin-top: 60px; }
 
   /*------------------------------------------*/
@@ -1158,34 +1073,17 @@
   /*------------------------------------------*/
 
   /* About */
-  #about-1, #about-2 { margin-top: -80px; }
-  #about-5 { padding-bottom: 80px; }
-  #about-5 .txt-block { margin-top: 40px; }
   #about-6 .txt-block { margin-bottom: 40px; }
-
-  .abox-1 { height: auto; padding: 35px 25px 40px; }
-  #abox-1, #abox-2, #abox-3 { border-radius: 6px; margin-bottom: 20px; }
-
-
-  .abox-2-holder { padding: 15px 0; }
-  .abox-2 { padding: 25px; }
+  #abox-3 { border-radius: 6px; margin-bottom: 20px; }
 
   .abox-3-holder { padding: 40px 0 10px; }
   .abox-3 { text-align: center; padding: 0 5%; margin-bottom: 30px; }
   .abox-3.b-right { border-right: none; }
-
-  .abox-1 h5, .abox-2 h5 { margin-bottom: 20px; }
-  .abox-1 h5.h5-lg.emergency-call, .abox-2 h4.h4-sm.emergency-call { font-size: 2rem; margin-top: 30px; }
-  .abox-3 h5 { font-size: 1.1rem; margin-bottom: 20px; }
-  .abox-1 p, .abox-2 p, .abox-3 p { font-size: 1rem; }
+  
+  .abox-3 p { font-size: 1rem; }
   .abox-3 p.blue-color { font-size: 1.075rem; margin-bottom: 10px; }
 
-  .abox-1 .table td, .abox-1 .table th, 
-  .abox-2 .table td, .abox-2 .table th { font-size: 17px; padding: 17px 0; }
-
-  .abox-1 .btn { margin-top: 25px; }
-
-  #about-5 .about-img, #about-6 .about-img { margin: 0 2%; }
+  #about-6 .about-img { margin: 0 2%; }
 
   /* Services */
   #services-6, #services-8 { padding-bottom: 50px; }
@@ -1312,7 +1210,7 @@
   .all-pricing-btn, #pricing-1 .all-pricing-btn { margin-top: 10px; }
   .all-pricing-btn p { padding: 0; }
 
-  #pricing-3 .pricing-img { display: none; }
+  /* #pricing-3 .pricing-img { display: none; } */
 
   /* Brands */
   .brands-holder img { padding: 0; }
@@ -1551,7 +1449,7 @@
   .txt-block h4.h4-xl, .txt-block h3.h3-md { margin-bottom: 20px; }
   .txt-block h3.h3-md { margin-bottom: 10px !important;}
   /* Content Block Image */
-  .content-block-img { margin-top: 30px; margin-bottom: 30px; }
+  /* .content-block-img { margin-top: 30px; margin-bottom: 30px; } */
 
   /*------------------------------------------*/
   /*   HERO
@@ -1559,8 +1457,7 @@
 
   .hero-section { margin-top: 70px; }
 
-  #hero-1 { text-align: center; padding-top: 70px; }
-  #hero-4 { padding-top: 70px; padding-bottom: 0; margin-bottom: 100px; }
+
   #hero-5 { padding-top: 80px; padding-bottom: 160px; }
   #hero-12 { text-align: center; padding-top: 80px; padding-bottom: 0; }
 
@@ -1568,18 +1465,14 @@
 
   /* Slider */
   .slider, .slider .slides { height: 500px; }
-  #hero-3 .slider, #hero-10 .slider, #hero-3 .slider .slides, #hero-10 .slider .slides { height: 500px; }
-  #hero-3 .slider .slides li img, #hero-7 .slider .slides li img { background-position: left center; }
+  #hero-10 .slider,  #hero-10 .slider .slides { height: 500px; }
+  #hero-7 .slider .slides li img { background-position: left center; }
   #hero-10 .slider .slides li img { background-position: right center; }
 
   /* Hero Carousel */
   #heroCarousel .carousel-item { min-height: 500px; }
 
   /* Hero Text */
-  #hero-1 .hero-txt { margin-top: 0; margin-bottom: 0; }
-  #hero-2 .caption-txt { margin-top: -20px; }
-  #hero-3 .caption-txt { margin-top: -80px; padding-left: 0; }
-  .hero-5-strip { padding: 20px 40px; }
   #hero-5 .hero-txt { padding: 35px 20px; }
   #hero-6 .caption-txt { margin-top: -70px; }
   #hero-10 .caption-txt { margin-top: -80px; padding-left: 0; }
@@ -1587,14 +1480,9 @@
   #hero-12 .hero-txt { padding-right: 0; padding-left: 0; }
 
   /* Hero Headers */
-  #hero-1 h2 { font-size: 2.85rem; margin-bottom: 15px; }
-  #hero-1 h5, #hero-4 h5, .hero-5-strip h5, #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 1rem; margin-bottom: 20px; }
-  #hero-2 h2 { font-size: 2.15rem; margin-bottom: 20px; }
-  #hero-3 h2 { font-size: 3.25rem; letter-spacing: -1px; margin-bottom: 20px; padding-right: 10%; }
-  #hero-4 h2 { font-size: 2.15rem; margin-bottom: 20px; }
+  #hero-7 h5, #hero-8 h5, #hero-9 h5, #hero-12 h5 { font-size: 1rem; margin-bottom: 20px; }
   #hero-5 h3 { font-size: 1.75rem; margin-bottom: 20px; }
   #hero-5 h4 { font-size: 1.35rem; margin-bottom: 15px; }
-  .hero-5-strip h5 { line-height: 1; margin-bottom: 0; }
   #hero-6 h2 { font-size: 2.35rem; margin-bottom: 15px; }
   #hero-6 h5 { font-size: 1rem; margin-bottom: 25px; }
   #hero-7 h2 { font-size: 2.5rem; margin-bottom: 20px; }
@@ -1606,8 +1494,7 @@
   #hero-12 h2 { font-size: 2.5rem; letter-spacing: 0.5px; margin-bottom: 20px; }
 
   /* Hero Paragraphs */
-  #hero-1 .hero-txt p { padding-right: 0; margin-bottom: 25px; }
-  #hero-2 .caption p, #hero-3 .caption p, #hero-4 .hero-txt p, #hero-7 .caption p, #hero-8 .caption p, 
+  #hero-7 .caption p, #hero-8 .caption p, 
   #hero-9 .hero-txt p, #hero-10 .caption p, #hero-11 .caption p, #hero-12 .hero-txt p { font-size: 1.075rem; padding-right: 0; }
 
   #hero-6 .caption p { font-size: 1.075rem; padding: 0 3%; margin-bottom: 10px; }
@@ -1630,8 +1517,6 @@
   .hero-form .form-control, .hero-form .custom-select { height: 52px; }
 
   /* Hero Image */
-  .hero-1-img { margin: 40px 0 0; }
-  .hero-1-img img { position: relative; width: 100%; height: 100%; }
   .hero-12-img  { background-position: top center; position: relative; left: 0; height: 350px; width: auto!important; margin-top: 60px; }
 
   /*------------------------------------------*/
@@ -1639,26 +1524,17 @@
   /*------------------------------------------*/
 
   /* About */
-  #about-1, #about-2,  #about-3 { margin-top: -80px; }
-  #about-5 { padding-bottom: 80px; }
-  #about-5 .txt-block { margin-top: 40px; }
+  #about-3 { margin-top: -80px; }
   #about-6 .txt-block { margin-bottom: 40px; }
 
-  .abox-1 { height: auto; padding: 35px 20px 40px; }
-  #abox-1, #abox-2, #abox-3 { border-radius: 6px; margin-bottom: 20px; }
-
-
-  .abox-2-holder { padding: 15px 0; }
-  .abox-2 { padding: 25px 20px; }
+  #abox-3 { border-radius: 6px; margin-bottom: 20px; }
 
   .abox-3-holder { padding: 20px 0 0px; }
   .abox-3 { text-align: center; padding: 0 5%; margin-bottom: 20px; }
   .abox-3.b-right { border-right: none; }
 
-  .abox-1 h5, .abox-2 h5 { margin-bottom: 20px; }
-  .abox-1 h5.h5-lg.emergency-call, .abox-2 h4.h4-sm.emergency-call { font-size: 2rem; margin-top: 30px; }
+  .abox-1 h5 { margin-bottom: 20px; }
   .abox-3 h5 { font-size: 1rem !important; margin-bottom: 10px; }
-  .abox-1 p, .abox-2 p, .abox-3 p { font-size: 1.1rem; }
   .abox-3 p{
     font-size: 1rem;
   }
@@ -1668,9 +1544,8 @@
   .abox-2 .table td, .abox-2 .table th { font-size: 17px; padding: 17px 0; }
 
   .singnature.mt-35 { margin-top: 25px; }
-  .abox-1 .btn { margin-top: 25px; }
 
-  #about-5 .about-img, #about-6 .about-img { margin: 0; }
+  #about-6 .about-img { margin: 0; }
 
   /* Services */
   #services-6, #services-8 { padding-bottom: 50px; }
@@ -1812,7 +1687,7 @@
   .all-pricing-btn, #pricing-1 .all-pricing-btn { margin-top: 10px; }
   .all-pricing-btn p { padding: 0; }
 
-  #pricing-3 .pricing-img { display: none; }
+  /* #pricing-3 .pricing-img { display: none; } */
 
   /* Brands */
   .brands-holder img { padding: 0 15%; }
