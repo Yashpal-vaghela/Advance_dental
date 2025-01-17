@@ -213,7 +213,7 @@
 @media (max-width: 576px) {
   .review-slider-testimonials {
     height: 510px;
-    padding: 45px 25px;
+    padding: 45px 30px;
   }
   .review-section .review-user .user_image {
     width: 70px;
@@ -253,10 +253,16 @@
   .review-section .review-user-txt p i {
     font-size: 25px;
   }
+  .review-section .review-user .review-user-txt{
+    font-size: 14px !important;
+  }
 }
 @media (max-width: 400px) {
   .review-slider-testimonials {
-    height: 470px;
+    height: 510px;
+  }
+  .review-section .review-user-txt .fa-quote-right{
+    margin:0 -15px 0 0;
   }
   .review-slider-testimonials .review-next-button,
   .review-slider-testimonials .review-prev-button {
