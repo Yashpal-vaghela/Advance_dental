@@ -931,6 +931,7 @@
   /*------------------------------------------*/
 
   /* Header H5 */
+  .abox-3 .steelblue-color{ font-size: 1rem;}
   h5.h5-xs { font-size: 1.2rem; }    /* 17.5px */
   h5.h5-sm { font-size: 1.35rem; }   /* 18px */
   h5.h5-md { font-size: 1.4rem; }    /* 18.5px */ 
@@ -1080,8 +1081,8 @@
   .abox-3 { text-align: center; padding: 0 5%; margin-bottom: 30px; }
   .abox-3.b-right { border-right: none; }
   
-  .abox-3 p { font-size: 1rem; }
-  .abox-3 p.blue-color { font-size: 1.075rem; margin-bottom: 10px; }
+  .abox-3 p { font-size: 0.8rem; }
+  .abox-3 p.blue-color { font-size: 0.95rem; margin-bottom: 10px; }
 
   #about-6 .about-img { margin: 0 2%; }
 
@@ -1947,11 +1948,11 @@
     height: auto;
   }
   .swiper-slide .title{
-    font-size: 16px !important;
+    font-size: 25px !important;
     text-align: start;
   }
   .swiper-slide .subtitle{
-    font-size: 35px !important;
+    font-size: 45px !important;
     text-align: start;
   }
 }
@@ -2042,9 +2043,12 @@
 @media (max-width: 767px) {
    
   .abox-3-holder {
-     padding: 80px 35px;
+     padding: 0px 0px;
+     border: none;
   }
-
+  #about-3::before{
+    background: none;
+  }
   .abox-3{
      margin: 10px;
   }
