@@ -3,12 +3,12 @@
     border-radius: 3px;
     color: #242424;
 }
-.file-uploader__message-area {
+/* .file-uploader__message-area {
     font-size: 18px;
     padding: 1em;
     text-align: center;
     color: #377a65;
-}
+} */
 .file-list {
     background-color: #fff;
     font-size: 16px;
@@ -28,7 +28,7 @@
 .removal-button {
     width: 20%;
     border: none;
-    background-color: #d65d38;
+    background-color: #1b8976;
     color: white;
 }
 .removal-button::before {
