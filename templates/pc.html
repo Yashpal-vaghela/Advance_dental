@@ -137,9 +137,9 @@
           <li class="nl-simple header-btn clss">
             <a href="https://client.advancedentalexport.com/">Client Login</a>
           </li>
-          <li class="nl-simple header-btn d-none clss2">
+          {% comment %} <li class="nl-simple header-btn d-none clss2">
             <a href="/api-logout/{{ pk }}/{{ did }}/">Logout</a>
-          </li>
+          </li> {% endcomment %}
 
           <li class="nl-simple header-btn" aria-haspopup="true">
             <a href="{% url 'home:stl' %}">Submit STL File</a>

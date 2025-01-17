@@ -41,11 +41,14 @@ def home(request):
     return render(request, 'index.html', context)
 
 def testimonals(request):
-    data = VideoTestimonals.objects.all()
+    videoData = VideoTestimonals.objects.all()
+    data = Testimonials.objects.all().order_by('-id')[:20]
     context = { 
-        'data':data,
+        'videoData':videoData,
+         'data':data,
     }
     return render(request, 'testimonals.html', context)
+
 
 
 
@@ -847,9 +850,25 @@ def bdl(request):
     pk = Place.objects.all()
     context = { 
         'pk':pk,
-
     }
     return render(request, 'bdl.html', context)
+
+# def service_view(request):
+#     services = [
+#         {"title" : "CAD/CAM Technology", "content": "Advance Dental Export remains the leader in offering digital technology to our clients. We currently support 3M True Definition, Cadent Itero, as well as many other open architecture systems. Contact our dedicated staff for further assistance." },
+#         {"title" : "Shade Analysis", "content": " We can match the most difficult shades using your digital photos or in-lab consultation. – Send digital photos to:<a href='mailto:color@advancedentalexport.com'>color@advancedentalexport.com</a>" },
+#         {"title" : "Case Planning Assistance", "content": "Personal consultations with doctors and staff for treatment options with recommendations from a technical perspective." },
+#         {"title" : "Diagnostic Wax-Ups", "content": "Complete diagnostic wax-up service for treatment planning." },
+#         {"title" : "Cosmetic Restoration Service", "content": " Esthetic diagnostic wax-ups, silicone matrices for intraoral mock-ups and temporaries. We use the latest materials and technologies to achieve predictable results for your patients." },
+#         {"title" : "Implant Specialists", "content": "Assistance with implant cases, including diagnostic wax-up, stent fabrication and components for implant systems. In house design for custom abutments and denture bars." },
+#         {"title" : "Custom Milling", "content": "Custom milling of zirconia, implant abutments, overdenture bars, temporaries and ceramics." },
+#         {"title" : "Laser Welding", "content": "Laser welding for quick repairs of partial dentures" },
+#     ]
+#     context = { 
+#         'services':services,
+#     }
+#     print(services)
+#     return render(request, 'index.html', context)
 
 
 def bdld(request, pk):

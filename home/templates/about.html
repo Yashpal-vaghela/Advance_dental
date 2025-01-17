@@ -71,7 +71,7 @@
 							<!-- INFO IMAGE -->
 							<div class="col-lg-4">
 								<div class="info-4-img text-center wow fadeInUp" data-wow-delay="0.6s">
-									<img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="info-image">
+									<img class="img-fluid" src="{% static 'harsh.jpg' %}" width="356" height="485" alt="info-image"  >
 								</div>
 								<!-- Singnature -->
 								<div class="singnature mt-20 text-center">
@@ -88,9 +88,9 @@
 							<div class="col-lg-8">
 								<div class="txt-block  wow fadeInUp" data-wow-delay="0.4s">
 									<!-- Section ID -->	
-									<span class="mb-2 section-id blue-color" style="text-align: center;"><u>Welcome to Advance Dental Export</u></span>
+									<span class="mb-2 section-id blue-color" ><u>Welcome to Advance Dental Export</u></span>
 									<!-- Title -->
-									<h4 class="mb-4 h4-md steelblue-color" style="text-align: center;">Best Dental Lab Services & Leader in Dental Implant Prosthesis, Cosmetic Dentistry and Digital Dentistry</h4>
+									<h4 class="mb-4 h4-md steelblue-color" >Best Dental Lab Services & Leader in Dental Implant Prosthesis, Cosmetic Dentistry and Digital Dentistry</h4>
 									<!-- Text -->
 									<p style="text-align:justify">Advance Dental Export, often referred to as 'ADE', stands as a premier dental lab with a forte in dental implant Prosthesis, cosmetic dentistry, and the nuances of digital dentistry. Established in 2009 by our visionary CEO, Haresh Savani, our singular mission has been to craft top-tier dental implant Prosthesis, emphasizing durability and impeccable aesthetics. We take immense pride in producing 100% of our dental implant products in-house at ADE, ensuring swift delivery coupled with minimal adjustments and remakes. Over the past 8 years, our unwavering commitment to merging stunning aesthetics with long-term resilience has stemmed from recognizing the universal desire for a radiant and healthy smile. We share a collective goal with our partnered dentists: to rejuvenate the health and charm in every patient's smile.</p>
 									<!-- Text -->
@@ -103,14 +103,12 @@
 					<div class="row mb-5 mt-3">
 						<div class="col-md-12">
 							<div class="w-100 ytbe  about_video" style="height: 80vh;" data-video-id="vYkVXmQgqUI">
-								<img src="https://img.youtube.com/vi/vYkVXmQgqUI/sddefault.jpg" alt="Video Thumbnail"
+								<img src="{% static 'img/team_about1.jpg' %}" alt="Video Thumbnail"
 									class="video-thumbnail" />
 								<button class="play-button">▶</button>
 							</div>
 						</div>
 					</div>
-			
-					
                     <!-- SERVICES CONTENT -->
 					<div class="row">
 						<div class="col-md-12">					
@@ -121,15 +119,13 @@
                                         <div class="doctors-2">	
                                             <!-- Doctor Photo -->
                                             <div class="hover-overlay-about"> 
-                                                <img class="img-fluid" src="{{ie.image.url}}" alt="doctor-foto">	
+                                                <img class="img-fluid" src="{{ie.image.url}}"width="262" height="393" alt="doctor-foto">	
                                             </div>								                    
                                             <!-- Doctor Meta -->		
                                             <div class="doctor-meta">
                                                 <h5 class="h5 mb-2 blue-color">{{ie.name}}</h5>
                                                 <small >
-                                                    <b>
                                                         <span>{{ie.role}}</span>
-                                                    </b>
                                                 </small>
                                                 <span class="mt-1 pb-2">{{ie.position}}</span>
                                             </div>	
@@ -362,9 +358,10 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 <script>
-	const swiper1 = document.querySelector('.mySwiper1');
+	const swiper1=document.querySelector(".mySwiper1");Object.assign(swiper1,{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0,dynamicBullets:!0},autoplay:{delay:2500,disableOnInteraction:!1},breakpoints:{640:{slidesPerView:2,spaceBetween:10},768:{slidesPerView:3,spaceBetween:15},1024:{slidesPerView:4,spaceBetween:20}}}),swiper1.initialize();
+	{% comment %} const swiper1 = document.querySelector('.mySwiper1');
 
-	// Initialize Swiper with breakpoints
+	
 	Object.assign(swiper1, {
 		slidesPerView: 1,
 		spaceBetween: 10,
@@ -374,35 +371,36 @@
 			dynamicBullets: true,
 		},
 		autoplay: {
-			delay: 2500, // Delay between slides in milliseconds (2.5 seconds)
-			disableOnInteraction: false, // Autoplay will not stop after interaction
+			delay: 2500, 
+			disableOnInteraction: false, 
 		},
 		breakpoints: {
 			640: {
-				slidesPerView: 2, // 2 images per slide on small screens
+				slidesPerView: 2, 
 				spaceBetween: 10,
 			},
 			768: {
-				slidesPerView: 3, // 3 images per slide on medium screens
+				slidesPerView: 3, 
 				spaceBetween: 15,
 			},
 			1024: {
-				slidesPerView: 4, // 4 images per slide on large screens
+				slidesPerView: 4, 
 				spaceBetween: 20,
 			},
 		},
 	});
 
-	swiper1.initialize();
+	swiper1.initialize(); {% endcomment %}
 </script>
 <script>
-    // Select the container of the video
-    const videoWrapper = document.querySelector(".ytbe.about_video");
+	const videoWrapper=document.querySelector(".ytbe.about_video"),playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)});
+    
+    {% comment %} const videoWrapper = document.querySelector(".ytbe.about_video");
 
-    // Find the play button inside the container
+   
     const playButton = videoWrapper.querySelector(".play-button");
 
-    // Add an event listener to the play button
+   
     if (playButton) {
         playButton.onclick = () => {
             const videoId = videoWrapper.getAttribute("data-video-id");
@@ -414,11 +412,11 @@
             iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
             iframe.allowFullscreen = true;
 
-            // Replace the thumbnail and button with the iframe
+          
             videoWrapper.innerHTML = "";
             videoWrapper.appendChild(iframe);
         };
-    }
+    } {% endcomment %}
 </script>
 
 {% endblock js %}
