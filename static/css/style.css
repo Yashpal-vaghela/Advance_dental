@@ -2328,6 +2328,9 @@ td.text-right {
   transition: all 450ms ease-in-out;
   text-align: center;
 }
+#services-7 .col-md-4:nth-child(8) .sbox-7{
+  margin-bottom:0px;
+}
 .hexagon {
   display: inline-block;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

@@ -21,9 +21,9 @@
   body {
     background: linear-gradient(135deg, #e8f5f9, #ffffff);
   }
-  .container {
+  {% comment %} .container {
     margin-top: 3rem;
-  }
+  }  {% endcomment %}
   .custom-card {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -97,10 +97,15 @@
     height: 100%;
     object-fit: cover;
   }
-  @media (max-width: 576px) {
-    .container{
-      margin-top: 5rem;
+  @media(max-width:991px){
+     .container{
+      margin-top: 3rem;
     }
+  }
+  @media (max-width: 576px) {
+    {% comment %} .container{
+      margin-top: 5rem;
+    } {% endcomment %}
     .social-media-row{
       flex-direction: row;
       flex-wrap: wrap;
@@ -135,7 +140,7 @@
     </div>
 
     <div class="row justify-content-center mt-4 mb-4">
-      <div class="col-md-6">
+      <div class="col-md-8 col-lg-6">
         <div class="card custom-card">
           <div class="card-body">
             <h2 class="card-title text-center mb-4" style="color: #25A58F;">Explore ADE’s Digital Presence</h2>
