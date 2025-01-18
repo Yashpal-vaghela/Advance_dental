@@ -168,12 +168,13 @@
   .review-section .review-user .user_image {
     width: 90px;
     height: 90px;
+    margin:0 auto 1rem auto;
   }
   .review-slider-testimonials {
     height: 440px;
-    padding: 55px 30px;
+    padding: 45px 30px;
   }
-  .review-section .review-user .review-user-txt p {
+  .review-section .review-user .review-user-txt {
     font-size: 15px !important;
   }
   .review-slider-testimonials .carousel-control-prev,
@@ -199,11 +200,11 @@
   .review-slider-testimonials {
     height: 490px;
   }
-  .review-section .review-user .review-user-txt p {
+  .review-section .review-user .review-user-txt {
     font-size: 16px !important;
     letter-spacing: 1px;
   }
-  .review-section .review-user-txt p i {
+  .review-section .review-user-txt  i {
     font-size: 30px;
   }
   .review-slider-testimonials .review-next-button:hover {
@@ -220,7 +221,7 @@
     height: 70px;
     margin: 0 auto 1rem auto;
   }
-  .review-section .review-user .review-user-txt p {
+  .review-section .review-user .review-user-txt {
     font-size: 13px !important;
     letter-spacing: 1px;
   }
@@ -250,7 +251,7 @@
   .review-slider-testimonials .review-prev-button:hover {
     left: -35px;
   }
-  .review-section .review-user-txt p i {
+  .review-section .review-user-txt  i {
     font-size: 25px;
   }
   .review-section .review-user .review-user-txt{

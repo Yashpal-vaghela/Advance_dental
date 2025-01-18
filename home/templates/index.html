@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="Advance Dental Export" />
 <meta name="twitter:image" content="{% static 'img/11.jpg' %}" />
 {% endblock %} {% block css %} {% endblock %} {% block body %}
-<h1 class="d-none">Best Dental Labs In India, US & Canada</h1>
+<h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
 
 <section class="hero-section1">
   <div
@@ -81,7 +81,7 @@
           Uncompromised Quality
         </p>
         <h5
-          class="h5-xs steelblue-color d-flex my-1 my-sm-2 my-md-2 my-lg-3 justify-content-center align-items-center"
+          class="h5-xs blue-color d-flex my-1 my-sm-2 my-md-2 my-lg-3 justify-content-center align-items-center"
         >
           Highest Quality Dental Implant Prosthetics
         </h5>
@@ -114,7 +114,7 @@
           World Wide Presence
         </p>
         <h5
-          class="h5-xs steelblue-color my-2 my-sm-2 my-md-2 my-lg-3 d-flex justify-content-center align-items-center"
+          class="h5-xs blue-color my-2 my-sm-2 my-md-2 my-lg-3 d-flex justify-content-center align-items-center"
         >
           Services Now Available In Canada
         </h5>
@@ -147,7 +147,7 @@
           FDA Registered
         </p>
         <h5
-          class="h5-xs steelblue-color d-flex my-2 my-sm-2 my-md-2 my-lg-3 justify-content-center align-items-center"
+          class="h5-xs blue-color d-flex my-2 my-sm-2 my-md-2 my-lg-3 justify-content-center align-items-center"
         >
           Bringing The Best Technology To Dental Labs
         </h5>
@@ -168,9 +168,12 @@
     <div class="row d-flex align-items-center mt-0 mx-0">
       <div class="col-lg-7 d-flex">
         <div
-          class="txt-block pc-30 pt-5"
-          data-aos="fade-up"
-          data-aos-duration="4000"
+          class="txt-block pc-30 wow fadeInUp pt-5"
+          data-wow-delay="0.4s" style="
+            visibility: visible;
+            animation-delay: 0.4s;
+            animation-name: fadeInUp;
+          "
         >
           <span class="section-id blue-color"
             >Welcome to Advance Dental Export</span
@@ -1039,7 +1042,7 @@
                   aria-label="Slide {{ forloop.counter }}"
                 >
                   <div
-                    class="review-user mx-auto col-lg-8 col-md-10 col-sm-11 col-12"
+                    class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
                   >
                     <div class="user_image">
                       <img
@@ -1151,9 +1154,9 @@
         Our Stories, Tips & Latest News
       </h1>
     </div>
-    <div class="row mx-0 mt-3 g-4 justify-content-center">
+    <div class="row mx-0 mt-0 g-4 justify-content-center">
       {% for blog in data2 %}
-      <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt-0">
+      <div class="col-lg-4 col-md-6 col-sm-12 col-11 mt-0 mt-sm-4 mt-lg-0 mt-md-4">
         <div class="news-blog-card card">
           <img
             src="{{ blog.image.url }}"

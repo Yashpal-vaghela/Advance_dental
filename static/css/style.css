@@ -1215,7 +1215,7 @@ span.id-color {
   text-align: center;
   margin-bottom: 30px;
 }
-
+/* .news-blog-wrapper .section-title{ margin-bottom:15px;} */
 .section-title h3.h3-md {
   line-height: 1.1;
 }
@@ -3768,6 +3768,11 @@ td.text-right {
   font-weight: 500;
 }
 
+.sblog-post-txt .h1-sm{
+  font-size:1.5rem !important;
+  font-weight: 600 !important;
+}  
+
 .blog-post-txt h5 {
   margin-top: 5px;
   line-height: 1.35;
@@ -3781,7 +3786,9 @@ td.text-right {
   margin-top: 5px;
   margin-bottom: 0;
 }
-
+.sblog-post-txt strong{
+  font-weight:bold !important;
+}
 #blog-page .blog-post-txt p {
   font-size: 1rem;
   margin-top: 10px;
@@ -4220,6 +4227,7 @@ h5.h5-sm {
   color: #fff;
   text-decoration: none;
   position: relative;
+  padding-top: 3px;
   padding-bottom: 3px;
 }
 .contact-box p a:hover {
@@ -4894,7 +4902,7 @@ p.footer-copyright span {
 }
 @media only screen and (max-width: 576px) {
   .footer-section .container {
-    max-width: 400px;
+    max-width:500px;
   }
   .footer-contact-wrapper .row {
     align-items: center;
@@ -5181,6 +5189,15 @@ ul.blog-category-list li:hover {
   border-radius: 0;
 }
 
+/* blog breadcrumb */
+.page #breadcrumb .breadcrumb-holder h1{
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.75rem;
+}
 .breadcrumb-holder h4 {
   line-height: 1;
   font-weight: 900;
