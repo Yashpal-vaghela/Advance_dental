@@ -1,26 +1,5 @@
 
-
-
-
-/*
-  Template Name: MedService - Medical & Medical Health Landing Page Template
-  Theme URL: https://themeforest.net/user/jthemes
-  Description: MedService - Medical & Medical Health Landing Page Template
-  Author: Jthemes
-  Author URL: https://themeforest.net/user/jthemes
-  Version: 1.0.0
-  Tags: Responsive, HTML5 Template, Jthemes, One Page, Landing, Medical, Health, Healthcare, Doctor, Clinic, Care, Hospital
-*/
-
-
-
-
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-
 @media (min-width: 1921px) {
-
   /* HERO SLIDER */
   .slider { height: 650px; }
   .slider .slides { height: 650px;}
@@ -29,24 +8,11 @@
 
   #hero-6 .caption-txt { margin-top: -100px; }
   #hero-11 .caption-txt { margin-top: -120px; }
-
   /* HERO IMAGES CAROUSEL */
   #heroCarousel .carousel-item { min-height: 650px; }
-
-
-
-  
 }
 
-
-
-
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-
 @media (min-width: 1440px) and (max-width: 1920.99px) {
-
 	/* HERO SLIDER */
   .slider { height: 650px; }
   .slider .slides { height: 650px;}
@@ -58,22 +24,12 @@
 
   /* HERO IMAGES CAROUSEL */
   #heroCarousel .carousel-item { min-height: 650px; }
-
-
-
 }
 
-
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-
 @media (min-width: 992px) and (max-width: 1199.99px) {
-
   /*------------------------------------------*/
   /*   BASE
   /*------------------------------------------*/
-
   .pc-30 { padding-right: 20px; padding-left: 20px; } 
   .pr-30 { padding-right: 15px; } 
 
@@ -155,7 +111,6 @@
   /*------------------------------------------*/
   /*   HERO
   /*------------------------------------------*/
-
   #hero-12 { padding-top: 80px; padding-bottom: 180px; }
 
   /* Slider */
@@ -194,7 +149,6 @@
 
   /* Hero Register Form */
   .hero-form { padding: 35px 30px; margin: 0 0 0 20px; }
-
 
   /*------------------------------------------*/
   /*   CONTENT
@@ -424,12 +378,7 @@
 
 
 }
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-
 @media (min-width: 768px) and (max-width: 991.99px) { 
-
   /*------------------------------------------*/
   /*   BASE
   /*------------------------------------------*/
@@ -803,13 +752,6 @@
   .sidebar-div.mb-50 { margin-bottom: 40px; }
   #search-field .btn { padding: 17px; }
 
-  /* Breadcrumb */
-  #breadcrumb { margin-top: 70px; text-align: center; }
-  .breadcrumb-holder { margin: 0 auto; display: inline-block; padding-top: 35px; padding-bottom: 35px; padding-left: 0; }
-  .breadcrumb-holder h4 { margin-top: 8px; }
-  .breadcrumb-item a, .breadcrumb-item.active { font-size: 0.975rem; }
-  .breadcrumb-item + .breadcrumb-item::before { font-size: 1.05rem; }
-
   /* Departments Page */
   #department-page .content-block p.p-md { font-size: 1rem; }
   #department-page .content-block p.mb-30 { margin-bottom: 10px; }
@@ -909,9 +851,7 @@
 }
 /* ------------------------------------------------------------------------ */
 @media (min-width: 576px) and (max-width: 767.99px) {
-
   #stlChanger { display: none; }
-
   /*------------------------------------------*/
   /*   BASE
   /*------------------------------------------*/
@@ -1304,12 +1244,6 @@
   .badge a { font-size: 1.075rem; }
 
   /* Breadcrumb */
-  #breadcrumb { margin-top: 70px; text-align: center; }
-  .breadcrumb-holder { margin: 0 auto; display: inline-block; padding-top: 35px; padding-bottom: 35px; padding-left: 0; }
-  .breadcrumb-holder h4 { margin-top: 8px; }
-  .breadcrumb-item a, .breadcrumb-item.active { font-size: 1rem; }
-  .breadcrumb-item + .breadcrumb-item::before { font-size: 1.05rem; }
-
   /* Departments Page */
   #department-page .content-block p.p-md { font-size: 1rem; }
   #department-page .content-block p.mb-30 { margin-bottom: 10px; }
@@ -1332,21 +1266,13 @@
   .terms-box h5 { margin-bottom: 22px; }
   .terms-box p span { font-size: 1.075rem; }
   #terms-page p.p-notice { font-size: 0.85rem; }
-
   /* Scroll To Top */
   #scrollUp { width: 40px; height: 40px; bottom: 15px; right: 20px; }
-
-
-
-
 }
 /* ------------------------------------------------------------------------ */
 @media (max-width: 575px) { 
-
   html { font-size: 14px; } 
-
   #stlChanger { display: none; }
-
   /*------------------------------------------*/
   /*   BASE
   /*------------------------------------------*/
@@ -1419,7 +1345,7 @@
   .img-65 { width: 60px; height: 60px; }
 
   /* Section Id */
-  span.section-id { font-size: 1rem; margin-bottom: 3px; margin-top: 24px; }
+  span.section-id { font-size: 1rem; margin-bottom: 3px; margin-top: 10px; }
 
   /* Section Title */
   .section-title { margin-bottom: 25px; }
@@ -1679,58 +1605,45 @@
   .all-pricing-btn p { padding: 0; }
 
   /* #pricing-3 .pricing-img { display: none; } */
-
   /* Brands */
   .brands-holder img { padding: 0 15%; }
-
   /* Testimonials */
   .review-1 { padding: 0; } 
-
   #reviews-1 .testimonial-avatar img, #reviews-2 .testimonial-avatar img { width: 65px; height: 65px; }
   .review-author h5 { margin-bottom: 5px; }
   .review-1 p { font-size: 1.3rem; }
   .review-author span { font-size: 1.1075rem; }
-
   /* Banner */
   #banner-1 { text-align: center; background-position: left center; padding-top: 80px; padding-bottom: 80px; } 
   #banner-1 .banner-txt { padding-right: 0; }
   #banner-1 .banner-txt h2.h2-md { font-size: 2.5rem; }
   #banner-1 .banner-details span { font-size: 1.266rem; top: -15px;}
   #banner-1 .banner-txt p.p-md { text-align: left!important; font-size: 1rem; top: -15px; left: 30px;}
-
   #banner-2 { padding-top: 0; } 
   #banner-2 .bg-inner { text-align: center; padding: 80px 0; }
   #banner-2 .bg-inner h3.h3-lg { font-size: 2.25rem;  }
-
   #banner-3 { padding-bottom: 80px; } 
   #banner-3 .banner-txt, #banner-4 .banner-txt { text-align: center; }
   #banner-3 h2.h2-xl { font-size: 2.55rem; padding: 0 5px; }
   #banner-4 h2.h2-xs { font-size: 2.55rem; padding: 0; }
   #banner-3 .banner-txt h3.h3-md, #banner-4 .banner-txt h3.h3-xl { font-size: 2.35rem; margin-top: 15px; margin-bottom: 20px; }
-
   #banner-4 { padding-top: 80px; padding-bottom: 0; }
   #banner-4 .banner-txt { padding-left: 0; }
-  
   #banner-6, .banner-btn.text-right { text-align: center!important; } 
   #banner-6 .banner-txt h4 { font-size: 1.75rem; margin-bottom: 12px; }
   #banner-6 span { display: none; }
   #banner-6 .banner-txt { padding: 0; }
-
   #banner-7 { padding-top: 50px; padding-bottom: 50px; background-position: left center; }
   #banner-8 { padding-top: 80px; padding-bottom: 80px; }
-
   #banner-7 .banner-txt {  text-align: center; padding-right: 0; }
   #banner-7 .banner-txt h2 { font-size: 2.5rem; margin-bottom: 20px; }
   #banner-7 .btn { margin-top: 15px; }
-
   #banner-1 .banner-txt p { margin-top: 20px; padding-right: 0; }
   #banner-2 .banner-txt p { margin-top: 15px ;margin-bottom: 25px; padding: 0; }
   #banner-3 .banner-txt p,  #banner-4 .banner-txt p { padding: 0; }
   #banner-6 p { margin-bottom: 20px; }
-
   #banner-8 .banner-txt h2.h2-lg { font-size: 2.5rem; }
   #banner-8 .icon-lg [class*="flaticon-"]:before, #banner-8 .icon-lg [class*="flaticon-"]:after { font-size: 5rem; }
-
   .banner-2-img, .banner-3-img { display: none; }
   .banner-4-img { background-position: center center; position: relative; left: 0;height: 400px; width: auto!important; margin-top: 80px; }
 
@@ -1738,90 +1651,65 @@
   #single-blog-page .blog-post-img.mb-40 { margin-bottom: 30px; }
   .sblog-post-txt p.mt-30 { margin-top: 20px; }
   .post-inner-img { margin-top: 30px; margin-bottom: 30px; }
-
   .blog-post-txt h5.h5-sm { font-size: 1.5rem; margin-bottom: 5px; }
   .blog-post-txt h5 { margin-bottom: 10px; }
   .blog-post-txt span {font-size: 1.133rem; }
   .blog-post-txt p { font-size: 1.1075rem; }
   .comment-form { margin-bottom: 30px; }
   .sblog-post-txt span, #blog-page .blog-post-txt span { font-size: 1.1075rem; }
-
   .post-share-links { margin-top: 60px; padding-top: 50px; }
   .post-tags-list { margin-bottom: 30px; }
   .post-tags-list span a { font-size: 1.05rem; padding: 6px 12px; display: inline-block; float: left; margin-top: 10px; }
   a.share-ico { width: 90px;height: 34px; font-size: 1.075rem;line-height: 34px !important; margin-right: 8px; margin-bottom: 8px; }
   .share-social-icons i { font-size: 13px;margin-right: 4px;}
-
   .author-senoff { text-align: center; padding: 30px 20px; margin-top: 70px;margin-bottom: 60px; }
   .author-senoff img { width: 90px; height: 90px; float: none; margin-bottom: 15px; }
   .author-senoff-txt { padding-left: 0;}
   .author-senoff-txt h5 { margin-bottom: 10px; }
-
   .related-posts h5.h5-md, .single-post-comments h5.h5-md { font-size: 1.5rem; padding-bottom: 20px; margin-bottom: 30px; }
-
   .comment-form .form-control { font-size: 1.266rem; padding: 0 15px; }
   .comment-form textarea.form-control { padding: 15px; }
-
   /* Contacts */
   #contacts-2 h4.h4-md { padding-right: 0; margin-top: 0; margin-bottom: 20px;}
   .contact-box p { font-size: 1.133rem; }
-
   #contacts-1 .contact-form { margin-left: 0; }
   #contacts-2 .contact-form { padding: 25px 10px 25px; }
   #contacts-1 .col-md-12 { padding: 0 15px 0 0; }
   .contact-form .form-control, .contact-form .custom-select { height: 54px; font-size: 1.266rem; }
-
   /* Google Map */
   #gmap { margin-top: 70px; }
   #gmap {height: 300px;}
-
   /* Footer */
   #footer-1 .footer-box { padding-left: 0; }
   .footer h5.h5-xs { margin-bottom: 20px; }
   .footer p.p-sm, .footer-box p, .footer-links li { font-size: 1.1075rem; }  
   .footer p.p-sm.mt-20 { margin-top: 15px; }
   p.contact-notice { padding-right: 0; margin-top: 0; margin-bottom: 40px; }
-
   .foo-socials a { width: 50px; height: 50px; font-size: 20px; line-height: 46px!important; }
   .footer-form .form-control { height: 54px; font-size: 1.1075rem; }
   .footer-form .btn { height: 54px; font-size: 1.5rem; }
-
   .bottom-footer { padding-top: 20px; }
   p.footer-copyright { font-size: 1.075rem; }
-
   /* Sidebar */
   #sidebar { margin-top: 50px; }
   .sidebar-div.mb-50 { margin-bottom: 40px; }
-
   #search-field .form-control { height: 58px; font-size: 1.266rem; }
   #search-field .btn { height: 58px; padding: 17px;  }
-
   ul.blog-category-list > li a, .post-summary a { font-size: 1.266rem; }
   .popular-posts p { font-size: 1.266rem; }
-
   .badge a { font-size: 1.266rem; }
-
   /* Breadcrumb */
-  #breadcrumb { margin-top: 70px; text-align: center; }
-  .breadcrumb-holder { margin: 0 auto; display: inline-block; padding-top: 25px; padding-bottom: 25px; padding-left: 0; }
-  .breadcrumb-holder h4 { font-size: 1.65rem; margin-top: 5px; }
-  .breadcrumb-item a, .breadcrumb-item.active { font-size: 1.1075rem; }
-  .breadcrumb-item + .breadcrumb-item::before { font-size: 1.1075rem; }
-
   /* Departments Page */
   #department-page .content-block p.p-md { font-size: 1.05rem; }
   #department-page .content-block p.mb-30 { margin-bottom: 10px; }
-
   /* Page Pagination */
   .blog-page-pagination { margin-top: 60px; margin-bottom: 20px; padding-top: 60px; }
   .page-link { font-size: 1.1075rem; padding: .8rem 1.1rem; }
-
   /* FAQs Page */
   #faqs-page .questions-holder { margin-bottom: 30px; }
   .questions-holder h3 { margin-bottom: 25px; }
   #faqs-page h5.h5-xl { margin-top: 30px; margin-bottom: 25px; }
   #faqs-page #accordion .card-header h5 { line-height: 1.25; padding-right: 10%; }
-
   /* Terms Page */
   .terms-holder { margin-bottom: 30px; }
   ul.terms-list {margin: 0 0 20px 25px;}
@@ -1830,12 +1718,8 @@
   .terms-box h5 { margin-bottom: 22px; }
   .terms-box p span { font-size: 1.1075rem; }
   #terms-page p.p-notice { font-size: 1.05rem; }
-
   /* Scroll To Top */
   #scrollUp { width: 40px; height: 40px; bottom: 15px; right: 20px; }
-
-
-
 }
 /*------service section all responsive-------*/
 @media(min-width:768px) and (max-width:991px){
@@ -1920,6 +1804,15 @@
     font-size: 45px !important;
     text-align: start;
   }
+
+  /* common breadcrumbs */
+   /* Breadcrumb */
+   #breadcrumb { margin-top: 70px; text-align: center; }
+   .breadcrumb{ margin-bottom: 10px;}
+   .breadcrumb-holder { margin: 0 auto; display: block; padding-top: 35px; padding-bottom: 35px; padding-left: 0; }
+   .breadcrumb-holder h1{ text-align: left;}
+   .breadcrumb-holder h4 { margin-top: 8px; }
+   .breadcrumb-item a, .breadcrumb-item.active { font-size: 0.975rem; }
 }
 @media(max-width:768px){
   .second .sbox-6:nth-child(2){
@@ -1958,7 +1851,14 @@
   .swiper-slide .subtitle{
     font-size: 35px !important;
   }
-
+  /* footer css */
+  .footer-section .container .row{
+    margin-left:0;
+    margin-right:0
+  }
+  /* breadcrumbs css */
+  .breadcrumb-holder h1 { font-size: 25px;}
+  .breadcrumb-item a, .breadcrumb-item.active { font-size: 1rem; }
 }
 @media(max-width:576px){
   .services-section{
@@ -1992,6 +1892,7 @@
   .swiper-slide .subtitle{
     font-size: 25px !important;
   }
+  /* about page css */
   #statistic-1 .container-content{
     padding:50px 0 50px;
     gap:25px;
@@ -1999,12 +1900,67 @@
   .statistic-block{
     margin-bottom: 0px;
   }
-}
+  .info-section .container,.about-qulified-section .container,.mySwiper1{
+    padding-left: 30px;
+    padding-right:30px;
+  }
+  .info-section .container .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .top-row .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bottom-row .row,.features-product-section .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .features-product-section .txt-block span{
+    font-size: 0.9rem;
+  }
+  .features-product-section .txt-block h2{
+    font-size: 32px !important;
+  }
+  #services-7 .container .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #services-7 .col-md-4 .sbox-7{
+    margin-bottom: 20px;
+  }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-/* ----------------hero section ------------------------------------------- */
+  /* footer css */
+  .footer-section .container .row .footer-info{
+    margin-left:0px !important;
+  }
+  .footer-section .container{
+    padding-left: 30px;
+    padding-right:30px;
+  }
+  .footer-links .foo-links{
+    margin-top: 15px !important;
+  }
+  .footer-socials-links{
+    margin-bottom: 10px;
+  }
+  .footer-links{
+    margin-bottom: 30px !important;
+  }
+  .footer-logo{
+    width:100%
+  }
+  /* common css */
+  #breadcrumb .container .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .breadcrumb-holder { padding-top: 25px; padding-bottom: 25px; }
+  .breadcrumb-holder nav .breadcrumb li a, .breadcrumb-holder nav .breadcrumb li {font-size: 14px;margin-bottom: 5px;margin-top: 5px;}
+  .breadcrumb-holder h4 { font-size: 1.65rem; margin-top: 5px; }
+  .breadcrumb-item a, .breadcrumb-item.active { font-size: 1.1075rem; }
+  .breadcrumb-item + .breadcrumb-item::before { font-size: 1.1075rem; }
+}
 @media (max-width: 767px) {
    
   .abox-3-holder {
@@ -2019,7 +1975,6 @@
   }
   
 }
-
 /* Ensure it's visible on medium and larger screens */
 @media (min-width: 768px) {
   .custom-visibility {

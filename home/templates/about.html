@@ -42,7 +42,7 @@
 			<div id="breadcrumb" class="division">
 				<div class="container">
 					<div class="row">						
-						<div class="col">
+						<div class="col-12">
 							<div class=" breadcrumb-holder">
 								<!-- Breadcrumb Nav -->
 								<nav aria-label="breadcrumb">
@@ -143,7 +143,7 @@
 				{% include 'static_counts.html' %}
 			</section>		
 
-			<section class="mb-5 mt-5">
+			<section class="mb-5 mt-5 about-qulified-section">
 				<div class="container">
 					<!-- BOTTOM ROW -->
 					<div class="bottom-row">
@@ -170,10 +170,10 @@
 				</div>
 			</section>
 			
-			<section class="mb-5 mt-5" style="background-image: url('{% static 'images/banner-2.jpg' %}');">
+			<section class="mb-5 mt-5 features-product-section" style="background-image: url('{% static 'images/banner-2.jpg' %}');">
 				<div class="container py-4">
 					 <!-- SERVICES CONTENT -->
-					 <div class="row pt-4 pb-4">
+					<div class="row pt-4 pb-4">
 						<!-- INFO TEXT -->	
 						<div class="col-lg-12">
 							<div class="txt-block pc-30 text-center wow fadeInUp" data-wow-delay="0.4s">
@@ -185,131 +185,111 @@
 								</h2>
 							</div>
 						</div>	<!-- END INFO TEXT -->	
-			<swiper-container class="mySwiper1" pagination="true" pagination-dynamic-bullets="true" space-between="10"
-				loop="true">
+						<swiper-container class="mySwiper1" pagination="true" pagination-dynamic-bullets="true" space-between="10"
+							loop="true">
 
-				{% for ie in imagez %}
-				<swiper-slide>
-					<!-- SERVICE BOX #1 -->
-					<div class="sbox-5">
-						<div class="doctors-2">
-							<!-- Doctor Photo -->
-							<div class="hover-overlay">
-								<img class="img-thumbnail" src="{{ie.image.url}}" alt="{{ie.name}}">
-							</div>
-						</div>
-					</div>
-				</swiper-slide>
-				{% endfor %}
-			</swiper-container>									
+							{% for ie in imagez %}
+							<swiper-slide>
+								<!-- SERVICE BOX #1 -->
+								<div class="sbox-5">
+									<div class="doctors-2">
+										<!-- Doctor Photo -->
+										<div class="hover-overlay">
+											<img class="img-thumbnail" src="{{ie.image.url}}" alt="{{ie.name}}">
+										</div>
+									</div>
+								</div>
+							</swiper-slide>
+							{% endfor %}
+						</swiper-container>									
 					</div>	<!-- END SERVICES CONTENT --> 
 				</div> 
 			</section>
 
 
-			 <section id="services-7" class="bg-lightgrey wide-70 servicess-section division">
+			 <section id="services-7" class="bg-lightgrey wide-75 servicess-section division">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="row">
-			 					<div class="col-md-4">
-			 						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-			 							<a href="javascript:void(0);">
-											<h5 class="steelblue-color">CAD/CAM Technology</h5>
-											<div class="sbox-7-txt">	
-												<p class="sbox-7-p">
-													Advance Dental Export remains the leader in offering digital technology to our clients. We currently support 3M True Definition, Cadent Itero, as well as many other open architecture systems.
-												</p>
-											</div>
-										</a>
-			 						</div>
-			 					</div> 
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Cosmetic Restoration Service</h5>
-											<div class="sbox-7-txt">		
-												<p class="sbox-7-p">
-													Esthetic diagnostic wax-ups, silicone matrices for intraoral mock-ups and temporaries. We use the latest materials and technologies to achieve predictable results for your patients.
-												</p>
-											</div>
-										</a>
-									</div>
-								</div> 
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Implant Specialists</h5>
-											<div class="sbox-7-txt">		
-												<p class="sbox-7-p">
-													Assistance with implant cases, including diagnostic wax-up, stent fabrication and components for implant systems. In house design for custom abutments and denture bars.
-												</p>
-											</div>
-										</a>
-									</div>
-								</div> 
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Custom Milling</h5>
-											<div class="sbox-7-txt">		
-												<p class="sbox-7-p">
-													Custom milling of zirconia, implant abutments, overdenture bars, temporaries and ceramics.
-												</p>
-											</div>
-										</a>
-									</div>
-								</div> 
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Laser Welding</h5>
-											<div class="sbox-7-txt">		
-												<p class="sbox-7-p">
-													Laser welding for quick repairs of partial dentures
-												</p>
-											</div>
-										</a>
-									</div>
-								</div>  
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Diagnostic Wax-Ups</h5>
-												<div class="sbox-7-txt">		
-													<p class="sbox-7-p">
-														Complete diagnostic wax-up service for treatment planning.
-													</p>
-												</div>
-										</a>
-									</div>
-								</div>  
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Case Planning Assistance</h5>
-											<div class="sbox-7-txt">		
-												<p class="sbox-7-p">
-													Personal consultations with doctors and staff for treatment options with recommendations from a technical perspective.
-												</p>
-											</div>
-										</a>
-									</div>
-								</div> 
-								<div class="col-md-4">
-									<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
-										<a href="javascript:void(0);">
-											<h5 class="h5-sm steelblue-color">Shade Analysis</h5>
-											<div class="sbox-7-txt">	
-												<p class="sbox-7-p">
-													We can match the most difficult shades using your digital photos or in-lab consultation. - Send digital photos to: color@advancedentalexport.com
-												</p>
-											</div>
-										</a>
-									</div>
-								</div> 
-	 						</div>
-						</div>	
+					<div class="row justify-content-center">
+						<div class="col-md-4 col-10">
+			 				<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+			 					<a href="javascript:void(0);">
+									<h5 class="steelblue-color">CAD/CAM Technology</h5>
+										<div class="sbox-7-txt">	
+											<p class="sbox-7-p">Advance Dental Export remains the leader in offering digital technology to our clients. We currently support 3M True Definition, Cadent Itero, as well as many other open architecture systems.</p>
+										</div>
+								</a>
+			 				</div>
+			 			</div> 
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Cosmetic Restoration Service</h5>
+										<div class="sbox-7-txt">		
+											<p class="sbox-7-p">Esthetic diagnostic wax-ups, silicone matrices for intraoral mock-ups and temporaries. We use the latest materials and technologies to achieve predictable results for your patients.</p>
+										</div>
+								</a>
+							</div>
+						</div> 
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Implant Specialists</h5>
+										<div class="sbox-7-txt">		
+											<p class="sbox-7-p">Assistance with implant cases, including diagnostic wax-up, stent fabrication and components for implant systems. In house design for custom abutments and denture bars.</p>
+										</div>
+								</a>
+							</div>
+						</div> 
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Custom Milling</h5>
+										<div class="sbox-7-txt">		
+											<p class="sbox-7-p">Custom milling of zirconia, implant abutments, overdenture bars, temporaries and ceramics.</p>
+										</div>
+								</a>
+							</div>
+						</div> 
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Laser Welding</h5>
+										<div class="sbox-7-txt">		
+											<p class="sbox-7-p">Laser welding for quick repairs of partial dentures</p>
+										</div>
+								</a>
+							</div>
+						</div>  
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Diagnostic Wax-Ups</h5>
+										<div class="sbox-7-txt">		
+											<p class="sbox-7-p">Complete diagnostic wax-up service for treatment planning.</p>
+										</div>
+								</a>
+							</div>
+						</div>  
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Case Planning Assistance</h5>
+										<div class="sbox-7-txt">		
+											<p class="sbox-7-p">Personal consultations with doctors and staff for treatment options with recommendations from a technical perspective.</p>
+										</div>
+								</a>
+							</div>
+						</div> 
+						<div class="col-md-4 col-10">
+							<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s">
+								<a href="javascript:void(0);">
+									<h5 class="h5-sm steelblue-color">Shade Analysis</h5>
+										<div class="sbox-7-txt">	
+											<p class="sbox-7-p">We can match the most difficult shades using your digital photos or in-lab consultation. - Send digital photos to: color@advancedentalexport.com</p>
+										</div>
+								</a>
+							</div>
+						</div>
 					</div>  
 				</div>	  
 			</section>
