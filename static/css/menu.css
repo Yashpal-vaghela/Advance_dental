@@ -169,9 +169,9 @@ video {
   color: #666;
 }
 
-.wsmenu >.wsmenu-list > li:hover > a {
+/* .wsmenu >.wsmenu-list > li:hover > a {
   color: #00a3c8;
-}
+} */
 
 .wsmenu > .wsmenu-list > li > a {
   display: block;

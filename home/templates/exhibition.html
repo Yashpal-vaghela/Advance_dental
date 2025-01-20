@@ -4,7 +4,7 @@
 {% block seo %}    
 <title>Exhibition Gallery - Advance Dental Export</title>
 <meta name="description" content="Advance Dental Lab is a trusted dental care facility, providing quality and personalized dental services. For any query at Advance Dental Lab contact us here" />
-<link rel="canonical" href="https://advancedentalexport.com/contact/" />
+<link rel="canonical" href="https://advancedentalexport.com/exhibition-gallery/" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Contact - Advance Dental Export" />
@@ -68,8 +68,7 @@
                                     	<!-- IMAGE #1 -->
                                         <div class="col-md-4">
                                             <a href="{% url 'home:eventgallery' ie.slug %}">
-\                                            <div class="card p-3">
-                                               
+                                            <div class="card p-3">
                                                {% if ie.image %}
                                                <img src="{{ie.image.url}}" alt="{{ie.name}}">
                                                {% endif %}
