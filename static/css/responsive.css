@@ -1762,9 +1762,6 @@
 }
 
 @media(max-width:1200px){
-  .swiper-slide img{
-    height:100%;
-  }
   .page #breadcrumb .breadcrumb-holder h1{
     font-size: 1.375rem;
     margin-top: 7px;

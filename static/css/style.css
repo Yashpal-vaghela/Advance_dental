@@ -4810,6 +4810,7 @@ p.footer-copyright span {
   margin-bottom: 0;
   word-break: break-word;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 /* new footer */
 .footer-section {
@@ -4873,9 +4874,7 @@ p.footer-copyright span {
     margin-top: 110px;
     display: block;
   }
-  .swiper-slide img{
-    height: 100%;
-  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -4901,6 +4900,9 @@ p.footer-copyright span {
     word-break: break-word;
     text-align: left;
     font-size: 0.8rem !important;
+  }
+  .swiper-slide img{
+    height: 100%;
   }
 }
 @media only screen and (max-width: 576px) {
