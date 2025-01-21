@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://advancedentalexport.com/sitemap.xml 
+Disallow: blog/*
+Disallow: gallery/*?*
+Disallow: event-gallery/expodent-delhi/*?*
+Sitemap: https://advancedentalexport.com/sitemap.xml
