@@ -115,7 +115,7 @@
 											{% endif %}
 											{% endfor %}
 											{% if data.has_next %}
-											{% comment %} update this line {% endcomment %}
+											{% comment %}    update this line {% endcomment %}
 											<li class="page-item next-page"><a class="page-link" href="?q={{ request.GET.q }}&page={{ data.next_page_number }}"><i class="fas fa-long-arrow-alt-right"></i></a></li>
 											{% else %}
 											<li class="page-item next-page"><a class="page-link" href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
@@ -125,16 +125,9 @@
 								</div>
 								{% endif %}	
 								</div>
-								
-
-
 				 			</div>
 				 		</div>	 <!-- END BLOG POSTS HOLDER -->
-
-
-
-						{% include 'aside.html' %}
-				 		
+						{% include 'aside.html' %}	
 				 	</div>	<!-- End row -->	
 				 </div>	 <!-- End container -->
 			</div>	<!-- END BLOG PAGE CONTENT -->
