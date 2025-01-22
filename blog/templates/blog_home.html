@@ -59,74 +59,77 @@
 
 				 		<!-- BLOG POSTS HOLDER -->
 				 		<div class="col-lg-8">
-				 			<div class="posts-holder pr-30">
+							<div class="posts-holder pr-30">
+
+							   
+								<div class="row">
+								   
+								   {% for ie in data  %}
+								   <div class="col-md-6 col-sm-6">
+									   <!-- BLOG POST #1 --> 
+									   <div class="blog-post">
+							   
+										   <!-- BLOG POST IMAGE -->
+										   <div class="blog-post-img">
+										   <img class="img-fluid" src="{{ie.image.url}}" alt="{{ie.h1}}" />	
+									   </div>
+
+										   <!-- BLOG POST TITLE -->
+									   <div class="blog-post-txt">
+
+										   <!-- Post Data -->
+										   
+										   <p class="blog-list-date"> {{ie.published}} | <span class="steelblue-color " style="font-weight: 600">{{ie.author}}</span></p>
+
+										   <!-- Post Title -->
+										   <div class=" blog-list-heading steelblue-color">
+											   <a href="{% url 'blogd' ie.slug %}" >{{ie.h1}}</a></div>
+										   
+										   
+
+										   <!-- Post Text -->
+										   <p>{{ie.description}} ...
+										   </p>
+
+									   </div>
+
+								   </div>	
+								   <!-- END BLOG POST #1 --> 
+
+								   </div>
+								   {% endfor %}
+								   {% if data.has_other_pages %}
+							   <!-- BLOG PAGE PAGINATION -->
+							   <div class="blog-page-pagination b-top justify-content-center col-12">
+								   <nav aria-label="Page navigation justify-content-center ">
+									   <ul class="pagination justify-content-center primary-theme ">
+										   {% if data.has_previous %}
+										   <li class="page-item disabled"><a class="page-link" href="?page={{ data.previous_page_number }}" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
+										   {% else %}
+										   <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
+										   {% endif %}
+										   {% for i in data.paginator.page_range %}
+										   {% if data.number == i %}
+										   <li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
+										   {% else %}
+										   <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a> </li>
+										   {% endif %}
+										   {% endfor %}
+										   {% if data.has_next %}
+										   <li class="page-item next-page"><a class="page-link" href="?page={{ data.next_page_number }}"><i class="fas fa-long-arrow-alt-right"></i></a></li>
+										   {% else %}
+										   <li class="page-item next-page"><a class="page-link" href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
+										   {% endif %}
+									   </ul>	
+									</nav>					
+							   </div>
+							   {% endif %}	
+							   </div>
+							   
 
 
-				 				<div class="row">
-									
-									{% for ie in data  %}
-									<div class="col-md-6">
-										<!-- BLOG POST #1 --> 
-										<div class="blog-post">
-								
-											<!-- BLOG POST IMAGE -->
-											<div class="blog-post-img">
-											<img class="img-fluid" src="{{ie.image.url}}" alt="{{ie.h1}}" />	
-										</div>
-
-											<!-- BLOG POST TITLE -->
-										<div class="blog-post-txt">
-
-											<!-- Post Title -->
-											<h5 class="h5-xl steelblue-color">
-												<a href="{% url 'blogd' ie.slug %}">{{ie.h1}}</a></h5>
-
-											<!-- Post Data -->
-											<span>{{ie.published}} by <span>{{ie.author}}</span></span>
-
-											<!-- Post Text -->
-											<p>{{ie.description}} ...
-											</p>
-
-										</div>
-
-									</div>	
-									<!-- END BLOG POST #1 --> 
-
-									</div>
-									{% endfor %}
-									{% if data.has_other_pages %}
-								<!-- BLOG PAGE PAGINATION -->
-								<div class="blog-page-pagination b-top justify-content-center col-12">
-									<nav aria-label="Page navigation justify-content-center ">
-										<ul class="pagination justify-content-center primary-theme ">
-											{% if data.has_previous %}
-											{% comment %} update this line {% endcomment %}
-											<li class="page-item disabled"><a class="page-link" href="?q={{ request.GET.q }}&page={{ data.previous_page_number }}" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-											{% else %}
-											<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-											{% endif %}
-											{% for i in data.paginator.page_range %}
-											{% if data.number == i %}
-											<li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
-										    {% else %}
-											{% comment %} update this line {% endcomment %}
-											<li class="page-item"><a class="page-link" href="?q={{ request.GET.q }}&page={{ i }}">{{ i }}</a> </li>
-											{% endif %}
-											{% endfor %}
-											{% if data.has_next %}
-											{% comment %}    update this line {% endcomment %}
-											<li class="page-item next-page"><a class="page-link" href="?q={{ request.GET.q }}&page={{ data.next_page_number }}"><i class="fas fa-long-arrow-alt-right"></i></a></li>
-											{% else %}
-											<li class="page-item next-page"><a class="page-link" href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
-											{% endif %}
-										</ul>	
-	 								</nav>					
-								</div>
-								{% endif %}	
-								</div>
-				 			</div>
-				 		</div>	 <!-- END BLOG POSTS HOLDER -->
+							</div>
+						</div>	 <!-- END BLOG POSTS HOLDER -->
 						{% include 'aside.html' %}	
 				 	</div>	<!-- End row -->	
 				 </div>	 <!-- End container -->
