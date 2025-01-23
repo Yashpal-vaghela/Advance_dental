@@ -67,36 +67,30 @@
 								   {% for ie in data  %}
 								   <div class="col-md-6 col-sm-6">
 									   <!-- BLOG POST #1 --> 
-									   <div class="blog-post">
-							   
-										   <!-- BLOG POST IMAGE -->
-										   <div class="blog-post-img">
-										   <img class="img-fluid" src="{{ie.image.url}}" alt="{{ie.h1}}" />	
-									   </div>
+									    <div class="blog-post">
+												<!-- BLOG POST IMAGE -->
+												<div class="blog-home-img">
+													<img class="img-fluid" src="{{ie.image.url}}" alt="{{ie.h1}}" />	
+												</div>
 
-										   <!-- BLOG POST TITLE -->
-									   <div class="blog-post-txt">
+												<!-- BLOG POST TITLE -->
+												<div class="blog-post-txt">
 
-										   <!-- Post Data -->
-										   
-										   <p class="blog-list-date"> {{ie.published}} | <span class="steelblue-color " style="font-weight: 600">{{ie.author}}</span></p>
+													<!-- Post Data -->
+													
+													<p class="blog-list-date"> {{ie.published}} | <span class="steelblue-color " style="font-weight: 600">{{ie.author}}</span></p>
 
-										   <!-- Post Title -->
-										   <div class=" blog-list-heading steelblue-color">
-											   <a href="{% url 'blogd' ie.slug %}" >{{ie.h1}}</a></div>
-										   
-										   
+													<!-- Post Title -->
+													<div class=" blog-list-heading steelblue-color">
+														<a href="{% url 'blogd' ie.slug %}" >{{ie.h1}}</a></div>
+													<!-- Post Text -->
+													<p>{{ie.description}} ...
+													</p>
 
-										   <!-- Post Text -->
-										   <p>{{ie.description}} ...
-										   </p>
-
-									   </div>
-
-								   </div>	
-								   <!-- END BLOG POST #1 --> 
-
-								   </div>
+												</div>
+								   		</div>	
+								   		<!-- END BLOG POST #1 --> 
+								    </div>
 								   {% endfor %}
 								   {% if data.has_other_pages %}
 							   <!-- BLOG PAGE PAGINATION -->
