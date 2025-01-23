@@ -815,6 +815,9 @@ ul.content-list {
   list-style: disc;
   margin-left: 15px;
 }
+.sblog-post-txt .content ul{
+  list-style: unset;
+}
 
 ul.content-list li {
   font-size: 1rem;
