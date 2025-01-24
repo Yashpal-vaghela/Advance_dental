@@ -4923,6 +4923,8 @@ p.footer-copyright span {
   }
   .footer-contact-title {
     font-size: 0.9rem !important;
+    text-align: center;
+    word-break: break-word;
   }
 }
 
