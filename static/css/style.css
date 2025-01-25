@@ -1981,6 +1981,7 @@ p.header-widget-phone {
   padding: 60px 0;
   overflow: hidden;
   z-index: 99;
+  /* display:none; */
 }
 
 #about-3::before {
@@ -3756,7 +3757,7 @@ td.text-right {
 }
 
 #blog-page .blog-post {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .blog-post-txt span {
@@ -5250,8 +5251,9 @@ ul.blog-category-list li:hover {
 }
 
 .blog-page-pagination {
-  margin-top: 70px;
-  padding-top: 60px;
+  /* margin-top: 70px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .page-link {
