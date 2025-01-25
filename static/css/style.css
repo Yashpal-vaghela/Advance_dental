@@ -6539,6 +6539,8 @@ nav a#pull {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
+  aspect-ratio: 16 /9;
+  object-fit: cover;
   /* height: 200px; */
 }
 
