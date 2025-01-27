@@ -126,11 +126,14 @@ def blog_list(request):
     except EmptyPage:
         data = paginator.page(paginator.num_pages)
 
-
-    context = {
-        'data':data,
-    }
-    return render(request, 'blog_list.html', context)
+    response = render(request, 'blog_list.html', {'data' : data})
+    try:
+        page_num = int(page)
+        if 2 <= page_num <= 10 :
+            response['X-Robots-Tag'] = 'noindex, nofollow'
+    except (ValueError, TypeError) :
+        pass
+    return response    
 
 def cat_list(request, pk):
     

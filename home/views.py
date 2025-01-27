@@ -73,11 +73,6 @@ def verify_warrenty(request):
         
         # Make the POST request with data as form-encoded
         response = requests.post(api_url, data=data)
-                
-                    
-        
-      
-        
         # Check if request was successful (status code 200)
         if response.status_code == 200:
             # Parse JSON response
@@ -270,11 +265,16 @@ def eventgallery(request, pk):
         data = paginator.page(1)
     except EmptyPage:
         data = paginator.page(paginator.num_pages)
-    context = {
-        'data':data,
-        'cat':cat,
-    }
-    return render(request, 'eventgallery.html', context)
+    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat})
+    # Add noindex for specific pages (e.g., ?page=2 and onward)
+    try:
+        page_num = int(page)  # Convert page to integer
+        if page_num >= 3:  # Apply noindex to pages 2 and beyond
+            response['X-Robots-Tag'] = 'noindex, nofollow'
+    except (ValueError, TypeError):
+        pass  # Ignore if the page is not a valid number
+
+    return response
 
 def about(request):
     team = Team.objects.all()
