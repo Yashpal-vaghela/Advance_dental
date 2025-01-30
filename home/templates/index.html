@@ -19,7 +19,7 @@
 {% endblock %} {% block css %} {% endblock %} {% block body %}
 <h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
 
-<div class="your-slider">
+{% comment %} <div class="your-slider">
   <div>
     <img src="{% static 'aa.jpg' %}" alt="Image 1" class="slide-img" />
     <div class="b1-txt">
@@ -72,7 +72,82 @@
       />
     </div>
   </div>
-</div>
+</div> {% endcomment %}
+
+<section class="hero-section1">
+  <div
+    style="--swiper-navigation-color:red; --swiper-pagination-color: red"
+    class="swiper mySwiper"
+  >
+    <div class="swiper-wrapper">
+      <div class="swiper-slide position-relative">
+        <img
+          src="{% static 'aa.jpg' %}"
+          class="banner-img"
+          alt="Advance Dental Export Images"
+        />
+        <div class="container">
+          <div class="row">
+            <div class="texts col-lg-8 col-md-10 col-sm-9 col-8">
+              <div class="title h1s text-black" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px);">
+                Bringing Digital Revolution In
+              </div>
+              <div class="subtitle h2s text-black" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px);">
+                Digital Dentistry
+              </div>
+            </div>
+          </div>
+        </div>
+        {% comment %} <div class="overlay container">
+          <div class="row justify-content-center ">
+            <div class="texts col-lg-8 col-md-10 col-sm-9 col-8 text-center">
+              <div class="banner-title h1s text-black" data-swiper-parallax="-300">
+                Bringing Digital Revolution In
+              </div>
+              <div class="banner-subtitle h2s text-black" data-swiper-parallax="-200">
+                Digital Dentistry
+              </div>
+            </div>
+          </div>
+        </div> {% endcomment %}
+      </div>
+      {% comment %} <div class="swiper-slide banner-2-img1" id="banner-2-img1">
+        <div class="container px-md-0">
+          <div class="row align-items-center justify-content-between">
+             <div class="col-lg-6 col-md-7 col-sm-7 col-7 banner-2-1 px-0">
+              <div class="banner-2-img2">
+                <img
+                  src="{% static 'banner-2/letter-1.png'%}"
+                  class="banner-img"
+                />
+              </div>
+              <div class="banner-3-img6">
+                <h6>
+                  Experience seamless smile integration with precision and
+                  comfort, powered by Advance dental export for a perfect,
+                  confident smile.
+                </h6>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4 banner-2-2 px-0">
+              <div class="banner-2-img3" id="banner-2-img3">
+                <img
+                  src="{% static 'banner-2/Group.png' %}"
+                  class="img-fluid"
+                />
+              </div>
+              <button class="btn btn-discover-more">
+               Discover More <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div> 
+        </div>
+      </div> {% endcomment %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
 <section id="about-3" class="about-section division">
   <div class="container abox-3-holder">

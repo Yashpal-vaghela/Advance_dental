@@ -823,15 +823,15 @@ input[type="file"] {
 }
 
 
-.banner-img{
+/* .banner-img{
   width: 100%;
   height: auto;
   max-width: 1600px;
   max-height: 500px;
   object-fit: cover;
   margin: 0 auto;
-}
-.overlay {
+} */
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -841,12 +841,12 @@ input[type="file"] {
   align-items: center;
   justify-content: center;
   z-index: 2;
-}
-.banner-title, .banner-subtitle {
+} */
+/* .banner-title, .banner-subtitle {
   animation: fadeInUp 1s ease-in-out;
   color: black;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
+} */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -867,14 +867,7 @@ input[type="file"] {
   margin:0 auto;
 }
 
-
-
-
-
-
-
-
-
+/* new banner section */
 .your-slider {
   padding: 0px !important;
   max-width: 1900px;
@@ -903,9 +896,8 @@ input[type="file"] {
 .slick-prev:before,
 .slick-next:before {
   color: rgba(0, 0, 0, 0.5) !important;
-  /* Default arrow color */
   font-size: 24px;
-  /* Arrow size */
+
 }
 .slick-next:before,
 .slick-prev:before {
@@ -929,10 +921,7 @@ input[type="file"] {
   overflow: hidden;
 }
 
-
-
 /* banner 2 img  */
-
 .zir-logo {
   position: absolute;
   height: 70px;
@@ -1008,17 +997,8 @@ input[type="file"] {
   height: 120px;
   top: 480px !important;
 }
-/* .let2-pic{
-  top:520px !important;
-} */
-/* .btn-read-more{
-  top:520px !important;
-} */
 }
 @media screen and (min-width:1439px) and (max-width:1649px){
-  /* .ele-pic1{
-    top: 45px !important;
-  } */
   .grass-pic{
     top:315px;
   }
@@ -1026,12 +1006,6 @@ input[type="file"] {
     height: 120px;
     top: 480px !important;
   }
-  /* .let2-pic{
-    top:520px !important;
-  } */
-  /* .btn-read-more{
-    top:520px !important;
-  } */
 }
 @media screen and (min-width: 1300px) and (max-width: 1440px) {
   .slide-img {
