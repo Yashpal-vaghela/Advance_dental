@@ -287,3 +287,22 @@ class ContactDetails(models.Model):
     def __str__(self):
         return self.name  
 
+class WebStory(models.Model):
+    meta_title = models.CharField(max_length=255)
+    meta_description = models.TextField()
+    canonical_link = models.URLField()
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True, null=True)
+    description = models.TextField()
+    image = models.ImageField(upload_to="SEO/images/")  
+    author = models.CharField(max_length=100)  
+    publish_date = models.DateField()  
+
+    def __str__(self):
+        return self.title         
+class WebStoryVideo(models.Model):
+    web_story = models.ForeignKey(WebStory, on_delete=models.CASCADE, related_name="videos")
+    video = models.FileField(upload_to="SEO/videos/")
+
+    def __str__(self):
+        return f"Video for {self.web_story.title}"

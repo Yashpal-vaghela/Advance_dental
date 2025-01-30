@@ -7,6 +7,17 @@ class BlogAdmin(admin.ModelAdmin):
     class Media:
        js = ['ckeditor/ckeditor-init.js', 'ckeditor/ckeditor/ckeditor.js']
 
+class WebStoryVideoInline(admin.TabularInline):
+    model = WebStoryVideo
+    extra = 5
+    max_num = 10
+    fields = ['video']  
+
+class WebStoryAdmin(admin.ModelAdmin):
+    inlines = [WebStoryVideoInline]
+    list_display = ('title', 'publish_date', 'author')
+
+
 # Register your models here.
 
 admin.site.register(Blog, BlogAdmin)
@@ -29,4 +40,5 @@ admin.site.register(Gallery)
 admin.site.register(BeforeAfter)
 admin.site.register(VideoTestimonals)
 admin.site.register(Place)
-
+admin.site.register(WebStory, WebStoryAdmin)
+admin.site.register(WebStoryVideo)

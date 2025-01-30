@@ -1,5 +1,5 @@
 import json
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.http import JsonResponse, FileResponse, Http404
 from blog.models import *
@@ -48,8 +48,6 @@ def testimonals(request):
          'data':data,
     }
     return render(request, 'testimonals.html', context)
-
-
 
 
 def verify_warrenty(request):
@@ -899,4 +897,13 @@ def error_404(request):
 
 def error_500(request):
         return render(request,'500.html')
+
+def web_story(request):
+    stories = WebStory.objects.all().order_by('-publish_date')
+    return render(request, 'web_story.html', {'stories': stories})
+
+def web_story_detail(request, story_slug):
+    story = get_object_or_404(WebStory, slug=story_slug)
+    videos = WebStoryVideo.objects.filter(web_story=story)
+    return render(request, "web_story_detail.html", {"story": story, "videos": videos})
 

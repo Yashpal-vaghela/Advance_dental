@@ -1,8 +1,9 @@
-
 from django.urls import path
 from . import views
 from blog.views import blog_detail as bd
-app_name='home'
+
+app_name = 'home'
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('verify-warranty/', views.verify_warrenty, name='verify_warrenty'),
@@ -24,14 +25,15 @@ urlpatterns = [
     path('checkup/', views.checkup, name='checkup'),
     path('guest-posting/', views.gp, name='gp'),
     path('faq', views.faq, name='faq'),
-    path('sitemap.xml/',views.sitemap, name='sitemap'),
-    path('robots.txt/',views.robots, name='robot'),
+    path('sitemap.xml/', views.sitemap, name='sitemap'),
+    path('robots.txt/', views.robots, name='robot'),
     path('upload/', views.file_upload, name='upload'),
     path('testimonals/', views.testimonals, name='testimonals'),
     path('login/', views.user_login, name='user_login'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('web-story/', views.web_story, name='web_story'),
+    path('web-story/<slug:story_slug>/', views.web_story_detail, name='web_story_detail'),
     # path('services/', views.service_view, name='service_view'),
-    
     path('client-profile/<str:pk>/<str:fk>/', views.ext_api, name='ext_api'),
     path('print-order/', views.print_order, name='print_order'),
     path('print-payment/', views.print_payment, name='print_payment'),
@@ -39,12 +41,9 @@ urlpatterns = [
     path('print-invoice/<str:pk>/<str:did>/', views.print_invoice, name='print_invoice'),
     path('api-login/', views.api_user_login, name='api_user_login'),
     path('api-logout/<str:pk>/<str:did>/', views.api_logout, name='api_logout'),
-    
     # path('Events/', views.ade_events, name='Events'),
-    
     # path('best-dental-lab/', views.bdl, name='bdl'),
     path('best-dental-lab-in-<str:pk>/', views.bdld, name='bdld'),
     path('blog/<str:pk>/', bd, name='blogd'),
     path('quicks-links/', views.connect, name='connect'),
-] 
-    
+]

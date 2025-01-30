@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}    
+<title></title>
+<meta name="description" content="" />
+<link rel="canonical" href="https://advancedentalexport.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://advancedentalexport.com/" />
+<meta property="og:site_name" content="ADVANCE DENTAL EXPORT" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:image" content="{% spaceless %}{{data.image.url}}{% endspaceless %}" />    
+{% endblock seo %}
+
+{% block css %}
+{% endblock css %}
+    
+{% block body %}
+<div class="container">
+    <div class="ws-heading">
+        Web Stories
+    </div>
+    <div class="posts-holder pr-30">
+        <div class="row">
+          {% if stories %}
+              {% for story in stories %}
+                  <div class="col-md-4 col-sm-6">
+                      <a href="{% url 'home:web_story_detail' story.slug %}" target="_blank">    
+                      <div class="ws-out-card"> 
+                          <div class="card">
+                              <div class="card-img position-relative">
+                                  <img class="card-img-top" src="{{ story.image.url }}" alt="{{ story.title }}">
+                                  <div class="card-overlay">
+                                      <div class="ws-head">
+                                          {{ story.title }}
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card-body">
+                              <div class="row">
+                                  <div class="col d-flex justify-content-start card-title">{{ story.author }}</div>
+                                  <div class="col d-flex justify-content-end card-title">{{ story.publish_date }}</div>
+                              </div>  
+                              </div>
+                              <p class="card-text limited-text">{{ story.description }}</p>
+                          </div>
+                      </div> 
+                    </a>
+                  </div>
+              {% endfor %}
+              {% else %}
+                  <div class="col-12">
+                      <p>No stories available.</p>
+                  </div>
+              {% endif %}        
+        </div>
+    </div>           
+</div>
+
+{% endblock body %}
+    
+
+
+{% block javascript %}
+		
+{% endblock javascript %}

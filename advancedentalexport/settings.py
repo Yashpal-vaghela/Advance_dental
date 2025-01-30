@@ -131,7 +131,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = "/home/awk1gcf7eaia/public_html/advancedentalexport.com/static"
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = "/home/awk1gcf7eaia/public_html/advancedentalexport.com/media"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
 #ckedior
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
