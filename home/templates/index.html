@@ -13,49 +13,66 @@
 <meta name="og:image" content="{% static 'img/11.jpg' %}" />
 <meta property="og:site_name" content="Advance Dental Export" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta
-  name="twitter:description"
-  content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports"
-/>
+<meta name="twitter:description" content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports" />
 <meta name="twitter:title" content="Advance Dental Export" />
 <meta name="twitter:image" content="{% static 'img/11.jpg' %}" />
 {% endblock %} {% block css %} {% endblock %} {% block body %}
 <h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
 
-<section class="hero-section1">
-  <div
-    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-    class="swiper mySwiper"
-  >
-    <div class="parallax-bg" data-swiper-parallax="-23%"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img
-          src="{% static 'aa.jpg' %}"
-          class="w-100"
-          alt="Advance Dental Export Images"
-          width="100%"
-          height="100%"
-        />
-        <div class="container">
-          <div class="row">
-            <div class="texts col-lg-8 col-md-10 col-sm-9 col-8">
-              <div class="title h1s text-black" data-swiper-parallax="-300">
-                Bringing Digital Revolution In
-              </div>
-              <div class="subtitle h2s text-black" data-swiper-parallax="-200">
-                Digital Dentistry
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="your-slider">
+  <div>
+    <img src="{% static 'aa.jpg' %}" alt="Image 1" class="slide-img" />
+    <div class="b1-txt">
+      <p class="animated-b1-text">Your animated text here</p>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
   </div>
-</section>
+  <div>
+    <div class="container banner-2 position-relative">
+      <img
+        src="{% static 'banner-2/Group.png'%}"
+        alt="zir-logo"
+        class="zir-logo"
+      />
+      <img
+        src="{% static 'banner-2/Group281.png'%}"
+        alt="ele-pic1"
+        class="ele-pic1"
+      />
+      <img
+        src="{% static 'banner-2/letter-1.png'%}"
+        alt="let-pic"
+        class="let-pic"
+      />
+      <img
+        src="{% static 'banner-2/letter-2.png'%}"
+        alt="let2-pic"
+        class="let2-pic"
+      />
+      <button class="btn btn-read-more">
+        Discover More <i class="fa-solid fa-arrow-right ms-1"></i>
+      </button>
+    </div>
+    <div class="larger-ele position-relative">
+      <img
+        src="{% static 'banner-2/image27.png'%}"
+        alt="grass-pic"
+        class="grass-pic"
+      />
+      <img
+        src="{% static 'banner-2/Group26.png'%}"
+        alt="white-pic"
+        class="white-pic"
+      />
+    </div>
+    <div class="optional">
+      <img
+        src="{% static 'banner-2/frameTest2.png'%}"
+        alt="slide2-optional"
+        class="slide2-optional"
+      />
+    </div>
+  </div>
+</div>
 
 <section id="about-3" class="about-section division">
   <div class="container abox-3-holder">
@@ -169,7 +186,8 @@
       <div class="col-lg-7 d-flex">
         <div
           class="txt-block pc-30 wow fadeInUp pt-5"
-          data-wow-delay="0.4s" style="
+          data-wow-delay="0.4s"
+          style="
             visibility: visible;
             animation-delay: 0.4s;
             animation-name: fadeInUp;
@@ -278,8 +296,10 @@
             <span
               ><img
                 src="{% static 'dentistlogo.png' %}"
-                style="width: 70px height= 100%"
+                style="width: 70px; height: 100%"
                 alt="Dentist"
+                width="70"
+                height="70"
             /></span>
             <h5 class="statistic-number">
               <span class="count-element" style="color: #333">3500</span>
@@ -337,7 +357,8 @@
                 <a
                   href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}"
                   class="title-link"
-                  >Porcelain fused to metal (PFM)</a>
+                  >Porcelain fused to metal (PFM)</a
+                >
               </h3>
               <p class="card-desc">
                 Porcelain bonded to metal has reminded one of the most
@@ -372,7 +393,8 @@
                   href="{% url 'blogd' 'zir-icon' %}"
                   class="title-link"
                   style="text-decoration: none; color: inherit"
-                  >Advance Zirconia</a>
+                  >Advance Zirconia</a
+                >
               </h3>
               <p class="card-desc">
                 Zir-icon is a high strength, milled to full contour, highly
@@ -403,7 +425,8 @@
                   href="{% url 'blogd' 'aesthetic-maxima' %}"
                   class="title-link"
                   style="text-decoration: none; color: inherit"
-                  >IPS e.max All Ceramic Restorations</a>
+                  >IPS e.max All Ceramic Restorations</a
+                >
               </h3>
               <p class="card-desc">
                 Our revolutionary new e.max CAD/CAM ceramic restorations offer
@@ -436,7 +459,8 @@
                   href="{% url 'blogd' 'ad-abutments' %}"
                   class="title-link"
                   style="text-decoration: none; color: inherit"
-                  >Ad- Abutments Product Implant</a>
+                  >Ad- Abutments Product Implant</a
+                >
               </h3>
               <p class="card-desc">
                 AD- abutments are custom engineered to best meet each patient’s
@@ -468,7 +492,8 @@
                   href="{% url 'blogd' 'digital-crown-bridge' %}"
                   class="title-link"
                   style="text-decoration: none; color: inherit"
-                  >Digital Crown & Bridges</a>
+                  >Digital Crown & Bridges</a
+                >
               </h3>
               <p class="card-desc">
                 Digital dentistry at advance dental export CAD/CAM milling and
@@ -504,7 +529,8 @@
                   href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}"
                   class="title-link"
                   style="text-decoration: none; color: inherit"
-                  >BPS – Biofunctional Prosthetic System</a>
+                  >BPS – Biofunctional Prosthetic System</a
+                >
               </h3>
               <p class="card-desc">
                 They provide you with self-confidence, charisma, and
@@ -538,7 +564,8 @@
                   href="{% url 'blogd' 'nobelprocera' %}"
                   class="title-link"
                   style="text-decoration: none; color: inherit"
-                  >NobelProcera Solution</a>
+                  >NobelProcera Solution</a
+                >
               </h3>
 
               <p class="card-desc">
@@ -628,6 +655,7 @@
     </div>
   </div>
 </section>
+
 <!-- Introduction for the lab -->
 <section
   id="services-7"
@@ -1092,7 +1120,6 @@
 </section>
 
 <!-- Gallery -->
-
 <section id="gallery-1" class="gallery-section division pt-50">
   <div class="container">
     <div class="row gallery-items-list text-center">
@@ -1149,7 +1176,9 @@
     </div>
     <div class="row mx-0 mt-0 g-4 justify-content-center">
       {% for blog in data2 %}
-      <div class="col-lg-4 col-md-6 col-sm-12 col-11 mt-0 mt-sm-4 mt-lg-0 mt-md-4">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 col-11 mt-0 mt-sm-4 mt-lg-0 mt-md-4"
+      >
         <div class="news-blog-card card">
           <img
             src="{{ blog.image.url }}"
@@ -1255,14 +1284,13 @@
 
 {% block javascript %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-
 <script>
   $(document).ready(function () {
     var $customerLogos = $(".customer-logos");
     var owl = $(".services-holder");
 
     $customerLogos.slick({
-      slidesToShow: 6,
+      slidesToShow: 10,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 1000,
@@ -1271,6 +1299,30 @@
       pauseOnHover: false,
       infinite: true,
       responsive: [
+        {
+          breakpoint: 1900,
+          settings: {
+            slidesToShow: 8,
+          },
+        },
+        {
+          breakpoint: 1500,
+          settings: {
+            slidesToShow: 7,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 6,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 5,
+          },
+        },
         {
           breakpoint: 768,
           settings: {
@@ -1318,10 +1370,8 @@
     }
   });
 </script>
-
 <script src="{% static 'js/galleryanimation.js' %}"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>
-
 <script>
   {% comment %} const videoWrappers=document.querySelectorAll(".index-video1");videoWrappers.forEach(e=>{e.onclick=()=>{let r=e.getAttribute("data-video-id"),t=document.createElement("iframe1");t.src=`https://www.youtube.com/embed/${r}?autoplay=1`,t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.style.width="100%",t.style.height="100%";let o=e.querySelector(".video-container");o.innerHTML="",o.appendChild(t)}}); {% endcomment %}
   const videoWrappers = document.querySelectorAll(".index-video1");
@@ -1342,6 +1392,21 @@
       videoContainer.innerHTML = "";
       videoContainer.appendChild(iframe);
     };
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $(".your-slider").slick({
+      dots: true,
+      loop: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      speed: 500,
+      autoplay: false,
+      autoplaySpeed: 3000,
+    });
   });
 </script>
 {% endblock %}

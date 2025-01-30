@@ -35,6 +35,8 @@
     <link  href="{% static 'css/style.css' %}" rel='stylesheet' />
     <link  href="{% static 'css/responsive.css' %}" rel='stylesheet'/>
     <link  href="{% static 'css/web_story.css' %}" rel='stylesheet'/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     {% comment %} <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"  /> {% endcomment %}
     {% block css %}
 
@@ -250,13 +252,13 @@
                 <div class="footer-socials-links mt-20">
                   <ul class="foo-socials text-center clearfix">
                     <li>
-                      <a href="https://www.facebook.com/advance.dental.exports" target="_blank" class="ico-facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/advance.dental.exports" target="_blank" class="ico-facebook" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/advance_dental_export/" target="_blank" class="ico-twitter"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.instagram.com/advance_dental_export/" target="_blank" class="ico-twitter" rel="nofollow"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" class="ico-google-plus"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" class="ico-google-plus" rel="nofollow"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -347,6 +349,7 @@
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'js/wow.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     {% comment %} <script src="{% static 'js/aos.js' %}"></script> {% endcomment %}
      {% comment %} <script>
       AOS.init({
@@ -404,6 +407,7 @@
       var swiper = new Swiper('.mySwiper', {
         speed: 600,
         parallax: !0,
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: !0
