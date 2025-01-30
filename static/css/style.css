@@ -5901,8 +5901,13 @@ nav a#pull {
   color: #000;
 }
 
-.slick-slide {
-  margin: 0px 20px;
+.customer-logos .slick-slide {
+  margin: 0px 10px;
+}
+@media(min-width:1500px){
+  .customer-logos .slick-slide {
+    margin: 0px 20px;
+  }
 }
 
 @media (max-width: 768px) {
