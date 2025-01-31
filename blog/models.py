@@ -294,12 +294,14 @@ class WebStory(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, null=True)
     description = models.TextField()
-    image = models.ImageField(upload_to="SEO/images/")  
+    image = models.ImageField(upload_to="SEO/images/")
+    links = models.URLField(blank=True, null=True)  
     author = models.CharField(max_length=100)  
     publish_date = models.DateField()  
 
     def __str__(self):
         return self.title         
+
 class WebStoryVideo(models.Model):
     web_story = models.ForeignKey(WebStory, on_delete=models.CASCADE, related_name="videos")
     video = models.FileField(upload_to="SEO/videos/")

@@ -905,5 +905,5 @@ def web_story(request):
 def web_story_detail(request, story_slug):
     story = get_object_or_404(WebStory, slug=story_slug)
     videos = WebStoryVideo.objects.filter(web_story=story)
-    return render(request, "web_story_detail.html", {"story": story, "videos": videos})
+    return render(request, "web_story_detail.html", {"story": story, "videos": videos, "data": story})
 

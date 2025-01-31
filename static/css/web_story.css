@@ -41,7 +41,8 @@
 
 .ws-out-card .card .card-img-top {
   object-fit: cover;
-  height: 300px;
+  background-position: top;
+  height: 400px;
   opacity: 1;
   border-radius: 12px;
 }
@@ -54,7 +55,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(181, 218, 212, 0.6));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(29, 143, 124));
   border-radius: 12px;
   height: 300px;
   z-index: 1;
@@ -65,8 +66,8 @@
   position: absolute;
   bottom: 0;
   font-size: 18px;
-  color: white;
-  font-weight: 500;
+  color: white !important;
+  font-weight: bold;
 }
 
 
@@ -87,22 +88,20 @@
 
 .ws-out-card .limited-text {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   /* Show only 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   position: relative;
   color: #666666;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .ws-out-card .limited-text::after {
-  content: " ...Read More";
-  color: blue;
+  content: " ...";
+  color: #666666 ;
   cursor: pointer;
 }
-
-
 
 
 /* Full-screen story container */
@@ -110,7 +109,6 @@ body {
   margin: 0px !important;
   width: 100%;
   display: inline-block;
-  text-align: center;
 }
 
 .story-container {
@@ -134,11 +132,14 @@ body {
 }
 
 .web-slider1 {
-  width: 20%;
-  height: 500px;
+  width: 25%;
+  height: 575px;
   margin: 0 auto;
   position: relative;
 }
+
+
+
 
 .story-slide {
   display: none;
@@ -199,12 +200,12 @@ body {
 } */
 
 /* Navigation Buttons */
-.carousel-control-prev,
-.carousel-control-next {
+.story-container .carousel-control-prev,
+.story-container .carousel-control-next {
   position: absolute;
   width: 5%;
   z-index: 1;
-  background-color: #1b897790;
+  background-color: white;
   padding: 10px;
   display: inline-block;
   height: 20px;
@@ -212,31 +213,31 @@ body {
   border-radius: 50%;
 }
 
-.carousel-control-prev i,
-.carousel-control-next i {
+.story-container .carousel-control-prev i,
+.story-container .carousel-control-next i {
   font-size: 1.1rem;
-  /* padding-top: 4px; */
-  color: white;
+  padding: 1px 2px;
+  color: #1b8976;
 }
 
-.carousel-control-prev.disabled, .carousel-control-next.disabled {
+.story-container .carousel-control-prev.disabled,.story-container .carousel-control-next.disabled {
   pointer-events: none; /* Disable click */
   opacity: 0.5; /* Dim the button */
 }
 
 
-.carousel-control-prev {
+.story-container .carousel-control-prev {
   top: 45%;
-  left: 35%;
+  left: 33%;
 }
 
-.carousel-control-next {
+.story-container .carousel-control-next {
   top: 45%;
-  right: 35%;
+  right: 33%;
 }
 
 /* Play/Pause Button */
-.play-pause-btn {
+.story-container .play-pause-btn {
   position: absolute;
   top: 5%;
   right: 0%;
@@ -259,30 +260,186 @@ body {
   transform: translateX(-50%);
   background: white;
   color: black;
-  padding: 10px 15px;
+  padding: 15px 35px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 62px;
+  text-align: center;
   text-decoration: none;
 }
 
 
-/* rESPONSIVE STORY */
 
-@media(max-width: 575px) {
+
+
+
+@media (max-width: 575px) {
   .web-slider1 {
-    width: 70%;
-    height: 600px;
-    margin: 0 auto;
-    position: relative;
+    width: 69%;
+    height: 90vh;
+   
   }
 
-  .carousel-control-prev {
+  .story-container .carousel-control-prev,
+  .story-container .carousel-control-next {
     top: 45%;
-    left: 3%;
+    position: absolute;
+    z-index: 10; 
   }
 
-  .carousel-control-next {
-    top: 45%;
-    right: 3%;
+  .story-container .carousel-control-prev {
+    left: 4%;
+  }
+
+  .story-container .carousel-control-next {
+    right: 4%;
+  }
+
+  .story-container .carousel-control-prev,
+.story-container .carousel-control-next {
+  position: absolute;
+  width: 5%;
+  z-index: 1;
+  background-color: white;
+  padding: 10px;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.story-container .carousel-control-prev i,
+.story-container .carousel-control-next i {
+  font-size: 1rem;
+  /* padding-top: 4px; */
+  padding: 0px 3px;
+  color: #1b8976;
+}
+
+.see-more-btn {
+  position: absolute;
+  bottom: 3%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 15px 35px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 62px;
+  text-align: center;
+  text-decoration: none;
+}
+  
+.progress-bar-container {
+  
+
+  top: 2%;
+  height: 4px;
+  z-index: 10;
+  width: 80%;
+}
+
+
+.story-container .play-pause-btn {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  font-size: 18px;
+  padding: 10px 14px;
+ 
+  
+}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .web-slider1{
+    width:35%;
+    height:97vh;
+  }
+  .story-video{
+    /* width:60%; */
+    object-fit: fill;
+  }
+  /* .progress-bar-container{
+    width:75%;
+    align-items: center;
+    justify-content: center;
+  } */
+  .play-pause-btn{
+    right:9%;
+    /* padding: 9px 12px; */
+  }
+  .story-container .carousel-control-prev,
+  .story-container .carousel-control-next{
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+  }
+  .story-container .carousel-control-prev i,
+  .story-container .carousel-control-next i{
+      font-size: 1.1rem;
+      padding: 1px 3px;
+  }
+  .story-container .carousel-control-prev{
+    top:45%;
+    left:25%;
+  }
+  .story-container .carousel-control-next{
+    right:25%;
+  }
+
+  .see-more-btn {
+    font-size: 15px;   
   }
 }
+
+@media (min-width: 575px) and (max-width: 768px) {
+  .web-slider1{
+    width:45%;
+    height:97vh;
+  }
+  .story-video{
+    /* width:60%; */
+    object-fit: fill;
+  }
+  /* .progress-bar-container{
+    width:75%;
+    align-items: center;
+    justify-content: center;
+  } */
+  .play-pause-btn{
+    right:9%;
+    /* padding: 9px 12px; */
+  }
+  .story-container .carousel-control-prev,
+  .story-container .carousel-control-next{
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+  }
+  .story-container .carousel-control-prev i,
+  .story-container .carousel-control-next i{
+      font-size: 1.1rem;
+      padding: 1px 3px;
+  }
+  .story-container .carousel-control-prev{
+    top:45%;
+    left:20%;
+  }
+  .story-container .carousel-control-next{
+    right:20%;
+  }
+
+  .see-more-btn {
+    font-size: 15px;   
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,170 +1,59 @@
-{% load static %}
-<link href="{% static 'css/web_story.css' %}" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel='stylesheet' />
-
-{% block body %}
-<div class="story-container">
-    <div id="story-carousel" class="story-carousel web-slider1">
-        <div class="progress-bar-container">
-            {% for video in videos %}
-            <div class="progress-segment">
-            <div class="progress-bar" id="progress-{{ forloop.counter }}"></div>
-            </div>
-            {% endfor %}
-        </div>
-
-        {% for video in videos %}
-        <div class="story-slide {% if forloop.first %}active{% endif %}" data-index="{{ forloop.counter }}">
-            <div class="video-wrapper">
-                <video class="story-video" data-index="{{ forloop.counter }}" autoplay muted>
-                    <source src="{{ video.video.url }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <!-- "See More" Button -->
-                <a href="https://advancedentalexport.com" target="_blank" class="see-more-btn">SEE MORE</a>
-            </div>
-        </div>
-        {% endfor %}
-        
-        <!-- Play/Pause Button -->
-        <button id="playPauseBtn" class="play-pause-btn" onclick="togglePlayPause()">
-            <i id="playIcon" class="fa fa-play" style="display: none;"></i>
-            <i id="pauseIcon" class="fa fa-pause"></i>
-        </button>
-    </div>
-
-    <!-- Navigation Buttons -->
-    <a class="carousel-control-prev" onclick="prevStory()" role="button">
-        <span><i class="fa fa-chevron-left"></i></span>
-    </a>
-    <a class="carousel-control-next" onclick="nextStory()" role="button">
-        <span><i class="fa fa-chevron-right"></i></span>
-    </a>
-</div>
-
-<!-- JavaScript -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let slides = document.querySelectorAll(".story-slide");
-        let progressBars = document.querySelectorAll(".progress-bar");
-        let totalVideos = slides.length;
-        let currentIndex = 0;
-        let playIcon = document.getElementById("playIcon");
-        let pauseIcon = document.getElementById("pauseIcon");
-        
-        function playStory(index) {
-            if (index >= totalVideos) return;
-    
-            // Remove active class from all slides
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[index].classList.add("active");
-    
-            // Ensure previous progress bars remain fully filled
-            for (let i = 0; i < index; i++) {
-                progressBars[i].style.width = "100%";
-            }
-    
-            // Reset all future progress bars to 0%
-            for (let i = index; i < totalVideos; i++) {
-                progressBars[i].style.width = "0%";
-            }
-    
-            let video = slides[index].querySelector("video");
-            let progressBar = progressBars[index];
-    
-            video.currentTime = 0;
-            video.play();
-    
-            // Animate progress bar for current video
-            animateProgressBar(video, progressBar);
-    
-            // Move to the next video when the current one ends
-            video.onended = function () {
-                if (currentIndex < totalVideos - 1) {
-                    currentIndex++;
-                    playStory(currentIndex);
-                }
-            };
+<!doctype html>
+<html :zap:>
+<head>
+    <meta charset="utf-8">
+    <title>{{ data.meta_title }}</title>
+    <link rel="canonical" href="{{ data.canonical_link }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ data.meta_description }}">
+    <meta name="keywords" content="{{ data.keywords }}">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style amp-custom>
+        body { font-family: 'Montserrat', sans-serif; }
+        amp-story { color: white; }
+        .see-more-btn {
+            position: absolute;
+            width: 150px;
+            bottom: 20px;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
         }
-    
-        function animateProgressBar(video, progressBar) {
-            let startTime = performance.now();
-            let duration = video.duration * 1000; // Convert to milliseconds
-    
-            function updateProgress(time) {
-                let elapsedTime = time - startTime;
-                let percentage = (elapsedTime / duration) * 100;
-    
-                if (percentage <= 100 && !video.paused) {
-                    progressBar.style.width = percentage + "%";
-                    requestAnimationFrame(updateProgress);
-                } else {
-                    progressBar.style.width = "100%"; // Ensure it fully fills when done
-                }
-            }
-            requestAnimationFrame(updateProgress);
-        }
-    
-        // Next Story Function
-        window.nextStory = function () {
-            if (currentIndex < totalVideos - 1) {
-                currentIndex++;
-                playStory(currentIndex);
-            }
-        };
-    
-        // Previous Story Function
-        window.prevStory = function () {
-            if (currentIndex > 0) {
-                currentIndex--;
-                playStory(currentIndex);
-            }
-        };
-    
-        // Play/Pause Function
-        window.togglePlayPause = function () {
-            let video = slides[currentIndex].querySelector("video");
-            if (video.paused) {
-                video.play();
-                playIcon.style.display = "none";
-                pauseIcon.style.display = "inline";
-            } else {
-                video.pause();
-                playIcon.style.display = "inline";
-                pauseIcon.style.display = "none";
-            }
-        };
-    
-        playStory(currentIndex);
-    });        
-</script>
-
-<script>
-    const videos = document.querySelectorAll('.story-slide');
-    const prevButton = document.querySelector('.carousel-control-prev');
-    const nextButton = document.querySelector('.carousel-control-next');
-
-    function updateButtons() {
-        const activeIndex = [...videos].indexOf(document.querySelector('.story-slide.active'));
-        prevButton.classList.toggle('disabled', activeIndex === 0);
-        nextButton.classList.toggle('disabled', activeIndex === videos.length - 1);
-    }
-
-    function changeSlide(offset) {
-        const active = document.querySelector('.story-slide.active');
-        const nextIndex = [...videos].indexOf(active) + offset;
-        if (nextIndex >= 0 && nextIndex < videos.length) {
-            active.classList.remove('active');
-            videos[nextIndex].classList.add('active');
-            updateButtons();
-        }
-    }
-
-    prevButton.onclick = () => changeSlide(-1);
-    nextButton.onclick = () => changeSlide(1);
-
-    updateButtons(); // Initialize button states
-</script>
-
-{% endblock %}
+    </style>
+</head>
+<body>
+<!-- AMP Story Component -->
+<amp-story standalone
+    title="{{ data.meta_title }}"
+    publisher="Your Brand"
+    publisher-logo-src="https://example.com/logo.png"
+    poster-portrait-src="https://example.com/poster.jpg">
+    {% for video in videos %}
+    <!-- Story Page -->
+    <amp-story-page id="page-{{ forloop.counter }}" auto-advance-after="video-{{ forloop.counter }}">
+        <amp-story-grid-layer template="fill">
+            <amp-video id="video-{{ forloop.counter }}" autoplay loop noaudio
+                width="720" height="1280" layout="responsive"
+                poster="https://example.com/video-thumbnail.jpg">
+                <source src="{{ video.video.url }}" type="video/mp4">
+            </amp-video>
+        </amp-story-grid-layer>
+        <!-- Know More Button -->
+        <amp-story-grid-layer template="vertical">
+            <a href="https://advancedentalexport.com" target="_blank" class="see-more-btn">Know More</a>
+        </amp-story-grid-layer>
+    </amp-story-page>
+    {% endfor %}
+</amp-story>
+</body>
+</html>
