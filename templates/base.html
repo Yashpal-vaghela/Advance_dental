@@ -58,7 +58,6 @@
         const internationalEmail = 'overseas@advancedentalexport.com';
         const localWhatsappLink = 'https://wa.link/u0qly1';
         const internationalWhatsappLink = 'https://wa.link/2v2cud';
-
         const whatsappLink = document.getElementById('whatsappLink');
         const phoneLink = document.getElementById('phoneLink');
         // Get all phone and email elements
@@ -75,9 +74,9 @@
                   phoneElement.style.display = 'none'; 
                 } else {
                   phoneElement.textContent = internationalPhoneNumber;
+                  phoneElement.href = 'tel:' +internationalPhoneNumber;
                 }
               });
-    
               emailElements.forEach((emailElement, index) => {
                 if (index > 0) {
                   emailElement.style.display = 'none'; 
@@ -85,6 +84,7 @@
                   emailElement.textContent = internationalEmail; 
                 }
               });
+
             } else {
               phoneElements.forEach(phoneElement => {
                 phoneElement.style.display = ''; 
@@ -226,9 +226,6 @@
                       <a href="tel:+91 8488888877"class="footer-contact-title phone" data-default="+91 84888 88877">+91 84888 88877</a><br/>
                       <a href="tel:+91 8469888877"class="footer-contact-title phone" data-default="+91 84698 88877">+91 84698 88877</a><br/>
                       <a href="tel:+1 551-380-0385" class="footer-contact-title phone" data-default="+1 551-380-0385 (overseas)">+1 5513800385</a>
-                      {% comment %} <p class="footer-contact-title phone" data-default="+91 84888 88877">+91 84888 88877</p>
-                      <p class="footer-contact-title phone" data-default="+91 84698 88877">+91 84698 88877</p>
-                      <p class="footer-contact-title phone" data-default="+1 551-380-0385 (overseas)">+1 5513800385</p> {% endcomment %}
                     </div>
                   </div>
                 </div>
