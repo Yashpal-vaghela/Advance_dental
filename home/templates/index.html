@@ -4,6 +4,7 @@
   name="description"
   content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports"
 />
+
 <link rel="canonical" href="https://advancedentalexport.com/" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
@@ -16,7 +17,16 @@
 <meta name="twitter:description" content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports" />
 <meta name="twitter:title" content="Advance Dental Export" />
 <meta name="twitter:image" content="{% static 'img/11.jpg' %}" />
-{% endblock %} {% block css %} {% endblock %} {% block body %}
+{% endblock %} 
+{% block css %}
+<link  href="{% static 'css/review.css' %}" rel='stylesheet' />
+<link  href="{% static 'css/blog.css' %}" rel='stylesheet' />
+
+<link  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+{% endblock %}
+{% block body %}
 <h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
 
 {% comment %} <div class="your-slider">
@@ -83,6 +93,7 @@
       <div class="swiper-slide position-relative">
         <img
           src="{% static 'aa.jpg' %}"
+          data-src="static/aa.jpg"
           class="banner-img"
           alt="Advance Dental Export Images"
         />
@@ -153,13 +164,14 @@
   <div class="container abox-3-holder">
     <div
       class="row abox-3 wow fadeInUp"
-      style="visibility: visible; animation-name: fadeInUp"
+      style="visibility: visible;"
     >
       <!-- First Column -->
       <div class="col-lg-4 col-md-6 text-center">
         <div class="w-100 h-auto d-flex justify-content-center">
           <img
-            src="{% static 'premium.png' %}"
+            src="{% static 'premium.webp' %}"
+            data-src="static/premium.webp"
             class="pt-lg-2 pt-md-2 pt-sm-2 pt-0 mb-0"
             style="width: 100px"
             alt="Uncompromised Quality"
@@ -191,7 +203,8 @@
           class="w-100 h-auto d-flex justify-content-center align-items-center"
         >
           <img
-            src="{% static 'locations.png' %}"
+            src="{% static 'locations.webp' %}"
+            data-src="static/locations.webp"
             class="pt-2 mb-0"
             style="width: 100px"
             alt="World Wide Presence"
@@ -219,7 +232,7 @@
       </div>
 
       <!-- Third Column -->
-      <div class="col-lg-4 col-md-6 text-center">
+      <div class="col-lg-4 col-md-6 text-center pb-sm-2">
         <div
           class="w-100 h-auto d-flex justify-content-center align-items-center"
         >
@@ -230,6 +243,7 @@
             alt="FDA Registered"
             width="165"
             height="100%"
+            data-src="static/updatedfda (1).png"
           />
         </div>
 
@@ -265,7 +279,6 @@
           style="
             visibility: visible;
             animation-delay: 0.4s;
-            animation-name: fadeInUp;
           "
         >
           <span class="section-id blue-color"
@@ -301,12 +314,11 @@
           style="
             visibility: visible;
             animation-delay: 0.6s;
-            animation-name: fadeInUp;
           "
         >
           <img
             class="img-fluid lazy"
-            src="https://unsplash.it/12/8?image=777"
+            src="{% static 'hresh-about.png' %}"
             data-src="{% static 'hresh-about.png' %}"
             alt="Haresh Savani, Founder"
             title="Haresh Savani, Founder"
@@ -330,13 +342,13 @@
             data-wow-delay="0.4s"
             style="
               visibility: visible;
-              animation-delay: 0.4s;
-              animation-name: fadeInUp;
+              animation-delay: 0.2s;
             "
           >
             <span class="flaticon-143-teeth" style="color: #333"></span>
             <h5 class="statistic-number">
-              <span class="count-element">6</span>L
+            6L
+              {% comment %} <span class="count-element">6</span>L {% endcomment %}
             </h5>
             <p class="txt-400">Cases</p>
           </div>
@@ -347,13 +359,13 @@
             data-wow-delay="0.6s"
             style="
               visibility: visible;
-              animation-delay: 0.6s;
-              animation-name: fadeInUp;
+              animation-delay: 0.4s;
             "
           >
             <span class="flaticon-137-doctor" style="color: #333"></span>
             <h5 class="statistic-number">
-              <span class="count-element">400</span>
+            400
+              {% comment %} <span class="count-element"></span> {% endcomment %}
             </h5>
             <p class="txt-400">Qualified Professionals</p>
           </div>
@@ -364,8 +376,7 @@
             data-wow-delay="0.8s"
             style="
               visibility: visible;
-              animation-delay: 0.8s;
-              animation-name: fadeInUp;
+              animation-delay: 0.6s;
             "
           >
             <span
@@ -376,8 +387,9 @@
                 width="70"
                 height="70"
             /></span>
-            <h5 class="statistic-number">
-              <span class="count-element" style="color: #333">3500</span>
+            <h5 class="statistic-number d-flex justify-content-center">
+            3500
+              {% comment %} <span class="count-element" style="color: #333"></span> {% endcomment %}
             </h5>
             <p class="txt-400">Trusted Dentist</p>
           </div>
@@ -385,16 +397,16 @@
         <div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
           <div
             class="statistic-block icon-lg wow fadeInUp"
-            data-wow-delay="1s"
+            data-wow-delay="0.8s"
             style="
               visibility: visible;
               animation-delay: 1s;
-              animation-name: fadeInUp;
             "
           >
             <span class="flaticon-040-placeholder" style="color: #333"></span>
             <h5 class="statistic-number">
-              <span class="count-element">500</span>
+            500
+              {% comment %} <span class="count-element"></span> {% endcomment %}
             </h5>
             <p class="txt-400">Local Partners</p>
           </div>
@@ -420,7 +432,7 @@
             <div class="sbox-51-img">
               <img
                 class="mb-0 mt-3"
-                src="{% static 'fn.png' %}"
+                src="{% static 'fn.webp' %}"
                 alt="Advance Dental Image"
                 srcset=""
                 width="100"
@@ -429,12 +441,12 @@
             </div>
             <div class="sbox-51-txt">
               <h3 class="card-title">
-                <a
+               <a
                   href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}"
-                  class="title-link"
+                  class=" title-link"
                   >Porcelain fused to metal (PFM)</a
                 >
-              </h3>
+              </h3> 
               <p class="card-desc">
                 Porcelain bonded to metal has reminded one of the most
                 predictable and strongest choices for dental restoration. Our
@@ -454,7 +466,7 @@
           <div class="sbox-51 mx-auto">
             <div class="sbox-51-img">
               <img
-                src="{% static 'img/zirconi-advance.png' %}"
+                src="{% static 'img/zirconi-advance.webp' %}"
                 class="mb-0 mt-3"
                 alt="Image"
                 srcset=""
@@ -463,13 +475,8 @@
               />
             </div>
             <div class="sbox-51-txt">
-              <h3 class="card-title">
-                <a
-                  href="{% url 'blogd' 'zir-icon' %}"
-                  class="title-link"
-                  style="text-decoration: none; color: inherit"
-                  >Advance Zirconia</a
-                >
+              <h3 class="card-title ">
+                <a href="{% url 'blogd' 'zir-icon' %}" class="title-link">Advance Zirconia</a>
               </h3>
               <p class="card-desc">
                 Zir-icon is a high strength, milled to full contour, highly
@@ -486,7 +493,7 @@
           <div class="sbox-51 mx-auto">
             <div class="sbox-51-img">
               <img
-                src="{% static 'img/IPS.png' %}"
+                src="{% static 'img/IPS.webp' %}"
                 class="mb-0 mt-3"
                 alt="Advance Dental Image"
                 srcset=""
@@ -495,14 +502,9 @@
               />
             </div>
             <div class="sbox-51-txt">
-              <h3 class="card-title">
-                <a
-                  href="{% url 'blogd' 'aesthetic-maxima' %}"
-                  class="title-link"
-                  style="text-decoration: none; color: inherit"
-                  >IPS e.max All Ceramic Restorations</a
-                >
-              </h3>
+              <h3 class="card-title"> 
+                  <a href="{% url 'blogd' 'aesthetic-maxima' %}" class="title-link">IPS e.max All Ceramic Restorations</a>
+              </h3> 
               <p class="card-desc">
                 Our revolutionary new e.max CAD/CAM ceramic restorations offer
                 the latest in digital design technology and ceramic engineering
@@ -520,7 +522,7 @@
           <div class="sbox-51 mx-auto">
             <div class="sbox-51-img">
               <img
-                src="{% static 'img/Implant.png' %}"
+                src="{% static 'img/Implant.webp' %}"
                 class="mb-0 mt-3"
                 alt="Advance Dental Image"
                 srcset=""
@@ -529,14 +531,9 @@
               />
             </div>
             <div class="sbox-51-txt">
-              <h3 class="card-title">
-                <a
-                  href="{% url 'blogd' 'ad-abutments' %}"
-                  class="title-link"
-                  style="text-decoration: none; color: inherit"
-                  >Ad- Abutments Product Implant</a
-                >
-              </h3>
+              <h3 class="card-title"> 
+                  <a href="{% url 'blogd' 'ad-abutments' %}"  class=" title-link">Ad- Abutments Product Implant</a >
+              </h3> 
               <p class="card-desc">
                 AD- abutments are custom engineered to best meet each patient’s
                 case needs. ADE uses the most advanced design and milling
@@ -553,7 +550,7 @@
           <div class="sbox-51 mx-auto">
             <div class="sbox-51-img">
               <img
-                src="{% static 'img/17.png' %}"
+                src="{% static 'img/17.webp' %}"
                 class="mb-0 mt-3"
                 alt="Advance Dental Image"
                 srcset=""
@@ -562,14 +559,9 @@
               />
             </div>
             <div class="sbox-5-txt">
-              <h3 class="card-title">
-                <a
-                  href="{% url 'blogd' 'digital-crown-bridge' %}"
-                  class="title-link"
-                  style="text-decoration: none; color: inherit"
-                  >Digital Crown & Bridges</a
-                >
-              </h3>
+              <h3 class="card-title"> 
+                <a href="{% url 'blogd' 'digital-crown-bridge' %}" class="title-link">Digital Crown & Bridges</a>
+              </h3> 
               <p class="card-desc">
                 Digital dentistry at advance dental export CAD/CAM milling and
                 3D printing Full Service Dental Laboratory The world of Cad-Cam
@@ -590,7 +582,7 @@
           <div class="sbox-51 mx-auto">
             <div class="sbox-51-img">
               <img
-                src="{% static 'img/BPS.png' %}"
+                src="{% static 'img/BPS.webp' %}"
                 class="mb-0 mt-3"
                 alt="Advance Dental Image"
                 srcset=""
@@ -600,13 +592,8 @@
             </div>
             <div class="sbox-5-txt">
               <h3 class="card-title">
-                <a
-                  href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}"
-                  class="title-link"
-                  style="text-decoration: none; color: inherit"
-                  >BPS – Biofunctional Prosthetic System</a
-                >
-              </h3>
+                <a href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" class="title-link" >BPS – Biofunctional Prosthetic System</a >
+              </h3> 
               <p class="card-desc">
                 They provide you with self-confidence, charisma, and
                 self-assurance. Therefore, you want to gather all the necessary
@@ -625,7 +612,7 @@
           <div class="sbox-51 mx-auto">
             <div class="sbox-51-img">
               <img
-                src="{% static 'img/nolbel-procera.png' %}"
+                src="{% static 'img/nolbel-procera.webp' %}"
                 class="mb-0 mt-3"
                 alt="Advance Dental Image"
                 srcset=""
@@ -635,14 +622,8 @@
             </div>
             <div class="sbox-5-txt">
               <h3 class="card-title">
-                <a
-                  href="{% url 'blogd' 'nobelprocera' %}"
-                  class="title-link"
-                  style="text-decoration: none; color: inherit"
-                  >NobelProcera Solution</a
-                >
-              </h3>
-
+                <a href="{% url 'blogd' 'nobelprocera' %}" class=" title-link">NobelProcera Solution</a>
+              </h3> 
               <p class="card-desc">
                 No one knows industrially produced CAD/CAM dental prosthetics
                 like we do. Nobel Biocare was the first to produce dental
@@ -732,10 +713,7 @@
 </section>
 
 <!-- Introduction for the lab -->
-<section
-  id="services-7"
-  class="bg-lightgrey wide-601 servicess-section division"
->
+<section id="services-7" class="bg-lightgrey wide-601 servicess-section division">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mx-auto section-title">
@@ -746,15 +724,7 @@
       <div class="col-lg-12">
         <div class="row mx-sm-0">
           <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.2s"
-              style="
-                visibility: visible;
-                animation-delay: 0.2s;
-                animation-name: fadeInUp;
-              "
-            >
+            <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible;">
               <div class="hexagon">
                 <span class="flaticon-137-doctor blue-color"></span>
               </div>
@@ -775,8 +745,6 @@
               data-wow-delay="0.4s"
               style="
                 visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
               "
             >
               <div class="hexagon">
@@ -796,11 +764,9 @@
           <div class="col-md-6 col-lg-4 future-card">
             <div
               class="sbox-7 icon-xs wow fadeInUp"
-              data-wow-delay="0.2s"
+              data-wow-delay="0.6s"
               style="
                 visibility: visible;
-                animation-delay: 0.2s;
-                animation-name: fadeInUp;
               "
             >
               <div class="hexagon">
@@ -823,8 +789,6 @@
               data-wow-delay="0.2s"
               style="
                 visibility: visible;
-                animation-delay: 0.2s;
-                animation-name: fadeInUp;
               "
             >
               <div class="hexagon">
@@ -849,8 +813,6 @@
               data-wow-delay="0.4s"
               style="
                 visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
               "
             >
               <div class="hexagon">
@@ -875,8 +837,6 @@
               data-wow-delay="0.6s"
               style="
                 visibility: visible;
-                animation-delay: 0.6s;
-                animation-name: fadeInUp;
               "
             >
               <div class="hexagon">
@@ -918,7 +878,6 @@
           style="
             visibility: visible;
             animation-delay: 0.2s;
-            animation-name: fadeInRight;
           "
         >
           <h5
@@ -939,7 +898,6 @@
           style="
             visibility: visible;
             animation-delay: 0.4s;
-            animation-name: fadeInRight;
           "
         >
           <h5
@@ -961,7 +919,6 @@
           style="
             visibility: visible;
             animation-delay: 0.6s;
-            animation-name: fadeInRight;
           "
         >
           <h5
@@ -980,7 +937,6 @@
           style="
             visibility: visible;
             animation-delay: 0.8s;
-            animation-name: fadeInRight;
           "
         >
           <h5
@@ -992,10 +948,10 @@
         </div>
       </div>
       <div class="col-lg-4 d-lg-flex align-items-center s6-img">
-        <div class="sbox-6-img text-center wow fadeInUp" data-wow-delay="0.8s">
+        <div class="sbox-6-img text-center wow fadeInUp" data-wow-delay="0.4s">
           <img
             class="img-fluid lazy"
-            src="https://unsplash.it/12/8?image=777"
+            src="{% static 'img/teeth-img93.jpg' %}"
             data-src="{% static 'img/teeth-img93.jpg' %}"
             alt="services-image"
             width="100%"
@@ -1010,7 +966,6 @@
           style="
             visibility: visible;
             animation-delay: 0.2s;
-            animation-name: fadeInLeft;
           "
         >
           <h5 class="h5-md">Cosmetic Restoration Service</h5>
@@ -1026,7 +981,6 @@
           style="
             visibility: visible;
             animation-delay: 0.4s;
-            animation-name: fadeInLeft;
           "
         >
           <h5 class="h5-md">Implant Specialists</h5>
@@ -1042,7 +996,6 @@
           style="
             visibility: visible;
             animation-delay: 0.6s;
-            animation-name: fadeInLeft;
           "
         >
           <h5 class="h5-md">Custom Milling</h5>
@@ -1057,7 +1010,6 @@
           style="
             visibility: visible;
             animation-delay: 0.8s;
-            animation-name: fadeInLeft;
           "
         >
           <h5 class="h5-md">Laser Welding</h5>
@@ -1077,7 +1029,7 @@
       </div>
 
       <div
-        class="owl-carousel owl-theme services-holder listing-gallery-img-item"
+        class="owl-carousel owl-theme gallery-holder  listing-gallery-img-item"
       >
         {% for ie in gallery21 %}
         <!-- SERVICE BOX #1 -->
@@ -1087,6 +1039,7 @@
             <img
               class="img-fluid w-100 h-100"
               src="{{ ie.image.url }}"
+              data-src="{{ ie.image.url }}"
               alt="Before & After"
               width="100%"
               height="100%"
@@ -1097,7 +1050,7 @@
       </div>
 
       <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+        <div class="all-posts-btn mb-50 wow fadeInUp" data-wow-delay="1s">
           <a
             href="{% url 'home:beforeafter' %}"
             class="btn btn-blue blue-hover submit"
@@ -1124,17 +1077,15 @@
     ></div>
     <div class="container position-relative text-center">
       <div class="row justify-content-center carousel-row">
-        <div class="col-sm-12 col-md-11 col-lg-11 col-11">
-          <div
-            class="carousel slide"
+        <div
+            class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
             data-bs-ride="carousel"
-            id="carouselExampleControls"
-          >
+            id="carouselExampleControls">
             <div class="review-slider-testimonials">
               <div class="carousel-inner">
                 {% for ie in data %}
                 <div
-                  class="{% if forloop.first %}active{% endif %} carousel-item"
+                  class="{% if forloop.first %}active{% endif %} carousel-item "
                   aria-label="Slide {{ forloop.counter }}"
                 >
                   <div
@@ -1188,7 +1139,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1204,7 +1154,7 @@
         </h3>
       </div>
       <div class="col-12">
-        <div class="owl-carousel owl-theme services-holder">
+        <div class="owl-carousel owl-theme gallery-holder">
           {% for ie in gallery %}
           <!-- SERVICE BOX #1 -->
           <div class="gbox listing-gallery-link-block">
@@ -1358,11 +1308,13 @@
 </script>
 
 {% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 <script>
   $(document).ready(function () {
     var $customerLogos = $(".customer-logos");
     var owl = $(".services-holder");
+    var owl1 = $(".gallery-holder");
 
     $customerLogos.slick({
       slidesToShow: 10,
@@ -1405,7 +1357,7 @@
           },
         },
         {
-          breakpoint: 520,
+          breakpoint: 576,
           settings: {
             slidesToShow: 3,
           },
@@ -1443,7 +1395,39 @@
         },
       });
     }
+      if (owl1.length) {
+      owl1.owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        navBy: 1,
+        responsive: {
+          0: { items: 1 },
+          767: { items: 1 },
+          768: { items: 2 },
+          991: { items: 3 },
+          1200: { items: 3 },
+        },
+      });
+    }
   });
+
+  var swiper = new Swiper('.mySwiper', {
+        speed: 600,
+        parallax: !0,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: !0
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
 </script>
 <script src="{% static 'js/galleryanimation.js' %}"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>

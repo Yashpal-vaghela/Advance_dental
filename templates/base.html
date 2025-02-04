@@ -8,154 +8,183 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    {% load static %}
-    {% block seo %}
-
-    {% endblock %}
+    {% load static %} {% block seo %} {% endblock %}
     <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <link  href="{% static 'css/bootstrap1.min.css' %}" rel='stylesheet' />
-    <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel='stylesheet' />
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel='stylesheet' />
-    <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' />
-    <link  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel='stylesheet' />
-    <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
-    <link  id="effect" href="{% static 'css/dropdown-effects/fade-down.css' %}" media="all" rel='stylesheet' />
-    <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet'/>
-    <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/review.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/animate.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/jquery.datetimepicker.min.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/style.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/responsive.css' %}" rel='stylesheet'/>
-    <link  href="{% static 'css/web_story.css' %}" rel='stylesheet'/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    {% comment %} <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'"  /> {% endcomment %}
-    {% block css %}
-
-    {% endblock %}
-    <script src="{% static 'js/lazy.js' %}" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link href="{% static 'css/bootstrap1.min.css' %}" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="{% static 'css/flaticon.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/jquery.datetimepicker.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    {% block css %} {% endblock %}
     <!-- Google tag (gtag.js) -->
-    <script  src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y" async></script>
-    <meta name="google-site-verification" content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w" />
-    <script >
-      window.dataLayer = window.dataLayer || []
+    <script
+      type="text/javascript"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"
+    ></script>
+    <meta
+      name="google-site-verification"
+      content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w"
+    />
+    <script async>
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
+      gtag("js", new Date());
 
-      gtag('config', 'G-Q54R2WNM7Y')
-      document.addEventListener('DOMContentLoaded', () => {
-        const internationalPhoneNumber = '+1 5513800385';
-        const internationalEmail = 'overseas@advancedentalexport.com';
-        const localWhatsappLink = 'https://wa.link/u0qly1';
-        const internationalWhatsappLink = 'https://wa.link/2v2cud';
-        const whatsappLink = document.getElementById('whatsappLink');
-        const phoneLink = document.getElementById('phoneLink');
+      gtag("config", "G-Q54R2WNM7Y");
+      document.addEventListener("DOMContentLoaded", () => {
+        const internationalPhoneNumber = "+1 5513800385";
+        const internationalEmail = "overseas@advancedentalexport.com";
+        const localWhatsappLink = "https://wa.link/u0qly1";
+        const internationalWhatsappLink = "https://wa.link/2v2cud";
+        const whatsappLink = document.getElementById("whatsappLink");
+        const phoneLink = document.getElementById("phoneLink");
         // Get all phone and email elements
-        const phoneElements = document.querySelectorAll('.footer-contact-title.phone');
-        const emailElements = document.querySelectorAll('.footer-contact-title.email');
-    
-        fetch('https://ipinfo.io/json?token=718446798cd1d4')
-          .then(response => response.json())
-          .then(data => {
-            const countryCode = data.country || 'UNKNOWN';
-            if (countryCode !== 'IN') {
+        const phoneElements = document.querySelectorAll(
+          ".footer-contact-title.phone"
+        );
+        const emailElements = document.querySelectorAll(
+          ".footer-contact-title.email"
+        );
+
+        fetch("https://ipinfo.io/json?token=718446798cd1d4")
+          .then((response) => response.json())
+          .then((data) => {
+            const countryCode = data.country || "UNKNOWN";
+            if (countryCode !== "IN") {
               phoneElements.forEach((phoneElement, index) => {
                 if (index > 0) {
-                  phoneElement.style.display = 'none'; 
+                  phoneElement.style.display = "none";
                 } else {
                   phoneElement.textContent = internationalPhoneNumber;
-                  phoneElement.href = 'tel:' +internationalPhoneNumber;
+                  phoneElement.href = "tel:" + internationalPhoneNumber;
                 }
               });
               emailElements.forEach((emailElement, index) => {
                 if (index > 0) {
-                  emailElement.style.display = 'none'; 
+                  emailElement.style.display = "none";
                 } else {
-                  emailElement.textContent = internationalEmail; 
+                  emailElement.textContent = internationalEmail;
                 }
               });
-
             } else {
-              phoneElements.forEach(phoneElement => {
-                phoneElement.style.display = ''; 
-                phoneElement.textContent = phoneElement.getAttribute('data-default'); 
+              phoneElements.forEach((phoneElement) => {
+                phoneElement.style.display = "";
+                phoneElement.textContent =
+                  phoneElement.getAttribute("data-default");
               });
-    
-              emailElements.forEach(emailElement => {
-                emailElement.style.display = '';
-                emailElement.textContent = emailElement.getAttribute('data-default');
+
+              emailElements.forEach((emailElement) => {
+                emailElement.style.display = "";
+                emailElement.textContent =
+                  emailElement.getAttribute("data-default");
               });
             }
-            if (countryCode !== 'IN') {
-              phoneLink.href = 'tel:' + internationalPhoneNumber;
-              whatsappLink.href = internationalWhatsappLink;              
+            if (countryCode !== "IN") {
+              phoneLink.href = "tel:" + internationalPhoneNumber;
+              whatsappLink.href = internationalWhatsappLink;
             } else {
-              phoneLink.href = 'tel: +918469888877'
+              phoneLink.href = "tel: +918469888877";
               whatsappLink.href = localWhatsappLink;
             }
           })
-          .catch(error => {
-            console.error('Geolocation API Error:', error);
+          .catch((error) => {
+            console.error("Geolocation API Error:", error);
           });
       });
     </script>
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    <script async>
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "pxdorhfpga");
     </script>
   </head>
 
   <body>
-    {% load static %}
-    {% if not hide_social_image %}
+    {% load static %} {% if not hide_social_image %}
     <div class="social">
       <div class="social-all-items">
         <div class="social-item">
-          <a href="https://www.facebook.com/advance.dental.exports" target="_blank" rel="nofollow">
-            Facebook 
-            <i class="fa-brands fa-facebook-f" style="font-size: 15px; "></i>
+          <a
+            href="https://www.facebook.com/advance.dental.exports"
+            target="_blank"
+            rel="nofollow"
+          >
+            Facebook
+            <i class="fa-brands fa-facebook-f" style="font-size: 15px"></i>
           </a>
         </div>
         <div class="social-item">
-          <a href="https://www.instagram.com/advance_dental_export/" target="_blank" rel="nofollow">
-            Instagram 
-            <i class="fa-brands fa-instagram" style="font-size: 15px; font-weight: 600;"></i>
+          <a
+            href="https://www.instagram.com/advance_dental_export/"
+            target="_blank"
+            rel="nofollow"
+          >
+            Instagram
+            <i
+              class="fa-brands fa-instagram"
+              style="font-size: 15px; font-weight: 600"
+            ></i>
           </a>
         </div>
         <div class="social-item">
-          <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" rel="nofollow">
-            Linkedin 
-            <i class="fa-brands fa-linkedin" style="font-size: 15px; "></i>
+          <a
+            href="https://www.linkedin.com/company/advance-dental-export/"
+            target="_blank"
+            rel="nofollow"
+          >
+            Linkedin
+            <i class="fa-brands fa-linkedin" style="font-size: 15px"></i>
           </a>
         </div>
         <div class="social-item">
-          <a href="https://wa.link/u0qly1" target="_blank" id="whatsappLink" rel="nofollow">
-            Whatsapp 
-            <i  class="fa-brands fa-whatsapp"  style="font-size: 15px;  font-weight: 600;"></i>
+          <a
+            href="https://wa.link/u0qly1"
+            target="_blank"
+            id="whatsappLink"
+            rel="nofollow"
+          >
+            Whatsapp
+            <i
+              class="fa-brands fa-whatsapp"
+              style="font-size: 15px; font-weight: 600"
+            ></i>
           </a>
         </div>
         <div class="social-item">
-          <a href="tel:+918469888877" target="_blank" id="phoneLink" rel="nofollow">
-            Phone 
-            <i  class="fa-solid fa-phone" style="font-size: 15px; "></i>
+          <a
+            href="tel:+918469888877"
+            target="_blank"
+            id="phoneLink"
+            rel="nofollow"
+          >
+            Phone
+            <i class="fa-solid fa-phone" style="font-size: 15px"></i>
           </a>
         </div>
       </div>
     </div>
-    {% comment %} <img src="{% static 'img/social.png' %}" /> {% endcomment %}
     {% endif %}
     <!-- end -->
     <div id="page" class="page">
@@ -169,20 +198,39 @@
                   <i class="fas fa-map-marker-alt"></i>
                   Velanja Road, Umra, Surat (Gujarat) India.
                 </span>
-                <a href="tel:+918488888877" class="callusbtn"><i class="fas fa-phone"></i>+91 84888 88877</a>
-                <a href="tel:+918469888877" class="callusbtn"><i class="fas fa-phone"></i>+91 84698 88877</a>
+                <a href="tel:+918488888877" class="callusbtn"
+                  ><i class="fas fa-phone"></i>+91 84888 88877</a
+                >
+                <a href="tel:+918469888877" class="callusbtn"
+                  ><i class="fas fa-phone"></i>+91 84698 88877</a
+                >
               </div>
             </div>
             <div class="headertopright">
-              <a class="linkedinicon" title="Linkedin" target="_blank" href="https://www.linkedin.com/company/advance-dental-export/">
+              <a
+                class="linkedinicon"
+                title="Linkedin"
+                target="_blank"
+                href="https://www.linkedin.com/company/advance-dental-export/"
+              >
                 <i class="fab fa-linkedin-in"></i>
                 <span class="mobiletext02">Linkedin</span>
               </a>
-              <a class="twittericon" title="Twitter" target="_blank" href="https://www.instagram.com/advance_dental_export/">
+              <a
+                class="twittericon"
+                title="Twitter"
+                target="_blank"
+                href="https://www.instagram.com/advance_dental_export/"
+              >
                 <i class="fab fa-instagram"></i>
                 <span class="mobiletext02">Instagram</span>
               </a>
-              <a class="facebookicon" title="Facebook" target="_blank" href="https://www.facebook.com/advance.dental.exports">
+              <a
+                class="facebookicon"
+                title="Facebook"
+                target="_blank"
+                href="https://www.facebook.com/advance.dental.exports"
+              >
                 <i class="fab fa-facebook-f"></i>
                 <span class="mobiletext02">Facebook</span>
               </a>
@@ -191,46 +239,84 @@
         </div>
         {% include 'pc.html' %}
       </header>
-      {% block body %}
-
-      {% endblock %}
+      {% block body %} {% endblock %}
       <div class="container mt-5 pt-5">
         <section class="footer-contact-section">
-            <div class="footer-contact-wrapper">
-              <div class="row mx-0">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2 px-sm-4">
-                  <div class="d-flex footer-content-wrapper">
-                    <i aria-hidden="true" class="fas fa-map-marked-alt footer-contact-icon"></i>
-                    <a href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47" target="_blank" class="">
+          <div class="footer-contact-wrapper">
+            <div class="row mx-0">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2 px-sm-4">
+                <div class="d-flex footer-content-wrapper">
+                  <i
+                    aria-hidden="true"
+                    class="fas fa-map-marked-alt footer-contact-icon"
+                  ></i>
+                  <a
+                    href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47"
+                    target="_blank"
+                    class=""
+                  >
                     <p class="footer-contact-title mb-0">
-                        Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA.
+                      Plot No. 1 to 8, Marutidham Industrial Estate, Behind
+                      Hotel Royal, Velanja Road, Umra, Surat - 394 130.
+                      (Gujarat) INDIA.
                     </p>
                   </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
+                <div class="d-flex footer-content-wrapper">
+                  <i
+                    aria-hidden="true"
+                    class="fas fa-envelope-open-text footer-contact-icon"
+                  ></i>
+                  <div class="d-block footer-contact-title">
+                    <!-- Default Emails -->
+                    <a
+                      href="mailto:info@advancedentalexport.com"
+                      class="footer-contact-title email"
+                      data-default="info@advancedentalexport.com"
+                      >info@advancedentalexport.com</a
+                    >
+                    <a
+                      href="mailto:overseas@advancedentalexport.com"
+                      class="footer-contact-title email"
+                      data-default="overseas@advancedentalexport.com"
+                      >overseas@advancedentalexport.com</a
+                    >
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
-                  <div class="d-flex footer-content-wrapper">
-                    <i aria-hidden="true" class="fas fa-envelope-open-text footer-contact-icon"></i>
-                    <div class="d-block footer-contact-title">
-                      <!-- Default Emails -->
-                      <a href="mailto:info@advancedentalexport.com" class="footer-contact-title email" data-default="info@advancedentalexport.com">info@advancedentalexport.com</a>
-                      <a href="mailto:overseas@advancedentalexport.com" class="footer-contact-title email" data-default="overseas@advancedentalexport.com">overseas@advancedentalexport.com</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
-                  <div class="d-flex footer-content-wrapper">
-                    <i aria-hidden="true" class="fas fa-phone-alt footer-contact-icon fa-flip-horizontal"></i>
-                    <div class="d-block">
-                      <!-- Default Phone Numbers -->
-                      <a href="tel:+91 8488888877"class="footer-contact-title phone" data-default="+91 84888 88877">+91 84888 88877</a><br/>
-                      <a href="tel:+91 8469888877"class="footer-contact-title phone" data-default="+91 84698 88877">+91 84698 88877</a><br/>
-                      <a href="tel:+1 551-380-0385" class="footer-contact-title phone" data-default="+1 551-380-0385 (overseas)">+1 5513800385</a>
-                    </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
+                <div class="d-flex footer-content-wrapper">
+                  <i
+                    aria-hidden="true"
+                    class="fas fa-phone-alt footer-contact-icon fa-flip-horizontal"
+                  ></i>
+                  <div class="d-block">
+                    <!-- Default Phone Numbers -->
+                    <a
+                      href="tel:+91 8488888877"
+                      class="footer-contact-title phone"
+                      data-default="+91 84888 88877"
+                      >+91 84888 88877</a
+                    ><br />
+                    <a
+                      href="tel:+91 8469888877"
+                      class="footer-contact-title phone"
+                      data-default="+91 84698 88877"
+                      >+91 84698 88877</a
+                    ><br />
+                    <a
+                      href="tel:+1 551-380-0385"
+                      class="footer-contact-title phone"
+                      data-default="+1 551-380-0385 (overseas)"
+                      >+1 5513800385</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </section>
       </div>
       <footer class="footer-section">
@@ -238,24 +324,64 @@
           <div class="row justify-lg-content-center">
             <div class="col-md-6 col-lg-6 col-sm-11">
               <div class="footer-info ml-25">
-                <img src="{% static 'img/logo.png' %}" width="auto" height="90" alt="footer-logo" class="footer-logo" />
+                <img
+                  src="{% static 'img/logo.png' %}"
+                  width="auto"
+                  height="90"
+                  alt="footer-logo"
+                  class="footer-logo"
+                />
                 <p class="p-sm mt-20">
-                  <a href="https://advancedentalexport.com/">Advance Dental Export</a>
-                  is a full service dental lab that specializes in dental implants, cosmetic dentistry and digital dentistry. Haresh Savani, CEO, started’ ADE’ in 2009 with a vision to fabricate only the highest quality dental prosthetics to ensure long-lasting and esthetically pleasing outcomes for every dental lab product.
+                  <a href="https://advancedentalexport.com/"
+                    >Advance Dental Export</a
+                  >
+                  is a full service dental lab that specializes in dental
+                  implants, cosmetic dentistry and digital dentistry. Haresh
+                  Savani, CEO, started’ ADE’ in 2009 with a vision to fabricate
+                  only the highest quality dental prosthetics to ensure
+                  long-lasting and esthetically pleasing outcomes for every
+                  dental lab product.
                 </p>
-                {% comment %} <p>
-                  <a href="https://play.google.com/store/apps/details?id=com.dental.doctore_app" target="_blank"><img src="{% static 'lo.png' %}" class="download" alt="Download" /></a>
-                </p> {% endcomment %}
+                {% comment %}
+                <p>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.dental.doctore_app"
+                    target="_blank"
+                    ><img
+                      src="{% static 'lo.png' %}"
+                      class="download"
+                      alt="Download"
+                  /></a>
+                </p>
+                {% endcomment %}
                 <div class="footer-socials-links mt-20">
                   <ul class="foo-socials text-center clearfix">
                     <li>
-                      <a href="https://www.facebook.com/advance.dental.exports" target="_blank" class="ico-facebook" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+                      <a
+                        href="https://www.facebook.com/advance.dental.exports"
+                        target="_blank"
+                        class="ico-facebook"
+                        rel="nofollow"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/advance_dental_export/" target="_blank" class="ico-twitter" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                      <a
+                        href="https://www.instagram.com/advance_dental_export/"
+                        target="_blank"
+                        class="ico-twitter"
+                        rel="nofollow"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/company/advance-dental-export/" target="_blank" class="ico-google-plus" rel="nofollow"><i class="fab fa-linkedin-in"></i></a>
+                      <a
+                        href="https://www.linkedin.com/company/advance-dental-export/"
+                        target="_blank"
+                        class="ico-google-plus"
+                        rel="nofollow"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
                     </li>
                   </ul>
                 </div>
@@ -264,7 +390,7 @@
             <div class="col-md-6 col-lg-3">
               <div class="footer-links mb-40">
                 <h5 class="h5-xs">Important Links</h5>
-                <ul class="foo-links clearfix" style="margin-top: 30px;">
+                <ul class="foo-links clearfix" style="margin-top: 30px">
                   <li>
                     <a href="{% url 'home:about' %}">About us</a>
                   </li>
@@ -284,7 +410,9 @@
                     <a href="{% url 'home:testimonals' %}">Testimonials</a>
                   </li>
                   <li>
-                    <a href="https://ultimatesmiledesign.com" target="_blank">Ultimate Smile Design</a>
+                    <a href="https://ultimatesmiledesign.com" target="_blank"
+                      >Ultimate Smile Design</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -292,12 +420,16 @@
             <div class="col-md-6 col-lg-3">
               <div class="footer-links mb-40">
                 <h5 class="h5-xs">Discover</h5>
-                <ul class="clearfix foo-links" style="margin-top: 30px;">
+                <ul class="clearfix foo-links" style="margin-top: 30px">
                   <li>
-                    <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
+                    <a href="{% url 'home:verify_warrenty' %}" target="_blank"
+                      >Verify Warranty</a
+                    >
                   </li>
                   <li class="nl-simple header-btn clss">
-                    <a href="https://client.advancedentalexport.com/">Client Login</a>
+                    <a href="https://client.advancedentalexport.com/"
+                      >Client Login</a
+                    >
                   </li>
                   <li>
                     <a href="{% url 'home:gallery' %}">Gallery</a>
@@ -312,23 +444,31 @@
                     <a href="{% url 'home:stl' %}">Submit STL File</a>
                   </li>
                   <li>
-                    <a href="https://advancedentalexport.com/sitemap.xml" target="_blank">Site Map</a>
+                    <a
+                      href="https://advancedentalexport.com/sitemap.xml"
+                      target="_blank"
+                      >Site Map</a
+                    >
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          
         </div>
         <div class="bottom-footer">
-            <div class="row">
-              <div class="col-md-12">
-                <p class="footer-copyright">
-                  &copy; 2025 <span><a href="https://advancedentalexport.com/">Advance Dental Export</a></span>. All Rights Reserved
-                </p>
-              </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="footer-copyright">
+                &copy; 2025
+                <span
+                  ><a href="https://advancedentalexport.com/"
+                    >Advance Dental Export</a
+                  ></span
+                >. All Rights Reserved
+              </p>
             </div>
           </div>
+        </div>
       </footer>
     </div>
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
@@ -346,87 +486,61 @@
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'js/wow.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    {% comment %} <script src="{% static 'js/aos.js' %}"></script> {% endcomment %}
-     {% comment %} <script>
-      AOS.init({
-          duration: 1000, 
-          once: true,     
-          offset: 120,    
-          disable: false, 
-          debug: true, 
-      });
-    </script> {% endcomment %}
-    {% block js %}
-
-    {% endblock %}
+    {% block js %} {% endblock %}
     <script src="{% static 'js/custom.js' %}"></script>
     <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
-
-    <script>
-      new WOW().init();
-    </script> 
-
-    <!--     [if lt IE 9]>
-			<script src="{% static 'js/html5shiv.js' %}" type="text/javascript"></script>
-			<script src="{% static 'js/respond.min.js' %}" type="text/javascript"></script>
-		<![endif]     -->
     <script src="{% static 'js/changer.js' %}"></script>
     <script defer src="{% static 'js/styleswitch.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return
+        if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        }
-        if (!f._fbq) f._fbq = n
-        n.push = n
-        n.loaded = !0
-        n.version = '2.0'
-        n.queue = []
-        t = b.createElement(e)
-        t.async = !0
-        t.src = v
-        s = b.getElementsByTagName(e)[0]
-        s.parentNode.insertBefore(t, s)
-      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
-      fbq('init', '700687238635946')
-      fbq('track', 'PageView')
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "700687238635946");
+      fbq("track", "PageView");
+
+      new WOW().init();
     </script>
     <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=700687238635946&ev=PageView&noscript=1" />
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=700687238635946&ev=PageView&noscript=1"
+      />
     </noscript>
-    <!-- End Meta Pixel Code -->
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        speed: 600,
-        parallax: !0,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: !0
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
-      })
-    </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {% for ie in messages %}
-      <script>
-        Swal.fire({
-          position: 'top-end',
-          icon: '{{ie.tags}}',
-          title: '{{ie.message}}',
-          showConfirmButton: !1,
-          timer: 2500
-        })
-      </script>
-    {% endfor %}
-    {% block javascript %}{% endblock %}
+    <script>
+      Swal.fire({
+        position: "top-end",
+        icon: "{{ie.tags}}",
+        title: "{{ie.message}}",
+        showConfirmButton: !1,
+        timer: 2500,
+      });
+    </script>
+    {% endfor %} {% block javascript %}{% endblock %}
   </body>
 </html>

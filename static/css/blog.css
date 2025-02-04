@@ -1,5 +1,4 @@
 /* new news and bolgs section */
-
 .news-blog-wrapper .news-blog-card {
   background-color: #fff;
   border: none;
@@ -8,16 +7,9 @@
   font-size: 16px;
   line-height: 1.6;
   height: 100%;
-  /* border: 2px solid transparent;
-  border-radius: 8px; */
   transition: border 0.4s ease;
   pointer-events: auto;
 }
-/* .news-blog-card:hover {
-  border-color: #00a3c8;
-  border-radius: 8px;
-} */
-
 .news-blog-card:before,
 .news-blog-card:after {
   position: absolute;
@@ -25,7 +17,6 @@
   transition: all 1s;
   border-color: transparent;
 }
-
 .news-blog-card:before {
   border-bottom: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -35,7 +26,6 @@
   bottom: 0;
   border-radius: 0.375rem;
 }
-
 .news-blog-card:after {
   border-top: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -45,13 +35,11 @@
   right: 0;
   border-radius: 0.375rem;
 }
-
 .news-blog-card:hover:before {
   border-color: #00a3c8;
   width: 100%;
   height: 100%;
 }
-
 .news-blog-card:hover:after {
   border-color: #00a3c8;
   width: 100%;
@@ -63,7 +51,6 @@
 .news-blog-card .card-body a {
   color: #24a992;
 }
-
 .news-blog-card .card-body .news-blogs-date {
   position: absolute;
   padding: 5px 10px;
@@ -92,7 +79,6 @@
   align-items: center;
   letter-spacing: 1px;
 }
-
 .news-blog-card .card-body .news-blogs-admin-title span {
   font-size: 16px;
   font-weight: 500;
@@ -113,7 +99,6 @@
   background-color: #fff;
   cursor: pointer;
 }
-
 .news-blog-card .card-footer a {
   color: #24a992;
   text-decoration: underline !important;
@@ -128,7 +113,6 @@
   color: #24a992;
   margin-top: 3px;
 }
-
 .news-blog-card .card-footer .continue-reading {
   background-color: #fff;
   border: 3px solid #24a992;
@@ -136,19 +120,16 @@
   border-radius: 4px;
   cursor: pointer;
 }
-
 .news-blog-card .card-footer .continue-reading a {
   color: #24a992;
   text-decoration: none;
   font-weight: 500;
 }
-
 .news-blog-card .card-footer .continue-reading i {
   color: #24a992;
   font-size: 20px;
   transition: 0.2s;
 }
-
 .news-blog-card .card-footer .cs_post_shape {
   width: 140px;
   height: 100px;
@@ -176,7 +157,6 @@
   right: -48px;
   bottom: -65px;
 }
-
 .news-blog-card:hover .continue-reading a,
 .news-blog-card:hover .continue-reading i {
   color: #24a992;
@@ -234,12 +214,10 @@ a {
     font-size: 22px;
   }
 }
-
 /* about page new css */
 .about-section-wrapper {
   background-color: rgb(36, 169, 146, 0.7);
 }
-
 /* career page css */
 .upload-image-wrapper {
   position: relative;
@@ -250,11 +228,9 @@ a {
   background-color: rgb(27, 137, 118, 0.2);
   border-radius: 7px;
 }
-
 .upload-image-wrapper i {
   display: block;
   margin: 0 auto;
-  /* margin-top: 10px; */
   width: 40px;
   display: flex;
   align-items: center;
@@ -262,7 +238,6 @@ a {
   padding: 18px 0px;
   color: #1b8976;
 }
-
 .upload-image-wrapper p {
   width: 100%;
   text-align: center;
@@ -272,7 +247,6 @@ a {
   top: 43%;
   line-height: 1rem;
 }
-
 .file-choose-input {
   opacity: 0;
   position: absolute;
@@ -281,16 +255,6 @@ a {
   right: 0;
   bottom: 0;
 }
-/* 
-input[type="file"] {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-} */
-
 /* home banner */
 @media (max-width: 576px) {
   .news-blog-wrapper .col-12:first {
@@ -310,7 +274,6 @@ input[type="file"] {
   filter: grayscale(100%);
   border-radius: 5px;
 }
-
 .hero-section1 .swiper-button-next,
 .hero-section1 .swiper-button-prev {
   color: #000 !important;
@@ -324,7 +287,6 @@ input[type="file"] {
   width: 100%;
   position: relative;
 }
-
 .banner-2-img2 {
   top: -20%;
   position: relative;
@@ -416,7 +378,6 @@ input[type="file"] {
   transform: rotate(-45deg);
   font-size: 14px;
 }
-
 @media(min-width:1200px){
   .banner-2-img1{
     height: 123vh;
@@ -494,7 +455,6 @@ input[type="file"] {
   .banner-3-img6{
     right:18%;
   }
-
 }
 @media(max-width:950px){
   .banner-2-img3 {
@@ -821,32 +781,6 @@ input[type="file"] {
     gap: 133%;
   }
 }
-
-
-/* .banner-img{
-  width: 100%;
-  height: auto;
-  max-width: 1600px;
-  max-height: 500px;
-  object-fit: cover;
-  margin: 0 auto;
-} */
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-} */
-/* .banner-title, .banner-subtitle {
-  animation: fadeInUp 1s ease-in-out;
-  color: black;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -920,7 +854,6 @@ input[type="file"] {
   left: 28%;
   overflow: hidden;
 }
-
 /* banner 2 img  */
 .zir-logo {
   position: absolute;
@@ -1377,6 +1310,3 @@ input[type="file"] {
   animation: fadeInLeft 2s ease forwards;
   transition-delay: 0.6s;
 }
-
-
-

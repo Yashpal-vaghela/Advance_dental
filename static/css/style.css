@@ -2123,7 +2123,7 @@ td.text-right {
 }
 
 #services-6 {
-  background-image: url(../images/banner-2.jpg);
+  background-image: url(../images/banner-2.webp);
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2961,7 +2961,7 @@ td.text-right {
     opacity: 0.9;
  } */
 #statistic-1 {
-  background-image: url(../images/countsbg.jpg);
+  background-image: url(../images/countsbg.webp);
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -2994,10 +2994,13 @@ td.text-right {
 }
 
 .statistic-block .statistic-number {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size:2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #333;
+  display:flex;
+  justify-content:center;
 }
 
 @media(max-width:576px){
@@ -3005,7 +3008,8 @@ td.text-right {
       font-size: 36px;
    }
    .statistic-block .statistic-number {
-      font-size: 25px;
+      /* font-size: 25px; */
+      margin-top: 20px;
    }
    #statistic-1 .container-content{
       margin-left: 0px;
@@ -3025,7 +3029,7 @@ td.text-right {
   color: #222;
   position: relative;
   top: -20px;
-  left: -10px;
+  left: -1px;
 }
 .statistic-block .txt-400 {
   font-size: 16px;
@@ -3041,7 +3045,7 @@ td.text-right {
   line-height: 1;
   font-weight: 900;
   letter-spacing: 0.5px;
-  margin-top: 20px;
+  margin-top: 23px;
   margin-bottom: 15px;
 }
 
@@ -5186,6 +5190,7 @@ ul.blog-category-list li:hover {
 #breadcrumb {
   background-image: url(../images/breadcrumb.jpg);
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .breadcrumb-holder {
