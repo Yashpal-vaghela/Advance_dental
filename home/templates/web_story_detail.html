@@ -43,8 +43,7 @@
     <amp-story-page id="page-{{ forloop.counter }}" auto-advance-after="video-{{ forloop.counter }}">
         <amp-story-grid-layer template="fill">
             <amp-video id="video-{{ forloop.counter }}" autoplay loop noaudio
-                width="720" height="1280" layout="responsive"
-                poster="https://example.com/video-thumbnail.jpg">
+                width="720" height="1280" layout="responsive">
                 <source src="{{ video.video.url }}" type="video/mp4">
             </amp-video>
         </amp-story-grid-layer>
