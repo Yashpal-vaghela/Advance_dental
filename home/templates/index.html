@@ -92,11 +92,18 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide position-relative">
         <img
-          src="{% static 'aa.jpg' %}"
-          data-src="static/aa.jpg"
+          src="{% static 'aa.webp' %}" 
+          srcset="
+            {% static 'aa-mobile.webp' %} 480w, 
+            {% static 'aa-tablet.webp' %} 768w, 
+            {% static 'aa.webp' %} 1200w"
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 1200px"
+          width="1200"
+          height="600"
           class="banner-img"
           alt="Advance Dental Export Images"
-        />
+          loading="lazy"
+        >
         <div class="container">
           <div class="row">
             <div class="texts col-lg-8 col-md-10 col-sm-9 col-8">

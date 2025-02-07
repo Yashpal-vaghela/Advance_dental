@@ -8,23 +8,41 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="google-site-verification" content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w" />
     {% load static %} {% block seo %} {% endblock %}
     <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-    <link href="{% static 'css/bootstrap1.min.css' %}" rel="stylesheet" />
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-    <link href="{% static 'css/flaticon.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/menu.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/jquery.datetimepicker.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
+    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" media="print" onload="this.media='all'">
+    <link rel="preload" href="{% static 'css/fontawesome.min.css' %}" as="style">
+    <link href="{% static 'css/fontawesome.min.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
+    <link  id="effect" href="{% static 'css/dropdown-effects/fade-down.css' %}" media="all" rel='stylesheet' />
+    <link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet'/>
+    <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/review.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/animate.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/jquery.datetimepicker.min.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/style.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/responsive.css' %}" rel='stylesheet'/>
+    
+
+     <!--CDN LINKS-->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
     {% block css %} {% endblock %}
     <!-- Google tag (gtag.js) -->
     <script
@@ -32,18 +50,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"
     ></script>
-    <meta
-      name="google-site-verification"
-      content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w"
-    />
     <script async>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-Q54R2WNM7Y");
       document.addEventListener("DOMContentLoaded", () => {
         const internationalPhoneNumber = "+1 5513800385";
         const internationalEmail = "overseas@advancedentalexport.com";
@@ -472,15 +479,15 @@
       </footer>
     </div>
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap1.min.js' %}"></script>
-    <script src="{% static 'js/modernizr.custom.js' %}"></script>
-    <script src="{% static 'js/jquery.easing.js' %}"></script>
-    <script src="{% static 'js/jquery.appear.js' %}"></script>
-    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script defer src="{% static 'js/bootstrap1.min.js' %}"></script>
+    <script defer  src="{% static 'js/modernizr.custom.js' %}"></script>
+    <script defer  src="{% static 'js/jquery.easing.js' %}"></script>
+    <script defer  src="{% static 'js/jquery.appear.js' %}"></script>
+    <script defer  src="{% static 'js/jquery.stellar.min.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
-    <script src="{% static 'js/sticky.js' %}"></script>
+    <script defer  src="{% static 'js/sticky.js' %}"></script>
     <script src="{% static 'js/jquery.scrollto.js' %}"></script>
-    <script src="{% static 'js/materialize.js' %}"></script>
+    <script defer src="{% static 'js/materialize.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
@@ -539,6 +546,25 @@
         title: "{{ie.message}}",
         showConfirmButton: !1,
         timer: 2500,
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var script = document.createElement("script");
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y";
+          script.async = true;
+          document.body.appendChild(script);
+    
+          script.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-Q54R2WNM7Y");
+          };
+        }, 5000); // Load after 5 seconds (Adjust delay if needed)
       });
     </script>
     {% endfor %} {% block javascript %}{% endblock %}
