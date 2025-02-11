@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /blog/
+Disallow: /blog/*
 Disallow: /blog/?page=2
 Disallow: /blog/?page=3
 Disallow: /blog/?page=4
@@ -8,8 +10,37 @@ Disallow: /blog/?page=6
 Disallow: /blog/?page=7
 Disallow: /blog/?page=8
 Disallow: /blog/?page=9
-Disallow: /blog/*
 Disallow: /gallery/*
 Disallow: /event-gallery/expodent-delhi/*?*
 Disallow: /event-gallery/expodent-delhi/?page=2
 Sitemap: https://advancedentalexport.com/sitemap.xml
+
+-------new---------------------------
+User-agent: *
+Allow: /
+Allow: /blog
+Disallow: /blog/*?*
+Disallow: /blog/?page=2
+Disallow: /blog/?page=3
+Disallow: /blog/?page=4
+Disallow: /blog/?page=5
+Disallow: /blog/?page=6
+Disallow: /blog/?page=7
+Disallow: /blog/?page=8
+Disallow: /blog/?page=9
+Disallow: /gallery/*
+Disallow: /event-gallery/expodent-delhi/*?*
+Disallow: /event-gallery/expodent-delhi/?page=2
+Sitemap: https://advancedentalexport.com/sitemap.xml
+
+
+-----------------------------------------------
+User-agent: *
+Allow: /
+Allow : https://advancedentalexport.com/blog/
+Disallow: /blog/*
+Disallow: /blog/?page=*
+Disallow: /gallery/*
+Disallow: /event-gallery/expodent-delhi/*?*
+Disallow: /event-gallery/expodent-delhi/?page=2
+Sitemap: https://advancedentalexport.com/sitemap.xml 
