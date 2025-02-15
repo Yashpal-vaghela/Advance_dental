@@ -44,3 +44,15 @@ Disallow: /gallery/*
 Disallow: /event-gallery/expodent-delhi/*?*
 Disallow: /event-gallery/expodent-delhi/?page=2
 Sitemap: https://advancedentalexport.com/sitemap.xml 
+
+-----------------------last one robots 13-02-------------------------------------------------------
+User-agent: *
+Disallow: /blog/?page=*
+Disallow: /gallery/?page=*
+Disallow: /event-gallery/expodent-delhi/?page=*
+Disallow: /event-gallery/gujarat-dental-show-2019/?page=*
+Disallow: /event-gallery/famdent-mumbai/?page=*
+Disallow: /blog/*
+Allow: /blog/
+Allow: /sitemap.xml
+Sitemap: https://advancedentalexport.com/sitemap.xml
