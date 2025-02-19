@@ -263,7 +263,7 @@ def eventgallery(request, pk):
         data = paginator.page(1)
     except EmptyPage:
         data = paginator.page(paginator.num_pages)
-    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat})
+    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat, 'pk': pk})
     # Add noindex for specific pages (e.g., ?page=2 and onward)
     try:
         page_num = int(page)  # Convert page to integer
