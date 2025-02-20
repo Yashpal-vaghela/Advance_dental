@@ -8,7 +8,7 @@ def blog_home(request):
     page = request.GET.get('page', 1)
     data2 =  Category.objects.all().order_by('-id')
     data3 = Blog.objects.filter(main3=True).order_by('-id')
-    paginator = Paginator(data1, 9)
+    paginator = Paginator(data1, 12)
     try:
         data = paginator.page(page)
     except PageNotAnInteger:
