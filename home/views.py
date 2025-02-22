@@ -257,13 +257,14 @@ def eventgallery(request, pk):
     cat = Events.objects.get(slug=pk)
     page = request.GET.get('page', 1)
     paginator = Paginator(data1, 12)
+    meta_description = cat.meta_description
     try:
         data = paginator.page(page)
     except PageNotAnInteger:
         data = paginator.page(1)
     except EmptyPage:
         data = paginator.page(paginator.num_pages)
-    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat, 'pk': pk})
+    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat, 'pk': pk, 'meta_description': meta_description })
     # Add noindex for specific pages (e.g., ?page=2 and onward)
     try:
         page_num = int(page)  # Convert page to integer
