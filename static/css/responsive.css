@@ -2018,3 +2018,94 @@
      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   }
 }
+
+
+/* ABOUT NEW SECTION */
+
+@media (max-width: 991px) {
+  .about-info {
+      text-align: left; 
+  }
+
+  .info-4-img img {
+      width: 80%; /* Adjust image width */
+      height: auto;
+  }
+
+  .singnature {
+      text-align: center;
+  }
+
+  .trust-card, .trust-card1 {
+      text-align: center;
+      font-size: 16px;
+      padding: 15px;
+  }
+  .text-box p{
+     text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .row.d-flex {
+      flex-direction: column;
+  }
+  .about-info h4, p{
+      text-align: left; 
+  }
+  .col-lg-4, .col-lg-8 {
+      width: 100% !important; /* Full width for smaller screens */
+      text-align: center;
+  }
+
+  .info-4-img img {
+      width: 70%;
+  }
+
+  .stat-box {
+      flex-direction: column; 
+      text-align: center;
+  }
+
+  .icon-box img {
+      width: 40px; /* Reduce icon size */
+      height: auto;
+  }
+
+  .text-box h4 {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .trust-card, .trust-card1 {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-info h4{
+    font-size: 18px !important;
+  }
+  .stat-box {
+      flex-direction: column; 
+      align-items: center;
+      text-align: center;
+  }
+
+  .col-md-3 {
+      width: 50%; /* Make it 2 columns per row */
+  }
+
+  .trust-card, .trust-card1 {
+      font-size: 14px;
+  }
+
+  .btn-blue {
+      width: 100%; /* Make buttons full width */
+  }
+
+  .text-box h4 {
+      font-size: 18px;
+  }
+}

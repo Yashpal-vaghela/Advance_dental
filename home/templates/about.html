@@ -70,18 +70,18 @@
           <!-- INFO IMAGE -->
           <div class="col-lg-4">
             <div class="info-4-img text-center wow fadeInUp" data-wow-delay="0.6s">
-              <img class="img-fluid" src="{% static 'harsh.jpg' %}" width="356" height="485" alt="info-image" />
+              <img class="img-fluid" src="{% static 'aboutnew.png' %}" width="356" height="485" alt="info-image" />
             </div>
             <!-- Singnature -->
             <div class="singnature mt-20 text-center">
               <!-- Text -->
-              <p>
+              {% comment %} <p>
                 <b>CEO – Founder</b>
               </p>
-              <p class="p-small mb-15 blue-color fw-700">Haresh Savani - (K.L.E. Belgaum)</p>
+              <p class="p-small mb-15 blue-color fw-700">Haresh Savani - (K.L.E. Belgaum)</p> {% endcomment %}
               <!-- Singnature Image -->
               <!-- Recommended sizes for Retina Ready displays is 400x68px; -->
-              <img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="34" alt="signature-image" />
+              <img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="50" alt="signature-image" />
             </div>
           </div>
 
@@ -89,37 +89,47 @@
           <div class="col-lg-8 about-info">
             <div class="txt-block wow fadeInUp" data-wow-delay="0.4s">
               <!-- Section ID -->
-              <span class="mb-2 section-id blue-color"><u>Welcome to Advance Dental Export</u></span>
+              <span class="mb-2 section-id blue-color"<u>Welcome to Advance Dental Export</u></span>
               <!-- Title -->
-              <h4 class="mb-3 h4-sm steelblue-color">Best Dental Lab Services & Leader in Dental Implant Prosthesis, Cosmetic Dentistry and Digital Dentistry</h4>
+              <h4 class="mb-3 h4-sm steelblue-color" style="font-size: 20px;">Best Dental Lab Services & Leader in Dental Implant Prosthesis, Cosmetic Dentistry and Digital Dentistry</h4>
               <!-- Text -->
               <p style="text-align:justify">At Advance Dental Export (ADE), we don’t just craft dental prosthetics—we redefine smiles with precision, aesthetics, and longevity.</p>
               <!-- Text -->
               <p style="text-align:justify">Founded in 2009 by our visionary CEO, Haresh Savani, ADE has become a trusted leader in dental implant prosthesis, cosmetic dentistry, and digital dentistry. Every restoration we create is meticulously crafted in-house, ensuring faster turnaround times, minimal adjustments, and long-lasting results.</p>
-			  <!-- Updated Text -->
-              <h4 class="mb-3 h4-sm steelblue-color">Embracing the Digital Revolution in Dentistry</h4>
-			  <!-- Text -->
+			        <!-- Updated Text -->
+              <h4 class="mb-3 mt-3 h4-sm steelblue-color" style="font-size: 20px;">Embracing the Digital Revolution in Dentistry</h4>
+			        <!-- Text -->
               <p>Digital Dentistry is no longer the future—it’s the present. As pioneers in CAD/CAM digital solutions, we deliver unparalleled accuracy, efficiency, and cost-effectiveness.</p>
-			  <!-- Text -->
-			   <p>🔹 Instant 3D Scanning & Digital Workflow – Say goodbye to traditional impressions!</p>
-			   
-			   <p>🔹 Faster Turnaround, Superior Precision – Your patients deserve the best, without a wait</p>
-
-			   <p>🔹 Seamless Integration with Leading CAD/CAM Scanners – We support Cerec Connect,
-				3Shape, iTero, 3M ESPE, Carestream, and more.</p>
-				<p>🔹 State-of-the-Art Milling & Design – Customized prosthetics with impeccable esthetics</p>
-				<p>
-					As one of the only laboratories in the industry to guarantee restorations using authentic
-					manufacturer’s hardware and custom CAD/CAM abutments, we ensure your implants
-					retain their full warranty.
-				</p>
-				<div class="ade-points">
-					<p>Join us in the evolution of modern dentistry.</p>
-					<p>Let’s create smiles that inspire confidence—one restoration at a time.</p>
-					<p>Faster. Smarter. Better. That’s the ADE promise.</p>
-				</div>
+			        <!-- Text -->
+              <p>🔹 Instant 3D Scanning & Digital Workflow – Say goodbye to traditional impressions!</p>
+              <!-- Text -->
+              <p>🔹 Faster Turnaround, Superior Precision – Your patients deserve the best, without a wait</p>
+              <!-- Text -->
+              <p>🔹 Seamless Integration with Leading CAD/CAM Scanners – We support Cerec Connect,
+              3Shape, iTero, 3M ESPE, Carestream, and more.</p>
+              <!-- Text -->
+              <p>🔹 State-of-the-Art Milling & Design – Customized prosthetics with impeccable esthetics</p>
+              <!-- Text -->
+              <p>
+                As one of the only laboratories in the industry to guarantee restorations using authentic
+                manufacturer’s hardware and custom CAD/CAM abutments, we ensure your implants
+                retain their full warranty.
+              </p>
+              <!-- Key Points  -->
+              <div class="ade-points">
+                <p>Join us in the evolution of modern dentistry.</p>
+                <p>Let’s create smiles that inspire confidence—one restoration at a time.</p>
+                <p>Faster. Smarter. Better. That’s the ADE promise.</p>
+              </div>
+              <div class="text-left">
+                <a href="{% url 'home:contact_new' %}" 
+                   class="btn btn-blue blue-hover mt-20">
+                    Get In Touch
+                </a>
+              </div>
             </div>
-          </div> <!-- END TEXT BLOCK -->
+          </div> 
+          <!-- END TEXT BLOCK -->
 		  <div class="col-lg-12">
         <div class="text-center w-75 mx-auto">
           <h4 class="mb-3 mt-3 h4-md steelblue-color">Why Dentists Trust ADE ?</h4>
@@ -153,12 +163,64 @@
 		  </div>
         </div> <!-- End row -->
       </div> <!-- END TOP ROW -->
-
+      <!--Static Counter -->
+      <div class="container text-center my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-6">
+            <div class="stat-box d-flex align-items-center justify-content-center">
+              <div class="icon-box">
+                <img src="{% static 'cases.png' %}" alt = "cases">
+              </div>
+              <div class="text-box">
+                <h4><span class="count-element">6</span>L+</h4>
+                <p>Cases</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-box d-flex align-items-center justify-content-center">
+              <div class="icon-box">
+                <img src="{% static 'doctor.png' %}" alt = "doctor">
+              </div>
+              <div class="text-box">
+                <h4><span class="count-element">400</span>+</h4>
+                <p>Qualified Professional</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-box d-flex align-items-center justify-content-center">
+              <div class="icon-box">
+                <img src="{% static 'dentist-new.png' %}" alt = "cases">
+              </div>
+              <div class="text-box">
+                <h4><span class="count-element">3500</span>+</h4>
+                <p>Trusted Dentists</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-box d-flex align-items-center justify-content-center">
+              <div class="icon-box">
+                <img src="{% static 'location-new.png' %}" alt = "cases">
+              </div>
+              <div class="text-box">
+                <h4><span class="count-element">500</span>+</h4>
+                <p>Local Partners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Static Counter end -->
       <div class="row mb-5 mt-3">
         <div class="col-md-12">
           <div class="w-100 ytbe about_video" style="height: 80vh;" data-video-id="vYkVXmQgqUI">
             <img src="{% static 'img/team_about1.jpg' %}" alt="Video Thumbnail" class="video-thumbnail" />
-            <button class="play-button">▶</button>
+            <button class="play-button">
+              <img src="{% static 'img/Frame.png'%}" alt="play button"/>
+            </button>
+            <div class="video-text">Advance Dental Export</div>
           </div>
         </div>
       </div>
@@ -190,9 +252,9 @@
     </div>
   </section>
 
-  <section class="mt-5">
+  {% comment %} <section class="mt-5">
     {% include 'static_counts.html' %}
-  </section>
+  </section> {% endcomment %}
 
   <section class="mb-5 mt-5 about-qulified-section">
     <div class="container">
@@ -211,7 +273,7 @@
           <!-- END INFO TEXT -->
           <!-- INFO IMAGE -->
           <div class="col-lg-12">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.6s">
+            <div class="text-center team-image wow fadeInUp" data-wow-delay="0.6s">
               <img class="img-fluid" src="{% static 'ade.jpeg' %}" alt="info-image" />
             </div>
           </div>

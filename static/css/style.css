@@ -2544,7 +2544,12 @@ td.text-right {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 12px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3), -6px -6px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -2591,26 +2596,36 @@ td.text-right {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   object-fit: cover;
 }
 
 .play-button {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white;
+  bottom: 15px;
+  right: 15px;
+  background: #fff;
   border: none;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-  line-height: 60px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 2; /* Ensure it appears above the thumbnail */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1D907C;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.play-button img {
+  width: 18px;
+  height: auto;
+}
+.video-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .video-container:hover .play-button {
@@ -2619,6 +2634,9 @@ td.text-right {
 
 .video-wrapper:hover .play-button {
   background: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+}
+.team-image img{
+  border-radius: 20px;
 }
 
 #gallery-1 .gallery-items-list {
@@ -6599,4 +6617,35 @@ nav a#pull {
 }
 .trust-card1:hover {
   transform: translateY(-5px);
+}
+.stat-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.icon-box {
+  background-color: rgba(29, 144, 124, 0.2);;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box img{
+  width: 40px;
+  height: 40px;
+}
+
+.text-box h4 {
+  color: #1b8976;
+  font-size: 24px;
+  margin: 10px 0 5px;
+  text-align: start;
+}
+.text-box p {
+  font-size: 14px;
+  color: #555;
 }
