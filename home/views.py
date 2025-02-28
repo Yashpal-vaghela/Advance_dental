@@ -92,10 +92,11 @@ def verify_warrenty(request):
 def blogd(request, pk):
     data =  Blog.objects.get(slug=pk)
     data2 =  Blog.objects.all().order_by('-id')[:2]
+    cat = None
     for ie in data.category.all():
         cat = ie.category
         print(cat)
-    data3 =  Category.objects.get(category=cat)
+    data3 =  Category.objects.get(category=cat) if cat else None
     context = {
         'data':data,
         'data2':data2,
@@ -103,6 +104,7 @@ def blogd(request, pk):
     
     }
     return render(request, 'blogd.html', context)
+
 
 def contact(request):
     data= ContactDetails.objects.all()
@@ -246,7 +248,6 @@ def dashboard(request):
 
 def singUser(request):
     context = {
-
     }
     return render(request, 'singup.html', context)
 
@@ -274,6 +275,11 @@ def eventgallery(request, pk):
         pass  # Ignore if the page is not a valid number
 
     return response
+def neweventlink(request):
+    context = {
+    }
+    return render(request, 'singup.html', context)
+
 
 def about(request):
     team = Team.objects.all()
@@ -365,7 +371,7 @@ def gallery(request):
 
 def search(request):
     if request.method == 'GET':
-        q = request.GET.get('q')
+        q = request.GET.get('q', '').strip()
         data1 =  Blog.objects.filter(Q(h1__contains=q)| Q(content__contains=q)).order_by('-id')
         data2 =  Blog.objects.filter(most_visited=True).order_by('-id')[:4]
         page = request.GET.get('page', 1)

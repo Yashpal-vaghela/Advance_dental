@@ -225,8 +225,17 @@ class EventsGallery(models.Model):
     def __str__(self):
         return self.name
 
-    
-   
+class NewEventLink(models.Model):
+    name = models.CharField(max_length = 156)
+    city = models.CharField(max_length = 156)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    cover_image = models.ImageField(upload_to = "thumbnails/", blank=True, null=True)
+    social_links = models.URLField(blank=False, null=False)
+    skyline_image = models.ImageField(upload_to = "thumbnails/", blank=True, null=True)
+
+    def __str__(self):
+        return self.name
 
 class AboutImage(models.Model):   
     name = models.CharField(max_length = 156)
