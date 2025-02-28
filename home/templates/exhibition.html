@@ -21,7 +21,6 @@
 {% endblock css %}
     
 
-
 {% block body %}
 
     <!-- BREADCRUMB
@@ -49,8 +48,53 @@
 					</div>  <!-- End row -->	
 				</div>	<!-- End container -->		
 			</div>	<!-- END BREADCRUMB -->	
-
-            <div id="gallery-3" class="gallery-section division">
+			
+			<section class="exhibition-gallery-section my-5">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="exhibition-gallery-wrap-content col-lg-4 col-md-6 col-sm-6 col-10">
+							<div class="card exhibition-gallery-wrap">
+								<img src="{% static 'exhibition-gallery2.png' %}" class="img-fluid" />
+								<div class="exhibition-content">
+									<h2>Gujarat Dental Show</h2>
+									<h3>25 March , 2025</h3>
+								</div>
+								<div class="card-footer">
+									<h3 class="mb-0">Ahmedabad</h3>
+									<img src="{% static 'skyline1.png'%}" class="img-fluid" />
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-10 mt-0 mt-lg-5">
+							<div class="card exhibition-gallery-wrap">
+								<img src="{% static 'exhibition-gallery3.png' %}" class="img-fluid" />
+								<div class="exhibition-content">
+									<h2>Gujarat Dental Show</h2>
+									<h3>25 March , 2025</h3>
+								</div>
+								<div class="card-footer">
+									<h3 class="mb-0">Mumbai</h3>
+									<img src="{% static 'skyline1.png'%}" class="img-fluid" />
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-10 mt-md-5 mt-lg-0">
+							<div class="card exhibition-gallery-wrap">
+								<img src="{% static 'exhibition-gallery4.png' %}" class="img-fluid" />
+								<div class="exhibition-content">
+									<h2>Gujarat Dental Show</h2>
+									<h3>25 March , 2025</h3>
+								</div>
+								<div class="card-footer">
+									<h3 class="mb-0">Ahmedabad</h3>
+									<img src="{% static 'skyline1.png'%}" class="img-fluid" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            {% comment %} <div id="gallery-3" class="gallery-section division">
 				<div class="container">
 
 
@@ -119,7 +163,7 @@
 
 					
 			 	</div>	   <!-- End container -->	
-			</div>
+			</div> {% endcomment %}
 
 {% endblock body %}
     
