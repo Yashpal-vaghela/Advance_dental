@@ -47,6 +47,7 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     {% block css %} {% endblock %}
     <!-- Google tag (gtag.js) -->
@@ -490,6 +491,7 @@
     <script src="{% static 'js/jquery.appear.js' %}"></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
     <script src="{% static 'js/sticky.js' %}"></script>
     <script src="{% static 'js/jquery.scrollto.js' %}"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
@@ -533,6 +535,7 @@
       fbq("track", "PageView");
 
       new WOW().init();
+      AOS.init();
     </script>
     <noscript>
       <img

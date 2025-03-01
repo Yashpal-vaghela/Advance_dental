@@ -23,6 +23,7 @@
 {% endblock %} {% block css %}
 <link href="{% static 'css/review.css' %}" rel="stylesheet" />
 <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
 <link
   href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
   rel="stylesheet"
@@ -30,68 +31,11 @@
 {% endblock %} {% block body %}
 <h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
 
-{% comment %}
-<div class="your-slider">
-  <div>
-    <img src="{% static 'aa.jpg' %}" alt="Image 1" class="slide-img" />
-    <div class="b1-txt">
-      <p class="animated-b1-text">Your animated text here</p>
-    </div>
-  </div>
-  <div>
-    <div class="container banner-2 position-relative">
-      <img
-        src="{% static 'banner-2/Group.png'%}"
-        alt="zir-logo"
-        class="zir-logo"
-      />
-      <img
-        src="{% static 'banner-2/Group281.png'%}"
-        alt="ele-pic1"
-        class="ele-pic1"
-      />
-      <img
-        src="{% static 'banner-2/letter-1.png'%}"
-        alt="let-pic"
-        class="let-pic"
-      />
-      <img
-        src="{% static 'banner-2/letter-2.png'%}"
-        alt="let2-pic"
-        class="let2-pic"
-      />
-      <button class="btn btn-read-more">
-        Discover More <i class="fa-solid fa-arrow-right ms-1"></i>
-      </button>
-    </div>
-    <div class="larger-ele position-relative">
-      <img
-        src="{% static 'banner-2/image27.png'%}"
-        alt="grass-pic"
-        class="grass-pic"
-      />
-      <img
-        src="{% static 'banner-2/Group26.png'%}"
-        alt="white-pic"
-        class="white-pic"
-      />
-    </div>
-    <div class="optional">
-      <img
-        src="{% static 'banner-2/frameTest2.png'%}"
-        alt="slide2-optional"
-        class="slide2-optional"
-      />
-    </div>
-  </div>
-</div>
-{% endcomment %}
-
 <section class="hero-section1">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide banner-1-wrap position-relative">
-        <video width="100%" controls autoplay muted loop id="background-video">
+        <video width="100%" controls autoplay muted playsinline loop controlslist="nodownload nofullscreen noremoteplayback" id="background-video" oncontextmenu="return false;">
           <source
             src="{% static 'banner-2/banner-1-video2.mp4' %}"
             type="video/mp4"
@@ -102,14 +46,17 @@
             <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
               <img
                 src="{% static 'banner-2/banner-11.png' %}"
-                class="banner-1-img img-fluid"
+                class="banner-1-img img-fluid wow fadeInUp"
+                data-wow-delay="0.15s"
               />
             </div>
-            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
+            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5" >
               <div
                 class="title h1s text-white"
                 data-swiper-parallax="-300"
                 style="transform: translate3d(0px, 0px, 0px)"
+                data-aos="zoom-in-right" 
+                data-aos-duration="1500"
               >
                 Bringing Digital Revolution In
               </div>
@@ -117,6 +64,8 @@
                 class="subtitle h2s"
                 data-swiper-parallax="-200"
                 style="transform: translate3d(0px, 0px, 0px)"
+                data-aos="fade-right" 
+                data-aos-duration="2000"
               >
                 Digital Dentistry
               </div>
@@ -124,10 +73,11 @@
           </div>
         </div>
       </div>
+
       <div class="swiper-slide">
         <div class="container banner-2 position-relative">
           <img
-            src="{% static 'banner-2/Group.png'%}"
+            src="{% static 'banner-2/banner-31.png'%}"
             alt="zir-logo"
             class="zir-logo1"
           />
@@ -141,10 +91,8 @@
             alt="let-pic"
             class="let-pic1"
           />
-          <button class="btn btn-read-more1">
-            <a href="/zir-icon/"
-              >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
-            ></a>
+          <button class="btn btn-read-more1" >
+            <a href="/zir-icon/">Discover More <i class="fa-solid fa-arrow-right ms-1"></i></a>
           </button>
         </div>
         <div class="larger-ele position-relative">
@@ -163,50 +111,6 @@
           /></a>
         </div>
       </div>
-      {% comment %}
-      <div class="swiper-slide position-relative">
-        <video width="100%" controls autoplay muted loop id="background-video3">
-          <source
-            src="{% static 'banner-2/banner-3-video.mp4'%}"
-            type="video/mp4"
-          />
-        </video>
-        <div class="container">
-          <div class="row">
-            <div class="banner3-img">
-              <img
-                src="{% static 'banner-2/Subtract1.png' %}"
-                class="frame-img img-fluid"
-              />
-            </div>
-            <div class="col-lg-6">
-              <img
-                src="{% static 'banner-2/11.png'%}"
-                class="scaner-img1 img-fluid"
-              />
-              <img
-                src="{% static 'banner-2/1.png'%}"
-                class="scaner-img2 img-fluid"
-              />
-              <img
-                src="{% static 'banner-2/4.png'%}"
-                class="scaner-img5 img-fluid"
-              />
-            </div>
-            <div class="col-lg-6">
-              <img
-                src="{% static 'banner-2/Free.png' %}"
-                class="scaner-img3 img-fluid"
-              />
-              <img
-                src="{% static 'banner-2/2.png' %}"
-                class="scaner-img4 img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endcomment %}
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
