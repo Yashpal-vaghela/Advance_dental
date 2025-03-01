@@ -20,7 +20,7 @@
           <a href="{% url 'home:about' %}"><span {% if request.path == '/about-us/' %}class="heasder_active"{% endif %}>About Us</span> </a>
         </li> <!-- END DROPDOWN MENU -->
 
-        <li aria-haspopup="true">
+        <li aria-haspopup="true" class="wsmenu-dropdown">
           <span class="wsmenu-click"><i class="wsmenu-arrow"></i></span><a href="#"><span {% if request.path == '/' %}class=" "{% endif %} >Products</span> <span class="wsarrow"></span></a>
           <ul class="sub-menu">
             {% for ie in product %}

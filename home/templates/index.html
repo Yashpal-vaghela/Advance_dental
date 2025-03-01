@@ -87,43 +87,125 @@
     class="swiper mySwiper"
   >
     <div class="swiper-wrapper">
-      <div class="swiper-slide position-relative">
-        <img
-          src="{% static 'aa.webp' %}" 
-          srcset="
-            {% static 'aa-mobile.webp' %} 480w, 
-            {% static 'aa-tablet.webp' %} 768w, 
-            {% static 'aa.webp' %} 1200w"
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 100vw"
-          width="1200"
-          height="600"
-          class="banner-img"
-          alt="Advance Dental Export Images"
-        >
+      <div class="swiper-slide banner-1-wrap position-relative">
+        <video width="100%" controls autoplay muted loop id="background-video">
+          <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4">
+        </video>
         <div class="container">
-          <div class="row">
-            <div class="texts col-lg-8 col-md-10 col-sm-9 col-8">
-              <div class="title h1s text-black" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px);">
+          <div class="row mx-auto justify-content-center">
+          <div class="banner1-img col-lg-4 col-md-5 col-sm-6"> <img src="{% static 'banner-2/banner-1.png' %}" class="banner-1-img img-fluid" /></div>
+            <div class="texts col-lg-5 col-md-7 col-sm-6 col-8"> 
+              <div class="title h1s text-white" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px);">
                 Bringing Digital Revolution In
               </div>
-              <div class="subtitle h2s text-black" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px);">
+              <div class="subtitle h2s" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px);">
                 Digital Dentistry
               </div>
             </div>
           </div>
         </div>
-        {% comment %} <div class="overlay container">
-          <div class="row justify-content-center ">
-            <div class="texts col-lg-8 col-md-10 col-sm-9 col-8 text-center">
-              <div class="banner-title h1s text-black" data-swiper-parallax="-300">
-                Bringing Digital Revolution In
-              </div>
-              <div class="banner-subtitle h2s text-black" data-swiper-parallax="-200">
-                Digital Dentistry
-              </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="container banner-2 position-relative">
+            <img
+              src="{% static 'banner-2/Group.png'%}"
+              alt="zir-logo"
+              class="zir-logo1"
+            /> 
+            <img
+              src="{% static 'banner-2/Group281.png'%}"
+              alt="ele-pic1"
+              class="ele-pic2"
+            />
+            <img
+              src="{% static 'banner-2/letter-1.png'%}"
+              alt="let-pic"
+              class="let-pic1"
+            />
+            {% comment %} <img
+              src="{% static 'banner-2/letter-2.png'%}"
+              alt="let2-pic"
+              class="let-pic2"
+            />
+            <button class="btn btn-read-more1">
+              Discover More <i class="fa-solid fa-arrow-right ms-1"></i>
+            </button> {% endcomment %}
+          </div>
+          <div class="larger-ele position-relative">
+            <img
+              src="{% static 'banner-2/image27.png'%}"
+              alt="grass-pic"
+              class="grass-pic1"
+            />
+            {% comment %} <img
+              src="{% static 'banner-2/Group26.png'%}"
+              alt="white-pic"
+              class="white-pic1"
+            /> {% endcomment %}
+          </div>
+          <div class="optional1">
+            <img
+              src="{% static 'banner-2/frameTest2.png'%}"
+              alt="slide2-optional"
+              class="slide2-optional1"
+            />
+          </div>
+      </div>
+       <div class="swiper-slide position-relative">
+          <video width="100%" controls autoplay muted loop id="background-video3" >
+            <source src="{% static 'banner-2/banner-3-video.mp4'%}" type="video/mp4">
+          </video>
+          <div class="container">
+          <div class="row">
+           <div class="banner3-img"> 
+              <img src="{% static 'banner-2/Subtract1.png' %}" class="frame-img img-fluid" />
+            </div>
+            <div class="col-lg-6">
+              <img src="{% static 'banner-2/11.png'%}" class="scaner-img1 img-fluid"/>
+              <img src="{% static 'banner-2/1.png'%}" class="scaner-img2 img-fluid" />
+              <img src="{% static 'banner-2/4.png'%}" class="scaner-img5 img-fluid" />
+              {% comment %} <img src="{% static 'banner-2/3.png' %}" class="scaner-img2 img-fluid" /> {% endcomment %}
+            </div>
+            <div class="col-lg-6">
+              <img src="{% static 'banner-2/Free.png' %}" class="scaner-img3 img-fluid"/>
+              <img src="{% static 'banner-2/2.png' %}" class="scaner-img4 img-fluid"/>
             </div>
           </div>
-        </div> {% endcomment %}
+           
+            {% comment %} <img
+              src="{% static 'banner-2/banner-3-video.mp4'%}"
+              alt="zir-logo"
+            />  {% endcomment %}
+            {% comment %} <img
+              src="{% static 'banner-2/Free.png'%}"
+              alt="ele-pic1"
+              class="ele-pic2"
+            /> {% endcomment %}
+            {% comment %} <img
+              src="{% static 'banner-2/letter-1.png'%}"
+              alt="let-pic"
+              class="let-pic1"
+            /> {% endcomment %}
+          </div>
+          {% comment %} <div class="larger-ele position-relative">
+            <img
+              src="{% static 'banner-2/image27.png'%}"
+              alt="grass-pic"
+              class="grass-pic1"
+            />
+            <img
+              src="{% static 'banner-2/Group26.png'%}"
+              alt="white-pic"
+              class="white-pic1"
+            />
+          </div> {% endcomment %}
+          {% comment %} <div class="optional1">
+            <img
+              src="{% static 'banner-2/frameTest2.png'%}"
+              alt="slide2-optional"
+              class="slide2-optional1"
+            />
+          </div> {% endcomment %}
       </div>
       {% comment %} <div class="swiper-slide banner-2-img1" id="banner-2-img1">
         <div class="container px-md-0">
@@ -1425,5 +1507,11 @@
       videoContainer.appendChild(iframe);
     };
   });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let video = document.getElementById("background-video");
+    video.removeAttribute("controls"); // Ensures controls are removed dynamically
+});
 </script>
 {% endblock %}

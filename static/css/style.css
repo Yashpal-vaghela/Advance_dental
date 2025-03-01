@@ -1974,11 +1974,11 @@ p.header-widget-phone {
 
 #about-3 {
   position: relative;
-  margin-top: -160px;
+  /* margin-top: -160px; */
   padding: 60px 0;
   overflow: hidden;
   z-index: 99;
-  /* display:none; */
+  display:none;
 }
 
 #about-3::before {
@@ -5740,7 +5740,7 @@ nav a#pull {
 }
 @media(max-width:1200px){
   .texts{
-    top:25%;
+    top:22%;
     padding: 0px;
   }
 }

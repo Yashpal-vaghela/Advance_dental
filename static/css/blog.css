@@ -274,10 +274,16 @@ a {
   filter: grayscale(100%);
   border-radius: 5px;
 }
+.hero-section1 .banner-1-wrap .swiper-button-next,
+.hero-section1 .swiper-wrapper .swiper-slide:first-child .swiper-button-prev{
+  color: #fff !important;
+ }
 .hero-section1 .swiper-button-next,
 .hero-section1 .swiper-button-prev {
   color: #000 !important;
+  font-weight: 900;
 }
+
 .banner-2-img1 {
   background-image: url("../banner-2/Frame64.jpg") !important;
   border-bottom: 2px solid #000;
