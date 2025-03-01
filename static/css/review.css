@@ -241,7 +241,7 @@
   height: 100%;
   position: relative;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 .hero-section1 .swiper-wrapper .banner-1-wrap{
   background: #000;
@@ -260,8 +260,11 @@
 /* banner 1 */
 .banner1-img{
   position: absolute;
-  top: 39%;
+  top: 41%;
   left: 6%;
+}
+.banner1-img img{
+  width:82%;
 }
 .zir-logo1{
   position: absolute;
@@ -296,11 +299,15 @@
   position: absolute;
   z-index: 5;
   top: 530px !important;
-  right: 5%;
+  /* right: 5%; */
+  left:5%;
   background-color: #1D907C !important;
   padding: 4px 6px !important;
   border-radius: 8px !important;
   font-size: 14px !important;
+}
+.btn-read-more1 a{
+  color: #fff ;
 }
 .btn-read-more1 i{
   padding: 10px 10px 9px 10px;
@@ -335,7 +342,7 @@
   margin: 0 auto;
 }
 .hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
-  top: var(--swiper-navigation-top-offset, 53%) !important;
+  top: var(--swiper-navigation-top-offset, 50%) !important;
 }
 .hero-section1 .swiper-button-next::after,
 .hero-section1 .swiper-button-prev::after{
@@ -570,7 +577,7 @@
 }
 @media(min-width:1200px) and (max-width:1300px){
   .hero-section1{
-  height: 530px;
+    height: 530px;
   }
   .zir-logo1{
     height:auto;
@@ -601,9 +608,9 @@
     z-index: 5;
   }
   .btn-read-more1{
-    top:455px !important;
+    top:275px !important;
     /* top: 428px !important; */
-    right: 6%;
+    left: 8.5%;
   }
   .grass-pic1{
     top:285px;
@@ -669,10 +676,10 @@
     right:13%
   }
   .let-pic1{
-    width:375px !important;
+    width:365px !important;
     /* height:160px; */
-    left:2%;
-    top:155px !important;
+    left:8%;
+    top:100px !important;
   }
   .zir-logo1{
     right:4%;
@@ -684,14 +691,18 @@
     top:485px !important;
   }
   .btn-read-more1{
-    top:480px !important;
+    top:280px !important;
+    left:8%;
   }
   .banner-img1{
     max-height: 550px;
   }
-  /* banner 3 */
+  /* banner 1 */
   .banner1-img{
     top:51.5%
+  }
+  .banner1-img img{
+      width:90%;
   }
   .hero-section1 .h1s{
     font-size: 40px !important;
@@ -706,7 +717,7 @@
 @media(max-width:1024px){
    /* banner 3 */
   .banner1-img{
-    top:53.5%;
+    top:56.5%;
   }
 }
 @media (max-width: 991px) {
@@ -757,20 +768,20 @@
     top:20px !important;
   }
   .ele-pic2{
-    top:60px !important;
+    top:80px !important;
     right:0%;
-    width: 400px !important;
+    width: 370px !important;
     height: 420px !important;
   }
   .grass-pic1 {
-    top: 330px;
+    top: 340px;
   }
   .white-pic1{
     height: 112px !important;
     top:444px !important;
   }
   .let-pic1{
-    left:-8%;
+    left:-4%;
     height: auto;
   }
   .let-pic2{
@@ -779,8 +790,8 @@
     left:-8%;
   }
   .btn-read-more1{
-    top:480px !important;
-    right:-10%;
+    top:300px !important;
+    left:-3%;
     padding: 5px 8px !important;
     font-size: 12px !important;
   }
@@ -789,7 +800,7 @@
   }
   /* banner 3 */
   .banner1-img{
-    left:3%;
+    /* left:3%; */
     top: 59.5%;
   }
   .banner1-img img{
@@ -801,7 +812,7 @@
     height: 570px;
   }
   .grass-pic1{
-    top:280px;
+    top:310px;
   }
   .white-pic1{
     height: 110px !important;
@@ -816,23 +827,23 @@
   .ele-pic2{
     width:340px !important;
     height: 370px !important;
-    top:48px !important;
+    top:76px !important;
     right:7%;
   }
   .zir-logo1{
     right:-2%;
     width:130px !important;
     height: 65px;
-    top:20px !important;
+    top:30px !important;
   }
   .let-pic1{
     left:0%;
     width:320px !important;
-    top:150px !important;
+    top:95px !important;
   }
   .btn-read-more1{
-    top:430px !important;
-    right:0%;
+    top:260px !important;
+    left:0%;
     padding: 3px 5px !important;
   }
   .banner-img1{
@@ -854,6 +865,9 @@
   .hero-section1 .h1s{
     font-size: 35px !important;
   }
+  .hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 53%) !important;
+  }
   .review-slider-testimonials {
     height: 490px;
   }
@@ -870,13 +884,14 @@
 
   .optional1 {
     width: 100% !important;
+    height:100%;
   }
   /* banner 3 */
   .banner1-img{
-    top:55%;
+    top:57%;
   }
   .banner1-img img {
-    width: 38%;
+    width: 36%;
   }
 }
 @media (max-width: 576px) {
@@ -931,12 +946,13 @@
    /* banner 3 */
    .banner1-img{
     top:60%;
+    left:1%;
   }
   .banner1-img img {
     width: 38%;
   }
   .hero-section1 .h1s, .hero-section1 .h2s{
-    font-size: 25px !important;
+    font-size: 20px !important;
   }
 }
 @media (max-width: 400px) {

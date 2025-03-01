@@ -14,19 +14,24 @@
 <meta name="og:image" content="{% static 'img/11.jpg' %}" />
 <meta property="og:site_name" content="Advance Dental Export" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports" />
+<meta
+  name="twitter:description"
+  content="Advance Dental Export is a full service dental lab that specializes in dentures, implants, bridges and other teeth services. Lab also imports and exports"
+/>
 <meta name="twitter:title" content="Advance Dental Export" />
 <meta name="twitter:image" content="{% static 'img/11.jpg' %}" />
-{% endblock %} 
-{% block css %}
-<link  href="{% static 'css/review.css' %}" rel='stylesheet' />
-<link  href="{% static 'css/blog.css' %}" rel='stylesheet' />
-<link  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel='stylesheet' />
-{% endblock %}
-{% block body %}
+{% endblock %} {% block css %}
+<link href="{% static 'css/review.css' %}" rel="stylesheet" />
+<link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+<link
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  rel="stylesheet"
+/>
+{% endblock %} {% block body %}
 <h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
 
-{% comment %} <div class="your-slider">
+{% comment %}
+<div class="your-slider">
   <div>
     <img src="{% static 'aa.jpg' %}" alt="Image 1" class="slide-img" />
     <div class="b1-txt">
@@ -79,26 +84,40 @@
       />
     </div>
   </div>
-</div> {% endcomment %}
+</div>
+{% endcomment %}
 
 <section class="hero-section1">
-  <div
-    style="--swiper-navigation-color:red; --swiper-pagination-color: red"
-    class="swiper mySwiper"
-  >
+  <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide banner-1-wrap position-relative">
         <video width="100%" controls autoplay muted loop id="background-video">
-          <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4">
+          <source
+            src="{% static 'banner-2/banner-1-video2.mp4' %}"
+            type="video/mp4"
+          />
         </video>
         <div class="container">
           <div class="row mx-auto justify-content-center">
-          <div class="banner1-img col-lg-4 col-md-5 col-sm-6"> <img src="{% static 'banner-2/banner-1.png' %}" class="banner-1-img img-fluid" /></div>
-            <div class="texts col-lg-5 col-md-7 col-sm-6 col-8"> 
-              <div class="title h1s text-white" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px);">
+            <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
+              <img
+                src="{% static 'banner-2/banner-11.png' %}"
+                class="banner-1-img img-fluid"
+              />
+            </div>
+            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
+              <div
+                class="title h1s text-white"
+                data-swiper-parallax="-300"
+                style="transform: translate3d(0px, 0px, 0px)"
+              >
                 Bringing Digital Revolution In
               </div>
-              <div class="subtitle h2s" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px);">
+              <div
+                class="subtitle h2s"
+                data-swiper-parallax="-200"
+                style="transform: translate3d(0px, 0px, 0px)"
+              >
                 Digital Dentistry
               </div>
             </div>
@@ -106,138 +125,88 @@
         </div>
       </div>
       <div class="swiper-slide">
-          <div class="container banner-2 position-relative">
-            <img
-              src="{% static 'banner-2/Group.png'%}"
-              alt="zir-logo"
-              class="zir-logo1"
-            /> 
-            <img
-              src="{% static 'banner-2/Group281.png'%}"
-              alt="ele-pic1"
-              class="ele-pic2"
-            />
-            <img
-              src="{% static 'banner-2/letter-1.png'%}"
-              alt="let-pic"
-              class="let-pic1"
-            />
-            {% comment %} <img
-              src="{% static 'banner-2/letter-2.png'%}"
-              alt="let2-pic"
-              class="let-pic2"
-            />
-            <button class="btn btn-read-more1">
-              Discover More <i class="fa-solid fa-arrow-right ms-1"></i>
-            </button> {% endcomment %}
-          </div>
-          <div class="larger-ele position-relative">
-            <img
-              src="{% static 'banner-2/image27.png'%}"
-              alt="grass-pic"
-              class="grass-pic1"
-            />
-            {% comment %} <img
-              src="{% static 'banner-2/Group26.png'%}"
-              alt="white-pic"
-              class="white-pic1"
-            /> {% endcomment %}
-          </div>
-          <div class="optional1">
-            <img
-              src="{% static 'banner-2/frameTest2.png'%}"
-              alt="slide2-optional"
-              class="slide2-optional1"
-            />
-          </div>
-      </div>
-       <div class="swiper-slide position-relative">
-          <video width="100%" controls autoplay muted loop id="background-video3" >
-            <source src="{% static 'banner-2/banner-3-video.mp4'%}" type="video/mp4">
-          </video>
-          <div class="container">
-          <div class="row">
-           <div class="banner3-img"> 
-              <img src="{% static 'banner-2/Subtract1.png' %}" class="frame-img img-fluid" />
-            </div>
-            <div class="col-lg-6">
-              <img src="{% static 'banner-2/11.png'%}" class="scaner-img1 img-fluid"/>
-              <img src="{% static 'banner-2/1.png'%}" class="scaner-img2 img-fluid" />
-              <img src="{% static 'banner-2/4.png'%}" class="scaner-img5 img-fluid" />
-              {% comment %} <img src="{% static 'banner-2/3.png' %}" class="scaner-img2 img-fluid" /> {% endcomment %}
-            </div>
-            <div class="col-lg-6">
-              <img src="{% static 'banner-2/Free.png' %}" class="scaner-img3 img-fluid"/>
-              <img src="{% static 'banner-2/2.png' %}" class="scaner-img4 img-fluid"/>
-            </div>
-          </div>
-           
-            {% comment %} <img
-              src="{% static 'banner-2/banner-3-video.mp4'%}"
-              alt="zir-logo"
-            />  {% endcomment %}
-            {% comment %} <img
-              src="{% static 'banner-2/Free.png'%}"
-              alt="ele-pic1"
-              class="ele-pic2"
-            /> {% endcomment %}
-            {% comment %} <img
-              src="{% static 'banner-2/letter-1.png'%}"
-              alt="let-pic"
-              class="let-pic1"
-            /> {% endcomment %}
-          </div>
-          {% comment %} <div class="larger-ele position-relative">
-            <img
-              src="{% static 'banner-2/image27.png'%}"
-              alt="grass-pic"
-              class="grass-pic1"
-            />
-            <img
-              src="{% static 'banner-2/Group26.png'%}"
-              alt="white-pic"
-              class="white-pic1"
-            />
-          </div> {% endcomment %}
-          {% comment %} <div class="optional1">
-            <img
-              src="{% static 'banner-2/frameTest2.png'%}"
-              alt="slide2-optional"
-              class="slide2-optional1"
-            />
-          </div> {% endcomment %}
-      </div>
-      {% comment %} <div class="swiper-slide banner-2-img1" id="banner-2-img1">
-        <div class="container px-md-0">
-          <div class="row align-items-center justify-content-between">
-             <div class="col-lg-6 col-md-7 col-sm-7 col-7 banner-2-1 px-0">
-              <div class="banner-2-img2">
-                <img
-                  src="{% static 'banner-2/letter-1.png'%}"
-                  class="banner-img"
-                />
-              </div>
-              <div class="banner-3-img6">
-                <h6>
-                  Experience seamless smile integration with precision and
-                  comfort, powered by Advance dental export for a perfect,
-                  confident smile.
-                </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4 col-4 banner-2-2 px-0">
-              <div class="banner-2-img3" id="banner-2-img3">
-                <img
-                  src="{% static 'banner-2/Group.png' %}"
-                  class="img-fluid"
-                />
-              </div>
-              <button class="btn btn-discover-more">
-               Discover More <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div> 
+        <div class="container banner-2 position-relative">
+          <img
+            src="{% static 'banner-2/Group.png'%}"
+            alt="zir-logo"
+            class="zir-logo1"
+          />
+          <img
+            src="{% static 'banner-2/Group281.png'%}"
+            alt="ele-pic1"
+            class="ele-pic2"
+          />
+          <img
+            src="{% static 'banner-2/letter-1.png'%}"
+            alt="let-pic"
+            class="let-pic1"
+          />
+          <button class="btn btn-read-more1">
+            <a href="/zir-icon/"
+              >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
+            ></a>
+          </button>
         </div>
-      </div> {% endcomment %}
+        <div class="larger-ele position-relative">
+          <img
+            src="{% static 'banner-2/image27.png'%}"
+            alt="grass-pic"
+            class="grass-pic1"
+          />
+        </div>
+        <div class="optional1">
+          <a href="/zir-icon/"
+            ><img
+              src="{% static 'banner-2/banner-3.jpg'%}"
+              alt="slide2-optional"
+              class="slide2-optional1"
+          /></a>
+        </div>
+      </div>
+      {% comment %}
+      <div class="swiper-slide position-relative">
+        <video width="100%" controls autoplay muted loop id="background-video3">
+          <source
+            src="{% static 'banner-2/banner-3-video.mp4'%}"
+            type="video/mp4"
+          />
+        </video>
+        <div class="container">
+          <div class="row">
+            <div class="banner3-img">
+              <img
+                src="{% static 'banner-2/Subtract1.png' %}"
+                class="frame-img img-fluid"
+              />
+            </div>
+            <div class="col-lg-6">
+              <img
+                src="{% static 'banner-2/11.png'%}"
+                class="scaner-img1 img-fluid"
+              />
+              <img
+                src="{% static 'banner-2/1.png'%}"
+                class="scaner-img2 img-fluid"
+              />
+              <img
+                src="{% static 'banner-2/4.png'%}"
+                class="scaner-img5 img-fluid"
+              />
+            </div>
+            <div class="col-lg-6">
+              <img
+                src="{% static 'banner-2/Free.png' %}"
+                class="scaner-img3 img-fluid"
+              />
+              <img
+                src="{% static 'banner-2/2.png' %}"
+                class="scaner-img4 img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endcomment %}
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -247,10 +216,7 @@
 
 <section id="about-3" class="about-section division">
   <div class="container abox-3-holder">
-    <div
-      class="row abox-3 wow fadeInUp"
-      style="visibility: visible;"
-    >
+    <div class="row abox-3 wow fadeInUp" style="visibility: visible">
       <!-- First Column -->
       <div class="col-lg-4 col-md-6 text-center">
         <div class="w-100 h-auto d-flex justify-content-center">
@@ -361,10 +327,7 @@
         <div
           class="txt-block pc-30 wow fadeInUp pt-5"
           data-wow-delay="0.4s"
-          style="
-            visibility: visible;
-            animation-delay: 0.4s;
-          "
+          style="visibility: visible; animation-delay: 0.4s"
         >
           <span class="section-id blue-color"
             >Welcome to Advance Dental Export</span
@@ -396,10 +359,7 @@
         <div
           class="about-img text-center wow fadeInUp"
           data-wow-delay="0.6s"
-          style="
-            visibility: visible;
-            animation-delay: 0.6s;
-          "
+          style="visibility: visible; animation-delay: 0.6s"
         >
           <img
             class="img-fluid lazy"
@@ -426,15 +386,10 @@
           <div
             class="statistic-block icon-lg wow fadeInUp"
             data-wow-delay="0.4s"
-            style="
-              visibility: visible;
-              animation-delay: 0.2s;
-            "
+            style="visibility: visible; animation-delay: 0.2s"
           >
             <span class="flaticon-143-teeth" style="color: #333"></span>
-            <h5 class="statistic-number">
-            6L
-            </h5>
+            <h5 class="statistic-number">6L</h5>
             <p class="txt-400">Cases</p>
           </div>
         </div>
@@ -442,15 +397,10 @@
           <div
             class="statistic-block icon-lg wow fadeInUp"
             data-wow-delay="0.6s"
-            style="
-              visibility: visible;
-              animation-delay: 0.4s;
-            "
+            style="visibility: visible; animation-delay: 0.4s"
           >
             <span class="flaticon-137-doctor" style="color: #333"></span>
-            <h5 class="statistic-number">
-            400
-            </h5>
+            <h5 class="statistic-number">400</h5>
             <p class="txt-400">Qualified Professionals</p>
           </div>
         </div>
@@ -458,10 +408,7 @@
           <div
             class="statistic-block icon-lg wow fadeInUp"
             data-wow-delay="0.8s"
-            style="
-              visibility: visible;
-              animation-delay: 0.6s;
-            "
+            style="visibility: visible; animation-delay: 0.6s"
           >
             <span
               ><img
@@ -471,9 +418,7 @@
                 width="70"
                 height="70"
             /></span>
-            <h5 class="statistic-number d-flex justify-content-center">
-            3500
-            </h5>
+            <h5 class="statistic-number d-flex justify-content-center">3500</h5>
             <p class="txt-400">Trusted Dentist</p>
           </div>
         </div>
@@ -481,15 +426,10 @@
           <div
             class="statistic-block icon-lg wow fadeInUp"
             data-wow-delay="0.8s"
-            style="
-              visibility: visible;
-              animation-delay: 1s;
-            "
+            style="visibility: visible; animation-delay: 1s"
           >
             <span class="flaticon-040-placeholder" style="color: #333"></span>
-            <h5 class="statistic-number">
-            500
-            </h5>
+            <h5 class="statistic-number">500</h5>
             <p class="txt-400">Local Partners</p>
           </div>
         </div>
@@ -524,12 +464,12 @@
             </div>
             <div class="sbox-51-txt">
               <h3 class="card-title">
-               <a
+                <a
                   href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}"
-                  class=" title-link"
+                  class="title-link"
                   >Porcelain fused to metal (PFM)</a
                 >
-              </h3> 
+              </h3>
               <p class="card-desc">
                 Porcelain bonded to metal has reminded one of the most
                 predictable and strongest choices for dental restoration. Our
@@ -559,8 +499,10 @@
               />
             </div>
             <div class="sbox-51-txt">
-              <h3 class="card-title ">
-                <a href="{% url 'blogd' 'zir-icon' %}" class="title-link">Advance Zirconia</a>
+              <h3 class="card-title">
+                <a href="{% url 'blogd' 'zir-icon' %}" class="title-link"
+                  >Advance Zirconia</a
+                >
               </h3>
               <p class="card-desc">
                 Zir-icon is a high strength, milled to full contour, highly
@@ -587,9 +529,13 @@
               />
             </div>
             <div class="sbox-51-txt">
-              <h3 class="card-title"> 
-                  <a href="{% url 'blogd' 'aesthetic-maxima' %}" class="title-link">IPS e.max All Ceramic Restorations</a>
-              </h3> 
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'aesthetic-maxima' %}"
+                  class="title-link"
+                  >IPS e.max All Ceramic Restorations</a
+                >
+              </h3>
               <p class="card-desc">
                 Our revolutionary new e.max CAD/CAM ceramic restorations offer
                 the latest in digital design technology and ceramic engineering
@@ -617,9 +563,11 @@
               />
             </div>
             <div class="sbox-51-txt">
-              <h3 class="card-title"> 
-                  <a href="{% url 'blogd' 'ad-abutments' %}"  class=" title-link">Ad- Abutments Product Implant</a >
-              </h3> 
+              <h3 class="card-title">
+                <a href="{% url 'blogd' 'ad-abutments' %}" class="title-link"
+                  >Ad- Abutments Product Implant</a
+                >
+              </h3>
               <p class="card-desc">
                 AD- abutments are custom engineered to best meet each patient’s
                 case needs. ADE uses the most advanced design and milling
@@ -646,9 +594,13 @@
               />
             </div>
             <div class="sbox-5-txt">
-              <h3 class="card-title"> 
-                <a href="{% url 'blogd' 'digital-crown-bridge' %}" class="title-link">Digital Crown & Bridges</a>
-              </h3> 
+              <h3 class="card-title">
+                <a
+                  href="{% url 'blogd' 'digital-crown-bridge' %}"
+                  class="title-link"
+                  >Digital Crown & Bridges</a
+                >
+              </h3>
               <p class="card-desc">
                 Digital dentistry at advance dental export CAD/CAM milling and
                 3D printing Full Service Dental Laboratory The world of Cad-Cam
@@ -680,8 +632,12 @@
             </div>
             <div class="sbox-5-txt">
               <h3 class="card-title">
-                <a href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" class="title-link" >BPS – Biofunctional Prosthetic System</a >
-              </h3> 
+                <a
+                  href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}"
+                  class="title-link"
+                  >BPS – Biofunctional Prosthetic System</a
+                >
+              </h3>
               <p class="card-desc">
                 They provide you with self-confidence, charisma, and
                 self-assurance. Therefore, you want to gather all the necessary
@@ -711,8 +667,10 @@
             </div>
             <div class="sbox-5-txt">
               <h3 class="card-title">
-                <a href="{% url 'blogd' 'nobelprocera' %}" class=" title-link">NobelProcera Solution</a>
-              </h3> 
+                <a href="{% url 'blogd' 'nobelprocera' %}" class="title-link"
+                  >NobelProcera Solution</a
+                >
+              </h3>
               <p class="card-desc">
                 No one knows industrially produced CAD/CAM dental prosthetics
                 like we do. Nobel Biocare was the first to produce dental
@@ -802,7 +760,10 @@
 </section>
 
 <!-- Introduction for the lab -->
-<section id="services-7" class="bg-lightgrey wide-601 servicess-section division">
+<section
+  id="services-7"
+  class="bg-lightgrey wide-601 servicess-section division"
+>
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mx-auto section-title">
@@ -813,7 +774,11 @@
       <div class="col-lg-12">
         <div class="row mx-sm-0">
           <div class="col-md-6 col-lg-4 future-card">
-            <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible;">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+              data-wow-delay="0.2s"
+              style="visibility: visible"
+            >
               <div class="hexagon">
                 <span class="flaticon-137-doctor blue-color"></span>
               </div>
@@ -832,9 +797,7 @@
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.4s"
-              style="
-                visibility: visible;
-              "
+              style="visibility: visible"
             >
               <div class="hexagon">
                 <span class="flaticon-076-microscope blue-color"></span>
@@ -854,9 +817,7 @@
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.6s"
-              style="
-                visibility: visible;
-              "
+              style="visibility: visible"
             >
               <div class="hexagon">
                 <span class="flaticon-080-shield blue-color"></span>
@@ -876,9 +837,7 @@
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.2s"
-              style="
-                visibility: visible;
-              "
+              style="visibility: visible"
             >
               <div class="hexagon">
                 <span class="flaticon-113-clinic-history-4 blue-color"></span>
@@ -900,9 +859,7 @@
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.4s"
-              style="
-                visibility: visible;
-              "
+              style="visibility: visible"
             >
               <div class="hexagon">
                 <span class="flaticon-143-teeth blue-color"></span>
@@ -924,9 +881,7 @@
             <div
               class="sbox-7 icon-xs wow fadeInUp"
               data-wow-delay="0.6s"
-              style="
-                visibility: visible;
-              "
+              style="visibility: visible"
             >
               <div class="hexagon">
                 <span class="flaticon-079-safebox blue-color"></span>
@@ -964,10 +919,7 @@
         <div
           class="sbox-6 text-md-start text-lg-end wow fadeInRight"
           data-wow-delay="0.2s"
-          style="
-            visibility: visible;
-            animation-delay: 0.2s;
-          "
+          style="visibility: visible; animation-delay: 0.2s"
         >
           <h5
             class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
@@ -984,10 +936,7 @@
         <div
           class="sbox-6 text-md-start text-lg-end wow fadeInRight"
           data-wow-delay="0.4s"
-          style="
-            visibility: visible;
-            animation-delay: 0.4s;
-          "
+          style="visibility: visible; animation-delay: 0.4s"
         >
           <h5
             class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
@@ -1005,10 +954,7 @@
         <div
           class="sbox-6 text-md-start text-lg-end wow fadeInRight"
           data-wow-delay="0.6s"
-          style="
-            visibility: visible;
-            animation-delay: 0.6s;
-          "
+          style="visibility: visible; animation-delay: 0.6s"
         >
           <h5
             class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
@@ -1023,10 +969,7 @@
         <div
           class="sbox-6 text-md-start text-lg-end wow fadeInRight"
           data-wow-delay="0.8s"
-          style="
-            visibility: visible;
-            animation-delay: 0.8s;
-          "
+          style="visibility: visible; animation-delay: 0.8s"
         >
           <h5
             class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center"
@@ -1052,10 +995,7 @@
         <div
           class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
           data-wow-delay="0.2s"
-          style="
-            visibility: visible;
-            animation-delay: 0.2s;
-          "
+          style="visibility: visible; animation-delay: 0.2s"
         >
           <h5 class="h5-md">Cosmetic Restoration Service</h5>
           <p>
@@ -1067,10 +1007,7 @@
         <div
           class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
           data-wow-delay="0.4s"
-          style="
-            visibility: visible;
-            animation-delay: 0.4s;
-          "
+          style="visibility: visible; animation-delay: 0.4s"
         >
           <h5 class="h5-md">Implant Specialists</h5>
           <p>
@@ -1082,10 +1019,7 @@
         <div
           class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
           data-wow-delay="0.6s"
-          style="
-            visibility: visible;
-            animation-delay: 0.6s;
-          "
+          style="visibility: visible; animation-delay: 0.6s"
         >
           <h5 class="h5-md">Custom Milling</h5>
           <p>
@@ -1096,10 +1030,7 @@
         <div
           class="sbox-6 pl-30 text-lg-start wow fadeInLeft"
           data-wow-delay="0.8s"
-          style="
-            visibility: visible;
-            animation-delay: 0.8s;
-          "
+          style="visibility: visible; animation-delay: 0.8s"
         >
           <h5 class="h5-md">Laser Welding</h5>
           <p>Laser welding for quick repairs of partial dentures</p>
@@ -1118,7 +1049,7 @@
       </div>
 
       <div
-        class="owl-carousel owl-theme gallery-holder  listing-gallery-img-item"
+        class="owl-carousel owl-theme gallery-holder listing-gallery-img-item"
       >
         {% for ie in gallery21 %}
         <!-- SERVICE BOX #1 -->
@@ -1144,7 +1075,8 @@
             href="{% url 'home:beforeafter' %}"
             class="btn btn-blue blue-hover submit"
             aria-label="See more in the Ade after befor"
-            >See More</a>
+            >See More</a
+          >
         </div>
       </div>
     </div>
@@ -1166,67 +1098,68 @@
     <div class="container position-relative text-center">
       <div class="row justify-content-center carousel-row">
         <div
-            class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
-            data-bs-ride="carousel"
-            id="carouselExampleControls">
-            <div class="review-slider-testimonials">
-              <div class="carousel-inner">
-                {% for ie in data %}
+          class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
+          data-bs-ride="carousel"
+          id="carouselExampleControls"
+        >
+          <div class="review-slider-testimonials">
+            <div class="carousel-inner">
+              {% for ie in data %}
+              <div
+                class="{% if forloop.first %}active{% endif %} carousel-item"
+                aria-label="Slide {{ forloop.counter }}"
+              >
                 <div
-                  class="{% if forloop.first %}active{% endif %} carousel-item "
-                  aria-label="Slide {{ forloop.counter }}"
+                  class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
                 >
-                  <div
-                    class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
-                  >
-                    <div class="user_image">
-                      <img
-                        src="{% static 'img/profile-user-3.png' %}"
-                        class="d-block w-100"
-                        alt="user"
-                        width="100%"
-                        height="100%"
-                      />
-                    </div>
-                    <p class="review-user-txt">
-                      <i class="fa-solid fa-quote-left"></i>
-                      {{ ie.review }}
-                      <i class="fa-solid fa-quote-right"></i>
-                    </p>
-                    <h5 class="review-user-name">{{ ie.name }}</h5>
-                    <span class="review-user-desk" style="float: right"
-                      >{{ ie.position }}</span
-                    >
+                  <div class="user_image">
+                    <img
+                      src="{% static 'img/profile-user-3.png' %}"
+                      class="d-block w-100"
+                      alt="user"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
+                  <p class="review-user-txt">
+                    <i class="fa-solid fa-quote-left"></i>
+                    {{ ie.review }}
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
+                  <h5 class="review-user-name">{{ ie.name }}</h5>
+                  <span class="review-user-desk" style="float: right"
+                    >{{ ie.position }}</span
+                  >
                 </div>
-                {% endfor %}
               </div>
-              <div class="carousel-controls">
-                <button
-                  class="carousel-control-prev review-prev-button"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                </button>
-                <button
-                  class="carousel-control-next review-next-button"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                </button>
-              </div>
+              {% endfor %}
+            </div>
+            <div class="carousel-controls">
+              <button
+                class="carousel-control-prev review-prev-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next review-next-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1342,15 +1275,15 @@
   <div class="swiper clientLogo">
     <div class="swiper-wrapper">
       {% for ie in client %}
-        <div class="swiper-slide position-relative"> 
-          <img
-            src="{{ ie.image.url }}"
-            class="company-partner-image img-fluid"
-            alt="Client Of ADE"
-            width="100%"
-            height="100%"
-          />
-        </div>
+      <div class="swiper-slide position-relative">
+        <img
+          src="{{ ie.image.url }}"
+          class="company-partner-image img-fluid"
+          alt="Client Of ADE"
+          width="100%"
+          height="100%"
+        />
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -1438,14 +1371,14 @@
       });
     }
   });
-  var swiper1 = new Swiper ('.clientLogo',{
+  var swiper1 = new Swiper(".clientLogo", {
     slidesPerView: 7,
     spaceBetween: 20,
     speed: 500,
     loop: true,
     autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
+      delay: 2000,
+      disableOnInteraction: false,
     },
     breakpoints: {
       576: {
@@ -1467,23 +1400,24 @@
         slidesPerView: 8,
       },
       1900: {
-        slidesPerView: 10
-      }
-    }
-  })
-  var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 10,
+      },
+    },
+  });
+  var swiper = new Swiper(".mySwiper", {
     speed: 600,
     parallax: !0,
     loop: true,
+
     pagination: {
-      el: '.swiper-pagination',
-      clickable: !0
+      el: ".swiper-pagination",
+      clickable: !0,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  }) 
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 </script>
 <script src="{% static 'js/galleryanimation.js' %}"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>
@@ -1507,11 +1441,5 @@
       videoContainer.appendChild(iframe);
     };
   });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let video = document.getElementById("background-video");
-    video.removeAttribute("controls"); // Ensures controls are removed dynamically
-});
 </script>
 {% endblock %}

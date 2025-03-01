@@ -5746,11 +5746,21 @@ nav a#pull {
 }
 @media (max-width: 991px) {
   .texts {
-    top:38%;
+    top:45%;
     /* left: 35px; */
   }
 }
-
+@media(max-width:768px){
+  .texts {
+    top: 35%;
+    padding: 0px !important;
+  }
+}
+@media(max-width:576px){
+  .texts {
+    top: 45%;
+  }
+}
 .h1s {
   font-size: 30px !important;
   font-weight: 400;
@@ -5787,11 +5797,11 @@ nav a#pull {
   }
 }
 
-@media only screen and (max-width: 576px) {
+/* @media only screen and (max-width: 576px) {
   .texts {
     top: 35%;
   }
-}
+} */
 
 .faq-title h2 {
   position: relative;
@@ -6036,7 +6046,7 @@ nav a#pull {
   position: fixed;
   bottom: 20px;
   z-index: 1000;
-  width: 5%;
+  width: 3%;
 }
 .social-all-items {
   padding: 0px;
