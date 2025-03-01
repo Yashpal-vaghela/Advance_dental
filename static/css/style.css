@@ -3045,6 +3045,7 @@ td.text-right {
 .statistic-block .txt-400 {
   font-size: 16px;
   color: #1b8976;
+  text-align: center;
 }
 
 .statistic-block {
@@ -6736,4 +6737,119 @@ nav a#pull {
   /* .exhibition-gallery-wrap img{
     height: 400px;
   } */
+}
+/* ---------------------------------------------- Cards ---------------------------------------------- */
+.globalCard {
+  background: #FFFFFF;
+  border-bottom: 5px solid #1B8976;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09);
+  /* height: 416px; */
+  transition: all 0.5s ease-in-out;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.firstCard {
+  border-radius: 25px 25px 25px 90px;
+}
+
+.middle_card {
+  border-radius: 25px 25px 25px 25px;
+}
+
+.thirdCard {
+  border-radius: 25px 25px 90px 25px;
+}
+
+.globalCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 
+  0 5px 15px rgba(0, 0, 0, 0.07);
+  transform: translateY(-5px);
+}
+
+.cd_bg_icon_1 {
+  position: absolute;
+  top: -18%;
+  right: -21%;
+  height: 309.18px;
+  width: 246;
+}
+
+.cd_bg_icon_2 {
+  position: absolute;
+  top: -3%;
+  right: -22%;
+}
+
+.cd_bg_icon_3 {
+  position: absolute;
+  top: -21%;
+  right: -27%;
+  height: 309.18px;
+  width: 246;
+}
+
+.cd_icon {
+  height: 76px;
+  width: 76px;
+  margin-bottom: 20px;
+}
+
+.cd_subheading {
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  margin-bottom: 10px ;
+}
+
+.cd_heading {
+  font-weight: 600;
+  color: #1B8976;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.cd_text {
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555555;
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  .globalCard {
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .globalCard {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .firstCard {
+    border-radius: 90px 25px 25px 25px;
+  }
+
+  .globalCard {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .firstCard {
+    border-radius: 90px 25px 25px 25px;
+  }
+
+  .globalCard {
+    margin: 24px;
+  }
+
+  .cd_text {
+    font-size: 14px;
+  }
 }

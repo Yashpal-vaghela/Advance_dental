@@ -140,6 +140,11 @@ def exhibition(request):
     }
     return render(request, 'exhibition.html', context)
 
+# def neweventlink(request):
+#     context = {
+#     }
+#     return render(request, 'exhibition.html', context)
+
 
 def beforeafter(request):
     data = BeforeAfter.objects.all()
@@ -275,10 +280,7 @@ def eventgallery(request, pk):
         pass  # Ignore if the page is not a valid number
 
     return response
-def neweventlink(request):
-    context = {
-    }
-    return render(request, 'singup.html', context)
+
 
 
 def about(request):
