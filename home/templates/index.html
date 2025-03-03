@@ -119,7 +119,13 @@
       <!-- Card 1 -->
       <div class="col-lg-4 col-md-6">
           <div class=" firstCard globalCard">
-            <img  src="{% static 'quality_bg.svg'%}"  alt="Quality Check" class="cd_bg_icon_1" />
+            <img 
+                srcset="{% static 'quality_bg.svg' %} 600w, {% static 'quality_bg_large.svg' %} 1200w"
+                sizes="(max-width: 768px) 600px, 1200px"
+                src="{% static 'quality_bg.svg' %}"
+                alt="Quality Check"
+                class="cd_bg_icon_1"
+            >
               <div>
                 <img  src="{% static 'quality.svg'%}"  alt="Quality Check" class="cd_icon" />
                   <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
@@ -132,7 +138,13 @@
       <!-- Card 2 -->
       <div class="col-lg-4 col-md-6">
           <div class=" middle_card globalCard">
-            <img  src="{% static 'worldwide_bg.svg'%}"  alt="Quality Check" class="cd_bg_icon_2" />
+            <img 
+              srcset="{% static 'worldwide_bg.svg'%} 600w, {% static 'worldwide_bg.svg'%} 1200w"  
+              sizes = "(max-width:768px) 600px, 1200px"
+              src = "{% static 'worldwide_bg.svg'%}"
+              alt="Quality Check" 
+              class="cd_bg_icon_2" 
+            />
             <div >
               <img  src="{% static 'worldwide.svg'%}"  alt="Quality Check" class="cd_icon" />
                 <p class="cd_subheading">WORLD WIDE PRESENCE</p>
@@ -146,7 +158,13 @@
       <div class="col-lg-4 col-md-6">
           <div class="thirdCard globalCard">
               
-            <img  src="{% static 'fda_bg.svg'%}"  alt="Quality Check" class="cd_bg_icon_3" />
+            <img  
+              srcset="{% static 'fda_bg.svg'%} 600w,{% static 'fda_bg.svg'%} 1200w "  
+              sizes = "(max-width:768px) 600px, 1200px"
+              src = "{% static 'fda_bg.svg'%}"
+              alt="Quality Check" 
+              class="cd_bg_icon_3" 
+          />
             <div >
               <img  src="{% static 'FDA.svg'%}"  alt="Quality Check" class="cd_icon" />
                 <p class="cd_subheading">FDA REGISTERED</p>
