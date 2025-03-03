@@ -1,17 +1,22 @@
-/* .hero-section1 {
+.hero-section1 {
   height: 600px;
-} */
-
+}
 .hero-section1 .swiper {
   width: 100%;
   border-bottom: 2px solid #000;
   height: 100%;
 }
+.hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
+  top: var(--swiper-navigation-top-offset, 50%) !important;
+}
+.hero-section1 .swiper-button-next::after,
+.hero-section1 .swiper-button-prev::after{
+  font-size: 30px;
+}
 /* !---------------- banner 1 css ------------- ! */
 .hero-section1 .swiper-wrapper .banner-1-wrap {
   background: #000;
 }
-
 #background-video {
   background: #000 !important;
   opacity: 0.5;
@@ -20,7 +25,6 @@
   object-fit: cover;
   pointer-events: none !important;
 }
-
 .banner1-img {
   position: absolute;
   top: 41%;
@@ -29,12 +33,12 @@
 .banner1-img img {
   width: 91%;
 }
-/* .texts {
+.texts {
   position: absolute;
   top: 19.8%;
   border-radius: 20px;
   padding: 15px;
-} */
+}
 .hero-section1 .h1s {
   font-size: 45px !important;
   font-weight: 700 !important;
@@ -42,7 +46,6 @@
 .hero-section1 .h2s {
   color: rgba(17, 171, 147, 1) !important;
 }
-
 /* banner 2 css */
 .zir-logo1 {
   position: absolute;
@@ -72,7 +75,7 @@
   padding: 4px 6px !important;
   border-radius: 8px !important;
   font-size: 14px !important;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .btn-read-more1:hover,
 .btn-read-more1:focus {
@@ -82,7 +85,7 @@
 }
 .btn-read-more1 a {
   color: #fff;
-  transition: all 0.7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 .btn-read-more1:hover a,
 .btn-read-more1:focus a {
@@ -95,7 +98,7 @@
   color: #1d907c;
   transform: rotate(-45deg);
   border-radius: 50%;
-  transition: all 0.7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 .btn-read-more1:hover i,
 .btn-read-more1:focus i {
@@ -103,7 +106,6 @@
   color: #fff;
   transform: scale(0.9);
 }
-
 .grass-pic1 {
   position: absolute;
   top: 335px;
@@ -112,16 +114,55 @@
 .optional1 {
   width: 0% !important;
 }
+.slide2-optional1{
+  display: none;
+}
 
+/* slider animation */
+.hero-section1 .swiper-slide-active .ele-pic2{
+  animation: fadeInUp 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .zir-logo1 {
+  animation: fadeInRight 3s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .let-pic1{
+  animation: fadeInLeft 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .btn-read-more1{
+  animation: fadeInLeft 3s ease forwards;
+  transition-delay: 0.8s;
+}
+.hero-section1 .swiper-slide-active .texts {
+  animation: ZoomIn 1.5s ease;
+}
+@keyframes ZoomIn{
+  from {
+    opacity: 0;
+    transform: scale(.6);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+  }
+}
 /* responsive css  */
 @media screen and (min-width: 2800px) {
   .hero-section1 {
     height: 600px;
   }
+  .hero-section1 .swiper{
+    width:37% !important;
+  }
 }
 @media screen and (min-width: 2400px) and (max-width: 2800px) {
   .hero-section1 {
     height: 620px;
+  }
+  .hero-section1 .swiper{
+    width:75% !important;
   }
   /* banner 1 */
   .banner1-img {
@@ -151,6 +192,18 @@
     left: 2%;
   }
 }
+@media screen and (min-width:2100px) and (max-width:2400px){
+  .hero-section1{
+    height: 600px;
+  }
+  .hero-section1 .swiper{
+    width:74% !important;
+  }
+  /* banner 2 */
+  .ele-pic2{
+    top:32px !important
+  }
+}
 @media screen and (min-width: 1800px) and (max-width: 2000px) {
   /* banner 1  */
   .banner1-img {
@@ -173,11 +226,11 @@
     left: 5%;
     top: 120px !important;
   }
-  .btn-read-more1 {
-    top: 360px !important;
-  }
   .grass-pic1 {
     top: 350px;
+  }
+  .btn-read-more1 {
+    top: 360px !important;
   }
 }
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
@@ -197,6 +250,9 @@
     width: 470px !important;
     height: 520px !important;
   }
+  .grass-pic1 {
+    top: 360px;
+  }
   .let-pic1 {
     top: 120px !important;
     left: 5%;
@@ -204,11 +260,9 @@
   .btn-read-more1 {
     top: 360px !important;
   }
-  .grass-pic1 {
-    top: 360px;
-  }
 }
 @media screen and (min-width: 1439px) and (max-width: 1649px) {
+  /* banner 1 */
   .banner1-img img {
     width: 74%;
   }
@@ -218,16 +272,16 @@
     width: 362px !important;
     right: 19%;
   }
-  .btn-read-more1 {
-    top: 300px !important;
-    left: 5%;
-  }
   .grass-pic1 {
     top: 300px;
   }
   .let-pic1 {
     width: 430px !important;
     top: 82px !important;
+  }
+  .btn-read-more1 {
+    top: 300px !important;
+    left: 5%;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1649px) {
@@ -291,6 +345,9 @@
   .grass-pic1 {
     top: 360px;
   }
+  .slide2-optional1{
+    display: none;
+  }
 }
 
 /* max width responsive css */
@@ -298,13 +355,16 @@
   .hero-section1 {
     height: 550px;
   }
-
   /* banner 1 */
   .banner1-img {
     top: 51.5%;
   }
   .banner1-img img {
     width: 90%;
+  }
+  .texts{
+    top:28%;
+    padding: 0px;
   }
   .hero-section1 .h1s {
     font-size: 40px !important;
@@ -325,20 +385,17 @@
   }
   .let-pic1 {
     width: 365px !important;
-    /* height:160px; */
     left: 8%;
     top: 100px !important;
   }
   .grass-pic1 {
     top: 330px;
   }
-
   .btn-read-more1 {
     top: 280px !important;
     left: 8%;
   }
 }
-
 @media (max-width: 1024px) {
   /* banner 1 */
   .banner1-img {
@@ -351,11 +408,13 @@
   }
   /* banner 1 */
   .banner1-img {
-    /* left:3%; */
     top: 59.5%;
   }
   .banner1-img img {
     width: 80%;
+  }
+  .texts {
+    top:45%;
   }
   .hero-section1 .h1s,
   .hero-section1 .h2s {
@@ -370,13 +429,13 @@
     top: 20px !important;
   }
   .ele-pic2 {
-    top: 80px !important;
+    top: 85px !important;
     right: 0%;
     width: 370px !important;
     height: 420px !important;
   }
   .grass-pic1 {
-    top: 340px;
+    top: 348px;
   }
   .let-pic1 {
     left: -4%;
@@ -392,7 +451,6 @@
     padding: 8px 8px 7px 8px;
   }
 }
-
 @media (max-width: 900px) {
   .hero-section1 {
     height: 570px;
@@ -411,28 +469,69 @@
   .ele-pic2 {
     width: 340px !important;
     height: 370px !important;
-    top: 76px !important;
+    top: 88px !important;
     right: 7%;
   }
   .let-pic1 {
-    left: 0%;
-    width: 320px !important;
-    top: 95px !important;
+    left: 6%;
+    width: 300px !important;
+    top: 110px !important;
   }
   .grass-pic1 {
-    top: 310px;
+    top: 328px;
   }
-
-
-
-
-  
   .btn-read-more1 {
-    top: 260px !important;
-    left: 0%;
+    top: 270px !important;
+    left: 6%;
     padding: 3px 5px !important;
   }
-  .banner-img1 {
-    max-height: 100%;
+}
+@media (max-width: 768px) {
+  .hero-section1 {
+    height: auto;
+  }
+  .hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 53%) !important;
+  }
+  .hero-section1 .swiper-wrapper .swiper-slide:first-child {
+    height: auto;
+  }
+  .hero-section1 .h1s {
+    font-size: 35px !important;
+  }
+  .texts {
+    top: 35%;
+    padding: 0px !important;
+  }
+  .optional1 {
+    width: 100% !important;
+    height: 100%;
+  }
+  /* banner 1 */
+  .banner1-img {
+    top: 57%;
+  }
+  .banner1-img img {
+    width: 36%;
+  }
+}
+@media (max-width: 576px) {
+  .hero-section1 .h1s {
+    font-size: 25px !important;
+  }
+  .hero-section1 .h1s,
+  .hero-section1 .h2s {
+    font-size: 20px !important;
+  }
+  .texts {
+    top: 45%;
+  }
+  /* banner 1 */
+  .banner1-img {
+    top: 60%;
+    left: 1%;
+  }
+  .banner1-img img {
+    width: 38%;
   }
 }
