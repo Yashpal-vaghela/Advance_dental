@@ -12,16 +12,16 @@ function stickIt() {
     widthOrgElement = orgElement.css('width');
     $('.header .cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();
     $('.original').css('visibility','hidden');
-    if(window.innerWidth > 992){
-      $('.hero-section1').css('padding-top',50+'px');
-    }else{
-      $('.hero-section1').css('padding-top',0+'px');
-    }
+    // if(window.innerWidth > 992){
+    //   $('.zir-logo1').css('padding-top',50+'px');
+    // }else{
+    //   $('.hero-section1').css('padding-top',0+'px');
+    // }
   
   } else {
     // not scrolled past the menu; only show the original menu.
     $('.header .cloned').hide();
     $('.original').css('visibility','visible');
-    $('.hero-section1').css('padding-top',0+'px');
+    // $('.zir-logo1').css('padding-top',0+'px');
   }
 }
