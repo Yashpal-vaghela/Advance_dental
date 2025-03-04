@@ -915,6 +915,7 @@ ul.content-list li:last-child {
   border-color: #24a992;
 }
 
+
 .btn-darkgreen,
 .white-color .btn-darkgreen {
   color: #fff;
@@ -2239,7 +2240,7 @@ td.text-right {
 @media (max-width: 768px) {
   .sbox-51 {
     width: 400px;
-    height: 520px;
+    height: 425px;
   }
 }
 @media (max-width: 576px) {
@@ -5698,12 +5699,11 @@ nav a#pull {
   opacity: 0.8;
 }
 
-.hero-section1 .swiper {
+/* .hero-section1 .swiper {
   width: 100%;
   border-bottom: 2px solid #000;
   height: 100%;
-  /* height: 114vh; */
-}
+} */
 
 .swiper-slide {
   color: #fff;
@@ -5926,7 +5926,7 @@ nav a#pull {
     line-height: 26px;
     margin-top: 10px;
   }
-  .swiper-slide {
+  .hero-section1 .swiper-slide {
     padding-top: 72px;
   }
 }

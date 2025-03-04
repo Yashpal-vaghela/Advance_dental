@@ -3,7 +3,7 @@
 }
 .hero-section1 .swiper {
   width: 100%;
-  border-bottom: 2px solid #000;
+  /* border-bottom: 2px solid #000; */
   height: 100%;
 }
 .hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
@@ -525,6 +525,10 @@
   }
   .texts {
     top: 45%;
+    animation: none !important;
+  }
+  .hero-section1 .swiper-slide-active .texts{
+    animation: none !important;
   }
   /* banner 1 */
   .banner1-img {
@@ -533,5 +537,6 @@
   }
   .banner1-img img {
     width: 38%;
+    animation: none !important;
   }
 }

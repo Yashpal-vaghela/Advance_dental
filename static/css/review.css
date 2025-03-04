@@ -349,8 +349,8 @@
 }
 @media (max-width: 576px) {
   .review-slider-testimonials {
-    height: 510px;
-    padding: 45px 30px;
+    height: 480px;
+    padding: 45px 30px 45px 27px;
   }
   .review-section .review-user .user_image {
     width: 70px;
@@ -358,8 +358,7 @@
     margin: 0 auto 1rem auto;
   }
   .review-section .review-user .review-user-txt {
-    font-size: 13px !important;
-    letter-spacing: 1px;
+    font-size: 12px !important;
   }
   .review-user-name,
   .review-user-desk {
@@ -390,13 +389,17 @@
   .review-section .review-user-txt  i {
     font-size: 25px;
   }
-  .review-section .review-user .review-user-txt{
+  /* .review-section .review-user .review-user-txt{
     font-size: 14px !important;
-  }
+  } */
 }
 @media (max-width: 400px) {
   .review-slider-testimonials {
-    height: 510px;
+    height: 480px;
+    padding: 45px 28px 45px 22px;
+  } 
+  .review-section .review-user .review-user-txt {
+    font-size: 13px !important;
   }
   .review-section .review-user-txt .fa-quote-right{
     margin:0 -15px 0 0;
