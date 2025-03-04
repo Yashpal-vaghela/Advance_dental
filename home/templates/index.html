@@ -45,7 +45,7 @@
           <div class="row mx-auto justify-content-center">
             <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
               <img
-                src="{% static 'banner-2/banner-11.png' %}"
+                src="{% static 'banner-2/banner-12.webp' %}"
                 class="banner-1-img img-fluid wow fadeInUp"
                 data-wow-delay="0.15s"
               />
@@ -73,17 +73,17 @@
       <div class="swiper-slide">
         <div class="container banner-2 position-relative">
           <img
-            src="{% static 'banner-2/banner-31.png'%}"
+            src="{% static 'banner-2/banner-31.webp'%}"
             alt="zir-logo"
             class="zir-logo1"
           />
           <img
-            src="{% static 'banner-2/Group281.png'%}"
+            src="{% static 'banner-2/Group281.webp'%}"
             alt="ele-pic1"
             class="ele-pic2"
           />
           <img
-            src="{% static 'banner-2/letter-1.png'%}"
+            src="{% static 'banner-2/letter-1.webp'%}"
             alt="let-pic"
             class="let-pic1"
           />
@@ -93,7 +93,7 @@
         </div>
         <div class="larger-ele position-relative">
           <img
-            src="{% static 'banner-2/image27.png'%}"
+            src="{% static 'banner-2/image27.webp'%}"
             alt="grass-pic"
             class="grass-pic1"
           />
@@ -101,7 +101,7 @@
         <div class="optional1">
           <a href="/zir-icon/"
             ><img
-              src="{% static 'banner-2/banner-31.jpg'%}"
+              src="{% static 'banner-2/banner-31.webp'%}"
               alt="slide2-optional"
               class="slide2-optional1"
           /></a>
@@ -120,12 +120,10 @@
       <div class="col-lg-4 col-md-6">
           <div class=" firstCard globalCard">
             <img 
-                srcset="{% static 'quality_bg.svg' %} 600w, {% static 'quality_bg_large.svg' %} 1200w"
-                sizes="(max-width: 768px) 600px, 1200px"
                 src="{% static 'quality_bg.svg' %}"
                 alt="Quality Check"
                 class="cd_bg_icon_1"
-            >
+            />
               <div>
                 <img  src="{% static 'quality.svg'%}"  alt="Quality Check" class="cd_icon" />
                   <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
@@ -139,12 +137,10 @@
       <div class="col-lg-4 col-md-6">
           <div class=" middle_card globalCard">
             <img 
-              srcset="{% static 'worldwide_bg.svg'%} 600w, {% static 'worldwide_bg.svg'%} 1200w"  
-              sizes = "(max-width:768px) 600px, 1200px"
-              src = "{% static 'worldwide_bg.svg'%}"
-              alt="Quality Check" 
-              class="cd_bg_icon_2" 
-            />
+              src="{% static 'worldwide_bg.svg'%}"
+              alt="Quality Check"
+              class="cd_bg_icon_1"
+          />
             <div >
               <img  src="{% static 'worldwide.svg'%}"  alt="Quality Check" class="cd_icon" />
                 <p class="cd_subheading">WORLD WIDE PRESENCE</p>
@@ -157,13 +153,10 @@
       <!-- Card 3 -->
       <div class="col-lg-4 col-md-6">
           <div class="thirdCard globalCard">
-              
-            <img  
-              srcset="{% static 'fda_bg.svg'%} 600w,{% static 'fda_bg.svg'%} 1200w "  
-              sizes = "(max-width:768px) 600px, 1200px"
-              src = "{% static 'fda_bg.svg'%}"
-              alt="Quality Check" 
-              class="cd_bg_icon_3" 
+          <img 
+              src="{% static 'fda_bg.svg'%}"
+              alt="Quality Check"
+              class="cd_bg_icon_1"
           />
             <div >
               <img  src="{% static 'FDA.svg'%}"  alt="Quality Check" class="cd_icon" />
@@ -563,7 +556,7 @@
             animation-name: fadeInUp;
           "
         >
-          <h2 class="h2-xs" style="font-size: 2.1rem">
+          <h2 class="h2-xs text-center text-sm-start text-lg-start" style="font-size: 2.1rem">
             Where Quality <br />
             Meets Excellence
           </h2>
@@ -840,8 +833,8 @@
         <div class="sbox-6-img text-center wow fadeInUp" data-wow-delay="0.4s">
           <img
             class="img-fluid lazy"
-            src="{% static 'img/teeth-img93.jpg' %}"
-            data-src="{% static 'img/teeth-img93.jpg' %}"
+            src="{% static 'img/teeth-img93.webp' %}"
+            data-src="{% static 'img/teeth-img93.webp' %}"
             alt="services-image"
             width="100%"
             height="100%"
@@ -1115,7 +1108,7 @@
       </div>
       {% endfor %}
       <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 mt-20 wow fadeInUp" data-wow-delay="1s">
+        <div class="all-posts-btn mb-30 mt-20 wow fadeInUp" data-wow-delay="1s">
           <a
             href="{% url 'home:blogs' %}"
             class="btn btn-blue blue-hover submit"
@@ -1238,6 +1231,9 @@
       disableOnInteraction: false,
     },
     breakpoints: {
+      400:{
+        slidesPerView: 4,
+      }
       576: {
         slidesPerView: 5,
       },
