@@ -58,7 +58,7 @@
 								</nav>
 
 								<!-- Title -->
-                                <h1 class="h4-sm steelblue-color">{{data.h1}}</h1>
+                                <a class="h4-sm steelblue-color">{{data.breadcrumb}}</a>
 								{% comment %} <h4 class="h4-sm steelblue-color">{{data.h1}}</h4> {% endcomment %}
 							</div>
 						</div>
@@ -90,8 +90,9 @@
    
                                    <!-- BLOG POST TEXT -->
                                    <div class="sblog-post-txt">
-                                    <p class="h1-sm steelblue-color">{{data.title}}</p>
-                                    <h2 style="font-size: 1.1rem !important; font-weight: 100 !important; color: rgba(0,0,0,0.6);">Posted {{data.published}} by <span>{{data.author}}</span></h2>
+                                    <h1 class="h1-sm steelblue-color">{{data.h1}}</h1>
+                                    {% comment %} <h2 class="h1-sm steelblue-color">{{data.title}}</h2> {% endcomment %}
+                                    <p style="font-size: 1.1rem !important; font-weight: 100 !important; color: rgba(0,0,0,0.6);">Posted {{data.published}} by <span>{{data.author}}</span></p>
                                     
                                         <div class="content mt-4">
                                             
