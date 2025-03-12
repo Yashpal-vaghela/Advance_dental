@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
     <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" media="print" onload="this.media='all'">
-    <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel='stylesheet' />
+    <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
     <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
     <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
@@ -37,6 +37,9 @@
     
     <link  href="{% static 'css/style.css' %}" rel='stylesheet' />
     <link  href="{% static 'css/responsive.css' %}" rel='stylesheet'/>
+    <!-- Plyr CSS -->
+    
+
     
 
      <!--CDN LINKS-->
@@ -55,6 +58,9 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"
     ></script>
+    <!-- Plyr JavaScript -->
+    
+
     <script async>
       document.addEventListener("DOMContentLoaded", () => {
         const internationalPhoneNumber = "+1 5513800385";
@@ -331,6 +337,28 @@
           </div>
         </section>
       </div>
+      {% comment %} <div id="chat-container">
+        <div id="chat-box">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
+            <button class="btn-blue chatbot-button"onclick="sendMessage()">Send</button>
+        </div>
+      </div> {% endcomment %}
+      <!-- Floating Chatbot Button -->
+      <button id="chat-popup-btn"><i class="fa fa-solid fa-message"></i></button>
+      <div id="chat-container">
+        <div class="chat-head">
+          <a href="{% url 'home:home' %}"><img src="{% static 'img/logo.png' %}" width="137" height="40" alt="header-logo" /></a>
+          
+          <button id="closePopup" class="popup-btn"><i class="fa fa-solid fa-xmark "></i></button>
+          
+          
+        </div>
+        <div id="chat-box">
+            <div id="chat-messages"></div>
+            <div id="chat-buttons"></div> <!-- User options will be dynamically added here -->
+        </div>
+      </div>
       <footer class="footer-section">
         <div class="container">
           <div class="row justify-lg-content-center">
@@ -572,6 +600,177 @@
         }, 2000); // Load after 2 seconds (Adjust delay if needed)
       });
     </script>
-    {% endfor %} {% block javascript %}{% endblock %}
+    {% endfor %} 
+    <script>
+      document.getElementById("closePopup").addEventListener("click", function () {
+        document.getElementById("chat-container").style.display = "none";
+    });
+      document.getElementById("chat-popup-btn").addEventListener("click", function() {
+        let chatContainer = document.getElementById("chat-container");
+        let currentDisplay = window.getComputedStyle(chatContainer).display;  // Get actual visibility
+    
+        if (currentDisplay === "none") {
+            chatContainer.style.display = "block";  // Show on first click
+        } else {
+            chatContainer.style.display = "none";   // Hide on second click
+        }
+    });
+    
+    
+      const questionFlow = {
+        "start": ["How may i help you?", ["Dental Implants 🙂‍↔️", "Cosmetic Dentistry 🙂‍↔️", "Digital Dentistry 😊"]],
+        "Dental Implants 🙂‍↔️": ["Do you need full mouth implants?", ["Yes", "No"]],
+        "Cosmetic Dentistry 🙂‍↔️": ["Are you looking for veneers or crowns?", ["Veneers", "Crowns"]],
+        "Digital Dentistry": ["Do you need scanning services?", ["Yes", "No"]],
+        "Yes": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
+        "No": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
+        "Restart": ["Restarting chat...", ["Dental Implants", "Cosmetic Dentistry", "Digital Dentistry"]],
+        "End Chat": ["Chat Ended. Thank you!", []]
+    };
+    
+  
+      function addMessageToChatBox(text, sender) {
+          let chatMessages = document.getElementById("chat-messages");
+          let messageDiv = document.createElement("div");
+          messageDiv.classList.add("chat-bubble");
+  
+          if (sender === "user") {
+            messageDiv.classList.add("user-message");
+        } else if (text.includes("Chat has ended")) {
+            messageDiv.classList.add("chat-ended"); // Custom style for "Chat Ended"
+        } else {
+            messageDiv.classList.add("bot-message");
+        }
+          messageDiv.innerHTML = text;
+          chatMessages.appendChild(messageDiv);
+          setTimeout(() => {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 100);
+      }
+  
+      function addButtons(options) {
+          // let chatButtons = document.getElementById("chat-buttons");
+          let chatButtons = document.getElementById("chat-messages");
+          chatButtons.innerHTML.add = ""; 
+  
+          options.forEach(option => {
+              let button = document.createElement("button");
+              button.classList.add("chatbot-button");
+              button.innerHTML = option;
+              button.onclick = function() {
+                  handleUserChoice(option);
+              };
+              chatButtons.appendChild(button);
+          });
+          chatButtons.scrollTop = chatButtons.scrollHeight;
+      }
+  
+      function handleUserChoice(choice) {
+          addMessageToChatBox(choice, "user"); // Show user choice
+          document.getElementById("chat-buttons").innerHTML = ""; // Remove buttons
+  
+          // Get next bot message and options
+          let nextStep = questionFlow[choice];
+          if (nextStep) {
+              let botMessage = nextStep[0];
+              let options = nextStep[1];
+  
+              setTimeout(() => {
+                  addMessageToChatBox(botMessage, "bot");
+
+                  if (choice === "Restart") {
+                    setTimeout(() => startChat(), 100); // Restart chat
+                } else if (choice === "End Chat") {
+                    addMessageToChatBox("Chat has ended. Refresh to start again. 😊", "bot");
+                } else if (options.length > 0) {
+                    setTimeout(() => addButtons(options), 100);
+                }
+              }, 100);
+          } else {
+              addMessageToChatBox("Thank you for chatting with us! 😊", "bot");
+          }
+      }
+  
+      function startChat() {
+
+        document.getElementById("chat-messages").innerHTML = ""; // Clear previous messages
+        document.getElementById("chat-buttons").innerHTML = "";
+
+          let firstMessage = questionFlow["start"][0];
+          let firstOptions = questionFlow["start"][1];
+  
+          addMessageToChatBox(firstMessage, "bot");
+          setTimeout(() => addButtons(firstOptions), 1000);
+      }
+  
+      window.onload = startChat; // Start chatbot when page loads
+  </script>
+  
+    {% comment %} <script>
+      function addMessageToChatBox(text, sender) {
+        let chatMessages = document.getElementById("chat-messages");
+        let messageDiv = document.createElement("div");
+        messageDiv.classList.add("chat-bubble");
+
+        if (sender === "user") {
+            messageDiv.classList.add("user-message");
+        } else {
+            messageDiv.classList.add("bot-message");
+        }
+
+        messageDiv.innerHTML = text;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+      async function sendMessage() {
+          let inputField = document.getElementById("chat-input");
+          let userMessage = inputField.value.trim();
+          if (userMessage === "") return;
+  
+          let chatMessages = document.getElementById("chat-messages");
+          
+          addMessageToChatBox(userMessage, "user");
+          inputField.value = ""; // Clear input field
+  
+          try {
+              let response = await fetch("/chatbot/chat/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ message: userMessage })
+              });
+  
+              let data = await response.json();
+  
+              if (response.ok) {
+                  addMessageToChatBox(data.reply, "bot"); 
+                  
+              } else {
+                  addMessageToChatBox("Error: " + data.reply, "bot");
+                  
+              }
+  
+              chatMessages.scrollTop = chatMessages.scrollHeight;
+  
+          } catch (error) {
+              console.error("Error:", error);
+              chatMessages.innerHTML += `<p><b>Bot:</b> Error communicating with chatbot.</p>`;
+          }
+      }
+  
+      function handleKeyPress(event) {
+          if (event.key === "Enter") sendMessage();
+      }
+  </script> {% endcomment %}
+  
+    
+    {% block javascript %}{% endblock %}
   </body>
 </html>
+
+
+{% comment %}
+chatMessages.innerHTML += `<p><b>You:</b> ${userMessage}</p>`;
+chatMessages.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+chatMessages.innerHTML += `<p><b>Bot:</b> Error: ${data.reply}</p>`;
+ {% endcomment %}

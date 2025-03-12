@@ -18,7 +18,8 @@
 <meta name="twitter:site" content="@thegrandindianroute" />
 <meta name="twitter:title" content="{% spaceless %}{{data.title}}{% endspaceless %} " />
 <meta name="twitter:description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
-<meta name="twitter:image" content="{% spaceless %}{{data.image.url}}{% endspaceless %}" />    
+<meta name="twitter:image" content="{% spaceless %}{{data.image.url}}{% endspaceless %}" />  
+{{data.schema|safe}}  
 {% endblock seo %}
 
 {% block css %}
@@ -263,12 +264,12 @@
     
 {% block js %}
 
-{{data.schema|safe}}
+
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Corporation",
-      "name": "Advance Dental Exort",
+      "name": "Advance Dental Export",
       "url": "https://advancedentalexport.com/",
       "logo": "https://advancedentalexport.com/static/img/logo.png",
       "contactPoint": [{
