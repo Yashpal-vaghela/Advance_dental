@@ -207,6 +207,28 @@
     opacity: 1;
   }
 } 
+/* pagination css */
+.hero-section1 .banner-1-wrap .swiper-button-next,
+.hero-section1 .swiper-wrapper .swiper-slide:first-child .swiper-button-prev{
+  color: #fff !important;
+ }
+.hero-section1 .swiper-button-next,
+.hero-section1 .swiper-button-prev {
+  color: rgba(17, 171, 147, 1) !important;
+  font-weight: 900;
+}
+.hero-section1 .swiper-button-next{
+  right: var(--swiper-navigation-sides-offset, 40px) !important;
+}
+.hero-section1 .swiper-button-prev{
+  left: var(--swiper-navigation-sides-offset, 40px) !important;
+}
+.hero-section1  video::-webkit-media-controls-timeline{
+  display: none !important;
+}
+.hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: var(--swiper-pagination-bottom, 50px) !important;
+}
 @media screen and (min-width: 2800px) {
   .hero-section1 {
     height: 600px;
@@ -220,14 +242,14 @@
     height: 720px;
   }
   .banner-31 .banner-bg3 {
-    aspect-ratio: 3 / 1.25;
+    aspect-ratio: 3 / 1.2;
   }
   .hero-section1 .swiper {
     width: 75% !important;
   }
   /* banner 1 */
   .banner1-img {
-    top: 45%;
+    top: 50.7%;
     left: 13%;
   }
   .banner1-img img {
@@ -252,6 +274,16 @@
     top: 340px !important;
     left: 2%;
   }
+  /* banner 3 */
+  .banner3-text{
+    left: 39%;
+    width: 21.5% !important;
+  }
+  .banner3-product{
+    top: 19%;
+    width: 29% !important;
+    left: 35.5%;
+  }
 }
 @media screen and (min-width: 2100px) and (max-width: 2400px) {
   .hero-section1 {
@@ -269,11 +301,10 @@
   .hero-section1 {
     height: 750px;
   }
-
   /* banner 1  */
   .banner1-img {
-    top: 33%;
-    left: 13%;
+    top: 45%;
+    left: 10%;
   }
   .banner1-img img {
     width: 78%;
@@ -282,24 +313,38 @@
     top: 28%;
   }
   /* banner 2 */
+  .zir-logo1{
+    width: 180px !important;
+    right: 1%;
+  }
   .ele-pic2 {
-    top: 38px !important;
-    width: 500px !important;
-    height: 520px !important;
+    top: 55px !important;
+    width: 520px !important;
+    height: 600px !important;
   }
   .let-pic1 {
-    left: 5%;
+    left: 2%;
     top: 120px !important;
   }
   .grass-pic1 {
-    top: 350px;
+    top: 410px;
   }
   .btn-read-more1 {
     top: 360px !important;
+    left:2%;
   }
   /* banner 3 */
   .banner-31 .banner-bg3 {
     aspect-ratio: 3 / 1.25;
+  }
+  .banner3-text{
+    left: 39%;
+    width: 21.5% !important;
+  }
+  .banner3-product{
+    top: 21%;
+    width: 28.5% !important;
+    left: 35.5%;
   }
 }
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
@@ -336,13 +381,24 @@
   .banner-31 .banner-bg3 {
     aspect-ratio: 3 / 1.25;
   }
+  .banner3-text{
+    left: 39%;
+    width: 22% !important;
+  }
+  .banner3-product{
+    top: 21%;
+    width: 28.5% !important;
+    left: 35%;
+  }
 }
 @media screen and (min-width: 1439px) and (max-width: 1649px) {
   .hero-section1 {
     height: 665px;
   }
-
   /* banner 1 */
+  .banner1-img{
+    top:45%;
+  }
   .banner1-img img {
     width: 74%;
   }
@@ -367,10 +423,22 @@
   .banner-31 .banner-bg3 {
     aspect-ratio: 3 / 1.2;
   }
+  .banner3-text{
+    left: 37.5%;
+  }
+  .banner3-product{
+    top: 20.8%;
+    width: 28% !important;
+    left: 35.5%;
+  }
 }
 @media screen and (min-width: 1300px) and (max-width: 1649px) {
   .hero-section1 {
     height: 590px;
+  }
+  /* banner 1 */
+  .banner1-img{
+    top:44.3%
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1440px) {
@@ -440,7 +508,7 @@
   }
   /* banner 1 */
   .banner1-img {
-    top: 51.5%;
+    top: 44%;
   }
   .banner1-img img {
     width: 90%;
@@ -482,8 +550,16 @@
   .banner-31 .banner-bg3 {
     aspect-ratio: 3/1.37;
   }
+  /* pagination css */
+  .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 60px) !important;
+  }
 }
 @media (max-width: 1100px) {
+    /* banner 1 */
+    .banner1-img {
+      top: 50%;
+    }
   /* banner 3 */
   .banner-31 .banner-bg3 {
     aspect-ratio: 3/1.55;
@@ -501,7 +577,7 @@
 @media (max-width: 1024px) {
   /* banner 1 */
   .banner1-img {
-    top: 56.5%;
+    top: 51.5%;
   }
 }
 @media (max-width: 991px) {
@@ -565,6 +641,28 @@
     left: 28%;
     top: 18%;
   }
+  /* pagination */
+  .hero-section1 .swiper-button-next::after, 
+  .hero-section1 .swiper-button-prev::after {
+    font-size: 26px;
+  }
+  
+  .hero-section1 .swiper-button-next{
+    right: var(--swiper-navigation-sides-offset, 35px) !important;
+  }
+  .hero-section1 .swiper-button-prev{
+    left: var(--swiper-navigation-sides-offset, 35px) !important;
+  }
+  .hero-section1 .swiper-pagination-bullet-active {
+    background: #fff !important;
+    color: #fff !important;
+  }
+  .hero-section1 .swiper-wrapper .swiper-slide {
+    height: auto !important;
+  }
+  .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 30px) !important;
+  }
 }
 @media (max-width: 900px) {
   .hero-section1 {
@@ -572,7 +670,7 @@
   }
   /* banner 1 */
   .banner1-img {
-    top: 59.5%;
+    top: 61.5%;
   }
   /* banner 2 */
   .zir-logo1 {
@@ -610,17 +708,29 @@
     height: 525px;
     margin-top: -2px;
   }
+  /* pagination css */
+  .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 18px) !important;
+  }
 }
 @media (max-width: 768px) {
   .hero-section1 {
     height: auto;
   }
+  /* pagination css */
   .hero-section1 .swiper-button-next,
   .hero-section1 .swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 53%) !important;
   }
   .hero-section1 .swiper-wrapper .swiper-slide:first-child {
     height: auto;
+  }
+  /* banner 1 */
+  .banner1-img {
+    top: 57%;
+  }
+  .banner1-img img {
+    width: 36%;
   }
   .hero-section1 .h1s {
     font-size: 35px !important;
@@ -633,12 +743,12 @@
     width: 100% !important;
     height: 100%;
   }
-  /* banner 1 */
-  .banner1-img {
-    top: 57%;
+  /* banner 2 */
+  .banner-2 {
+    display: none;
   }
-  .banner1-img img {
-    width: 36%;
+  .larger-ele {
+    display: none;
   }
   /* banner 3 */
   .banner-31 .banner-bg3 {

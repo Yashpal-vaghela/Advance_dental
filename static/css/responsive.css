@@ -714,7 +714,7 @@
   #banner-3 .banner-txt p,  #banner-4 .banner-txt p { padding: 0 10%; }
   #banner-6 p { margin-bottom: 20px; }
 
-  .banner-2-img, .banner-3-img { display: none; }
+  .banner-2-img { display: none; }
   .banner-4-img { background-position: center center; position: relative; left: 0;height: 400px; width: auto!important; margin-top: 80px; }
 
   /* Blog */
@@ -1183,7 +1183,7 @@
 
   #banner-8 .icon-lg [class*="flaticon-"]:before, #banner-8 .icon-lg [class*="flaticon-"]:after { font-size: 6rem; }
 
-  .banner-2-img, .banner-3-img { display: none; }
+  .banner-2-img { display: none; }
   .banner-4-img { background-position: center center; position: relative; left: 0;height: 400px; width: auto!important; margin-top: 80px; }
 
   /* Blog */
@@ -1647,7 +1647,7 @@
   #banner-6 p { margin-bottom: 20px; }
   #banner-8 .banner-txt h2.h2-lg { font-size: 2.5rem; }
   #banner-8 .icon-lg [class*="flaticon-"]:before, #banner-8 .icon-lg [class*="flaticon-"]:after { font-size: 5rem; }
-  .banner-2-img, .banner-3-img { display: none; }
+  .banner-2-img { display: none; }
   .banner-4-img { background-position: center center; position: relative; left: 0;height: 400px; width: auto!important; margin-top: 80px; }
 
   /* Blog */
