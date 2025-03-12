@@ -1,16 +1,17 @@
 .hero-section1 {
-  height: 600px;
+  height: 650px;
 }
 .hero-section1 .swiper {
   width: 100%;
-  /* border-bottom: 2px solid #000; */
+  border-bottom: 2px solid #000;
   height: 100%;
 }
-.hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
+.hero-section1 .swiper-button-next,
+.hero-section1 .swiper-button-prev {
   top: var(--swiper-navigation-top-offset, 50%) !important;
 }
 .hero-section1 .swiper-button-next::after,
-.hero-section1 .swiper-button-prev::after{
+.hero-section1 .swiper-button-prev::after {
   font-size: 30px;
 }
 /* !---------------- banner 1 css ------------- ! */
@@ -24,6 +25,13 @@
   position: relative;
   object-fit: cover;
   pointer-events: none !important;
+}
+#player{
+  background: #000 !important;
+  opacity: 0.5;
+  height: 100%;
+  position: relative;
+  object-fit:cover;
 }
 .banner1-img {
   position: absolute;
@@ -75,7 +83,7 @@
   padding: 4px 6px !important;
   border-radius: 8px !important;
   font-size: 14px !important;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .btn-read-more1:hover,
 .btn-read-more1:focus {
@@ -85,7 +93,7 @@
 }
 .btn-read-more1 a {
   color: #fff;
-  transition: all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 .btn-read-more1:hover a,
 .btn-read-more1:focus a {
@@ -98,7 +106,7 @@
   color: #1d907c;
   transform: rotate(-45deg);
   border-radius: 50%;
-  transition: all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 .btn-read-more1:hover i,
 .btn-read-more1:focus i {
@@ -114,12 +122,12 @@
 .optional1 {
   width: 0% !important;
 }
-.slide2-optional1{
+.slide2-optional1 {
   display: none;
 }
 
 /* slider animation */
-.hero-section1 .swiper-slide-active .ele-pic2{
+.hero-section1 .swiper-slide-active .ele-pic2 {
   animation: fadeInUp 2s ease forwards;
   transition-delay: 0.6s;
 }
@@ -127,42 +135,95 @@
   animation: fadeInRight 3s ease forwards;
   transition-delay: 0.6s;
 }
-.hero-section1 .swiper-slide-active .let-pic1{
+.hero-section1 .swiper-slide-active .let-pic1 {
   animation: fadeInLeft 2s ease forwards;
   transition-delay: 0.6s;
 }
-.hero-section1 .swiper-slide-active .btn-read-more1{
+.hero-section1 .swiper-slide-active .btn-read-more1 {
   animation: fadeInLeft 3s ease forwards;
   transition-delay: 0.8s;
 }
 .hero-section1 .swiper-slide-active .texts {
   animation: ZoomIn 1.5s ease;
 }
-@keyframes ZoomIn{
+
+@keyframes ZoomIn {
   from {
     opacity: 0;
-    transform: scale(.6);
+    transform: scale(0.6);
   }
   to {
     opacity: 1;
     transform: translateZ(0) scale(1);
   }
 }
+
+/* banner 3 css */
+.banner-bg3 {
+  aspect-ratio: 3/1.37;
+}
+.banner-31 .banner-bg4 {
+  display: none;
+}
+.banner3-text {
+  position: absolute;
+  top: 5%;
+  width: 25% !important;
+  left: 37%;
+}
+.banner3-product {
+  position: absolute;
+  top: 18.5%;
+  width: 31.8% !important;
+  left: 34%;
+}
 /* responsive css  */
+.hero-section1 .swiper-slide-active .banner3-text{
+  animation: moveBottom 1s ease-in-out;
+}
+.hero-section1 .swiper-slide-active .banner3-product{
+  animation: moveUp 1s ease-in-out forwards;
+}
+@keyframes moveBottom{
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 
 @media screen and (min-width: 2800px) {
   .hero-section1 {
     height: 600px;
   }
-  .hero-section1 .swiper{
-    width:37% !important;
+  .hero-section1 .swiper {
+    width: 37% !important;
   }
 }
 @media screen and (min-width: 2400px) and (max-width: 2800px) {
   .hero-section1 {
-    height: 620px;
+    height: 720px;
   }
-  .hero-section1 .swiper{
-    width:75% !important;
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3 / 1.25;
+  }
+  .hero-section1 .swiper {
+    width: 75% !important;
   }
   /* banner 1 */
   .banner1-img {
@@ -192,19 +253,23 @@
     left: 2%;
   }
 }
-@media screen and (min-width:2100px) and (max-width:2400px){
-  .hero-section1{
+@media screen and (min-width: 2100px) and (max-width: 2400px) {
+  .hero-section1 {
     height: 600px;
   }
-  .hero-section1 .swiper{
-    width:74% !important;
+  .hero-section1 .swiper {
+    width: 74% !important;
   }
   /* banner 2 */
-  .ele-pic2{
-    top:32px !important
+  .ele-pic2 {
+    top: 32px !important;
   }
 }
 @media screen and (min-width: 1800px) and (max-width: 2000px) {
+  .hero-section1 {
+    height: 750px;
+  }
+
   /* banner 1  */
   .banner1-img {
     top: 33%;
@@ -232,8 +297,15 @@
   .btn-read-more1 {
     top: 360px !important;
   }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3 / 1.25;
+  }
 }
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
+  .hero-section1 {
+    height: 665px;
+  }
   /* banner 1 */
   .banner1-img {
     left: 9%;
@@ -260,8 +332,16 @@
   .btn-read-more1 {
     top: 360px !important;
   }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3 / 1.25;
+  }
 }
 @media screen and (min-width: 1439px) and (max-width: 1649px) {
+  .hero-section1 {
+    height: 665px;
+  }
+
   /* banner 1 */
   .banner1-img img {
     width: 74%;
@@ -283,10 +363,14 @@
     top: 300px !important;
     left: 5%;
   }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3 / 1.2;
+  }
 }
 @media screen and (min-width: 1300px) and (max-width: 1649px) {
   .hero-section1 {
-    height: 500px;
+    height: 590px;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1440px) {
@@ -345,15 +429,14 @@
   .grass-pic1 {
     top: 360px;
   }
-  .slide2-optional1{
+  .slide2-optional1 {
     display: none;
   }
 }
-
 /* max width responsive css */
 @media (max-width: 1200px) {
   .hero-section1 {
-    height: 550px;
+    height: 500px;
   }
   /* banner 1 */
   .banner1-img {
@@ -362,8 +445,8 @@
   .banner1-img img {
     width: 90%;
   }
-  .texts{
-    top:28%;
+  .texts {
+    top: 28%;
     padding: 0px;
   }
   .hero-section1 .h1s {
@@ -395,6 +478,25 @@
     top: 280px !important;
     left: 8%;
   }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3/1.37;
+  }
+}
+@media (max-width: 1100px) {
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3/1.55;
+  }
+  .banner3-text {
+    width: 28% !important;
+    left: 36%;
+  }
+  .banner3-product {
+    width: 34% !important;
+    left: 33%;
+    top: 21%;
+  }
 }
 @media (max-width: 1024px) {
   /* banner 1 */
@@ -414,7 +516,7 @@
     width: 80%;
   }
   .texts {
-    top:45%;
+    top: 45%;
   }
   .hero-section1 .h1s,
   .hero-section1 .h2s {
@@ -449,6 +551,19 @@
   }
   .btn-read-more1 i {
     padding: 8px 8px 7px 8px;
+  }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3/1.8;
+  }
+  .banner3-text {
+    width: 32% !important;
+    left: 33.5%;
+  }
+  .banner3-product {
+    width: 42% !important;
+    left: 28%;
+    top: 18%;
   }
 }
 @media (max-width: 900px) {
@@ -485,12 +600,23 @@
     left: 6%;
     padding: 3px 5px !important;
   }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3 / 1.85;
+    margin-top: -4px;
+  }
+  .banner-31 .banner-bg4 {
+    aspect-ratio: 3 / 1.7;
+    height: 525px;
+    margin-top: -2px;
+  }
 }
 @media (max-width: 768px) {
   .hero-section1 {
     height: auto;
   }
-  .hero-section1 .swiper-button-next, .hero-section1 .swiper-button-prev {
+  .hero-section1 .swiper-button-next,
+  .hero-section1 .swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 53%) !important;
   }
   .hero-section1 .swiper-wrapper .swiper-slide:first-child {
@@ -514,6 +640,29 @@
   .banner1-img img {
     width: 36%;
   }
+  /* banner 3 */
+  .banner-31 .banner-bg3 {
+    aspect-ratio: 3/1.8;
+    display: none;
+  }
+  .banner-31 .banner-bg4 {
+    aspect-ratio: 3 / 1.8;
+    height: auto;
+    margin-top: -5px;
+    display: block;
+  }
+  .banner3-text {
+    width: 36% !important;
+    left: 30%;
+    top: 5%;
+    height: auto !important;
+  }
+  .banner3-product {
+    width: 42.5% !important;
+    height: auto !important;
+    left: 25%;
+    top: 19%;
+  }
 }
 @media (max-width: 576px) {
   .hero-section1 .h1s {
@@ -527,7 +676,7 @@
     top: 45%;
     animation: none !important;
   }
-  .hero-section1 .swiper-slide-active .texts{
+  .hero-section1 .swiper-slide-active .texts {
     animation: none !important;
   }
   /* banner 1 */
@@ -539,4 +688,8 @@
     width: 38%;
     animation: none !important;
   }
+  /* banner 3 */
+  /* .banner-31 .banner-bg3{
+    aspect-ratio: auto;
+  } */
 }
