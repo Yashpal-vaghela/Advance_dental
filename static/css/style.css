@@ -3613,10 +3613,10 @@ td.text-right {
        background-image: url(../image-06.png);
     } */
 
-  .swiper-button-next,
+  /* .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
-  }
+  } */
 
   .d-bbnone {
     display: block;
