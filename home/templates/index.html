@@ -62,8 +62,19 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide banner-1-wrap position-relative">
-          <video id="player" autoplay muted playsinline loop>
+          {% comment %} <video id="player" autoplay muted playsinline loop>
             <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4" />
+          </video> {% endcomment %}
+          <video class="h-full w-full object-cover" 
+              preload="metadata" 
+              playsinline 
+              muted 
+              autoplay 
+              loop 
+              id="player">
+              <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm" type="video/webm">
+              <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
           {% comment %} <video width="100%" controls autoplay muted playsinline loop controlslist="nodownload nofullscreen noremoteplayback" id="background-video" oncontextmenu="return false;">
             <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4" />
@@ -788,29 +799,23 @@
   });
 </script>
 <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const player = new Plyr("#player", {
-    autoplay: true,
-    muted: true,
-    playsinline: true,
-    controls: false, // Hide default controls
-  });
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("player");
 
-  // Force play for Safari if needed
-  player.play().catch(error => console.log("Autoplay blocked:", error));
-});
+    // Ensure the video is muted (needed for Safari autoplay)
+    video.muted = true;
 
-const player = new Plyr("#player", {
-  controls: false,
-});
+    // Try to play the video immediately
+    video.play().catch(error => {
+      console.log("Autoplay blocked:", error);
+    });
 
-// Extra check for Safari autoplay issues
-window.addEventListener("load", function () {
-  let video = document.getElementById("player");
-  if (video.paused) {
-      video.play().catch(error => console.log("Autoplay blocked:", error));
-  }
+    // Add user interaction fallback (Safari blocks autoplay sometimes)
+    document.addEventListener("click", () => {
+      video.play();
+    });
 });
 </script>
+
 {% endblock %}
