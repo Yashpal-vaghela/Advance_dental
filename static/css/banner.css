@@ -3,7 +3,7 @@
 }
 .hero-section1 .swiper {
   width: 100%;
-  border-bottom: 2px solid #000;
+  /* border-bottom: 2px solid #000; */
   height: 100%;
 }
 .hero-section1 .swiper-button-next,
@@ -168,28 +168,20 @@
 }
 .banner3-text {
   position: absolute;
-  top: 2.5%;
-  width: 25% !important;
-  left: 37%;
+  top: 5%;
+  width: 22% !important;
+  left: 38%;
 }
 .banner3-product {
   position: absolute;
-  top: 18.5%;
-  width: 31.5% !important;
-  left: 34%;
+  top: 19%;
+  width: 33% !important;
+  left: 33%;
 }
-/* .banner3-subtitle{
-  font-size: 21px;
-  position: absolute;
-  top: 19.5%;
-  left: 41.5%;
-  color: #fff;
-  font-weight: bold;
-} */
  .banner3-subtitle{
   position: absolute;
-  top: 20.5%;
-  left: 40.5%;
+  top: 22%;
+  left: 40.1%;
   width: 18% !important;
  }
 /* responsive css  */
@@ -469,20 +461,22 @@
     aspect-ratio: 3 / 1.23;
   }
   .banner3-text{
-    left: 37.5%;
+    left: 38.2%;
+    width: 22% !important;
   }
   .banner3-subtitle{
-    top:22.5%;
-    left:41%;
+    top:23%;
+    left:41.5%;
+    width: 16% !important;
   }
   /* .banner3-subtitle{
     top:22%;
     left: 42.5%;
   } */
   .banner3-product{
-    top: 21.8%;
-    width: 28% !important;
-    left: 35.5%;
+    top: 18.8%;
+    width: 31% !important;
+    left: 33.5%;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1649px) {
@@ -525,7 +519,7 @@
 }
 @media screen and (min-width:992px){
   .hero-section1 .swiper-slide-active .texts{
-    width: 39% !important;
+    width: 38.5% !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
@@ -623,18 +617,19 @@
     aspect-ratio: 3/1.55;
   }
   .banner3-text {
-    width: 28% !important;
+    width: 27% !important;
     left: 36%;
   }
   .banner3-subtitle{
-    top:21%;
+    top:23.5%;
+    left: 39.4%;
     /* left: 41.5%; */
-    width: 19% !important;
+    width: 19.5% !important;
   }
   .banner3-product {
     width: 34% !important;
     left: 33%;
-    top: 21%;
+    top: 24%;
   }
 }
 @media (max-width: 1024px) {
@@ -704,18 +699,18 @@
     display: block !important;
   }
   .banner3-text {
-    width: 32% !important;
-    left: 31.5%;
+    width: 33% !important;
+    left: 32%;
   }
   .banner3-subtitle{
-    top:21%;
-    left: 36.4%;
-    width: 22% !important;
+    top:26.5%;
+    left: 36%;
+    width: 25% !important;
   }
   .banner3-product {
     width: 42% !important;
-    left: 28%;
-    top: 22.5%;
+    left: 25%;
+    top: 25.5%;
   }
   /* pagination */
   .hero-section1 .swiper-button-next::after, 
@@ -784,6 +779,20 @@
     margin-top: -2px;
     display: block;
   }
+  .banner3-text {
+    width: 32% !important;
+    left: 31.5%;
+  }
+  .banner3-subtitle{
+    top:24%;
+    left: 36%;
+    width: 23.5% !important;
+  }
+  .banner3-product {
+    width: 44% !important;
+    left: 23%;
+    top: 24%;
+  }
   /* pagination css */
   .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, 18px) !important;
@@ -843,30 +852,33 @@
     aspect-ratio: 3/1.8;
   }
   .banner-31 .banner-bg4 {
-    aspect-ratio: 3 / 1.71;
+    aspect-ratio: 3 / 1.75;
     height: auto;
-    margin-top: -2px;
+    margin-top: -1px;
   }
   .banner3-text {
-    width: 33% !important;
-    left: 31%;
-    top: 3%;
+    width: 30% !important;
+    left: 33%;
+    top: 7%;
     height: auto !important;
   }
   .banner3-subtitle{
-    top:22.5%;
-    left: 36.5%;
-    width: 22% !important;
+    top:26.5%;
+    /* left: 35.2%; */
+    width: 24% !important;
     height: auto !important;
   }
   .banner3-product {
-    width: 41.5% !important;
+    width: 43% !important;
     height: auto !important;
-    left: 26%;
-    top: 23%;
+    left: 24%;
+    top: 25%;
   }
 }
 @media (max-width: 576px) {
+  .hero-section1 .swiper-wrapper .banner-1-wrap{
+    margin-top: -2px;
+  }
   .hero-section1 .h1s {
     font-size: 25px !important;
   }
@@ -882,7 +894,8 @@
   .hero-section1 .swiper-button-prev {
     display: none !important;
   }
-  .hero-section1 .swiper-slide-active .texts {
+  .hero-section1 .swiper-slide-active .texts,
+  .hero-section1 .swiper-slide-active .banner3-subtitle {
     animation: none !important;
   }
   /* banner 1 */
@@ -896,11 +909,12 @@
   }
   .banner3-text{
     width:30% !important;
-    left: 32%;
+    left: 33%;
   }
   .banner3-subtitle{
-    width: 24% !important;
-    left:35%;
+    top: 25.5%;
+    width: 22% !important;
+    left:36.9%;
   }
   .hero-section1 .swiper-slide-active .banner3-text,
   .hero-section1 .swiper-slide-active .banner3-product {

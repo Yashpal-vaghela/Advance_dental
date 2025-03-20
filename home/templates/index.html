@@ -110,10 +110,10 @@
         <div class="swiper-slide">
           <div class="banner-31 position-relative">
             <img src="{% static 'banner-2/bg-33.webp' %}" class="banner-bg3 img-fluid"  anim="glitch" />
-            <img src="{% static 'banner-2/bg-42.webp' %}" class="banner-bg4 img-fluid" /> 
+            <img src="{% static 'banner-2/bg-4-3.webp' %}" class="banner-bg4 img-fluid" /> 
              <div class="container">
               <img src="{% static 'banner-2/banner3-text.webp' %}" class="banner3-text img-fluid"/>
-              <img src="{% static 'banner-2/banner3-subtitle4.webp'%}" class="banner3-subtitle img-fluid"/>
+              <img src="{% static 'banner-2/banner3-subtitle5.webp'%}" class="banner3-subtitle img-fluid"/>
               {% comment %} <h2 class="banner3-subtitle">For valued Customer</h2> {% endcomment %}
               <img src="{% static 'banner-2/banner3-product1.webp' %}" class="banner3-product img-fluid" />
             </div> 
@@ -735,7 +735,7 @@
       disableOnInteraction: false,
     },
     breakpoints: {
-      400:{
+      380:{
         slidesPerView: 4,
       },
       576: {
@@ -765,6 +765,10 @@
     speed: 600,
     parallax: !0,
     loop: true,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
