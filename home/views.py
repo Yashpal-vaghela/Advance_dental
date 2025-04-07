@@ -140,6 +140,26 @@ def exhibition(request):
     }
     return render(request, 'exhibition.html', context)
 
+def zirconiacrown(request):
+      cards = [
+        {
+            "title": "Smile Makeover",
+            "subtitle": "Before & After",
+            "image": "slice.png"
+        },
+        {
+            "title": "Dental Implants",
+            "subtitle": "Full Restoration",
+            "image": "slice.png"
+        },
+        {
+            "title": "Teeth Whitening",
+            "subtitle": "1 Hour Result",
+            "image": "slice.png"
+        }
+    ]
+      return render(request, 'zir.html',  {'cards': cards})
+
 # def neweventlink(request):
 #     context = {
 #     }
