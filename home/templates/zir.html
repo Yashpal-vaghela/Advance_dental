@@ -67,7 +67,7 @@
 
     <div class="radial_smile container">
         <div class="row g-4 webviewofprocess">
-            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center" >
+            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center">
                 <div class="bigcont"></div>
                 {% for card in cards %}
                 {% if forloop.counter|divisibleby:2 %}
@@ -80,13 +80,15 @@
                         <div class="overlay slice-3"></div>
                         <div class="overlay slice-4"></div>
                         <div class="overlay slice-5"></div>
-                        <img src="{% static card.image %}" class="animated-image" loading="lazy" alt="Smile Step Group 1" />
+                        <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                            alt="Smile Step Group 1" />
                     </div>
                 </div>
                 {% endif %}
                 {% endfor %}
             </div>
-            <div class="col-12 col-md-6 col-lg-6 right-column d-flex flex-column align-items-center justify-content-center">
+            <div
+                class="col-12 col-md-6 col-lg-6 right-column d-flex flex-column align-items-center justify-content-center">
                 {% for card in cards %}
                 {% if not forloop.counter|divisibleby:2 %}
                 <div class="radient-amile-card1 ">
@@ -98,7 +100,8 @@
                         <div class="overlay slice-3"></div>
                         <div class="overlay slice-4"></div>
                         <div class="overlay slice-5"></div>
-                        <img src="{% static card.image %}" class="animated-image" loading="lazy" alt="Smile Step Group 1" />
+                        <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                            alt="Smile Step Group 1" />
                     </div>
                 </div>
                 {% endif %}
@@ -106,7 +109,7 @@
             </div>
         </div>
         <div class="row g-4 mobileviewofprocess">
-            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center" >
+            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center">
                 <div class="bigcont"></div>
                 {% for card in cards %}
                 <div class="radient-amile-card-m ">
@@ -118,7 +121,8 @@
                         <div class="overlay slice-3"></div>
                         <div class="overlay slice-4"></div>
                         <div class="overlay slice-5"></div>
-                        <img src="{% static card.image %}" class="animated-image" loading="lazy" alt="Smile Step Group 1" />
+                        <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                            alt="Smile Step Group 1" />
                     </div>
                 </div>
                 {% endfor %}
@@ -413,76 +417,184 @@
             {% comment %} Benefit slider end {% endcomment %}
         </div>
     </section>
+    <!-- >Testimonials -->
     <section class="zirconia-wrapper">
-        <div class="container position-relative">
+        <div class="container position-relative text-center">
             <img src="{% static 'img/line.svg' %}" class="img-fluid line-2t">
-                <h2 class="zirconia-wrapper-title">Testimonials</h2>
-            <img src="{% static 'img/line.svg' %}" class="img-fluid line-1t">  
+            <h2 class="zirconia-wrapper-title">Testimonials</h2>
+            <img src="{% static 'img/line.svg' %}" class="img-fluid line-1t">
+
+            <p class="testinomial-subtitle mb-4">
+                Read what our satisfied patients have to say about their exceptional experiences at Advance Dental
+                Export.
+                Our dedicated team provides top-notch care, ensuring comfort and satisfaction at every visit.
+            </p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <p class="testimonial-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries
+                        </p>
+                        <div class="testimonial-stars">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonial-card">
+                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <p class="testimonial-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries
+                        </p>
+                        <div class="testimonial-stars">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonial-card">
+                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <p class="testimonial-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries
+                        </p>
+                        <div class="testimonial-stars">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonial-card">
+                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <p class="testimonial-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries
+                        </p>
+                        <div class="testimonial-stars">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonial-card">
+                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <p class="testimonial-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries
+                        </p>
+                        <div class="testimonial-stars">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- gallery section -->
     <section class="Gallery-section">
         <div class="container">
-          <div class="row gallery-wrapper justify-content-center">
-            <div class="col-11 col-md-6 col-lg-4 px-1 ">
-              <p>Step into our Advanced Zirconia Gallery, where precision meets innovation. Explore a stunning collection of zirconia designs, showcasing superior craftsmanship, durability, and elegance. Discover the future of Advance Zirconia.</p>
+            <div class="row gallery-wrapper justify-content-center">
+                <div class="col-11 col-md-6 col-lg-4 px-1 ">
+                    <p>Step into our Advanced Zirconia Gallery, where precision meets innovation. Explore a stunning
+                        collection of zirconia designs, showcasing superior craftsmanship, durability, and elegance.
+                        Discover the future of Advance Zirconia.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <h2>Zirconia</h2>
+                    <h3>Gallery</h3>
+                </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-6">
-              <h2>Zirconia</h2>
-              <h3>Gallery</h3>
-            </div>
-          </div>
-          <div class="swiper gallery-swiper">
-            <div class="swiper-wrapper mb-4">
-                <div class="swiper-slide" onclick="showCaseImage('galleryCase1')">
-                    <div class="galleryCaseImg-wrapper d-none" id="galleryCase1">
-                        <img src="{% static 'img/case1.png'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
-                        <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
-                        <img src="{% static 'img/case1.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper mb-4">
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase1')">
+                        <div class="galleryCaseImg-wrapper d-none" id="galleryCase1">
+                            <img src="{% static 'img/case1.png'%}" class="gallery-caseimg mb-3 img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case1.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img"
+                                width="100%" height="100%" />
+                        </div>
+                        <img src="{% static 'img/case1.png'%}" class="gallery-img img-fluid" alt="gallery-img"
+                            width="100%" height="100%" />
                     </div>
-                  <img src="{% static 'img/case1.png'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%"  />
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase2')">
+                        <img src="{% static 'img/case2.png'%}" class="gallery-img img-fluid" alt="gallery-img"
+                            width="100%" height="100%" />
+                        <div class="galleryCaseImg-wrapper d-none" id="galleryCase2">
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg mb-3 img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase3')">
+                        <img src="{% static 'img/gallery-img3.png'%}" class="gallery-img img-fluid" alt="gallery-img"
+                            width="100%" height="100%" />
+                        <div class="galleryCaseImg-wrapper d-none" id="galleryCase3">
+                            <img src="{% static 'img/gallery-img3.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img3.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase4')">
+                        <img src="{% static 'img/gallery-img1.png'%}" class="gallery-img img-fluid" alt="gallery-img"
+                            width="100%" height="100%" />
+                        <div class="galleryCaseImg-wrapper d-none" id="galleryCase4">
+                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase5')">
+                        <img src="{% static 'img/gallery-img2.png'%}" class="gallery-img img-fluid" alt="gallery-img"
+                            width="100%" height="100%" />
+                        <div class="galleryCaseImg-wrapper d-none" id="galleryCase5">
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg mb-3 img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
+                                alt="gallery-img" width="100%" height="100%" />
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide" onclick="showCaseImage('galleryCase2')" >
-                  <img src="{% static 'img/case2.png'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
-                    <div class="galleryCaseImg-wrapper d-none" id="galleryCase2">
-                      <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                      <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
-                      <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                    </div> 
-                </div>
-                <div class="swiper-slide" onclick="showCaseImage('galleryCase3')">
-                  <img src="{% static 'img/gallery-img3.png'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
-                  <div class="galleryCaseImg-wrapper d-none" id="galleryCase3">
-                     <img src="{% static 'img/gallery-img3.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                     <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
-                     <img src="{% static 'img/gallery-img3.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                  </div>
-                </div>
-                <div class="swiper-slide" onclick="showCaseImage('galleryCase4')">
-                  <img src="{% static 'img/gallery-img1.png'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
-                  <div class="galleryCaseImg-wrapper d-none" id="galleryCase4">
-                     <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                     <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
-                     <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                  </div>
-                </div>
-                <div class="swiper-slide" onclick="showCaseImage('galleryCase5')">
-                  <img src="{% static 'img/gallery-img2.png'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
-                  <div class="galleryCaseImg-wrapper d-none" id="galleryCase5">
-                     <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                     <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
-                     <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
-                  </div>
-                </div>
+                <div class="swiper-button-next d-none"></div>
+                <div class="swiper-button-prev d-none"></div>
+                <div class="swiper-pagination"></div>
+                <div class="overlays-background"></div>
+                {% comment %} <div class="offcanvas-backdrop fade show"></div> {% endcomment %}
             </div>
-              <div class="swiper-button-next d-none"></div>
-              <div class="swiper-button-prev d-none"></div>
-              <div class="swiper-pagination"></div>
-              <div class="overlays-background"></div>
-              {% comment %} <div class="offcanvas-backdrop fade show"></div> {% endcomment %}
-          </div>
         </div>
-      </section>
+    </section>
 </div>
 {% endblock body %}
 
@@ -638,36 +750,36 @@
 </script>
 <script>
     var swiper1 = new Swiper(".gallery-swiper", {
-      slidesPerView: 6,
-      spaceBetween:20,
-      speed: 500,
-      loop: true,
-  
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: !0,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        340:{
-          slidesPerView: 1,
+        slidesPerView: 6,
+        spaceBetween: 20,
+        speed: 500,
+        loop: true,
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: !0,
         },
-        576: {
-          slidesPerView: 2,
-          
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-        768: {
-          slidesPerView: 3,
+        breakpoints: {
+            340: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 2,
+
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 5,
+            }
         },
-        1200: {
-          slidesPerView: 5,
-        }
-      },
     });
-  
+
     let activeCase = null;
     function showCaseImage(e) {
         const cases = document.querySelectorAll(".galleryCaseImg-wrapper");
@@ -675,14 +787,14 @@
         const images1 = document.querySelectorAll(".gallery-caseimg");
         const overlay = document.querySelectorAll(".overlays-background");
         let isDeactivating = activeCase === e;
-        
-        console.log("image1",images1);
-  
+
+        console.log("image1", images1);
+
         cases.forEach((current, index) => {
             let img = images[index];
             const lastImage = images1[images1.length - 1];
-            console.log("img1",img,"lastImage",lastImage,"window",window,"innderWidth",window.innerWidth <= 576)
-  
+            console.log("img1", img, "lastImage", lastImage, "window", window, "innderWidth", window.innerWidth <= 576)
+
             if (current.id === e) {
                 if (isDeactivating) {
                     // Deactivate the case
@@ -694,8 +806,8 @@
                     activeCase = null;
                 } else {
                     // Activate the clicked case
-                    if(window.innerWidth <= 576){
-  
+                    if (window.innerWidth <= 576) {
+
                     }
                     current.classList.add("d-block");
                     current.classList.remove("d-none");
@@ -712,34 +824,34 @@
                 img.classList.remove("d-none");
             }
         });
-        images.forEach((img, index)=>{
-          if(window.innerWidth >= 576){
-               if(activeCase && cases[index].id == activeCase) {
-            img.style.margin = "0px";
-            img.style.width = "100%";
-            img.style.animation = "zoomOut .7s ease forwards"
-          } else if(activeCase === null ){
-            img.style.margin = "0px";
-            img.style.width = "100%";
-            img.style.animation = "zoomOut .7s ease forwards"
-          }else{
-            img.style.margin = "20px";
-            img.style.width = "85%";
-            img.style.animation = "zoomIn .7s ease forwards"
-          }
-          }
-         
+        images.forEach((img, index) => {
+            if (window.innerWidth >= 576) {
+                if (activeCase && cases[index].id == activeCase) {
+                    img.style.margin = "0px";
+                    img.style.width = "100%";
+                    img.style.animation = "zoomOut .7s ease forwards"
+                } else if (activeCase === null) {
+                    img.style.margin = "0px";
+                    img.style.width = "100%";
+                    img.style.animation = "zoomOut .7s ease forwards"
+                } else {
+                    img.style.margin = "20px";
+                    img.style.width = "85%";
+                    img.style.animation = "zoomIn .7s ease forwards"
+                }
+            }
+
         })
     }
-  
+
     // Click anywhere outside to deactivate the case
     window.addEventListener("click", function () {
         if (activeCase) {
             const cases = document.querySelectorAll(".galleryCaseImg-wrapper");
             const images = document.querySelectorAll(".gallery-img");
             cases.forEach(current => {
-              current.classList.add("d-none");
-              current.classList.remove("d-block");
+                current.classList.add("d-none");
+                current.classList.remove("d-block");
             });
             images.forEach(img => {
                 img.classList.add("d-block");
@@ -748,17 +860,25 @@
                 img.style.width = "100%";
                 img.style.animation = "zoomOut .7s ease forwards"
             });
-           // Reset all images to padding 0px
+            // Reset all images to padding 0px
             activeCase = null;
         }
     });
-  
+
     // Prevent window click from triggering when clicking on a case
     document.querySelectorAll(".swiper-slide").forEach((slide) => {
         slide.addEventListener("click", function (event) {
             event.stopPropagation(); // Prevent window click from executing
         });
     });
-  </script>
+</script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+        initialSlide: 2,
+    });
+</script>
 
 {% endblock js %}

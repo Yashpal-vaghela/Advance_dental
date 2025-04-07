@@ -370,7 +370,68 @@
     opacity: 1;
     transform: scale(1);
 }
+/* Testimonials */
+.testimonial-subtitle {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+.testimonial-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.testimonial-card {
+    background: #fffdfd;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px  rgba(27, 137, 118, 0.3);
+    padding: 40px 30px;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+.testimonial-card img{
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    margin: auto;
+}
+.testimonial-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
 
+.testimonial-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.testimonial-stars {
+    color: #0b8e81;
+    font-size: 1.5rem;
+}
+.zirconia-wrapper .swiper {
+    width: 60%;
+    max-width: 600px;
+    height: 400px !important;
+    margin: 0 auto;
+  }
+  
+  
 @media (max-width: 991px) {
     .side-img {
         display: none;
@@ -388,9 +449,7 @@
 
     .mobileviewofType {
         display: block;
-
     }
-
 
 }
 
@@ -517,12 +576,12 @@
  }
  .line-1t{
     position: absolute;
-    top: 30%;    
+    top: 1.7%;    
     right: 5%;
  }
  .line-2t{
     position: absolute;
-    top: 30%;
+    top: 1.7%;
     left: 5%;
  }
  .zirconia-content-item{
@@ -572,6 +631,9 @@
     .line-1,.line-2{
         width:28%;
     }
+    .line-1t,.line-2t{
+        width:28%;
+    }
 }
 @media(max-width:991px){
     .line-1,.line-2{
@@ -617,6 +679,21 @@
     }
     .zirconia-wrapper-title{
         font-size: 20px;
+    }
+    .testimonial-subtitle{
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    .testimonial-card{
+        max-width: 700px;
+        padding: 20px 15px;
+    }
+    .zirconia-wrapper .swiper-slide{
+        padding: 10px 20px;
+        height: 95%;
+    }
+    .testimonial-text{
+        font-size: 0.90rem;
     }
 }
 
