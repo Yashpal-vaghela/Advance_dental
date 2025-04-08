@@ -29,9 +29,9 @@ body {
   width: device-width;
 }
 
-#page {
+/* #page {
   overflow: hidden;
-}
+} */
 
 .wide-100 {
   padding-top: 100px;
@@ -6866,7 +6866,7 @@ nav a#pull {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding-top: 8px;
-  
+  z-index: 2;
 }
 
 #chat-popup-btn:hover {
@@ -6987,4 +6987,37 @@ nav a#pull {
 .chatbot-button:hover {
   background-color: #24a992;
   color: white;
+}
+.page.overflow-visible{
+  overflow:visible !important;
+}
+#page{
+  overflow:scroll;
+}
+
+body{
+  overflow-x: auto;
+  overflow-y: auto !important;
+  /* height: 100%; */
+  -webkit-overflow-scrolling: touch; 
+}
+.container1 {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 500vw; /* Ensure enough space for horizontal scrolling */
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Improves touch-based scrolling */
+}
+.container1 .panel {
+  flex: 0 0 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  height: 100vh;
 }

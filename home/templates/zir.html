@@ -6,26 +6,49 @@
 {% endblock header %}
 
 {% block css %}
-
-
+<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
+<link
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  rel="stylesheet"
+/>
 {% endblock css %}
 
 {% block body %}
-<div style="padding-top: 100px; background-color: white; z-index:2; ">
+<div style="background-color: white; z-index:2; ">
     <!-- Main Content -->
     <!-- <div id="container">
         <video src="https://ace-dental.s3.ap-south-1.amazonaws.com/Advance+Dental+Export+Milling+2.webm"
             playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video>
     </div>
     <div id="video-spacer"></div> -->
+    <!-- hero section -->
+    <section class="hero-section1 zirconia-hero-section position-relative mx-auto p-0 overflow-hidden d-block ">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide zirconia-slider-wrapper">
+                <div class="container banner-2 position-relative">
+                    <img src="{% static 'banner-2/banner-31.png' %}" alt="zir-logo" class="zir-logo1" />
+                    <img src="{% static 'banner-2/Group281.webp' %}" alt="ele-pic1" class="ele-pic2" />
+                    <img src="{% static 'banner-2/letter-1.webp' %}" alt="let-pic" class="let-pic1" />
+                    {% comment %} <button class="btn btn-read-more1"><a href="/zir-icon/">Discover More <i class="fa-solid fa-arrow-right ms-1"></i></a></button> {% endcomment %}
+                </div>
+                <div class="larger-ele position-relative">
+                    <img src="{% static 'banner-2/image27.webp' %}" alt="grass-pic" class="grass-pic1" />
+                </div>
+                <div class="optional1">
+                    <img src="{% static 'banner-2/banner-32.webp' %}" alt="slide2-optional" class="slide2-optional1" />
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- what is zirconia -->
     <section class="zirconia-second">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-lg-6">
+        <div class="container position-relative">
+            <div class="row g-4 justify-content-center align-items-center">
+                <div class="col-10 col-lg-6">
                     <div class="zirfirst-headS">What Is Zirconia Crown?</div>
                     <div class="zirfirst-text">
-
                         <p> A zirconia crown is a popular dental restoration option known for its strength, durability,
                             and aesthetic appeal. Zirconia, meaning a crystalline form of zirconium, is a material that
                             is widely used in dentistry due to its natural appearance and resistance to wear. A zirconia
@@ -45,7 +68,6 @@
                         <img src="{% static 'zir-txt.png' %}" class="zirconia-text1" loading="lazy"
                             alt="Smile Step Group 1" />
                     </div>
-
                 </div>
             </div>
         </div>
@@ -64,122 +86,173 @@
         </div>
     </div> {% endcomment %}
 
-
-    <div class="radial_smile container">
-        <div class="row g-4 webviewofprocess">
-            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center">
-                <div class="bigcont"></div>
-                {% for card in cards %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="radient-amile-card ">
-                    <p class="radient-amile-card-subhead">{{ card.title }}</p>
-                    <div class="radient-amile-card-head">{{ card.subtitle }}</div>
-                    <div class="image-wrapper d-flex  align-items-end justify-content-end">
-                        <div class="overlay slice-1"></div>
-                        <div class="overlay slice-2"></div>
-                        <div class="overlay slice-3"></div>
-                        <div class="overlay slice-4"></div>
-                        <div class="overlay slice-5"></div>
-                        <img src="{% static card.image %}" class="animated-image" loading="lazy"
-                            alt="Smile Step Group 1" />
+    <!-- radial smile -->
+    <section class="radial_smile">
+        <div class="container position-relative">
+            <img src="{% static 'img/line.svg' %}" class="img-fluid line-2">
+            <h2 class="zirconia-wrapper-title pt-4 pb-xl-2">The Path To Radiant Smile</h2>
+            <img src="{% static 'img/line.svg' %}" class="img-fluid line-1">
+            <div class="row g-4 webviewofprocess justify-content-center">
+                <div class="col-12 col-md-6 col-lg-5 d-flex left-column flex-column align-items-center justify-content-center">
+                    <div class="bigcont"></div>
+                    {% for card in cards %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="radient-amile-card ">
+                        <p class="radient-amile-card-subhead">{{ card.title }}</p>
+                        <div class="radient-amile-card-head">{{ card.subtitle }}</div>
+                        <div class="image-wrapper d-flex  align-items-end justify-content-end">
+                            <div class="overlay slice-1"></div>
+                            <div class="overlay slice-2"></div>
+                            <div class="overlay slice-3"></div>
+                            <div class="overlay slice-4"></div>
+                            <div class="overlay slice-5"></div>
+                            <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                                alt="Smile Step Group 1" />
+                        </div>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
-                {% endif %}
-                {% endfor %}
+                <div class="col-12 col-md-6 col-lg-5 right-column d-flex flex-column">
+                    {% for card in cards %}
+                    {% if not forloop.counter|divisibleby:2 %}
+                    <div class="radient-amile-card1 ">
+                        <p class="radient-amile-card-subhead">{{ card.title }}</p>
+                        <div class="radient-amile-card-head">{{ card.subtitle }}</div>
+                        <div class="image-wrapper d-flex  align-items-start justify-content-start">
+                            <div class="overlay slice-1"></div>
+                            <div class="overlay slice-2"></div>
+                            <div class="overlay slice-3"></div>
+                            <div class="overlay slice-4"></div>
+                            <div class="overlay slice-5"></div>
+                            <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                                alt="Smile Step Group 1" />
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-            <div
-                class="col-12 col-md-6 col-lg-6 right-column d-flex flex-column align-items-center justify-content-center">
-                {% for card in cards %}
-                {% if not forloop.counter|divisibleby:2 %}
-                <div class="radient-amile-card1 ">
-                    <p class="radient-amile-card-subhead">{{ card.title }}</p>
-                    <div class="radient-amile-card-head">{{ card.subtitle }}</div>
-                    <div class="image-wrapper d-flex  align-items-start justify-content-start">
-                        <div class="overlay slice-1"></div>
-                        <div class="overlay slice-2"></div>
-                        <div class="overlay slice-3"></div>
-                        <div class="overlay slice-4"></div>
-                        <div class="overlay slice-5"></div>
-                        <img src="{% static card.image %}" class="animated-image" loading="lazy"
-                            alt="Smile Step Group 1" />
+            <div class="row g-4 mobileviewofprocess">
+                <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center">
+                    <div class="bigcont"></div>
+                    {% for card in cards %}
+                    <div class="radient-amile-card-m ">
+                        <p class="radient-amile-card-subhead">{{ card.title }}</p>
+                        <div class="radient-amile-card-head">{{ card.subtitle }}</div>
+                        <div class="image-wrapper d-flex  align-items-center justify-content-center">
+                            <div class="overlay slice-1"></div>
+                            <div class="overlay slice-2"></div>
+                            <div class="overlay slice-3"></div>
+                            <div class="overlay slice-4"></div>
+                            <div class="overlay slice-5"></div>
+                            <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                                alt="Smile Step Group 1" />
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endif %}
-                {% endfor %}
             </div>
         </div>
-        <div class="row g-4 mobileviewofprocess">
-            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center">
-                <div class="bigcont"></div>
-                {% for card in cards %}
-                <div class="radient-amile-card-m ">
-                    <p class="radient-amile-card-subhead">{{ card.title }}</p>
-                    <div class="radient-amile-card-head">{{ card.subtitle }}</div>
-                    <div class="image-wrapper d-flex  align-items-center justify-content-center">
-                        <div class="overlay slice-1"></div>
-                        <div class="overlay slice-2"></div>
-                        <div class="overlay slice-3"></div>
-                        <div class="overlay slice-4"></div>
-                        <div class="overlay slice-5"></div>
-                        <img src="{% static card.image %}" class="animated-image" loading="lazy"
-                            alt="Smile Step Group 1" />
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
+    </section>
+    <!-- Type Of Zirconia Crown -->
     <hr />
-
-
-    <section class="typeOfZirconia">
-        <div class="webviewoftype">
-            <div class="main_process_card">
-                <div class="container item-left d-flex align-items-start justify-content-start inner_process_card">
-                    <img src="{% static '01.svg' %}" class="img-fluid numbersvg" loading="lazy" alt="Smile Step Group 1"
-                        data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
-                    <div class="d-flex">
-                        <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
-                            style="color: #1B8976">Crown</h3>
-                        <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
-                            data-aos-delay="250" style="color: #000">
-                            A zirconia crown is a strong, tooth-colored dental restoration made from zirconium dioxide.
-                            It lasts 10-15 years, offering durability, a natural look, and biocompatibility. Zirconia
-                            crowns are chosen for their longevity, strength, and aesthetic appeal.
-                        </p>
-                    </div>
-                </div>
-                <img src="{% static '01crown.png' %}" class="img-fluid side-img" loading="lazy"
-                    alt="Smile Step Group 1" />
-            </div>
-
+    <section class="typeOfZirconia position-relative">
+        <div class="container">
+            <img src="{% static 'img/line.svg' %}" class="img-fluid line-2">
+            <h2 class="zirconia-wrapper-title pt-md-4 pt-5 pb-0">Type Of Zirconia</h2>
+            <img src="{% static 'img/line.svg' %}" class="img-fluid line-1">
+            <div class="webviewoftype">
             <div class="main_process_card">
                 <div class="container item-left d-flex align-items-start inner_process_card">
-                    <img src="{% static '01.svg' %}" class="img-fluid numbersvg" loading="lazy" alt="Smile Step Group 1"
+                    <img src="{% static '01.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
                         data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
                     <div>
                         <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
                             style="color: #1B8976">Crown</h3>
                         <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
-                            data-aos-delay="250" style="color: #000">
+                            data-aos-delay="250" style="color: #000" class="pb-3">
                             A zirconia crown is a strong, tooth-colored dental restoration made from zirconium dioxide.
                             It lasts 10-15 years, offering durability, a natural look, and biocompatibility. Zirconia
                             crowns are chosen for their longevity, strength, and aesthetic appeal.
                         </p>
                     </div>
                 </div>
-                <img src="{% static '01crown.png' %}" class="img-fluid side-img" loading="lazy"
+                <img src="{% static 'img/01crown.webp' %}" class="img-fluid side-img" loading="lazy"
                     alt="Smile Step Group 1" />
+            </div>
+            <div class="main_process_card">
+                <div class="container item-left d-flex align-items-start inner_process_card">
+                    <img src="{% static '02.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
+                    <div>
+                        <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            style="color: #1B8976">Multilayered</h3>
+                        <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            data-aos-delay="250" style="color: #000" class="pb-3">
+                            Multilayered zirconia is a dental material with varying translucency, designed to mimic natural tooth structure. It combines strength, durability, and excellent aesthetics, making it the preferred choice for advanced zirconia implants due to its lifelike appearance.
+                        </p>
+                    </div>
+                </div>
+                <img src="{% static 'img/Multilayered.webp' %}" class="img-fluid side-img" loading="lazy"
+                    alt="Smile Step Group 2" />
+            </div>
+            <div class="main_process_card">
+                <div class="container item-left d-flex align-items-start inner_process_card">
+                    <img src="{% static '03.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
+                    <div>
+                        <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            style="color: #1B8976">Implant</h3>
+                        <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            data-aos-delay="250" style="color: #000" class="pb-3">
+                            Zirconia implants are advanced ceramic dental implants made from zirconium dioxide, offering exceptional strength and a natural, tooth-like appearance. They blend seamlessly with the surrounding teeth and can last 20-25 years with proper care.
+                        </p>
+                    </div>
+                </div>
+                <img src="{% static 'img/implant31.webp' %}" class="img-fluid side-img" loading="lazy"
+                    alt="Smile Step Group 3" />
+            </div>
+            <div class="main_process_card">
+                <div class="container item-left d-flex align-items-start inner_process_card">
+                    <img src="{% static '04.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
+                    <div>
+                        <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            style="color: #1B8976">Emaxlayered</h3>
+                        <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            data-aos-delay="250" style="color: #000" class="mb-0">
+                            EMax layered zirconia is an advanced dental material that combines the strength of zirconia with the natural beauty of porcelain. It offers outstanding durability, lifelike aesthetics, and excellent wear resistance. Choose eMax layered zirconia for visible teeth or high-stress areas where both beauty and strength are essential.
+                        </p>
+                    </div>
+                </div>
+                <img src="{% static 'img/Emaxlayered.webp' %}" class="img-fluid side-img" loading="lazy"
+                    alt="Smile Step Group 4" />
+            </div>
+            <div class="main_process_card">
+                <div class="container item-left d-flex align-items-start inner_process_card">
+                    <img src="{% static '05.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
+                    <div>
+                        <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            style="color: #1B8976">Monolithic</h3>
+                        <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
+                            data-aos-delay="250" style="color: #000" class="pb-4">
+                            Monolithic zirconia is a single-piece, durable dental material known for its strength, aesthetics, and longevity. It's often used for crowns and bridges, offering a smooth, translucent, and natural-looking finish that mimics real teeth.
+                        </p>
+                    </div>
+                </div>
+                <img src="{% static 'img/Monolithic.webp' %}" class="img-fluid side-img" loading="lazy"
+                    alt="Smile Step Group 5" />
             </div>
 
         </div>
         <div class="outerslider mobileviewofType">
             <div class="swiper-container swiper-one">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide text-start p-4" style="background-color: #edf6f4;">
+                    <div class="swiper-slide text-start p-3" style="background-color: #edf6f4;">
                         <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
-                            <div class="d-flex">
+                            <div class="d-flex ">
                                 <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
                                     alt="Smile Step Group 1" />
                                 <div>
@@ -192,84 +265,72 @@
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static '01crown.png' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/type1.png' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
-                    <div class="swiper-slide text-start p-4" style="background-color: #edf6f4;">
+                    <div class="swiper-slide text-start p-3" style="background-color: #edf6f4;">
                         <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                             <div class="d-flex">
-                                <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                <img src="{% static '02.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
                                     alt="Smile Step Group 1" />
                                 <div class="pl-5" style="padding-left: 8px">
-                                    <h3 style="color: #1B8976">Crown</h3>
+                                    <h3 style="color: #1B8976">Multilayered</h3>
                                     <p style="color: #000">
-                                        A zirconia crown is a strong, tooth-colored dental restoration made from
-                                        zirconium dioxide. It lasts 10-15 years, offering durability, a natural look,
-                                        and biocompatibility. Zirconia crowns are chosen for their longevity, strength,
-                                        and aesthetic appeal.
+                                       Multilayered zirconia is a dental material with varying translucency, designed to mimic natural tooth structure. It combines strength, durability, and excellent aesthetics, making it the preferred choice for advanced zirconia implants due to its lifelike appearance.
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static '01crown.png' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/Multilayered.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
 
-                    <div class="swiper-slide text-start text-start p-4" style="background-color: #edf6f4;">
+                    <div class="swiper-slide text-start text-start p-3" style="background-color: #edf6f4;">
                         <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                             <div class="d-flex">
-                                <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                <img src="{% static '03.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
                                     alt="Smile Step Group 1" />
                                 <div class="pl-5" style="padding-left: 8px">
-                                    <h3 style="color: #1B8976">Crown</h3>
+                                    <h3 style="color: #1B8976">Implant</h3>
                                     <p style="color: #000">
-                                        A zirconia crown is a strong, tooth-colored dental restoration made from
-                                        zirconium dioxide. It lasts 10-15 years, offering durability, a natural look,
-                                        and biocompatibility. Zirconia crowns are chosen for their longevity, strength,
-                                        and aesthetic appeal.
+                                        Zirconia implants are advanced ceramic dental implants made from zirconium dioxide, offering exceptional strength and a natural, tooth-like appearance. They blend seamlessly with the surrounding teeth and can last 20-25 years with proper care.
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static '01crown.png' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/implant31.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                                alt="Smile Step Group 1" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide text-start p-3" style="background-color: #edf6f4;">
+                        <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
+                            <div class="d-flex">
+                                <img src="{% static '04.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                    alt="Smile Step Group 1" />
+                                <div class="pl-5" style="padding-left: 8px">
+                                    <h3 style="color: #1B8976">Emaxlayered</h3>
+                                    <p style="color: #000">
+                                        EMax layered zirconia is an advanced dental material that combines the strength of zirconia with the natural beauty of porcelain. It offers outstanding durability, lifelike aesthetics, and excellent wear resistance. Choose eMax layered zirconia for visible teeth or high-stress areas where both beauty and strength are essential.
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="{% static 'img/Emaxlayered.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
                     <div class="swiper-slide text-start p-4" style="background-color: #edf6f4;">
                         <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                             <div class="d-flex">
-                                <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                <img src="{% static '05.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
                                     alt="Smile Step Group 1" />
                                 <div class="pl-5" style="padding-left: 8px">
-                                    <h3 style="color: #1B8976">Crown</h3>
+                                    <h3 style="color: #1B8976">Monolithic</h3>
                                     <p style="color: #000">
-                                        A zirconia crown is a strong, tooth-colored dental restoration made from
-                                        zirconium dioxide. It lasts 10-15 years, offering durability, a natural look,
-                                        and biocompatibility. Zirconia crowns are chosen for their longevity, strength,
-                                        and aesthetic appeal.
+                                        Monolithic zirconia is a single-piece, durable dental material known for its strength, aesthetics, and longevity. It's often used for crowns and bridges, offering a smooth, translucent, and natural-looking finish that mimics real teeth.
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static '01crown.png' %}" class="img-fluid side-img-mobile" loading="lazy"
-                                alt="Smile Step Group 1" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide text-start p-4" style="background-color: #edf6f4;">
-                        <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
-                            <div class="d-flex">
-                                <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
-                                    alt="Smile Step Group 1" />
-                                <div class="pl-5" style="padding-left: 8px">
-                                    <h3 style="color: #1B8976">Crown</h3>
-                                    <p style="color: #000">
-                                        A zirconia crown is a strong, tooth-colored dental restoration made from
-                                        zirconium dioxide. It lasts 10-15 years, offering durability, a natural look,
-                                        and biocompatibility. Zirconia crowns are chosen for their longevity, strength,
-                                        and aesthetic appeal.
-                                    </p>
-                                </div>
-                            </div>
-                            <img src="{% static '01crown.png' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/Monolithic.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -278,8 +339,10 @@
             <!-- Pagination outside -->
             <div class="custom-pagination pagination-one"></div>
         </div>
+        </div>
+      
+        
     </section>
-
     <hr />
     <!-- Why Zirconia Crown -->
     <section class="zirconia-wrapper">
@@ -350,8 +413,8 @@
     </section>
     <!-- Benefits of the zirconia -->
     <section class="BenefitOfZirconia">
-        <div class="container">
-            <div class="col-12 col-lg-7 col-md-8">
+        <div class="container row justify-content-center align-items-center">
+            <div class="col-10 col-lg-7 col-md-8">
                 <div class="zirfirst-headS">Benefits of advance <br> zirconia</div>
                 <div class="zirfirst-text benefittxt">
                     Zirconia crowns offer the ideal blend of strength, aesthetics, and biocompatibility in modern
@@ -365,52 +428,17 @@
             {% comment %} Benefit slider start {% endcomment %}
             <div class="swiper-container swiper-two">
                 <div class="swiper-wrapper">
-
-                    <div class="swiper-slide benslide">
-                        <div class="freebennum">01</div>
-                        <img src="{% static 'sandd.png' %}" class="img-fluid benicons" loading="lazy"
+                    {% for ie in Benefit %}
+                     <div class="swiper-slide benslide">
+                        <div class="freebennum">{{ie.id}}</div>
+                        <img src="{% static 'img/'|add:ie.imgUrl %}" class="img-fluid benicons" loading="lazy"
                             alt="Smile Step Group 1" />
-
                         <div class="benhead">
-                            Versatility
+                            {{ie.title}}
                         </div>
-                        <p class="bantext ">Advanced zirconia adapts to various dental needs, offering a reliable
-                            solution for crowns, bridges, and implants with superior performance and aesthetics</p>
+                        <p class="bantext">{{ie.description}}</p>
                     </div>
-                    <div class="swiper-slide benslide">
-                        <div class="freebennum">01</div>
-                        <img src="{% static 'sandd.png' %}" class="img-fluid benicons" loading="lazy"
-                            alt="Smile Step Group 1" />
-
-                        <div class="benhead">
-                            Versatility
-                        </div>
-                        <p class="bantext">Advanced zirconia adapts to various dental needs, offering a reliable
-                            solution for crowns, bridges, and implants with superior performance and aesthetics</p>
-                    </div>
-                    <div class="swiper-slide benslide">
-                        <div class="freebennum">01</div>
-                        <img src="{% static 'sandd.png' %}" class="img-fluid benicons" loading="lazy"
-                            alt="Smile Step Group 1" />
-
-                        <div class="benhead">
-                            Versatility
-                        </div>
-                        <p class="bantext">Advanced zirconia adapts to various dental needs, offering a reliable
-                            solution for crowns, bridges, and implants with superior performance and aesthetics</p>
-                    </div>
-                    <div class="swiper-slide benslide">
-                        <div class="freebennum">01</div>
-                        <img src="{% static 'sandd.png' %}" class="img-fluid benicons" loading="lazy"
-                            alt="Smile Step Group 1" />
-
-                        <div class="benhead">
-                            Versatility
-                        </div>
-                        <p class="bantext">Advanced zirconia adapts to various dental needs, offering a reliable
-                            solution for crowns, bridges, and implants with superior performance and aesthetics</p>
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
             <div class="custom-pagination pagination-two"></div>
@@ -418,10 +446,10 @@
         </div>
     </section>
     <!-- >Testimonials -->
-    <section class="zirconia-wrapper">
+    {% comment %} <section class="testimonial-wrapper zirconia-wrapper">
         <div class="container position-relative text-center">
             <img src="{% static 'img/line.svg' %}" class="img-fluid line-2t">
-            <h2 class="zirconia-wrapper-title">Testimonials</h2>
+            <h2 class="zirconia-wrapper-title mb-4">Testimonials</h2>
             <img src="{% static 'img/line.svg' %}" class="img-fluid line-1t">
 
             <p class="testinomial-subtitle mb-4">
@@ -429,7 +457,7 @@
                 Export.
                 Our dedicated team provides top-notch care, ensuring comfort and satisfaction at every visit.
             </p>
-            <div class="swiper mySwiper">
+            <div class="swiper pt-3 mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide testimonial-card">
                         <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
@@ -509,11 +537,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     <!-- gallery section -->
     <section class="Gallery-section">
-        <div class="container">
-            <div class="row gallery-wrapper justify-content-center">
+        <div class="container p-0">
+            <div class="row gallery-wrapper position-relative justify-content-center">
                 <div class="col-11 col-md-6 col-lg-4 px-1 ">
                     <p>Step into our Advanced Zirconia Gallery, where precision meets innovation. Explore a stunning
                         collection of zirconia designs, showcasing superior craftsmanship, durability, and elegance.
@@ -527,71 +555,70 @@
             <div class="swiper gallery-swiper">
                 <div class="swiper-wrapper mb-4">
                     <div class="swiper-slide" onclick="showCaseImage('galleryCase1')">
+                        <img src="{% static 'img/case1.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase1">
-                            <img src="{% static 'img/case1.png'%}" class="gallery-caseimg mb-3 img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/case1.png'%}" class="gallery-caseimg img-fluid" alt="gallery-img"
-                                width="100%" height="100%" />
+                            <img src="{% static 'img/case1.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case12.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case15.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case13.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case14.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
-                        <img src="{% static 'img/case1.png'%}" class="gallery-img img-fluid" alt="gallery-img"
-                            width="100%" height="100%" />
                     </div>
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase2')">
-                        <img src="{% static 'img/case2.png'%}" class="gallery-img img-fluid" alt="gallery-img"
-                            width="100%" height="100%" />
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase2')" >
+                        <img src="{% static 'img/case2.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase2">
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg mb-3 img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                        </div>
+                            <img src="{% static 'img/case2.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case21.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case22.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case23.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case24.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
+                        </div> 
                     </div>
                     <div class="swiper-slide" onclick="showCaseImage('galleryCase3')">
-                        <img src="{% static 'img/gallery-img3.png'%}" class="gallery-img img-fluid" alt="gallery-img"
-                            width="100%" height="100%" />
+                        <img src="{% static 'img/case3.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase3">
-                            <img src="{% static 'img/gallery-img3.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img3.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case3.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case31.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case32.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case33.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case34.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
                     <div class="swiper-slide" onclick="showCaseImage('galleryCase4')">
-                        <img src="{% static 'img/gallery-img1.png'%}" class="gallery-img img-fluid" alt="gallery-img"
-                            width="100%" height="100%" />
+                        <img src="{% static 'img/case4.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase4">
-                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg mb-3 img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case4.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case41.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case42.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case43.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case44.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
                     <div class="swiper-slide" onclick="showCaseImage('galleryCase5')">
-                        <img src="{% static 'img/gallery-img2.png'%}" class="gallery-img img-fluid" alt="gallery-img"
-                            width="100%" height="100%" />
+                        <img src="{% static 'img/case5.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase5">
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img1.png'%}" class="gallery-caseimg mb-3 img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
-                            <img src="{% static 'img/gallery-img2.png'%}" class="gallery-caseimg img-fluid"
-                                alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case5.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case51.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case52.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case53.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case54.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="showCaseImage('galleryCase6')">
+                        <img src="{% static 'img/case6.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                        <div class="galleryCaseImg-wrapper d-none" id="galleryCase6">
+                            <img src="{% static 'img/case6.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case61.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case62.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case63.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <img src="{% static 'img/case64.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
                 </div>
                 <div class="swiper-button-next d-none"></div>
                 <div class="swiper-button-prev d-none"></div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination "></div>
                 <div class="overlays-background"></div>
-                {% comment %} <div class="offcanvas-backdrop fade show"></div> {% endcomment %}
             </div>
         </div>
     </section>
@@ -629,13 +656,13 @@
     document.addEventListener("DOMContentLoaded", function () {
         var swiper = new Swiper(".swiper-two", {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 20,
             pagination: {
                 el: ".pagination-two",
                 clickable: true,
             },
             breakpoints: {
-                576: { slidesPerView: 1 }, // Small screens (≤576px)
+                576: { slidesPerView: 1}, // Small screens (≤576px)
                 768: { slidesPerView: 2 }, // Medium screens (≤768px)
                 1024: { slidesPerView: 3 }, // Large screens (≥1024px)
             }
@@ -644,11 +671,10 @@
 
 </script>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<script>
+{% comment %} <script>
     document.addEventListener("DOMContentLoaded", function () {
         console.clear();
 
@@ -725,7 +751,7 @@
             }
         });
     });
-</script>
+</script> {% endcomment %}
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -748,13 +774,13 @@
         wrappers.forEach(wrapper => observer.observe(wrapper));
     });
 </script>
+
 <script>
     var swiper1 = new Swiper(".gallery-swiper", {
         slidesPerView: 6,
         spaceBetween: 20,
         speed: 500,
         loop: true,
-
         pagination: {
             el: ".swiper-pagination",
             clickable: !0,
@@ -769,7 +795,6 @@
             },
             576: {
                 slidesPerView: 2,
-
             },
             768: {
                 slidesPerView: 3,
@@ -788,31 +813,24 @@
         const overlay = document.querySelectorAll(".overlays-background");
         let isDeactivating = activeCase === e;
 
-        console.log("image1", images1);
-
         cases.forEach((current, index) => {
             let img = images[index];
-            const lastImage = images1[images1.length - 1];
-            console.log("img1", img, "lastImage", lastImage, "window", window, "innderWidth", window.innerWidth <= 576)
-
+         
             if (current.id === e) {
                 if (isDeactivating) {
                     // Deactivate the case
                     current.classList.add("d-none");
                     current.classList.remove("d-block");
                     img.style.margin = "0px";
-                    img.classList.add("d-block");
+                    img.classList.add("d-flex");
                     img.classList.remove("d-none");
                     activeCase = null;
                 } else {
                     // Activate the clicked case
-                    if (window.innerWidth <= 576) {
-
-                    }
                     current.classList.add("d-block");
                     current.classList.remove("d-none");
                     img.classList.add("d-none");
-                    img.classList.remove("d-block");
+                    img.classList.remove("d-flex");
                     activeCase = e;
                     current.scrollTop = current.scrollHeight;
                 }
@@ -820,23 +838,22 @@
                 // Hide other cases
                 current.classList.add("d-none");
                 current.classList.remove("d-block");
-                img.classList.add("d-block");
+                img.classList.add("d-flex");
                 img.classList.remove("d-none");
             }
         });
         images.forEach((img, index) => {
             if (window.innerWidth >= 576) {
                 if (activeCase && cases[index].id == activeCase) {
-                    img.style.margin = "0px";
+                    img.style.margin = "0px 0px 20px";
                     img.style.width = "100%";
                     img.style.animation = "zoomOut .7s ease forwards"
                 } else if (activeCase === null) {
-                    img.style.margin = "0px";
+                    img.style.margin = "0px 0px 20px";
                     img.style.width = "100%";
                     img.style.animation = "zoomOut .7s ease forwards"
                 } else {
-                    img.style.margin = "20px";
-                    img.style.width = "85%";
+                    img.style.width = "95%";
                     img.style.animation = "zoomIn .7s ease forwards"
                 }
             }
@@ -854,9 +871,9 @@
                 current.classList.remove("d-block");
             });
             images.forEach(img => {
-                img.classList.add("d-block");
+                img.classList.add("d-flex");
                 img.classList.remove("d-none");
-                img.style.margin = "0px";
+                img.style.margin = "0px 0px 20px";
                 img.style.width = "100%";
                 img.style.animation = "zoomOut .7s ease forwards"
             });
@@ -880,5 +897,4 @@
         initialSlide: 2,
     });
 </script>
-
-{% endblock js %}
+{% endblock  %}

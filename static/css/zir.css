@@ -1,3 +1,67 @@
+/* ------------------- what is zirconia css -----------------  */
+.zirconia-second {
+    padding: 50px 0px;
+    position: relative;
+    z-index: 3;
+    background: white;
+}
+.zirfirst-headS {
+    color: #1b897a;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.zirfirst-text {
+    color: black;
+    font-size: 16px;
+}
+.zirfirstgroup {
+    width: 100%;
+    height: 100%;
+    padding: 0px 130px;
+    position: relative;
+}
+.groupImage {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+.zirconia-text1 {
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 5%;
+    left: -65%;
+    z-index: 0;
+    width:100%;
+}
+
+/* --------------- the path to Radial smile --------------  */
+.radial_smile .line-2{
+    top: 1.7%;
+    left: 1%;
+}
+.radial_smile .line-1{
+    top: 1.7%;
+    right: 1%;
+}
+.bigcont {
+    height:220px;
+}
+.radient-amile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    /* margin-bottom: 80px; */
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    /* width: 80%; */
+    width:100%;
+    margin-bottom: 4.5rem;
+}
 .radient-amile-card-subhead {
     color: #1b897a;
     font-weight: 500;
@@ -5,53 +69,13 @@
     margin-bottom: 0px;
     text-align: start;
 }
-
 .radient-amile-card-head {
     color: #000;
-    font-size: 30px;
-    margin-bottom: 25px;
+    font-size: 26px;
+    /* margin-bottom: 25px; */
+    margin-bottom: 16px;
+    font-weight: 600;
 }
-
-.radient-amile-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    margin-bottom: 80px;
-    border-top: 1px solid #333;
-    padding-top: 50px;
-    width: 80%; /* or max-width: 500px */
-  margin-bottom: 2rem;
-}
-.radient-amile-card-m{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
-    border-top: 1px solid #333;
-    padding-top: 50px;
-    width: 80%; /* or max-width: 500px */
-  margin-bottom: 2rem;
-}
-.radient-amile-card1 {
-    margin-bottom: 80px;
-    border-top: 1px solid #333;
-    padding-top: 50px;
-    width: 80%; /* or max-width: 500px */
-  margin-bottom: 2rem;
-}
-
-.bigcont {
-    height: 200px;
-}
-.mobileviewofprocess{
-    display: none
-}
-.right-column {
-    border-left: 2px dashed #333;
-}
-
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -61,66 +85,48 @@
     overflow: hidden;
     background-color: white;
 }
-
-.animated-image {
-    width: 60%;
-    text-align: center;
-    display: block;
-    position: relative;
-    opacity: 0;
-    transition: opacity 0s ease-in-out 0s;
-}
 .overlay {
     position: absolute;
     bottom: 0%;
     width: 20%;
     height: 100%;
     background: #fff;
+    /* background:transparent; */
     z-index: 2;
+}
+.image-wrapper.in-view .overlay {
+    animation-play-state: running;
 }
 .slice-1 {
     left: 0;
 }
-
 .slice-2 {
     left: 20%;
 }
-
 .slice-3 {
     left: 40%;
 }
-
 .slice-4 {
     left: 60%;
 }
-
 .slice-5 {
     left: 80%;
 }
-
-
 .image-wrapper.in-view .slice-1 {
     animation: slideUp 1.5s ease-in-out 0.1s forwards;
 }
-
 .image-wrapper.in-view .slice-2 {
     animation: slideUp 1.5s ease-in-out 0.2s forwards;
 }
-
 .image-wrapper.in-view .slice-3 {
     animation: slideUp 1.5s ease-in-out 0.4s forwards;
 }
-
 .image-wrapper.in-view .slice-4 {
     animation: slideUp 1.5s ease-in-out 0.8s forwards;
 }
-
 .image-wrapper.in-view .slice-5 {
     animation: slideUp 1.5s ease-in-out 1.2s forwards;
 }
-
-
-
 @keyframes slideUp {
     0% {
         bottom: 0%;
@@ -130,207 +136,173 @@
         bottom: -100%;
     }
 }
-
-
+.animated-image {
+    /* width: 60%; */
+    width:100%;
+    text-align: center;
+    display: block;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0s ease-in-out 0s;
+}
 .image-wrapper.in-view .animated-image {
     opacity: 1;
 }
-
-.image-wrapper.in-view .overlay {
-    animation-play-state: running;
+.left-column{
+    padding-right: 50px;
 }
-
-
-
-.zirconia-second {
-    padding: 50px 0px;
+/* part 2 */
+.right-column {
+    border-left: 2px dashed #333;
+    padding-left: 50px;
 }
-
-.zirfirst-headS {
-    color: #1b897a;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 12px;
+.radient-amile-card1 {
+    /* margin-bottom: 80px; */
+    border-top: 1px solid #333;
+    /* padding-top: 50px; */
+    padding-top: 20px;
+    /* width: 80%;  */
+    width:100%;
+    margin-bottom: 4.5rem;
 }
-
-.zirfirst-text {
-    color: black;
-    font-size: 16px;
+.radient-amile-card1:first-child{
+    margin-top: 40px;
 }
-
-.zirconia-text1 {
-    padding: 10px 30px;
-    position: absolute;
-    bottom: 5%;
-    left: -65%;
-    z-index: 0;
+.mobileviewofprocess{
+    display: none
 }
-
-.zirfirstgroup {
-    width: 100%;
-    height: 100%;
-    padding: 0px 130px;
-    position: relative;
-}
-
-.groupImage {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    z-index: 10;
-}
-
-@media (max-width: 575px) {
-    .zirfirstgroup {
-        padding: 0px 30px;
-    }
-
-    .zirfirst-text {
-        color: black;
-        font-size: 14px;
-    }
-
-    .zirconia-text1 {
-        position: absolute;
-        bottom: -17%;
-        left: 0%;
-        z-index: 0;
-    }
-
-}
-
-
-
-.swiper-container {
-    /* width: 80%; */
-    /* height: 300px; */
-    margin: auto;
-    overflow: hidden;
-}
-
-.swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: #ffcc00;     */
-    border-radius: 10px;
-}
-
-
-.custom-pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
-}
-
-.swiper-pagination-bullet-active {
-    background-color: red !important;
-}
-
-.pagination-one,
-.pagination-two {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    width: 100%;
-}
-
-
-
-
-/* benefits */
-
-.BenefitOfZirconia {
-    padding: 50px 0px;
-}
-
-/* .benefitheading {
-    color: #1b897a;
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 10px;
-} */
-
-.benefittxt {
-    color: black;
-    margin-bottom: 25px;
-}
-
-
-.benslide {
-    position: relative;
-    border: 1px solid #eceae6;
+.radient-amile-card-m{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    padding: 20px;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 50px;
+    width: 80%; /* or max-width: 500px */
+    margin-bottom: 4rem;
 }
-
-.benicons {
-    height: 60px;
-    width: 60px;
-    margin-bottom: 10px;
-    font-weight: 500;
-    position: relative;
+@media(max-width:1200px){
+    .radial_smile .line-2,.radial_smile .line-1{
+        top: 2%;
+    }
 }
-
-.benhead {
-    position: relative;
-    color: #000;
-    font-size: 20px;
-    margin-bottom: 10px;
+@media(max-width:991px){
+    .radial_smile .line-2 {
+        /* top: 2.6%; */
+        left:0%;
+        width: 27%;
+    }
+    .radial_smile .line-1{
+        /* top: 2.6%; */
+        right: 0%;
+        width: 27%;
+    }
+    .left-column{
+        padding-right: 40px;
+    }
+    .right-column{
+        padding-left: 40px;
+    }
 }
-
-.bantext {
-    position: relative;
-    color: #000;
+@media(max-width:768px){
+    .radial_smile .line-2 {
+        top: 1%;
+        left:-6%;
+    }
+    .radial_smile .line-1{
+        top: 1%;
+        right: -6.4%;
+    }
+    .webviewofprocess {
+        display: none;
+    }
+    .mobileviewofprocess{
+        display: block;
+    }
+    .mobileviewofprocess .flex-column{
+        margin-top: 50px;
+    }
+    .animated-image {
+        width: 100%;
+        border-radius: 18px;
+    }
+    .bigcont{
+        height: 0px;
+    }
+    .radient-amile-card-m{
+        padding-top: 20px;
+        border-top: 2px solid #000;
+        justify-content: flex-start;
+        align-items: start;
+    }
+    
+    .radient-amile-card-head{
+        font-size: 26px;
+    }
 }
-
-.freebennum {
-    position: absolute;
-    font-size: 100px;
-    top: -8%;
-    right: 10%;
-    color: rgba(27, 137, 118, 0.1);
-    font-weight: 500;
+@media(max-width:576px){
+    .radial_smile{
+        margin: 60px 0px 0px;
+    }
+    .radial_smile .zirconia-wrapper-title{
+        padding-left: 32px;
+    }
+    .radial_smile .line-2, .radial_smile .line-1 {
+        display: none;
+        /* top: 0.85%;
+        left:4%;
+        width: 22%; */
+    }
+    /* .radial_smile .line-1{
+        top: 0.85%;
+        right: 4%;
+        width: 22%;  
+    } */
+    .bigcont {
+       height: 0px;
+    }
+    .radient-amile-card-m{
+        padding-top: 15px;
+        margin-bottom: 3.5rem;
+    }
+    .radient-amile-card-subhead{
+        font-size: 16px;
+    }
+    .radient-amile-card-head{
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
 }
-
-
-.BenefitOfZirconia .swiper-slide img {
-    height: 60px !important;
-    width: 60px !important;
+@media(max-width:420px){
+    .radial_smile .line-2 {
+        top: 0.96%;
+        left:2%;
+        width: 20%;
+    }
+    .radial_smile .line-1{
+        top: 0.96%;
+        right: 2%;
+        width: 20%;  
+    }
 }
-
-
-/* benefits  end*/
-
-
-
-/* Type of zirconia start */
-
-
+/* ------------- Type of Zirconia ----------------- */
+.typeOfZirconia{
+    background-color: rgba(27, 137, 118, 0.08);
+}
+.typeOfZirconia .line-2{
+    left: 11%;
+    top:4.2%
+}
+.typeOfZirconia .line-1{
+    right: 11%;
+    top:4.2%
+}
 .webviewoftype {
     padding: 50px 0px;
 }
-
-.mobileviewofType {
-    display: none;
-    padding: 50px 0px;
-}
-
-
-
-
-
-
 .main_process_card {
     position: relative;
 }
-
 .main_process_card::before {
     content: "";
     position: absolute;
@@ -342,218 +314,171 @@
     transition: height 0.5s ease-in-out, top 0.5s ease-in-out;
     transform: translateY(-50%);
 }
-
-
-
 .main_process_card:hover::before {
     height: 100%;
 }
-
-.inner_process_card {
-    width: 35%;
-    padding: 30px 0px;
+.main_process_card h3{
+    font-size: 26px;
 }
-
-
+.inner_process_card {
+    width: 46%;
+    padding: 30px 0px 10px;
+}
 .side-img {
     transform: rotate(27deg) scale(0.2);
     position: absolute;
-    top: 0%;
+    top: -15%;
     right: 10%;
-    height: 248px;
+    height: 240px;
     width: 200px;
     opacity: 0;
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
-
 .main_process_card:hover .side-img {
     opacity: 1;
     transform: scale(1);
 }
-/* Testimonials */
-.testimonial-subtitle {
-    max-width: 600px;
-    margin: 0 auto 40px;
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
+.outerslider {
+    /* background-color: rgba(27, 137, 118, 0.08); */
+    padding: 50px 0px;
 }
-.testimonial-card-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.mobileviewofType {
+    display: none;
+    padding: 50px 0px;
 }
-.testimonial-card {
-    background: #fffdfd;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px  rgba(27, 137, 118, 0.3);
-    padding: 40px 30px;
-    max-width: 600px;
-    position: relative;
-    z-index: 2;
-}
-.testimonial-card img{
-    width: 60px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    display:flex;
+.outerslider .swiper-container{
     margin: auto;
+    overflow: hidden;
 }
-.testimonial-avatar {
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.testimonial-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.testimonial-text {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.testimonial-stars {
-    color: #0b8e81;
-    font-size: 1.5rem;
-}
-.zirconia-wrapper .swiper {
-    width: 60%;
-    max-width: 600px;
-    height: 400px !important;
-    margin: 0 auto;
-  }
-  
-  
-@media (max-width: 991px) {
-    .side-img {
-        display: none;
-    }
-
-    .inner_process_card {
-        width: 50%;
-        padding: 30px 0px;
-    }
-
-
-    .webviewoftype {
-        display: none;
-    }
-
-    .mobileviewofType {
-        display: block;
-    }
-
-}
-
-@media (max-width: 775px) {
-    .side-img {
-        display: none;
-    }
-
-    .inner_process_card {
-        width: 60%;
-        padding: 30px 0px;
-    }
-
-    .numbersvg {
-        height: 60px;
-        width: 60px;
-    }
-}
-
-@media (max-width: 575px) {
-    .side-img {
-        display: none;
-    }
-
-    .inner_process_card {
-        width: 80%;
-        padding: 30px 0px;
-    }
-
-    .numbersvg {
-        height: 40px;
-        width: 40px;
-    }
-
-    .mobile_innerproess_Card {
-
-        border-radius: 10px;
-        padding: 20px 0px;
-    }
-}
-
-.numbersvgmobile {
-    height: 50px;
-    width: 50px;
-}
-
-.side-img-mobile {
-    height: 200px !important;
-    width: 100%;
-    object-fit: cover;
+.outerslider .swiper-slide{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     border-radius: 10px;
-    /* padding: 00px 20px !important; */
 }
-
+.outerslider .swiper-pagination-bullet-active {
+    background-color: #1B8976 !important;
+}
 .mobile_innerproess_Card {
     margin: 12px;
     border-radius: 10px;
     padding: 12px;
 }
-.outerslider {
-    background-color: rgba(27, 137, 118, 0.08);
-    padding: 50px 0px;
+/* .numbersvgmobile {
+    height: 50px;
+    width: 50px;
+} */
+.side-img-mobile {
+    /* height: 200px !important; */
+    border-radius: 10px;
 }
-
-/* Type of zirconia end */
-
-/* on scroll video start */
-
-.video-background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
-
-#container {
-    height: 500vh;
-    z-index: 2;
+.pagination-one,
+.pagination-two {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    width: 100%;
 }
-@media (max-width: 768px) {
-    .webviewofprocess {
+/* media query */
+@media(max-width:1200px){
+    .typeOfZirconia .line-2{
+        left: 8%;
+        top:4.6%
+    }
+    .typeOfZirconia .line-1{
+        right: 8%;
+        top:4.6%
+    }
+    .main_process_card{
+        padding:0px 40px;
+    }
+    .inner_process_card{
+        width:74%;
+        margin:0px;
+    }
+    .side-img{
+        right:6%;
+        top:-8%;
+    }
+}
+@media(max-width:991px){
+    .typeOfZirconia .line-2{
+        left: 10%;
+        top:3.6%
+    }
+    .typeOfZirconia .line-1{
+        right: 10%;
+        top:3.6%
+    }
+    .zirconia-text1{
+        left:-15%;
+    }
+    .side-img {
         display: none;
     }
-    .mobileviewofprocess{
+    .inner_process_card {
+        width: 50%;
+        padding: 30px 0px;
+    }
+    .webviewoftype {
+        display: none;
+    }
+    .mobileviewofType {
         display: block;
     }
-    .animated-image {
-        width: 100%;
+    .mobile_innerproess_Card{
+        padding:0px;
+        margin:0px;
+    }
+    .mobile_innerproess_Card h3{
+        font-size:20px;
+    }
+    .numbersvgmobile{
+        width: 60px  !important;
+        height:60px !important;
     }
 }
-.zirconia-second{
-    position: relative;
-    z-index: 3;
-    background: white;
+@media(max-width:768px){
+    .side-img {
+        display: none;
+    }
+    .inner_process_card {
+        width: 60%;
+        padding: 30px 0px;
+    }
+    .numbersvg {
+        height: 60px;
+        width: 60px;
+    }
 }
-/* why zirconia */
-
+@media(max-width:576px){
+    .side-img {
+        display: none;
+    }
+    .inner_process_card {
+        width: 80%;
+        padding: 30px 0px;
+    }
+    .numbersvg {
+        height: 40px;
+        width: 40px;
+    }
+    .mobile_innerproess_Card {
+        border-radius: 10px;
+        padding: 20px 0px;
+    }
+}
+/* ------------------- why zirconia crown css --------------------- */
+.zirconia-wrapper{
+    padding: 10px 0px 6px;
+}
 .zirconia-content-wrapper{
-    grid-row-gap: 50px;
+    grid-row-gap: 35px;
     flex-flow: column;
     display: flex;
     position: relative;
@@ -563,45 +488,30 @@
     color:#1B8976;
     width: 100%;
     text-align: center;
- }
- .line-1{
+}
+.line-1{
     position: absolute;
     top: 4.2%;
     right:2%;
- }
- .line-2{
+}
+.line-2{
     position: absolute;
     top: 4.2%;
     left:2%;
- }
- .line-1t{
-    position: absolute;
-    top: 1.7%;    
-    right: 5%;
- }
- .line-2t{
-    position: absolute;
-    top: 1.7%;
-    left: 5%;
- }
- .zirconia-content-item{
-    /* grid-column-gap: 84px; */
+}
+.zirconia-content-item{
     grid-row-gap: 84px;
     grid-template-rows: auto;
     grid-template-columns: 1fr 43.04%;
     grid-auto-columns: 1fr;
     box-shadow: 0px 0px 3px 0px rgb(27, 137, 118,0.6);
-    /* box-shadow: 0px 0px 3px #000; */
     border-bottom: 2px solid #1B8976;
     border-radius: 8px;
     align-items: center;
     padding: 20px;
     display: flex;
     position: sticky;
-    /* top: 0px; */
     background-color: #fff;
-    /* background-color: #000; */
-    /* color: #fff; */
 } 
 .zirconia-content-item._1{
     top: 20px;
@@ -612,6 +522,13 @@
 .zirconia-content-item._3{
     top: 60px;
 }
+.zirconia-content-item span{
+    font-size: 26px;
+    color: rgb(27, 137, 118,0.3);
+    font-weight: 750;
+    text-align: center;
+    padding: 0px 30px;
+}
 .zirconia-content-item h2{
     font-size: 24px;
     color: #1B8976;
@@ -620,13 +537,8 @@
     text-align: center;
     padding: 0px 30px;
 }
-.zirconia-content-item span{
-    font-size: 26px;
-    color: rgb(27, 137, 118,0.3);
-    font-weight: 750;
-    text-align: center;
-    padding: 0px 30px;
-}
+
+/* media query  */
 @media(max-width:1200px){
     .line-1,.line-2{
         width:28%;
@@ -671,32 +583,23 @@
 }
 @media(max-width:576px){
     .zirconia-wrapper .container{
-        --bs-gutter-x: 2.5rem;
+        --bs-gutter-x: 4.5rem;
     }
     .line-1,.line-2{
         width:22%;
         top: 2.5%;
+        display:none;
     }
     .zirconia-wrapper-title{
         font-size: 20px;
-    }
-    .testimonial-subtitle{
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-    .testimonial-card{
-        max-width: 700px;
-        padding: 20px 15px;
+        text-align: left;
+        /* padding-left: 32px; */
     }
     .zirconia-wrapper .swiper-slide{
         padding: 10px 20px;
         height: 95%;
     }
-    .testimonial-text{
-        font-size: 0.90rem;
-    }
 }
-
 @media(max-width:420px){
     .line-1,.line-2{
         width:22%;
@@ -706,8 +609,143 @@
         font-size: 18px;
     }
 }
-.gallery-wrapper{
-    position:relative;
+/* ---------------- Benefit od zirconia ---------------- */
+.BenefitOfZirconia {
+    padding: 50px 0px;
+}
+.benefittxt {
+    /* color: black; */
+    margin-bottom: 45px;
+    line-height: 1.7;
+}
+.benslide {
+    position: relative;
+    border: 1px solid #eceae6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px 15px;
+    height: 270px !important;
+    border-radius: 10px;
+}
+.freebennum {
+    position: absolute;
+    font-size: 100px;
+    top: -8%;
+    right: 10%;
+    color: rgba(27, 137, 118, 0.1);
+    font-weight: 500;
+}
+.benicons {
+    /* height: 60px;
+    width: 60px; */
+    margin-bottom: 10px;
+    font-weight: 500;
+    position: relative;
+}
+.BenefitOfZirconia .swiper-slide{
+    margin:0px 0px 0px 25px !important; 
+    width:340px !important;
+}
+.BenefitOfZirconia .swiper-container{
+    margin: auto;
+    overflow: hidden;
+}
+.BenefitOfZirconia .swiper-slide img {
+    height: 60px !important;
+    width: 60px !important;
+}
+.benhead {
+    position: relative;
+    color: #1b897a;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.bantext {
+    position: relative;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.75;
+    letter-spacing: 0.5px;
+}
+.BenefitOfZirconia .swiper-pagination-bullet-active {
+    background-color: #1B8976 !important;
+}
+
+/* ------------------- Testimonials ------------------- */
+.testimonial-wrapper .line-1t{
+    position: absolute;
+    top: 1.7%;    
+    right: 5%;
+}
+.testimonial-wrapper .line-2t{
+    position: absolute;
+    top: 1.7%;
+    left: 5%;
+}
+.testimonial-card {
+    background: #fffdfd;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px  rgba(27, 137, 118, 0.3);
+    padding: 40px 30px;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+}
+.testimonial-card img{
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    margin: auto;
+}
+.testimonial-avatar {
+    border-radius: 50%;
+    /* margin-bottom: 20px; */
+}
+.testimonial-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.testimonial-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.testimonial-stars {
+    color: #0b8e81;
+    font-size: 1.5rem;
+}
+.testimonial-wrapper .swiper {
+    width: 60%;
+    max-width: 600px;
+    height: 400px !important;
+    margin: 0 auto;
+}
+@media(max-width:576px){
+    .testimonial-card{
+        max-width: 700px;
+        padding: 20px 15px;
+    }
+    .testimonial-text{
+        font-size: 0.90rem;
+    }
+}
+/* ------------------ Gallery section ----------------- */
+.Gallery-section .container{
+    margin: 10px auto 60px;
+}
+.gallery-wrapper p{
+    font-size:18px;
+    line-height: 1.7;
+    color: rgb(51, 51, 51);
 }
 .gallery-wrapper h2{
     font-size: 130px;
@@ -716,7 +754,6 @@
     position: absolute;
     left:28%;
     top:95%;
-    /* bottom:3%; */
 }
 .gallery-wrapper h3{
     color:#1B8976;
@@ -726,26 +763,31 @@
     font-size: 36px;
     letter-spacing: 1px;
 }
-.gallery-wrapper p{
-    font-size:18px;
-    line-height: 1.7;
-    color: rgb(0, 0, 0,0.8);
+.gallery-swiper{
+    margin-top: 8%;
 }
 .gallery-swiper .swiper-wrapper{
     height:auto !important;
-    /* height: 100%; */
-    /* padding: 0px 15px; */
 }
-.gallery-swiper .swiper-wrapper{
-    height:100% !important;
+.gallery-swiper .swiper-slide{
+    border-radius: 10px;
 }
 .gallery-swiper .gallery-img{
-    margin-bottom:10px
+    margin-bottom:15px;
+    border: 2px solid #1B8976;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0px 0px 3px rgb(27, 137, 118,0.9); */
 }
+
 .gallery-img:has(.galleryCaseImg-wrapper.d-block img) {
     margin: 20px;
 }
-
+.gallery-swiper.swiper-backface-hidden .swiper-slide:has(.galleryCaseImg-wrapper.d-block){
+    transform: none !important;
+}
 .gallery-swiper .swiper-button-next, 
 .gallery-swiper .swiper-button-prev{
     /* color:#1B8976 !important; */
@@ -755,6 +797,11 @@
     width:24px !important;
     border-radius: 50%;
 }
+.gallery-swiper .swiper-button-next::after, 
+.gallery-swiper .swiper-button-prev::after{
+    font-size: 11px;
+    font-weight: 900;
+}
 .gallery-swiper .swiper-button-prev{
     left:-0% !important;
 }
@@ -762,23 +809,9 @@
     padding: 5px 5px 5px 8px;
     right:-0% !important;
 }
-.gallery-swiper .swiper-button-next::after, 
-.gallery-swiper .swiper-button-prev::after{
-    font-size: 11px;
-    font-weight: 900;
-}
 .gallery-swiper .swiper-pagination-bullet-active{
     color:#1B8976 !important;
     background-color:#1B8976 !important;
-}
-
-/* vertical gallery section */
-.gallery-swiper1{
-    width:20%
-}
-
-.Gallery-section .offcanvas.offcanvas-start{
-    width:250px;
 }
 .overlays-background{
     top: 0;
@@ -794,41 +827,26 @@
     position: fixed;
     height: 100vh;
 }
-.swiper-backface-hidden .swiper-slide:has(.galleryCaseImg-wrapper.d-block){
-    transform: none !important;
-}
-.gallery-img{
-    border: 1px solid #000;
-    border-radius: 10px;
-}
-body:has(.offcanvas.show){
-    padding-right: 0px !important;
-}
-
 .gallery-caseimg{
-    border: 1px solid #000;
+    border: 2px solid #1B8976;
+    max-height:100%;
+    box-shadow: 0px 0px 3px rgb(27, 137, 118,0.3);
+    border-radius: 10px;
+    transition: max-height 0.3s ease;
 }
-.galleryCaseImg-wrapper.d-block{
-    display: flex !important;
-    flex-direction: column;
+.gallery-swiper .swiper-pagination-lock{
+    display: block !important;
 }
-
-/* try to offcanvase design onclick event */
-.gallery-img{
-    box-shadow: 0px 0px 3px #000;
+.gallery-swiper .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: var(--swiper-pagination-bottom, 0px) !important;
 }
-/* .galleryCaseImg-wrapper.d-none{
-    animation: zoomIn .3s forwards;
-} */
 .galleryCaseImg-wrapper{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 .galleryCaseImg-wrapper.d-block{
     top: 0;
-    /* left: 18.8%; */
-    width: 220px;
-    /* width: 295px; */
-    border-right: 1px solid rgba(0, 0, 0, 0.175);
+    width: 235px;
+    /* border-right: 1px solid rgba(0, 0, 0, 0.175); */
     position: fixed;
     bottom: 0;
     z-index: 9999;
@@ -837,25 +855,39 @@ body:has(.offcanvas.show){
     max-width: 100%;
     color:#000;
     visibility: hidden;
-    background-color: #fff;
+    background-color: transparent;
     background-clip: padding-box;
     outline: 0;
     transition: all 0.3s ease;
-
     /* transition: transform .3s ease-in-out; */
     flex-grow: 1;
     padding: 0;
     overflow-y: auto;
     scrollbar-width: none;
-} 
-.gallery-caseimg{
-    max-height:100%;
-    transition: max-height 0.3s ease;
+    visibility: visible;
+    transform: translateX(0%);
+    margin-left: -17px;
+}
+.gallery-swiper .swiper-wrapper .swiper-slide:first-child .galleryCaseImg-wrapper.d-block{
+    margin-left: 0px;
+}
+[data-swiper-slide-index="4"]:has(.galleryCaseImg-wrapper.d-block){
+    margin-left: -15px;
+}
+.gallery-swiper .swiper-wrapper .swiper-slide:last-child .galleryCaseImg-wrapper.d-block{
+    margin-left: -15px;
 }
 .gallery-caseimg:hover{
     animation: scrollToBottom 0.5s forwards;
 }
- @keyframes scrollToBottom{
+.gallery-swiper .swiper-wrapper:has(.galleryCaseImg-wrapper.d-block){
+    padding: 140px 0px;
+}
+.galleryCaseImg-wrapper.d-block .gallery-caseimg{
+    width:100%;
+}
+
+@keyframes scrollToBottom{
     from {
         scroll-behavior: auto;
         scroll-top: 0;
@@ -863,7 +895,7 @@ body:has(.offcanvas.show){
     to {
         scroll-top: 100%;
     }
- }
+}
 @keyframes zoomIn{
     from {
         opacity: 0;
@@ -884,22 +916,46 @@ body:has(.offcanvas.show){
         transform: translateZ(0) scale(1);
     }
 }
- .galleryCaseImg-wrapper.d-block{
-    visibility: visible;
-    transform: translateX(0%);
-}
-.swiper-wrapper:has(.galleryCaseImg-wrapper.d-block){
-    padding: 140px 16px;
-}
-.galleryCaseImg-wrapper.d-block .gallery-caseimg{
-    width:100%;
-}
 
-.gallery-swiper{
-    margin-top: 8%;
+/* media query  */
+
+/* @media(min-width:1300px) and (max-width:1440px){
+    .galleryCaseImg-wrapper.d-block{
+        width: 270px;
+    }
 }
-.Gallery-section .container{
-    margin: 60px auto;
+@media(min-width:1439px) and (max-width:1649px){
+    .galleryCaseImg-wrapper.d-block{
+        width: 270px;
+    }
+}
+@media(min-width:1650px) and (max-width:1800px){
+    .galleryCaseImg-wrapper.d-block{
+        width: 270px;
+    }
+}
+@media(min-width:1800px) and (max-width:2000px){
+    .galleryCaseImg-wrapper.d-block{
+        width: 270px;
+    }
+} */
+/* @media(min-width:1800px) and (max-width:2000px){
+    .gallery-wrapper h2{
+        top:100%;
+        font-size: 140px;
+    }
+    .galleryCaseImg-wrapper.d-block{
+        width: 270px;
+    }
+} */
+@media(min-width:1600px){
+    .galleryCaseImg-wrapper.d-block{
+        width: 270px;
+    }
+    .gallery-wrapper h2{
+        top:100%;
+        font-size: 140px;
+    }
 }
 @media(max-width:1200px){
     .gallery-swiper{
@@ -936,44 +992,62 @@ body:has(.offcanvas.show){
 }
 @media(max-width:576px){
     .Gallery-section .container{
-        margin: 50px auto;
+        margin: 20px auto 60px;
+    }
+    /* .galleryCaseImg-wrapper.d-block{
+        width:88% !important;
+        margin-left: 28px;
+        margin-bottom: 25px;
+    } */
+    .gallery-swiper .swiper-wrapper .swiper-slide:first-child .galleryCaseImg-wrapper.d-block {
+        margin-left: 40px;
+    }
+    .galleryCaseImg-wrapper.d-block .gallery-caseimg{
+        height:75% !important;
     }
     .galleryCaseImg-wrapper.d-block{
-        width:90% !important;
-        margin-left: -21px;
+        width:80% !important;
+        margin-left: 40px;
         margin-bottom: 25px;
+    }
+    .gallery-wrapper p{
+        font-size: 16px;
+        padding: 0px 48px !important;
+    }
+    .gallery-wrapper h2{
+        top:112%
     }
     .gallery-wrapper h3{
         font-size: 28px;
         top:92%;
         right:4%;
     }
-    .gallery-wrapper h2{
-        top:112%
+    .gallery-swiper .swiper-slide{
+        padding: 0px 40px 10px 40px;
+        display: flex !important;
+        background: transparent !important;
     }
-    .gallery-wrapper p{
-        font-size: 16px;
-    }
-    .swiper-slide{
-        padding: 10px;
-    }
-    .swiper-wrapper:has(.galleryCaseImg-wrapper.d-block){
+    .gallery-swiper .swiper-wrapper:has(.galleryCaseImg-wrapper.d-block),
+    .gallery-swiper .swiper-slide-active:has(.galleryCaseImg-wrapper.d-block){
         padding: 120px 0px;
     }
-    .swiper-slide{
-        padding: 10px 40px 10px 40px;
+    .gallery-swiper .swiper-slide.swiper-slide-active{
+        display: flex;
+    }
+    .gallery-swiper .gallery-img{
+        width:80%;
+        margin: auto;
     }
     .gallery-img.d-block{
         width:100%;
     }
 }
-
 @media(max-width:480px){
     .gallery-swiper{
         margin-top: 24%;
     } 
     .gallery-wrapper h2{
-        top:130%;
+        top:126%;
         left:17%;
         font-size: 70px;
     }
@@ -982,3 +1056,84 @@ body:has(.offcanvas.show){
         font-size: 26px;
     }
 }
+
+@media (max-width: 575px) {
+    .zirfirstgroup {
+        padding: 0px 30px;
+    }
+
+    .zirfirst-text {
+        color: black;
+        font-size: 14px;
+    }
+
+    .zirconia-text1 {
+        position: absolute;
+        bottom: -11%;
+        left: -8%;
+        /* bottom: -17%;
+        left: 0%; */
+        z-index: 0;
+        width:100%;
+    }
+
+}
+
+/* ------------ on scroll video start --------------*/
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+#container {
+    height: 500vh;
+    z-index: 2;
+}
+
+
+/* unused css */
+/* .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+} */
+
+/* .swiper-pagination-bullet-active {
+    background-color: #1B8976 !important;
+} */
+
+/* .benefitheading {
+    color: #1b897a;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+} */
+
+/* Testimonials */
+/* .testimonial-subtitle {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+} */
+/* .testimonial-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} */
+
+/* @media(max-width:576px){
+    .testimonial-subtitle{
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+} */

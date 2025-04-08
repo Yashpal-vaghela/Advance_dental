@@ -141,24 +141,28 @@ def exhibition(request):
     return render(request, 'exhibition.html', context)
 
 def zirconiacrown(request):
-      cards = [
-        {
-            "title": "Smile Makeover",
-            "subtitle": "Before & After",
-            "image": "slice.png"
-        },
-        {
-            "title": "Dental Implants",
-            "subtitle": "Full Restoration",
-            "image": "slice.png"
-        },
-        {
-            "title": "Teeth Whitening",
-            "subtitle": "1 Hour Result",
-            "image": "slice.png"
-        }
+    cards = [
+        {"title": "Planning","subtitle": "Plan The Treatment","image": "img/try1.png"},
+        {"title": "Presentation", "subtitle": "Present The Treatment", "image": "img/try2.png"},
+        {"title": "Accuracy", "subtitle": "Provide Accurate And Reliable Results","image": "img/try3.png"},
+        {"title": "Preparation","subtitle": "Custom Restoration Preparation","image": "img/try4.png"},
+        {"title": "Provision","subtitle": "Provide The Temporaries","image": "img/try5.png"},
+        {"title": "Collection","subtitle": "Collect Smile Data","image": "img/try6.png"},
     ]
-      return render(request, 'zir.html',  {'cards': cards})
+ 
+    Benefit = [
+        {'id':'01','title':"Versatility",'imgUrl':"011Benefit.svg",'description':"Advanced zirconia adapts to various dental needs, offering a reliable solution for crowns, bridges, and implants with superior performance and aesthetics"},
+        {'id':'02','title':"Aesthetics",'imgUrl':"02Benefit.svg",'description':"Enjoy a natural, lifelike smile with zirconia's translucency and color-matching ability,ensuring a seamless, beautiful restoration that blends perfectly."},
+        {'id':'03','title':"Strength and Durability",'imgUrl':"03Benefit.svg",'description':"Enjoy a natural, lifelike smile with zirconia's translucency and color-matching ability,ensuring a seamless, beautiful restoration that blends perfectly."},
+        {'id':'04','title':"Biocompatibility",'imgUrl':"04Benefit.svg",'description':"Safe for all, zirconia is metal-free and biocompatible, reducing the risk of allergies or irritation, making it a trustworthy choice for oral health."},
+        {'id':'05','title':"Minimal Tooth Removal",'imgUrl':"05Benefit.svg",'description':"Preserve more of your natural tooth with zirconia's superior strength, allowing for thinner restorations that require less enamel removal."},
+        {'id':'06','title':"Resistance To Staining",'imgUrl':"06Benefit.svg",'description':"Zirconia's non-porous surface resists stains from coffee, tea, or wine, ensuring your smile stays bright and flawless for years to come."},
+        {'id':'07','title':"Reduced Wear on Opposing teeth",'imgUrl':"07Benefit.svg",'description':"Gentle yet strong, zirconia minimizes wear on opposing teeth, protecting your natural dentition while delivering longlasting performance."},
+        {'id':'08','title':"longevity",'imgUrl':"08Benefit.svg",'description':"Designed for lasting results, zirconia resists chipping, cracking, and decay, providing a durable and dependable dental solution for years to come."},
+        {'id':'09','title':"Precision And Fit",'imgUrl':"09Benefit.svg",'description':"Crafted with cutting-edge technology, zirconia restorations offer a precise, custom fit for maximum comfort, stability, and a seamless bite."},
+    ]
+
+    return render(request, 'zir.html',  {'cards': cards,'Benefit':Benefit})
 
 # def neweventlink(request):
 #     context = {

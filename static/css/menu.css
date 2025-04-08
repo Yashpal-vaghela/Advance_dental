@@ -49,7 +49,7 @@ video {
 --------------------------------------------*/
 .wsmenucontainer {
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-attachment: fixed;
   background-position: 50% 0;
   background-repeat: no-repeat;
@@ -784,8 +784,8 @@ video {
     background-color: #fff;
     border: none;
     padding: 0px;
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
@@ -794,6 +794,7 @@ video {
     -webkit-transition: inherit;
     -moz-transition: inherit;
     transition: inherit;
+    transform: rotateX(0deg) !important;
   }
   .wsmenu>.wsmenu-list>li>ul.sub-menu>li>a {
     line-height: 20px;
@@ -1394,3 +1395,9 @@ transform: rotateX(0deg);
 /* .wsmenu-dropdown:hover{
 
 } */
+@media only screen and (max-width: 991px){
+  .wsmenu > .wsmenu-list > li  > ul.sub-menu > li > ul.sub-menu{
+    opacity: 1 !important;
+    visibility:visible !important;
+  }
+}
