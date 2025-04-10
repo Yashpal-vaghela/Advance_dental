@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block header %}
+{% block seo%}
+<title>What Is Advance Zirconia Crown? Benefits, Types and Price</title>
+<meta name="description" content="Discover the benefits, types, and pricing of advanced zirconia crowns, a durable and aesthetic solution for restoring damaged teeth with natural-looking results."/>
+<link rel="canonical" href="https://advancedentalexport.com/zirconia-crown/"/>
+{% endblock seo %}
 
+{% block header %}
 {% endblock header %}
 
 {% block css %}
@@ -35,7 +40,7 @@
                     <img src="{% static 'banner-2/image27.webp' %}" alt="grass-pic" class="grass-pic1" />
                 </div>
                 <div class="optional1">
-                    <img src="{% static 'banner-2/banner-32.webp' %}" alt="slide2-optional" class="slide2-optional1" />
+                    <img src="{% static 'banner-2/banner-31.webp' %}" alt="slide2-optional" class="slide2-optional1" />
                 </div>
                 </div>
             </div>
@@ -47,7 +52,7 @@
         <div class="container position-relative">
             <div class="row g-4 justify-content-center align-items-center">
                 <div class="col-10 col-lg-6">
-                    <div class="zirfirst-headS">What Is Advance Zirconia Crown?</div>
+                    <h1 class="zirfirst-headS">What Is Advance Zirconia Crown?</h1>
                     <div class="zirfirst-text">
                         <p> A zirconia crown is a popular dental restoration option known for its strength, durability,
                             and aesthetic appeal. Zirconia, meaning a crystalline form of zirconium, is a material that
@@ -209,7 +214,7 @@
                         </p>
                     </div>
                 </div>
-                <img src="{% static 'img/implant31.webp' %}" class="img-fluid side-img" loading="lazy"
+                <img src="{% static 'img/Implant31.webp' %}" class="img-fluid side-img" loading="lazy"
                     alt="Smile Step Group 3" />
             </div>
             <div class="main_process_card">
@@ -255,12 +260,10 @@
                                 <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
                                     alt="Smile Step Group 1" />
                                 <div>
-                                    <h3 style="color: #1B8976" class="pl-2">Crown</h3>
+                                    <h3 style="color: #1B8976" class="pl-2">Crown/Monolithic</h3>
                                     <p style="color: #000">
-                                        A zirconia crown is a strong, tooth-colored dental restoration made from
-                                        zirconium dioxide. It lasts 10-15 years, offering durability, a natural look,
-                                        and biocompatibility. Zirconia crowns are chosen for their longevity, strength,
-                                        and aesthetic appeal.
+                                        Monolithic zirconia is a single-piece, durable dental material known for its strength, aesthetics, and longevity.
+                                        It's often used for crowns and bridges, offering a smooth, translucent, and natural-looking finish that mimics real teeth.
                                     </p>
                                 </div>
                             </div>
@@ -280,7 +283,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static 'img/Multilayered.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/Multilayered-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -297,7 +300,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static 'img/implant31.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/Implant-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -313,7 +316,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static 'img/Emaxlayered.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/Emaxlayered-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -329,7 +332,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <img src="{% static 'img/Monolithic.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                            <img src="{% static 'img/Monolithic-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -412,9 +415,12 @@
     </section>
     <!-- Benefits of the zirconia -->
     <section class="BenefitOfZirconia">
-        <div class="container ">
-            <div class="col-10 col-lg-7 col-md-8">
-                <div class="zirfirst-headS">Benefits of advance <br> zirconia</div>
+        <div class="container position-relative">
+            <div class="col-12 text-center">
+                <!-- <div class="zirfirst-headS"></div> -->
+                <img src="{% static 'img/line.svg' %}" class="img-fluid line-2">
+                    <h2 class="zirconia-wrapper-title py-4">Benefits of advance zirconia</h2>
+                <img src="{% static 'img/line.svg' %}" class="img-fluid line-1">
                 <div class="zirfirst-text benefittxt">
                     Zirconia crowns offer the ideal blend of strength, aesthetics, and biocompatibility in modern
                     dentistry. Made from zirconium dioxide, they are highly durable, resisting chipping and breaking,
@@ -445,7 +451,7 @@
         </div>
     </section>
     <!-- >Testimonials -->
-    {% comment %} <section class="testimonial-wrapper zirconia-wrapper">
+    <section class="testimonial-wrapper zirconia-wrapper mb-5">
         <div class="container position-relative text-center">
             <img src="{% static 'img/line.svg' %}" class="img-fluid line-2t">
             <h2 class="zirconia-wrapper-title mb-4">Testimonials</h2>
@@ -460,14 +466,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide testimonial-card">
                         <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
-                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <h5 class="testimonial-name">Dr. Shefali Phogat</h5>
                         <p class="testimonial-text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries
+                            It’s always a great experience to work in collaboration with Advance dental lab. We have done multiple cases of Full mouth rehabilitation with zirconia & Emax. They do excellent work with utmost precision. Their team is highly efficient and easy to reach. Keep up the good work.
                         </p>
                         <div class="testimonial-stars">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -475,14 +476,11 @@
                     </div>
                     <div class="swiper-slide testimonial-card">
                         <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
-                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <h5 class="testimonial-name">Dr. Skpatel</h5>
                         <p class="testimonial-text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries
+                            Excellent work especially for zirconia & e-max veneers.
+                            A lot of perfection depends on lab & we have been very satisfied .perfect shade selection,perfect margin,perfect occlusion,timely delivery & no complaints from patient.
+                            Thanks ,advance lab& keep going .
                         </p>
                         <div class="testimonial-stars">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -490,14 +488,9 @@
                     </div>
                     <div class="swiper-slide testimonial-card">
                         <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
-                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <h5 class="testimonial-name">Dr. Jay Patel</h5>
                         <p class="testimonial-text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries
+                            As a specialist prosthodontist, working very closely with Advanced Dental Export makes me extremely delighted to deliver dream smile design projects to our elite clients.Their quality of dental prosthesis is par international standards along with FDA approved materials.Technical aspects like crown margins, contact areas, occlusion, implant prosthetics,final denture processing are achieved and executed with utter precision and updated innovation.ADE has a professional and technical team dedicated to quality services and exact needs of the doctors,that is very unique virtue reflects in their team members.
                         </p>
                         <div class="testimonial-stars">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -505,14 +498,9 @@
                     </div>
                     <div class="swiper-slide testimonial-card">
                         <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
-                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <h5 class="testimonial-name">Dr. Ankita</h5>
                         <p class="testimonial-text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries
+                            I had the pleasure of working with Advance Dental Lab for over 8 years. It is such a joy to have a lab that can provide helpful and successful alternative options for extremely difficult cases and export level quality . Ultimate smile Designing is best. Support Digital dentistry . They have skilled technicians to provide Fast work. Ultimate smile designer .
                         </p>
                         <div class="testimonial-stars">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -520,14 +508,9 @@
                     </div>
                     <div class="swiper-slide testimonial-card">
                         <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
-                        <h5 class="testimonial-name">Himanshu Patel</h5>
+                        <h5 class="testimonial-name">Dr. Jugal Sherdiwala</h5>
                         <p class="testimonial-text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries
+                            I have been sending my work to Advanced Lab since their inception. Their work is extraordinary along with quick service. I have worked with many labs but I always faced problems either with communication, not getting work on time or work satisfaction. I have never faced such issues with Advanced Lab. Their work is impeccable. If there is someone out there making life of a dentist easy- It’s them.
                         </p>
                         <div class="testimonial-stars">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -536,7 +519,7 @@
                 </div>
             </div>
         </div>
-    </section> {% endcomment %}
+    </section>
     <!-- gallery section -->
     <section class="Gallery-section">
         <div class="container p-0">
@@ -547,14 +530,20 @@
                         Discover the future of Advance Zirconia.</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
-                    <h2>Zirconia</h2>
-                    <h3>Gallery</h3>
+                    <div class="gallery-bg-text">Zirconia</div>
+                    <h2>Gallery</h2>
                 </div>
             </div>
             <div class="swiper gallery-swiper">
                 <div class="swiper-wrapper mb-4">
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase1')">
-                        <img src="{% static 'img/case1.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                    <div class="swiper-slide">
+                        <div class="gallery-container">
+                            <img src="{% static 'img/case1.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <button class="gallery-btn" onclick="showCaseImage('galleryCase1')">
+                                <span>Click here</span>
+                                <img src="{% static 'img/arrow.png' %}" alt="arrow" class="arrow-icon" />
+                            </button>
+                        </div>
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase1">
                             <img src="{% static 'img/case1.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
                             <img src="{% static 'img/case12.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
@@ -563,8 +552,14 @@
                             <img src="{% static 'img/case14.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase2')" >
-                        <img src="{% static 'img/case2.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                    <div class="swiper-slide">
+                        <div class="gallery-container">
+                            <img src="{% static 'img/case2.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <button class="gallery-btn" onclick="showCaseImage('galleryCase2')">
+                                <span>Click here</span>
+                                <img src="{% static 'img/arrow.png' %}" alt="arrow" class="arrow-icon" />
+                            </button>
+                        </div>
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase2">
                             <img src="{% static 'img/case2.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
                             <img src="{% static 'img/case21.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
@@ -573,8 +568,14 @@
                             <img src="{% static 'img/case24.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div> 
                     </div>
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase3')">
-                        <img src="{% static 'img/case3.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                    <div class="swiper-slide">
+                        <div class="gallery-container">
+                            <img src="{% static 'img/case3.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <button class="gallery-btn" onclick="showCaseImage('galleryCase3')">
+                                <span>Click here</span>
+                                <img src="{% static 'img/arrow.png' %}" alt="arrow" class="arrow-icon" />
+                            </button>
+                        </div>
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase3">
                             <img src="{% static 'img/case3.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
                             <img src="{% static 'img/case31.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
@@ -583,8 +584,14 @@
                             <img src="{% static 'img/case34.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase4')">
+                    <div class="swiper-slide">
+                        <div class="gallery-container">
                         <img src="{% static 'img/case4.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <button class="gallery-btn" onclick="showCaseImage('galleryCase4')">
+                                <span>Click here</span>
+                                <img src="{% static 'img/arrow.png' %}" alt="arrow" class="arrow-icon" />
+                            </button>
+                        </div>
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase4">
                             <img src="{% static 'img/case4.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
                             <img src="{% static 'img/case41.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
@@ -593,8 +600,14 @@
                             <img src="{% static 'img/case44.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase5')">
-                        <img src="{% static 'img/case5.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                    <div class="swiper-slide">
+                        <div class="gallery-container">
+                            <img src="{% static 'img/case5.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <button class="gallery-btn" onclick="showCaseImage('galleryCase5')">
+                                <span>Click here</span>
+                                <img src="{% static 'img/arrow.png' %}" alt="arrow" class="arrow-icon" />
+                            </button>
+                        </div>
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase5">
                             <img src="{% static 'img/case5.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
                             <img src="{% static 'img/case51.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
@@ -603,8 +616,14 @@
                             <img src="{% static 'img/case54.webp'%}" class="gallery-caseimg img-fluid" alt="gallery-img" width="100%" height="100%" />
                         </div>
                     </div>
-                    <div class="swiper-slide" onclick="showCaseImage('galleryCase6')">
-                        <img src="{% static 'img/case6.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                    <div class="swiper-slide">
+                        <div class="gallery-container">
+                            <img src="{% static 'img/case6.webp'%}" class="gallery-img img-fluid" alt="gallery-img" width="100%" height="100%" />
+                            <button class="gallery-btn" onclick="showCaseImage('galleryCase6')">
+                                <span>Click here</span>
+                                <img src="{% static 'img/arrow.png' %}" alt="arrow" class="arrow-icon" />
+                            </button>
+                        </div>
                         <div class="galleryCaseImg-wrapper d-none" id="galleryCase6">
                             <img src="{% static 'img/case6.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
                             <img src="{% static 'img/case61.webp'%}" class="gallery-caseimg mb-3 img-fluid" alt="gallery-img" width="100%" height="100%" />
@@ -654,8 +673,10 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var swiper = new Swiper(".swiper-two", {
-            slidesPerView: 1,
+            slidesPerView: 6,
             spaceBetween: 20,
+            loop: true,
+            loopedSlides: 12,
             pagination: {
                 el: ".pagination-two",
                 clickable: true,
@@ -664,7 +685,11 @@
                 576: { slidesPerView: 1}, // Small screens (≤576px)
                 768: { slidesPerView: 2 }, // Medium screens (≤768px)
                 1024: { slidesPerView: 3 }, // Large screens (≥1024px)
-            }
+            },
+            autoplay: {
+                delay: 3000, 
+                disableOnInteraction: false, 
+            },
         });
     });
 
