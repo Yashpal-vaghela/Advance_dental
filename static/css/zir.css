@@ -323,7 +323,9 @@
     font-weight: 900;
     color:#1B8976;
     /* padding: 20px; */
-    padding: 7px 15px 7px 11px;
+    padding: 7px 0px 7px 0px;
+    margin: 0px -6px;
+    /* padding: 7px 15px 7px 11px; */
 }
 .typeOfZirconia .swiper-button-next{
     top:10%;
@@ -335,8 +337,9 @@
     font-size: 15px;
     font-weight: 900;
     color:#1B8976;
+    margin: 0px -2px;
     /* padding: 20px; */
-    padding: 0px 9px 0px 12px;
+    /* padding: 0px 9px 0px 12px; */
     /* padding: 7px 11px 7px 15px; */
 }
 .webviewoftype {
