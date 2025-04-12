@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block seo %}    
+{% block seo %}
 <title>{% spaceless %}{{pk.title}}{% endspaceless %}</title>
 <meta name="description" content="{% spaceless %}{{pk.description}}{% endspaceless %}">
 <meta name="keyword" content="{% spaceless %}{{pk.keyword}}{% endspaceless %}">
@@ -21,14 +21,14 @@
 <meta name="twitter:description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
 
 {% if pk.image %}
-<meta name="twitter:image" content="{% spaceless %}{{pk.image.url}}{% endspaceless %}" />  
+<meta name="twitter:image" content="{% spaceless %}{{pk.image.url}}{% endspaceless %}" />
 {% endif %}
-    
+
 {% endblock seo %}
 
 {% block css %}
 {% endblock css %}
-    
+
 
 
 {% block body %}
@@ -38,516 +38,580 @@
 
 
 <div id="breadcrumb" class="division">
-    <div class="container">
-        <div class="row">						
-            <div class="col">
-                <div class=" breadcrumb-holder">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class=" breadcrumb-holder">
 
-                    <!-- Breadcrumb Nav -->
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Best Dental Lab In {{pk.name}}</li>
-                        </ol>
-                    </nav>
+					<!-- Breadcrumb Nav -->
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Best Dental Lab In {{pk.name}}</li>
+						</ol>
+					</nav>
 
-                    <!-- Title -->
-                    <h1 class="h4-sm steelblue-color">Best Dental Lab In - {{pk.name}}</h1>
+					<!-- Title -->
+					<h1 class="h4-sm steelblue-color">Best Dental Lab In - {{pk.name}}</h1>
 
-                </div>
-            </div>
-        </div>  <!-- End row -->	
-    </div>	<!-- End container -->		
-</div>	<!-- END BREADCRUMB -->	
+				</div>
+			</div>
+		</div> <!-- End row -->
+	</div> <!-- End container -->
+</div> <!-- END BREADCRUMB -->
 
 <section id="about-6" class="pt-50 pb-50 about-section division">
 	<div class="container">
 		<div class="row d-flex align-items-center">
 			<div class="col-lg-7">
-				<div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"><span class="section-id blue-color">Welcome to Advance Dental Export</span>
+				<div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s"
+					style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"><span
+						class="section-id blue-color">Welcome to Advance Dental Export</span>
 					<h3 class="h3-md steelblue-color">The Art Of Esthetic Laboratories</h3>
 					<p>
-                        Looking for the best dental services in {{pk.name}}? Look no further than Advanced Dental Export! We are your premier destination for top-quality dental solutions, including dentures, implants, bridges, and more. Our commitment to excellence and customer satisfaction sets us apart as the leading dental lab in {{pk.name}}.
-                    </p>
+						Looking for the best dental services in {{pk.name}}? Look no further than Advanced Dental
+						Export! We are your premier destination for top-quality dental solutions, including dentures,
+						implants, bridges, and more. Our commitment to excellence and customer satisfaction sets us
+						apart as the leading dental lab in {{pk.name}}.
+					</p>
 
-                    <h3 class="section-id blue-color ">Why Choose Advanced Dental Export?</h3>
-					
-						<p>At Advanced Dental Export, we take pride in being one of the leading dental labs in India, offering a wide range of dental solutions including dentures, implants, bridges, and more. Our commitment to excellence has made us a trusted name in the dental industry not only in {{pk.name}} but across the nation.</p>
+					<h3 class="section-id blue-color ">Why Choose Advanced Dental Export?</h3>
+
+					<p>At Advanced Dental Export, we take pride in being one of the leading dental labs in India,
+						offering a wide range of dental solutions including dentures, implants, bridges, and more. Our
+						commitment to excellence has made us a trusted name in the dental industry not only in
+						{{pk.name}} but across the nation.</p>
 					<h3 class="section-id blue-color ">Here's why we stand out:</h3>
 
-                    <p>
-                       <b> Quality Products:</b> We are dedicated to delivering superior quality dental products that meet international standards. Our team of skilled technicians uses state-of-the-art technology to ensure precision and accuracy in every dental appliance we create.
+					<p>
+						<b> Quality Products:</b> We are dedicated to delivering superior quality dental products that
+						meet international standards. Our team of skilled technicians uses state-of-the-art technology
+						to ensure precision and accuracy in every dental appliance we create.
 
-                    </p>
+					</p>
 
-                    <p>
-                        <b>Competitive Prices:</b> We understand that affordability is essential. Despite our high-quality services, we offer competitive prices, making dental care accessible to everyone in {{pk.name}}.
+					<p>
+						<b>Competitive Prices:</b> We understand that affordability is essential. Despite our
+						high-quality services, we offer competitive prices, making dental care accessible to everyone in
+						{{pk.name}}.
 
-                    </p>
+					</p>
 
-                    <p>
-                        <b>Experience and Expertise:</b> With years of experience in the field, our team comprises experts who are passionate about delivering the best results. We stay updated with the latest advancements in dental technology to provide cutting-edge solutions.
+					<p>
+						<b>Experience and Expertise:</b> With years of experience in the field, our team comprises
+						experts who are passionate about delivering the best results. We stay updated with the latest
+						advancements in dental technology to provide cutting-edge solutions.
 
-                    </p>
+					</p>
 
-                    <p>
-                        <b>Imports and Exports:</b> Advanced Dental Export not only caters to local patients but also serves international clients. We import and export dental products, making us a global player in the dental industry.
+					<p>
+						<b>Imports and Exports:</b> Advanced Dental Export not only caters to local patients but also
+						serves international clients. We import and export dental products, making us a global player in
+						the dental industry.
 
-                    </p>
+					</p>
 				</div>
 			</div>
 			<div class="col-lg-5">
-				<div class="about-img text-center wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                    <img class="img-fluid" src="{% static 'harsh3.png' %}
-                    " 
-                    
-                     alt="Haresh Savani, Founder" title="Haresh Savani, Founder"></div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="">
-    <div id="statistic-1" class="bg-scroll mt-3 mb-5 statistic-section division">
-        <div class="container white-color">
-            <div class="row container-content">
-
-
-                <!-- STATISTIC BLOCK #1 -->
-                <div class="col-md-6 col-lg-3">						
-                    <div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-
-                        <!-- Icon  -->
-                        <span class="flaticon-143-teeth" style="color: #333;"></span>
-
-                        <!-- Text -->
-                        <h5 class="statistic-number"><span class="count-element">5</span>L+</h5>
-                        <p class="txt-400">Cases</p>																			
-                                            
-                    </div>								
-                </div>
-
-
-                <!-- STATISTIC BLOCK #2 -->
-                <div class="col-md-6 col-lg-3">								
-                    <div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-
-                        <!-- Icon  -->
-                        <span class="flaticon-137-doctor"></span>
-
-                        <!-- Text -->
-                        <h5 class="statistic-number"><span class="count-element">400</span>+</h5>	
-                        <p class="txt-400">Qualified professionals</p>										
-                                                                
-                    </div>							
-                </div>
-
-
-                <!-- STATISTIC BLOCK #3 -->
-                <div class="col-md-6 col-lg-3">					
-                    <div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">	
-
-                        <!-- Icon  -->
-                        <!-- Icon  -->
-                    <span class="">
-                        <img src="{% static 'dentist.png' %}" alt="Dentist">
-                    </span>
-
-                        <!-- Text -->
-                        <h5 class="statistic-number"><span class="count-element">3000</span>+</h5>
-                        <p class="txt-400">Trusted Dentist</p>									
-
-                    </div>						
-                </div>
-            
-
-                <!-- STATISTIC BLOCK #4 -->
-                <div class="col-md-6 col-lg-3">						
-                    <div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">	
-
-                        <!-- Icon  -->
-                        <span class="flaticon-040-placeholder"></span>
-
-                        <!-- Text -->	
-                        <h5 class="statistic-number"><span class="count-element">200</span>+</h5>
-                        <p class="txt-400">Local Partners</p>				
-                        
-                    </div>						
-                </div>
-
-
-            </div>  <!-- End row -->
-        </div>	 <!-- End container -->		
-    </div>    
-
-</section>	
-
-
-<section id="services-7" class="bg-lightgrey wide-70 servicess-section division">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 offset-lg-1 section-title">
-				<h3 class="h3-md steelblue-color">What Makes a Advance Dental Lab - The Best Lab in {{pk.name}}</h3></div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"> <a href="#"><span class="flaticon-137-doctor blue-color"></span><div class="sbox-7-txt"><h5 class="h5-sm steelblue-color">Top Level Technician</h5>
-<p class="p-sm">We are dedicated to provide our dentist with the highest level of care, quality products and top notch services.
-We have a team of highly qualified dental technicians
-who are committed to provide you with the best services possible. </p></div></a></div>
-					</div>
-					<div class="col-md-4">
-						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-							<a href="#"> <span class="flaticon-076-microscope blue-color"></span>
-								<div class="sbox-7-txt">
-									<h5 class="h5-sm steelblue-color">Modern Equipment</h5>
-									<p class="p-sm">Advance Dental Export makes the use of the latest technologies in digital dentistry to manufacture all the dental prosthetics. We are committed to providing high-quality, affordable products and services to all our dentist. </p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-							<a href="#"> <span class="flaticon-065-hospital-bed blue-color"></span>
-								<div class="sbox-7-txt">
-									<h5 class="h5-sm steelblue-color">Qualified Facilities</h5>
-									<p class="p-sm"> We firmly prioritize quality foremost. Every dedicated member on our passionate, committed team consistently ensures you always receive the absolute highest quality dental prosthesis and materials available in the industry. </p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
-							<a href="#"> <span class="flaticon-058-blood-transfusion-2 blue-color"></span>
-								<div class="sbox-7-txt">
-									<h5 class="h5-sm steelblue-color">Professional Services</h5>
-									<p class="p-sm">At Advance Dental Export, we understand that dental care is important. That's why we offer a wide variety of professional services to help you take care of your teeth and gums. From preparation of crown to bridges, we help your patient to get ultimate smile design which they deserve.</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
-							<a href="#"> <span class="flaticon-067-clinic-history-5   blue-color"></span>
-								<div class="sbox-7-txt">
-									<h5 class="h5-sm steelblue-color">Precision Craftsmanship</h5>
-									<p class="p-sm">At Advance Dental Export, we merge artistry with technology. Each dental prosthesis is a testament to our technician's skill, dedication, and the attention to the finest details. We don’t just produce prosthetics; we craft pieces that fit seamlessly, ensuring comfort and longevity for the patients.</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
-							<a href="#"> <span class="flaticon-132-medicine-book blue-color"></span>
-								<div class="sbox-7-txt">
-									<h5 class="h5-sm steelblue-color">Client-Centric Approach</h5>
-									<p class="p-sm"> We maintain an open channel for communication, ensuring that each dental solution is tailored to your specific needs and preferences. We view our collaboration as a partnership, aiming to support every dentist in delivering smiles that not only look natural but also stand the test of time. </p>
-								</div>
-							</a>
-						</div>
-					</div>
+				<div class="about-img text-center wow fadeInUp" data-wow-delay="0.6s"
+					style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+					<img class="img-fluid" src="{% static 'harsh3.png' %}" alt="Haresh Savani, Founder"
+						title="Haresh Savani, Founder" />
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-
-
-
-<section id="services-6" class="bg-blue wide-40 servicess-section division">
-	<div class="container white-color">
-		<div class="row">
-			<div class="col-lg-10 offset-lg-1 section-title">
-				<h3 class="h3-md">Our Core Dental Services In {{pk.name}}</h3>
-				<p>Experience an Unmatched Spectrum of Services: Catering to Every Dental Professional's Needs Today!</p>
-			</div>
-		</div>
-		<div class="row d-flex align-items-center">
-			<div class="col-md-6 col-lg-4">
-				<div class="sbox-6 pr-30 text-right wow fadeInRight" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-					<h5 class="h5-md">CAD/CAM Technology</h5>
-					<p>Advance Dental Export remains the leader in offering digital technology to our clients. We currently support 3M True Definition, Cadent Itero, as well as many other open architecture systems. Contact our dedicated staff for further assistance.</p>
-				</div>
-				<div class="sbox-6 pr-30 text-right wow fadeInRight" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
-					<h5 class="h5-sm">Shade Analysis</h5>
-					<p>We can match the most difficult shades using your digital photos or in-lab consultation. – Send digital photos to: <a href="mailto:info@advancedentalexport.com">info@advancedentalexport.com</a></p>
-				</div>
-				<div class="sbox-6 pr-30 text-right wow fadeInRight" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInRight;">
-					<h5 class="h5-md">Implant Specialists</h5>
-					<p>Assistance with implant cases, including diagnostic wax-up, stent fabrication and components for implant systems. In house design for custom abutments and denture bars.</p>
-				</div>
-				<div class="sbox-6 pr-30 text-right wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-					<h5 class="h5-md">Diagnostic Wax-Ups</h5>
-					<p>Complete diagnostic wax-up service for treatment planning.</p>
-				</div>
-			</div>
-			<div class="col-lg-4 s6-img">
-				<div class="sbox-6-img mb-40 text-center wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                    <img class="img-fluid" src="{% static 'images/tooth.png' %}"  alt="Best Dental Lab In {{pk.name}}"></div>
-			</div>
-			<div class="col-md-6 col-lg-4">
-				<div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-					<h5 class="h5-md">Custom Milling</h5>
-					<p>Custom milling of zirconia, implant abutments, overdenture bars, temporaries and ceramics.</p>
-				</div>
-				<div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-					<h5 class="h5-md">Laser Welding</h5>
-					<p>Laser welding for quick repairs of partial dentures</p>
-				</div>
-				<div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-					<h5 class="h5-md">Case Planning Assistance</h5>
-					<p>Personal consultations with doctors and staff for treatment options with recommendations from a technical perspective.</p>
-				</div>
-				<div class="sbox-6 pl-30 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-					<h5 class="h5-md">Cosmetic Restoration Service</h5>
-					<p>Esthetic diagnostic wax-ups, silicone matrices for intraoral mock-ups and temporaries. We use the latest materials and technologies to achieve predictable results for your patients.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section><div id="gallery-2" class="gallery-section division pt-100">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 offset-lg-1 section-title">
-				<h3 class="h3-md steelblue-color">Before & After</h3></div>
-		</div>
-	</div>
-	<div class="row gallery-items-list text-center">
-		<div class="owl-carousel owl-theme services-holder2">					
-			{% for ie in gallery21 %}
-				<!-- SERVICE BOX #1 -->
-				<div class="sbox-5">
-					<div class="doctors-2">	
-
-						<!-- Doctor Photo -->
-						<div class="hover-overlay"> 
-							<img class="img-fluid " src="{{ie.image.url}}" alt="Before & After" >	
-						</div>								
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-		
-	</div>
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s"><a href="{% url 'home:beforeafter' %}" class="btn btn-blue blue-hover">See More</a></div>
-		</div>
-	</div>
-</div>
-
-<section id="reviews-2" class="bg-lightgrey wide-100 reviews-section division">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 offset-lg-1 section-title">
-				<h3 class="h3-md steelblue-color">Our Testimonials</h3></div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="owl-carousel owl-theme reviews-holder">{% for ie in data %}
-					<div class="review-2">
-						<div class="review-txt text-center">
-							<div class="quote"><img src="{% static 'images/quote.png' %}" alt="quote-img"></div>
-							<div class="testimonial-avatar"><img src="{{ie.image.url}}" alt="testimonial-avatar"></div>
-							<p>{{ie.review}}</p>
-							<div class="review-author">
-								<h5 class="h5-sm">{{ie.name}}</h5><span>{{ie.position}}</span></div>
+<section>
+	<div id="statistic-1" class="bg-scroll statistic-section division">
+		<div class="" style="background-color: rgb(36, 169, 146, 0.7)">
+			<div class="container white-color">
+				<div class="row container-content">
+					<div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+						<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.4s"
+							style="visibility: visible; animation-delay: 0.2s">
+							<span class="flaticon-143-teeth" style="color: #333"></span>
+							<h5 class="statistic-number">6L</h5>
+							<p class="txt-400">Cases</p>
 						</div>
-					</div>{% endfor %}</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="banner-7" class="bg-fixed banner-section division">
-	<div class="container white-color">
-		<div class="row d-flex align-items-center">
-			<div class="col-md-8 col-lg-6 col-xl-5">
-				<div class="banner-txt wow fadeInUp" data-wow-delay="0.4s" style="visibility:visible;animation-delay:.4s;animation-name:fadeInUp">
-					<h2 class="h2-xs">Quality Services<br>From Best Team</h2>
-					<p>The best teamwork comes from men who are working independently towards one goal: to provide the best Digital Dentistry all over the Globe.</p><a href="{% url 'home:contact' %}" class="btn btn-blue tra-white-hover mt-20">Get In Touch</a></div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-<div id="gallery-1" class="gallery-section division pt-100">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 offset-lg-1 section-title">
-				<h3 class="h3-md steelblue-color">Hear It From Them - Our Clientele</h3></div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row gallery-items-list">
-			<div class="owl-carousel owl-theme services-holder3">		
-					<!-- SERVICE BOX #1 -->
-					
-					{% for ie in video  %}
-					<div class="sbox-5">
-						<iframe width="100%" height="530" src="{{ie.link}}"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						
 					</div>
-					{% endfor %}
-						
+					<div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+						<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.6s"
+							style="visibility: visible; animation-delay: 0.4s">
+							<span class="flaticon-137-doctor" style="color: #333"></span>
+							<h5 class="statistic-number">400</h5>
+							<p class="txt-400">Qualified Professionals</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+						<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.8s"
+							style="visibility: visible; animation-delay: 0.6s">
+							<span><img src="{% static 'dentistlogo.png' %}" style="width: 70px; height: 100%"
+									alt="Dentist" width="70" height="70" /></span>
+							<h5 class="statistic-number d-flex justify-content-center">3500</h5>
+							<p class="txt-400">Trusted Dentist</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 col-sm-6 col-11 mx-auto">
+						<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.8s"
+							style="visibility: visible; animation-delay: 1s">
+							<span class="flaticon-040-placeholder" style="color: #333"></span>
+							<h5 class="statistic-number">500</h5>
+							<p class="txt-400">Local Partners</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		
 	</div>
-</div>
+
+</section>
 
 
+<section id="services-7" class="bg-lightgrey wide-601 servicess-section division">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md steelblue-color mb-0">What Makes a Advance Dental Lab - The Best Lab in {{pk.name}}</h3>
+        </div>
+        <div class="col-lg-12">
+          <div class="row mx-sm-0">
+            <div class="col-md-6 col-lg-4 future-card">
+              <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible">
+                <div class="hexagon">
+                  <span class="flaticon-137-doctor blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Top Level Technician</h5>
+                  <p class="p-sm" style="font-size: 12px">We are dedicated to provide our dentist with the highest level of care, quality products and top notch services. We have a team of highly qualified dental technicians who are committed to provide you with the best services possible.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible">
+                <div class="hexagon">
+                  <span class="flaticon-076-microscope blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Modern Equipment</h5>
+                  <p class="p-sm" style="font-size: 12px">Advance Dental Export makes the use of the latest technologies in digital dentistry to manufacture all the dental prosthetics. We are committed to providing high-quality, affordable products and services to all our dentist.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible">
+                <div class="hexagon">
+                  <span class="flaticon-080-shield blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Qualified Facilities</h5>
+                  <p class="p-sm" style="font-size: 12px">We firmly prioritize quality foremost. Every dedicated member on our passionate, committed team consistently ensures you always receive the absolute highest quality dental prosthesis and materials available in the industry.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible">
+                <div class="hexagon">
+                  <span class="flaticon-113-clinic-history-4 blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Professional Services</h5>
+                  <p class="p-sm" style="font-size: 12px">We offer specialized services in dental care, focusing on crown and bridge preparation. Our team is committed to providing customized smile designs, ensuring each patient achieves their ideal smile. With a dedication to quality and patient-specific care, we stand out as a leading dental laboratory.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible">
+                <div class="hexagon">
+                  <span class="flaticon-143-teeth blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Precision Craftsmanship</h5>
+                  <p class="p-sm" style="font-size: 12px">We at Advance Dental Export pride ourselves on precision craftsmanship. Our team meticulously designs and fabricates each dental product, ensuring exceptional quality in fit, functionality, and aesthetics. This attention to detail, combined with the latest technology, sets us apart in the dental industry as a premier laboratory.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 future-card">
+              <div class="sbox-7 icon-xs wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible">
+                <div class="hexagon">
+                  <span class="flaticon-079-safebox blue-color"></span>
+                </div>
+                <div class="sbox-7-txt">
+                  <h5 class="h5-sm steelblue-color">Client-Centric Approach</h5>
+                  <p class="p-sm" style="font-size: 12px">We maintain an open channel for communication, ensuring that each dental solution is tailored to your specific needs and preferences. We view our collaboration as a partnership, aiming to support every dentist in delivering smiles that not only look natural but also stand the test of time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+ <!-- - SERVICE SECTION -->
+ <section id="services-6" class="bg-blue wide-40 servicess-section division">
+    <div class="container white-color">
+      <div class="row">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md">Our Core Dental Services In {{pk.name}}</h3>
+          <p>Experience an Unmatched Spectrum of Services: Catering to Every Dental Professional's Needs Today!</p>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex first">
+          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s">
+            <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">CAD/CAM Technology</h5>
+            <p>Advance Dental Export remains the leader in offering digital technology to our clients. We currently support 3M True Definition, Cadent Itero, as well as many other open architecture systems. Contact our dedicated staff for further assistance.</p>
+          </div>
+          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s">
+            <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Shade Analysis</h5>
+            <p>
+              We can match the most difficult shades using your digital photos or in-lab consultation. – Send digital photos to:
+              <a href="mailto:color@advancedentalexport.com">color@advancedentalexport.com</a>
+            </p>
+          </div>
+          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s">
+            <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Case Planning Assistance</h5>
+            <p>Personal consultations with doctors and staff for treatment options with recommendations from a technical perspective.</p>
+          </div>
+          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s">
+            <h5 class="h5-md justify-content-lg-end justify-content-md-start justify-content-sm-center">Diagnostic Wax-Ups</h5>
+            <p>Complete diagnostic wax-up service for treatment planning.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 d-lg-flex align-items-center s6-img">
+          <div class="sbox-6-img text-center wow fadeInUp" data-wow-delay="0.4s">
+            <img class="img-fluid lazy" src="{% static 'img/teeth-img93.webp' %}" data-src="{% static 'img/teeth-img93.webp' %}" alt="services-image" width="100%" height="100%" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex second">
+          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s">
+            <h5 class="h5-md">Cosmetic Restoration Service</h5>
+            <p>Esthetic diagnostic wax-ups, silicone matrices for intraoral mock-ups and temporaries. We use the latest materials and technologies to achieve predictable results for your patients.</p>
+          </div>
+          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s">
+            <h5 class="h5-md">Implant Specialists</h5>
+            <p>Assistance with implant cases, including diagnostic wax-up, stent fabrication and components for implant systems. In house design for custom abutments and denture bars.</p>
+          </div>
+          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s">
+            <h5 class="h5-md">Custom Milling</h5>
+            <p>Custom milling of zirconia, implant abutments, overdenture bars, temporaries and ceramics.</p>
+          </div>
+          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s">
+            <h5 class="h5-md">Laser Welding</h5>
+            <p>Laser welding for quick repairs of partial dentures</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- new desgine of before & after -->
+<section id="gallery-2" class="gallery-section division">
+    <div class="container">
+      <div class="row gallery-items-list text-center listing-gallery-img-items">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md steelblue-color mb-0">Before & After</h3>
+        </div>
 
-			<!-- INFO-4
+        <div class="owl-carousel owl-theme gallery-holder listing-gallery-img-item">
+          {% for ie in gallery21 %}
+            <!-- SERVICE BOX #1 -->
+            <div class="gbox listing-gallery-link-block">
+              <div class="hover03 wow zoomSlider w-100 h-100">
+                <!-- Doctor Photo -->
+                <img class="img-fluid w-100 h-100" src="{{ ie.image.url }}" data-src="{{ ie.image.url }}" alt="Before & After" width="100%" height="100%" />
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="col-md-12 text-center">
+          <div class="all-posts-btn mb-50 wow fadeInUp" data-wow-delay="1s">
+            <a href="{% url 'home:beforeafter' %}" class="btn btn-blue blue-hover submit" aria-label="See more in the Ade after befor">See More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- client reviews -->
+<section id="reviews-2">
+    <div class="section-title text-center">
+      <h3 class="h3-md steelblue-color mb-0">Client Chronicles: Their Stories, Their Experiences</h3>
+    </div>
+    <div class="review-section testimonials-slider">
+      <div class="review-overlay" style="opacity: 0.7; background-color: rgb(36, 169, 146)"></div>
+      <div class="container position-relative text-center">
+        <div class="row justify-content-center carousel-row">
+          <div class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide" data-bs-ride="carousel" id="carouselExampleControls">
+            <div class="review-slider-testimonials">
+              <div class="carousel-inner">
+                {% for ie in data %}
+                  <div class="{% if forloop.first %}active{% endif %} carousel-item" aria-label="Slide {{ forloop.counter }}">
+                    <div class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12">
+                      <div class="user_image">
+                        <img src="{% static 'img/profile-user-3.png' %}" class="d-block w-100" alt="user" width="100%" height="100%" />
+                      </div>
+                      <p class="review-user-txt">
+                        <i class="fa-solid fa-quote-left"></i>
+                        {{ ie.review }}
+                        <i class="fa-solid fa-quote-right"></i>
+                      </p>
+                      <h5 class="review-user-name">{{ ie.name }}</h5>
+                      <span class="review-user-desk" style="float: right">{{ ie.position }}</span>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-control-prev review-prev-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+                <button class="carousel-control-next review-next-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About team -->
+  <section id="banner-7" class="bg-fixed banner-section division">
+    <div class="container white-color px-0">
+      <div class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto">
+        <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
+          <div class="banner-txt wow fadeInUp" data-wow-delay="0.4s" style="
+            visibility: visible;
+            animation-delay: 0.4s;
+            animation-name: fadeInUp;
+          ">
+            <h2 class="h2-xs text-center text-sm-start text-lg-start" style="font-size: 2.1rem">
+              Where Quality <br />
+              Meets Excellence
+            </h2>
+            <p>
+              One common dream fuels us:<br />
+              Elevating Digital Dentistry to unparalleled <br />
+              heights worldwide
+            </p>
+            <a href="{% url 'home:contact' %}" class="btn btn-blue tra-white-hover mt-20">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Testimonials-video -->
+ <section id="gallery-1" class="gallery-section division pt-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto section-title">
+          <h3 class="h3-md steelblue-color mb-0">In Their Own Words: Tales of Trust from Our Clientele</h3>
+        </div>
+        <div class="owl-carousel owl-theme services-holder3">
+          <!-- SERVICE BOX #1 -->
+          {% for ie in video %}
+            <div class="sbox-5 index-video1" data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}">
+              <div class="video-container">
+                <img src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg" alt="Video Thumbnail" class="video-thumbnail1" width="100%" height="100%" />
+                <button class="play-button">▶</button>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- INFO-4
 			============================================= -->
-			<section id="info-4" class="wide-100 info-section division">
-				<div class="container">
+<section id="info-4" class="wide-100 info-section division">
+	<div class="container">
 
 
-					<!-- TOP ROW -->
-					<div class="top-row mb-0">
-						<div class="row d-flex align-items-center">
+		<!-- TOP ROW -->
+		<div class="top-row mb-0">
+			<div class="row d-flex align-items-center">
 
 
-						<!-- INFO IMAGE -->
-						<div class="col-lg-4">
-							<div class="info-4-img text-center wow fadeInUp" data-wow-delay="0.6s">
-								<img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="info-image">
-							</div>
-                            <!-- Singnature -->
-								<div class="singnature mt-35">
+				<!-- INFO IMAGE -->
+				<div class="col-lg-4">
+					<div class="info-4-img text-center wow fadeInUp" data-wow-delay="0.6s">
+						<img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="info-image">
+					</div>
+					<!-- Singnature -->
+					<div class="singnature mt-35">
 
-									<!-- Text -->
-									<p class="p-small mb-15">
-                                        Haresh Savani -  (K.L.E. Belgaum)
-                                        </p>
-                                        <p>
-                                            <b>CEO – Founder
-                                            </b>
-                                        </p>
+						<!-- Text -->
+						<p class="p-small mb-15">
+							Haresh Savani - (K.L.E. Belgaum)
+						</p>
+						<p>
+							<b>CEO – Founder
+							</b>
+						</p>
 
-									<!-- Singnature Image -->
-									<!-- Recommended sizes for Retina Ready displays is 400x68px; -->
-									<img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="34" alt="signature-image" />	
+						<!-- Singnature Image -->
+						<!-- Recommended sizes for Retina Ready displays is 400x68px; -->
+						<img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="34"
+							alt="signature-image" />
 
-								</div>
-						</div>
-
-
-						<!-- INFO TEXT -->	
-						<div class="col-lg-8">
-							<div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s">
-
-								<!-- Section ID -->	
-					 			<span class="section-id blue-color">Hear It From The Founder</span>
-
-								<!-- Title -->
-								<h4 class="h4-md steelblue-color">Best Dental Lab Services in {{pk.name}} & Leader in Dental Implants, Cosmetic Dentistry and Digital Dentistry</h4>
-
-								<!-- Text -->
-								<p>Advance dental export is a full service dental lab that specializes in dental implants, cosmetic dentistry and digital dentistry. Haresh savani, CEO, started’ ADE’ in 2009 with a vision to fabricate only the highest quality dental prosthetics to ensure long-lasting and esthetically pleasing outcomes for every dental lab product. We proudly make 100% of our dental lab products at ‘ADE’, so you can trust we deliver quickly with little to no adjustments and remakes. For the past 8 years, we have been strongly committed to brilliant esthetics with promising durability because we understand how important it is to the majority to maintain a healthy and beautiful smile. Our purpose aligns with our dentists to help restore health and confidence in every patient’s smile.
-								</p>
-
-								<!-- Text -->
-								<p>
-                                    We are growing with the digital revolution in the dental industry, known as Digital Dentistry, to provide the best dental lab services in {{pk.name}} and all over India, US & Canada,
-                                     superior customer service and efficient manufacturing for fast turnaround times that you would expect from a State-of-the-Art Dental Lab. 
-                                     Digital Dentistry in {{pk.name}} is increasingly becoming the new standard in modern dental care because of how accurate,
-                                      predictable, and cost efficient the technology has made the production of dental prosthetics. 
-                                      By utilizing Dental CAD/CAM Digital Systems, our doctors are able to digitally scan the patient’s prepped section and
-                                       instantly send the 3D image to our lab for immediate production that cuts costs in labor and delivery. Digital dentistry
-                                        allows us to virtually design and mill the prosthetic with utmost precision and sensitivity to esthetics.
-                                         We support all major CAD/CAM Digital Scanners including Cerec Connect, 3Shape, iTero, 3M ESPE, Carestream and more.
-                                          We are one of the only laboratories in the industry to guarantee all restorations completed using all Authentic Implant Manufacturer’s 
-                                          Hardware and Custom CAD/CAM Abutments. This protects the Warranty of the Implant you are restoring.
-								</p>
+					</div>
+				</div>
 
 
-							</div>
-						</div>	<!-- END TEXT BLOCK -->	
+				<!-- INFO TEXT -->
+				<div class="col-lg-8">
+					<div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s">
 
-						</div>    <!-- End row -->
-					</div>	<!-- END TOP ROW -->
+						<!-- Section ID -->
+						<span class="section-id blue-color">Hear It From The Founder</span>
 
-				</div>	   <!-- End container -->
-			</section>	<!-- END INFO-4 -->
-			{% comment %} {% include 'static_contact.html' %} {% endcomment %}
-			{% include 'contact_section.html' %}
-            {% comment %} <section id="contacts-1" class="bg-lightgrey wide-60 contacts-section division">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 offset-lg-1 section-title">
-                            <h3 class="h3-md steelblue-color">Have a Question? Get In Touch</h3>
-                            <p>Have a question? Want to visit our lab and require price list? Just call, whatsapp or email us to reach us.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5 col-lg-4">
-                            <div class="contact-box mb-40">
-                                <h5 class="h5-sm steelblue-color">Contact Address</h5>
-                                <p>Plot No.3/ 3-3/4, Dhuna House, Opp. Patel Nagar, A.K.Road, Varachha, Surat (Gujarat) India. Pincode-395008</p>
-                                <p>Phone: +91 84 88 88 88 77</p>
-                                <p>Email: <a href="mailto:info@advancedentalexport.com" class="blue-color">info@advancedentalexport.com</a></p>
-                            </div>
-                            <div class="contact-box mb-40">
-                                <h5 class="h5-sm steelblue-color">Working Hours</h5>
-                                <p>Monday – Friday: 9:00 AM - 8:30 PM</p>
-                                <p>Saturday : 9:00 AM - 8:30 PM</p>
-                                <p>Sunday : Closed</p>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-lg-8">
-                            <div class="form-holder mb-40">
-                                <form class="row contact-form2" method="post" action="{% url 'enquiry:contactd' %}">{% csrf_token %}
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input id="form_name" name="name" class="form-control name" placeholder="Your Name*" required data-error="Enter no more than (2) characters.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input id="form_email" class="form-control email" type="email" name="email" placeholder="Your Email" required data-error="Email is required">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input id="form_phone" class="form-control phone" type="tel" name="contact" placeholder="Your Phone Number" required data-error="Please enter only digits.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input id="form_subject" class="form-control subject" name="subject" placeholder="Subject*" required data-error="Subject is required">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 input-message">
-                                        <div class="form-group">
-                                            <textarea id="form-message" class="form-control message" name="message" rows="6" placeholder="Your Message ..." required data-error="Enter no more than (10) characters."></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="messages"></div>
-                                    <div class="col-md-12 mt-15 form-btn">
-                                        <button type="submit" class="btn btn-md btn-blue blue-hover submit">Send Your Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> {% endcomment %}
+						<!-- Title -->
+						<h4 class="h4-md steelblue-color">Best Dental Lab Services in {{pk.name}} & Leader in Dental
+							Implants, Cosmetic Dentistry and Digital Dentistry</h4>
+
+						<!-- Text -->
+						<p>Advance dental export is a full service dental lab that specializes in dental implants,
+							cosmetic dentistry and digital dentistry. Haresh savani, CEO, started’ ADE’ in 2009 with a
+							vision to fabricate only the highest quality dental prosthetics to ensure long-lasting and
+							esthetically pleasing outcomes for every dental lab product. We proudly make 100% of our
+							dental lab products at ‘ADE’, so you can trust we deliver quickly with little to no
+							adjustments and remakes. For the past 8 years, we have been strongly committed to brilliant
+							esthetics with promising durability because we understand how important it is to the
+							majority to maintain a healthy and beautiful smile. Our purpose aligns with our dentists to
+							help restore health and confidence in every patient’s smile.
+						</p>
+
+						<!-- Text -->
+						<p>
+							We are growing with the digital revolution in the dental industry, known as Digital
+							Dentistry, to provide the best dental lab services in {{pk.name}} and all over India, US &
+							Canada,
+							superior customer service and efficient manufacturing for fast turnaround times that you
+							would expect from a State-of-the-Art Dental Lab.
+							Digital Dentistry in {{pk.name}} is increasingly becoming the new standard in modern dental
+							care because of how accurate,
+							predictable, and cost efficient the technology has made the production of dental
+							prosthetics.
+							By utilizing Dental CAD/CAM Digital Systems, our doctors are able to digitally scan the
+							patient’s prepped section and
+							instantly send the 3D image to our lab for immediate production that cuts costs in labor and
+							delivery. Digital dentistry
+							allows us to virtually design and mill the prosthetic with utmost precision and sensitivity
+							to esthetics.
+							We support all major CAD/CAM Digital Scanners including Cerec Connect, 3Shape, iTero, 3M
+							ESPE, Carestream and more.
+							We are one of the only laboratories in the industry to guarantee all restorations completed
+							using all Authentic Implant Manufacturer’s
+							Hardware and Custom CAD/CAM Abutments. This protects the Warranty of the Implant you are
+							restoring.
+						</p>
+					</div>
+				</div> <!-- END TEXT BLOCK -->
+
+			</div> <!-- End row -->
+		</div> <!-- END TOP ROW -->
+
+	</div> <!-- End container -->
+</section> <!-- END INFO-4 -->
+{% comment %} {% include 'static_contact.html' %} {% endcomment %}
+{% include 'contact_section.html' %}
+
 {% endblock body %}
 {% block js %}
-
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+  $(document).ready(function () {
+    var owl = $(".services-holder");
+    var owl1 = $(".gallery-holder");
+    if (owl.length) {
+      owl.owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        navBy: 1,
+        responsive: {
+          0: { items: 1 },
+          767: { items: 1 },
+          768: { items: 2 },
+          991: { items: 2 },
+          1200: { items: 3 },
+        },
+      });
+    }
+    if (owl1.length) {
+      owl1.owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        navBy: 1,
+        responsive: {
+          0: { items: 1 },
+          767: { items: 1 },
+          768: { items: 2 },
+          991: { items: 3 },
+          1200: { items: 3 },
+        },
+      });
+    }
+  });
+  var swiper1 = new Swiper(".clientLogo", {
+    slidesPerView: 7,
+    spaceBetween: 20,
+    speed: 500,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      380:{
+        slidesPerView: 4,
+      },
+      576: {
+        slidesPerView: 5,
+      },
+      768: {
+        slidesPerView: 6,
+      },
+      991: {
+        slidesPerView: 7,
+      },
+      1024: {
+        slidesPerView: 7,
+      },
+      1200: {
+        slidesPerView: 7,
+      },
+      1500: {
+        slidesPerView: 8,
+      },
+      1900: {
+        slidesPerView: 10,
+      },
+    },
+  });
+  var swiper = new Swiper(".mySwiper", {
+    speed: 600,
+    parallax: !0,
+    loop: true,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+  <script src="{% static 'js/galleryanimation.js' %}"></script>
 {{pk.schema|safe}}
 
 {% endblock js %}
-    
-    
