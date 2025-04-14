@@ -46,5 +46,6 @@ urlpatterns = [
     path('best-dental-lab-in-<str:pk>/', views.bdld, name='bdld'),
     path('blog/<str:pk>/', bd, name='blogd'),
     path('quicks-links/', views.connect, name='connect'),
-    path('zirconia-crown/',views.zirconiacrown, name='zirconiacrown')
+    path('zirconia-crown/',views.zirconiacrown, name='zirconiacrown'),
+    path('ad-implant/',views.adImplants, name='adImplants')
 ]

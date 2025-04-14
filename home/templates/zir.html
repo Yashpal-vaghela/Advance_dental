@@ -847,11 +847,13 @@
         const images = document.querySelectorAll(".gallery-img");
         const images1 = document.querySelectorAll(".gallery-caseimg");
         const overlay = document.querySelectorAll(".overlays-background");
+        const clickhereButton = document.querySelectorAll(".gallery-btn");
         let isDeactivating = activeCase === e;
 
         cases.forEach((current, index) => {
             let img = images[index];
-         
+            let button = clickhereButton[index];
+
             if (current.id === e) {
                 if (isDeactivating) {
                     // Deactivate the case
@@ -860,6 +862,7 @@
                     img.style.margin = "0px";
                     img.classList.add("d-flex");
                     img.classList.remove("d-none");
+                    button.classList.remove("d-none");
                     activeCase = null;
                 } else {
                     // Activate the clicked case
@@ -867,6 +870,7 @@
                     current.classList.remove("d-none");
                     img.classList.add("d-none");
                     img.classList.remove("d-flex");
+                    button.classList.add("d-none");
                     activeCase = e;
                     current.scrollTop = current.scrollHeight;
                 }
@@ -876,16 +880,18 @@
                 current.classList.remove("d-block");
                 img.classList.add("d-flex");
                 img.classList.remove("d-none");
+                button.classList.remove("d-none");
             }
         });
         images.forEach((img, index) => {
+            let button = clickhereButton[index];
             if (window.innerWidth >= 576) {
                 if (activeCase && cases[index].id == activeCase) {
-                    img.style.margin = "0px 0px 20px";
+                    img.style.margin = "0px 0px 15px";
                     img.style.width = "100%";
-                    img.style.animation = "zoomOut .7s ease forwards"
+                    img.style.animation = "zoomOut .7s ease forwards";
                 } else if (activeCase === null) {
-                    img.style.margin = "0px 0px 20px";
+                    img.style.margin = "0px 0px 15px";
                     img.style.width = "100%";
                     img.style.animation = "zoomOut .7s ease forwards"
                 } else {
@@ -895,6 +901,26 @@
             }
 
         })
+        clickhereButton.forEach((button, index) => {
+            if (window.innerWidth >= 576) {
+                if (activeCase && cases[index].id == activeCase) {
+                    button.style.left="50%";
+                    button.style.padding="10px 20px";
+                    button.style.minWidth="180px";
+                    button.style.bottom="25px"; 
+                } else if (activeCase === null) {
+                    button.style.left="50%";
+                    button.style.padding="10px 20px";
+                    button.style.minWidth="180px";
+                    button.style.bottom="25px"; 
+                } else {
+                    button.style.left="48%";
+                    button.style.padding="6px 20px";
+                    button.style.minWidth="160px";
+                    button.style.bottom="35px";  
+                }
+            }
+        })
     }
 
     // Click anywhere outside to deactivate the case
@@ -902,17 +928,27 @@
         if (activeCase) {
             const cases = document.querySelectorAll(".galleryCaseImg-wrapper");
             const images = document.querySelectorAll(".gallery-img");
+            const clickhereButton = document.querySelectorAll(".gallery-btn");
+
             cases.forEach(current => {
                 current.classList.add("d-none");
                 current.classList.remove("d-block");
+                
             });
-            images.forEach(img => {
+            images.forEach((img,index) => {
                 img.classList.add("d-flex");
                 img.classList.remove("d-none");
                 img.style.margin = "0px 0px 20px";
                 img.style.width = "100%";
                 img.style.animation = "zoomOut .7s ease forwards"
             });
+            clickhereButton.forEach((button, index) => {
+                button.classList.remove("d-none");
+                button.style.left="50%";
+                button.style.padding="10px 20px";
+                button.style.minWidth="180px";
+                button.style.bottom="30px"; 
+            })
             // Reset all images to padding 0px
             activeCase = null;
         }

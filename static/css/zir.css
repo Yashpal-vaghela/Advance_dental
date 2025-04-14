@@ -646,12 +646,12 @@
 .line-1{
     position: absolute;
     top: 4.2%;
-    right:2%;
+    right:0%;
 }
 .line-2{
     position: absolute;
     top: 4.2%;
-    left:2%;
+    left:0%;
 }
 .zirconia-content-item{
     grid-row-gap: 84px;
@@ -994,7 +994,7 @@
 }
 .gallery-btn {
     position: absolute;
-    bottom: 25px;
+    bottom: 30px;
     left: 50%;
     display: flex;
     align-items: center;
@@ -1003,7 +1003,7 @@
     background-color: white;
     color: #1B8976; 
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 10px 20px;
     font-weight: 600;
     font-size: 16px;

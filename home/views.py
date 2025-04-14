@@ -169,6 +169,9 @@ def zirconiacrown(request):
 #     }
 #     return render(request, 'exhibition.html', context)
 
+def adImplants(request):
+    return render(request,'ad_implant.html')
+
 
 def beforeafter(request):
     data = BeforeAfter.objects.all()

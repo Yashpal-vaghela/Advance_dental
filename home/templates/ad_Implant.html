@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link href="{% static 'css/adImplant.css' %}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+<section class="TypeofImplants">
+    <div class="container position-relative">
+        <img src="{% static 'img/line.svg' %}" class="img-fluid vector1">
+        <h2 class="product-section-title mb-0">Types of Ad implants</h2>
+        <img src="{% static 'img/line.svg' %}" class="img-fluid vector2">
+        <div class="TypeWrapper-content d-block mt-4 mt-sm-3 mt-md-4 mt-lg-4 mt-xl-5">
+            <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
+                <div class="Type-content type-product_left-block d-block">
+                    <h3>1.Single Tooth implant Crown:</h3>
+                    <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
+                </div>
+                <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                    {% comment %} <img src="https://cdn.prod.website-files.com/6749d69aa1b17e3a6ae14c38/67d05b2d9051fe301abb8e36_GENDO_JARDINERAS_MERAKI_F1A8.webp" style="width:50%" class="type-product_img img-fluid py-2" /> {% endcomment %}
+                   <img src="{% static 'img/typeI-014.png'%}" class="type-product_img img-fluid pb-4 py-md-2"  style="width: 50%"  />
+                </div> 
+            </div>
+            <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
+                <div class="Type-content type-product_left-block d-block">
+                    <h3>2.Implant-Supported Bridge:</h3>
+                    <p>When multiple adjacent teeth are missing, an implant-supported bridge can be used. Dental implants are placed on either side of the gap,and a bridge consisting of multiple connected crowns is attached to the implants,effectively filling the space.</p>
+                </div>
+                 <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                    <img src="{% static 'img/typeI-021.png' %}" class="type-product_img img-fluid pb-4 py-md-2"  style="width: 50%" />
+                </div> 
+               {% comment %} <img src="{% static 'img/typeI-02.png' %}" class="img-fluid reveal-img py-1" /> {% endcomment %}
+            </div>
+            <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
+                <div class="Type-content type-product_left-block d-block">
+                    <h3>3.All-on-4 or All-on-6 ADimplant prosthesis:</h3>
+                    <p>Implant-supported prostheses like All-on-4 or All-on-6 use four or six implants to support a full arch of teeth. They reduce cost and complexity, and come in types like hybrid dentures, metal-ceramic, Emax, or zirconia.</p>
+                </div>
+                <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                    <img src="{% static 'img/typeI-031.png'%}" class="type-product_img img-fluid pb-4 py-md-2" style="width:50%" />
+                </div>
+            </div>
+            <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
+                <div class="Type-content type-product_left-block d-block">
+                    <h3>4.Implant-Supported Overdentures:</h3>
+                    <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
+                </div>
+                <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                    <img src="{% static 'img/typeI-041.png'%}" class="type-product_img img-fluid pb-4 py-md-2" style="width:50%" />
+                </div>
+            </div>
+        </div>
+        {% comment %} <div class="row mt-5">
+            <div class="col-lg-6">
+                <h3>1.Single Tooth implant Crown:</h3>
+                <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/typeI-01.png'%}" class="img-fluid" />
+            </div>
+            <div class="col-lg-6">
+                <h3>2.Implant-Supported Bridge:</h3>
+                <p>When multiple adjacent teeth are missing, an implant-supported bridge can be used. Dental implants are placed on either side of the gap,and a bridge consisting of multiple connected crowns is attached to the implants,effectively filling the space.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/typeI-02.png' %}" class="img-fluid" />
+            </div>
+            <div class="col-lg-6">
+                <h3>3.All-on-4 or All-on-6 ADimplant prosthesis:</h3>
+                <p>Implant-supported prostheses like All-on-4 or All-on-6 use four or six implants to support a full arch of teeth. They reduce cost and complexity, and come in types like hybrid dentures, metal-ceramic, Emax, or zirconia.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'img/typeI-03.png'%}" class="img-fluid" />
+            </div>
+            <div class="col-lg-6">
+                <h3>4.Implant-Supported Overdentures:</h3>
+                <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
+            </div> 
+            <div class="col-lg-6">
+                <img src="{% static 'img/typeI-04.png'%}" class="img-fluid" />
+            </div> 
+        </div> {% endcomment %}
+    </div>
+     
+</section>
+{% endblock %}
+{% block js %}
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        const elements = document.querySelectorAll('.type-product_img');
+        console.log("elements",elements);
+        elements.forEach(el => {
+            el.style.transition = 'width 3s';
+            el.style.width = '100%';
+        });
+    })
+</script>
+{% endblock %}
