@@ -1,9 +1,11 @@
+.product-section-title{
+    color: #1B8976;
+    font-size: 30px;
+}
 .TypeofImplants{
     padding: 40px 0px 50px;
 }
 .TypeofImplants .product-section-title{
-    font-size: 30px;
-    color: #1B8976;
     width: 100%;
     text-align: center;
 }
@@ -47,9 +49,19 @@
     max-width: 100%;
     display: inline-block;
     vertical-align: middle;
+    animation: growWidth 3s ease forwards;
 }
 .Type-content h3{
     color: #1B8976;
+}
+@keyframes growWidth {
+    from{
+        width: 50% !important;
+    }
+    to{
+        width: 100%;
+    }
+    
 }
 
 @media(max-width:1200px){
@@ -133,84 +145,100 @@
     .Type-content h3{
         font-size:18px
     }
-}
-/* @media(max-width:420px){
-    .TypeofImplants .vector1, .TypeofImplants .vector2{
-        width:24%;
-        top: 0.5%;
+    .implant-type-card { 
+        margin: 12px 24px 25px 24px;
     }
-} */
-/* .Type-content{
-    width:50%;
-} */
-/* .TypeWrapper img{
-    position: relative;
-} */
-/* .Type-img-wrapper{
-    width:357px;
-    height: 192px;
-}
-.Type-img-wrapper:hover{
-    animation: zoomLeft 1.5s ease-in-out 0.1s forwards;
-} */
-
-/* .reveal-img{
-    width:28%;
-    object-fit: cover;
-    height: 200px;
-} */
-/* .reveal-img:hover{
-    animation: zoomLeft 1.5s ease-in-out  forwards,animateScale 1s ease-in-out forwards;
-    animation-delay: 0s, 1s;  
-} */
-/* .Type-img-wrapper{
-    width:45%;
-    height: 220px;
     
-} */
-/* .Type-img-wrapper:has(.Type-img-wrapper img:hover) {
-    animation:zoomRight 1.5s ease-in-out forwards;
-} */
-/* @keyframes zoomRight{
-    0%{
-        height: 220px;
+    .typeslider .swiper-slide img {
+        width: 60%;
+        overflow: visible;
     }
-    100%{
-        height: 100%;
+    
+    .iv3 {
+        width: 48% !important;
     }
-} */
-/* .Type-img-wrapper img{
-    width:60%;
-} */
-/* .Type-img-wrapper img:hover{
-    animation: zoomLeft 1.5s ease-in-out  forwards , animateScale 1s ease-in-out forwards;
-    animation-delay: 0s, 1s; 
-} */
-/* @keyframes zoomLeft{
-    0%{
-        width:28%;
-        height: 200px;
-    }
-    100%{
-        width:35%;
-        height: 200px;
-    }
-} */
-/* @keyframes zoomLeft{
-    0%{
-        width:60%;
-    }
-    100%{
-        width:100%;
-        height: 100%;
-    }
-} */
-/* @keyframes animateScale{
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.04);
-    }
-} */
-
+}
+.typeslider-wrapper{
+    display: flex;
+}
+.typeslider .slider {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .typeslider .slider {
+    height: 550px;
+    overflow: hidden;
+  }
+  
+  .typeslider .swiper-container {
+    padding-bottom: 20px;
+  }
+  
+  .typeslider .swiper-scrollbar {
+    background: #d6d6d6;
+  }
+  
+  .typeslider .swiper-container-horizontal > .swiper-scrollbar {
+    border-radius: 2px;
+    height: 30px;
+    width: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .typeslider .swiper-scrollbar-drag {
+    background: #1b8976;
+    cursor: grab;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -3px;
+    content: "=";
+    color: white  ;
+  }
+  
+  .typeslider .swiper-slide img {
+    width: 90%;
+    overflow: visible;
+  }
+  
+  .iv3 {
+    width: 70% !important;
+  }
+  
+  .implant-type-card {
+    border-radius: 12px;
+    height: 230px;
+    border: 2px solid #1b8976;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    padding: 16px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+  }
+  
+  .implant-type-card-image {
+    height: 230px;
+    padding: 8px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+  
+  .implant-type-card-heading {
+    font-weight: 500;
+  }
+  
+  .implant-type-card-body {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }

@@ -448,63 +448,64 @@
 
   <script>
 	const swiper1=document.querySelector(".mySwiper1");Object.assign(swiper1,{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0,dynamicBullets:!0},autoplay:{delay:2500,disableOnInteraction:!1},breakpoints:{640:{slidesPerView:2,spaceBetween:10},768:{slidesPerView:3,spaceBetween:15},1024:{slidesPerView:4,spaceBetween:20}}}),swiper1.initialize();
-	{% comment %} const swiper1 = document.querySelector('.mySwiper1');
+  // const swiper1 = document.querySelector('.mySwiper1');
 
 	
-	Object.assign(swiper1, {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-			dynamicBullets: true,
-		},
-		autoplay: {
-			delay: 2500, 
-			disableOnInteraction: false, 
-		},
-		breakpoints: {
-			640: {
-				slidesPerView: 2, 
-				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 3, 
-				spaceBetween: 15,
-			},
-			1024: {
-				slidesPerView: 4, 
-				spaceBetween: 20,
-			},
-		},
-	});
+	// Object.assign(swiper1, {
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 10,
+	// 	pagination: {
+	// 		el: '.swiper-pagination',
+	// 		clickable: true,
+	// 		dynamicBullets: true,
+	// 	},
+	// 	autoplay: {
+	// 		delay: 2500, 
+	// 		disableOnInteraction: false, 
+	// 	},
+	// 	breakpoints: {
+	// 		640: {
+	// 			slidesPerView: 2, 
+	// 			spaceBetween: 10,
+	// 		},
+	// 		768: {
+	// 			slidesPerView: 3, 
+	// 			spaceBetween: 15,
+	// 		},
+	// 		1024: {
+	// 			slidesPerView: 4, 
+	// 			spaceBetween: 20,
+	// 		},
+	// 	},
+	// });
 
-	swiper1.initialize(); {% endcomment %}
+	// swiper1.initialize(); 
+  
 </script>
   <script>
-	const videoWrapper=document.querySelector(".ytbe.about_video"),playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)});
+	const videoWrapper=document.querySelector(".ytbe.about_video"), playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)});
     
-    {% comment %} const videoWrapper = document.querySelector(".ytbe.about_video");
+    // {% comment %} const videoWrapper = document.querySelector(".ytbe.about_video");
 
    
-    const playButton = videoWrapper.querySelector(".play-button");
+    // const playButton = videoWrapper.querySelector(".play-button");
 
    
-    if (playButton) {
-        playButton.onclick = () => {
-            const videoId = videoWrapper.getAttribute("data-video-id");
-            const iframe = document.createElement("iframe");
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            iframe.width = "100%";
-            iframe.height = "100%";
-            iframe.frameBorder = "0";
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-            iframe.allowFullscreen = true;
+    // if (playButton) {
+    //     playButton.onclick = () => {
+    //         const videoId = videoWrapper.getAttribute("data-video-id");
+    //         const iframe = document.createElement("iframe");
+    //         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    //         iframe.width = "100%";
+    //         iframe.height = "100%";
+    //         iframe.frameBorder = "0";
+    //         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    //         iframe.allowFullscreen = true;
 
           
-            videoWrapper.innerHTML = "";
-            videoWrapper.appendChild(iframe);
-        };
-    } {% endcomment %}
+    //         videoWrapper.innerHTML = "";
+    //         videoWrapper.appendChild(iframe);
+    //     };
+    // } {% endcomment %}
 </script>
 {% endblock %}

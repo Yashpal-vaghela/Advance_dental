@@ -2,17 +2,18 @@
 {% load static %}
 {% block css %}
 <link href="{% static 'css/adImplant.css' %}" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 {% endblock %}
 {% block body %}
 <section class="TypeofImplants">
     <div class="container position-relative">
         <img src="{% static 'img/line.svg' %}" class="img-fluid vector1">
-        <h2 class="product-section-title mb-0">Types of Ad implants</h2>
+        <h2 class="product-section-title mb-0">Types of Ad Implants</h2>
         <img src="{% static 'img/line.svg' %}" class="img-fluid vector2">
         <div class="TypeWrapper-content d-block mt-4 mt-sm-3 mt-md-4 mt-lg-4 mt-xl-5">
             <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
                 <div class="Type-content type-product_left-block d-block">
-                    <h3>1.Single Tooth implant Crown:</h3>
+                    <h3>1. Single Tooth implant Crown:</h3>
                     <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
                 </div>
                 <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
@@ -22,7 +23,7 @@
             </div>
             <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
                 <div class="Type-content type-product_left-block d-block">
-                    <h3>2.Implant-Supported Bridge:</h3>
+                    <h3>2. Implant-Supported Bridge:</h3>
                     <p>When multiple adjacent teeth are missing, an implant-supported bridge can be used. Dental implants are placed on either side of the gap,and a bridge consisting of multiple connected crowns is attached to the implants,effectively filling the space.</p>
                 </div>
                  <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
@@ -32,7 +33,7 @@
             </div>
             <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
                 <div class="Type-content type-product_left-block d-block">
-                    <h3>3.All-on-4 or All-on-6 ADimplant prosthesis:</h3>
+                    <h3>3. All-on-4 or All-on-6 ADimplant prosthesis:</h3>
                     <p>Implant-supported prostheses like All-on-4 or All-on-6 use four or six implants to support a full arch of teeth. They reduce cost and complexity, and come in types like hybrid dentures, metal-ceramic, Emax, or zirconia.</p>
                 </div>
                 <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
@@ -41,7 +42,7 @@
             </div>
             <div class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center">
                 <div class="Type-content type-product_left-block d-block">
-                    <h3>4.Implant-Supported Overdentures:</h3>
+                    <h3>4. Implant-Supported Overdentures:</h3>
                     <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
                 </div>
                 <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
@@ -49,49 +50,171 @@
                 </div>
             </div>
         </div>
-        {% comment %} <div class="row mt-5">
-            <div class="col-lg-6">
-                <h3>1.Single Tooth implant Crown:</h3>
-                <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="{% static 'img/typeI-01.png'%}" class="img-fluid" />
-            </div>
-            <div class="col-lg-6">
-                <h3>2.Implant-Supported Bridge:</h3>
-                <p>When multiple adjacent teeth are missing, an implant-supported bridge can be used. Dental implants are placed on either side of the gap,and a bridge consisting of multiple connected crowns is attached to the implants,effectively filling the space.</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="{% static 'img/typeI-02.png' %}" class="img-fluid" />
-            </div>
-            <div class="col-lg-6">
-                <h3>3.All-on-4 or All-on-6 ADimplant prosthesis:</h3>
-                <p>Implant-supported prostheses like All-on-4 or All-on-6 use four or six implants to support a full arch of teeth. They reduce cost and complexity, and come in types like hybrid dentures, metal-ceramic, Emax, or zirconia.</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="{% static 'img/typeI-03.png'%}" class="img-fluid" />
-            </div>
-            <div class="col-lg-6">
-                <h3>4.Implant-Supported Overdentures:</h3>
-                <p>Removable dentures can be secured to implants using attachments, offering more stability than traditional dentures. The choice of implant prosthesis depends on missing teeth, oral health, bone density, and preferences, requiring professional consultation for the best option.</p>
-            </div> 
-            <div class="col-lg-6">
-                <img src="{% static 'img/typeI-04.png'%}" class="img-fluid" />
-            </div> 
-        </div> {% endcomment %}
     </div>
-     
+</section>
+<section class="typeslider container">
+    <div class="typeslider-wrapper">
+        <h2 class="product-section-title mb-0">Why To Choose Ad Implant</h2>
+        <img src="{% static 'img/line.svg' %}" class="img-fluid vector2 mx-5">
+    </div>
+    <div class="slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="implant-type-card" id="card-1" style="background-color: #1b8976; color: white">
+              <div class="implant-type-card-heading">1. Biocompatibility</div>
+              <p class="implant-type-card-body">AD-implant materials are biocompatible, meaning they don’t cause adverse reactions in the body. Common materials include titanium, zirconia, and ceramic.</p>
+            </div>
+            <div class="implant-type-card" id="card-6">
+              <div class="implant-type-card-heading">6. Minimal Maintenance</div>
+              <p class="implant-type-card-body">ADimplant prostheses require minimal maintenance, avoiding staining, chipping, or deterioration under normal use.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="implant-type-card" id="card-2">
+              <div class="implant-type-card-heading">2. Durability</div>
+              <p class="implant-type-card-body">AD-implant prostheses are made from durable materials to withstand chewing and biting forces over time, ensuring long-lasting performance.</p>
+            </div>
+            <div class="implant-type-card-image">
+              <img src="{% static 'implant-type-vector1.svg' %}" alt="vector1" class="w-90" />
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="implant-type-card-image">
+              <img src="{% static 'implant-type-vector2.svg' %}" alt="vector1" class="w-90" />
+            </div>
+            <div class="implant-type-card" id="card-7">
+              <div class="implant-type-card-heading">7. Gum Tissue Compatibility</div>
+              <p class="implant-type-card-body">AD-implant prostheses are designed to fit naturally with gum tissues, promoting healthy gums and a natural smile.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="implant-type-card" id="card-3">
+              <div class="implant-type-card-heading">3. Natural Appearance</div>
+              <p class="implant-type-card-body">AD-implant prostheses closely resemble natural teeth in color, shape, and texture, enhancing aesthetics and confidence.</p>
+            </div>
+            <div class="implant-type-card" id="card-8">
+              <div class="implant-type-card-heading">8. Proper Occlusion</div>
+              <p class="implant-type-card-body">AD-implant prostheses ensure proper bite alignment, preventing jaw pain and uneven wear on teeth.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="implant-type-card" id="card-4">
+              <div class="implant-type-card-heading">4. Stability and Fit</div>
+              <p class="implant-type-card-body">ADimplant prostheses fit securely, ensuring comfort and preventing slippage during speaking and eating for overall satisfaction.</p>
+            </div>
+            <div class="implant-type-card-image">
+              <img src="{% static 'implant-type-vector3.svg' %}" alt="vector3" class="iv3 w-70" />
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="implant-type-card-image">
+              <img src="{% static 'implant-type-vector4.svg' %}" alt="vector1" class="w-90" />
+            </div>
+            <div class="implant-type-card" id="card-9">
+              <div class="implant-type-card-heading">9. Functional Efficiency</div>
+              <p class="implant-type-card-body">AD-implant prostheses restore efficient chewing and speaking, allowing comfort with a variety of foods and clear speech.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="implant-type-card" id="card-5">
+              <div class="implant-type-card-heading">5. Ease of Cleaning</div>
+              <p class="implant-type-card-body">AD-implant prostheses are easy to clean, helping maintain oral hygiene and prevent plaque buildup and gum issues.</p>
+            </div>
+            <div class="implant-type-card" id="card-10">
+              <div class="implant-type-card-heading">10. Customization</div>
+              <p class="implant-type-card-body">Each AD-implant prosthesis are custom-made to fit the patient's unique oral anatomy, ensurinf a pieacise and coomfortable fit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- pagination -->
+        {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+
+        <!-- scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
 </section>
 {% endblock %}
 {% block js %}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded',function(){
-        const elements = document.querySelectorAll('.type-product_img');
-        console.log("elements",elements);
-        elements.forEach(el => {
-            el.style.transition = 'width 3s';
-            el.style.width = '100%';
-        });
-    })
-</script>
+    document.addEventListener("DOMContentLoaded",function () {
+      for(let i=1; i <= 10; i++) {
+        const card = document.getElementById(`card-${i}`);
+        if(card){
+          card.addEventListener("click", function () {
+            
+            for(let j = 1; j <= 10; j++) {
+              const removecard = document.getElementById(`card-${j}`);
+              if(removecard) {
+                removecard.style.backgroundColor = "#fff";
+                removecard.style.color = "#000";
+              }
+            }
+  
+            card.style.backgroundColor = "#1b8976";
+            card.style.color = "#FFF"
+          });
+        }      
+      }
+    });
+  </script>
+<script>
+    var $swiperSelector = $('.swiper-container');
+  
+    $swiperSelector.each(function(index) {
+      var $this = $(this);
+      var swiperClass = 'swiper-slider-' + index;
+      $this.addClass(swiperClass);
+  
+      var dragSize = $this.data('drag-size') || 150;
+      var freeMode = $this.data('free-mode') || false;
+      var loop = $this.data('loop') || false;
+      var slidesDesktop = $this.data('slides-desktop') || 4;
+      var slidesTablet = $this.data('slides-tablet') || 3;
+      var slidesMobile = $this.data('slides-mobile') || 1;
+      var spaceBetween = $this.data('space-between') || 20;
+  
+      // Use scoped selectors to get correct child elements
+      var scrollbarEl = $this.find('.swiper-scrollbar')[0];
+      var nextEl = $this.find('.swiper-button-next')[0];
+      var prevEl = $this.find('.swiper-button-prev')[0];
+  
+      var swiper = new Swiper('.' + swiperClass, {
+        direction: 'horizontal',
+        loop: loop,
+        freeMode: freeMode,
+        spaceBetween: spaceBetween,
+        slidesPerView: slidesMobile, // default
+        breakpoints: {
+          640: {
+            slidesPerView: 2, 
+          },
+          768: {
+            slidesPerView: 3, 
+          },
+          1024: {
+            slidesPerView: 4, 
+          },
+        },
+        navigation: {
+          nextEl: nextEl,
+          prevEl: prevEl
+        },
+        scrollbar: {
+          el: scrollbarEl,
+          draggable: true,
+          dragSize: dragSize
+        }
+      });
+    });
+  </script>
 {% endblock %}
