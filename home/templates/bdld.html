@@ -432,26 +432,15 @@
 				<!-- INFO IMAGE -->
 				<div class="col-lg-4">
 					<div class="info-4-img text-center wow fadeInUp" data-wow-delay="0.6s">
-						<img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="info-image">
+						<img class="img-fluid" src="{% static 'aboutnew.png' %}" alt="info-image">
 					</div>
 					<!-- Singnature -->
-					<div class="singnature mt-35">
-
-						<!-- Text -->
-						<p class="p-small mb-15">
-							Haresh Savani - (K.L.E. Belgaum)
-						</p>
-						<p>
-							<b>CEO – Founder
-							</b>
-						</p>
-
+					<div class="singnature mt-35 text-center">
 						<!-- Singnature Image -->
 						<!-- Recommended sizes for Retina Ready displays is 400x68px; -->
-						<img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="34"
-							alt="signature-image" />
-
-					</div>
+						<img class="img-fluid wow fadeInDown" data-wow-delay="0.6s" src="{% static 'img/puja.png' %}" width="200" height="34"
+							alt="signature-image" /> 
+					</div>  
 				</div>
 
 
@@ -463,45 +452,103 @@
 						<span class="section-id blue-color">Hear It From The Founder</span>
 
 						<!-- Title -->
-						<h4 class="h4-md steelblue-color">Best Dental Lab Services in {{pk.name}} & Leader in Dental
+						<h4 class="h4-md  mb-20">Best Dental Lab Services in {{pk.name}} & Leader in Dental
 							Implants, Cosmetic Dentistry and Digital Dentistry</h4>
+            <div class="row">
+      
+              <!-- Vision -->
+              <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start">
+                  <div class="ab-icon-outer me-3">
+                    <img src="{% static 'vision.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class="text-start">
+                    <h6 class="fw-bold mb-1 steelblue-color">Vision</h6>
+                    <p class="mb-0">Deliver high-quality dental prosthetics for long-lasting and aesthetically pleasing results.</p>
+                  </div>
+                </div>
+              </div>
 
-						<!-- Text -->
-						<p>Advance dental export is a full service dental lab that specializes in dental implants,
-							cosmetic dentistry and digital dentistry. Haresh savani, CEO, started’ ADE’ in 2009 with a
-							vision to fabricate only the highest quality dental prosthetics to ensure long-lasting and
-							esthetically pleasing outcomes for every dental lab product. We proudly make 100% of our
-							dental lab products at ‘ADE’, so you can trust we deliver quickly with little to no
-							adjustments and remakes. For the past 8 years, we have been strongly committed to brilliant
-							aesthetics with promising durability because we understand how important it is to the
-							majority to maintain a healthy and beautiful smile. Our purpose aligns with our dentists to
-							help restore health and confidence in every patient’s smile.
-						</p>
+              <!-- Manufacturing -->
+              <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start">
+                <div class="ab-icon-outer me-3">
+                  <img src="{% static 'Manufacturing.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class="text-start">
+                    <h6 class="fw-bold mb-1 steelblue-color">Manufacturing</h6>
+                    <p class="mb-0">100% in-house production ensures fast delivery, fewer remakes, and minimal adjustments.</p>
+                  </div>
+                </div>
+              </div>
 
-						<!-- Text -->
-						<p>
-							We are growing with the digital revolution in the dental industry, known as Digital
-							Dentistry, to provide the best dental lab services in {{pk.name}} and all over India, US &
-							Canada,
-							superior customer service and efficient manufacturing for fast turnaround times that you
-							would expect from a State-of-the-Art Dental Lab.
-							Digital Dentistry in {{pk.name}} is increasingly becoming the new standard in modern dental
-							care because of how accurate,
-							predictable, and cost efficient the technology has made the production of dental
-							prosthetics.
-							By utilizing Dental CAD/CAM Digital Systems, our doctors are able to digitally scan the
-							patient’s prepped section and
-							instantly send the 3D image to our lab for immediate production that cuts costs in labor and
-							delivery. Digital dentistry
-							allows us to virtually design and mill the prosthetic with utmost precision and sensitivity
-							to esthetics.
-							We support all major CAD/CAM Digital Scanners including Cerec Connect, 3Shape, iTero, 3M
-							ESPE, Carestream and more.
-							We are one of the only laboratories in the industry to guarantee all restorations completed
-							using all Authentic Implant Manufacturer’s
-							Hardware and Custom CAD/CAM Abutments. This protects the Warranty of the products you are
-							restoring.
-						</p>
+              <!-- Commitment -->
+              <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start">
+                  <div class="ab-icon-outer me-3">
+                    <img src="{% static 'Commitment.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class="text-start">
+                    <h6 class="fw-bold mb-1 steelblue-color">Commitment</h6>
+                    <p class="mb-0">Over 16 years focused on brilliance and durability—restoring confidence, one smile at a time.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Global Reach -->
+              <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start">
+                  <div class="ab-icon-outer me-3">
+                    <img src="{% static 'Global-Reach.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class="text-start">
+                    <h6 class="fw-bold mb-1 steelblue-color">Global Reach</h6>
+                    <p class="mb-0">Serving dentists in {{pk.name}}, India, the US, and Canada with trusted, top-tier lab services.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Digital Dentistry -->
+              <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start">
+                  <div class="ab-icon-outer me-3">
+                    <img src="{% static 'digital.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class=" text-start">
+                    <h6 class="fw-bold mb-1 text-start steelblue-color">Digital Dentistry</h6>
+                    <p class="mb-0">Leading with CAD/CAM for accuracy, cost-efficiency, and faster prosthetic production.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technology -->
+              <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start">
+                  <div class="ab-icon-outer me-3">
+                    <img src="{% static 'Technology.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class="text-start">
+                    <h6 class="fw-bold mb-1 steelblue-color">Technology</h6>
+                    <p class="mb-0">Compatible with Cerec, 3Shape, iTero, 3M ESPE, Carestream and more. Digitally precise and fast.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Warranty and Authenticity -->
+              <div class="col-md-12 mb-2">
+                <div class="d-flex align-items-start">
+                  <div class="ab-icon-outer me-3">
+                    <img src="{% static 'Authenticity.png' %}" class="img-fluid" alt="info-image"/>
+                  </div>
+                  <div class=" text-start">
+                    <h6 class="fw-bold mb-1 steelblue-color">Warranty & Authenticity</h6>
+                    <p class="mb-0">Only authentic implant hardware and custom abutments used—ensuring product warranty and trust.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
 					</div>
 				</div> <!-- END TEXT BLOCK -->
 

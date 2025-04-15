@@ -840,7 +840,20 @@ ul.content-list li:last-child {
   overflow: hidden;
   margin-bottom: 8px;
 }
-
+.ab-main{
+  font-size: 1rem;
+  font-weight: bold;
+}
+.ab-icon-outer {
+  background-color: rgba(0, 121, 107, 0.05);
+  padding: 8px 8px;
+  border-radius: 5px;
+  max-width: 45px;
+}
+.ab-icon{
+  color: #00796b;
+  font-size: 16px;
+}
 /* btn css */
 .btn {
   background-color: transparent;
