@@ -606,7 +606,7 @@
     </script>
     {% endfor %} 
     <script>
-      document.getElementById("closePopup").addEventListener("click", function () {
+      {% comment %} document.getElementById("closePopup").addEventListener("click", function () {
         document.getElementById("chat-container").style.display = "none";
     });
       document.getElementById("chat-popup-btn").addEventListener("click", function() {
@@ -618,7 +618,7 @@
         } else {
             chatContainer.style.display = "none";   // Hide on second click
         }
-    });
+    }); {% endcomment %}
     
     
       const questionFlow = {
@@ -695,7 +695,7 @@
           }
       }
   
-      function startChat() {
+      {% comment %} function startChat() {
 
         document.getElementById("chat-messages").innerHTML = ""; // Clear previous messages
         document.getElementById("chat-buttons").innerHTML = "";
@@ -707,7 +707,7 @@
           setTimeout(() => addButtons(firstOptions), 1000);
       }
   
-      window.onload = startChat; // Start chatbot when page loads
+      window.onload = startChat; // Start chatbot when page loads {% endcomment %}
   </script>
   
     {% comment %} <script>
