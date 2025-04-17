@@ -1,11 +1,4 @@
 User-agent: *
-Allow: /sitemap.xml
 Disallow: /gallery/?page=*
-Allow: /blog/$
-Disallow: /blog/*
-Disallow: /zir-icon/
-Disallow: /blog/ultimate-guide-of-zirconia-crown/
-Disallow: /event-gallery/expodent-delhi/?page=*
-Disallow: /event-gallery/gujarat-dental-show-2019/?page=*
-Disallow: /event-gallery/famdent-mumbai/?page=*
+Disallow: /blog/?page=*
 Sitemap: https://advancedentalexport.com/sitemap.xml
