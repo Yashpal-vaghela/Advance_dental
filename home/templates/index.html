@@ -56,25 +56,16 @@
   <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 {% endblock %} {% block body %}
-  <h3 class="d-none">Best Dental Labs In India, US & Canada</h3>
-
-  <section class="hero-section1">
+  <section class="hero-section1 mb-0">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide banner-1-wrap position-relative">
           {% comment %} <video id="player" autoplay muted playsinline loop>
             <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4" />
           </video> {% endcomment %}
-          <video class="h-full w-full object-cover" 
-              preload="metadata" 
-              playsinline 
-              muted 
-              autoplay 
-              loop 
-              id="player">
-              <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm" type="video/webm">
-              <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <video class="h-full w-full object-cover" preload="metadata" playsinline muted autoplay loop id="player">
+            <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm" type="video/webm" />
+            <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4" type="video/mp4" />Your browser does not support the video tag.
           </video>
           {% comment %} <video width="100%" controls autoplay muted playsinline loop controlslist="nodownload nofullscreen noremoteplayback" id="background-video" oncontextmenu="return false;">
             <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4" />
@@ -109,14 +100,14 @@
 
         <div class="swiper-slide">
           <div class="banner-31 position-relative">
-            <img src="{% static 'banner-2/bg-33.webp' %}" class="banner-bg3 img-fluid"  anim="glitch" />
-            <img src="{% static 'banner-2/bg-4-3.webp' %}" class="banner-bg4 img-fluid" /> 
-             <div class="container">
-              <img src="{% static 'banner-2/banner3-text.webp' %}" class="banner3-text img-fluid"/>
-              <img src="{% static 'banner-2/banner3-subtitle5.webp'%}" class="banner3-subtitle img-fluid"/>
+            <img src="{% static 'banner-2/bg-33.webp' %}" class="banner-bg3 img-fluid" anim="glitch" />
+            <img src="{% static 'banner-2/bg-4-3.webp' %}" class="banner-bg4 img-fluid" />
+            <div class="container">
+              <img src="{% static 'banner-2/banner3-text.webp' %}" class="banner3-text img-fluid" />
+              <img src="{% static 'banner-2/banner3-subtitle5.webp' %}" class="banner3-subtitle img-fluid" />
               {% comment %} <h2 class="banner3-subtitle">For valued Customer</h2> {% endcomment %}
               <img src="{% static 'banner-2/banner3-product1.webp' %}" class="banner3-product img-fluid" />
-            </div> 
+            </div>
           </div>
         </div>
       </div>
@@ -125,68 +116,72 @@
       <div class="swiper-pagination"></div>
     </div>
   </section>
-
-  <div class="container mt-5">
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="firstCard globalCard">
-          <img src="{% static 'quality_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
-          <div>
-            <img src="{% static 'quality.svg' %}" alt="Quality Check" class="cd_icon" />
-            <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
-            <h4 class="cd_heading">Precision in Every Detail</h4>
-            <p class="cd_text">Leveraging decades of expertise in dental craftsmanship, our laboratory delivers exceptional quality through innovative techniques and meticulous attention to detail.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="middle_card globalCard">
-          <img src="{% static 'worldwide_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
-          <div>
-            <img src="{% static 'worldwide.svg' %}" alt="Quality Check" class="cd_icon" />
-            <p class="cd_subheading">WORLD WIDE PRESENCE</p>
-            <h4 class="cd_heading">Connecting Global Excellence</h4>
-            <p class="cd_text">Our extensive international network spans continents, ensuring reliable access to premium dental solutions for healthcare professionals worldwide.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="thirdCard globalCard">
-          <img src="{% static 'fda_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
-          <div>
-            <img src="{% static 'FDA.svg' %}" alt="Quality Check" class="cd_icon" />
-            <p class="cd_subheading">FDA REGISTERED</p>
-            <h4 class="cd_heading">Validated Excellence</h4>
-            <p class="cd_text">Our FDA registration and international certifications reflect our unwavering commitment to maintaining the highest standards in dental healthcare solutions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- About us -->
   <section id="about-6" class="pb-0 about-section division">
     <div class="container">
       <div class="row d-flex align-items-center mt-0 mx-0">
         <div class="col-lg-7 d-flex">
-          <div class="txt-block pc-30 wow fadeInUp pt-5" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s">
-            <span class="section-id blue-color">Welcome to Advance Dental Export</span>
-            <h3 class="h3-md steelblue-color mb-0" style="font-size: 1.6rem">The Art Of Esthetic Laboratories</h3>
-            <p class="mb-4" style="font-size: 14px">“As an accomplished founder and CEO, seasoned digital dental technician, experienced ceramist, and a guide to thousands of budding professionals, my vision is to bring a dental renaissance to the global canvas.</p>
-            <p class="mb-3" style="font-size: 14px">For the past 20 years, we have toiled and carved our path to becoming a leading dental lab for providing the latest products, innovative materials, and state-of-the-art digital technology. Today it fills us with pride when the dental fraternity considers ADE to be synonymous with international quality. I am confident that we will continue to provide you with innovative, precise, and supremely esthetic products even in the future.”</p>
-            <div class="singnature mt-25">
-              <p class="p-small mb-15 fw-bold">Haresh Savani, Founder</p>
-            </div>
+          <div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s">
+            <h2 class="section-id blue-color wlc-title">Welcome to Advance Dental Export</h2>
+            <h3 class="h3-md steelblue-color mb-2" style="font-size: 1.6rem">The Art Of Aesthetic Dental Laboratory</h3>
+            <p class="mb-4" style="font-size: 14px">With over 20 years of expertise in the dental industry, Advance Dental Export is trusted by dental professionals, clinics, and distributors across the globe for delivering certified, custom-engineered solutions that combine cutting-edge technology with expert craftsmanship.</p>
+            <p class="mb-3" style="font-size: 14px">
+              “As the founder and driving force behind Advance Dental Export, I take immense pride in our journey—from a small dental lab to a trusted provider of dental prosthetics, serving professionals throughout the field of restorative dentistry.” - <span class="fw-semibold">Haresh Savani, Founder</span>
+            </p>
+            <p class="mb-3" style="font-size: 14px">We are honored that the dental community sees us as a benchmark for international excellence—and we remain committed to exceeding those expectations every single day.</p>
           </div>
         </div>
         <div class="col-lg-5 d-flex">
           <div class="about-img text-center wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s">
-            <img class="img-fluid lazy" src="{% static 'hresh-about.png' %}" data-src="{% static 'hresh-about.png' %}" alt="Haresh Savani, Founder" title="Haresh Savani, Founder" width="100%" height="100%" loading="lazy" />
+            <img class="img-fluid lazy" src="{% static 'haresh-boss.png' %}" data-src="{% static 'haresh-boss.png' %}" alt="Haresh Savani, Founder" title="Haresh Savani, Founder" width="100%" height="100%" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container mt-5 mb-4">
+      <div class="col-lg-12 mx-auto section-title">
+        <h3 class="h4-md steelblue-color">Why We Are the Best Dental Lab Across the Globe?</h3>
+        <p class="h5-lg mb-0">Crafting smiles worldwide, we’ve earned our place among the leading dental labs by delivering excellence in every dental restoration.</p>
+      </div>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="firstCard globalCard">
+            <img src="{% static 'quality_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
+            <div>
+              <img src="{% static 'quality.svg' %}" alt="Quality Check" class="cd_icon" />
+              <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
+              <h4 class="cd_heading">Highest Quality Dental Prosthesis</h4>
+              <p class="cd_text">We never cut corners when it comes to quality. With decades of experience in dentistry, we combine craftsmanship with advanced technology to ensure our product meets the highest standards.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="middle_card globalCard">
+            <img src="{% static 'worldwide_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
+            <div>
+              <img src="{% static 'worldwide.svg' %}" alt="Quality Check" class="cd_icon" />
+              <p class="cd_subheading">WORLD WIDE PRESENCE</p>
+              <h4 class="cd_heading">Global Trust in Dental Supply</h4>
+              <p class="cd_text">With a strong global footprint, we supply a comprehensive range of high-quality dental prosthetics to clients overseas. We proudly support dental professionals, clinics, and distributors worldwide with trusted, high-performance solutions tailored to the diverse needs of restorative dentistry.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="thirdCard globalCard">
+            <img src="{% static 'fda_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
+            <div>
+              <img src="{% static 'FDA.svg' %}" alt="Quality Check" class="cd_icon" />
+              <p class="cd_subheading">FDA REGISTERED</p>
+              <h4 class="cd_heading">FDA Trusted Compliance</h4>
+              <p class="cd_text">At Advance Dental Export, we proudly hold an FDA certificate. From manufacturing to final delivery, our processes are validated to ensure dental professionals receive only the most reliable and compliant products.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -236,8 +231,8 @@
     <div class="container">
       <div class="row align-items-center justify-content-center mx-auto">
         <div class="col-lg-12 mx-auto section-title">
-          <h3 class="h3-md steelblue-color mb-0">The Complete Dental Solution</h3>
-          <h3 class="h3-md steelblue-color mb-0">Pioneering Modern Technology for Dentists</h3>
+          <h3 class="h4-lg steelblue-color mb-0">The Complete Dental Solution</h3>
+          <h3 class="h4-lg steelblue-color mb-0">Pioneering Modern Technology for Dentists</h3>
         </div>
         <div class="col-md-12 col-sm-12 col-12 px-0">
           <div class="owl-carousel owl-theme services-holder">
@@ -247,7 +242,7 @@
               </div>
               <div class="sbox-51-txt">
                 <h3 class="card-title"><a href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}" class="title-link">Porcelain fused to metal (PFM)</a></h3>
-                <p class="card-desc">Porcelain bonded to metal has reminded one of the most predictable and strongest choices for dental restoration. Our dental laboratory specializes in crafting traditional PFMS. These resolutions bring esthetic’s white providing amazing strength and function in the area of the posterior.</p>
+                <p class="card-desc">Porcelain fused to metal crown offers both beauty and strength. Ideal choice of dental professionals, they are made from durable porcelain fused to metal crown materials. Perfect for restoring, they combine the aesthetics of porcelain with the reliability of metal.</p>
                 <a href="{% url 'blogd' 'porcelain-fused-to-metal-pfm' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -259,8 +254,8 @@
                 <img src="{% static 'img/zirconi-advance.webp' %}" class="mb-0 mt-3" alt="Image" srcset="" width="100%" height="100%" loading="lazy" />
               </div>
               <div class="sbox-51-txt">
-                <h3 class="card-title"><a href="{% url 'blogd' 'zir-icon' %}" class="title-link">Advance Zirconia</a></h3>
-                <p class="card-desc">Zir-icon is a high strength, milled to full contour, highly translucent zirconia restoration with NO porcelain layering. Zir-icon utilizes the latest. The technology available in our CAD/CAM product line. Ideal for posterior crowns and bridges.</p>
+                <h3 class="card-title"><a href="{% url 'blogd' 'zirconia-crown' %}" class="title-link">Advance Zirconia</a></h3>
+                <p class="card-desc">Our advanced zirconia delivers unmatched strength and natural appearance. Discover the benefits of real-world zirconia with expert advice. Learn about zirconia in dentistry and why it’s a top choice for long-lasting dental solutions in modern dentistry.</p>
                 <a href="{% url 'blogd' 'zirconia-crown' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -272,8 +267,8 @@
                 <img src="{% static 'img/IPS.webp' %}" class="mb-0 mt-3" alt="Advance Dental Image" srcset="" width="100%" height="100%" loading="lazy" />
               </div>
               <div class="sbox-51-txt">
-                <h3 class="card-title"><a href="{% url 'blogd' 'aesthetic-maxima' %}" class="title-link">IPS e.max All Ceramic Restorations</a></h3>
-                <p class="card-desc">Our revolutionary new e.max CAD/CAM ceramic restorations offer the latest in digital design technology and ceramic engineering science. IPS e.max is the ultimate in metal-free esthetics and strength, offering a wide range of restorative options for veneers, inlays, onlays, crowns, bridges and implants prosthetics.</p>
+                <h3 class="card-title"><a href="{% url 'blogd' 'aesthetic-maxima' %}" class="title-link">IPS E Max</a></h3>
+                <p class="card-desc">Enhance your smile with IPS e max, an all-ceramic restoration for teeth. It offers superb translucency and natural aesthetics. Learn about the benefits of e max in dental restoration and compare with other clear and durable options like zirconia.</p>
                 <a href="{% url 'blogd' 'aesthetic-maxima' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -285,8 +280,8 @@
                 <img src="{% static 'img/Implant.webp' %}" class="mb-0 mt-3" alt="Advance Dental Image" srcset="" width="100%" height="100%" loading="lazy" />
               </div>
               <div class="sbox-51-txt">
-                <h3 class="card-title"><a href="{% url 'blogd' 'ad-abutments' %}" class="title-link">Ad- Abutments Product Implant</a></h3>
-                <p class="card-desc">AD- abutments are custom engineered to best meet each patient’s case needs. ADE uses the most advanced design and milling technologies to deliver the most precise fits available. ADE has developed the technology in order to deliver abutments that are compatible with most major implant prosthetics platforms.</p>
+                <h3 class="card-title"><a href="{% url 'blogd' 'ad-abutments' %}" class="title-link">Advanced Dental Implant Solutions</a></h3>
+                <p class="card-desc">Our advanced dental implant solutions include dental implant with abutment for a complete and permanent tooth replacement. We provide reliable and affordable implants that restore both function and confidence in your smile.</p>
                 <a href="{% url 'blogd' 'ad-abutments' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -298,8 +293,8 @@
                 <img src="{% static 'img/17.webp' %}" class="mb-0 mt-3" alt="Advance Dental Image" srcset="" width="100%" height="100%" loading="lazy" />
               </div>
               <div class="sbox-5-txt">
-                <h3 class="card-title"><a href="{% url 'blogd' 'digital-crown-bridge' %}" class="title-link">Digital Crown & Bridges</a></h3>
-                <p class="card-desc">Digital dentistry at advance dental export CAD/CAM milling and 3D printing Full Service Dental Laboratory The world of Cad-Cam and digital dentistry has changed and improved dramatically in the last few years. Advance dental export has invested heavily in this new digital market and has taken time to study these advancements in the dental Industry.</p>
+                <h3 class="card-title"><a href="{% url 'blogd' 'digital-crown-bridge' %}" class="title-link">Digital Bridges & Crown</a></h3>
+                <p class="card-desc">Using advanced scanning and design tech, our digital crown and bridges ensure a perfect fit and comfort. Whether it's dental bridge teeth or a single dental crown zirconia, enjoy high-precision restorations that look and feel natural, with minimal chair time.</p>
                 <a href="{% url 'blogd' 'digital-crown-bridge' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -311,8 +306,8 @@
                 <img src="{% static 'img/BPS.webp' %}" class="mb-0 mt-3" alt="Advance Dental Image" srcset="" width="100%" height="100%" loading="lazy" />
               </div>
               <div class="sbox-5-txt">
-                <h3 class="card-title"><a href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" class="title-link">BPS – Biofunctional Prosthetic System</a></h3>
-                <p class="card-desc">They provide you with self-confidence, charisma, and self-assurance. Therefore, you want to gather all the necessary information before you make the decision regarding the optimum dentures for you.</p>
+                <h3 class="card-title"><a href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" class="title-link">BPS Dentures</a></h3>
+                <p class="card-desc">Our biofunctional prosthetic system provides customized prosthetic dental and prosthetic teeth designed for comfort and function. Ideal for patients needing dentures, these systems offer natural movement and appearance, ensuring better speech, chewing, and smiling with confidence.</p>
                 <a href="{% url 'blogd' 'bps-biofunctional-prosthetic-system' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -325,7 +320,7 @@
               </div>
               <div class="sbox-5-txt">
                 <h3 class="card-title"><a href="{% url 'blogd' 'nobelprocera' %}" class="title-link">NobelProcera Solution</a></h3>
-                <p class="card-desc">No one knows industrially produced CAD/CAM dental prosthetics like we do. Nobel Biocare was the first to produce dental restorations in this way. Over 30 years and more than 11 million units later, NobelProcera remains a leader in the precision engineering and manufacturing of dental implant prosthetics.</p>
+                <p class="card-desc">NobelProcera restorations are ideal for highly aesthetic and strong dental prosthetic restorations. Using CAD/CAM precision, they support everything from dental implants with abutments to bridges, providing premium quality in both materials and finish.</p>
                 <a href="nobelprocera" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
@@ -802,8 +797,8 @@
     };
   });
 </script>
-<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-<script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script>
   document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("player");
 
@@ -821,5 +816,4 @@
     });
 });
 </script>
-
 {% endblock %}
