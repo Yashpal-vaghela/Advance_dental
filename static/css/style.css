@@ -3042,6 +3042,7 @@ td.text-right {
   color: #333;
   display: flex;
   justify-content: center;
+  margin-top: 25px;
 }
 
 @media (max-width: 576px) {
@@ -4506,10 +4507,11 @@ h5.h5-sm {
   );
 }
 
-.footer h5.h5-xs {
+.footer-title {
   line-height: 1;
   letter-spacing: 0;
   margin-bottom: 25px;
+  font-size: 18px;
 }
 
 #footer-2 .footer-info p {
