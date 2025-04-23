@@ -3946,7 +3946,7 @@ td.text-right {
 }
 
 .sblog-post-txt .h1-sm {
-  font-size: 1.5rem !important;
+  font-size: 1.8rem !important;
   font-weight: 600 !important;
 }
 
@@ -7339,19 +7339,19 @@ body {
 }
 
 .blog-body h1 {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
 }
 
 .blog-body h2 {
-  font-size: 1.875rem;
+  font-size: 1.6rem;
 }
 
 .blog-body h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .blog-body h4 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .blog-body p,
