@@ -6426,9 +6426,9 @@ nav a#pull {
   background-color: #24a992;
 }
 
-.d-none {
+/* .d-none {
   display: none !important;
-}
+} */
 
 /*font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif*/
 .gbox {
@@ -7294,9 +7294,9 @@ nav a#pull {
   overflow: visible !important;
 }
 
-#page {
+/* #page {
   overflow: scroll;
-}
+} */
 
 body {
   overflow-x: auto;

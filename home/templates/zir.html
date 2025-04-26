@@ -969,4 +969,14 @@
         initialSlide: 2,
     });
 </script>
+<script>
+    if(window.location.pathname == "/zirconia-crown/"){
+      const a = document.getElementsByClassName("page");
+      const b = document.querySelectorAll(".wsmenucontainer");
+      a[0].classList.add("overflow-visible");
+    }else{
+       const a = document.getElementsByClassName("page");
+       a[0].classList.remove("overflow-visible");
+    }
+</script>
 {% endblock  %}

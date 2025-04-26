@@ -770,20 +770,6 @@
           if (event.key === "Enter") sendMessage();
       }
   </script> {% endcomment %}
-  
-  <script>
-    console.log("window",window,window.location.pathname == "/zirconia-crown/")
-    if(window.location.pathname == "/zirconia-crown/"){
-      const a = document.getElementsByClassName("page");
-      const b = document.querySelectorAll(".wsmenucontainer");
-      a[0].classList.add("overflow-visible");
-      console.log("a",a ,"b",b)
-    }else{
-       const a = document.getElementsByClassName("page");
-       a[0].classList.remove("overflow-visible");
-       console.log("a------",a)
-    }
-  </script>
     {% block javascript %}{% endblock %}
   </body>
 </html>

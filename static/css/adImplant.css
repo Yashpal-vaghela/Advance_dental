@@ -1,244 +1,778 @@
-.product-section-title{
-    color: #1B8976;
-    font-size: 30px;
+.product-section-title {
+  color: #1b8976;
+  font-size: 30px;
 }
-.TypeofImplants{
-    padding: 40px 0px 50px;
+.TypeofImplants {
+  padding: 40px 0px 50px;
 }
-.TypeofImplants .product-section-title{
-    width: 100%;
-    text-align: center;
+.TypeofImplants .product-section-title {
+  width: 100%;
+  text-align: center;
 }
-.TypeofImplants .vector1{
-    position: absolute;
-    top: 0.7%;
-    left: 1%;
+.TypeofImplants .vector1 {
+  position: absolute;
+  top: 0.7%;
+  left: 1%;
 }
-.TypeofImplants .vector2{
-    position: absolute;
-    top: 0.7%;
-    right: 1%;
+.TypeofImplants .vector2 {
+  position: absolute;
+  top: 0.7%;
+  right: 1%;
 }
-.TypeWrapper{
-    border-top:1px solid #1B8976;
-    border-bottom:1px solid #1B8976;
-    position:relative;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    display: grid;
+.TypeWrapper {
+  border-top: 1px solid #1b8976;
+  border-bottom: 1px solid #1b8976;
+  position: relative;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
 }
-.type-product_left-block{
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    flex-flow: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex;
+.type-product_left-block {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
 }
-.type-product_right-block{
-    overflow: hidden;
+.type-product_right-block {
+  overflow: hidden;
 }
-.type-product_img{
-    object-fit: cover;
-    /* border-radius: .5rem; */
-    width: 30rem;
-    height: 20rem;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    animation: growWidth 3s ease forwards;
+.type-product_img {
+  object-fit: cover;
+  /* border-radius: .5rem; */
+  width: 30rem;
+  height: 20rem;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  animation: growWidth 3s ease forwards;
 }
-.Type-content h3{
-    color: #1B8976;
+.Type-content h3 {
+  color: #1b8976;
 }
 @keyframes growWidth {
-    from{
-        width: 50% !important;
-    }
-    to{
-        width: 100%;
-    }
-    
+  from {
+    width: 50% !important;
+  }
+  to {
+    width: 100%;
+  }
+}
+.typeslider-wrapper {
+  display: flex;
+}
+.typeslider .slider {
+  margin: 10px auto 40px;
+  max-width: 1200px;
 }
 
-@media(max-width:1200px){
-    .TypeofImplants .product-section-title{
-        font-size: 28px;
-    }
-    .TypeofImplants .vector1{
-        width:32%;
-    }
-    .TypeofImplants .vector2{
-        width:32%;
-    }
-    .Type-content h3{
-        font-size: 25px;
-    }
+.typeslider .slider {
+  height: 550px;
+  overflow: hidden;
 }
-@media(max-width:991px){
-    .TypeofImplants{
-        margin: 50px 0px;
-    }
-    .TypeofImplants .product-section-title{
-        font-size: 25px;
-    }
-    .TypeofImplants .vector1,.TypeofImplants .vector2{
-        width:30%;
-    }
-    .Type-content h3{
-        font-size: 22px;
-    }
+
+.typeslider .swiper-container {
+  padding-bottom: 20px;
 }
-@media(max-width:768px){
-    .TypeWrapper{
-        flex-direction: column;
-        /* grid-auto-flow: column;
+
+.typeslider .swiper-scrollbar {
+  background: #d6d6d6;
+}
+
+.typeslider .swiper-container-horizontal > .swiper-scrollbar {
+  border-radius: 2px;
+  height: 30px;
+  width: 200px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.typeslider .swiper-scrollbar-drag {
+  background: #1b8976;
+  cursor: grab;
+  height: 8px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -3px;
+  content: "=";
+  color: white;
+}
+
+.typeslider .swiper-slide img {
+  width: 90%;
+  overflow: visible;
+}
+
+.iv3 {
+  width: 70% !important;
+}
+
+.implant-type-card {
+  border-radius: 12px;
+  height: 230px;
+  border: 2px solid #1b8976;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  padding: 16px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+}
+
+.implant-type-card-image {
+  height: 230px;
+  padding: 8px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.implant-type-card-heading {
+  font-weight: 500;
+}
+
+.implant-type-card-body {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+@media (max-width: 1200px) {
+  .TypeofImplants .product-section-title {
+    font-size: 28px;
+  }
+  .TypeofImplants .vector1,.TypeofImplants .vector2 {
+    width: 32%;
+  }
+  .Type-content h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 991px) {
+  .TypeofImplants {
+    margin: 50px 0px;
+  }
+  .TypeofImplants .product-section-title {
+    font-size: 25px;
+  }
+  .TypeofImplants .vector1,
+  .TypeofImplants .vector2 {
+    width: 30%;
+  }
+  .Type-content h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .TypeWrapper {
+    flex-direction: column;
+    /* grid-auto-flow: column;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns:none;
         grid-auto-columns:none;
         grid-column-gap: 0px;
         grid-row-gap: 0px; */
-    }
-    .TypeofImplants .product-section-title{
-        font-size: 20px;
-    }
-    .TypeofImplants .vector1, .TypeofImplants .vector2{
-        width:28%;
-        top:0.4%;
-    }
-    
-    /* .TypeofImplants .vector2{
+  }
+  .TypeofImplants .product-section-title {
+    font-size: 20px;
+  }
+  .TypeofImplants .vector1,
+  .TypeofImplants .vector2 {
+    width: 28%;
+    top: 0.4%;
+  }
+  /* .TypeofImplants .vector2{
         top:0.4%;
     } */
-    .type-product_left-block{
-        padding: 20px 0px 10px;
-    }
-    .Type-content h3{
-        font-size:20px
-    }
-    .Type-content p{
-        margin-bottom: 0px;
-    }
-}
-@media(max-width:576px){
-    .TypeofImplants .product-section-title{
-        font-size: 18px;
-        text-align: left;
-    }
-    .TypeofImplants .vector1{
-        display: none;
-    }
-    .TypeofImplants .vector2{
-        width:33%;
-        top: 0.35%;
-        right:10.5%;
-    }
-    .TypeofImplants .container{
-        --bs-gutter-x: 6rem;
-    }
-    .type-product_img{
-        height: 100%;
-    }
-    .Type-content h3{
-        font-size:18px
-    }
-    .implant-type-card { 
-        margin: 12px 24px 25px 24px;
-    }
-    
-    .typeslider .swiper-slide img {
-        width: 60%;
-        overflow: visible;
-    }
-    
-    .iv3 {
-        width: 48% !important;
-    }
-}
-.typeslider-wrapper{
-    display: flex;
-}
-.typeslider .slider {
-    margin: 0 auto;
-    max-width: 1200px;
+  .type-product_left-block {
+    padding: 20px 0px 10px;
   }
-  
-  .typeslider .slider {
-    height: 550px;
-    overflow: hidden;
+  .Type-content h3 {
+    font-size: 20px;
   }
-  
-  .typeslider .swiper-container {
-    padding-bottom: 20px;
-  }
-  
-  .typeslider .swiper-scrollbar {
-    background: #d6d6d6;
-  }
-  
-  .typeslider .swiper-container-horizontal > .swiper-scrollbar {
-    border-radius: 2px;
-    height: 30px;
-    width: 200px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .typeslider .swiper-scrollbar-drag {
-    background: #1b8976;
-    cursor: grab;
-    height: 8px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: -3px;
-    content: "=";
-    color: white  ;
-  }
-  
-  .typeslider .swiper-slide img {
-    width: 90%;
-    overflow: visible;
-  }
-  
-  .iv3 {
-    width: 70% !important;
-  }
-  
-  .implant-type-card {
-    border-radius: 12px;
-    height: 230px;
-    border: 2px solid #1b8976;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: start;
-    padding: 16px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: black;
-  }
-  
-  .implant-type-card-image {
-    height: 230px;
-    padding: 8px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-  }
-  
-  .implant-type-card-heading {
-    font-weight: 500;
-  }
-  
-  .implant-type-card-body {
-    font-size: 14px;
+  .Type-content p {
     margin-bottom: 0px;
   }
+}
+@media (max-width: 576px) {
+  .TypeofImplants .product-section-title {
+    font-size: 18px;
+    text-align: left;
+  }
+  .TypeofImplants .vector1 {
+    display: none;
+  }
+  .TypeofImplants .vector2 {
+    width: 33%;
+    top: 0.35%;
+    right: 10.5%;
+  }
+  .TypeofImplants .container {
+    --bs-gutter-x: 6rem;
+  }
+  .type-product_img {
+    height: 100%;
+  }
+  .Type-content h3 {
+    font-size: 18px;
+  }
+  .implant-type-card {
+    margin: 12px 24px 25px 24px;
+  }
+  .typeslider .swiper-slide img {
+    width: 60%;
+    overflow: visible;
+  }
+  .iv3 {
+    width: 48% !important;
+  }
+}
+
+/* ------------------- future section ---------------------------------  */
+.future-Implants {
+  padding: 20px 0px 50px;
+}
+.future-Implants .col-lg-6 {
+  align-self: flex-start;
+  height: 100%;
+}
+.future-title {
+  color: #1b8976;
+  position: absolute;
+  text-align: center;
+  left: 32.5%;
+  font-weight: 500;
+  background: linear-gradient(72deg, #1b8976 80%, #fff 35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+}
+.future-title.fixed{
+  position: fixed;
+  top:86px;
+  z-index: 999;
+  left:34.5%;
+}
+.future-Implants .splide {
+  visibility: visible;
+}
+#future-slider .future-content-wrapper {
+  margin-top: 45px !important;
+  padding-top: 50px !important;
+  /* padding-bottom: 50px !important; */
+  /* margin-bottom: 40px !important; */
+  /* width:41.67%; */
+}
+.future-content {
+  /* top:15%; */
+  /* top: 100px; */
+  position: relative;
+  width: 100%;
+  /* position: sticky; */
+  /* top: 0; */
+  /* height: 100vh; */
+}
+.future-content-num {
+  margin-bottom: 35px;
+}
+.future-content h3 {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 45px;
+}
+.future-content p {
+  letter-spacing: 1.4px;
+  line-height: 27px;
+}
+.future-content .future-p {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  #future-slider .future-content-wrapper {
+    margin-top: 30px !important;
+    padding-top: 30px !important;
+  }
+  .future-content-num {
+    margin-bottom: 25px;
+  }
+  .future-content .future-p {
+    margin-bottom: 20px;
+  }
+  .future-title {
+    /* background: linear-gradient(80deg, #1b8976 69%, #fff 45%);
+        background-clip: text; */
+    left: 29.35%;
+  }
+}
+
+
+.feature-section-imgwrapper.fixed {
+  position: fixed;
+  /* top: 0; */
+  top:86px;
+  width: 42.6%;
+  z-index: 10;
+}
+
+.feature-section-imgwrapper.normal {
+  position: relative;
+  width: 100%;
+}
+/* =============== why AD - Implant Prothesis? ============== */
+.why-Implant-section{
+  background-image: url('../img/country-map1.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width:100%;
+  height: 100%;
+  position:sticky;
+  top:70px !important;
+}
+.why-Implant-section.fixed{
+  position: sticky;
+  top: 0px;
+}
+.why-Implant-section:has(.pin-spacer){
+  padding: 0px !important;
+}
+.why-Implant-titleWrapper{
+  width:100%;
+  height: 50%;
+}
+.why-Implant-title{
+  font-weight: 500;
+  color: rgba(27, 137, 118, 1);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 65px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+  width:40%;
+  margin: 0px auto 0px;
+  /* margin: 0px auto 23%; */
+  transition: transform 0.1s linear;
+  will-change: transform;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  height: 100%;
+}
+.why-Implant-content{
+  background-color: #fff;
+  padding: 15px 20px;
+  width:34%;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top:100px;
+}
+.why-Implant-content._1{
+  top:30px;
+  opacity: 0;
+}
+.why-Implant-content h3{
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+}
+.why-Implant-content p{
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}
+.why-Implant-section .container {
+  position: relative;
+} 
+.unpinned .why-Implant-content._1{
+  position: relative;
+  top:0px;
+  z-index: 1;
+}
+.unpinned .why-Implant-content._2{
+  position: relative;
+  top:0px;
+  z-index: 2;
+}
+.unpinned .why-Implant-content._3{
+  position: relative;
+  top:0px;
+  z-index: 2;
+}
+.unpinned .why-Implant-section{
+  background-size: 100% auto;
+}
+@media(min-width:2500px) and (max-width:1400px){
+  .why-Implant-content{
+    width: 45%;
+  }
+}
+@media(max-width:1200px){
+  .why-Implant-title{
+    font-size: 38px;
+    width: 44%;
+  }
+  .why-Implant-content{
+    width: 40%;
+  }
+}
+@media(max-width:991px){
+  .why-Implant-title{
+    font-size: 35px;
+    width: 50%;
+  }
+  .why-Implant-content{
+    width: 54%;
+  }
+}
+@media(max-width:768px){
+  .why-Implant-title{
+    font-size: 32px;
+    width: 60%;
+  }
+  .why-Implant-content{
+    width: 68%;
+  }
+}
+@media(max-width:576px){
+  .why-Implant-title{
+    font-size: 28px;
+    line-height: 1.5;
+    width: 60%;
+  }
+  .why-Implant-section{
+    background-size: auto 100%;
+    background-position: center;
+  }
+  .why-Implant-content{
+    width: 65%;
+  }
+  .why-Implant-content h3{
+    font-size: 18px;
+  }
+  .why-Implant-content p{
+    font-size: 14px;
+  }
+}
+@media(max-width:480px){
+  .why-Implant-title{
+    font-size: 22px;
+    line-height: 1.5;
+    width: 58%;
+  }
+  .why-Implant-content{
+    width: 78%;
+    margin: 20px auto;
+  }
+}
+
+/* ----------------------------- what is Implant section -------------------- */
+.Implant-second-section{
+  padding: 50px 0px;
+  position: relative;
+  z-index: 3;
+  background: white;
+}
+.Implantfirst-headS{
+  color: #1b897a;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.Implantfirst-text{
+  color: black;
+  font-size: 16px;
+}
+.Implantfirstgroup{
+  width: 100%;
+  height: 100%;
+  padding: 0px 30px;
+  position: relative;
+}
+.Implant-text1 {
+  padding: 10px 0px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  /* left: -65%; */
+  z-index: 0;
+  width:50%;
+}
+@media(max-width:1200px){
+  .Implant-text1{
+    bottom: -5%;
+    left:-3%;
+  }
+}
+@media(max-width:991px){
+  .Implant-second-section{
+    margin: 40px auto;
+  }
+  .Implant-text1{
+    left:-5%;
+    bottom: 0%;
+    top:0%;
+    width:100%;
+    position: relative;
+  }
+}
+@media(max-width:576px){
+  .Implantfirst-headS{
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .Implantfirst-text{
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+  .Implantfirst-text p{
+    line-height: 1.75;
+  }
+  .Implantfirstgroup {
+    padding: 0px 30px;
+  }
+  .Implant-text1 {
+    position: absolute;
+    bottom: 0%;
+    top:0%;
+    left: 0%;
+    z-index: 0;
+    width:100%;
+    padding: 0px;
+  }
+  .Implantfirstgroup .groupImage{
+    padding-top: 32%;
+  }
+}
+
+/* reason to choose adImplant Prosthesis */
+.ImplantProsthesis .product-section-title{
+  width: 100%;
+  text-align: center;
+}
+.ImplantProsthesis .vector1{
+  position: absolute;
+  top: 1.7%;
+  left: 1%;
+  width:22%;
+}
+.ImplantProsthesis .vector2{
+  position: absolute;
+  top: 1.7%;
+  right: 1%;
+  width:22%;
+}
+.ImplantProsthesis-firstcontent{
+  top:60px;
+}
+/* .ImplantProsthesis-secondcontent{
+  transform: translateY(20%)
+} */
+.ImplantProsthesis-content{
+  background-image: url("../../static/img/bg-card.png");
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  /* background-color:rgba(27, 137, 118, 0.1); */
+  border-radius: 14px;
+  width:82%;
+  padding: 20px 20px;
+  margin: 20px auto 20px;
+  opacity: 0;
+}
+
+.ImplantProsthesis-content.active{
+  width:50%;
+}
+.ImplantProsthesis-content p{
+  color: #000;
+  line-height: 1.7;
+  margin-bottom: 0px;
+  font-weight: 400;
+  letter-spacing: 0.43px;
+  text-align: center;
+}
+/* Second animation */
+@keyframes moveToTop {
+  0%{
+    opacity: 0;
+    transform: translate3d(0px,300px,0px) scale(0);
+    transform-origin: 50% 100%;
+  }
+  50%{
+    opacity: 0.8;
+    transform: translate3d(0px,220px,0px) scale(1.1);
+    transform-origin: 50% 100%;
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(0px,0px,0px) scale(0.9);
+    transform-origin: 50% 100%;
+  }
+}
+  /* from { transform: translateY(-90%) !important; }
+  to   { transform: translateY(-20%) !important; } */
+/* #ImplantContent5{
+  display: none;
+ } */
+
+@media(max-width:1350px) {
+  .ImplantProsthesis-content{
+    margin: 10px auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding: 12px 20px;
+  }
+}
+@media(max-width:1200px){
+  .ImplantProsthesis-content{
+    margin: 0px auto;
+  }
+}
+@media(max-width:991px){
+
+  .ImplantImageWrapper,.ImplantProsthesis-content{
+    opacity: 1 !important;
+  }
+  .ImplantImageWrapper,.ImplantProsthesis-firstcontent{
+    display: none;
+  }
+  .ImplantProsthesis .container .row .d-block{
+    top:60px;
+  }
+  .ImplantImageWrapper-mobile{
+    background-image: url("../../static/ImplantProsthesis.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width:100%;
+    /* position: absolute; */
+  }
+  .ImplantProsthesis-content{
+    /* background-color: rgba(27, 137, 118, 0.1); */
+    /* background-color: rgba(27,137,118,0.4); */
+    border-radius: 10px;
+    width:55%;
+    z-index: 1;
+    position: relative;
+    margin: 20px auto 20px;
+    padding: 15px 20px;
+    
+  }
+  .ImplantProsthesis-content:last-child{
+    margin-bottom: 30%;
+  }
+  .ImplantProsthesis-content p,.ImplantProsthesis-content ul li{
+    /* color: #fff; */
+    text-align: left;
+  }
+}
+@media(max-width:768px){
+  .ImplantProsthesis-content{
+    width:65%;
+  }
+}
+@media(max-width:576px){
+  .ImplantProsthesis .container .row .d-block{
+    top:0px;
+  }
+  .ImplantImageWrapper-mobile{
+    background-size: 100% 90%;
+  }
+  .ImplantProsthesis-content {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    width: 85%;
+  }
+  
+  .ImplantProsthesis-content.active {
+    opacity: 1;
+    z-index: 3;
+    width:78%;
+  }
+  .ImplantProsthesis-content.prev,
+  .ImplantProsthesis-content.next {
+    opacity: 0.8 !important;
+  }
+  .ImplantProsthesis-content:last-child{
+    margin-bottom: 55%;
+  }
+  .ImplantProsthesis-content:has(.ImplantProsthesis-content.prev){
+    display: none !important;
+  }
+}
+
+
+/* #Implant2,#Implant3{
+  display: none;
+} */
+/* .ImplantProsthesis .product-section-title{
+  width: 100%;
+  text-align: center;
+}
+.ImplantProsthesis .vector1{
+  position: absolute;
+  top: 1.7%;
+  left: 1%;
+  width:22%;
+}
+.ImplantProsthesis .vector2{
+  position: absolute;
+  top: 1.7%;
+  right: 1%;
+  width:22%;
+}
+
+.ImplantProsthesis-content{
+  background-color:rgba(27, 137, 118, 0.1);
+  border-radius: 14px;
+  width:58%;
+  padding: 20px;
+  margin: 30px auto 80px;
+}
+.ImplantProsthesis-content.active{
+  width:50%;
+  transform: scale(1.5);
+}
+.ImplantProsthesis-content p{
+  color: #000;
+  line-height: 1.7;
+  margin-bottom: 0px;
+  font-weight: 400;
+  letter-spacing: 0.43px;
+  text-align: center;
+}
+.ImplantProsthesis-content:last-child{
+  margin-bottom: 0px;
+}
+.ImplantImageWrapper{
+  transform: scale(1.1);
+  opacity: 0;
+}
+.ImplantImageWrapper:hover{
+  animation:zoomIn 1s ease forwards;
+}
+
+@keyframes zoomIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+} */
