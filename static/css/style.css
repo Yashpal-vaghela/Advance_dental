@@ -747,6 +747,10 @@ h2.h2-m {
   font-size: 2rem;
 }
 
+h2.h2-ms {
+  font-size: 1.6rem;
+}
+
 h2.h2-xs {
   font-size: 3.25rem;
 }
