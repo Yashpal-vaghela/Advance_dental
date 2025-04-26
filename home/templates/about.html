@@ -410,40 +410,35 @@
 
 {% block js %}
   <script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Organization",
-	  "name": "Advance Dental Export",
-	  "alternateName": "Advance Dental Export",
-	  "url": "https://advancedentalexport.com/",
-	  "logo": "https://advancedentalexport.com/static/img/logo.png",
-	  "contactPoint": {
-		"@type": "ContactPoint",
-		"telephone": "+91 84 88 88 88 77",
-		"contactType": "customer service",
-		"areaServed": ["US","IN"],
-		"availableLanguage": "en"
-	  },
-	  "sameAs": [
-		"https://www.facebook.com/advance.dental.surat/",
-		"https://www.instagram.com/advance_dental_export/",
-		"https://www.linkedin.com/company/advance-dental-export/"
-	  ]
-	}
-	</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Us - Advance Dental Export",
+      "url": "https://advancedentalexport.com/about-us/",
+      "description": "Learn more about Advance Dental Export – one of the best dental labs in India, offering high-quality implants, crowns, bridges, cosmetic dentistry solutions, and dental prosthetics across India.",
+      "datePublished": "2011-03-27T09:00:00+00:00"
+    }
+  </script>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "About Advance Dental Export",
-  "url": "https://advancedentalexport.com/about-us/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "{search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedentalexport.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://advancedentalexport.com/about-us/"
+        }
+      ]
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
   <script>
