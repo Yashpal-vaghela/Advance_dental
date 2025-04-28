@@ -263,6 +263,94 @@
 {% endblock body %}
     
 {% block js %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {% spaceless %}{{data.title}}{% endspaceless %},
+      "description": {% spaceless %}{{data.description}}{% endspaceless %},
+      "url":{% spaceless %}{{data.canonical}}{% endspaceless %},
+      "image": 'https://advancedentalexport.com/{{data.image.url}}',
+      "author": {
+        "@type": "Organization",
+        "name": "Advance Dental Export",
+        "url": "https://advancedentalexport.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": {% spaceless %}{{data.canonical}}{% endspaceless %}
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Advance Dental Export",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://advancedentalexport.com/static/img/logo.png"
+        }
+      },
+      "datePublished": "{{ data.published|date:'c' }}T10:00:00+05:30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {% spaceless %}{{data.canonical}}{% endspaceless %}
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedentalexport.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://advancedentalexport.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {% spaceless %}{{data.title}}{% endspaceless %},
+          "item": {% spaceless %}{{data.canonical}}{% endspaceless %}
+        }
+      ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "url": {% spaceless %}{{data.canonical}}{% endspaceless %},
+      "headline": {% spaceless %}{{data.title}}{% endspaceless %},
+      "description": {% spaceless %}{{data.description}}{% endspaceless %},
+      "image": [
+        'https://advancedentalexport.com/{{data.image.url}}'
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Advance Dental Export",
+        "url": "https://advancedentalexport.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Advance Dental Export",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://advancedentalexport.com/static/img/logo.png"
+        }
+      },
+      "datePublished": "{{ data.published|date:'c' }}T10:00:00+05:30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {% spaceless %}{{data.canonical}}{% endspaceless %}
+      }
+    }
+</script>
 
 {% endblock js %}
     
