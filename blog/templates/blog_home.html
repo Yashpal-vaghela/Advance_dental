@@ -89,7 +89,7 @@
 													</div>	
 													<!-- Post Title -->
 													<div class=" blog-list-heading steelblue-color">
-														<a href="{% url 'blogd' ie.slug %}" >{{ie.title}}</a></div>
+														<a href="{% url 'home:blogd' ie.slug %}" >{{ie.title}}</a></div>
 													<!-- Post Text -->
 													<p class="blog-card-descripation">
 														{{ie.description}}
@@ -97,7 +97,7 @@
 
 													<div class="blog-footer">
 														<hr class="blog-divider">
-														<a href="{% url 'blogd' ie.slug %}" class="blog-read-more">Read More</a>
+														<a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
 														
 													</div>
 												</div>

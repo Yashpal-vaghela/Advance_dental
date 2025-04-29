@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /gallery/?page=*
-Disallow: /blog/?page=*
+allow: /
 Sitemap: https://advancedentalexport.com/sitemap.xml
