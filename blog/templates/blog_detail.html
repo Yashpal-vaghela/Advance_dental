@@ -267,9 +267,9 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": {% spaceless %}{{data.title}}{% endspaceless %},
-      "description": {% spaceless %}{{data.description}}{% endspaceless %},
-      "url":{% spaceless %}{{data.canonical}}{% endspaceless %},
+      "headline": "{% spaceless %}{{data.title}}{% endspaceless %}",
+      "description": "{% spaceless %}{{data.description}}{% endspaceless %}",
+      "url": "{% spaceless %}{{data.canonical}}{% endspaceless %}",
       "image": 'https://advancedentalexport.com/{{data.image.url}}',
       "author": {
         "@type": "Organization",
@@ -277,7 +277,7 @@
         "url": "https://advancedentalexport.com/",
         "logo": {
           "@type": "ImageObject",
-          "url": {% spaceless %}{{data.canonical}}{% endspaceless %}
+          "url": "{% spaceless %}{{data.canonical}}{% endspaceless %}"
         }
       },
       "publisher": {
@@ -291,7 +291,7 @@
       "datePublished": "{{ data.published|date:'c' }}T10:00:00+05:30",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": {% spaceless %}{{data.canonical}}{% endspaceless %}
+        "@id": "{% spaceless %}{{data.canonical}}{% endspaceless %}"
       }
     }
 </script>
@@ -315,8 +315,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": {% spaceless %}{{data.title}}{% endspaceless %},
-          "item": {% spaceless %}{{data.canonical}}{% endspaceless %}
+          "name": "{% spaceless %}{{data.title}}{% endspaceless %}",
+          "item": "{% spaceless %}{{data.canonical}}{% endspaceless %}"
         }
       ]
     }
@@ -325,9 +325,9 @@
     {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "url": {% spaceless %}{{data.canonical}}{% endspaceless %},
-      "headline": {% spaceless %}{{data.title}}{% endspaceless %},
-      "description": {% spaceless %}{{data.description}}{% endspaceless %},
+      "url": "{% spaceless %}{{data.canonical}}{% endspaceless %}",
+      "headline": "{% spaceless %}{{data.title}}{% endspaceless %}",
+      "description": "{% spaceless %}{{data.description}}{% endspaceless %}",
       "image": [
         'https://advancedentalexport.com/{{data.image.url}}'
       ],
@@ -347,7 +347,7 @@
       "datePublished": "{{ data.published|date:'c' }}T10:00:00+05:30",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": {% spaceless %}{{data.canonical}}{% endspaceless %}
+        "@id": "{% spaceless %}{{data.canonical}}{% endspaceless %}"
       }
     }
 </script>

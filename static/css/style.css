@@ -6928,7 +6928,6 @@ nav a#pull {
 
 .icon-box {
   background-color: rgba(29, 144, 124, 0.2);
-  ;
   display: inline-block;
   padding: 10px;
   border-radius: 10px;
@@ -6949,7 +6948,13 @@ nav a#pull {
   margin: 10px 0 5px;
   text-align: start;
 }
-
+.text-box div{
+  color: #1b8976;
+  font-size: 24px;
+  margin: 10px 0 5px;
+  text-align: start;
+  font-weight: 700;
+}
 .text-box p {
   font-size: 14px;
   color: #555;

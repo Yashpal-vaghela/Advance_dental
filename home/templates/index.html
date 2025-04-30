@@ -113,7 +113,7 @@
             <img src="{% static 'cases.png' %}" alt = "cases">
           </div>
           <div class="text-box">
-            <h4><span class="count-element">6</span>L+</h4>
+            <div><span class="count-element">6</span>L+</div>
             <p>Cases</p>
           </div>
         </div>
@@ -124,7 +124,7 @@
             <img src="{% static 'doctor.png' %}" alt = "doctor">
           </div>
           <div class="text-box">
-            <h4><span class="count-element">400</span>+</h4>
+            <div><span class="count-element">400</span>+</div>
             <p>Qualified Professional</p>
           </div>
         </div>
@@ -135,7 +135,7 @@
             <img src="{% static 'dentist-new.png' %}" alt = "cases">
           </div>
           <div class="text-box">
-            <h4><span class="count-element">3500</span>+</h4>
+            <div><span class="count-element">3500</span>+</div>
             <p>Trusted Dentists</p>
           </div>
         </div>
@@ -146,7 +146,7 @@
             <img src="{% static 'location-new.png' %}" alt = "cases">
           </div>
           <div class="text-box">
-            <h4><span class="count-element">500</span>+</h4>
+            <div><span class="count-element">500</span>+</div>
             <p>Local Partners</p>
           </div>
         </div>
@@ -299,7 +299,7 @@
               <div class="sbox-5-txt">
                 <h3 class="card-title"><a href="{% url 'blogd' 'nobelprocera' %}" class="title-link">NobelProcera Solution</a></h3>
                 <p class="card-desc">NobelProcera restorations are ideal for highly aesthetic and strong dental prosthetic restorations. Using CAD/CAM precision, they support everything from dental implants with abutments to bridges, providing premium quality in both materials and finish.</p>
-                <a href="nobelprocera" class="card-link">
+                <a href="{% url 'blogd' 'nobelprocera' %}" class="card-link">
                   Learn more
                   <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
                 </a>
