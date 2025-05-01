@@ -36,14 +36,13 @@
 								<nav aria-label="breadcrumb">
 								  	<ol class="breadcrumb">
 								    	<li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
-								    	<li class="breadcrumb-item active"><a href="#">Event Gallery</a></li>
-								    	
+								    	<li class="breadcrumb-item active"><a href="{% url 'home:exhibition' %}">Exhibition Gallery</a></li>
+								    	<li class="breadcrumb-item">{{cat.name}}</li>
 								  	</ol>
 								</nav>
 
 								<!-- Title -->
 								<h1 class="h4-sm steelblue-color"> {{cat.name}} </h1>
-
 							</div>
 						</div>
 					</div>  <!-- End row -->	
@@ -52,18 +51,10 @@
 
             <div id="gallery-3" class="gallery-section division">
 				<div class="container">
-
-
-                    
-
-
 					<!-- GALLERY IMAGES HOLDER -->
 					<div class="row">	
 						<div class="col-md-12 gallery-items-list">
 							<div class="masonry-wrap grid-loaded" style="position: relative; height: 1731.52px;">
-
-
-                                
                                 {% for ie in data %}
                                     	<!-- IMAGE #1 -->
                                         <div class="gallery-item dental" style="position: absolute; left: 0%; top: 0px;">
@@ -80,12 +71,7 @@
 
                                             </div>	
                                         </div>	<!-- END IMAGE #1 -->	
-
-
                                 {% endfor %}
-                                    
-								
-
 							</div>
 						</div>	
                         {% if data.has_other_pages %}
