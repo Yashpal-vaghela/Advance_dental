@@ -27,7 +27,8 @@ urlpatterns = [
     path('reset_password_sent', auth_views.PasswordResetDoneView.as_view(template_name='sent.html'), name="password_reset_done"),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='updatePW.html'), name="password_reset_confirm" ),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name="complete.html"), name= "password_reset_complete"),
-    path('<str:pk>/', bd, name='blogd'),
+    path('blog/<str:slug>/', bd, name='blogd'),
+    path('<str:slug>/', pd, name= 'productd' )
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns  += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

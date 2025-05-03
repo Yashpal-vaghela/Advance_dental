@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.urls import reverse
 
 
 
@@ -71,6 +72,10 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.h1
+    
+    def get_absolute_url(self):
+        return reverse('blogd', kwargs={'slug': self.slug})
+
 
 
 class Product(models.Model):
@@ -105,6 +110,10 @@ class Product(models.Model):
     def review(self):
         a =  Testimonials.objects.filter(product=self.id)[:3]
         return a
+    
+    def get_absolute_url(self):
+        return reverse('productd', kwargs={'slug': self.slug})
+    
 
 
 class SubProduct(models.Model):
@@ -215,7 +224,6 @@ class Events(models.Model):
     meta_description = models.TextField(blank=True, null=True)
     def __str__(self):
         return self.name
-   
 
 class EventsGallery(models.Model):   
     name = models.CharField(max_length = 156)
@@ -318,3 +326,4 @@ class WebStoryVideo(models.Model):
 
     def __str__(self):
         return f"Video for {self.web_story.title}"
+0

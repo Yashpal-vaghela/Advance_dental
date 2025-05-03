@@ -809,6 +809,41 @@
   });
 </script>
   <script src="{% static 'js/galleryanimation.js' %}"></script>
-{{pk.schema|safe}}
+{% comment %} {{pk.schema|safe}} {% endcomment %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Dental Prosthesis Laboratory",
+    "url": "https://advancedentalexport.com/",
+    "provider": {
+      "@type": "Organization",
+      "name": "Advance Dental Export",
+      "url": "https://advancedentalexport.com/"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "{{pk.name}}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{pk.name}}",
+        "addressCountry": "IN"
+      }
+    },
+    "description": "Explore Advance Dental Export - the best dental lab in {{pk.name}} offering high-quality dental prosthetics including crowns, bridges, implants, dentures and all types of artificial teeths. Trusted by top dentists of {{pk.name}} for quality, our lab is well-quipped with advanced digital dentistry technologies like CAD/CAM lab, 3D printing, and intraoral scanning.",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "{{pk.canonical}}",
+      "serviceLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{pk.name}}",
+          "addressCountry": "IN"
+        }
+      }
+    }
+  }
+  </script>
 
 {% endblock js %}

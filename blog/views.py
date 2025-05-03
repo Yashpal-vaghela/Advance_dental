@@ -40,9 +40,9 @@ def product_detail(request, pk):
     return render(request, 'product_detail.html', context)
 
 
-def blog_detail(request, pk):
+def blog_detail(request, slug):
     try:
-        data = Blog.objects.get(slug=pk)
+        data = Blog.objects.get(slug=slug)
         blog_id = data.id
         data1 = Blog.objects.all().order_by('id')[:2]
         data2 =  Category.objects.all().order_by('-id')
@@ -56,7 +56,7 @@ def blog_detail(request, pk):
         return render(request, 'blog_detail.html', context)
 
     except:
-        data = Product.objects.get(slug=pk)
+        data = Product.objects.get(slug= slug)
         data2 =  Category.objects.all().order_by('-id')
         data3 = Blog.objects.filter(main3=True).order_by('-id')
         data4 = Faqpage.objects.filter(product=data).order_by('-id')

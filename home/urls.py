@@ -1,8 +1,21 @@
 from django.urls import path
 from . import views
 from blog.views import blog_detail as bd
+from django.contrib import sitemaps
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemaps import *
 
 app_name = 'home'
+sitemaps_dict ={
+    'home': HomePageSitemap,
+    'static': StaticSitemap,
+    'normal': NormalPageSitemap,
+    'blog': BlogSitemap,
+    'product': ProductSitemap,  
+    'webstory' : WebStorySitemap,
+    'exhibition': ExhibitionSitemap,
+    'bestDental': BestDentalLabSitemap
+}
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -13,7 +26,7 @@ urlpatterns = [
     path('before-after/', views.beforeafter, name='beforeafter'),
     path('exhibition-gallery/', views.exhibition, name='exhibition'),
     path('career/', views.career, name='career'),
-    path('exhibition-gallery/<str:pk>/', views.eventgallery, name='eventgallery'),
+    path('exhibition-gallery/<str:slug>/', views.eventgallery, name='eventgallery'),
     path('categories/', views.categories, name='categories'),
     path('categories/<str:pk>/', views.categoriesd, name='categoriesd'),
     path('blogs/', views.blogs, name='blogs'),
@@ -25,7 +38,7 @@ urlpatterns = [
     path('checkup/', views.checkup, name='checkup'),
     path('guest-posting/', views.gp, name='gp'),
     path('faq', views.faq, name='faq'),
-    path('sitemap.xml/', views.sitemap, name='sitemap'),
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps_dict}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt/', views.robots, name='robot'),
     path('upload/', views.file_upload, name='upload'),
     path('testimonials/', views.testimonals, name='testimonals'),
@@ -44,7 +57,7 @@ urlpatterns = [
     # path('Events/', views.ade_events, name='Events'),
     # path('best-dental-lab/', views.bdl, name='bdl'),
     path('best-dental-lab-in-<str:pk>/', views.bdld, name='bdld'),
-    path('blog/<str:pk>/', bd, name='blogd'),
+    path('blog/<str:slug>/', bd, name='blogd'),
     path('quicks-links/', views.connect, name='connect'),
     path('zirconia-crown/',views.zirconiacrown, name='zirconiacrown'),
     path('ad-implant/',views.adImplants, name='adImplants')

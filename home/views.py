@@ -284,10 +284,10 @@ def singUser(request):
     return render(request, 'singup.html', context)
 
 
-def eventgallery(request, pk):
+def eventgallery(request, slug):
     
-    data1 =  EventsGallery.objects.filter(category__slug=pk).order_by('-id')
-    cat = Events.objects.get(slug=pk)
+    data1 =  EventsGallery.objects.filter(category__slug=slug).order_by('-id')
+    cat = Events.objects.get(slug=slug)
     page = request.GET.get('page', 1)
     paginator = Paginator(data1, 12)
     meta_description = cat.meta_description
@@ -297,7 +297,7 @@ def eventgallery(request, pk):
         data = paginator.page(1)
     except EmptyPage:
         data = paginator.page(paginator.num_pages)
-    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat, 'pk': pk, 'meta_description': meta_description })
+    response = render(request, 'eventgallery.html', {'data': data, 'cat': cat, 'slug': slug, 'meta_description': meta_description })
     # Add noindex for specific pages (e.g., ?page=2 and onward)
     try:
         page_num = int(page)  # Convert page to integer
