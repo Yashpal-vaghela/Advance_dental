@@ -25,13 +25,13 @@
           <ul class="sub-menu">
             {% for ie in product %}
               <li aria-haspopup="true">
-                <a href="{% url 'blogd' ie.slug %}">{{ ie.breadcrumb }}</a>
+                <a href="{% url 'productd' ie.slug %}">{{ ie.breadcrumb }}</a>
 
                 {% if ie.sub %}
                   <ul class="sub-menu">
                     {% for i in ie.sub %}
                       <li aria-haspopup="true">
-                        <a href="{% url 'blogd' ie.slug %}">{{ ie.breadcrumb }}</a>
+                        <a href="{% url 'productd' ie.slug %}">{{ ie.breadcrumb }}</a>
                       </li>
                     {% endfor %}
                   </ul>

@@ -25,8 +25,8 @@ def blog_home(request):
     return render(request, 'blog_home.html', context)
 
 # Create your views here.
-def product_detail(request, pk):
-    data = Product.objects.get(slug=pk)
+def product_detail(request, slug):
+    data = Product.objects.get(slug=slug)
     data2 =  SubProduct.objects.filter(product=data).order_by('-id')
     data3 = Blog.objects.filter(main3=True).order_by('-id')
     data4 = Faqpage.objects.filter(product=data).order_by('-id')
@@ -54,6 +54,8 @@ def blog_detail(request, slug):
         'data3':data3,
         }
         return render(request, 'blog_detail.html', context)
+    # except:
+    #     pass
 
     except:
         data = Product.objects.get(slug= slug)
