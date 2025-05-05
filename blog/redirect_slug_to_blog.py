@@ -1,5 +1,5 @@
 from django.http import HttpResponsePermanentRedirect
-from blog.models import Blog
+from blog.models import Blog, Product
 
 class SlugToBlogRedirectMiddleware:
     def __init__(self, get_response):
@@ -20,3 +20,18 @@ class SlugToBlogRedirectMiddleware:
                 pass  # No match, proceed normally
 
         return self.get_response(request)
+
+class ProductToSlugRedirect:
+    def __init__(self, get_response):
+        self.get_response = get_response
+    def __call__(self, request):
+        path = request.path.strip('/')
+
+        if path.startswith('blog/'):
+            slug = path[5:]
+            try:
+                product = Product.objects.get(slug=slug)
+                return HttpResponsePermanentRedirect(f'/{product.slug}/')
+            except Product.DoesNotExist:
+                pass
+        return self.get_response(request)        
