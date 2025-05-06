@@ -1,653 +1,662 @@
-{% extends 'base.html' %} {% load static %} {% block css %}
-<link href="{% static 'css/adImplant.css' %}" rel="stylesheet" />
+{% extends 'base.html' %} 
+{% load static %} {% block css %}
+{% comment %} <link href="{% static 'css/adImplant.css' %}" rel="stylesheet" /> {% endcomment %}
+<link href="{% static 'css/adImplant1.css' %}" rel="stylesheet" />
+{% comment %} <link href="{% static 'css/adImplant2.css '%}" rel="stylesheet" /> {% endcomment %}
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link href="{% static 'css/zir.css' %}" rel="stylesheet" />
-<link
+{% comment %} <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-/>
+/>  {% endcomment %}
 <link
   href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
   rel="stylesheet"
 />
 <!-- Splide JS -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> {% endcomment %}
 {% endblock %} {% block body %}
-<!-- what is zirconia -->
-<section class="Implant-second-section">
-  <div class="container position-relative">
-    <div class="row g-4 justify-content-center">
-      <div class="col-10 col-lg-6 col-xl-6 order-2 order-lg-1">
-        <h1 class="Implantfirst-headS">What is an ADimplant prosthesis ?</h1>
-        <div class="Implantfirst-text zirfirst-text">
-          <p>
-            These finely crafted prosthetic teeth are custom-made to match the
-            color, shape, and size of your natural teeth, ensuring a seamless
-            and natural-looking smile. They are securely attached to dental
-            implants, which act as artificial tooth roots, providing a strong
-            and stable foundation for daily functions like chewing and speaking.
-            The result is a restoration that not only looks natural but also
-            feels and performs like real teeth.
-          </p>
-          <p>
-            ADimplant prostheses are a popular and highly effective solution for
-            replacing missing teeth. They help restore functionality, improve
-            aesthetics, and promote better oral health by preventing bone loss
-            and maintaining proper alignment of surrounding teeth. Whether
-            you're missing a single tooth or multiple teeth, implant-supported
-            prosthetics offer a durable, long-term solution that enhances both
-            your confidence and quality of life.
-          </p>
+  <div class="page1">
+      <!-- what is zirconia -->
+      <section class="section Implant-second-section overflow-hidden">
+        <div class="container position-relative">
+          <div class="row g-4 justify-content-center">
+            <div class="col-10 col-sm-12 col-lg-6 col-xl-6 order-2 order-lg-1">
+              <h1 class="Implantfirst-headS">What is an ADimplant prosthesis ?</h1>
+              <div class="Implantfirst-text zirfirst-text">
+                <p>
+                  These finely crafted prosthetic teeth are custom-made to match the
+                  color, shape, and size of your natural teeth, ensuring a seamless
+                  and natural-looking smile. They are securely attached to dental
+                  implants, which act as artificial tooth roots, providing a strong
+                  and stable foundation for daily functions like chewing and speaking.
+                  The result is a restoration that not only looks natural but also
+                  feels and performs like real teeth.
+                </p>
+                <p>
+                  ADimplant prostheses are a popular and highly effective solution for
+                  replacing missing teeth. They help restore functionality, improve
+                  aesthetics, and promote better oral health by preventing bone loss
+                  and maintaining proper alignment of surrounding teeth. Whether
+                  you're missing a single tooth or multiple teeth, implant-supported
+                  prosthetics offer a durable, long-term solution that enhances both
+                  your confidence and quality of life.
+                </p>
+              </div>
+              <img
+                src="{% static 'Implant-txt.svg' %}"
+                class="d-lg-block d-none Implant-text1"
+                loading="lazy"
+                alt="Smile Step Group 1"
+              />
+            </div>
+            <div class="col-10 col-sm-12 col-lg-6 col-xl-5 order-1 order-lg-2">
+              <div class="Implantfirstgroup">
+                <img
+                  src="{% static 'Implant-txt.svg' %}"
+                  class="d-block d-lg-none Implant-text1"
+                  loading="lazy"
+                  alt="Smile Step Group 1"
+                />
+                <img
+                  src="{% static 'ImplantfirstGroup1.webp' %}"
+                  class="position-relative groupImage"
+                  loading="lazy"
+                  alt="Smile Step Group 1"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <img
-          src="{% static 'Implant-txt.svg' %}"
-          class="d-lg-block d-none Implant-text1"
-          loading="lazy"
-          alt="Smile Step Group 1"
-        />
-      </div>
-      <div class="col-10 col-lg-6 col-xl-5 order-1 order-lg-2">
-        <div class="Implantfirstgroup">
-          <img
-            src="{% static 'Implant-txt.svg' %}"
-            class="d-block d-lg-none Implant-text1"
-            loading="lazy"
-            alt="Smile Step Group 1"
-          />
-          <img
-            src="{% static 'ImplantfirstGroup.png' %}"
-            class="position-relative groupImage"
-            loading="lazy"
-            alt="Smile Step Group 1"
-          />
+      </section> 
+      <!-- Reason to choose ADimplant prosthesis -->
+      <section class="section ImplantProsthesis" id="ImplantProsthesis" data-scroll-section >
+        <div class="container position-relative">
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
+          <h2 class="product-section-title">
+            Reasons To Choose Adimplant Prosthesis
+          </h2>
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
+          <div class="row my-sm-3 my-md-4 my-lg-5 my-0 justify-content-center position-relative">
+            <div class="position-sticky d-block d-lg-none">
+              <div class="ImplantImageWrapper-mobile"></div>
+            </div>
+            <div class="col-lg-6 col-12 px-md-0 position-sticky ImplantProsthesis-firstcontent">
+              <figure class="ImplantImageWrapper" id="ImplantImg1"  data-scroll  data-scroll-speed="2"  style="opacity: 0" >
+                <img src="{% static 'ImplantProsthesis.png' %}" class="img-fluid" />
+              </figure>
+            </div>
+            <div class="col-lg-6 col-12 px-md-0 ImplantProsthesis-secondcontent">
+              <div class="ImplantProsthesis-content" id="ImplantContent1" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="500" >
+                <p>
+                  To Date, ADE can proudly say that it has shipped over 2 million AD
+                  implant prosthesis.
+                </p>
+              </div>
+              <div class="ImplantProsthesis-content" id="ImplantContent2" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="1000">
+                <p>
+                  ADimplant prosthesis are made from FDA approved materials which
+                  contributes to its exceptional quality.
+                </p>
+              </div>
+              <div class="ImplantProsthesis-content" id="ImplantContent3" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="1500">
+                <p>
+                  Great quality AD implant prosthesis are produced by our team of
+                  highly qualified professionals, who collectively have over 15 years of experience.
+                </p>
+              </div>
+              <div class="ImplantProsthesis-content" id="ImplantContent4" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="2000">
+                <p>
+                  Advance dental export lab is MD registered lab which ensures:
+                  <ul>
+                    <li>quality and safety assurance</li>
+                    <li>compliance and regulations</li>
+                    <li>credibility and trust.</li>
+                    <li>patient safety</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="ImplantProsthesis-content" id="ImplantContent5" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="2500">
+                <p>
+                  ADimplant prosthesis are made up from CE certified materials which means it has global recognition,trust and assurance.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% comment %} Reason to choose ADimplant prosthesis {% endcomment %}
-<section class="section ImplantProsthesis" id="ImplantProsthesis" data-scroll-section >
-  <div class="container position-relative">
-    <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
-    <h2 class="product-section-title">
-      Reasons To Choose Adimplant Prosthesis
-    </h2>
-    <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
-    <div class="row my-5 justify-content-center position-relative">
-      <div class="position-sticky d-block d-lg-none">
-        <div class="ImplantImageWrapper-mobile"></div>
-      </div>
-      <div class="col-lg-6 col-12 px-md-0 position-sticky ImplantProsthesis-firstcontent">
-        <figure class="ImplantImageWrapper" id="ImplantImg1"  data-scroll  data-scroll-speed="2"  style="opacity: 0" >
-          <img src="{% static 'ImplantProsthesis.png' %}" class="img-fluid" />
-        </figure>
-      </div>
-      <div class="col-lg-6 col-12 px-md-0 ImplantProsthesis-secondcontent">
-        <div class="ImplantProsthesis-content" id="ImplantContent1" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="500" >
-          <p>
-            To Date, ADE can proudly say that it has shipped over 2 million AD
-            implant prosthesis.
-          </p>
-        </div>
-        <div class="ImplantProsthesis-content" id="ImplantContent2" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="1000">
-         <p>
-            ADimplant prosthesis are made from FDA approved materials which
-            contributes to its exceptional quality.
-          </p>
-        </div>
-        <div class="ImplantProsthesis-content" id="ImplantContent3" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="1500">
-          <p>
-            Great quality AD implant prosthesis are produced by our team of
-            highly qualified professionals, who collectively have over 15 years of experience.
-          </p>
-        </div>
-        <div class="ImplantProsthesis-content" id="ImplantContent4" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="2000">
-          <p>
-            Advance dental export lab is MD registered lab which ensures:
-            <ul>
-              <li>quality and safety assurance</li>
-              <li>compliance and regulations</li>
-              <li>credibility and trust.</li>
-              <li>patient safety</li>
-            </ul>
-          </p>
-        </div>
-        <div class="ImplantProsthesis-content" id="ImplantContent5" data-scroll data-scroll-speed="2" style="opacity: 0" data-aos-duration="2500">
-          <p>
-            ADimplant prosthesis are made up from CE certified materials which means it has global recognition,trust and assurance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section TypeofImplants" id="TypeofImplants"  >
-  <div class="container position-relative">
-    <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
-    <h2 class="product-section-title mb-0">Types of Ad Implants</h2>
-    <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
-    <div
-      class="TypeWrapper-content d-block mt-4 mt-sm-3 mt-md-4 mt-lg-4 mt-xl-5"
-    >
-      <div
-        class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
-      >
-        <div class="Type-content type-product_left-block d-block">
-          <h3>1. Single Tooth implant Crown:</h3>
-          <p>
-            Removable dentures can be secured to implants using attachments,
-            offering more stability than traditional dentures. The choice of
-            implant prosthesis depends on missing teeth, oral health, bone
-            density, and preferences, requiring professional consultation for
-            the best option.
-          </p>
-        </div>
-        <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
-          {% comment %}
-          <img
-            src="https://cdn.prod.website-files.com/6749d69aa1b17e3a6ae14c38/67d05b2d9051fe301abb8e36_GENDO_JARDINERAS_MERAKI_F1A8.webp"
-            style="width: 50%"
-            class="type-product_img img-fluid py-2"
-          />
-          {% endcomment %}
-          <img
-            src="{% static 'img/typeI-014.png'%}"
-            class="type-product_img img-fluid pb-4 py-md-2"
-            style="width: 50%"
-          />
-        </div>
-      </div>
-      <div
-        class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
-      >
-        <div class="Type-content type-product_left-block d-block">
-          <h3>2. Implant-Supported Bridge:</h3>
-          <p>
-            When multiple adjacent teeth are missing, an implant-supported
-            bridge can be used. Dental implants are placed on either side of the
-            gap,and a bridge consisting of multiple connected crowns is attached
-            to the implants,effectively filling the space.
-          </p>
-        </div>
-        <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
-          <img
-            src="{% static 'img/typeI-021.png' %}"
-            class="type-product_img img-fluid pb-4 py-md-2"
-            style="width: 50%"
-          />
-        </div>
-        {% comment %}
-        <img
-          src="{% static 'img/typeI-02.png' %}"
-          class="img-fluid reveal-img py-1"
-        />
-        {% endcomment %}
-      </div>
-      <div
-        class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
-      >
-        <div class="Type-content type-product_left-block d-block">
-          <h3>3. All-on-4 or All-on-6 ADimplant prosthesis:</h3>
-          <p>
-            Implant-supported prostheses like All-on-4 or All-on-6 use four or
-            six implants to support a full arch of teeth. They reduce cost and
-            complexity, and come in types like hybrid dentures, metal-ceramic,
-            Emax, or zirconia.
-          </p>
-        </div>
-        <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
-          <img
-            src="{% static 'img/typeI-031.png'%}"
-            class="type-product_img img-fluid pb-4 py-md-2"
-            style="width: 50%"
-          />
-        </div>
-      </div>
-      <div
-        class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
-      >
-        <div class="Type-content type-product_left-block d-block">
-          <h3>4. Implant-Supported Overdentures:</h3>
-          <p>
-            Removable dentures can be secured to implants using attachments,
-            offering more stability than traditional dentures. The choice of
-            implant prosthesis depends on missing teeth, oral health, bone
-            density, and preferences, requiring professional consultation for
-            the best option.
-          </p>
-        </div>
-        <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
-          <img
-            src="{% static 'img/typeI-041.png'%}"
-            class="type-product_img img-fluid pb-4 py-md-2"
-            style="width: 50%"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section typeslider container" id="typeslider">
-  <div class="typeslider-wrapper">
-    <h2 class="product-section-title mb-0">Why To Choose Ad Implant</h2>
-    <img src="{% static 'img/line.svg' %}" class="img-fluid vector2 mx-5" />
-  </div>
-  <div class="slider">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
+      </section>  
+      <!-- why Implant section -->
+      <section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
+          <div class="container">
+              <div class="why-Implant-titleWrapper">
+                <h2 class="why-Implant-title" id="text1" data-scroll data-scroll-speed="0.5">why AD Implant Prothesis ?</h2>
+              </div>
+              <div class="why-Implant-content _1" id="Implant1">
+                <h3>Enhanced Aesthetic and Functional Outcomes</h3>
+                <p>
+                  AD Implant Prosthetics offer superior aesthetics and function.
+                  High-quality materials like zirconia mimic natural teeth, improving
+                  appearance. Custom fit ensures optimal comfort and performance, helping
+                  you eat, speak, and smile confidently.
+                </p>
+              </div>
+              <div class="why-Implant-content _2" id="Implant2">
+                <h3>Long-Term Durability and Minimal Maintenance</h3>
+                <p>
+                  Adimplants are designed to last longer and resist wear, reducing the
+                  need for future repairs or replacements. Advanced materials also resist
+                  stains and decay, making maintenance easier and more cost-effective in
+                  the long run.
+                </p>
+              </div>
+              <div class="why-Implant-content _3" id="Implant3">
+                <h3>Minimally Invasive with Personalized Treatment</h3>
+                <p>
+                  Using advanced techniques like 3D scanning, AD Implant Prosthetics are
+                  minimally invasive, reducing recovery time and discomfort. Each
+                  treatment is highly personalized, ensuring a precise, comfortable fit
+                  for better outcomes and quicker recovery.
+                </p>
+              </div>
+          </div>
+      </section>
+      <!-- Types of AD Implants -->
+      <section class="section TypeofImplants overflow-hidden" id="TypeofImplants">
+        <div class="container position-relative">
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
+          <h2 class="product-section-title mb-0">Types of Ad Implants</h2>
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
           <div
-            class="implant-type-card"
-            id="card-1"
-            style="background-color: #1b8976; color: white"
+            class="TypeWrapper-content d-block mt-3 mt-sm-3 mt-md-4 mt-lg-4 mt-xl-5"
           >
-            <div class="implant-type-card-heading">1. Biocompatibility</div>
-            <p class="implant-type-card-body">
-              AD-implant materials are biocompatible, meaning they don’t cause
-              adverse reactions in the body. Common materials include titanium,
-              zirconia, and ceramic.
-            </p>
-          </div>
-          <div class="implant-type-card" id="card-6">
-            <div class="implant-type-card-heading">6. Minimal Maintenance</div>
-            <p class="implant-type-card-body">
-              ADimplant prostheses require minimal maintenance, avoiding
-              staining, chipping, or deterioration under normal use.
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="implant-type-card" id="card-2">
-            <div class="implant-type-card-heading">2. Durability</div>
-            <p class="implant-type-card-body">
-              AD-implant prostheses are made from durable materials to withstand
-              chewing and biting forces over time, ensuring long-lasting
-              performance.
-            </p>
-          </div>
-          <div class="implant-type-card-image">
-            <img
-              src="{% static 'implant-type-vector1.svg' %}"
-              alt="vector1"
-              class="w-90"
-            />
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="implant-type-card-image">
-            <img
-              src="{% static 'implant-type-vector2.svg' %}"
-              alt="vector1"
-              class="w-90"
-            />
-          </div>
-          <div class="implant-type-card" id="card-7">
-            <div class="implant-type-card-heading">
-              7. Gum Tissue Compatibility
-            </div>
-            <p class="implant-type-card-body">
-              AD-implant prostheses are designed to fit naturally with gum
-              tissues, promoting healthy gums and a natural smile.
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="implant-type-card" id="card-3">
-            <div class="implant-type-card-heading">3. Natural Appearance</div>
-            <p class="implant-type-card-body">
-              AD-implant prostheses closely resemble natural teeth in color,
-              shape, and texture, enhancing aesthetics and confidence.
-            </p>
-          </div>
-          <div class="implant-type-card" id="card-8">
-            <div class="implant-type-card-heading">8. Proper Occlusion</div>
-            <p class="implant-type-card-body">
-              AD-implant prostheses ensure proper bite alignment, preventing jaw
-              pain and uneven wear on teeth.
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="implant-type-card" id="card-4">
-            <div class="implant-type-card-heading">4. Stability and Fit</div>
-            <p class="implant-type-card-body">
-              ADimplant prostheses fit securely, ensuring comfort and preventing
-              slippage during speaking and eating for overall satisfaction.
-            </p>
-          </div>
-          <div class="implant-type-card-image">
-            <img
-              src="{% static 'implant-type-vector3.svg' %}"
-              alt="vector3"
-              class="iv3 w-70"
-            />
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="implant-type-card-image">
-            <img
-              src="{% static 'implant-type-vector4.svg' %}"
-              alt="vector1"
-              class="w-90"
-            />
-          </div>
-          <div class="implant-type-card" id="card-9">
-            <div class="implant-type-card-heading">
-              9. Functional Efficiency
-            </div>
-            <p class="implant-type-card-body">
-              AD-implant prostheses restore efficient chewing and speaking,
-              allowing comfort with a variety of foods and clear speech.
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="implant-type-card" id="card-5">
-            <div class="implant-type-card-heading">5. Ease of Cleaning</div>
-            <p class="implant-type-card-body">
-              AD-implant prostheses are easy to clean, helping maintain oral
-              hygiene and prevent plaque buildup and gum issues.
-            </p>
-          </div>
-          <div class="implant-type-card" id="card-10">
-            <div class="implant-type-card-heading">10. Customization</div>
-            <p class="implant-type-card-body">
-              Each AD-implant prosthesis are custom-made to fit the patient's
-              unique oral anatomy, ensurinf a pieacise and coomfortable fit.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-scrollbar"></div>
-    </div>
-  </div>
-</section>
-<section class="section future-Implants" id="future-section">
-  <div class="container position-relative">
-    <h2 class="product-section-title future-title">future of AD implant</h2>
-    <div class="row justify-content-between">
-      <div class="col-lg-6 col-xl-5 position-relative">
-        <div
-          id="future-slider"
-          class="future--slider-section splide"
-          aria-label="Splide Slider Example"
-        >
-          <div class="splide__track">
-            <div class="future-content-wrapper splide__list">
-              <div class="future-content splide__slide">
-                <h3 class="future-content-num">
-                  Innovative Materials and Technologies
-                </h3>
-                <p class="future-p">
-                  At Advance Dental Export Lab, we focus on innovations,
-                  including 3D-printed laser-sintered metals for better
-                  precision in prosthetics.
-                </p>
-                <p class="sec_copy_para">
-                  We also enhance surface coatings of prosthetic parts for
-                  improved integration, ensuring more durable solutions.
+            <div
+              class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
+            >
+              <div class="Type-content type-product_left-block d-block">
+                <h3>1. Single Tooth implant Crown:</h3>
+                <p>
+                  Removable dentures can be secured to implants using attachments,
+                  offering more stability than traditional dentures. The choice of
+                  implant prosthesis depends on missing teeth, oral health, bone
+                  density, and preferences, requiring professional consultation for
+                  the best option.
                 </p>
               </div>
-              <div class="future-content splide__slide">
-                <h3 class="future-content-num">
-                  Advancements in Digital Dentistry
-                </h3>
-                <p class="future-p">
-                  Technologies like computer-aided design (CAD) are central to
-                  our work, enabling us to create highly customized prosthetic
-                  solutions tailored to individual needs.
-                </p>
-                <p class="sec_copy_para">
-                  Digital impressions ensure improved 3D accuracy, while CAD/CAM
-                  technology allows precise customization, ensuring each
-                  prosthesis is a perfect fit for the patient.
+              <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                <img
+                  src="{% static 'img/typeI-014.png'%}"
+                  class="type-product_img img-fluid pb-3 pb-sm-4 py-md-2"
+                  id="type-product_img1"
+                  style="width: 50%"
+                />
+              </div>
+            </div>
+            <div
+              class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
+            >
+              <div class="Type-content type-product_left-block d-block">
+                <h3>2. Implant-Supported Bridge:</h3>
+                <p>
+                  When multiple adjacent teeth are missing, an implant-supported
+                  bridge can be used. Dental implants are placed on either side of the
+                  gap,and a bridge consisting of multiple connected crowns is attached
+                  to the implants,effectively filling the space.
                 </p>
               </div>
-              <div class="future-content splide__slide">
-                <h3 class="future-content-num">
-                  AI, Robotics, and Biomimetic Materials in Implant Prosthetics
-                </h3>
-                <p class="future-p">
-                  Developments in robotics and artificial intelligence have
-                  improved accuracy and functional outcomes in implant
-                  prosthetic solutions, ensuring better patient results.
+              <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                <img
+                  src="{% static 'img/typeI-021.png' %}"
+                  class="type-product_img img-fluid pb-3 pb-sm-4 py-md-2"
+                  style="width: 50%"
+                  id="type-product_img2"
+                />
+              </div>
+            </div>
+            <div
+              class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
+            >
+              <div class="Type-content type-product_left-block d-block">
+                <h3>3. All-on-4 or All-on-6 ADimplant prosthesis:</h3>
+                <p>
+                  Implant-supported prostheses like All-on-4 or All-on-6 use four or
+                  six implants to support a full arch of teeth. They reduce cost and
+                  complexity, and come in types like hybrid dentures, metal-ceramic,
+                  Emax, or zirconia.
                 </p>
-                <p class="sec_copy_para">
-                  The introduction of biomimetic materials, which mimic natural
-                  teeth, has revolutionized prosthetic design, making treatments
-                  more efficient and tailored to individual needs
+              </div>
+              <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                <img
+                  src="{% static 'img/typeI-031.png'%}"
+                  class="type-product_img img-fluid pb-3 pb-sm-4 py-md-2"
+                  style="width: 50%"
+                  id="type-product_img3"
+                />
+              </div>
+            </div>
+            <div
+              class="TypeWrapper d-flex d-md-grid justify-content-start gap-sm-0 gap-md-3 gap-lg-5 align-items-md-center"
+            >
+              <div class="Type-content type-product_left-block d-block">
+                <h3>4. Implant-Supported Overdentures:</h3>
+                <p>
+                  Removable dentures can be secured to implants using attachments,
+                  offering more stability than traditional dentures. The choice of
+                  implant prosthesis depends on missing teeth, oral health, bone
+                  density, and preferences, requiring professional consultation for
+                  the best option.
                 </p>
+              </div>
+              <div class="Type-img-wrapper type-product_right-block py-0 py-md-2">
+                <img
+                  src="{% static 'img/typeI-041.png'%}"
+                  class="type-product_img img-fluid pb-3 pb-sm-4 py-md-2"
+                  style="width: 50%"
+                  id="type-product_img4"
+                />
               </div>
             </div>
           </div>
         </div>
-        {% comment %}
-        <div class="future-content-wrapper">
-          <div class="future-content">
-            <h3 class="mb-5">Innovative Materials and Technologies</h3>
-            <p class="future-p">
-              At Advance Dental Export Lab, we focus on innovations, including
-              3D-printed laser-sintered metals for better precision in
-              prosthetics.
-            </p>
-            <p>
-              We also enhance surface coatings of prosthetic parts for improved
-              integration, ensuring more durable solutions.
-            </p>
-          </div>
-          <div class="future-content">
-            <h3 class="mb-5">Advancements in Digital Dentistry</h3>
-            <p class="future-p">
-              Technologies like computer-aided design (CAD) are central to our
-              work, enabling us to create highly customized prosthetic solutions
-              tailored to individual needs.
-            </p>
-            <p>
-              Digital impressions ensure improved 3D accuracy, while CAD/CAM
-              technology allows precise customization, ensuring each prosthesis
-              is a perfect fit for the patient.
-            </p>
-          </div>
-          <div class="future-content">
-            <h3 class="mb-5">
-              AI, Robotics, and Biomimetic Materials in Implant Prosthetics
-            </h3>
-            <p class="future-p">
-              Developments in robotics and artificial intelligence have improved
-              accuracy and functional outcomes in implant prosthetic solutions,
-              ensuring better patient results.
-            </p>
-            <p>
-              The introduction of biomimetic materials, which mimic natural
-              teeth, has revolutionized prosthetic design, making treatments
-              more efficient and tailored to individual needs
-            </p>
-          </div>
+      </section>
+      <!-- Type slider section -->
+      <section class="section typeslider container overflow-hidden" id="typeslider">
+        <div class="container">
+        <div class="typeslider-wrapper d-flex">
+          <h2 class="product-section-title mb-0">Why To Choose Ad Implant</h2>
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector2 mx-sm-3 ml-sm-3 mx-lg-5 mx-2" />
         </div>
-        {% endcomment %}
-      </div>
-      <div class="col-lg-6 position-relative">
-        <div class="feature-section-imgwrapper">
-          <img
-            src="{% static 'img/feature-section.webp' %}"
-            class="img-fluid feature-section-img"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
-    <div class="container h-100">
-        <div class="why-Implant-titleWrapper">
-          <h2 class="why-Implant-title" id="text1" data-scroll data-scroll-speed="0.5">why AD Implant Prothesis ?</h2>
-        </div>
-        <div class="why-Implant-content _1" id="Implant1">
-          <h3>Enhanced Aesthetic and Functional Outcomes</h3>
-          <p>
-            AD Implant Prosthetics offer superior aesthetics and function.
-            High-quality materials like zirconia mimic natural teeth, improving
-            appearance. Custom fit ensures optimal comfort and performance, helping
-            you eat, speak, and smile confidently.
-          </p>
-        </div>
-        <div class="why-Implant-content _2" id="Implant2">
-          <h3>Long-Term Durability and Minimal Maintenance</h3>
-          <p>
-            Adimplants are designed to last longer and resist wear, reducing the
-            need for future repairs or replacements. Advanced materials also resist
-            stains and decay, making maintenance easier and more cost-effective in
-            the long run.
-          </p>
-        </div>
-        <div class="why-Implant-content _3" id="Implant3">
-          <h3>Minimally Invasive with Personalized Treatment</h3>
-          <p>
-            Using advanced techniques like 3D scanning, AD Implant Prosthetics are
-            minimally invasive, reducing recovery time and discomfort. Each
-            treatment is highly personalized, ensuring a precise, comfortable fit
-            for better outcomes and quicker recovery.
-          </p>
-        </div>
-    </div>
-</section>
-{% comment %}
-<section class="section why-Implant-section" id="why-Implant-section">
-  <div class="container position-relative">
-    <div class="why-Implant-titleWrapper">
-      <h2 class="why-Implant-title">why AD Implant Prothesis ?</h2>
-    </div>
-    <div class="why-Implant-content _1">
-      <h3>Enhanced Aesthetic and Functional Outcomes</h3>
-      <p>
-        AD Implant Prosthetics offer superior aesthetics and function.
-        High-quality materials like zirconia mimic natural teeth, improving
-        appearance. Custom fit ensures optimal comfort and performance, helping
-        you eat, speak, and smile confidently.
-      </p>
-    </div>
-    <div
-      class="why-Implant-content _2"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <h3>Long-Term Durability and Minimal Maintenance</h3>
-      <p>
-        Adimplants are designed to last longer and resist wear, reducing the
-        need for future repairs or replacements. Advanced materials also resist
-        stains and decay, making maintenance easier and more cost-effective in
-        the long run.
-      </p>
-    </div>
-    <div
-      class="why-Implant-content _3"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <h3>Minimally Invasive with Personalized Treatment</h3>
-      <p>
-        Using advanced techniques like 3D scanning, AD Implant Prosthetics are
-        minimally invasive, reducing recovery time and discomfort. Each
-        treatment is highly personalized, ensuring a precise, comfortable fit
-        for better outcomes and quicker recovery.
-      </p>
-    </div>
-  </div>
-</section>
-{% endcomment %}
+        <div class="slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="implant-type-card"
+                  id="card-1"
+                  style="background-color: #1b8976; color: white"
+                >
+                  <div class="implant-type-card-heading">1. Biocompatibility</div>
+                  <p class="implant-type-card-body">
+                    AD-implant materials are biocompatible, meaning they don’t cause
+                    adverse reactions in the body. Common materials include titanium,
+                    zirconia, and ceramic.
+                  </p>
+                </div>
+                <div class="implant-type-card" id="card-6">
+                  <div class="implant-type-card-heading">6. Minimal Maintenance</div>
+                  <p class="implant-type-card-body">
+                    ADimplant prostheses require minimal maintenance, avoiding
+                    staining, chipping, or deterioration under normal use.
+                  </p>
+                </div>
+              </div>
 
+              <div class="swiper-slide">
+                <div class="implant-type-card" id="card-2">
+                  <div class="implant-type-card-heading">2. Durability</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses are made from durable materials to withstand
+                    chewing and biting forces over time, ensuring long-lasting
+                    performance.
+                  </p>
+                </div>
+                <div class="implant-type-card-image">
+                  <img
+                    src="{% static 'implant-type-vector1.svg' %}"
+                    alt="vector1"
+                    class="w-90"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="implant-type-card-image">
+                  <img
+                    src="{% static 'implant-type-vector2.svg' %}"
+                    alt="vector1"
+                    class="w-90"
+                  />
+                </div>
+                <div class="implant-type-card" id="card-7">
+                  <div class="implant-type-card-heading">
+                    7. Gum Tissue Compatibility
+                  </div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses are designed to fit naturally with gum
+                    tissues, promoting healthy gums and a natural smile.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="implant-type-card" id="card-3">
+                  <div class="implant-type-card-heading">3. Natural Appearance</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses closely resemble natural teeth in color,
+                    shape, and texture, enhancing aesthetics and confidence.
+                  </p>
+                </div>
+                <div class="implant-type-card" id="card-8">
+                  <div class="implant-type-card-heading">8. Proper Occlusion</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses ensure proper bite alignment, preventing jaw
+                    pain and uneven wear on teeth.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="implant-type-card" id="card-4">
+                  <div class="implant-type-card-heading">4. Stability and Fit</div>
+                  <p class="implant-type-card-body">
+                    ADimplant prostheses fit securely, ensuring comfort and preventing
+                    slippage during speaking and eating for overall satisfaction.
+                  </p>
+                </div>
+                <div class="implant-type-card-image">
+                  <img
+                    src="{% static 'implant-type-vector3.svg' %}"
+                    alt="vector3"
+                    class="iv3 w-70"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="implant-type-card-image">
+                  <img
+                    src="{% static 'implant-type-vector4.svg' %}"
+                    alt="vector1"
+                    class="w-90"
+                  />
+                </div>
+                <div class="implant-type-card" id="card-9">
+                  <div class="implant-type-card-heading">
+                    9. Functional Efficiency
+                  </div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses restore efficient chewing and speaking,
+                    allowing comfort with a variety of foods and clear speech.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="implant-type-card" id="card-5">
+                  <div class="implant-type-card-heading">5. Ease of Cleaning</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses are easy to clean, helping maintain oral
+                    hygiene and prevent plaque buildup and gum issues.
+                  </p>
+                </div>
+                <div class="implant-type-card" id="card-10">
+                  <div class="implant-type-card-heading">10. Customization</div>
+                  <p class="implant-type-card-body">
+                    Each AD-implant prosthesis are custom-made to fit the patient's
+                    unique oral anatomy, ensurinf a pieacise and coomfortable fit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+        </div>
+  
+      </section>
+      <!-- future Implants section -->
+      <section class="section future-Implants overflow-hidden" id="future-section">
+        <div class="container position-relative">
+          <h2 class="product-section-title future-title">future of AD implant</h2>
+          <div class="row justify-content-sm-between justify-content-center">
+            <div class="col-lg-6 col-xl-5 col-sm-12 col-10 position-relative order-2 order-lg-1">
+              <div
+                id="future-slider"
+                class="future--slider-section splide"
+                aria-label="Splide Slider Example"
+              >
+                <div class="splide__track">
+                  <div class="future-content-wrapper splide__list">
+                    <div class="future-content splide__slide" id="future-content1">
+                      <h3 class="future-content-num">
+                        Innovative Materials and Technologies
+                      </h3>
+                      <p class="future-p">
+                        At Advance Dental Export Lab, we focus on innovations,
+                        including 3D-printed laser-sintered metals for better
+                        precision in prosthetics.
+                      </p>
+                      <p class="sec_copy_para">
+                        We also enhance surface coatings of prosthetic parts for
+                        improved integration, ensuring more durable solutions.
+                      </p>
+                    </div>
+                    <div class="future-content splide__slide" id="future-content2">
+                      <h3 class="future-content-num">
+                        Advancements in Digital Dentistry
+                      </h3>
+                      <p class="future-p">
+                        Technologies like computer-aided design (CAD) are central to
+                        our work, enabling us to create highly customized prosthetic
+                        solutions tailored to individual needs.
+                      </p>
+                      <p class="sec_copy_para">
+                        Digital impressions ensure improved 3D accuracy, while CAD/CAM
+                        technology allows precise customization, ensuring each
+                        prosthesis is a perfect fit for the patient.
+                      </p>
+                    </div>
+                    <div class="future-content splide__slide" id="future-content3">
+                      <h3 class="future-content-num">
+                        AI, Robotics, and Biomimetic Materials in Implant Prosthetics
+                      </h3>
+                      <p class="future-p">
+                        Developments in robotics and artificial intelligence have
+                        improved accuracy and functional outcomes in implant
+                        prosthetic solutions, ensuring better patient results.
+                      </p>
+                      <p class="sec_copy_para">
+                        The introduction of biomimetic materials, which mimic natural
+                        teeth, has revolutionized prosthetic design, making treatments
+                        more efficient and tailored to individual needs
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-10 position-relative order-1 order-lg-2">
+              <div class="feature-section-imgwrapper">
+                <img
+                  src="{% static 'img/feature-section1.webp' %}"
+                  class="img-fluid feature-section-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- patient success stories section -->
+      <section class="section patient-success" id="patient-success">
+        <div class="container position-relative">
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
+          <h2 class="product-section-title mb-0">Patient Success stories</h2>
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
+          <div class="swiper patientSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                    <div class="flipper">
+                      <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
+                      <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                    </div>
+                  </div>
+                  <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
+                    <p>After years of struggling with traditional dentures, getting AD implant prosthesis changed my life. The stability and comfort they offer are unmatched. I can eat my favour-ite foods without worry, and my confidence has soared. The procedure was smoother than I expected, and the results are beyond my dreams. My implant-supported dentures feel just like natural teeth. Thanks to this life-changing experience, I feel like myself again, and I can't thank my dentist enough for giving me back my smile.</p>
+                    <h2>Pt Name: Mr. Arun Shah</h2>
+                    <span>Businessmen</span>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+               <div class="row justify-content-center align-items-center">
+                  <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                    <div class="flipper">
+                      <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
+                      <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                    </div>
+                  </div>
+                  <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
+                   <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
+                      <h2>Pt Name: Mrs Rekhaben</h2>
+                      <span>Housewife</span>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                </div>
+       
+                {% comment %} <div class="row justify-content-center align-items-center">
+                    <div class="col-2 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-md-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                      <div class="flipper">
+                        <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
+                        <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                      </div>
+                    </div>
+                    <div class="col-7 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
+                      <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
+                      <h2>Pt Name: Mrs Rekhaben</h2>
+                      <span>Housewife</span>
+                    </div>
+                    <div class="col-2 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-md-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                </div> {% endcomment %}
+              </div>
+              <div class="swiper-slide">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                    <div class="flipper">
+                      <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
+                      <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                    </div>
+                  </div>
+                  <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
+                     <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
+                    <h2>Pt Name: Miss khushbu</h2>
+                    <span>Student</span>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                </div>
+          
+                {% comment %} <div class="row justify-content-center align-items-center">
+                  <div class="col-2 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-md-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                    <div class="flipper">
+                        <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
+                        <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                    </div>
+                  </div>
+                  <div class="col-7 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
+                    <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
+                    <h2>Pt Name: Miss khushbu</h2>
+                    <span>Student</span>
+                  </div>
+                  <div class="col-2 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-md-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /></div>
+                </div> {% endcomment %}
+              </div>
+            </div>
+             <!-- Optional: navigation arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+
+              <!-- Optional: pagination -->
+              {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+          </div>
+        </div>
+      </section>
+  </div>
+   
 {% endblock %} {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 <script>
   AOS.init({
-    duration: 1000, // animation duration in ms
-    once: true, // animation only happens once while scrolling
+        duration: 1000, // animation duration in ms
+        once: true      // animation only happens once while scrolling
   });
-
   gsap.registerPlugin(ScrollTrigger);
   
   ScrollTrigger.matchMedia({
     "(min-width:992px)": function () {
-      const finalYValues = [
-        window.innerWidth <= 1200 ? -120 : -20,
-        window.innerWidth <= 1200 ? -100 : 0,
-        window.innerWidth <= 1200 ? -80 : 20,
-        window.innerWidth <= 1200 ? -60 : 40,
-        window.innerWidth <= 1200 ? -40 : 60,
-      ];
+        const finalYValues = [
+          window.innerWidth <= 1200 ? -120 : -20,
+          window.innerWidth <= 1200 ? -100 : 0,
+          window.innerWidth <= 1200 ? -80 : 20,
+          window.innerWidth <= 1200 ? -60 : 40,
+          window.innerWidth <= 1200 ? -40 : 60,
+        ];
 
-      const initialYFactors = [0.6, 0.55, 0.5, 0.45, 0.4];
-      const midwayYFactors = [0.26, 0.24, 0.22, 0.15, 0.18];
+        const initialYFactors = [0.6, 0.55, 0.5, 0.45, 0.4];
+        const midwayYFactors = [0.26, 0.24, 0.22, 0.15, 0.18];
 
-      gsap.to(".ImplantProsthesis", {
-        scrollTrigger: {
-          trigger: ".ImplantProsthesis",
-          start: "top top",
-          end: "0% top",
-          scrub: true,
-          pin: true,
-          pinSpacing: false,
-        },
-      });
-
-    
-      gsap.to("#ImplantImg1", {
-        opacity: 1,
-        scale: 1.05,
-        duration: 0.1,
-        overwrite: true,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".ImplantProsthesis",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-
-      const ids = ["#ImplantContent1", "#ImplantContent2", "#ImplantContent3", "#ImplantContent4", "#ImplantContent5"];
-
-      ids.forEach((id, i) => {
-        const tl = gsap.timeline({
+        gsap.to(".ImplantProsthesis", {
           scrollTrigger: {
-            trigger: id,
-            start: i === 4 ? "top 80%" : "top bottom",
-            end: i === 4 ? "+=30%" : "+=70%",
+            trigger: ".ImplantProsthesis",
+            start: "top 10%",
+            end: "bottom top",
+            scrub: true,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+
+        gsap.to("#ImplantImg1", {
+          opacity: 1,
+          scale: 1.05,
+          duration: 0.1,
+          overwrite: true,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".ImplantProsthesis",
+            start: "top bottom",
+            end: "bottom top",
             scrub: true,
           },
         });
 
-        tl.fromTo(id, {
-          opacity: 0,
-          scale: 0,
-          y: () => window.innerHeight * initialYFactors[i],
-          transformOrigin: "50% 100%",
-        }, {
-          opacity: 0.8,
-          scale: 1.1,
-          y: () => window.innerHeight * midwayYFactors[i],
-          duration: 1,
-          ease: "power1.out",
-          transformOrigin: "50% 100%",
-        }).to(id, {
-          opacity: 1,
-          scale: 0.9,
-          y: finalYValues[i],
-          duration: 1,
-          ease: "power2.out",
-          transformOrigin: "50% 100%",
+        const ids = ["#ImplantContent1", "#ImplantContent2", "#ImplantContent3", "#ImplantContent4", "#ImplantContent5"];
+
+        ids.forEach((id, i) => {
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: id,
+              start: i === 4 ? "top 80%" : "top bottom",
+              end: i === 4 ? "+=30%" : "+=70%",
+              scrub: true,
+            },
+          });
+
+          tl.fromTo(id, {
+            opacity: 0,
+            scale: 0,
+            y: () => window.innerHeight * initialYFactors[i],
+            transformOrigin: "50% 100%",
+          }, {
+            opacity: 0.8,
+            scale: 1.1,
+            y: () => window.innerHeight * midwayYFactors[i],
+            duration: 1,
+            ease: "power1.out",
+            transformOrigin: "50% 100%",
+          }).to(id, {
+            opacity: 1,
+            scale: 0.9,
+            y: finalYValues[i],
+            duration: 1,
+            ease: "power2.out",
+            transformOrigin: "50% 100%",
+          });
         });
-      });
     },
   });
 
@@ -720,29 +729,177 @@
     threshold: 0.1 // Adjust if needed
   });
   observer.observe(implantTrigger);
-
 </script>
+<!-- why Implant section script -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    for (let i = 1; i <= 10; i++) {
-      const card = document.getElementById(`card-${i}`);
-      if (card) {
-        card.addEventListener("click", function () {
-          for (let j = 1; j <= 10; j++) {
-            const removecard = document.getElementById(`card-${j}`);
-            if (removecard) {
-              removecard.style.backgroundColor = "#fff";
-              removecard.style.color = "#000";
-            }
-          }
+  gsap.registerPlugin(ScrollTrigger);
+  const section = document.querySelector('.why-Implant-section');
 
-          card.style.backgroundColor = "#1b8976";
-          card.style.color = "#FFF";
-        });
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".why-Implant-section",
+      start: "top top",
+      end: "bottom top",      // Control scroll area
+      scrub: true,
+      pin: true,
+      markers: false,      // Optional: for debugging scroll positions
+      onLeave:()=>{
+        document.getElementById("why-Implant-section").classList.add("unpinned");
+      },
+      onLeaveBack:() =>{
+        document.getElementById("why-Implant-section").classList.remove("unpinned");
+      },
+      onEnterBack:()=>{
+        document.getElementById("why-Implant-section").classList.remove("unpinned");
       }
+    },
+  });
+  
+  tl.to("#text1", {
+    scale: 2,
+    ease: "power2.out",
+    duration: 1,
+  }, 0.5); 
+
+  let scaleValue = 1;
+  let scaleValue1 = 0.72;
+  let scaleValue2 = 1.3;
+  function updateScaleValues() {
+    if(window.innerWidth >= 0 && window.innerWidth <= 576){
+      scaleValue1 = 0.7;
+      scaleValue = 1.1;
+      scaleValue2 = 1.47;
+    } else if(window.innerWidth >= 480 && window.innerWidth <= 576){
+      scaleValue1 = 0.85;
+      scaleValue = 1.23;
+      scaleValue2 = 1.65;
+    } else if(window.innerWidth >= 576 && window.innerWidth <= 768){
+      scaleValue1 = 0.8;
+      scaleValue = 1.3;
+      scaleValue2 = 1.78;
+    }else if(window.innerWidth >= 768 && window.innerWidth <= 991){
+      scaleValue1 = 0.7;
+      scaleValue = 1.15;
+      scaleValue2 = 1.6;
+    }else if(window.innerWidth >= 992 && window.innerWidth <= 1200){
+      scaleValue1 = 0.7;
+      scaleValue = 1.1;
+      scaleValue2 = 1.6;
+    }else if(window.innerWidth >= 1200 && window.innerWidth <= 1300){
+      scaleValue1 = 0.72;
+      scaleValue = 1.2;
+      scaleValue2 = 1.7;
+    }else if(window.innerWidth >= 1300 && window.innerWidth <= 1440){
+      scaleValue1 = 0.65;
+      scaleValue = 1.05;
+      scaleValue2 = 1.45;
+    }else if(window.innerWidth >= 1439 && window.innerWidth <= 1649){
+      scaleValue1 = 0.7;
+      scaleValue = 1.05;
+      scaleValue2 = 1.4;
+    }else if(window.innerWidth >= 1650 && window.innerWidth <= 1800){
+      scaleValue1 = 0.68;
+      scaleValue = 1.02;
+      scaleValue2 = 1.35;
+    }else if(window.innerWidth >= 1800 && window.innerWidth <= 2000){
+      scaleValue1 = 0.68;
+      scaleValue = 0.98;
+      scaleValue2 = 1.28;
+    }else{
+      scaleValue1 = 0.72;
+      scaleValue = 1;
+      scaleValue2 = 1.3;
+    }
+  }
+  updateScaleValues();
+
+  window.addEventListener("resize", () => {
+    updateScaleValues();
+    console.log("scaleValue:", scaleValue, "scaleValue1:", scaleValue1);
+    ScrollTrigger.refresh(); // Optional: if ScrollTrigger is used and layout depends on it
+  });
+
+  tl.fromTo("#Implant1", {
+    y: 0,
+    opacity: 0,
+    scale: 0.9
+  }, {
+    y:-(window.innerHeight * scaleValue1),
+    opacity: 1,
+    scale: 1,
+    rotation: -5,
+    ease: "power2.out",
+    duration: 1,
+  }, 1); 
+
+  tl.fromTo("#Implant2", {
+    y: 0,
+    opacity: 0,
+    scale: 0.9
+  }, {
+    y: -(window.innerHeight * scaleValue),
+    opacity: 1,
+    scale: 1,
+    rotation: 5, // Same direction as Implant1
+    ease: "power2.out",
+    duration: 1,
+
+  }, ">"); 
+
+  tl.fromTo("#Implant3", {
+    y: -400,
+    opacity: 0,
+    scale: 0.9
+  }, {
+    y: -(window.innerHeight * scaleValue2),
+    opacity: 1,
+    scale: 1,
+    rotation: 0, // Same direction as Implant1
+    ease: "power2.out",
+    duration: 1,
+  }, ">"); 
+</script>
+<!-- Types of AD Implants script -->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  let hasPlayed = false; // ✅ play only once
+  const Img = gsap.timeline({ paused: true });
+  Img.to("#type-product_img1", {
+    width: "100%",
+    opacity: 1,
+    ease: "power2.out",
+    duration: 1
+  })
+  .to("#type-product_img2", {
+    width: "100%",
+    opacity: 1,
+    ease: "power2.out",
+    duration: 1
+  }, "+=0.5");
+  Img.to("#type-product_img3", {
+    width: "100%",
+    opacity: 1,
+    ease: "power2.out",
+    duration: 1
+  }, "+=0.5");
+  Img.to("#type-product_img4", {
+    width: "100%",
+    opacity: 1,
+    ease: "power2.out",
+    duration: 1
+  }, "+=0.5");
+  window.addEventListener('scroll', () => {
+    if (hasPlayed) return;
+    const section = document.querySelector(".TypeofImplants");
+    const rect = section.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top < window.innerHeight * 0.3) {
+      console.log("Section reached top");
+      Img.play();
+      hasPlayed = true;
     }
   });
 </script>
+<!-- Type slider section -->
 <script>
   var $swiperSelector = $(".swiper-container");
 
@@ -793,128 +950,169 @@
     });
   });
 </script>
+<!-- future Implants section -->
 <script>
-  const sections = document.querySelectorAll(".section");
-  const imgwrapper = document.querySelector('.feature-section-imgwrapper');
-  const title = document.querySelector('.future-title');
-  {% comment %} const countrySection = document.querySelector(".why-Implant-section");
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.matchMedia({
+    "(min-width:992px)":function()
+    {
+        const centerOffset = window.innerHeight / 2;
+        let originalSpacerHeight = null;
 
-  window.addEventListener("scroll", () => {
-    let topSection = null;
-    let smallestOffset = window.innerHeight;
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const offset = Math.abs(rect.top);
-      if (rect.top <= window.innerHeight / 5 && offset <= smallestOffset) {
-        smallestOffset = offset;
-        topSection = section;
-      }
-    });
-
-    if (topSection !== null) {
-      if(topSection.id === "future-section"){
-        sections.forEach(element => {
-          setupIntersectionObserver(element, intersectionCallback);
-        });
-      }else{
-          imgwrapper.classList.remove("fixed");
-          title.classList.remove('fixed');
-      }
-
-      if(topSection.id === "why-Implant-section")
-      {
-        countrySection.classList.add('fixed')
-      }
-      else{
-         countrySection.classList.remove('fixed')
-      }
-      console.log("topSec",topSection)
-    }
-  }); {% endcomment %}
-
-  function setupIntersectionObserver(element, callback) {
-          const observer = new IntersectionObserver(callback, {
-              threshold: 0.5
+          const timeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#future-section",
+              start: "top 12%",
+              end: "bottom+=200% top",
+              scrub: true,
+              pin: true, 
+              anticipatePin: 1,
+              onLeave:(self)=>{
+                document.getElementById("future-section").classList.add("unpinned");
+              },
+              onLeaveBack:(self) =>{
+                document.getElementById("future-section").classList.remove("unpinned");
+              }
+            },
           });
-          observer.observe(element);
-  }
-  function intersectionCallback(entries,observer){
-    console.log("dfd")
-      entries.forEach(entry => {
-        const imgwrapper = document.querySelectorAll(".feature-section-imgwrapper");
 
-          if(entry.target.classList.contains('future-Implants')){
-                var future = new Splide("#future-slider",{
-                    type:"fade",
-                    perPage:1,
-                    autoplay:false,
-                    speed:1500,
-                    pagination:false,
-                    arrows:false,
-                    rewind:false,
-                    rewindSpeed: 1000,
-                    interval:2000,
-                    updateOnMove:true,
-                    pauseOnHover:false,
-                    pauseOnFocus:false,
-                    drag: false,
+        // Step 1: Animate and pin the image
+        timeline
+          .from(".feature-section-img", {
+            opacity: 1,
+            y: 40,
+            duration: 0.5,
+          })
+          .addLabel("imageDone");
 
-                    wheelSleep: 500,
-                }).mount();
-                console.log("entryIs",entry.isIntersecting)
-                if(entry.isIntersecting){
-                  future.options = { wheel : true }
-                }else{
-                  future.options = { wheel : false }
-                }
+        // Step 2: Animate and pin the title
+        timeline.from(".future-title", {
+            opacity: 1,
+            y: 60,
+            duration: 1,
+        })
+        .addLabel("titleDone");
 
-                future.on('move',function(){
-                  const serviceNum = document.querySelector(
-                      '.future--slider-section .splide__slide.is-visible .future-content-num')
-                  const element = document.querySelector(
-                      '.future--slider-section .splide__slide.is-active.is-visible .future-p')
-                  const para = document.querySelector(
-                      '.future--slider-section .splide__slide.is-active.is-visible .sec_copy_para')
-
-                  gsap.fromTo(serviceNum, {
-                          opacity: 0,
-                          y: 50,
-                      }, {
-                          opacity: 1,
-                          delay: 0.1,
-                          y : 0,
-                  })
-                  gsap.fromTo(element, {
-                          opacity: 0,
-                          y: 50,
-                      }, {
-                          opacity: 1,
-                          y: 0,
-                          delay: 0.2
-                  })
-                  gsap.fromTo(para, {
-                          opacity: 0,
-                          y: 50,
-                      }, {
-                          opacity: 1,
-                          y: 0,
-                          delay: 0.3
-                  })
-                })
-                observer.unobserve(entry.target);
+          let card1 = 0.05;
+          let card2 = 0.52;
+          let card3 = 1.15;
+          function updateScaleValues() {
+            if(window.innerWidth >= 992 && window.innerWidth <= 1200){
+              card1 = 0.05;
+              card2 = 0.48;
+              card3 = 1.04;
+            }else if(window.innerWidth >= 1200 && window.innerWidth <= 1300){
+              card1 = 0.05;
+              card2 = 0.52;
+              card3 = 1.15;
+            }else if(window.innerWidth >= 1300 && window.innerWidth <= 1440){
+              card1 = 0.08;
+              card2 = 0.32;
+              card3 = 0.75;
+            }else if(window.innerWidth >= 1439 && window.innerWidth <= 1649){
+              card1 = 0.09;
+              card2 = 0.27;
+              card3 = 0.65;
+            }else if(window.innerWidth >= 1650 && window.innerWidth <= 1800){
+              card1 = 0.09;
+              card2 = 0.25;
+              card3 = 0.62;
+            }else if(window.innerWidth >= 1800 && window.innerWidth <= 2000){
+              card1 = 0.07;
+              card2 = 0.23;
+              card3 = 0.55;
+            }else{
+              card1 = 0.05;
+              card2 = 0.52;
+              card3 = 1.15;
+            }
           }
-      })
-  }
+          updateScaleValues();
+
+          window.addEventListener("resize", () => {
+            updateScaleValues();
+            ScrollTrigger.refresh();
+          });
+          // Step 3: Card 1 in
+          timeline.fromTo("#future-content1", {
+              opacity: 1,
+              y: 100,
+              duration: 1,
+            },
+            {
+              opacity: 1,
+              y:(window.innerHeight * card1),
+              duration: 1,
+            },
+            "titleDone+=1"
+          );
+          // Card 2 in, Card 1 fades out
+          timeline.to( "#future-content1",{
+                opacity: 0,
+                duration: 0.5,
+              },
+              "+=0.5"
+          ).fromTo("#future-content2",{
+                opacity: 0,
+                y: 100,
+              },
+              {
+                opacity: 1,
+                y:-(window.innerHeight * card2),
+                duration: 1,
+              },
+              "<");
+          // Card 3 in, Card 1 & 2 fade out
+          timeline.to(
+              ["#future-content1", "#future-content2"],
+              {
+                opacity: 0,
+                duration: 0.5,
+              },
+              "+=0.5"
+          ).fromTo("#future-content3",{
+                opacity: 0,
+                y: 50,
+              },
+              {
+                opacity: 1,
+                y:-(window.innerHeight * card3),
+                duration: 1,
+              },
+              "<"
+            );
+    }
+  })
 </script>
+<!-- patient success stories section  -->
 <script>
+  var swiper1 = new Swiper('.patientSwiper',{
+    slidesPerView:1,
+    spaceBetween:10,
+    speed:500,
+    loop:true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+</script>
+{% comment %} <script>
   if (window.location.pathname == "/ad-implant/") {
     const a = document.getElementsByClassName("page");
     const b = document.querySelectorAll(".wsmenucontainer");
-    a[0].classList.add("overflow-visible");
+    const c = document.getElementsByClassName('page1');
+    console.log("c",c,a)
+    c[0].classList.add("overflow-visible");
+    a[0].classList.add("overflow-hidden");
   } else {
     const a = document.getElementsByClassName("page");
-    a[0].classList.remove("overflow-visible");
+    c[0].classList.remove("overflow-visible");
+    a[0].classList.remove("overflow-hidden");
   }
-</script>
-
+</script> {% endcomment %}
 {% endblock %}

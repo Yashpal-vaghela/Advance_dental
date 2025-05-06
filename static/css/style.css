@@ -7308,7 +7308,7 @@ nav a#pull {
 } */
 
 body {
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto !important;
   /* height: 100%; */
   -webkit-overflow-scrolling: touch;
