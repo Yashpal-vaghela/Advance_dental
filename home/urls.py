@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from blog.views import blog_detail as bd
 from django.contrib import sitemaps
@@ -29,7 +29,7 @@ urlpatterns = [
     path('exhibition-gallery/<str:slug>/', views.eventgallery, name='eventgallery'),
     path('categories/', views.categories, name='categories'),
     path('categories/<str:pk>/', views.categoriesd, name='categoriesd'),
-    path('blogs/', views.blogs, name='blogs'),
+    path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
     path('search/', views.search, name='search'),
     path('gallery/', views.gallery, name='gallery'),
     path('terms-and-condition/', views.privacy, name='privacy'),
