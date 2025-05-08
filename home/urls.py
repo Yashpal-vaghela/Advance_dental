@@ -60,5 +60,6 @@ urlpatterns = [
     path('blog/<str:slug>/', bd, name='blogd'),
     path('quicks-links/', views.connect, name='connect'),
     path('zirconia-crown/',views.zirconiacrown, name='zirconiacrown'),
-    path('ad-implant/',views.adImplants, name='adImplants')
+    path('ad-implant/',views.adImplants, name='adImplants'),
+    path('sitemap/',views.sitemap,name="sitemap")
 ]

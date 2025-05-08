@@ -211,11 +211,11 @@
 }
 @media(max-width:768px){
     .radial_smile .line-2 {
-        top: 1%;
+        top: 1.18%;
         left:-6%;
     }
     .radial_smile .line-1{
-        top: 1%;
+        top: 1.18%;
         right: -6.4%;
     }
     .webviewofprocess {
@@ -304,7 +304,7 @@
     top:3.2%
 }
 .typeOfZirconia .swiper-button-prev{
-    top:10%;
+    top:8%;
     left:72%;
     background-color: rgb(27, 137, 118,0.1);
     padding: 10px 22px;
@@ -320,7 +320,7 @@
     /* padding: 7px 15px 7px 11px; */
 }
 .typeOfZirconia .swiper-button-next{
-    top:10%;
+    top:8%;
     background-color: rgb(27, 137, 118,0.1);
     padding: 10px 22px;
     border-radius: 50%;
@@ -483,12 +483,12 @@
 }
 @media(max-width:991px){
     .typeOfZirconia .line-2{
-        left: 10%;
-        top:4.8%
+        left: 7%;
+        top:5%
     }
     .typeOfZirconia .line-1{
-        right: 10%;
-        top:4.8%
+        right: 7%;
+        top:5%
     }
     .side-img {
         display: none;
@@ -654,12 +654,12 @@
 }
 .line-1{
     position: absolute;
-    top: 4.2%;
+    top: 5.2%;
     right:0%;
 }
 .line-2{
     position: absolute;
-    top: 4.2%;
+    top: 5.2%;
     left:0%;
 }
 .zirconia-content-item{
@@ -719,6 +719,12 @@
         font-size: 26px;
         margin-bottom: 0px;
     }
+    .zirconia-wrapper .line-1,.zirconia-wrapper .line-2{
+        top:5.2%;
+    }
+    .zirconia-content-item h2{
+        font-size: 22px;
+    }
 }
 @media(max-width:768px){
     .line-1,.line-2{
@@ -737,6 +743,9 @@
     .zirconia-content-item h2{
         padding: 0px 10px;
         font-size: 22px;
+    }
+    .zirconia-wrapper .line-1, .zirconia-wrapper .line-2{
+        top:4.5%
     }
     .zirconia-content-item p{
         text-align: center;
@@ -782,6 +791,14 @@
 /* ---------------- Benefit od zirconia ---------------- */
 .BenefitOfZirconia {
     padding: 50px 0px;
+}
+.BenefitOfZirconia .line-2{
+    width:26%;
+    top:5%;
+}
+.BenefitOfZirconia .line-1{
+    width:26%;
+    top:5%;
 }
 .benefittxt {
     /* color: black; */
@@ -843,6 +860,28 @@
 }
 .BenefitOfZirconia .swiper-pagination-bullet-active {
     background-color: #1B8976 !important;
+}
+@media(max-width:1200px){ 
+    .BenefitOfZirconia .line-2{
+        width:20%;
+        top:5.5%;
+        left: -1%;
+    }
+    .BenefitOfZirconia .line-1{
+        width:20%;
+        top:5.5%;
+        right: -1%;
+    }
+}
+@media(max-width:768px){
+    .BenefitOfZirconia .line-2{
+        left:-8%;
+        top:5%;
+    }
+    .BenefitOfZirconia .line-1{
+        right: -8%;
+        top:5%;
+    } 
 }
 @media(max-width:576px){
     .BenefitOfZirconia{
@@ -909,6 +948,21 @@
     max-width: 600px;
     height: 400px !important;
     margin: 0 auto;
+}
+@media(max-width:991px){
+    .testimonial-wrapper .swiper{
+        height: 450px !important;
+        width:76%;
+    }
+}
+@media(max-width:768px){
+    .testimonial-wrapper .swiper{
+        height: 500px !important;
+        width:85%;
+    }
+    .testimonial-text{
+        text-align: center;
+    }
 }
 @media(max-width:576px){
     .testimonial-card{

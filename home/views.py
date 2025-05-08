@@ -16,6 +16,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 import requests
 
+
 # from enquiry.models import InstaPost
 # Create your views here.
 def home(request):
@@ -865,9 +866,7 @@ def print_invoice(request, pk, did):
             }
 
     data = {
-        "invoice_ids": did,
-        
-        
+        "invoice_ids": did, 
     }
     res = requests.post(apiurl, headers=headers, data=data)
     dict_data = res.json()
@@ -942,4 +941,20 @@ def web_story_detail(request, story_slug):
     story = get_object_or_404(WebStory, slug=story_slug)
     videos = WebStoryVideo.objects.filter(web_story=story)
     return render(request, "web_story_detail.html", {"story": story, "videos": videos, "data": story})
+
+def sitemap(request):
+    products = Product.objects.all()
+    places = Place.objects.all().values('id','name','title','slug','h1')[:24]
+    data1 = Blog.objects.all().order_by('-id')
+    webstory = WebStory.objects.all()
+    exhibition = Events.objects.all()
+
+    context = {
+        'data':data1,
+        'places':places,
+        'webstory':webstory,
+        'products':products,
+        'exhibition':exhibition
+    }
+    return render(request,'sitemap.html',context)
 

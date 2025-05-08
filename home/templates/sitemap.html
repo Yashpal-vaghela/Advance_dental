@@ -1,0 +1,138 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link href="{% static 'css/sitemap.css' %}" rel="stylesheet" />
+{% endblock %} {% block body %}
+<div>
+  <div id="breadcrumb" class="division">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="breadcrumb-holder">
+            <!-- Breadcrumb Nav -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  sitemap
+                </li>
+              </ol>
+            </nav>
+
+            <!-- Title -->
+            <h1 class="h4-sm steelblue-color">Advance Dental Export</h1>
+          </div>
+        </div>
+      </div>
+      <!-- End row -->
+    </div>
+    <!-- End container -->
+  </div>
+  <section class="sitemap-section">
+    <div class="container">
+      <h2>Sitemap</h2>
+      <div class="sitemapContent">
+        <div class="sitemapSubContent">
+          <h3><a href="/">Home</a></h3>
+          <div class="row align-items-center ">  
+            {% comment %} <div class="col-md-6 col-lg-4">
+                <a href="/">Home</a>
+            </div> {% endcomment %}
+            <div class="col-md-6 col-lg-4">
+                <a href="/about-us/">About us</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="https://ultimatesmiledesign.com/">Ultimate Smile Design</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/contact-us/">Contact Us</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/verify-warranty/">Verify Warranty</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="https://client.advancedentalexport.com/">Client Login</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/gallery/">Gallery</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/before-after/">Before After</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/submit-stl-file/">Submit STL File</a>
+            </div>
+             <div class="col-md-6 col-lg-4">
+                <a href="/career/">Careers</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/terms-and-condition/">Terms & Condition</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/quicks-links/">Quick Links</a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="/testimonials/">Testimonials</a>
+            </div>
+          </div>
+        </div>
+        <div class="sitemapSubContent">
+          <h3>Products</h3>
+          <div class="row align-items-center">
+          {% for product in products %}
+            <div class="col-md-6 col-lg-4">
+              <a href="/{{product.slug}}/">{{product.breadcrumb}}</a>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+        <div class="sitemapSubContent">
+         <h3><a href="/web-story">Web Stories</a></h3>
+          <div class="row align-items-center">
+            {% for story in webstory %}
+              <div class="col-md-6 col-lg-6">
+                <a href="{% url 'home:web_story_detail' story.slug %}">{{story.title}}</a>
+              </div>
+            {% endfor %} 
+          </div>
+        </div>
+        <div class="sitemapSubContent">
+            <h3>Blogs</h3>
+                <div class="row align-items-center">
+                    {% for ie in data %}
+                    <div class="col-md-6 col-lg-4">
+                        <a href="{% url 'home:blogd' ie.slug %}">{{ie.title}}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+        <div class="sitemapSubContent">
+         <h3><a href="/exhibition-gallery/">Exhibition Gallery</a></h3>
+          <div class="row align-items-center">
+          {% for event in exhibition %}
+            <div class="col-md-6 col-lg-4">
+              <a href="/exhibition-gallery/{{event.slug}}/">{{event.name}}</a>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+        <div class="sitemapSubContent">
+          <h3>Best Dental Lab In India</h3>
+          <div class="row align-items-center">
+            {% for place in places %}
+              <div class="col-md-6 col-lg-4">
+                {% comment %} <a href="/best-dental-lab-in-{{place.name}}">{{place.h1}}</a> {% endcomment %}
+                {% with city=place.name %}
+                  {% with before="Best Dental Lab In" after="- ADE" %}
+                  <a href="/best-dental-lab-in-{{place.name}}"> {{ before }} <span class="city">{{ city }}  {{ after }}</span></a> 
+                  {% endwith %}
+                {% endwith %}
+              </div>
+            {% endfor %} 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %} {% block js %} {% endblock %}
