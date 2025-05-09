@@ -30,7 +30,7 @@ class NormalPageSitemap(Sitemap):
     changefreq = 'monthly'
 
     def items(self):
-        return ['home:contact_new', 'home:beforeafter', 'home:gallery', 'home:testimonals', 'home:web_story', 'home:blogs']
+        return ['home:contact_new', 'home:beforeafter', 'home:gallery', 'home:testimonals', 'home:web_story', 'blog:blog']
 
     def location(self, item):
         return reverse(item)
