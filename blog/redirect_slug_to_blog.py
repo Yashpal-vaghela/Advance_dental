@@ -35,3 +35,17 @@ class ProductToSlugRedirect:
             except Product.DoesNotExist:
                 pass
         return self.get_response(request)        
+
+class EventGalleryRedirectMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        path = request.path.strip('/')
+
+        # Corrected the path prefix from 'even-gallery/' to 'event-gallery/'
+        if path.startswith('event-gallery/'):
+            slug = path[len('event-gallery/'):]
+            return HttpResponsePermanentRedirect(f'/exhibition-gallery/{slug}/')
+
+        return self.get_response(request)
