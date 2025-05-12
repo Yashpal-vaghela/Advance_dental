@@ -202,32 +202,45 @@
               <div class="row">
                 {% for ie in data1 %}
                 <!-- BLOG POST #1 -->
-                <div class="col-md-6">
+                <div class="col-md-4 col-sm-6">
                   <!-- BLOG POST #1 -->
-                  <div class="blog-post">
+                  <div class="blog-page">
                     <!-- BLOG POST IMAGE -->
-                    <div class="blog-post-img">
+                    <div class="blog-home-img">
                       <img
                         class="img-fluid"
                         src="{{ie.image.url}}"
                         alt="{{ie.h1}}"
+                        width="340"
+                        height="191"
                       />
                     </div>
 
                     <!-- BLOG POST TITLE -->
-                    <div class="blog-post-txt">
+                    <div class="blog-page-txt">
+                          <div class="blog-meta">
+														<div class="blog-author-wrapper">
+															<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+															<span class="blog-author-txt"> By {{ ie.author }}</span>
+														</div>
+														<div class="blog-author-wrapper">
+															<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
+															<span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
+														</div>
+													</div>                      
                       <!-- Post Title -->
-                      <h5 class="h5-xl steelblue-color">
-                        <a href="{% url 'blogd' ie.slug %}">{{ie.h1}}</a>
-                      </h5>
-
-                      <!-- Post Data -->
-                      <span
-                        >{{ie.published}} by <span>{{ie.author}}</span></span
-                      >
+                      <div class="blog-list-heading steelblue-color">
+                        <a href="{% url 'blogd' ie.slug %}">{{ie.title}}</a>
+                      </div>
 
                       <!-- Post Text -->
-                      <p>{{ie.description}} ...</p>
+                      <p class="blog-card-descripation">
+                        {{ie.description}}
+											</p>
+                      <div class="blog-footer">
+                        <hr class="blog-divider">
+                        <a href="{% url 'blogd' ie.slug %}" class="blog-read-more">Read More</a>
+                      </div>
                     </div>
                   </div>
                 </div>

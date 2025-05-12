@@ -44,7 +44,7 @@ def blog_detail(request, slug):
     try:
         data = Blog.objects.get(slug=slug)
         blog_id = data.id
-        data1 = Blog.objects.all().order_by('id')[:2]
+        data1 = Blog.objects.all().order_by('id')[:3]
         data2 =  Category.objects.all().order_by('-id')
         data3 = Blog.objects.filter(main3=True).order_by('-id')
         context = {
