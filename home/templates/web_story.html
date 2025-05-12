@@ -19,14 +19,28 @@
 
 
 {% block css %}
-<link  href="{% static 'css/web_story.css' %}" rel='stylesheet'/>
+    <link  href="{% static 'css/web_story.css' %}" rel="stylesheet"/>
 {% endblock css %}
     
 {% block body %}
-<div class="container">
-    <div class="ws-heading">
-        Web Stories
+<div id="breadcrumb" class="division mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb-holder">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+                            <li class="breadcrumb-item active" arial-current="page">Web-Story</li>
+                        </ol>
+                    </nav>
+                    <h1 class="h4-sm steelblue-color">Web-Story</h1>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<div class="container">
     <div class="posts-holder pr-30">
         <div class="row">
           {% if stories %}
@@ -63,7 +77,6 @@
         </div>
     </div>           
 </div>
-
 {% endblock body %}
     
 
