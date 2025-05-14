@@ -144,6 +144,9 @@
     .sitemapSubContent h3{
         font-size: 18px;
     }
+    .sitemapSubContent .row .col-md-6 a{
+        margin-left: 1rem;
+    }
     .sitemap-section .container{
         --bs-gutter-x: 5.8rem;
     }

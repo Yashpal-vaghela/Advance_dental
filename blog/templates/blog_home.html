@@ -54,16 +54,31 @@
 			============================================= -->
 			<div id="blog-page" class="wide-75 blog-page-section division pb-0">
 				<div class="container">
-				 	<div class="row">
-
+				 	<div class="row ">
 
 				 		<!-- BLOG POSTS HOLDER -->
+						
+						 <div class="col-lg-4 mb-4">
+							<select class="form-select" name="category"  aria-label="Select Category" onchange="redirectToCategory(this)" >
+								{% for ie in data2 %}
+									<option value="{{ie.category}}" {% if category == ie.category|stringformat:"s" %}selected{% endif %}>
+										{{ie.category}}
+									</option>
+								{% endfor %}
+							</select>
+						</div> 
+						<div class="col-lg-4 text-end">
+							<form class="blog_search_form" action="/blog/"  method="GET" >
+								{% csrf_token %}
+								<input type="text" class="blog-txt-field form-control" id="searchInput" onchange="searchBlogs()"  placeholder="Seach Blogs and tags" name="q">
+								{% comment %} <button class="submit_blog_btn" type="submit">submit</button> {% endcomment %}
+							</form>
+							<div id="suggestions"></div>
+						</div>
+						
 				 		<div class="col-lg-12">
 							<div class="posts-holder pr-30">
-
-							   
 								<div class="row">
-								   
 								   {% for ie in data  %}
 								   	<div class="col-md-4 col-sm-6">
 									   <!-- BLOG POST #1 --> 
@@ -89,7 +104,7 @@
 													</div>	
 													<!-- Post Title -->
 													<div class=" blog-list-heading steelblue-color">
-														<a href="{% url 'home:blogd' ie.slug %}" >{{ie.title}}</a></div>
+														<a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}" >{{ie.title}}</a></div>
 													<!-- Post Text -->
 													<p class="blog-card-descripation">
 														{{ie.description}}
@@ -105,6 +120,12 @@
 								   		<!-- END BLOG POST #1 --> 
 								    </div>
 								   {% endfor %}
+
+								   {% comment %} {% for article in page_obj %}
+										<h2>{{ article.title }}</h2>
+										<p>{{ article.content|truncatewords:30 }}</p>
+								   {% endfor %} {% endcomment %}
+
 								   {% if data.has_other_pages %}
 							   <!-- BLOG PAGE PAGINATION -->
 							   <div class="blog-page-pagination b-top justify-content-center col-12">
@@ -115,13 +136,99 @@
 										   {% else %}
 										   <li class="page-item disabled"><a class="page-link" rel="prev" href="#" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
 										   {% endif %}
-										   {% for i in data.paginator.page_range %}
-										   {% if data.number == i %}
-										   <li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
-										   {% else %}
-										   <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a> </li>
-										   {% endif %}
-										   {% endfor %}
+										   
+										    {% for i in data.paginator.page_range %}
+												{% if i == 1 or i == 2 %}
+													<li class="page-item {% if data.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+
+												{% elif i >= data.number|add:'-1' and i <= data.number|add:'1' and i != data.paginator.num_pages %}
+													{% if i == data.number|add:'-1' and i > 2 %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+
+													<li class="page-item {% if data.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+
+												{% elif i == data.paginator.num_pages %}
+													{% if data.number < i|add:'-2' %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+													{% if i >= data.number|add:'1'%}
+														<li class="page-item {% if data.number >= i %}active{% endif %}">
+															<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+														</li>
+													{% endif %}
+													<li class="page-item {% if data.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+													
+												{% endif %}
+											{% endfor %} 
+											{% comment %} {% for i in data.paginator.page_range %}
+												{# Always show page 1 and 2 #}
+												{% if i == 1 or i == 2 %}
+													<li class="page-item {% if data.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+
+												{# Show current -1, current, current +1 (excluding first and last pages) #}
+												{% elif i >= data.number|add:'-1' and i <= data.number|add:'1' and i != data.paginator.num_pages and i != 1 %}
+													{% if i == data.number|add:'-1' and i > 3 %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+
+													<li class="page-item {% if data.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+
+												{# Show last 2 pages when user is on page 1 #}
+												{% elif data.number == 1 and (i == data.paginator.num_pages or i == data.paginator.num_pages|add:'-1') %}
+													{% if i == data.paginator.num_pages|add:'-1' %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+													<li class="page-item">
+														<a class="page-link" href="?page={{ i }}">{{ i }}</a>
+													</li>
+
+												{# Always show last page if not already shown above #}
+												{% elif i == data.paginator.num_pages %}
+													{% if data.number < i|add:'-2' %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+													<li class="page-item {% if data.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+												{% endif %}
+											{% endfor %} {% endcomment %}
+
+										    {% comment %} {% for i in data.paginator.page_range %}
+												{% if data.number == i %}
+												<li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
+												{% else %}
+												<li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a> </li>
+												{% endif %}
+										  	{% endfor %} {% endcomment %}
+											
+										   {% comment %} {% for num in page_obj.paginator.page_range %}
+												{% if num == 1 or num == 2 or num == page_obj.paginator.num_pages or num == page_obj.paginator.num_pages|add:'-1' or num >= page_obj.number|add:'1' %}
+														{% if num == page_obj.number %}
+															<span class="active">{{ num }}</span>
+														{% else %}
+															<a href="?page={{ num }}">{{ num }}</a>
+														{% endif %}
+												{% else %}
+													{% if num == 3 and page_obj.number > 5 %}
+														<span>...</span>
+													{% else %}
+														{% if num == page_obj.paginator.num_pages|add:'-2' and page_obj.number < page_obj.paginator.num_pages|add:'-3' %}
+															<span>...</span>
+														{% endif %}
+													{% endif %}
+												{% endif %}
+										   {% endfor %} {% endcomment %}
 										   {% if data.has_next %}
 										   <li class="page-item next-page"><a class="page-link" rel="next" href="?page={{ data.next_page_number }}"><i class="fas fa-long-arrow-alt-right"></i></a></li>
 										   {% else %}
@@ -132,21 +239,80 @@
 							   </div>
 							   {% endif %}	
 							   </div>
-							   
-
-
 							</div>
 						</div>	 <!-- END BLOG POSTS HOLDER -->
 						{% comment %} {% include 'aside.html' %}	 {% endcomment %}
 				 	</div>	<!-- End row -->	
 				 </div>	 <!-- End container -->
 			</div>	<!-- END BLOG PAGE CONTENT -->
-
-
-
 {% endblock body %}
-
 {% block js %}
+{% comment %} <script>
+	document.getElementById('search-box').addEventListener('change',function(event){
+		const query = event.target.value.toLowerCase();
+		const items = document.querySelectorAll('.blog-item') 
+		console.log("items",items);
+		fetch(`/blog/?q=${encodeURIComponent(query)}`)
+		.then(response => response.text())
+		.then(data => {
+			let parser = new DOMParser();
+			let doc = parser.parseFromString(data,"text/html");
+			let newContent = doc.querySelector("#blogResults");
+
+			if(newContent){
+				document.getElementById("blogResults").innerHTML = newContent.innerHTML;
+			}
+			console.log("html",data)
+		});
+	})	
+</script>	 {% endcomment %}
+<script>
+    function redirectToCategory(selectElement) {
+        const slug = selectElement.value;
+		const slug1 = slug.replace(/\s+/g, '-').toLowerCase()
+        if (slug) {
+            window.location.href = "/blog/" + "category-" + slug1;  // adjust path if needed
+        }
+    }
+</script>
+<script>
+{% comment %} const paginationData = {{page_obj.paginator.page_range }}
+console.log("paginationData",paginationData) {% endcomment %}
+const paginationData1 = {{data2.category}}
+const page1 = {{data.paginator.num_pages}}
+console.log("paginator",paginationData1,"page1",page1)
+	function searchBlogs() {
+		const query = document.getElementById('searchInput').value;
+		console.log("query",query);
+
+		if (query.length < 2) {
+			document.getElementById('suggestions').innerHTML = '';
+			return;
+    	}
+
+		fetch(`/blog/?q=${encodeURIComponent(query)}`,{headers: {
+            'X-Requested-With': 'XMLHttpRequest' // important for detection in view
+        }})
+			.then(response => response.json())
+			.then(data => {
+				console.log("data",data)
+				const suggestionBox = document.getElementById('suggestions');
+				suggestionBox.innerHTML = '';
+				data.results.forEach(blog => {
+					console.log("blog",blog)
+					const div = document.createElement('a');
+					div.href= `/blog/${blog.slug}/`;
+					div.textContent = blog.title;
+					div.style.padding = '5px 10px';
+					div.style.borderBottom = '1px solid #ccc';
+					div.style.cursor = 'pointer';
+
+					suggestionBox.appendChild(div);
+        		});
+			});
+		}
+	{% comment %} document.getElementById('searchInput').addEventListener('change')  {% endcomment %}
+</script>
 <script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
@@ -188,5 +354,6 @@
 	  "url": "https://advancedentalexport.com/blog/",
 	  "description": "Explore expert insights, emerging trends, and the latest innovations in dental care and dentistry through our informative blog articles."
 	}
-</script>		
+</script>	
 {% endblock js %}
+

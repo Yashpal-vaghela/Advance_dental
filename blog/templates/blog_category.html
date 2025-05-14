@@ -1,0 +1,73 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block css %}
+{% endblock %}
+
+{% block body %}
+<p>Category data</p>
+			{% comment %} <div id="blog-page" class="wide-75 blog-page-section division pb-0">
+				<div class="container">
+				 	<div class="row ">
+				 		<div class="col-lg-12">
+							<div class="posts-holder pr-30">
+								<div class="row">
+								   {% for ie in category %}
+								   	<div class="col-md-4 col-sm-6">
+									 
+									    <div class="blog-page">
+												
+												<div class="blog-home-img">
+													<img class="img-fluid" src="{{ie.image.url}}" width="340" height="191" alt="{{ie.h1}}" />	
+												</div>
+
+												
+												<div class="blog-page-txt">
+													
+													<div class="blog-meta">
+														<div class="blog-author-wrapper">
+															<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+															<span class="blog-author-txt"> By {{ ie.author }}</span>
+														</div>
+														<div class="blog-author-wrapper">
+															<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
+															<span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
+														</div>
+													</div>	
+													
+													<div class=" blog-list-heading steelblue-color">
+														<a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}" >{{ie.title}}</a></div>
+													
+													<p class="blog-card-descripation">
+														{{ie.description}}
+													</p>
+													<div class="blog-footer">
+														<hr class="blog-divider">
+														<a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
+													</div>
+												</div>
+								   		</div>	
+								  
+								    </div>
+								   {% endfor %}
+							   </div>
+							</div>
+						</div>	
+				 	</div>	
+				 </div>	 
+			</div>	 {% endcomment %}
+
+ 	{% comment %} {% for ie in category %}
+        <p>{{ie.title}}</p>
+    {% endfor %}  {% endcomment %}
+	{% for ie in data %}
+		<p>{{ie.category}}</p>
+		<p>{{ie.image}}</p>
+	{% endfor %} 
+{% endblock %}
+
+{% block javascript %}
+<script>
+	const a = {{data}}
+	console.log("a",a)
+</script> 
+{% endblock %}
