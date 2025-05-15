@@ -67,6 +67,13 @@
     font-size: 1.5rem;
     font-weight: 800;
   }
+
+  @media(max-width:576px){
+    .breadcrumb-text{
+      font-size:1.3rem;
+      line-height: 1.6;
+    }
+  }
 </style>
 {% endblock css %} {% block body %}
 
@@ -90,7 +97,7 @@
           </nav>
 
           <!-- Title -->
-          <div class="breadcrumb-text steelblue-color">{{data.breadcrumb}}</div>
+          <div class="breadcrumb-text steelblue-color text-start">{{data.breadcrumb}}</div>
           {% comment %}
           <h4 class="h4-sm steelblue-color">{{data.h1}}</h4>
           {% endcomment %}
@@ -330,8 +337,14 @@
   <!-- End container -->
 </div>
 <!-- END BLOG PAGE CONTENT -->
-
+{% comment %} {% for ie in data3 %}
+<p>{{ie.category}}</p>
+{% endfor %} {% endcomment %}
 {% endblock body %} {% block js %}
+<script> 
+const a = {{data3}}
+console.log("a",a)
+</script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

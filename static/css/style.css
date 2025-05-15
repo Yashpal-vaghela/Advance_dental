@@ -29,9 +29,9 @@ body {
   width: device-width;
 }
 
-/* #page {
-  overflow: hidden;
-} */
+#page {
+  overflow-x: hidden;
+}
 
 .wide-100 {
   padding-top: 100px;
@@ -7032,6 +7032,17 @@ nav a#pull {
 @media(max-width:576px) {
   .exhibition-gallery-section .col-10 {
     width: 85.33% !important
+  }
+  .blog-list-heading{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .wide-75{
+    padding-top: 55px;
+  }
+  .sblog-post-txt .h1-sm,.blog-body h2{
+    font-size: 1.4rem !important;
+    line-height: 1.55;
   }
 
   /* .exhibition-gallery-wrap img{

@@ -1811,7 +1811,7 @@
 
   /* common breadcrumbs */
    /* Breadcrumb */
-   #breadcrumb { margin-top: 70px; text-align: center; }
+   #breadcrumb { margin-top:70px; text-align: center; }
    .breadcrumb{ margin-bottom: 10px;}
    .breadcrumb-holder { margin: 0 auto; display: block; padding-top: 35px; padding-bottom: 35px; padding-left: 0; }
    .breadcrumb-holder h1{ text-align: left;}
@@ -1978,22 +1978,33 @@
     margin-right: 0;
   }
   .breadcrumb-holder { padding-top: 25px; padding-bottom: 25px; }
-  .breadcrumb-holder nav .breadcrumb li a, .breadcrumb-holder nav .breadcrumb li {font-size: 14px;margin-bottom: 5px;margin-top: 5px;}
+  .breadcrumb-holder nav .breadcrumb li a, .breadcrumb-holder nav .breadcrumb li {font-size: 14px;margin-bottom: 5px;margin-top: 5px;text-align: left;}
+  .breadcrumb-item.active{
+    width: 85%;
+  }
   .breadcrumb-holder h4 { font-size: 1.65rem; margin-top: 5px; }
   .breadcrumb-item a, .breadcrumb-item.active { font-size: 1.1075rem; }
   .breadcrumb-item + .breadcrumb-item::before { font-size: 1.1075rem; }
 
   /* blog page breadcrumb */
   .page #breadcrumb .breadcrumb-holder h1 {
-    font-size: 1.65rem;
+    font-size: 1.3rem;
     margin-top: 5px;
+    line-height: 1.6;
   }
   #blog-page .container{
     padding-left: 30px;
-    padding-right:30px;
+    /* padding-right:30px; */
   }
   #blog-page .container .row{
     margin:0;
+    
+  }
+  #blog-page .container .row .col-lg-12{
+    padding: 0px 8px !important;
+  }
+  .blog-page-section{
+    padding-top: 50px !important;
   }
 } 
 

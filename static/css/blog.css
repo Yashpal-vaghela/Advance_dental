@@ -375,3 +375,11 @@ a {
   margin-top: 30px;
   margin-right: 10px;
 }
+@media(max-width:576px){
+  .blog-author-txt{
+    font-size: 12px;
+  }
+  .blog-card-descripation{
+    margin-bottom: 0px;
+  }
+}
