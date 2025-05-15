@@ -168,11 +168,11 @@ def cat_list(request, pk):
 
 def category_view(request, slug):
     # Remove 'category-' prefix if present in the slug
-    clean_slug = slug.replace('category-', '')
+    # clean_slug = slug.replace('category-', '')
 
     try:
         # Get the category by slug (recommended to use a 'slug' field in Category model)
-        final_category = Category.objects.get(slug=clean_slug)
+        final_category = Category.objects.get(slug=slug)
     except Category.DoesNotExist:
         return render(request, '404.html')  # Or handle gracefully
 

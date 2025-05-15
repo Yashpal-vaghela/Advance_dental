@@ -58,10 +58,10 @@
 
 				 		<!-- BLOG POSTS HOLDER -->
 						
-						{% comment %} <div class="col-lg-4 mb-4">
+						<div class="col-lg-4 mb-4">
 							<select class="form-select" name="category"  aria-label="Select Category" onchange="redirectToCategory(this)" >
 								{% for ie in data2 %}
-									<option value="{{ie.category}}" {% if category == ie.category|stringformat:"s" %}selected{% endif %}>
+									<option value="{{ie.slug}}" {% if category == ie.category|stringformat:"s" %}selected{% endif %}>
 										{{ie.category}}
 									</option>
 								{% endfor %}
@@ -73,7 +73,7 @@
 								<input type="text" class="blog-txt-field form-control" id="searchInput" onchange="searchBlogs()"  placeholder="Seach Blogs and tags" name="q">
 							</form>
 							<div id="suggestions"></div>
-						</div> {% endcomment %}
+						</div>
 						
 				 		<div class="col-lg-12">
 							<div class="posts-holder pr-30">
@@ -268,9 +268,8 @@
 <script>
     function redirectToCategory(selectElement) {
         const slug = selectElement.value;
-		const slug1 = slug.replace(/\s+/g, '-').toLowerCase()
         if (slug) {
-            window.location.href = "/blog/" + "category-" + slug1;  // adjust path if needed
+            window.location.href = "/blog/category/" + slug + "/"; 
         }
     }
 </script>
@@ -279,10 +278,9 @@
 console.log("paginationData",paginationData) {% endcomment %}
 const paginationData1 = {{data2.category}}
 const page1 = {{data.paginator.num_pages}}
-console.log("paginator",paginationData1,"page1",page1)
 	function searchBlogs() {
 		const query = document.getElementById('searchInput').value;
-		console.log("query",query);
+		//console.log("query",query);
 
 		if (query.length < 2) {
 			document.getElementById('suggestions').innerHTML = '';
