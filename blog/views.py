@@ -183,7 +183,7 @@ def category_view(request, slug):
     all_blogs = Blog.objects.all().order_by('-id')[:5]
 
     context = {
-        'category': final_category,
+        'data': final_category,
         'blogs': filtered_blogs,
         'latest_blogs': all_blogs,
     }

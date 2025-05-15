@@ -61,5 +61,6 @@ urlpatterns = [
     path('quicks-links/', views.connect, name='connect'),
     path('zirconia-crown/',views.zirconiacrown, name='zirconiacrown'),
     path('ad-implant/',views.adImplants, name='adImplants'),
-    path('sitemap/',views.sitemap,name="sitemap")
+    path('sitemap/',views.sitemap,name="sitemap"),
+    path('404/',views.error_404,name="404"),
 ]

@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
-
-{% block css %}
+{% block seo%}
+<title>{% spaceless %}{{data.meta_title}}{% endspaceless %}</title>
+<meta name="description"content="{% spaceless %}{{data.meta_description}}{% endspaceless %}"/>
+<link rel="canonical" href="{% spaceless %}{{ data.canonical }}{% endspaceless %}" />
+<meta property="og:site_name" content="Advance Dental Export">
+<meta property="og:url" content="{% spaceless %}{{ data.canonical }}{% endspaceless %}">
+<meta property="og:title" content="{% spaceless %}{{ data.meta_title }}{% endspaceless %}">
+<meta property="og:type" content="webiste">
+<meta property="og:description" content="{% spaceless %}{{ data.meta_description }}{% endspaceless %}">
+<meta property="og:image" content="{% spaceless %}{{ data.image.url }}{% endspaceless %}">
+<meta property="og:image:secure_url" content="{% spaceless %}{{ data.image.url }}{% endspaceless %}">
+{% comment %} <meta name="twitter:site" content="@{{ Twitter Handle }}"> {% endcomment %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% spaceless %}{{ data.meta_title }}{% endspaceless %}">
+<meta name="twitter:description" content="{% spaceless %}{{ data.meta_description }}{% endspaceless %}">
+{% endblock seo%}
+{% block css %} 
 {% endblock %}
 
 {% block body %}
@@ -21,7 +36,7 @@
 								</nav>
 
 								<!-- Title -->
-								<h1 class="h4-sm steelblue-color">{{category}}</h1>
+								<h1 class="h4-sm steelblue-color">{{data.category}}</h1>
 
 							</div>
 						</div>
