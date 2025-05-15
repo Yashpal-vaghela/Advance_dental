@@ -2,10 +2,10 @@
 {% load static %}
 
 {% block seo %}
-<title>{% spaceless %}{{pk.title}}{% endspaceless %}</title>
-<meta name="description" content="{% spaceless %}{{pk.description}}{% endspaceless %}">
-<meta name="keyword" content="{% spaceless %}{{pk.keyword}}{% endspaceless %}">
-<link rel="canonical" href="{% spaceless %}{{pk.canonical}}{% endspaceless %}">
+<title>Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export</title>
+<meta name="description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis."/>
+<meta name="keyword" content="{% spaceless %}{{pk.keyword}}{% endspaceless %}" />
+<link rel="canonical" href="{% spaceless %}{{pk.canonical}}{% endspaceless %}" />
 <!-- Opengraphs -->
 <meta property="og:title" content="{% spaceless %}{{pk.title}}{% endspaceless %}" />
 <meta property="og:type" content="{% spaceless %}{{pk.og_type}}{% endspaceless %}" />
@@ -178,7 +178,7 @@
               Elevating Digital Dentistry to unparalleled <br />
               heights worldwide
             </p>
-            <a href="{% url 'home:contact' %}" class="btn btn-blue tra-white-hover mt-20">Get In Touch</a>
+            <a href="{% url 'home:contact_new' %}" class="btn btn-blue tra-white-hover mt-20">Get In Touch</a>
           </div>
         </div>
       </div>
@@ -550,8 +550,6 @@
 
 	</div> <!-- End container -->
 </section> <!-- END INFO-4 -->
-{% comment %} {% include 'static_contact.html' %} {% endcomment %}
-{% comment %} {% include 'contact_section.html' %} {% endcomment %}
 <section id="contacts-1" class="wide-75 contact-section division" >
   <div class="container">
       <div class="row">

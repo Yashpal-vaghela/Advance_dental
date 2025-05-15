@@ -166,27 +166,25 @@ def cat_list(request, pk):
     }
     return render(request, 'blog_list.html', context)
 
-def category_view(request,slug):
-    # category = get_object_or_404(Category,slug=pk)
-    # SingleCatgory = Category.objects.get(slug=pk)
-    # posts = Category.objects.all().order_by('-id')
-    # blogcategory = Blog_Category.objects.all()
-    # print("blog_category",blogcategory)
-    # print("slug",pk,"SingleCatgory",category_id,"finalCategoryData",finalCategoryData,"filter",final1)
-    clean_slug = slug.replace('category-','').replace('category-','').capitalize()
-    # category = get_object_or_404(Category,slug=clean_slug)
-    # product = Category.objects.filter(category=category)
+def category_view(request, slug):
+    # Remove 'category-' prefix if present in the slug
+    clean_slug = slug.replace('category-', '')
 
-    finalCategoryData = Category.objects.get(category=clean_slug)
-    category_id = finalCategoryData.id
-    filterBlogData = Blog.objects.filter(category=category_id)
-    filterBlogData1 = Blog.objects.all().order_by('-id')
-    # final1 = Category.objects.filter(id=category_id)
-    print('clean',slug,'product',clean_slug,"final","sds",category_id)
-    # print("filterBlogData",filterBlogData,"finalCatgeoryData",finalCategoryData,"clean",clean_slug)
+    try:
+        # Get the category by slug (recommended to use a 'slug' field in Category model)
+        final_category = Category.objects.get(slug=clean_slug)
+    except Category.DoesNotExist:
+        return render(request, '404.html')  # Or handle gracefully
+
+    # Filter blogs belonging to this category
+    filtered_blogs = Blog.objects.filter(category=final_category).order_by('-id')
+
+    # Optional: latest blogs for sidebar or other sections
+    all_blogs = Blog.objects.all().order_by('-id')[:5]
 
     context = {
-        'category':filterBlogData,
-        'data':filterBlogData1
+        'category': final_category,
+        'blogs': filtered_blogs,
+        'latest_blogs': all_blogs,
     }
-    return render(request,'blog_category.html',context)
+    return render(request, 'blog_category.html', context)   

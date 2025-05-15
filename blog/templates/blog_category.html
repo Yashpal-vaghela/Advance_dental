@@ -1,73 +1,77 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %}
+{% load static %}
 
 {% block css %}
 {% endblock %}
 
 {% block body %}
-<p>Category data</p>
-			{% comment %} <div id="blog-page" class="wide-75 blog-page-section division pb-0">
+<!-- BREADCRUMB ============================================= -->
+			<div id="breadcrumb" class="division">
 				<div class="container">
-				 	<div class="row ">
-				 		<div class="col-lg-12">
-							<div class="posts-holder pr-30">
-								<div class="row">
-								   {% for ie in category %}
-								   	<div class="col-md-4 col-sm-6">
-									 
-									    <div class="blog-page">
-												
-												<div class="blog-home-img">
-													<img class="img-fluid" src="{{ie.image.url}}" width="340" height="191" alt="{{ie.h1}}" />	
-												</div>
+					<div class="row">						
+						<div class="col">
+							<div class=" breadcrumb-holder">
 
-												
-												<div class="blog-page-txt">
-													
-													<div class="blog-meta">
-														<div class="blog-author-wrapper">
-															<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
-															<span class="blog-author-txt"> By {{ ie.author }}</span>
-														</div>
-														<div class="blog-author-wrapper">
-															<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
-															<span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
-														</div>
-													</div>	
-													
-													<div class=" blog-list-heading steelblue-color">
-														<a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}" >{{ie.title}}</a></div>
-													
-													<p class="blog-card-descripation">
-														{{ie.description}}
-													</p>
-													<div class="blog-footer">
-														<hr class="blog-divider">
-														<a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
-													</div>
-												</div>
-								   		</div>	
-								  
-								    </div>
-								   {% endfor %}
-							   </div>
+								<!-- Breadcrumb Nav -->
+								<nav aria-label="breadcrumb">
+								  	<ol class="breadcrumb">
+								    	<li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+								    	<li class="breadcrumb-item active" aria-current="page"><a href="{% url 'blog:blog' %}">Blogs</a></li>
+								  	</ol>
+								</nav>
+
+								<!-- Title -->
+								<h1 class="h4-sm steelblue-color">{{category}}</h1>
+
 							</div>
-						</div>	
-				 	</div>	
-				 </div>	 
-			</div>	 {% endcomment %}
+						</div>
+					</div>  <!-- End row -->	
+				</div>	<!-- End container -->		
+			</div>	<!-- END BREADCRUMB -->	
+            <div class="container py-4">
+                <div class="row">
+                    {% for blog in blogs %}
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="blog-page">
 
- 	{% comment %} {% for ie in category %}
-        <p>{{ie.title}}</p>
-    {% endfor %}  {% endcomment %}
-	{% for ie in data %}
-		<p>{{ie.category}}</p>
-		<p>{{ie.image}}</p>
-	{% endfor %} 
+                                <div class="blog-home-img">
+                                    <img class="img-fluid" src="{{ blog.image.url }}" alt="{{ blog.h1 }}" width="340" height="191">
+                                </div>
+
+                                <div class="blog-page-txt">
+                                    <div class="blog-meta">
+                                        <div class="blog-author-wrapper">
+                                            <img src="{% static 'author.png' %}" alt="Author" class="blog-author" />
+                                            <span class="blog-author-txt">By {{ blog.author }}</span>
+                                        </div>
+                                        <div class="blog-author-wrapper">
+                                            <img src="{% static 'celender.png' %}" alt="Calendar" class="blog-author" />
+                                            <span class="blog-author-txt">{{ blog.published|date:"M. d, Y" }}</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="blog-list-heading steelblue-color">
+                                        <a href="{% url 'home:blogd' blog.slug %}" class="blog-item">{{ blog.title }}</a>
+                                    </div>
+
+                                    <p class="blog-card-descripation">{{ blog.description|truncatewords:25 }}</p>
+
+                                    <div class="blog-footer">
+                                        <hr class="blog-divider">
+                                        <a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    {% empty %}
+                        <div class="col-12 text-center">
+                            <p>No blogs found in this category.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
 {% endblock %}
 
 {% block javascript %}
-<script>
-	const a = {{data}}
-	console.log("a",a)
-</script> 
 {% endblock %}
