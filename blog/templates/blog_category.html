@@ -41,42 +41,38 @@
 							</div>
 						</div>
 					</div>  <!-- End row -->	
-				</div>	<!-- End container -->		
+				</div>	<!-- End container -->		 
 			</div>	<!-- END BREADCRUMB -->	
-            <div class="container py-4">
-                <div class="row">
-                    {% for blog in blogs %}
-                        <div class="col-md-4 col-sm-6 mb-4">
-                            <div class="blog-page">
-
-                                <div class="blog-home-img">
-                                    <img class="img-fluid" src="{{ blog.image.url }}" alt="{{ blog.h1 }}" width="340" height="191">
+            <div class="blog_category_container container py-4">
+                <div class="row justify-content-center justify-content-md-start">
+                    {% for blog in all_blogs %}
+                        <div class="col-lg-4 col-md-6 col-sm-10 mb-4">
+                            <div class="position-relative mx-auto all-blog-content card">
+                                <img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" />
+                                <div class="card-body">
+									<div class="blog-content-txt">
+										<div class="my-2 blog-author-date-content d-flex justify-content-between">
+											<div class="blog-author-wrapper">
+												<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+												<span class="blog-author-txt"> By {{ blog.author }}</span>
+											</div>
+											<div class="blog-author-wrapper">
+												<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
+												<span class="blog-author-txt"> {{ blog.published|date:"M. d, Y" }} </span>
+											</div>
+										</div>
+									</div>
+									<div class="blog-main-content steelblue-color">
+										<h2 class="mt-3 card-title"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.title|lower }}" >{{blog.title}}</a></h2>	
+											<p class="blog-content-descripation mb-0">
+												{{blog.description}}
+											</p>
+											<div class="card-footer blog-footer">
+												<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
+												<hr class="blog-divider">
+											</div>
+									</div>
                                 </div>
-
-                                <div class="blog-page-txt">
-                                    <div class="blog-meta">
-                                        <div class="blog-author-wrapper">
-                                            <img src="{% static 'author.png' %}" alt="Author" class="blog-author" />
-                                            <span class="blog-author-txt">By {{ blog.author }}</span>
-                                        </div>
-                                        <div class="blog-author-wrapper">
-                                            <img src="{% static 'celender.png' %}" alt="Calendar" class="blog-author" />
-                                            <span class="blog-author-txt">{{ blog.published|date:"M. d, Y" }}</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="blog-list-heading steelblue-color">
-                                        <a href="{% url 'home:blogd' blog.slug %}" class="blog-item">{{ blog.title }}</a>
-                                    </div>
-
-                                    <p class="blog-card-descripation">{{ blog.description|truncatewords:25 }}</p>
-
-                                    <div class="blog-footer">
-                                        <hr class="blog-divider">
-                                        <a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     {% empty %}
@@ -84,6 +80,70 @@
                             <p>No blogs found in this category.</p>
                         </div>
                     {% endfor %}
+						<div class="blog-page-pagination mt-2 b-top justify-content-center col-12">
+							<nav aria-label="Page navigation justify-content-center">
+								<ul class="pagination justify-content-center primary-theme ">
+									{% if page_obj.has_previous %}
+										<li class="page-item">
+											<a class="page-link" rel="prev" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous" tabindex="-1">
+												<span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+												<span class="sr-only">Previous</span>
+											</a>
+										</li>
+										{% else %}
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1">
+												<span aria-hidden="true">
+													<i class="fa fa-chevron-left"></i>
+												</span>
+											</a>
+										</li>
+									{% endif %}
+
+
+											{% for i in page_obj.paginator.page_range %}
+												{% if i == 1 or i == 2 %}
+													<li class="page-item {% if data1.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data1.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+
+												{% elif i >= data1.number|add:'-1' and i <= data1.number|add:'1' and i != data1.paginator.num_pages %}
+													{% if i == data1.number|add:'-1' and i > 2 %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+
+													<li class="page-item {% if data1.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data1.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+
+												{% elif i == data1.paginator.num_pages %}
+													{% if data1.number < i|add:'-2' %}
+														<li class="page-item disabled"><span class="page-link">...</span></li>
+													{% endif %}
+													<li class="page-item {% if data1.number == i %}active{% endif %}">
+														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data1.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
+													</li>
+													
+												{% endif %}
+											{% endfor %} 		
+									
+									{% if page_obj.has_next %}
+											<li class="page-item">
+												<a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+													<span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+													<span class="sr-only">Next</span>
+												</a>
+											</li>
+										{% else %}
+											<li class="page-item disabled">
+												<a class="page-link" href="#">
+													<i class="fa fa-chevron-right"></i>
+												</a>
+											</li>
+									{% endif %}
+								</ul>	
+							</nav>
+						</div>
                 </div>
             </div>
 {% endblock %}

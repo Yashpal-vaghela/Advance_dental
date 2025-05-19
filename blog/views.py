@@ -11,18 +11,23 @@ def blog_home(request):
     if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         results = []
         if query:
-            matching_blogs = Blog.objects.filter(Q(title__icontains=query) | Q(tags__icontains=query))[:5]
+            matching_blogs = Blog.objects.filter(Q(title__icontains=query)).distinct()[:5]
             results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
             return JsonResponse({'results':results})
-        
-    data1 = Blog.objects.all().order_by('-id')
+        return JsonResponse({'results': []})
+    
+    all_blogs = Blog.objects.all().order_by('-published')
+    remaining_blogs = all_blogs[2:]
+    paginator=Paginator(remaining_blogs,8)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    page = request.GET.get('page', 1)
+    first_blog = page_obj.object_list[:2]
+    all_blog = page_obj.object_list[2:]
+
     data2 =  Category.objects.all().order_by('-id')
     data3 = Blog.objects.filter(main3=True).order_by('-id')
     
-    paginator = Paginator(data1, 12)
-    page_number = request.GET.get('page',1)
-    page_obj = paginator.get_page(page_number)
-    page = request.GET.get('page', 1)
 
     try:
         data = paginator.page(page)
@@ -33,6 +38,8 @@ def blog_home(request):
 
 
     context = {
+        'first_blog':first_blog,
+        'all_blog':all_blog,
         'data':data,
         'data2':data2,
         'data3':data3,
@@ -63,11 +70,14 @@ def blog_detail(request, slug):
         data1 = Blog.objects.all().order_by('id')[:3]
         data2 =  Category.objects.all().order_by('-id')
         data3 = Blog.objects.filter(main3=True).order_by('-id')
+        related_blogs = Blog.objects.filter(category__in=data.category.all()).exclude(id=data.id).distinct()
+
         context = {
-        'data':data,
-        'data1':data1,
-        'data2':data2,
-        'data3':data3,
+            'data':data,
+            'data1':data1,
+            'data2':data2,
+            'data3':data3,
+            'related_blogs':related_blogs
         }
         return render(request, 'blog_detail.html', context)
     # except:
@@ -180,11 +190,26 @@ def category_view(request, slug):
     filtered_blogs = Blog.objects.filter(category=final_category).order_by('-id')
 
     # Optional: latest blogs for sidebar or other sections
-    all_blogs = Blog.objects.all().order_by('-id')[:5]
+    # all_blogs = Blog.objects.all().order_by('-id')
+    paginator = Paginator(filtered_blogs,6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    page = request.GET.get('page',1)
+    all_blogs = page_obj
+
+    try:
+        data = paginator.page(page)
+    except PageNotAnInteger:
+        data = paginator.page(1)
+    except EmptyPage: 
+        data = paginator.page(paginator.num_pages)
 
     context = {
         'data': final_category,
         'blogs': filtered_blogs,
         'latest_blogs': all_blogs,
+        'data1':data,
+        'page_obj':page_obj,
+        'all_blogs':all_blogs
     }
     return render(request, 'blog_category.html', context)   

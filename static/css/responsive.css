@@ -1706,7 +1706,7 @@
   #department-page .content-block p.p-md { font-size: 1.05rem; }
   #department-page .content-block p.mb-30 { margin-bottom: 10px; }
   /* Page Pagination */
-  .blog-page-pagination { margin-top: 60px; margin-bottom: 20px; padding-top: 60px; }
+  .blog-page-pagination { margin-top: 60px; margin-bottom: 8px; padding-top: 30px; }
   .page-link { font-size: 1.1075rem; padding: .25rem .6rem; }
   /* FAQs Page */
   #faqs-page .questions-holder { margin-bottom: 30px; }
@@ -2059,7 +2059,7 @@
   .about-info h4, p{
       text-align: left; 
   }
-  .col-lg-4, .col-lg-8 {
+   .col-lg-8 {
       width: 100% !important; /* Full width for smaller screens */
       text-align: center;
   }

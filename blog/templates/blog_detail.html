@@ -52,6 +52,7 @@
   content="{% spaceless %}{{data.image.url}}{% endspaceless %}"
 />
 {% endblock seo %} {% block css %}
+<link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet" />
 <style>
   p {
     font-size: 18px;
@@ -112,7 +113,7 @@
 
 <!-- BLOG PAGE CONTENT
 			============================================= -->
-<div id="blog-page" class="wide-100 blog-page-section division">
+<div id="blog-page" class="wide-100 pb-0 blog-page-section division">
   <div class="container">
     <div class="row">
       <!-- BLOG POSTS HOLDER -->
@@ -202,62 +203,63 @@
             <!-- END ABOUT POST AUTHOR -->
 
             <!-- RELATED POSTS -->
-            <div class="related-posts">
+            {% if related_blogs|length > 1 %}
+            <div class="related-posts position-relative">
               <!-- Title -->
-              <p class="h5-md steelblue-color">Related Posts</p>
-
-              <div class="row">
-                {% for ie in data1 %}
+              <p class="h5-md steelblue-color fw-bold">Related Posts</p>
                 <!-- BLOG POST #1 -->
-                <div class="col-md-4 col-sm-6">
-                  <!-- BLOG POST #1 -->
-                  <div class="blog-page">
-                    <!-- BLOG POST IMAGE -->
-                    <div class="blog-home-img">
-                      <img
-                        class="img-fluid"
-                        src="{{ie.image.url}}"
-                        alt="{{ie.h1}}"
-                        width="340"
-                        height="191"
-                      />
-                    </div>
-
-                    <!-- BLOG POST TITLE -->
-                    <div class="blog-page-txt">
-                          <div class="blog-meta">
-														<div class="blog-author-wrapper">
-															<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
-															<span class="blog-author-txt"> By {{ ie.author }}</span>
-														</div>
-														<div class="blog-author-wrapper">
-															<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
-															<span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
-														</div>
-													</div>                      
-                      <!-- Post Title -->
-                      <div class="blog-list-heading steelblue-color">
-                        <a href="{% url 'blogd' ie.slug %}">{{ie.title}}</a>
+                <div class="swiper-container">
+                    <div class="swiper related-blog-swiper">
+                      <div class="swiper-wrapper">
+                      {% for ie in related_blogs %}
+                        <div class="swiper-slide position-relative">
+                          <!-- BLOG POST #1 -->
+                                <div class="position-relative mx-auto all-blog-content card">
+                                  <img src="{{ie.image.url}}" alt="{{ie.h1}}" class="card-img-top h-100 img-fluid" />
+                                    <div class="card-body">
+                                        <div class="blog-content-txt ">
+                                          <div class="my-2 blog-author-date-content  d-flex justify-content-between">
+                                            <div class="blog-author-wrapper">
+                                              <img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+                                              <span class="blog-author-txt"> By {{ ie.author }}</span>
+                                            </div>
+                                            <div class="blog-author-wrapper">
+                                              <img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
+                                              <span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="blog-main-content text-start steelblue-color">
+                                          <h2 class="mt-3 card-title"><a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}" >{{ie.title}}</a></h2>
+                                          <!-- Post Text -->
+                                          <p class="blog-content-descripation mb-0">
+                                            {{ie.description}}
+                                          </p>
+                                          <div class="card-footer blog-footer">
+                                            <a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
+                                            <hr class="blog-divider">
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        {% endfor %}
+           
                       </div>
-
-                      <!-- Post Text -->
-                      <p class="blog-card-descripation">
-                        {{ie.description}}
-											</p>
-                      <div class="blog-footer">
-                        <hr class="blog-divider">
-                        <a href="{% url 'blogd' ie.slug %}" class="blog-read-more">Read More</a>
-                      </div>
                     </div>
-                  </div>
+                                 <!-- Pagination Dots -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                 </div>
-                <!-- END  BLOG POST #1 -->
-                {% endfor %}
-              </div>
+              
+                <!-- END  BLOG POST #1 -->   
+              {% endif %}
               <!-- End row -->
             </div>
             <!-- END RELATED POSTS -->
-
             <hr />
             
             <!-- COMMENT FORM -->
@@ -329,21 +331,44 @@
         </div>
       </div>
       <!-- END BLOG POSTS HOLDER -->
-
       {% comment %} {% include 'aside.html' %} {% endcomment %}
     </div>
     <!-- End row -->
   </div>
   <!-- End container -->
 </div>
-<!-- END BLOG PAGE CONTENT -->
-{% comment %} {% for ie in data3 %}
-<p>{{ie.category}}</p>
-{% endfor %} {% endcomment %}
 {% endblock body %} {% block js %}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script> 
-const a = {{data3}}
-console.log("a",a)
+  var swiper = new Swiper(".related-blog-swiper",{
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed:600,
+    loop:true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  })
 </script>
 <script type="application/ld+json">
   {
