@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
@@ -10,8 +10,23 @@ def blog_home(request):
 
     if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         results = []
+        # matching_blogs = Blog.objects.all()
+        # if tag_name:
+        #     matching_blogs = Blog.filter(tags__name=tag_name)
+        #     results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
+        # if title_query:
+        #     matching_blogs = Blog.filter(title__icontains=query).distinct()[:5]
+        #     results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
+
+        # return JsonResponse({'results':results})
+
         if query:
-            matching_blogs = Blog.objects.filter(Q(title__icontains=query)).distinct()[:5]
+            try:
+                tag = Tags.objects.get(tags__iexact=query)
+            except Tags.DoesNotExist:
+                tag = None
+            
+            matching_blogs = Blog.objects.filter(Q(title=query) | Q(tag__in=[tag])).distinct()[:5]
             results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
             return JsonResponse({'results':results})
         return JsonResponse({'results': []})

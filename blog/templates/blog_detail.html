@@ -203,7 +203,7 @@
             <!-- END ABOUT POST AUTHOR -->
 
             <!-- RELATED POSTS -->
-            {% if related_blogs|length > 1 %}
+            {% if related_blogs|length >= 1 %}
             <div class="related-posts position-relative">
               <!-- Title -->
               <p class="h5-md steelblue-color fw-bold">Related Posts</p>
@@ -217,7 +217,7 @@
                                 <div class="position-relative mx-auto all-blog-content card">
                                   <img src="{{ie.image.url}}" alt="{{ie.h1}}" class="card-img-top h-100 img-fluid" />
                                     <div class="card-body">
-                                        <div class="blog-content-txt ">
+                                        <div class="blog-content-txt">
                                           <div class="my-2 blog-author-date-content  d-flex justify-content-between">
                                             <div class="blog-author-wrapper">
                                               <img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
@@ -349,6 +349,10 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
     },
     navigation: {
       nextEl: ".swiper-button-next",

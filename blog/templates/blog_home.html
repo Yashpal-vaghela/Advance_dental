@@ -80,9 +80,11 @@
 										</div>
 							</div>
 						{% endfor %}
-						<div class="col-lg-4 order-lg-2 d-md-flex d-lg-block justify-content-between align-items-center order-1">
+						<div class="col-lg-4 order-lg-2 d-md-flex d-lg-block justify-content-between align-items-center align-items-sm-start order-1">
 							<form class="blog_search_form" action="/blog/" method="GET">
-								<input class="blog-txt-field form-control" type="text" id="searchInput" onchange="searchBlogs(event)" placeholder="Search Blogs and Tags" name="q">
+								<input class="blog-txt-field form-control" type="text" id="searchInput" onchange="searchBlogs(event)" oninput="searchBlogs(event)" placeholder="Search Blogs and Tags" name="q">
+								<img src="{% static 'search-icon3.svg' %}" class="search-icon-img img-fluid" id="searchicon-Img" />
+								<i class="fa-solid fa-xmark fs-5 d-none" id="closebutton"></i>
 							</form>
 							<div id="suggestions"></div>
 							<div class="blog_category_wrapper">
@@ -106,7 +108,7 @@
 					</div>
 				
 
-					<h2 class="blog-content-title">All Blogs</h2>
+					<h2 class="blog-content-title mb-0 mb-sm-3">All Blogs</h2>
 					<div class="row gap-4 gap-md-0 gap-lg-0  align-items-center justify-content-center mt-3  pb-sm-5 pb-0">
 						{% for blog in all_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 mb-md-4 mb-lg-4 d-md-block blog-page-wrapper">
@@ -244,8 +246,22 @@
 </script>
 <script>
 	function searchBlogs(event) {
+		if(event.target.value === ""){
+			const a = document.getElementById("closebutton")
+			const b = document.getElementById("searchicon-Img")
+			a.classList.add("d-none");
+			a.classList.remove("d-block")
+			b.classList.add("d-block")
+			b.classList.remove("d-none")
+		}else{
+			const a = document.getElementById("closebutton")
+			const b = document.getElementById("searchicon-Img")
+			a.classList.add("d-block")
+			a.classList.remove("d-none")
+			b.classList.add("d-none")
+			b.classList.remove("d-block")
+		}
 		const query = document.getElementById('searchInput').value;
-		console.log("query",query,event)
 		if (query.length < 2) {
 			document.getElementById('suggestions').innerHTML = '';
 			return;
@@ -256,23 +272,40 @@
         }})
 		.then(response => response.json())
 		.then(data => {
-				console.log("data",data)
 				const suggestionBox = document.getElementById('suggestions');
 				suggestionBox.innerHTML = '';
-				data.results.forEach(blog => {
-					console.log("blog",blog)
-					const div = document.createElement('a');
-					div.href= `/blog/${blog.slug}/`;
-					div.textContent = blog.title;
-					div.style.padding = '5px 10px';
-					div.style.borderBottom = '1px solid #ccc';
+				if(data.results.length == 0 ){
+					const div = document.createElement('p');
+					div.textContent = "Not found blog data !";
 					div.style.cursor = 'pointer';
-
 					suggestionBox.appendChild(div);
-        		});
-		});
+				}else{
+					data.results.forEach(blog => {
+						const div = document.createElement('a');
+						div.href= `/blog/${blog.slug}/`;
+						div.textContent = blog.title;
+						div.style.padding = '5px 10px';
+						div.style.borderBottom = '1px solid #ccc';
+						div.style.cursor = 'pointer';
+						suggestionBox.appendChild(div);
+        			});
+				}
+		})
 	}
-	{% comment %} document.getElementById('searchInput').addEventListener('change')  {% endcomment %}
+	document.getElementById('closebutton').addEventListener('click',function(){
+		const input = document.getElementById('searchInput')
+		input.value = '';
+
+		const closeBtn = document.getElementById('closebutton')
+		const searchIcon = document.getElementById("searchicon-Img")
+		closeBtn.classList.add("d-none");
+		closeBtn.classList.remove("d-block");
+		searchIcon.classList.add("d-block");
+		searchIcon.classList.remove("d-none");
+
+		const suggestionBox = document.getElementById('suggestions');
+    	suggestionBox.innerHTML = '';
+	})
 </script>
 <script type="application/ld+json">
 	{
@@ -317,4 +350,3 @@
 	}
 </script>	
 {% endblock js %}
-
