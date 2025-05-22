@@ -65,7 +65,7 @@ class Blog(models.Model):
     edits = RichTextUploadingField( blank=True, null=True)
     schema = models.TextField( blank=True, null=True)
     category = models.ManyToManyField(Category, null=True)
-    tag  = models.ManyToManyField(Tags, null=True)
+    tag  = models.ManyToManyField(Tags, null=True,blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
 
     def review(self):

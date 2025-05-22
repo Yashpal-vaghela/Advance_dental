@@ -29,7 +29,6 @@
 					<div class="row">						
 						<div class="col">
 							<div class=" breadcrumb-holder">
-
 								<!-- Breadcrumb Nav -->
 								<nav aria-label="breadcrumb">
 								  	<ol class="breadcrumb">
@@ -37,106 +36,134 @@
 								    	<li class="breadcrumb-item active" aria-current="page">Stay Ahead in Dentistry – Expert Insights, Trends & Innovations</li>
 								  	</ol>
 								</nav>
-
 								<!-- Title -->
 								<h1 class="h4-sm steelblue-color">Stay Ahead in Dentistry – Expert Insights, Trends & Innovations</h1>
-
 							</div>
 						</div>
 					</div>  <!-- End row -->	
 				</div>	<!-- End container -->		
 			</div>	<!-- END BREADCRUMB -->	
 
-
-
-
-			<!-- BLOG PAGE CONTENT
-			============================================= -->
-			<div id="blog-page" class="wide-75 blog-page-section division pb-0">
+			<div class="newblog-page-section">
 				<div class="container">
-				 	<div class="row ">
-
-				 		<!-- BLOG POSTS HOLDER -->
-						
-						<div class="col-lg-4 mb-4">
-							<select class="form-select" name="category"  aria-label="Select Category" onchange="redirectToCategory(this)" >
-								{% for ie in data2 %}
-									<option value="{{ie.slug}}" {% if category == ie.category|stringformat:"s" %}selected{% endif %}>
-										{{ie.category}}
-									</option>
-								{% endfor %}
-							</select>
-						</div> 
-						<div class="col-lg-4 text-end">
-							<form class="blog_search_form" action="/blog/"  method="GET" >
-								{% csrf_token %}
-								<input type="text" class="blog-txt-field form-control" id="searchInput" onchange="searchBlogs()"  placeholder="Seach Blogs and tags" name="q">
-							</form>
-							<div id="suggestions"></div>
-						</div>
-						
-				 		<div class="col-lg-12">
-							<div class="posts-holder pr-30">
-								<div class="row">
-								   {% for ie in data  %}
-								   	<div class="col-md-4 col-sm-6">
-									   <!-- BLOG POST #1 --> 
-									    <div class="blog-page">
-												<!-- BLOG POST IMAGE -->
-												<div class="blog-home-img">
-													<img class="img-fluid" src="{{ie.image.url}}" width="340" height="191" alt="{{ie.h1}}" />	
-												</div>
-
-												<!-- BLOG POST TITLE -->
-												<div class="blog-page-txt">
-
-													<!-- Post Data -->
-													<div class="blog-meta">
+					<div class="row gap-4 gap-md-0 gap-lg-0 mt-5 mb-sm-4 mb-5 position-relative justify-content-center">
+						<h2 class="blog-content-title order-lg-1 order-2 mb-0 mb-sm-3">Latest Blog</h2>
+						{% for blog in first_blog %}
+							<div class="col-lg-4 col-md-6 col-sm-11 order-lg-1 order-2">
+										<div class="position-relative mx-auto all-blog-content card">
+											<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" />
+											<div class="card-body">
+												<div class="blog-content-txt">
+													<div class="my-2 blog-author-date-content d-flex justify-content-between">
 														<div class="blog-author-wrapper">
 															<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
-															<span class="blog-author-txt"> By {{ ie.author }}</span>
+															<span class="blog-author-txt"> By {{ blog.author }}</span>
 														</div>
 														<div class="blog-author-wrapper">
 															<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
-															<span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
+															<span class="blog-author-txt"> {{ blog.published|date:"M. d, Y" }} </span>
 														</div>
-													</div>	
-													<!-- Post Title -->
-													<div class=" blog-list-heading steelblue-color">
-														<a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}" >{{ie.title}}</a></div>
-													<!-- Post Text -->
-													<p class="blog-card-descripation">
-														{{ie.description}}
-													</p>
-
-													<div class="blog-footer">
-														<hr class="blog-divider">
-														<a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
-														
 													</div>
 												</div>
-								   		</div>	
-								   		<!-- END BLOG POST #1 --> 
-								    </div>
-								   {% endfor %}
+												<div class="blog-main-content steelblue-color">
+												<h2 class="mt-3 card-title text-start"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.title|lower }}" >{{blog.title}}</a></h2>
+													<!-- Post Text -->
+													<p class="blog-content-descripation mb-0">
+														{{blog.description}}
+													</p>
+													<div class="card-footer blog-footer">
+														<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
+														<hr class="blog-divider">
+													</div>
+											</div>
+											</div>
+										</div>
+							</div>
+						{% endfor %}
+						<div class="col-lg-4 order-lg-2 d-md-flex d-lg-block justify-content-between align-items-center align-items-sm-start order-1">
+							<form class="blog_search_form" action="/blog/" method="GET">
+								<input class="blog-txt-field form-control" type="text" id="searchInput" onchange="searchBlogs(event)" oninput="searchBlogs(event)" placeholder="Search Blogs and Tags" name="q">
+								<img src="{% static 'search-icon3.svg' %}" class="search-icon-img img-fluid" id="searchicon-Img" />
+								<i class="fa-solid fa-xmark fs-5 d-none" id="closebutton"></i>
+							</form>
+							<div id="suggestions"></div>
+							<div class="blog_category_wrapper">
+								<h2 class="blog_category_title">Category</h2>
+								<select class="d-lg-none d-md-block form-select" name="category" aria-label="Select Category" onchange="redirectToCategory(this)">
+									<option> Category</option>
+									{% for ie in data2 %}
+										<option value="{{ie.slug}}" {% if category == ie.category|stringformat:"s" %}selected{% endif %}>
+											{{ie.category}}
+										</option>
+									{% endfor %}	
+								</select>
+								{% for ie in data2 %}
+									<div class="blog_category_name mb-3 mx-2" >
+										<h3 class="mb-0" onclick="redirectToCategory('{{ ie.slug }}')">{{ ie.category }}</h3>
+									</div>
+								{% endfor %}
+							</div>
 
-								   {% comment %} {% for article in page_obj %}
-										<h2>{{ article.title }}</h2>
-										<p>{{ article.content|truncatewords:30 }}</p>
-								   {% endfor %} {% endcomment %}
+						</div>
+					</div>
+				
 
-								   {% if data.has_other_pages %}
-							   <!-- BLOG PAGE PAGINATION -->
-							   <div class="blog-page-pagination b-top justify-content-center col-12">
-								   <nav aria-label="Page navigation justify-content-center ">
-									   <ul class="pagination justify-content-center primary-theme ">
-										   {% if data.has_previous %}
-										   <li class="page-item "><a class="page-link" rel="prev" href="?page={{ data.previous_page_number }}" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-										   {% else %}
-										   <li class="page-item disabled"><a class="page-link" rel="prev" href="#" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-										   {% endif %}
-										   
-										    {% for i in data.paginator.page_range %}
+					<h2 class="blog-content-title mb-0 mb-sm-3">All Blogs</h2>
+					<div class="row gap-4 gap-md-0 gap-lg-0  align-items-center justify-content-center mt-3  pb-sm-5 pb-0">
+						{% for blog in all_blog %}
+							<div class="col-lg-4 col-md-6 col-sm-11 mb-md-4 mb-lg-4 d-md-block blog-page-wrapper">
+								<div class="position-relative mx-auto all-blog-content card">
+										<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" />
+										<div class="card-body ">
+											<div class="blog-content-txt">
+												<div class="my-2 blog-author-date-content d-flex justify-content-between">
+													<div class="blog-author-wrapper">
+														<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+														<span class="blog-author-txt"> By {{ blog.author }}</span>
+													</div>
+													<div class="blog-author-wrapper">
+														<img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
+														<span class="blog-author-txt"> {{ blog.published|date:"M. d, Y" }} </span>
+													</div>
+												</div>
+											</div>
+											<div class="blog-main-content steelblue-color">
+												<h2 class="mt-3 card-title text-start"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.title|lower }}" >{{blog.title}}</a></h2>
+												<!-- Post Text -->
+												<p class="blog-content-descripation mb-0">
+													{{blog.description}}
+												</p>
+												<div class="card-footer blog-footer">
+													<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
+													<hr class="blog-divider">
+												</div>
+											</div>
+										</div>
+									</div>
+                            </div>
+						{% endfor %}
+						<div class="blog-page-pagination mt-2 b-top justify-content-center col-12">
+							<nav aria-label="Page navigation justify-content-center">
+								<ul class="pagination justify-content-center primary-theme ">
+									{% if page_obj.has_previous %}
+										<li class="page-item">
+											<a class="page-link" rel="prev" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous" tabindex="-1">
+												<span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+												<span class="sr-only">Previous</span>
+											</a>
+										</li>
+										{% else %}
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1">
+												<span aria-hidden="true">
+													<i class="fa fa-chevron-left"></i>
+												</span>
+											</a>
+										</li>
+									{% endif %}
+
+
+											{% for i in page_obj.paginator.page_range %}
 												{% if i == 1 or i == 2 %}
 													<li class="page-item {% if data.number == i %}active{% endif %}">
 														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
@@ -155,99 +182,37 @@
 													{% if data.number < i|add:'-2' %}
 														<li class="page-item disabled"><span class="page-link">...</span></li>
 													{% endif %}
-													{% comment %} {% if i >= data.number|add:'1'%}
-														<li class="page-item {% if data.number >= i %}active{% endif %}">
-															<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
-														</li>
-													{% endif %} {% endcomment %}
 													<li class="page-item {% if data.number == i %}active{% endif %}">
 														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
 													</li>
 													
 												{% endif %}
-											{% endfor %} 
-											{% comment %} {% for i in data.paginator.page_range %}
-												{# Always show page 1 and 2 #}
-												{% if i == 1 or i == 2 %}
-													<li class="page-item {% if data.number == i %}active{% endif %}">
-														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
-													</li>
-
-												{# Show current -1, current, current +1 (excluding first and last pages) #}
-												{% elif i >= data.number|add:'-1' and i <= data.number|add:'1' and i != data.paginator.num_pages and i != 1 %}
-													{% if i == data.number|add:'-1' and i > 3 %}
-														<li class="page-item disabled"><span class="page-link">...</span></li>
-													{% endif %}
-
-													<li class="page-item {% if data.number == i %}active{% endif %}">
-														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
-													</li>
-
-												{# Show last 2 pages when user is on page 1 #}
-												{% elif data.number == 1 and (i == data.paginator.num_pages or i == data.paginator.num_pages|add:'-1') %}
-													{% if i == data.paginator.num_pages|add:'-1' %}
-														<li class="page-item disabled"><span class="page-link">...</span></li>
-													{% endif %}
-													<li class="page-item">
-														<a class="page-link" href="?page={{ i }}">{{ i }}</a>
-													</li>
-
-												{# Always show last page if not already shown above #}
-												{% elif i == data.paginator.num_pages %}
-													{% if data.number < i|add:'-2' %}
-														<li class="page-item disabled"><span class="page-link">...</span></li>
-													{% endif %}
-													<li class="page-item {% if data.number == i %}active{% endif %}">
-														<a class="page-link" href="?page={{ i }}">{{ i }} {% if data.number == i %}<span class="sr-only">(current)</span>{% endif %}</a>
-													</li>
-												{% endif %}
-											{% endfor %} {% endcomment %}
-
-										    {% comment %} {% for i in data.paginator.page_range %}
-												{% if data.number == i %}
-												<li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
-												{% else %}
-												<li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a> </li>
-												{% endif %}
-										  	{% endfor %} {% endcomment %}
-											
-										   {% comment %} {% for num in page_obj.paginator.page_range %}
-												{% if num == 1 or num == 2 or num == page_obj.paginator.num_pages or num == page_obj.paginator.num_pages|add:'-1' or num >= page_obj.number|add:'1' %}
-														{% if num == page_obj.number %}
-															<span class="active">{{ num }}</span>
-														{% else %}
-															<a href="?page={{ num }}">{{ num }}</a>
-														{% endif %}
-												{% else %}
-													{% if num == 3 and page_obj.number > 5 %}
-														<span>...</span>
-													{% else %}
-														{% if num == page_obj.paginator.num_pages|add:'-2' and page_obj.number < page_obj.paginator.num_pages|add:'-3' %}
-															<span>...</span>
-														{% endif %}
-													{% endif %}
-												{% endif %}
-										   {% endfor %} {% endcomment %}
-										   {% if data.has_next %}
-										   <li class="page-item next-page"><a class="page-link" rel="next" href="?page={{ data.next_page_number }}"><i class="fas fa-long-arrow-alt-right"></i></a></li>
-										   {% else %}
-										   <li class="page-item next-page"><a class="page-link" rel="next" href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
-										   {% endif %}
-									   </ul>	
-									</nav>					
-							   </div>
-							   {% endif %}	
-							   </div>
-							</div>
-						</div>	 <!-- END BLOG POSTS HOLDER -->
-						{% comment %} {% include 'aside.html' %}	 {% endcomment %}
-				 	</div>	<!-- End row -->	
-				 </div>	 <!-- End container -->
-			</div>	<!-- END BLOG PAGE CONTENT -->
+											{% endfor %} 		
+									
+									{% if page_obj.has_next %}
+											<li class="page-item">
+												<a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+													<span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+													<span class="sr-only">Next</span>
+												</a>
+											</li>
+										{% else %}
+											<li class="page-item disabled">
+												<a class="page-link" href="#">
+													<i class="fa fa-chevron-right"></i>
+												</a>
+											</li>
+									{% endif %}
+								</ul>	
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
 {% endblock body %}
 {% block js %}
 {% comment %} <script>
-	document.getElementById('search-box').addEventListener('change',function(event){
+	document.getElementById('searchInput').addEventListener('change',function(event){
 		const query = event.target.value.toLowerCase();
 		const items = document.querySelectorAll('.blog-item') 
 		console.log("items",items);
@@ -266,22 +231,37 @@
 	})	
 </script>	 {% endcomment %}
 <script>
-    function redirectToCategory(selectElement) {
-        const slug = selectElement.value;
-        if (slug) {
-            window.location.href = "/blog/category/" + slug + "/"; 
-        }
+    function redirectToCategory(slug) {
+		const dataType = typeof(slug)
+		if(dataType === "string"){
+			if (slug) {
+           		window.location.href = "/blog/category/" + slug + "/"; 
+        	}
+		}
+		else{
+			const slug1 = slug.value;
+           	window.location.href = "/blog/category/" + slug1 + "/"; 
+		}
     }
 </script>
 <script>
-{% comment %} const paginationData = {{page_obj.paginator.page_range }}
-console.log("paginationData",paginationData) {% endcomment %}
-const paginationData1 = {{data2.category}}
-const page1 = {{data.paginator.num_pages}}
-	function searchBlogs() {
+	function searchBlogs(event) {
+		if(event.target.value === ""){
+			const a = document.getElementById("closebutton")
+			const b = document.getElementById("searchicon-Img")
+			a.classList.add("d-none");
+			a.classList.remove("d-block")
+			b.classList.add("d-block")
+			b.classList.remove("d-none")
+		}else{
+			const a = document.getElementById("closebutton")
+			const b = document.getElementById("searchicon-Img")
+			a.classList.add("d-block")
+			a.classList.remove("d-none")
+			b.classList.add("d-none")
+			b.classList.remove("d-block")
+		}
 		const query = document.getElementById('searchInput').value;
-		//console.log("query",query);
-
 		if (query.length < 2) {
 			document.getElementById('suggestions').innerHTML = '';
 			return;
@@ -290,25 +270,42 @@ const page1 = {{data.paginator.num_pages}}
 		fetch(`/blog/?q=${encodeURIComponent(query)}`,{headers: {
             'X-Requested-With': 'XMLHttpRequest' // important for detection in view
         }})
-			.then(response => response.json())
-			.then(data => {
-				console.log("data",data)
+		.then(response => response.json())
+		.then(data => {
 				const suggestionBox = document.getElementById('suggestions');
 				suggestionBox.innerHTML = '';
-				data.results.forEach(blog => {
-					console.log("blog",blog)
-					const div = document.createElement('a');
-					div.href= `/blog/${blog.slug}/`;
-					div.textContent = blog.title;
-					div.style.padding = '5px 10px';
-					div.style.borderBottom = '1px solid #ccc';
+				if(data.results.length == 0 ){
+					const div = document.createElement('p');
+					div.textContent = "Not found blog data !";
 					div.style.cursor = 'pointer';
-
 					suggestionBox.appendChild(div);
-        		});
-			});
-		}
-	{% comment %} document.getElementById('searchInput').addEventListener('change')  {% endcomment %}
+				}else{
+					data.results.forEach(blog => {
+						const div = document.createElement('a');
+						div.href= `/blog/${blog.slug}/`;
+						div.textContent = blog.title;
+						div.style.padding = '5px 10px';
+						div.style.borderBottom = '1px solid #ccc';
+						div.style.cursor = 'pointer';
+						suggestionBox.appendChild(div);
+        			});
+				}
+		})
+	}
+	document.getElementById('closebutton').addEventListener('click',function(){
+		const input = document.getElementById('searchInput')
+		input.value = '';
+
+		const closeBtn = document.getElementById('closebutton')
+		const searchIcon = document.getElementById("searchicon-Img")
+		closeBtn.classList.add("d-none");
+		closeBtn.classList.remove("d-block");
+		searchIcon.classList.add("d-block");
+		searchIcon.classList.remove("d-none");
+
+		const suggestionBox = document.getElementById('suggestions');
+    	suggestionBox.innerHTML = '';
+	})
 </script>
 <script type="application/ld+json">
 	{
@@ -353,4 +350,3 @@ const page1 = {{data.paginator.num_pages}}
 	}
 </script>	
 {% endblock js %}
-

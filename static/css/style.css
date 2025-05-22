@@ -4109,8 +4109,8 @@ a.share-ico.ico-pinterest {
 .author-senoff {
   background-color: #f8f9fb;
   padding: 45px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -5414,7 +5414,7 @@ ul.blog-category-list li:hover {
 
 /* blog breadcrumb */
 .page #breadcrumb .breadcrumb-holder h1 {
-  line-height: 1;
+  line-height: 1.4;
   font-weight: 900;
   letter-spacing: 0;
   margin-top: 10px;
@@ -5464,7 +5464,7 @@ ul.blog-category-list li:hover {
 .blog-page-pagination {
   /* margin-top: 70px; */
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 
 .page-link {
@@ -6744,7 +6744,9 @@ nav a#pull {
   display: block;
   overflow: hidden;
 }
-
+.sblog-post-txt .content h2{
+  font-size: 1.5rem;
+}
 .blog-post-img img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -7044,7 +7046,15 @@ nav a#pull {
     font-size: 1.4rem !important;
     line-height: 1.55;
   }
-
+  .sblog-post-txt h4{
+    text-align: left;
+    line-height: 1.5;
+  }
+  .sblog-post-txt .content h2{
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 1.6;
+  }
   /* .exhibition-gallery-wrap img{
     height: 400px;
   } */
