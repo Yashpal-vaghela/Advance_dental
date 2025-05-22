@@ -5,23 +5,26 @@
 <title>Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export</title>
 <meta name="description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis."/>
 <meta name="keyword" content="{% spaceless %}{{pk.keyword}}{% endspaceless %}" />
-<link rel="canonical" href="{% spaceless %}{{pk.canonical}}{% endspaceless %}" />
+<link rel="canonical" href="https://advancedentalexport.com/best-dental-lab-in-{{pk.slug}}/" />
 <!-- Opengraphs -->
 <meta property="og:title" content="{% spaceless %}{{pk.title}}{% endspaceless %}" />
 <meta property="og:type" content="{% spaceless %}{{pk.og_type}}{% endspaceless %}" />
-<meta property="og:url" content="{% spaceless %}{{pk.canonical}}{% endspaceless %}" />
+<meta property="og:url" content="https://advancedentalexport.com/best-dental-lab-in-{{pk.slug}}/" />
+<meta property="og:site_name" content="Advance Dental Export"/>
 {% if pk.image %}
 <meta property="og:image" content="{% spaceless %}{{pk.image.url}}{% endspaceless %}" />
+<meta property="og:image:alt" content="Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export"/>
 {% endif %}
-<meta name="og:description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
+<meta name="og:description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis." />
 
-<meta name="twitter:card" content="{% spaceless %}{{pk.description}}{% endspaceless %}" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@advancedentalexport" />
-<meta name="twitter:title" content="{% spaceless %}{{pk.title}}{% endspaceless %} " />
-<meta name="twitter:description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
+<meta name="twitter:title" content="Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export" />
+<meta name="twitter:description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis." />
 
 {% if pk.image %}
 <meta name="twitter:image" content="{% spaceless %}{{pk.image.url}}{% endspaceless %}" />
+<meta property="twitter:image:alt" content="Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export"/>
 {% endif %}
 
 {% endblock seo %}
@@ -41,12 +44,12 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Best Dental Lab In {{pk.name}}</li>
+							<li class="breadcrumb-item active" aria-current="page">Best Dental Lab in {{pk.name}}</li>
 						</ol>
 					</nav>
 
 					<!-- Title -->
-					<h1 class="h4-sm steelblue-color">Best Dental Lab In - {{pk.name}}</h1>
+					<h1 class="h4-sm steelblue-color">Best Dental Lab in {{pk.name}}</h1>
 
 				</div>
 			</div>

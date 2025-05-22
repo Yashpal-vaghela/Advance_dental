@@ -904,7 +904,7 @@ def bdl(request):
 #     return render(request, 'index.html', context)
 
 
-def bdld(request, pk):
+def bdld(request, slug):
     main3 = Blog.objects.filter(main3=True).order_by('-id')[:3]
     data = Testimonials.objects.all().order_by('-id')[:20]
     data2 = Blog.objects.all().order_by('-id')[:3]
@@ -912,7 +912,7 @@ def bdld(request, pk):
     gallery = Gallery.objects.all().order_by('-id')[:7]
     gallery21 = BeforeAfter.objects.all().order_by('-id')[:5]
     video      =VideoTestimonals.objects.all().order_by('-id')[:4]
-    pk = Place.objects.get(name=pk)
+    pk = Place.objects.get(slug=slug)
     
     context = { 
         'pk':pk,
@@ -944,7 +944,7 @@ def web_story_detail(request, story_slug):
 
 def sitemap(request):
     products = Product.objects.all()
-    places = Place.objects.all().values('id','name','title','slug','h1')[:24]
+    places = Place.objects.all().values('id','name','title','slug','h1')
     data1 = Blog.objects.all().order_by('-id')
     webstory = WebStory.objects.all()
     exhibition = Events.objects.all()

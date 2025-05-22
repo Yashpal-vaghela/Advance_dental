@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.urls import reverse
+from django.utils.text import slugify
 
 
 
@@ -292,6 +293,11 @@ class Place(models.Model):
     og_site = models.CharField(max_length = 156,blank=True, null=True)
     image  = models.ImageField(upload_to="SEO",blank=True, null=True)
     schema = models.TextField( blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug and self.name:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
     
     def __str__(self):
         return self.name   
@@ -326,4 +332,3 @@ class WebStoryVideo(models.Model):
 
     def __str__(self):
         return f"Video for {self.web_story.title}"
-0

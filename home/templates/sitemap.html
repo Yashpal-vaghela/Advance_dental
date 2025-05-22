@@ -124,7 +124,7 @@
                 {% comment %} <a href="/best-dental-lab-in-{{place.name}}">{{place.h1}}</a> {% endcomment %}
                 {% with city=place.name %}
                   {% with before="Best Dental Lab In" after="- ADE" %}
-                  <a href="/best-dental-lab-in-{{place.name}}"> {{ before }} <span class="city">{{ city }}  {{ after }}</span></a> 
+                  <a href="/best-dental-lab-in-{{place.slug}}/"> {{ before }} <span class="city">{{ city }}  {{ after }}</span></a> 
                   {% endwith %}
                 {% endwith %}
               </div>

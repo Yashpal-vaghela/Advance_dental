@@ -1,3 +1,4 @@
+import re
 from django.http import HttpResponsePermanentRedirect
 from blog.models import Blog, Product
 
@@ -48,4 +49,15 @@ class EventGalleryRedirectMiddleware:
             slug = path[len('event-gallery/'):]
             return HttpResponsePermanentRedirect(f'/exhibition-gallery/{slug}/')
 
+        return self.get_response(request)
+
+class BestDentalLabRedirectMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+        self.pattern = re.compile(r'^/best-dental-lab-in-[^/]+/')
+
+    def __call__(self, request):
+        path = request.path
+        if self.pattern.match(path) and any(c.isupper() for c in path):
+            return HttpResponsePermanentRedirect(path.lower())
         return self.get_response(request)
