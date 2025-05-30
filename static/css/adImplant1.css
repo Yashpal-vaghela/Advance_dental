@@ -6,7 +6,96 @@
 .pin-spacer{
   overflow: hidden !important;
 }
+/* --------------------------- IMPLANT BANNER SECTION ----------------------- */
 
+.implant-slider-wrapper{
+  background-color: #000;
+}
+.implant-slider-wrapper .implant-banner-bg{
+  object-fit: cover;
+}
+.implant-banner-img-wrapper{
+  top:5%;
+  z-index: 9999;
+  width:100%;
+  max-width: 100%;
+}
+.implant-banner-img{
+  position: relative;
+  top:0%;
+  /* width:95% !important; */
+  /* left:50%; */
+  z-index: 9999;
+}
+.implant-text{
+  color: #fff;
+  text-align: left;
+  margin-left: 19%;
+  font-size: 45px;
+  line-height: 1.6;
+  margin-top: 15%;
+}
+.implant-text b{
+  background: linear-gradient(90deg, #1B8976 0%, #00D5FF 100%);
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-weight: 700;
+}
+.implant-mobile-banner{
+  display: none;
+}
+@media screen and (min-width: 1439px) and (max-width: 1649px) {
+    .implant-banner-img{
+       width:90% !important;
+       margin-left: auto;
+       top:4%;
+    }
+}
+@media(max-width:1200px){
+  .implant-text{
+    font-size: 40px;
+  }
+  .implant-slider-wrapper .implant-banner-bg{
+    height: 100%;
+  }
+  .implant-banner-img-wrapper{
+    top:5%
+  }
+  .implant-banner-img{
+    width:95% !important;
+    margin-left: auto;
+  }
+  .implant-text{
+    margin-left: 25%;
+  }
+}
+@media(max-width:1165px){
+  .implant-text{
+    margin-left: 19%;
+  }
+}
+@media(max-width:991px){
+  .implant-text{
+    font-size: 35px;
+  }
+  .implant-banner-img-wrapper{
+    top:26%;
+  }
+}
+@media(max-width:800px){
+  .implant-banner-img-wrapper{
+    top:24%;
+  }
+}
+@media(max-width:768px){
+  .implant-mobile-banner{
+    display: block;
+  }
+  .implant-slider-wrapper .implant-banner-bg,.implant-banner-img-wrapper{
+    display: none;
+  }
+}
 /* ----------------------------- what is Implant section -------------------- */
 .Implant-second-section {
   padding: 50px 0px;
@@ -47,7 +136,7 @@
 }
 @media (max-width: 991px) {
   .Implant-second-section {
-    margin: 12% auto 3%;
+    margin: 6% auto 3%;
     padding: 0px;
   }
   .Implant-text1 {
@@ -59,9 +148,9 @@
   }
 }
 @media(max-width:768px){
-  .Implant-second-section {
-    margin: 14% auto 3%;
-  }
+  /* .Implant-second-section {
+    margin: 7% auto 3%;
+  } */
   .Implantfirst-text p{
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -73,7 +162,7 @@
 }
 @media (max-width: 576px){
   .Implant-second-section{
-    margin: 18% auto 6.5%;
+    margin: 10% auto 6.5%;
   }
   /* .Implant-second-section .col-10{
     padding: 0px !important;
@@ -110,7 +199,7 @@
 }
 @media (max-width:450px){
   .Implant-second-section {
-      margin: 24% auto 5%;
+      margin: 10% auto 5%;
       padding: 0px auto 20px;
   }
 }
@@ -119,6 +208,12 @@
 /* #ImplantProsthesis.unpinned {
   height: 100% !important;
 } */
+.pin-spacer:has(.ImplantProsthesis){
+  overflow: visible !important;
+}
+.ImplantProsthesis{
+  background-color: #fff;
+}
 .ImplantProsthesis .product-section-title {
   width: 100%;
   text-align: center;
@@ -146,7 +241,7 @@
   border-radius: 14px;
   width: 82%;
   padding: 20px 20px;
-  margin: 20px auto 20px;
+  margin: 10px auto 10px;
   opacity: 0;
 }
 .ImplantProsthesis-content.active {
@@ -162,6 +257,14 @@
 }
 .ImplantProsthesis-content p:first-child{
   text-align: start;
+}
+@media(min-width:1200px) and (max-width:1460px){
+  .implant-prosthesis-img,.ImplantImageWrapper{
+    height: 100%;
+  }
+  .ImplantImageWrapper{
+    margin-top: 3%;
+  }
 }
 @media (max-width: 1350px) {
   .ImplantProsthesis-content {
@@ -213,7 +316,7 @@
     top: 80px;
   }
   .ImplantImageWrapper-mobile {
-    background-image: url("../../static/ImplantProsthesis.png");
+    background-image: url("../../static/img/ImplantProsthesis1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,12 +350,22 @@
 }
 @media (max-width: 576px) {
   .ImplantProsthesis .container .row .d-block {
-    top: 30px;
+    /* top: 125px; */
+    /* top:30% */
+    top:20%;
   }
+  /* .ImplantProsthesis .container{
+    width:95%
+  } */
+  /* .ImplantProsthesis .container .row{
+    --bs-gutter-x: 2rem;
+  } */
   .ImplantImageWrapper-mobile {
     /* background-size: 90% 90%; */
-    background-size: 100% 85%;
-    background-position: top;
+    background-size: 100% 60%;
+    background-position: center;
+    /* margin-top: -14%; */
+    margin-bottom: -8%;
     /* margin-top: 12%; */
   }
   /* .ImplantImageWrapper-mobile {
@@ -288,6 +401,11 @@
     font-size: 22px;
   }
 }
+@media(max-width:450px){
+    .ImplantImageWrapper-mobile{
+      margin-top: -32%;
+    }
+}
 
 /* ------------------- why implant section ------------------ */
 .why-Implant-section {
@@ -298,6 +416,7 @@
   height: 100%;
   position: sticky;
   top: 70px !important;
+  margin-top: 3%;
   /* margin: 60px auto; */
 }
 .why-Implant-section.fixed {
@@ -443,6 +562,8 @@
 @media (max-width: 576px) {
   .pin-spacer:has(.why-Implant-section){
     margin-top: -20% !important;
+    width: 100% !important;
+    /* top: 0px !important; */
   }
   .why-Implant-title {
     font-size: 28px;
@@ -455,7 +576,12 @@
   .why-Implant-section {
     background-size: auto 85%;
     background-position: top;
+    width: 100% !important;
   }
+  /* .why-Implant-section .container{
+    width:97%;
+    padding-right: 0px !important;
+  } */
   .why-Implant-content {
     width: 65%;
   }
@@ -487,7 +613,10 @@
 /* ---------------------- Types of ad Implant ------------------- */
 .TypeofImplants {
   padding: 0px 0px 50px;
-  margin: -12% auto 0px;
+  margin: -11% auto 0px;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 .TypeofImplants .product-section-title {
   width: 100%;
@@ -670,12 +799,22 @@
 }
 
 /* ----------- why to choose Ad Implants ----------- */
+.typeslider{
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
 .typeslider .slider {
   margin: 10px auto 40px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 100%;
   height: 550px;
   overflow: hidden;
 }
+/* .swiper-slide-active .implant-type-card{
+    background-color: #1b8976 !important;
+    color: white !important;
+} */
 .typeslider .implant-type-card {
   border-radius: 12px;
   height: 230px;
@@ -688,6 +827,10 @@
   flex-direction: column;
   justify-content: space-between;
   color: black;
+}
+.typeslider .implant-type-card:hover{
+    background-color: #1b8976 !important;
+    color: white !important;
 }
 .typeslider .implant-type-card-heading {
   font-weight: 500;
@@ -776,9 +919,10 @@
     font-size: 22px;
   }
   .ImplantProsthesis .product-section-title{
-    left:7%;
+    left:5%;
     position: relative;
     margin-bottom: 12px;
+    width: 90%;
   }
   .typeslider-wrapper .vector2{
     width:45%;
@@ -797,7 +941,7 @@
     width: 84%;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    /* margin: auto; */
   }
 }
 
@@ -822,16 +966,19 @@
 
 .future-Implants {
   padding: 0px 0px 0px !important;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 .future-Implants .col-lg-6 {
   align-self: flex-start;
   /* height: 100%; */
 }
-
 .future-title {
   color: #1b8976;
   position: absolute;
   text-align: center;
+  /* left: 30.9%; */
   left: 33.5%;
   /* font-weight: 500; */
   background: linear-gradient(72deg, #1b8976 80%, #fff 35%);
@@ -848,6 +995,7 @@
 }
 .future-Implants .splide {
   visibility: visible;
+ 
 }
 #future-slider .future-content-wrapper {
   margin-top: 45px !important;
@@ -874,6 +1022,17 @@
 .future-content .future-p {
   margin-bottom: 30px;
 }
+/* @media(min-width:1300px) and (max-width:1440px){
+} */
+/* @media(min-width:1439px) and (max-width:1649px){
+} */
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  .future-title {
+    left: 30.2%;
+  }
+}
+
 @media (max-width: 1200px) {
   .pin-spacer:has(.future-Implants.unpinned){
     /* height: 100vh !important; */
@@ -950,7 +1109,7 @@
   .future-title{
     font-size: 24px;
     text-align: left;
-    left:7%;
+    left:8%;
     position: relative;
   }
   .future-content .future-p, .future-content .sec_copy_para{
@@ -965,17 +1124,24 @@
     letter-spacing: 0.4px;
     font-size: 18px;
   }
-  .future-Implants {
+  /* .future-Implants {
     padding: 5px 0px 0px !important;
-  }
+  } */
+ 
   .future-Implants .col-lg-6{
     padding: 0px;
+  }
+  .future-Implants .row{
+    --bs-gutter-x: 0.2rem;
   }
 }
 
 /* ------------------------ patient success story section ---------------------- */
 .patient-success{
   margin: 3% auto;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 .patient-success .product-section-title{
   width: 100%;
@@ -1061,7 +1227,8 @@
     text-align:left;
   }
   .patient-success{
-    margin: 1.5% auto;
+    margin: 0px auto;
+    padding: 1.5% 0px;
   }
   .patient-success .vector1{
     display: none; 
@@ -1075,7 +1242,6 @@
     position: relative;
     background-color: #fff;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-
   }
   .swiper-slide .order-1 .flipper{
     width: 25%;
@@ -1156,16 +1322,16 @@
     display: none;
   }
   .patientSwiper .swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, 44%) !important;
+    right: var(--swiper-navigation-sides-offset, 41%) !important;
   }
   .patientSwiper .swiper-button-prev {
-    right: var(--swiper-navigation-sides-offset, 44%) !important;
+    right: var(--swiper-navigation-sides-offset, 41%) !important;
   }
   .patient-success-content{
     padding:20px 20px;
   }
   .patient-success-content h2{
-    font-size: 20px;
+    font-size: 18px;
   }
   .swiper-slide .order-1 .flipper{
     width:35%;
@@ -1192,7 +1358,7 @@
 @media(min-width:1439px) and (max-width:1649px){
     /* type of implants */
     .TypeofImplants{
-      margin: 4% auto 0px;
+      margin: 6% auto 0px;
     }
     /* why implant section */
     .why-Implant-titleWrapper{

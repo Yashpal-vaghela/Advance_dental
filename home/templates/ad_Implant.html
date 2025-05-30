@@ -5,10 +5,12 @@
 {% comment %} <link href="{% static 'css/adImplant2.css '%}" rel="stylesheet" /> {% endcomment %}
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link href="{% static 'css/zir.css' %}" rel="stylesheet" />
+<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
 {% comment %} <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
 />  {% endcomment %}
+
 <link
   href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
   rel="stylesheet"
@@ -17,6 +19,24 @@
 {% comment %} <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> {% endcomment %}
 {% endblock %} {% block body %}
   <div class="page1">
+      <section class="hero-section1 implant-hero-section position-relative mx-auto p-0 overflow-hidden d-block ">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide implant-slider-wrapper position-relative">
+                  <img src="{% static '/img/implant-banner-bg9.png' %}" class="img-fluid implant-banner-bg" />
+                  <img src="{% static '/img/implant-mobile-banner2.png' %}" class="img-fluid implant-mobile-banner"/>
+                  <div class="container implant-banner-img-wrapper position-absolute">
+                      <div class="row align-items-center justify-content-end">
+                        <div class="col-lg-5 col-md-5">
+                          <h1 class="implant-text">Plant Your Implant with <b>AD-Implant</b></h1>
+                        </div>
+                        <div class="col-lg-7 col-md-7 p-0" >
+                          <img src="{% static '/img/implant-banner-img4.png' %}" class="img-fluid implant-banner-img" />
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
       <!-- what is zirconia -->
       <section class="section Implant-second-section overflow-hidden">
         <div class="container position-relative">
@@ -65,9 +85,9 @@
             </div>
           </div>
         </div>
-      </section> 
+      </section>
       <!-- Reason to choose ADimplant prosthesis -->
-      <section class="section ImplantProsthesis" id="ImplantProsthesis" data-scroll-section >
+      <section class="section ImplantProsthesis overflow-visible" id="ImplantProsthesis" data-scroll>
         <div class="container position-relative">
           <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
           <h2 class="product-section-title">
@@ -80,7 +100,7 @@
             </div>
             <div class="col-lg-6 col-12 px-md-0 position-sticky ImplantProsthesis-firstcontent">
               <figure class="ImplantImageWrapper" id="ImplantImg1"  data-scroll  data-scroll-speed="2"  style="opacity: 0" >
-                <img src="{% static 'ImplantProsthesis.png' %}" class="img-fluid" />
+                <img src="{% static '/img/ImplantProsthesis1.png' %}" class="implant-prosthesis-img img-fluid" />
               </figure>
             </div>
             <div class="col-lg-6 col-12 px-md-0 ImplantProsthesis-secondcontent">
@@ -121,9 +141,9 @@
             </div>
           </div>
         </div>
-      </section>  
+      </section>
       <!-- why Implant section -->
-      <section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
+       <section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
           <div class="container">
               <div class="why-Implant-titleWrapper">
                 <h2 class="why-Implant-title" id="text1" data-scroll data-scroll-speed="0.5">why AD Implant Prothesis ?</h2>
@@ -156,7 +176,7 @@
                 </p>
               </div>
           </div>
-      </section>
+      </section> 
       <!-- Types of AD Implants -->
       <section class="section TypeofImplants overflow-hidden" id="TypeofImplants">
         <div class="container position-relative">
@@ -278,17 +298,7 @@
                     zirconia, and ceramic.
                   </p>
                 </div>
-                <div class="implant-type-card" id="card-6">
-                  <div class="implant-type-card-heading">6. Minimal Maintenance</div>
-                  <p class="implant-type-card-body">
-                    ADimplant prostheses require minimal maintenance, avoiding
-                    staining, chipping, or deterioration under normal use.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="implant-type-card" id="card-2">
+                   <div class="implant-type-card" id="card-2">
                   <div class="implant-type-card-heading">2. Durability</div>
                   <p class="implant-type-card-body">
                     AD-implant prostheses are made from durable materials to withstand
@@ -296,6 +306,19 @@
                     performance.
                   </p>
                 </div>
+               
+              </div>
+
+              <div class="swiper-slide">
+                <div class="implant-type-card" id="card-3">
+                  <div class="implant-type-card-heading">3. Natural Appearance</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses closely resemble natural teeth in color,
+                    shape, and texture, enhancing aesthetics and confidence.
+                  </p>
+                </div>
+                
+             
                 <div class="implant-type-card-image">
                   <img
                     src="{% static 'implant-type-vector1.svg' %}"
@@ -313,40 +336,40 @@
                     class="w-90"
                   />
                 </div>
-                <div class="implant-type-card" id="card-7">
+                     <div class="implant-type-card" id="card-4">
+                  <div class="implant-type-card-heading">4. Stability and Fit</div>
+                  <p class="implant-type-card-body">
+                    ADimplant prostheses fit securely, ensuring comfort and preventing
+                    slippage during speaking and eating for overall satisfaction.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+               <div class="implant-type-card" id="card-5">
+                  <div class="implant-type-card-heading">5. Ease of Cleaning</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses are easy to clean, helping maintain oral
+                    hygiene and prevent plaque buildup and gum issues.
+                  </p>
+                </div>
+                <div class="implant-type-card" id="card-6">
+                  <div class="implant-type-card-heading">6. Minimal Maintenance</div>
+                  <p class="implant-type-card-body">
+                    ADimplant prostheses require minimal maintenance, avoiding
+                    staining, chipping, or deterioration under normal use.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+              <div class="implant-type-card" id="card-7">
                   <div class="implant-type-card-heading">
                     7. Gum Tissue Compatibility
                   </div>
                   <p class="implant-type-card-body">
                     AD-implant prostheses are designed to fit naturally with gum
                     tissues, promoting healthy gums and a natural smile.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="implant-type-card" id="card-3">
-                  <div class="implant-type-card-heading">3. Natural Appearance</div>
-                  <p class="implant-type-card-body">
-                    AD-implant prostheses closely resemble natural teeth in color,
-                    shape, and texture, enhancing aesthetics and confidence.
-                  </p>
-                </div>
-                <div class="implant-type-card" id="card-8">
-                  <div class="implant-type-card-heading">8. Proper Occlusion</div>
-                  <p class="implant-type-card-body">
-                    AD-implant prostheses ensure proper bite alignment, preventing jaw
-                    pain and uneven wear on teeth.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="implant-type-card" id="card-4">
-                  <div class="implant-type-card-heading">4. Stability and Fit</div>
-                  <p class="implant-type-card-body">
-                    ADimplant prostheses fit securely, ensuring comfort and preventing
-                    slippage during speaking and eating for overall satisfaction.
                   </p>
                 </div>
                 <div class="implant-type-card-image">
@@ -366,6 +389,16 @@
                     class="w-90"
                   />
                 </div>
+                <div class="implant-type-card" id="card-8">
+                  <div class="implant-type-card-heading">8. Proper Occlusion</div>
+                  <p class="implant-type-card-body">
+                    AD-implant prostheses ensure proper bite alignment, preventing jaw
+                    pain and uneven wear on teeth.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
                 <div class="implant-type-card" id="card-9">
                   <div class="implant-type-card-heading">
                     9. Functional Efficiency
@@ -373,16 +406,6 @@
                   <p class="implant-type-card-body">
                     AD-implant prostheses restore efficient chewing and speaking,
                     allowing comfort with a variety of foods and clear speech.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="implant-type-card" id="card-5">
-                  <div class="implant-type-card-heading">5. Ease of Cleaning</div>
-                  <p class="implant-type-card-body">
-                    AD-implant prostheses are easy to clean, helping maintain oral
-                    hygiene and prevent plaque buildup and gum issues.
                   </p>
                 </div>
                 <div class="implant-type-card" id="card-10">
@@ -398,12 +421,11 @@
           </div>
         </div>
         </div>
-  
-      </section>
+      </section> 
       <!-- future Implants section -->
       <section class="section future-Implants overflow-hidden" id="future-section">
         <div class="container position-relative">
-          <h2 class="product-section-title future-title">future of AD implant</h2>
+          <h2 class="product-section-title future-title">Future of AD implant</h2>
           <div class="row justify-content-sm-between justify-content-center">
             <div class="col-lg-6 col-xl-5 col-sm-12 col-10 position-relative order-2 order-lg-1">
               <div
@@ -484,90 +506,60 @@
                 <div class="row justify-content-center align-items-center">
                   <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
                     <div class="flipper">
-                      <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
-                      <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                      <img src="{% static 'img/review-img11.png' %}" class="front patient-img _1 img-fluid" />
+                      <img src="{% static 'img/review-img12.png' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
                     </div>
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                     <p>After years of struggling with traditional dentures, getting AD implant prosthesis changed my life. The stability and comfort they offer are unmatched. I can eat my favour-ite foods without worry, and my confidence has soared. The procedure was smoother than I expected, and the results are beyond my dreams. My implant-supported dentures feel just like natural teeth. Thanks to this life-changing experience, I feel like myself again, and I can't thank my dentist enough for giving me back my smile.</p>
                     <h2>Pt Name: Mr. Arun Shah</h2>
-                    <span>Businessmen</span>
                   </div>
-                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
+                    <img src="{% static 'img/review-img12.png' %}" class="patient-img img-fluid" /> 
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
                <div class="row justify-content-center align-items-center">
                   <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
                     <div class="flipper">
-                      <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
-                      <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                      <img src="{% static 'img/review-img21.png' %}" class="front patient-img _1 img-fluid" />
+                      <img src="{% static 'img/review-img22.png' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
                     </div>
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                    <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
                       <h2>Pt Name: Mrs Rekhaben</h2>
-                      <span>Housewife</span>
                   </div>
-                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
+                  <img src="{% static 'img/review-img22.png' %}" class="patient-img img-fluid" /> </div>
                 </div>
-       
-                {% comment %} <div class="row justify-content-center align-items-center">
-                    <div class="col-2 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-md-4 mb-lg-0 d-flex align-items-center justify-content-center">
-                      <div class="flipper">
-                        <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
-                        <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
-                      </div>
-                    </div>
-                    <div class="col-7 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
-                      <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
-                      <h2>Pt Name: Mrs Rekhaben</h2>
-                      <span>Housewife</span>
-                    </div>
-                    <div class="col-2 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-md-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
-                </div> {% endcomment %}
               </div>
               <div class="swiper-slide">
                 <div class="row justify-content-center align-items-center">
                   <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
                     <div class="flipper">
-                      <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
-                      <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                      <img src="{% static 'img/review-img31.png' %}" class="front patient-img _1 img-fluid" />
+                      <img src="{% static 'img/review-img32.png' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
                     </div>
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                      <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
-                    <h2>Pt Name: Miss khushbu</h2>
-                    <span>Student</span>
+                    <h2>Pt Name: Mrs khushbu</h2>
                   </div>
-                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /> </div>
+                  <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
+                    <img src="{% static 'img/review-img32.png' %}" class="patient-img img-fluid" /> 
+                  </div>
                 </div>
-          
-                {% comment %} <div class="row justify-content-center align-items-center">
-                  <div class="col-2 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-md-4 mb-lg-0 d-flex align-items-center justify-content-center">
-                    <div class="flipper">
-                        <img src="{% static 'img/review-img2.png' %}" class="front patient-img _1 img-fluid" />
-                        <img src="{% static 'img/case15.webp' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
-                    </div>
-                  </div>
-                  <div class="col-7 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
-                    <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
-                    <h2>Pt Name: Miss khushbu</h2>
-                    <span>Student</span>
-                  </div>
-                  <div class="col-2 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-md-none d-lg-block ps-4"><img src="{% static 'img/review-img2.png' %}" class="patient-img img-fluid" /></div>
-                </div> {% endcomment %}
               </div>
             </div>
              <!-- Optional: navigation arrows -->
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
-
               <!-- Optional: pagination -->
-              {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
           </div>
         </div>
-      </section>
+      </section> 
   </div>
 {% endblock %} {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -577,8 +569,8 @@
 
 <script>
   AOS.init({
-        duration: 1000, // animation duration in ms
-        once: true      // animation only happens once while scrolling
+        duration: 1000, 
+        once: true     
   });
   gsap.registerPlugin(ScrollTrigger);
   
@@ -667,9 +659,9 @@
         
         const translateZ = (i - index) * 20;
         const translateY = (i - index) * 20;
-        const scale = i === index ? 1.12 : 0.9;
-
-        slide.style.transform = `translate3d(0, ${translateY}px, ${translateZ}px) scale(${scale}, ${scale})`;
+        const scale = i === index ? 1.15 : 0.9;
+        const scaley = i === index ? 1.12: 0.9;
+        slide.style.transform = `translate3d(0, ${translateY}px, ${translateZ}px) scale(${scale}, ${scaley})`;
 
         if (i === index) {
           slide.classList.add("active");

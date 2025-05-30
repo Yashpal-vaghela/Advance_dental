@@ -30,7 +30,9 @@ body {
 }
 
 #page {
-  overflow-x: hidden;
+  /* overflow-x: visible; */
+  overflow-x:clip;
+  /* overflow: auto; */
 }
 
 .wide-100 {

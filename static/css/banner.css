@@ -326,6 +326,19 @@
   .hero-section1 {
     height: 750px;
   }
+  .implant-hero-section{
+    height: 800px;
+  }
+  .implant-banner-img{
+    width:95% !important;
+    margin-left: auto;
+  }
+  .implant-text{
+    margin-left: 36%;
+  }
+  .implant-banner-img-wrapper{
+    top:4%;
+  }
   /* banner 1  */
   .banner1-img {
     top: 45%;
@@ -380,6 +393,19 @@
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
   .hero-section1 {
     height: 665px;
+  }
+  .implant-text{
+    margin-left: 40%;
+  }
+  .implant-hero-section{
+    height: 700px;
+  }
+  .implant-banner-img{
+    width:90% !important;
+    margin-left: auto;
+  } .implant-banner-img{
+    width:90% !important;
+    margin-left: auto;
   }
   /* banner 1 */
   .banner1-img {
@@ -483,6 +509,9 @@
   .hero-section1 {
     height: 590px;
   }
+  .implant-hero-section{
+     height: 630px;
+  }
   /* banner 1 */
   .banner1-img{
     top:48.3%
@@ -516,6 +545,10 @@
   .grass-pic1 {
     top: 300px;
   }
+  /* implant banner */
+  .implant-text{
+    margin-left: 25%;
+  }
 }
 @media screen and (min-width:992px){
   .hero-section1 .swiper-slide-active .texts{
@@ -525,6 +558,9 @@
 @media (min-width: 1200px) and (max-width: 1300px) {
   .hero-section1 {
     height: 530px;
+  }
+  .implant-hero-section{
+    height: 580px;
   }
   /* banner 2 */
   .zir-logo1 {
