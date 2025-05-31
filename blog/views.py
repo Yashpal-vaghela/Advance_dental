@@ -10,56 +10,52 @@ def blog_home(request):
 
     if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         results = []
-        # matching_blogs = Blog.objects.all()
-        # if tag_name:
-        #     matching_blogs = Blog.filter(tags__name=tag_name)
-        #     results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
-        # if title_query:
-        #     matching_blogs = Blog.filter(title__icontains=query).distinct()[:5]
-        #     results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
-
-        # return JsonResponse({'results':results})
-
         if query:
             try:
                 tag = Tags.objects.get(tags__iexact=query)
             except Tags.DoesNotExist:
                 tag = None
-            
-            matching_blogs = Blog.objects.filter(Q(title=query) | Q(tag__in=[tag])).distinct()[:5]
-            results = [{'title':blog.title,'id':blog.id,'slug':blog.slug} for blog in matching_blogs]
-            return JsonResponse({'results':results})
-        return JsonResponse({'results': []})
-    
-    all_blogs = Blog.objects.all().order_by('-published')
-    remaining_blogs = all_blogs[2:]
-    paginator=Paginator(remaining_blogs,8)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    page = request.GET.get('page', 1)
-    first_blog = page_obj.object_list[:2]
-    all_blog = page_obj.object_list[2:]
 
-    data2 =  Category.objects.all().order_by('-id')
-    data3 = Blog.objects.filter(main3=True).order_by('-id')
-    
+            matching_blogs = Blog.objects.filter(
+                Q(title__icontains=query) | Q(tag__in=[tag])
+            ).distinct()[:5]
+
+            results = [{'title': blog.title, 'id': blog.id, 'slug': blog.slug} for blog in matching_blogs]
+            return JsonResponse({'results': results})
+
+        return JsonResponse({'results': []})
+
+    # Get all blogs ordered by published date
+    all_blogs = Blog.objects.all().order_by('-published')
+
+    # Paginate all blogs in chunks of 8 (2 for first_blog, 6 for all_blog)
+    paginator = Paginator(all_blogs, 8)
+    page = request.GET.get('page', '1')
 
     try:
-        data = paginator.page(page)
+        current_page = paginator.page(page)
     except PageNotAnInteger:
-        data = paginator.page(1)
+        current_page = paginator.page(1)
     except EmptyPage:
-        data = paginator.page(paginator.num_pages)
+        current_page = paginator.page(paginator.num_pages)
 
+    # Split the current page's blog into first and remaining
+    first_blog = current_page.object_list[:2]
+    all_blog = current_page.object_list[2:]
+
+    # Other data
+    data2 = Category.objects.all().order_by('-id')
+    data3 = Blog.objects.filter(main3=True).order_by('-id')
 
     context = {
-        'first_blog':first_blog,
-        'all_blog':all_blog,
-        'data':data,
-        'data2':data2,
-        'data3':data3,
-        'page_obj':page_obj
+        'first_blog': first_blog,   
+        'all_blog': all_blog,       
+        'data': current_page,       
+        'data2': data2,
+        'data3': data3,
+        'page_obj': current_page
     }
+
     return render(request, 'blog_home.html', context)
 
 # Create your views here.

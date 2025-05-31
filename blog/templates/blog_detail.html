@@ -51,6 +51,8 @@
   name="twitter:image"
   content="{% spaceless %}{{data.image.url}}{% endspaceless %}"
 />
+<link rel="alternate" hreflang="x-default" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
+<link rel="alternate" hreflang="en-IN" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
 {% endblock seo %} {% block css %}
 <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet" />
 <style>

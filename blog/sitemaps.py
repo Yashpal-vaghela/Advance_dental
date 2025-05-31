@@ -96,4 +96,4 @@ class BestDentalLabSitemap(Sitemap):
         return Place.objects.all()
     
     def location(self, obj):
-        return reverse('home:bdld', kwargs={'pk': obj.name})
+        return reverse('home:bdld', kwargs={'slug': obj.slug})
