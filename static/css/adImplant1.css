@@ -43,7 +43,7 @@
   font-weight: 700;
 }
 .implant-mobile-banner{
-  display: none;
+  display: none !important;
 }
 @media screen and (min-width: 1439px) and (max-width: 1649px) {
     .implant-banner-img{
@@ -90,7 +90,7 @@
 }
 @media(max-width:768px){
   .implant-mobile-banner{
-    display: block;
+    display: block !important;
   }
   .implant-slider-wrapper .implant-banner-bg,.implant-banner-img-wrapper{
     display: none;

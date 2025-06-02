@@ -3,13 +3,13 @@
 {% block seo%}
 <title>AD-Implant - Best Implant for Teeth in India</title>
 <meta name="description" content="Discover AD-Implant, the best dental implant for teeth in India for long-lasting tooth replacement, trusted by leading dentists for strength & precision fit."/>
-<link rel="canonical" href="https://advancedentalexport.com/ad-implant/"/>
+<link rel="canonical" href="https://advancedentalexport.com/ad-implant/"/> 
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="AD-Implant - Best Implant for Teeth in India" />
 <meta property="og:description" content="Discover AD-Implant, the best dental implant for teeth in India for long-lasting tooth replacement, trusted by leading dentists for strength & precision fit." />
 <meta property="og:url" content="https://advancedentalexport.com/ad-implant/" />
-<meta name="og:image" content="{% static 'img/feature.webp' %}" />
+<meta name="og:image" content="{% static 'img/implantpage.webp' %}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/webp" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="Discover AD-Implant, the best dental implant for teeth in India for long-lasting tooth replacement, trusted by leading dentists for strength & precision fit." />
 <meta name="twitter:title" content="Advance Dental Export" />
-<meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
+<meta name="twitter:image" content="{% static 'img/implantpage.webp' %}" />
 <link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/ad-implant/" />
 <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/ad-implant/" />
 {% endblock seo %}
@@ -545,7 +545,7 @@
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                    <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
-                      <h2>Pt Name: Mrs Rekhaben</h2>
+                      <h2>Pt Name: Mrs. Rekhaben</h2>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
                   <img src="{% static 'img/review-img22.png' %}" class="patient-img img-fluid" /> </div>
@@ -561,7 +561,7 @@
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                      <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
-                    <h2>Pt Name: Mrs khushbu</h2>
+                    <h2>Pt Name: Mrs. khushbu</h2>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
                     <img src="{% static 'img/review-img32.png' %}" class="patient-img img-fluid" /> 
@@ -575,7 +575,39 @@
               <!-- Optional: pagination -->
           </div>
         </div>
-      </section> 
+      </section>
+      <section class="faq-section TypeofImplants">
+        <div class="container  position-relative">
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
+          <h2 class="product-section-title mb-0">Frequently Asked Questions</h2>
+          <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
+          <div class="row">
+            <div class="col-md-12 p-0 m-0">
+              <div class="faq" id="accordion">
+                {% for item in faq_data %}
+                <div class="card">
+                  <div class="card-header" id="faqHeading-{{ forloop.counter }}">
+                    <div class="mb-0">
+                      <h5 class="faq-title collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-{{ forloop.counter }}">
+                        <span class="badge"><div class="test-xs">{{ forloop.counter }}</div></span>
+                        <div class="pt-2">{{ item.question }}</div>
+                      </h5>
+                    </div>
+                  </div>
+                  <div id="faqCollapse-{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="faqHeading-{{ forloop.counter }}" data-bs-parent="#accordion">
+                    <div class="card-body">
+                      <div class="container">
+                        <span class="p3"><p>{{ item.answer }}</p></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   </div>
 {% endblock %} {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -1119,4 +1151,51 @@
     a[0].classList.remove("overflow-hidden");
   }
 </script> {% endcomment %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://advancedentalexport.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Plant Your Implant with AD-Implant",
+          "item": "https://advancedentalexport.com/ad-implant/"
+        }
+      ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AD-Implant for Dental Restoration",
+      "provider": {
+        "@type": "Organization",
+        "name": "Advance Dental Export",
+        "url": "https://advancedentalexport.com/"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "description": "Advance Dental Export is one of the best dental labs in India and a trusted dental prosthetics manufacturer, custom dental solutions for global clients since 2009."
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://advancedentalexport.com/ad-implant/",
+      "name": "Plant Your Implant with AD-Implant",
+      "description": "Discover AD-Implant, the best dental implant for teeth in India for long-lasting tooth replacement, trusted by leading dentists for strength & precision fit.",
+      "datePublished": "02-06-2025T10:00:00+05:30"
+    }
+</script>
 {% endblock %}

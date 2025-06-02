@@ -428,6 +428,28 @@
     margin-top: 24px;
     width: 100%;
 }
+.faq-section {
+    position: relative;
+    padding:60px 0;
+    text-align: center;
+}
+.zirconia-faq{
+    z-index: 1;
+    position: relative;
+}
+.zirconia-faq h2{
+    color: #1B8976;
+}
+.zirconia-faq .vector1{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+.zirconia-faq .vector2{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
 /* media query */
 @media(min-width:1400px){
     .typeOfZirconia .line-2{

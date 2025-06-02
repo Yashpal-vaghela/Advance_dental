@@ -163,7 +163,30 @@ def zirconiacrown(request):
         {'id':'09','title':"Gum-Friendly Surface",'imgUrl':"09Benefit.svg",'description':"Its smooth surface helps prevent plaque from building up around the crown, making it easier to keep your gums clean and healthy."},
     ]
 
-    return render(request, 'zir.html',  {'cards': cards,'Benefit':Benefit})
+    faq_data =[
+        {
+            "question": "What is zirconia in dentistry?",
+            "answer": "Zirconia, or zirconium dioxide, is a durable ceramic material used in dental restorations like crowns and bridges. It's known for its strength, biocompatibility, and natural tooth-like appearance, making it a popular choice for both front and back teeth restorations."
+        },
+        {
+            "question": "How much do zirconia crowns or teeth cost?",
+            "answer": "In India, the cost of a zirconia crown can vary based on factors like the complexity of the case, the specific type of zirconia used, and the dental laboratory's expertise. Concult us for detailed pricing & treatment details tailored to your needs."
+        },
+        {
+            "question": "Is zirconia a good material for dental restorations?",
+            "answer": "Yes, zirconia is highly regarded for dental restorations due to its exceptional strength, resistance to wear, and compatibility with the human body. It also offers excellent aesthetics, closely resembling natural teeth, which makes it suitable for various dental applications."
+        },
+        {
+            "question": "How long do zirconia crowns usually last?",
+            "answer": "Zirconia crowns are known for their longevity, often lasting between 10 to 15 years or more with proper oral hygiene and regular dental check-ups. Some reports even suggest they can last up to 20 years or longer."
+        },
+        {
+            "question": "Why do dentists use zirconia for dental restorations?",
+            "answer": "Dentists prefer zirconia for its superior strength, durability, and natural appearance. It's also biocompatible, reducing the risk of allergic reactions, and can be precisely crafted using digital technology, ensuring a better fit and comfort for patients."
+        }
+    ]
+
+    return render(request, 'zir.html',  {'cards': cards,'Benefit':Benefit, 'faq_data': faq_data})
 
 # def neweventlink(request):
 #     context = {
@@ -171,7 +194,32 @@ def zirconiacrown(request):
 #     return render(request, 'exhibition.html', context)
 
 def adImplants(request):
-    return render(request,'ad_implant.html')
+    faq_data = [
+    {
+        "question": "What is a dental implant for teeth, and how does it work?",
+        "answer": "A dental implant for tooth is a small, screw-like post made of titanium or zirconia that replaces the root of a missing tooth. It's surgically placed into the jawbone, where it fuses with the bone over time. Once integrated, a crown is attached to restore the appearance and function of a natural tooth."
+    },
+    {
+        "question": "What are the different types of dental implants?",
+        "answer": "The main three types of implants include: Endosteal Implants, Subperiosteal Implants, and Zygomatic Implants."
+    },
+    {
+        "question": "Are dental implants safe and reliable?",
+        "answer": "Yes, dental implants for teeth are considered safe and have a high success rate. They are made from biocompatible materials like titanium, which are well-tolerated by the body. With proper care and oral hygiene, implants can provide a durable and long-lasting solution for missing teeth."
+    },
+    {
+        "question": "How much do dental implants cost in India?",
+        "answer": "The cost of dental implants in India varies based on factors like the type of Implant, number of Implants needed, and materials used. For an accurate estimate tailored to your specific needs, consult with us to provide a detailed treatment plan & cost."
+    },
+    {
+        "question": "How long do dental teeth implants usually last?",
+        "answer": "Dental implants are designed to be a long-term solution and can last 10 to 20 years or more with proper care. Factors influencing their longevity include oral hygiene practices, regular dental check-ups, and overall health."
+    }
+]
+    context={
+        'faq_data' : faq_data
+    }
+    return render(request,'ad-implant.html', context)
 
 
 def beforeafter(request):
