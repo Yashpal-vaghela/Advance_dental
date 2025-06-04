@@ -1,7 +1,7 @@
 import json
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
-from django.http import JsonResponse, FileResponse, Http404
+from django.http import JsonResponse, FileResponse, Http404, HttpResponse
 from blog.models import *
 from enquiry.models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -372,6 +372,11 @@ def about(request):
 
 def sitemap(request):
     return render(request, 'sitemap.xml', content_type='text/xml')
+
+def sitemap_index(request):
+    return HttpResponse(render_to_string("custom_sitemap_index.xml", {
+        'request': request
+    }), content_type="application/xml")
 
 #end
 def robots(request):

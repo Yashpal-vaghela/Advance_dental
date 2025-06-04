@@ -86,7 +86,7 @@ class Product(models.Model):
     page_name = models.CharField(max_length = 1256,blank=True, null=True)
     
     h1  = models.CharField(max_length = 156)
-    slug =models.CharField(max_length = 1256,blank=True, null=True)
+    slug =models.CharField(max_length = 1256, unique=True)
     keyword = models.CharField(max_length = 156)
     description = models.CharField(max_length = 900)
     title = models.CharField(max_length = 156)

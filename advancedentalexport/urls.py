@@ -7,6 +7,7 @@ from blog.views import blog_detail as bd
 from blog.views import product_detail as pd
 from home import views as myapp_views
 from django.conf.urls import handler404, handler500
+from django.views.generic import RedirectView
 
 # from exam import views as auth_view
 admin.site.site_header = 'Dashboard'                    # default: "Django Administration"
@@ -19,7 +20,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('sending-data/', include('enquiry.urls')),
     path('ultimate-smile-design/', include('usd.urls')),
-    
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'favicon.ico', permanent=True)),
     
     path('ckeditor/', include('ckeditor_uploader.urls')),
     # password reset

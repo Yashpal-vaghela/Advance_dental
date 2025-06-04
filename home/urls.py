@@ -1,9 +1,10 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 from . import views
 from blog.views import blog_detail as bd
 from django.contrib import sitemaps
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import *
+from django.views.generic import RedirectView
 
 app_name = 'home'
 sitemaps_dict ={
@@ -19,7 +20,13 @@ sitemaps_dict ={
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('verify-warranty/', views.verify_warrenty, name='verify_warrenty'),
+    path('sitemap.xml', views.sitemap_index, name='sitemap-index'),
+    path('sitemap-static.xml', sitemap, {'sitemaps': {'static': StaticSitemap}}, name='sitemap-static'),
+    path('sitemap-products.xml', sitemap, {'sitemaps': {'product': ProductSitemap}}, name='sitemap-products'),
+    path('sitemap-blog.xml', sitemap, {'sitemaps': {'blog': BlogSitemap}}, name='sitemap-blog'),
+    path('sitemap-webstory.xml', sitemap, {'sitemaps': {'webstory': WebStorySitemap}}, name='sitemap-webstory'),
+    path('sitemap-exhibition.xml', sitemap, {'sitemaps': {'exhibition': ExhibitionSitemap}}, name='sitemap-exhibition'),
+    path('sitemap-bestDental.xml', sitemap, {'sitemaps': {'bestDental': BestDentalLabSitemap}}, name='sitemap-bestDental'),
     path('contact/', views.contact, name='contact'),
     path('contact-us/', views.contact_new, name='contact_new'),
     path('submit-stl-file/', views.stl, name='stl'),
@@ -38,7 +45,6 @@ urlpatterns = [
     path('checkup/', views.checkup, name='checkup'),
     path('guest-posting/', views.gp, name='gp'),
     path('faq', views.faq, name='faq'),
-    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps_dict}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt/', views.robots, name='robot'),
     path('upload/', views.file_upload, name='upload'),
     path('testimonials/', views.testimonals, name='testimonals'),
@@ -63,4 +69,5 @@ urlpatterns = [
     path('ad-implant/',views.adImplants, name='adImplants'),
     path('sitemap/',views.sitemap,name="sitemap"),
     path('404/',views.error_404,name="404"),
+    path('verify-warrenty/', views.verify_warrenty, name='verify_warrenty'),
 ]

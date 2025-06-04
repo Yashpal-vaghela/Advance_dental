@@ -95,7 +95,7 @@ def blog_detail(request, slug):
     #     pass
 
     except:
-        data = Product.objects.get(slug= slug)
+        data = Product.objects.get(slug=slug)
         data2 =  Category.objects.all().order_by('-id')
         data3 = Blog.objects.filter(main3=True).order_by('-id')
         data4 = Faqpage.objects.filter(product=data).order_by('-id')
