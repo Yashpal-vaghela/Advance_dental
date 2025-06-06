@@ -266,3 +266,31 @@ class BestDentalLabSitemap(Sitemap):
                 'caption': escape(getattr(obj, 'meta_description', '') or f"Best Dental Lab in {obj.name}"),
             })
         return images
+    
+class NewsSitemap(Sitemap):
+    priority = 0.6
+    changefreq = 'weekly'
+
+    def items(self):
+        return Blog.objects.filter(status=True).order_by('-updated')
+    
+    def location(self, obj):
+        return obj.get_absolute_url()
+    
+    def image_urls(self, obj):
+        images = []
+        if obj.image:
+            images.append({
+                'loc': obj.image.url,
+                'title': escape(obj.title or obj.h1),
+                'caption': escape(obj.description)
+            })
+        return images
+    
+    def news_metadata(self, obj):
+        return {
+            'publication_name': "Advance Dental Export",
+            'language': "en",
+            'publication_date': obj.published.strftime("%Y-%m-%d"),
+            'title': escape(obj.title or obj.h1),
+        }

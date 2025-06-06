@@ -11,7 +11,7 @@
 
     {% for image in url.images %}
     <image:image>
-      <image:loc>{{ image.loc }}</image:loc>
+      <image:loc>https://advancedentalexport.com{{ image.loc }}</image:loc>
       <image:title>{{ image.title }}</image:title>
       <image:caption>{{ image.caption }}</image:caption>
     </image:image>
@@ -19,10 +19,10 @@
 
     {% for video in url.videos %}
     <video:video>
-      <video:thumbnail_loc>{{ video.thumbnail_loc }}</video:thumbnail_loc>
+      <video:thumbnail_loc>https://advancedentalexport.com{{ video.thumbnail_loc }}</video:thumbnail_loc>
       <video:title>{{ video.title }}</video:title>
       <video:description>{{ video.description }}</video:description>
-      <video:content_loc>{{ video.content_loc }}</video:content_loc>
+      <video:content_loc>https://advancedentalexport.com{{ video.content_loc }}</video:content_loc>
       <video:publication_date>{{ video.publication_date }}</video:publication_date>
     </video:video>
     {% endfor %}

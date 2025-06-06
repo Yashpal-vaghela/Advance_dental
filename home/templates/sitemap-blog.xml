@@ -11,7 +11,7 @@
 
     {% for image in item.images %}
     <image:image>
-      <image:loc>{{ image.loc }}</image:loc>
+      <image:loc>https://advancedentalexport.com{{ image.loc }}</image:loc>
       {% if image.title %}<image:title>{{ image.title|escape }}</image:title>{% endif %}
       {% if image.caption %}<image:caption>{{ image.caption|escape }}</image:caption>{% endif %}
     </image:image>

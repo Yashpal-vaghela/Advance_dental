@@ -1119,3 +1119,21 @@ def bestdentallab_sitemap(request):
 
     xml = render_to_string('sitemap-bestDental.xml', {'urlset': urlset})
     return HttpResponse(xml, content_type='application/xml')
+
+def news_sitemap(request):
+    sitemap = NewsSitemap()
+    items = sitemap.items()
+
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'changefreq': sitemap.changefreq,
+            'priority': sitemap.priority,
+            'images': sitemap.image_urls(item),
+            'news': sitemap.news_metadata(item),
+        }
+        urlset.append(url_info)
+    xml = render_to_string('sitemap-news.xml', {'urlset': urlset})
+    return HttpResponse(xml, content_type='application/xml')

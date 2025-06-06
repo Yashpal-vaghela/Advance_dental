@@ -27,6 +27,7 @@ urlpatterns = [
     path('sitemap-webstory.xml', views.webstory_sitemap, name='sitemap-webstory'),
     path('sitemap-exhibition.xml', views.exhibition_sitemap, name='sitemap-exhibition'),
     path('sitemap-bestDental.xml', views.bestdentallab_sitemap, name='sitemap-bestDental'),
+    path('sitemap-news.xml', views.news_sitemap, name='sitemap-news'),
     path('contact/', views.contact, name='contact'),
     path('contact-us/', views.contact_new, name='contact_new'),
     path('submit-stl-file/', views.stl, name='stl'),

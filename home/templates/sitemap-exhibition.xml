@@ -10,7 +10,7 @@
     <priority>{{ url.priority }}</priority>
     {% for image in url.images %}
     <image:image>
-      <image:loc>{{ image.loc }}</image:loc>
+      <image:loc>https://advancedentalexport.com{{ image.loc }}</image:loc>
       <image:title>{{ image.title }}</image:title>
       <image:caption>{{ image.caption }}</image:caption>
     </image:image>

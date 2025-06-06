@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  {% for url in urlset %}
+
+{% for url in urlset %}
   <url>
     <loc>{{ url.location }}</loc>
     <changefreq>{{ url.changefreq }}</changefreq>
     <priority>{{ url.priority }}</priority>
+    <news:news>
+      <news:publication>
+        <news:name>{{ url.news.publication_name }}</news:name>
+        <news:language>{{ url.news.language }}</news:language>
+      </news:publication>
+      <news:publication_date>{{ url.news.publication_date }}</news:publication_date>
+      <news:title>{{ url.news.title }}</news:title>
+    </news:news>
     {% for image in url.images %}
     <image:image>
       <image:loc>https://advancedentalexport.com{{ image.loc }}</image:loc>
+      <image:caption>{{ image.caption }}</image:caption>
       <image:title>{{ image.title }}</image:title>
-      <image:caption>{{ image.description }}</image:caption>
     </image:image>
     {% endfor %}
   </url>
-  {% endfor %}
+{% endfor %}
 </urlset>
