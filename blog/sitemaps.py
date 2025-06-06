@@ -1,7 +1,7 @@
 from django.contrib.sitemaps import Sitemap
 from django.utils.html import escape
 from django.urls import reverse
-from .models import Blog, Product, WebStory, Events, Place
+from .models import Blog, Product, WebStory, Events, Place, Category, BeforeAfter, Gallery, EventsGallery
 
 class HomePageSitemap(Sitemap):
     priority = 1
@@ -14,28 +14,38 @@ class HomePageSitemap(Sitemap):
     
 class BlogSitemap(Sitemap):
     def items(self):
-        # Combine static identifier with Blog objects
-        return ['blog-index'] + list(Blog.objects.filter(status=True).order_by('-updated'))
+        return ['blog-index'] + list(Category.objects.all()) + list(Blog.objects.filter(status=True).order_by('-updated'))
 
     def location(self, item):
         if item == 'blog-index':
             return '/blog/'
+        elif isinstance(item, Category):
+            return f"/blog/category/{item.slug}/"
         return item.get_absolute_url()
 
     def changefreq(self, item):
-        if item == 'blog-index':
-            return 'daily'
-        return 'weekly'
+        return 'daily' if item == 'blog-index' else 'weekly'
 
     def priority(self, item):
-        if item == 'blog-index':
-            return 0.6
-        return 0.6  # or customize per item
+        return 0.6
 
     def lastmod(self, item):
-        if item == 'blog-index':
-            return None  # no <lastmod> tag for this
-        return item.updated
+        return item.updated if isinstance(item, Blog) else None
+
+    def image_urls(self, item):
+        if isinstance(item, Blog) and item.image:
+            return [{
+                'loc': item.image.url,
+                'title': item.title,
+                'caption': item.description
+            }]
+        elif isinstance(item, Category) and item.image:
+            return [{
+                'loc': item.image.url,
+                'title': item.meta_title,
+                'caption': item.meta_description
+            }]
+        return []
 
 class NormalPageSitemap(Sitemap):
     priority = 0.6
@@ -140,12 +150,12 @@ class ProductSitemap(Sitemap):
         if obj.image:
             return [{
                 'loc': obj.image.url,
-                'title': escape(obj.title)
+                'title': escape(obj.title),
+                'description': escape(obj.description)
             }]
         return []
 class WebStorySitemap(Sitemap):
     def items(self):
-        # Combine static path with dynamic objects
         return ['webstory-index'] + list(WebStory.objects.all().order_by('-publish_date'))
 
     def location(self, item):
@@ -154,21 +164,36 @@ class WebStorySitemap(Sitemap):
         return reverse('home:web_story_detail', kwargs={'story_slug': item.slug})
 
     def changefreq(self, item):
-        if item == 'webstory-index':
-            return 'daily'
-        return 'weekly'
+        return 'daily' if item == 'webstory-index' else 'weekly'
 
     def priority(self, item):
         return 0.6
 
     def lastmod(self, item):
+        return None if item == 'webstory-index' else item.publish_date
+
+    def image_urls(self, item):
+        if item == 'webstory-index' or not item.image:
+            return []
+        return [{
+            'loc': item.image.url,
+            'title': item.title,
+            'caption': item.description
+        }]
+
+    def video_urls(self, item):
         if item == 'webstory-index':
-            return None
-        return item.publish_date
+            return []
+        return [{
+            'thumbnail_loc': item.image.url,
+            'title': item.title,
+            'description': item.meta_description,
+            'content_loc': video.video.url,
+            'publication_date': str(item.publish_date)
+        } for video in item.videos.all()]
+
     
 class ExhibitionSitemap(Sitemap):
-    changefreq = "weekly"
-    priority = 0.6
 
     def items(self):
         # static + dynamic
@@ -188,9 +213,39 @@ class ExhibitionSitemap(Sitemap):
 
     def priority(self, item):
         return 0.6
+    
+    def image_urls(self, item):
+        image_list = []
 
-    def lastmod(self, item):
-        return None   
+        if item == 'before-after':
+            before_after = BeforeAfter.objects.all()
+            for obj in before_after:
+                if obj.image:
+                    image_list.append ({
+                        'loc': obj.image.url,
+                        'title': 'Before After - Advance Dental Export',
+                        'caption': 'Explore Before & After Dental Solutions with Advance Dental Export. Elevate patient care with quality & innovation. Transform Your Practice!'
+                    })
+                
+        elif item == 'gallery':
+            gallery = Gallery.objects.all()
+            for obj in gallery:
+                if obj.image:
+                    image_list.append({
+                        'loc':obj.image.url,
+                        'title': 'Gallery - Advance Dental Export',
+                        'caption': "Explore Advance Dental Export's Gallery to see our innovative dental products and designs. Discover cutting-edge technology and creative exhibits today."
+                    })
+        elif isinstance(item, Events):
+            event_images = EventsGallery.objects.filter(category=item)
+            for img in event_images:
+               if img.image: 
+                    image_list.append({
+                        'loc': item.image.url,
+                        'title': f"ADE at {item.name}: Event Highlights and Gallery",
+                        'caption': f"ADE at {item.name}: Event Highlights and Gallery"
+                    })
+        return image_list
 
 class BestDentalLabSitemap(Sitemap):
     priority = 0.7
@@ -201,3 +256,13 @@ class BestDentalLabSitemap(Sitemap):
     
     def location(self, obj):
         return reverse('home:bdld', kwargs={'slug': obj.slug})
+    
+    def image_urls(self, obj):
+        images = []
+        if obj.image:
+            images.append({
+                'loc': obj.image.url,
+                'title': escape(getattr(obj, 'meta_title','') or f"Best Dental Lab in {obj.name}"),
+                'caption': escape(getattr(obj, 'meta_description', '') or f"Best Dental Lab in {obj.name}"),
+            })
+        return images

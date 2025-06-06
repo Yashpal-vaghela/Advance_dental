@@ -15,7 +15,7 @@ from django.template.loader import render_to_string, get_template
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 import requests
-
+from blog.sitemaps import *
 
 # from enquiry.models import InstaPost
 # Create your views here.
@@ -381,8 +381,6 @@ def sitemap_index(request):
 #end
 def robots(request):
     return render(request, 'robot.txt', content_type='text')
-
-
 
 
 def categories(request):
@@ -1011,3 +1009,113 @@ def sitemap(request):
     }
     return render(request,'sitemap.html',context)
 
+def static_sitemap(request):
+    sitemap = StaticSitemap()
+    items = sitemap.items()
+    
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'lastmod': sitemap.lastmod(item) if hasattr(sitemap, 'lastmod') else None,
+            'changefreq': sitemap.changefreq(item),
+            'priority': sitemap.priority(item),
+            'images': sitemap.image_urls(item)
+        }
+        urlset.append(url_info)
+
+    xml_content = render_to_string('sitemap-static.xml', {'urlset': urlset})
+    return HttpResponse(xml_content, content_type='application/xml')
+
+def blog_sitemap(request):
+    sitemap = BlogSitemap()
+    items = sitemap.items()
+
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'lastmod': sitemap.lastmod(item),
+            'changefreq': sitemap.changefreq(item),
+            'priority': sitemap.priority(item),
+            'images': sitemap.image_urls(item),
+        }
+        urlset.append(url_info)
+
+    xml = render_to_string('sitemap-blog.xml', {'urlset': urlset})
+    return HttpResponse(xml, content_type='application/xml')
+
+def product_sitemap(request):
+    sitemap = ProductSitemap()
+    items = sitemap.items()
+
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'changefreq': sitemap.changefreq,
+            'priority': sitemap.priority,
+            'images': sitemap.image_urls(item),
+        }
+        urlset.append(url_info)
+
+    xml = render_to_string('sitemap-products.xml', {'urlset': urlset})
+    return HttpResponse(xml, content_type='application/xml')
+
+def webstory_sitemap(request):
+    sitemap = WebStorySitemap()
+    items = sitemap.items()
+
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'changefreq': sitemap.changefreq(item),
+            'priority': sitemap.priority(item),
+            'lastmod': sitemap.lastmod(item),
+            'images': sitemap.image_urls(item),
+            'videos': sitemap.video_urls(item)
+        }
+        urlset.append(url_info)
+
+    xml = render_to_string('sitemap-webstory.xml', {'urlset': urlset})
+    return HttpResponse(xml, content_type='application/xml')
+
+def exhibition_sitemap(request):
+    sitemap = ExhibitionSitemap()
+    items = sitemap.items()
+
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'changefreq': sitemap.changefreq(item),
+            'priority': sitemap.priority(item),
+            'images': sitemap.image_urls(item), 
+        }
+        urlset.append(url_info)
+    xml = render_to_string('sitemap-exhibition.xml', {'urlset': urlset})
+    return HttpResponse(xml, content_type='application/xml')
+
+def bestdentallab_sitemap(request):
+    sitemap = BestDentalLabSitemap()
+    items = sitemap.items()
+
+    urlset = []
+    for item in items:
+        loc = request.build_absolute_uri(sitemap.location(item))
+        url_info = {
+            'location': loc,
+            'changefreq': sitemap.changefreq, 
+            'priority': sitemap.priority,      
+            'images': sitemap.image_urls(item),
+        }
+        urlset.append(url_info)
+
+    xml = render_to_string('sitemap-bestDental.xml', {'urlset': urlset})
+    return HttpResponse(xml, content_type='application/xml')

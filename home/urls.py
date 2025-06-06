@@ -1,4 +1,4 @@
-from django.urls import path, include, re_path
+from django.urls import path, include
 from . import views
 from blog.views import blog_detail as bd
 from django.contrib import sitemaps
@@ -9,7 +9,7 @@ from django.views.generic import RedirectView
 app_name = 'home'
 sitemaps_dict ={
     'home': HomePageSitemap,
-    'static': StaticSitemap,
+    'static': StaticSitemap(),
     'normal': NormalPageSitemap,
     'blog': BlogSitemap,
     'product': ProductSitemap,  
@@ -21,12 +21,12 @@ sitemaps_dict ={
 urlpatterns = [
     path('', views.home, name='home'),
     path('sitemap.xml', views.sitemap_index, name='sitemap-index'),
-    path('sitemap-static.xml', sitemap, {'sitemaps': {'static': StaticSitemap}}, name='sitemap-static'),
-    path('sitemap-products.xml', sitemap, {'sitemaps': {'product': ProductSitemap}}, name='sitemap-products'),
-    path('sitemap-blog.xml', sitemap, {'sitemaps': {'blog': BlogSitemap}}, name='sitemap-blog'),
-    path('sitemap-webstory.xml', sitemap, {'sitemaps': {'webstory': WebStorySitemap}}, name='sitemap-webstory'),
-    path('sitemap-exhibition.xml', sitemap, {'sitemaps': {'exhibition': ExhibitionSitemap}}, name='sitemap-exhibition'),
-    path('sitemap-bestDental.xml', sitemap, {'sitemaps': {'bestDental': BestDentalLabSitemap}}, name='sitemap-bestDental'),
+    path('sitemap-static.xml', views.static_sitemap, name='sitemap-static'),
+    path('sitemap-products.xml', views.product_sitemap, name='sitemap-products'),
+    path('sitemap-blog.xml', views.blog_sitemap, name='sitemap-blog'),
+    path('sitemap-webstory.xml', views.webstory_sitemap, name='sitemap-webstory'),
+    path('sitemap-exhibition.xml', views.exhibition_sitemap, name='sitemap-exhibition'),
+    path('sitemap-bestDental.xml', views.bestdentallab_sitemap, name='sitemap-bestDental'),
     path('contact/', views.contact, name='contact'),
     path('contact-us/', views.contact_new, name='contact_new'),
     path('submit-stl-file/', views.stl, name='stl'),
