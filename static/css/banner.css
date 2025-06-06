@@ -9,6 +9,8 @@
 .hero-section1 .swiper-button-next,
 .hero-section1 .swiper-button-prev {
   top: var(--swiper-navigation-top-offset, 50%) !important;
+  color:rgba(27, 137, 118, 1) !important;
+
 }
 .hero-section1 .swiper-button-next::after,
 .hero-section1 .swiper-button-prev::after {
@@ -580,28 +582,28 @@
   }
   .new-banner2-text {
     top: 300px;
-    width: 600px !important;
+    width: 520px !important;
   }
   .btn-read-more1 {
-    top: 610px !important;
-    width: 16% !important;
-    padding: 6px 6px !important;
-    font-size: 20px !important;
+    top: 580px !important;
+    width: 14% !important;
+    padding: 4px 6px !important;
+    font-size: 18px !important;
   }
   /* new banner 3(implant) css */
   .home-implant-text {
     margin-left: 23%;
     margin-top: -8%;
-    font-size: 60px;
+    font-size: 50px;
   }
   .home-implant-rolling-text{
-    font-size: 60px;
+    font-size: 50px;
   }
   .btn-implant-button {
-    top: 440px !important;
+    top: 400px !important;
     left: 14.5%;
-    padding: 8px 8px !important;
-    font-size: 20px !important;
+    padding: 6px 6px !important;
+    font-size: 18px !important;
   }
   .home-implant-banner-img {
     width: 95% !important;
@@ -612,13 +614,14 @@
     aspect-ratio: 2/0.79;
   }
   .new-banner3-text {
-    top: 19%;
+    top: 24%;
+    width:34%;
   }
   .new-banner3-text h2 {
-    font-size: 80px;
+    font-size: 60px;
   }
   .new-banner3-text h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .new-banner3-productImg1 {
     width: 32% !important;
