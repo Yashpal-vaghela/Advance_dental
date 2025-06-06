@@ -561,7 +561,7 @@
 }
 @media (max-width: 576px) {
   .pin-spacer:has(.why-Implant-section){
-    margin-top: -20% !important;
+    margin-top: -32% !important;
     width: 100% !important;
     /* top: 0px !important; */
   }

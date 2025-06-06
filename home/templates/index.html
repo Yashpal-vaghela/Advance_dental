@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide">
+        {% comment %} <div class="swiper-slide">
           <div class="container banner-2 position-relative">
             <img src="{% static 'banner-2/banner-31.png' %}" alt="zir-logo" class="zir-logo1" />
             <img src="{% static 'banner-2/Group281.webp' %}" alt="ele-pic1" class="ele-pic2" />
@@ -66,17 +66,177 @@
           <div class="optional1">
             <a href="/zirconia-crown/"><img src="{% static 'banner-2/banner-31.webp' %}" alt="slide2-optional" class="slide2-optional1" /></a>
           </div>
+        </div> {% endcomment %}
+        
+        <div class="swiper-slide banner2-swiper-slide position-relative">
+          <img
+            src="{% static 'banner-2/new-banner2-img12.png' %}"
+            class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
+            alt="banner2-bg"
+          />
+          <img
+            src="{% static 'banner-2/new-banner2-img16.png' %}"
+            class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
+            alt="banner2-bg"
+          />
+          <img
+            src="{% static 'banner-2/new-banner2-mobileSize.jpg' %}"
+            class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
+            alt="banner2-bg"
+          />
+          <div class="container new-banner2">
+            <img
+              src="{% static 'banner-2/new-banner2-logo.png' %}"
+              class="new-banner2-logo img-fluid"
+              alt="banner2-logo"
+            />
+            <img
+              src="{% static 'banner-2/new-banner2-text.png' %}"
+              class="new-banner2-text img-fluid"
+              alt="banner2-text"
+            />
+            <button class="btn btn-read-more1">
+              <a href="/zirconia-crown/"
+                >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
+              ></a>
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide home-implant-slider-wrapper position-relative">
+          <img
+            src="{% static '/img/implant-banner-bg9.png' %}"
+            class="img-fluid home-implant-banner-bg"
+          />
+          <a href="/ad-implant/">
+            <img
+              src="{% static '/img/implant-mobile-banner5.png' %}"
+              class="img-fluid home-implant-mobile-banner"
+            />
+          </a>
+          <div
+            class="container home-implant-banner-img-wrapper position-absolute"
+          >
+            <div class="row align-items-center justify-content-end">
+              <div class="col-lg-5 col-md-5">
+                <h1 class="home-implant-text">
+                  <span class="home-implant-text1">Plant Your Implant with</span>
+                  <b class="home-implant-rolling-text">
+                    <div class="letter" style="--i: 0">
+                      <div class="letter-track">
+                        <span>A</span>
+                        <span>A</span>
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 1">
+                      <div class="letter-track">
+                        <span>D</span>
+                        <span>D</span>
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 2">
+                      <div class="letter-dash">
+                        <span>-</span>
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 3">
+                      <div class="letter-track">
+                        <span>I</span>
+                        <span>I</span>
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 4">
+                      <div class="letter-track">
+                        <span>m</span>
+                        <span>m</span>
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 5">
+                      <div class="letter-track">
+                        <span>p</span>
+                        <span>p</span>
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 6">
+                      <div class="letter-track">
+                        <span>l</span>
+                        <span>l</span>  
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 7">
+                      <div class="letter-track">
+                        <span>a</span>
+                        <span>a</span>  
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 8">
+                      <div class="letter-track">
+                        <span>n</span>
+                        <span>n</span>  
+                      </div>
+                    </div>
+                    <div class="letter" style="--i: 9">
+                      <div class="letter-track">
+                        <span>t</span>
+                        <span>t</span>
+                      </div>
+                    </div>
+                  </b>
+                </h1>
+
+                <button class="btn btn-implant-button">
+                  <a href="/ad-implant/">Discover More <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </button>
+              </div>
+              <div class="col-lg-7 col-md-7 p-0 home-implant-content2">
+                <img
+                  src="{% static '/img/implant-banner-img4.png' %}"
+                  class="img-fluid home-implant-banner-img"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="banner-31 position-relative">
-            <img src="{% static 'banner-2/bg-33.webp' %}" class="banner-bg3 img-fluid" anim="glitch" />
-            <img src="{% static 'banner-2/bg-4-3.webp' %}" class="banner-bg4 img-fluid" />
-            <div class="container">
-              <img src="{% static 'banner-2/banner3-text.webp' %}" class="banner3-text img-fluid" />
-              <img src="{% static 'banner-2/banner3-subtitle5.webp' %}" class="banner3-subtitle img-fluid" />
-              {% comment %} <h2 class="banner3-subtitle">For valued Customer</h2> {% endcomment %}
-              <img src="{% static 'banner-2/banner3-product1.webp' %}" class="banner3-product img-fluid" />
+          <div class="new-banner-wrapper position-relative">
+            <img
+              src="{% static '/banner-2/new-banner3-bg24.png'%}"
+              class="new-banner3-bg img-fluid d-none d-lg-block"
+            />
+            <img
+              src="{% static '/banner-2/new-banner3-bg8.png'%}"
+              class="new-banner3-bg img-fluid d-sm-none d-md-block d-lg-none d-none"
+            />
+            <img
+              src="{% static '/banner-2/new-banner3-mobileSize1.png' %}"
+              class="d-block d-md-none img-fluid"
+            />
+          </div>
+          <div class="container new-banner-productWrapper">
+            <img
+              src="{% static '/banner-2/new-banner3-productImg4.png' %}"
+              class="new-banner3-productImg1 img-fluid"
+            />
+            <img
+              src="{% static '/banner-2/new-banner3-productImg2.png' %}"
+              class="new-banner3-productImg2 img-fluid"
+            />
+            <img
+              src="{% static '/banner-2/new-banner3-productImg3.png' %}"
+              class="new-banner3-productImg3 img-fluid"
+            />
+            <img
+              src="{% static '/banner-2/new-banner3-productImg5.png' %}"
+              class="new-banner3-productImg4 img-fluid"
+            />
+            <img
+              src="{% static '/banner-2/new-banner3-productImg6.png' %}"
+              class="new-banner3-productImg5 img-fluid"
+            />
+            <div class="new-banner3-text">
+              <h2>FREE ACE SCAN HERE</h2>
+              <h3>For Valued Customer</h3>
             </div>
           </div>
         </div>
@@ -109,55 +269,55 @@
       </div>
     </div>
      
-  <!--Static Counter -->
-  <div class="container text-center my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'cases.png' %}" alt = "cases">
-          </div>
-          <div class="text-box">
-            <div><span class="count-element">6</span>L+</div>
-            <p>Cases</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'doctor.png' %}" alt = "doctor">
-          </div>
-          <div class="text-box">
-            <div><span class="count-element">400</span>+</div>
-            <p>Qualified Professional</p>
+    <!--Static Counter -->
+    <div class="container text-center my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-6">
+          <div class="stat-box d-flex align-items-center justify-content-center">
+            <div class="icon-box">
+              <img src="{% static 'cases.png' %}" alt = "cases">
+            </div>
+            <div class="text-box">
+              <div><span class="count-element">6</span>L+</div>
+              <p>Cases</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'dentist-new.png' %}" alt = "cases">
-          </div>
-          <div class="text-box">
-            <div><span class="count-element">3500</span>+</div>
-            <p>Trusted Dentists</p>
+        <div class="col-md-3 col-6">
+          <div class="stat-box d-flex align-items-center justify-content-center">
+            <div class="icon-box">
+              <img src="{% static 'doctor.png' %}" alt = "doctor">
+            </div>
+            <div class="text-box">
+              <div><span class="count-element">400</span>+</div>
+              <p>Qualified Professional</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'location-new.png' %}" alt = "cases">
+        <div class="col-md-3 col-6">
+          <div class="stat-box d-flex align-items-center justify-content-center">
+            <div class="icon-box">
+              <img src="{% static 'dentist-new.png' %}" alt = "cases">
+            </div>
+            <div class="text-box">
+              <div><span class="count-element">3500</span>+</div>
+              <p>Trusted Dentists</p>
+            </div>
           </div>
-          <div class="text-box">
-            <div><span class="count-element">500</span>+</div>
-            <p>Local Partners</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="stat-box d-flex align-items-center justify-content-center">
+            <div class="icon-box">
+              <img src="{% static 'location-new.png' %}" alt = "cases">
+            </div>
+            <div class="text-box">
+              <div><span class="count-element">500</span>+</div>
+              <p>Local Partners</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </section>
    <!-- Static cards hero -->
   <section>

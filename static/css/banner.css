@@ -26,13 +26,13 @@
   object-fit: cover;
   pointer-events: none !important;
 }
-#player{
+#player {
   background: #000 !important;
   opacity: 0.5;
-  width:100%;
+  width: 100%;
   height: 100%;
   position: relative;
-  object-fit:cover;
+  object-fit: cover;
 }
 .banner1-img {
   position: absolute;
@@ -55,32 +55,34 @@
 .hero-section1 .h2s {
   color: rgba(17, 171, 147, 1) !important;
 }
-/* banner 2 css */
-.zir-logo1 {
+/* !---------------- banner 2(zirconia) css ------------- ! */
+.new-banner2 {
   position: absolute;
-  width: 140px !important;
-  right: 5%;
-  top: 65px !important;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  right: 0%;
 }
-.ele-pic2 {
+.new-banner2-logo {
   position: absolute;
-  height: 480px !important;
-  width: 450px !important;
-  right: 13%;
-  top: 33px !important;
+  top: 25px;
+  right: 2%;
+  width: 11% !important;
+  z-index: 1;
 }
-.let-pic1 {
+.new-banner2-text {
   position: absolute;
-  width: 470px !important;
-  left: 5%;
-  top: 80px !important;
+  top: 140px;
+  right: 2%;
+  width: 38% !important;
+  z-index: 1;
 }
 .btn-read-more1 {
   position: absolute;
   z-index: 5;
   top: 330px !important;
-  left: 5%;
-  background-color: #1d907c !important;
+  right: 2%;
+  background-color: rgba(27, 137, 118, 1) !important;
   padding: 4px 6px !important;
   border-radius: 8px !important;
   font-size: 14px !important;
@@ -89,7 +91,7 @@
 .btn-read-more1:hover,
 .btn-read-more1:focus {
   background-color: #fff !important;
-  border: 2px solid #1d907c !important;
+  border: 2px solid rgba(27, 137, 118, 1) !important;
   transform: scale(0.9);
 }
 .btn-read-more1 a {
@@ -98,105 +100,229 @@
 }
 .btn-read-more1:hover a,
 .btn-read-more1:focus a {
-  color: #1d907c;
+  color: rgba(27, 137, 118, 1);
   transform: scale(0.9);
 }
 .btn-read-more1 i {
   padding: 10px 10px 9px 10px;
   background-color: #fff;
-  color: #1d907c;
+  color: rgba(27, 137, 118, 1);
   transform: rotate(-45deg);
   border-radius: 50%;
   transition: all 0.7s ease-in-out;
 }
 .btn-read-more1:hover i,
 .btn-read-more1:focus i {
-  background-color: #1d907c;
+  background-color: rgba(27, 137, 118, 1);
   color: #fff;
   transform: scale(0.9);
 }
-.grass-pic1 {
-  position: absolute;
-  top: 335px;
-  z-index: 1;
-}
-.optional1 {
-  width: 0% !important;
-}
-.slide2-optional1 {
-  display: none;
-}
 
 /* slider animation */
-.hero-section1 .swiper-slide-active .ele-pic2 {
-  animation: fadeInUp 2s ease forwards;
-  transition-delay: 0.6s;
+.hero-section1 .swiper-slide-active .new-banner2-bg{
+  animation: ZoomIn2 1s ease-in-out forwards;
 }
-.hero-section1 .swiper-slide-active .zir-logo1 {
+.hero-section1 .swiper-slide-active .new-banner2-logo{
+  animation: fadeInRight 2s ease forwards;
+  transition-delay: 0.4s;
+}
+.hero-section1 .swiper-slide-active .new-banner2-text {
+  animation: fadeInRight 2s ease forwards;
+  transition-delay: 0.4s;
+}
+.hero-section1 .swiper-slide-active .btn-read-more1 {
   animation: fadeInRight 3s ease forwards;
   transition-delay: 0.6s;
 }
-.hero-section1 .swiper-slide-active .let-pic1 {
-  animation: fadeInLeft 2s ease forwards;
-  transition-delay: 0.6s;
-}
-.hero-section1 .swiper-slide-active .btn-read-more1 {
-  animation: fadeInLeft 3s ease forwards;
-  transition-delay: 0.8s;
-}
-.hero-section1 .swiper-slide-active .texts {
-  animation: ZoomIn 1.5s ease;
-}
-
-@keyframes ZoomIn {
+@keyframes ZoomIn2 {
   from {
     opacity: 0;
-    transform: scale(0.6);
+    filter: blur(5px);
+    transform: scale(0.95);
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50%, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translateZ(0) scale(1);
+    transform: none;
   }
 }
-
-/* banner 3 css */
-.banner-bg3 {
-  aspect-ratio: 3/1.37;
+/* !---------------- banner 3(Implant banner) css ------------- ! */
+.home-implant-slider-wrapper {
+  background-color: #000;
 }
-.banner-31 .banner-bg4 {
-  display: none;
+.home-implant-banner-bg {
+    object-fit: cover;
 }
-.banner3-text {
-  position: absolute;
+.home-implant-mobile-banner {
+  display: none !important;
+}
+.home-implant-banner-img-wrapper {
   top: 5%;
-  width: 22% !important;
-  left: 38%;
+  z-index: 9999;
+  width: 100%;
+  max-width: 100%;
 }
-.banner3-product {
-  position: absolute;
-  top: 19%;
-  width: 33% !important;
-  left: 33%;
+.home-implant-text {
+  color: #fff;
+  text-align: left;
+  margin-left: 8%;
+  font-size: 45px;
+  line-height: 1.6;
+  margin-top: -16%;
 }
- .banner3-subtitle{
-  position: absolute;
-  top: 22%;
-  left: 40.1%;
-  width: 18% !important;
- }
-/* responsive css  */
-.hero-section1 .swiper-slide-active .banner3-text{
-  animation: moveBottom 1s ease-in-out;
+/* .home-implant-text b {
+  background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%);
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-weight: 700;
+} */
+.home-implant-rolling-text{
+  display: inline-flex;
+  gap: 2px;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: monospace;
+  background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color:transparent;
+  -webkit-text-fill-color: transparent;
 }
-.hero-section1 .swiper-slide-active .banner3-subtitle{
-  animation: ZoomIn1 1s ease-in-out;
+.letter{
+  overflow: hidden;
+  height: 1em;
+  width: 1ch;
+  position: relative;
 }
-.hero-section1 .swiper-slide-active .banner3-product{
-  animation: moveUp 1s ease-in-out forwards;
+.letter-track{
+  display: flex;
+  flex-direction: column;
+  /* animation: roll 1s linear 2 forwards;
+  animation-delay: calc(0.2s * var(--i)); */
+  --step: 10%;
+  background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%);
+  background-size: 1000%;
+  background-position: calc(var(--i) * var(--step)) 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text;
+  color: transparent;
 }
-@keyframes moveBottom{
+.letter-track span {
+  line-height: 1em;
+  height: 1em;
+  display: block;
+  text-align: center;
+}
+.letter-dash {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-22%);
+  --step: 10%;
+  background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%);
+  background-size: 1000%;
+  background-position: calc(var(--i) * var(--step)) 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text;
+}
+@keyframes roll {
   0% {
-    transform: translateY(-30px);
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-52%);
+  }
+}
+.btn-implant-button {
+  position: absolute;
+  z-index: 5;
+  top: 300px !important;
+  left: 9%;
+  background-color: rgba(42, 42, 42, 1) !important;
+  padding: 5px 8px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  transition: all 0.5s ease-in-out;
+  color: rgba(12, 177, 190, 1);
+}
+.btn-implant-button a {
+  color: rgba(12, 177, 190, 1);
+}
+.btn-implant-button i {
+  padding: 10px 10px 9px 10px;
+  background-color: rgba(12, 177, 190, 1);
+  color: rgba(42, 42, 42, 1);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  transition: all 0.7s ease-in-out;
+}
+.btn-implant-button:hover,
+.btn-implant-button:focus {
+  background-color: rgba(12, 177, 190, 1) !important;
+  border: 2px solid rgba(42, 42, 42, 1) !important;
+  transform: scale(1);
+}
+.btn-implant-button:hover a,
+.btn-implant-button:focus a {
+  color: rgba(42, 42, 42, 1);
+  transform: scale(1);
+}
+.btn-implant-button:hover i,
+.btn-implant-button:focus i {
+  background-color: rgba(42, 42, 42, 1);
+  color: #fff;
+  transform: scale(1);
+}
+.home-implant-banner-img {
+  position: relative;
+  top: 0%;
+  z-index: 9999;
+}
+/* animation banner 3 */
+.hero-section1 .swiper-slide-active .home-implant-banner-bg{
+  animation: ZoomIn2 1s ease-in-out forwards;
+}
+.hero-section1 .swiper-slide-active .home-implant-banner-img{
+  animation: fadeInRight 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .btn-implant-button{
+  animation: fadeInLeft2 1.1s ease forwards;
+  transition-delay: 0.4s;
+}
+.hero-section1 .swiper-slide-active .home-implant-text{
+  animation: moveBottom2 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .home-implant-text .home-implant-rolling-text .letter .letter-track{
+  animation: roll 1s linear 1 forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes fadeInLeft2 {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes moveBottom2{
+  0% {
+    transform: translateY(-100px);
     opacity: 0;
   }
   100% {
@@ -204,9 +330,96 @@
     opacity: 1;
   }
 }
-@keyframes moveUp {
+
+/* !---------------- banner 4(ACE-SCAN banner) css ------------- ! */
+.new-banner3-productImg1 {
+  position: absolute;
+  z-index: 1;
+  bottom: 2%;
+  right: -16%;
+  width: 40% !important;
+}
+.new-banner3-productImg2 {
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  right: 37%;
+  width: 37% !important;
+}
+.new-banner3-productImg3 {
+  position: absolute;
+  z-index: 1;
+  bottom: 14%;
+  left: 0%;
+  width: 23% !important;
+}
+.new-banner3-productImg4 {
+  position: absolute;
+  z-index: 1;
+  width: 9% !important;
+  right: 27%;
+  top: 14.1%;
+}
+.new-banner3-productImg5 {
+  position: absolute;
+  z-index: 1;
+  width: 9% !important;
+  right: 19%;
+  top: 6%;
+}
+.new-banner3-text {
+  position: absolute;
+  z-index: 1;
+  top: 21%;
+  left: 12%;
+  width: 38%;
+  color: #fff;
+  text-align: left;
+}
+.new-banner3-text h2 {
+  font-size: 54px;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+.new-banner3-text h3 {
+  color: #fff;
+}
+/* animation banner 4 css */
+.hero-section1 .swiper-slide-active .new-banner3-bg{
+  animation: ZoomIn2 1s ease-in-out forwards;
+}
+.hero-section1 .swiper-slide-active .new-banner3-productImg1{
+  animation: fadeInRight1 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-productImg2{
+  animation: moveUp1 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-productImg3{
+  animation: fadeInLeft1 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-productImg4{
+  animation: moveUp1 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-productImg5{
+  animation: moveBottom1 2s ease forwards;
+  transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-text h2{
+  animation: fadeInLeft1 1.5s ease forwards;
+  transition-delay: 0.3s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-text h3{
+  animation: fadeInLeft1 2s ease forwards;
+  transition-delay: 0.6s;
+}
+@keyframes moveUp1 {
   0% {
-    transform: translateY(50px);
+    transform: translateY(100px);
     opacity: 0;
   }
   50% {
@@ -216,38 +429,73 @@
     transform: translateY(0);
     opacity: 1;
   }
-} 
-@keyframes ZoomIn1{
+}
+@keyframes moveBottom1 {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight1 {
   from {
     opacity: 0;
-    transform: scale(0.2);
+    transform: translate3d(50%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft1 {
+  from {
+    opacity: 0;
+    transform: translate3d(-40%, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translateZ(0) scale(1);
+    transform: none;
   }
 }
+
 /* pagination css */
 .hero-section1 .banner-1-wrap .swiper-button-next,
-.hero-section1 .swiper-wrapper .swiper-slide:first-child .swiper-button-prev{
+.hero-section1 .swiper-wrapper .swiper-slide:first-child .swiper-button-prev {
   color: #fff !important;
- }
-.hero-section1 .swiper-button-next,
-.hero-section1 .swiper-button-prev {
+}
+.hero-section1 .swiper-buttobuntton-next,
+.hero-section1 .swiper--prev {
   color: rgba(17, 171, 147, 1) !important;
   font-weight: 900;
 }
-.hero-section1 .swiper-button-next{
+.hero-section1 .swiper-button-next {
   right: var(--swiper-navigation-sides-offset, 40px) !important;
 }
-.hero-section1 .swiper-button-prev{
+.hero-section1 .swiper-button-prev {
   left: var(--swiper-navigation-sides-offset, 40px) !important;
 }
-.hero-section1  video::-webkit-media-controls-timeline{
+.hero-section1 video::-webkit-media-controls-timeline {
   display: none !important;
 }
-.hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.hero-section1 .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: var(--swiper-pagination-bottom, 50px) !important;
+}
+
+/* responsive all banner css */
+@media screen and (min-width: 992px) {
+  .hero-section1 .swiper-slide-active .texts {
+    width: 38.5% !important;
+  }
+  .home-implant-content2 {
+    width: 54% !important;
+  }
 }
 @media screen and (min-width: 2800px) {
   .hero-section1 {
@@ -260,9 +508,6 @@
 @media screen and (min-width: 2400px) and (max-width: 2800px) {
   .hero-section1 {
     height: 720px;
-  }
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3 / 1.2;
   }
   .hero-section1 .swiper {
     width: 75% !important;
@@ -279,35 +524,9 @@
     top: 34%;
   }
   /* banner 2 */
-  .ele-pic2 {
-    height: 500px !important;
-    width: 500px !important;
-  }
-  .let-pic1 {
-    top: 95px !important;
-    left: 2%;
-  }
-  .grass-pic1 {
-    height: 100%;
-  }
   .btn-read-more1 {
     top: 340px !important;
     left: 2%;
-  }
-  /* banner 3 */
-  .banner3-text{
-    left: 39%;
-    width: 19.5% !important;
-  }
-  .banner3-subtitle{
-    top: 20%;
-    left: 41.5%;
-    width: 15% !important;
-  }
-  .banner3-product{
-    top: 19%;
-    width: 29% !important;
-    left: 35.5%;
   }
 }
 @media screen and (min-width: 2100px) and (max-width: 2400px) {
@@ -317,27 +536,25 @@
   .hero-section1 .swiper {
     width: 74% !important;
   }
-  /* banner 2 */
-  .ele-pic2 {
-    top: 32px !important;
-  }
 }
 @media screen and (min-width: 1800px) and (max-width: 2000px) {
   .hero-section1 {
     height: 750px;
   }
-  .implant-hero-section{
+  /* implant page */
+  
+  .implant-hero-section {
     height: 800px;
   }
-  .implant-banner-img{
-    width:95% !important;
+  .implant-banner-img-wrapper {
+    top: 4%;
+  }
+  .implant-banner-img {
+    width: 95% !important;
     margin-left: auto;
   }
-  .implant-text{
+  .implant-text {
     margin-left: 36%;
-  }
-  .implant-banner-img-wrapper{
-    top:4%;
   }
   /* banner 1  */
   .banner1-img {
@@ -350,61 +567,87 @@
   .texts {
     top: 28%;
   }
-  /* banner 2 */
-  .zir-logo1{
-    width: 180px !important;
-    right: 1%;
+  /* new banner 2(zirconia) css */
+  .banner2-swiper-slide {
+    margin-top: -6%;
   }
-  .ele-pic2 {
-    top: 55px !important;
-    width: 520px !important;
-    height: 600px !important;
+  .new-banner2-bg {
+    aspect-ratio: 2/0.9;
   }
-  .let-pic1 {
-    left: 2%;
-    top: 120px !important;
+  .new-banner2-logo {
+    top: 130px;
+    width: 14% !important;
   }
-  .grass-pic1 {
-    top: 410px;
+  .new-banner2-text {
+    top: 300px;
+    width: 600px !important;
   }
   .btn-read-more1 {
-    top: 360px !important;
-    left:2%;
-  }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3 / 1.25;
-  }
-  .banner3-text{
-    left: 39%;
-    width: 21.5% !important;
-  }
-  .banner3-subtitle{
-    top: 20%;
-    left: 42%;
+    top: 610px !important;
     width: 16% !important;
+    padding: 6px 6px !important;
+    font-size: 20px !important;
   }
-  .banner3-product{
-    top: 21%;
-    width: 28.5% !important;
-    left: 35.5%;
+  /* new banner 3(implant) css */
+  .home-implant-text {
+    margin-left: 23%;
+    margin-top: -8%;
+    font-size: 60px;
   }
+  .home-implant-rolling-text{
+    font-size: 60px;
+  }
+  .btn-implant-button {
+    top: 440px !important;
+    left: 14.5%;
+    padding: 8px 8px !important;
+    font-size: 20px !important;
+  }
+  .home-implant-banner-img {
+    width: 95% !important;
+    left: 5%;
+  }
+  /* new banner acn-scan(banner4) css */
+  .new-banner3-bg {
+    aspect-ratio: 2/0.79;
+  }
+  .new-banner3-text {
+    top: 19%;
+  }
+  .new-banner3-text h2 {
+    font-size: 80px;
+  }
+  .new-banner3-text h3 {
+    font-size: 2.5rem;
+  }
+  .new-banner3-productImg1 {
+    width: 32% !important;
+    right: -14.5%;
+    bottom: 0%;
+  }
+  .new-banner3-productImg2 {
+    bottom: 0%;
+    right: 40%;
+    width: 38% !important;
+  }
+  .new-banner3-productImg3 {
+    width: 17.5% !important;
+  }
+ 
 }
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
   .hero-section1 {
     height: 665px;
   }
-  .implant-text{
-    margin-left: 40%;
-  }
-  .implant-hero-section{
+  /* implant page */
+  .implant-hero-section {
     height: 700px;
   }
-  .implant-banner-img{
-    width:90% !important;
-    margin-left: auto;
-  } .implant-banner-img{
-    width:90% !important;
+  .implant-text {
+    margin-left: 40%;
+  }
+  .implant-banner-img {
+    width: 90% !important;
     margin-left: auto;
   }
   /* banner 1 */
@@ -413,44 +656,66 @@
   }
   .banner1-img img {
     width: 83%;
-    aspect-ratio:auto ;
+    aspect-ratio: auto;
   }
   .texts {
     top: 32.8%;
   }
-  /* banner 2 */
-  .ele-pic2 {
-    top: 43px !important;
-    width: 470px !important;
-    height: 520px !important;
+  /* new-banner2 css */
+  .banner2-swiper-slide {
+    margin-top: -6%;
   }
-  .grass-pic1 {
-    top: 360px;
+  .new-banner2-bg {
+    aspect-ratio: 2/0.9;
   }
-  .let-pic1 {
-    top: 120px !important;
-    left: 5%;
+  .new-banner2-logo {
+    top: 120px;
+    width: 12% !important;
+  }
+  .new-banner2-text {
+    top: 260px;
+    width: 45% !important;
   }
   .btn-read-more1 {
-    top: 360px !important;
+    top: 560px !important;
+    width: 12% !important;
+    padding: 4px 6px !important;
   }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3 / 1.25;
+  /* new-banner3(Implant) css */
+   .home-implant-content2 {
+    width: 50% !important;
   }
-  .banner3-text{
-    left: 39%;
-    width: 22% !important;
+  .home-implant-text{
+    font-size: 55px;
+    margin-top: -10%;
+    margin-left: 2%;
   }
-  .banner3-subtitle{
-    top: 20%;
-    left: 42%;
-    width: 16% !important;
+  .btn-implant-button{
+    top:380px !important;
+    left:10%
   }
-  .banner3-product{
-    top: 21%;
-    width: 28.5% !important;
-    left: 35%;
+  /* new acn-scan(banner4) css */
+  .new-banner3-text {
+    top: 18%;
+  }
+  .new-banner3-text h2 {
+    font-size: 70px;
+  }
+  .new-banner3-text h3 {
+    font-size: 2.1rem;
+  }
+  .new-banner3-productImg1 {
+    width: 32% !important;
+    right: -15%;
+    bottom: 0%;
+  }
+  .new-banner3-productImg2 {
+    bottom: 0%;
+    right: 40%;
+    width: 38% !important;
+  }
+  .new-banner3-productImg3 {
+    width: 18% !important;
   }
 }
 @media screen and (min-width: 1439px) and (max-width: 1649px) {
@@ -458,63 +723,86 @@
     height: 665px;
   }
   /* banner 1 */
-  .banner1-img{
-    top:45%;
+  .banner1-img {
+    top: 45%;
   }
   .banner1-img img {
     width: 74%;
     aspect-ratio: 4 / 3.7;
   }
-  /* banner 2  */
-  .ele-pic2 {
-    top: 12px !important;
-    width: 362px !important;
-    right: 19%;
+  /* new-banner2 css */
+  .banner2-swiper-slide {
+    margin-top: -4%;
   }
-  .grass-pic1 {
-    top: 300px;
+  .new-banner2-bg {
+    aspect-ratio: 2/0.82;
   }
-  .let-pic1 {
-    width: 430px !important;
-    top: 82px !important;
+  .new-banner2-logo {
+    top: 80px;
+  }
+  .new-banner2-text {
+    top: 205px;
   }
   .btn-read-more1 {
-    top: 300px !important;
-    left: 5%;
+    top: 458px !important;
+    width: 12% !important;
+    padding: 4px 6px !important;
   }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3 / 1.23;
+  /* banner implant(banner3) css */
+  .home-implant-text{
+    font-size: 50px;
+    margin-left: 0%;
+    margin-top: -12%;
   }
-  .banner3-text{
-    left: 38.2%;
-    width: 22% !important;
+  .home-implant-content2{
+    width:48% !important;
   }
-  .banner3-subtitle{
-    top:23%;
-    left:41.5%;
-    width: 16% !important;
+  .btn-implant-button{
+    top:350px !important;
+    left:11%;
   }
-  /* .banner3-subtitle{
-    top:22%;
-    left: 42.5%;
-  } */
-  .banner3-product{
-    top: 18.8%;
-    width: 31% !important;
-    left: 33.5%;
+  /* new scan banner(banner4) css */
+  .new-banner3-bg {
+    aspect-ratio: 2/0.75;
+  }
+  .new-banner3-text {
+    left: 13%;
+    top: 18%;
+  }
+  .new-banner3-text h2 {
+    font-size: 65px;
+  }
+  .new-banner3-text h3 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+  .new-banner3-productImg1 {
+    width: 34% !important;
+    right: -16%;
+    bottom: 0%;
+  }
+  .new-banner3-productImg2 {
+    bottom: 2.2%;
+    width: 38% !important;
+  }
+  .new-banner3-productImg3 {
+    bottom: 10%;
+    width: 18% !important;
+  }
+  .new-banner3-productImg5 {
+    top: 5%;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1649px) {
   .hero-section1 {
     height: 590px;
   }
-  .implant-hero-section{
-     height: 630px;
+  .implant-hero-section {
+    height: 630px;
   }
   /* banner 1 */
-  .banner1-img{
-    top:48.3%
+  .banner1-img {
+    top: 48.3%;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1440px) {
@@ -522,74 +810,75 @@
   .banner1-img img {
     width: 84%;
   }
-  /* banner 2 */
-  .zir-logo1 {
-    width: 100px !important;
-    right: 11%;
+  /* new banner2(zirconia banner) css */
+  .new-banner2-logo {
+    top: 30px;
+    right: 8%;
   }
-  .ele-pic2 {
-    width: 400px !important;
-    top: 8px !important;
-    right: 19%;
-  }
-  .let-pic1 {
-    width: 400px !important;
-    top: 85px !important;
-    left: 11%;
+  .new-banner2-text {
+    right: 8%;
+    top: 160px;
+    width: 38% !important;
   }
   .btn-read-more1 {
-    top: 282px !important;
-    left: 11%;
+    top: 415px !important;
+    width: 12% !important;
+    right: 8%;
     padding: 4px 6px !important;
   }
-  .grass-pic1 {
-    top: 300px;
-  }
-  /* implant banner */
-  .implant-text{
+  /* implant page  */
+  .implant-text {
     margin-left: 25%;
-  }
-}
-@media screen and (min-width:992px){
-  .hero-section1 .swiper-slide-active .texts{
-    width: 38.5% !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
   .hero-section1 {
     height: 530px;
   }
-  .implant-hero-section{
+  .implant-hero-section {
     height: 580px;
   }
-  /* banner 2 */
-  .zir-logo1 {
-    width: 11% !important;
-    right: 6%;
-  }
-  .ele-pic2 {
-    width: 38% !important;
-    height: 484px !important;
-    top: 75px !important;
-    right: 15%;
-  }
-  .let-pic1 {
-    width: 35% !important;
-    left: 8%;
-    top: 130px !important;
+  /* new-banner2(zirconia) css */
+  .new-banner2-bg {
+    height: 100% !important;
   }
   .btn-read-more1 {
-    top: 330px !important;
-    left: 8.5%;
-  }
-  .grass-pic1 {
-    top: 360px;
-  }
-  .slide2-optional1 {
-    display: none;
+    top: 370px !important;
+    right: 2%;
   }
 }
 /* max width responsive css */
+@media (max-width: 1279px) {
+  /* ace-scan(banner3) css */
+  .new-banner3-bg {
+    aspect-ratio: 2/0.9;
+  }
+  .new-banner3-text {
+    top: 19%;
+  }
+  .new-banner3-productImg1 {
+    width: 33% !important;
+    right: -15.5%;
+    bottom: 1%;
+  }
+  .new-banner3-productImg2 {
+    bottom: 0%;
+    right: 40%;
+    width: 38% !important;
+  }
+  .new-banner3-productImg3 {
+    width: 18% !important;
+  }
+  .new-banner3-productImg4 {
+    width: 10% !important;
+    right: 25%;
+    top: 15.1%;
+  }
+  .new-banner3-productImg5 {
+    width: 10% !important;
+    right: 16%;
+  }
+}
 @media (max-width: 1200px) {
   .hero-section1 {
     height: 500px;
@@ -611,61 +900,86 @@
   .hero-section1 .h2s {
     font-size: 45px !important;
   }
-  /* banner 2 */
-  .zir-logo1 {
-    right: 4%;
-    width: 130px !important;
-  }
-  .ele-pic2 {
-    width: 360px !important;
-    height: 400px !important;
-    top: 78px !important;
-    right: 13%;
-  }
-  .let-pic1 {
-    width: 365px !important;
-    left: 8%;
-    top: 100px !important;
-  }
-  .grass-pic1 {
-    top: 330px;
-  }
+  /* new banner 2 (zirconia) css*/
   .btn-read-more1 {
-    top: 280px !important;
-    left: 8%;
+    top: 320px !important;
+    width: 15.7% !important;
   }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3/1.37;
+  /* banner 3(Implant) css */
+  .home-implant-slider-wrapper .home-implant-banner-bg {
+    height: 100%;
+  }
+  .home-implant-text {
+    font-size: 40px;
+  }
+  .btn-implant-button {
+    top: 65% !important;
+  }
+  .home-implant-banner-img-wrapper {
+    top: 10%;
+  }
+  .home-implant-banner-img {
+    /* width:95% !important; */
+    margin-left: auto;
   }
   /* pagination css */
-  .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  .hero-section1 .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, 60px) !important;
+  }
+  /* new acn-scn banner(banner4) css */
+  .new-banner3-bg {
+    aspect-ratio: 2/0.89;
+  }
+  .new-banner3-text h2 {
+    font-size: 50px;
+  }
+  .new-banner3-text h3 {
+    font-size: 1.65rem;
+  }
+  .new-banner3-productImg4 {
+    width: 9.5% !important;
+    right: 24.8%;
+  }
+  .new-banner3-productImg5 {
+    width: 9.5% !important;
+    right: 16.5%;
+    top: 6.5%;
   }
 }
 @media (max-width: 1100px) {
-    /* banner 1 */
-    .banner1-img {
-      top: 50%;
-    }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3/1.55;
+  /* banner 1 */
+  .banner1-img {
+    top: 50%;
   }
-  .banner3-text {
-    width: 27% !important;
-    left: 36%;
+  /* ace-scan (banner4) css */
+  .new-banner-wrapper {
+    height: 100%;
   }
-  .banner3-subtitle{
-    top:23.5%;
-    left: 39.4%;
-    /* left: 41.5%; */
-    width: 19.5% !important;
+  .new-banner3-bg {
+    aspect-ratio: auto;
+    height: 100% !important;
   }
-  .banner3-product {
-    width: 34% !important;
-    left: 33%;
-    top: 24%;
+  .new-banner3-text {
+    left: 10%;
+  }
+  .new-banner3-text h2 {
+    font-size: 45px;
+  }
+  .new-banner3-text h3 {
+    font-size: 1.6rem;
+  }
+  .new-banner3-productImg4 {
+    width: 11% !important;
+    right: 23.5%;
+    top: 11%;
+  }
+  .new-banner3-productImg5 {
+    width: 10.5% !important;
+    right: 15%;
+    top: 6%;
   }
 }
 @media (max-width: 1024px) {
@@ -688,7 +1002,7 @@
   .texts {
     top: 45%;
   }
-  .plyr{
+  .plyr {
     height: 100%;
   }
   .hero-section1 .h1s,
@@ -696,67 +1010,71 @@
     text-align: center;
     font-size: 35px !important;
   }
-  /* banner 2 css */
-  .zir-logo1 {
-    right: -10%;
-    width: 130px !important;
-    height: 75px;
-    top: 20px !important;
+  /* new banner 2(zirconia) css */
+  .new-banner2-logo {
+    top: 110px;
+    right: -5%;
+    width: 20% !important;
   }
-  .ele-pic2 {
-    top: 85px !important;
-    right: 0%;
-    width: 370px !important;
-    height: 420px !important;
-  }
-  .grass-pic1 {
-    top: 348px;
-  }
-  .let-pic1 {
-    left: -4%;
-    height: auto;
+  .new-banner2-text {
+    top: 235px;
+    right: -5%;
+    width: 55% !important;
   }
   .btn-read-more1 {
-    top: 300px !important;
-    left: -3%;
+    top: 440px !important;
+    right: -5%;
     padding: 5px 8px !important;
     font-size: 12px !important;
+    width: 20% !important;
   }
   .btn-read-more1 i {
     padding: 8px 8px 7px 8px;
   }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3/1.8;
-    display:none !important;
+  /* new implant(banner3) css */
+  .home-implant-text {
+    font-size: 35px;
+    margin-left: 14%;
+    margin-top: -12%;
   }
-  .banner-31 .banner-bg4{
-    aspect-ratio: 3/1.7;
-    display: block !important;
+  .btn-implant-button {
+    top: 69% !important;
+    left: 7%;
   }
-  .banner3-text {
-    width: 33% !important;
-    left: 32%;
+  .home-implant-banner-img-wrapper {
+    top: 24%;
   }
-  .banner3-subtitle{
-    top:26.5%;
-    left: 36%;
-    width: 25% !important;
+  /* new acn-scan(banner4) css */
+  .new-banner3-text {
+    top: 35%;
+    left: 8%;
   }
-  .banner3-product {
-    width: 42% !important;
-    left: 25%;
-    top: 25.5%;
+  .new-banner3-text h2 {
+    font-size: 40px;
+  }
+  .new-banner3-productImg1 {
+    width: 35% !important;
+    bottom: 3%;
+  }
+  .new-banner3-productImg4 {
+    width: 12.5% !important;
+    right: 25%;
+    top: 24%;
+  }
+  .new-banner3-productImg5 {
+    width: 12.5% !important;
+    right: 14%;
+    top: 17%;
   }
   /* pagination */
-  .hero-section1 .swiper-button-next::after, 
+  .hero-section1 .swiper-button-next::after,
   .hero-section1 .swiper-button-prev::after {
     font-size: 26px;
   }
-  .hero-section1 .swiper-button-next{
+  .hero-section1 .swiper-button-next {
     right: var(--swiper-navigation-sides-offset, 35px) !important;
   }
-  .hero-section1 .swiper-button-prev{
+  .hero-section1 .swiper-button-prev {
     left: var(--swiper-navigation-sides-offset, 35px) !important;
   }
   .hero-section1 .swiper-pagination-bullet-active {
@@ -766,8 +1084,17 @@
   /* .hero-section1 .swiper-wrapper .swiper-slide {
     height: auto !important;
   } */
-  .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  .hero-section1 .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, 30px) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-implant-banner-img-wrapper {
+    top: 24%;
   }
 }
 @media (max-width: 900px) {
@@ -778,59 +1105,11 @@
   .banner1-img {
     top: 61.5%;
   }
-  /* banner 2 */
-  .zir-logo1 {
-    right: -2%;
-    width: 130px !important;
-    height: 65px;
-    top: 30px !important;
-  }
-  .ele-pic2 {
-    width: 340px !important;
-    height: 370px !important;
-    top: 88px !important;
-    right: 7%;
-  }
-  .let-pic1 {
-    left: 6%;
-    width: 300px !important;
-    top: 110px !important;
-  }
-  .grass-pic1 {
-    top: 328px;
-  }
-  .btn-read-more1 {
-    top: 270px !important;
-    left: 6%;
-    padding: 3px 5px !important;
-  }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3 / 1.85;
-    margin-top: -4px;
-  }
-  .banner-31 .banner-bg4 {
-    aspect-ratio: 3 / 1.7;
-    height: 525px;
-    margin-top: -2px;
-    display: block;
-  }
-  .banner3-text {
-    width: 32% !important;
-    left: 31.5%;
-  }
-  .banner3-subtitle{
-    top:24%;
-    left: 36%;
-    width: 23.5% !important;
-  }
-  .banner3-product {
-    width: 44% !important;
-    left: 23%;
-    top: 24%;
-  }
   /* pagination css */
-  .hero-section1 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  .hero-section1 .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, 18px) !important;
   }
 }
@@ -847,13 +1126,13 @@
   .hero-section1 .swiper-wrapper .swiper-slide:first-child {
     height: auto;
   }
-  .hero-section1 .swiper-button-next::after, 
-  .hero-section1 .swiper-button-prev::after{
+  .hero-section1 .swiper-button-next::after,
+  .hero-section1 .swiper-button-prev::after {
     font-size: 24px;
   }
   .hero-section1 .swiper-button-next {
     right: var(--swiper-navigation-sides-offset, 25px) !important;
-    display:block !important;
+    display: block !important;
   }
   .hero-section1 .swiper-button-prev {
     left: var(--swiper-navigation-sides-offset, 25px) !important;
@@ -877,42 +1156,25 @@
     height: 100%;
   }
   /* banner 2 */
-  .banner-2 {
+  .new-banner2,
+  .btn-read-more1 {
     display: none;
   }
-  .larger-ele {
+  /* ad-implant(banner3) css */
+  .home-implant-mobile-banner {
+    display: block !important;
+  }
+  .home-implant-slider-wrapper .home-implant-banner-bg,
+  .home-implant-banner-img-wrapper {
     display: none;
   }
-  /* banner 3 */
-  .banner-31 .banner-bg3 {
-    aspect-ratio: 3/1.8;
-  }
-  .banner-31 .banner-bg4 {
-    aspect-ratio: 3 / 1.75;
-    height: auto;
-    margin-top: -1px;
-  }
-  .banner3-text {
-    width: 30% !important;
-    left: 33%;
-    top: 7%;
-    height: auto !important;
-  }
-  .banner3-subtitle{
-    top:26.5%;
-    /* left: 35.2%; */
-    width: 24% !important;
-    height: auto !important;
-  }
-  .banner3-product {
-    width: 43% !important;
-    height: auto !important;
-    left: 24%;
-    top: 25%;
+  /* ace-scan new banner(banner4) css */
+  .new-banner-productWrapper {
+    display: none !important;
   }
 }
 @media (max-width: 576px) {
-  .hero-section1 .swiper-wrapper .banner-1-wrap{
+  .hero-section1 .swiper-wrapper .banner-1-wrap {
     margin-top: -2px;
   }
   .hero-section1 .h1s {
@@ -930,10 +1192,7 @@
   .hero-section1 .swiper-button-prev {
     display: none !important;
   }
-  .hero-section1 .swiper-slide-active .texts,
-  .hero-section1 .swiper-slide-active .banner3-subtitle {
-    animation: none !important;
-  }
+ 
   /* banner 1 */
   .banner1-img {
     top: 60%;
@@ -943,21 +1202,7 @@
     width: 38%;
     animation: none !important;
   }
-  .banner3-text{
-    width:30% !important;
-    left: 33%;
+  .hero-section1 .swiper-slide-active .new-banner3-text {
+    animation: none;
   }
-  .banner3-subtitle{
-    top: 25.5%;
-    width: 22% !important;
-    left:36.9%;
-  }
-  .hero-section1 .swiper-slide-active .banner3-text,
-  .hero-section1 .swiper-slide-active .banner3-product {
-    animation:none
-  }
-  /* banner 3 */
-  /* .banner-31 .banner-bg3{
-    aspect-ratio: auto;
-  } */
 }

@@ -219,7 +219,7 @@ def adImplants(request):
     context={
         'faq_data' : faq_data
     }
-    return render(request,'ad-implant.html', context)
+    return render(request,'ad-Implant.html', context)
 
 
 def beforeafter(request):
