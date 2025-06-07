@@ -43,12 +43,45 @@
     <!-- hero section -->
     <section class="hero-section1 zirconia-hero-section position-relative mx-auto p-0 overflow-hidden d-block ">
         <div class="swiper-wrapper">
-            <div class="swiper-slide zirconia-slider-wrapper">
+         <div class="swiper-slide banner2-swiper-slide position-relative">
+          <img
+            src="{% static 'banner-2/new-banner2-img12.png' %}"
+            class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
+            alt="banner2-bg"
+          />
+          <img
+            src="{% static 'banner-2/new-banner2-img16.png' %}"
+            class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
+            alt="banner2-bg"
+          />
+          <img
+            src="{% static 'banner-2/new-banner2-mobileSize.jpg' %}"
+            class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
+            alt="banner2-bg"
+          />
+          <div class="container new-banner2">
+            <img
+              src="{% static 'banner-2/new-banner2-logo.png' %}"
+              class="new-banner2-logo img-fluid"
+              alt="banner2-logo"
+            />
+            <img
+              src="{% static 'banner-2/new-banner2-text.png' %}"
+              class="new-banner2-text img-fluid"
+              alt="banner2-text"
+            />
+            {% comment %} <button class="btn btn-read-more1">
+              <a href="/zirconia-crown/"
+                >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
+              ></a>
+            </button> {% endcomment %}
+          </div>
+        </div>
+            {% comment %} <div class="swiper-slide zirconia-slider-wrapper">
                 <div class="container banner-2 position-relative">
                     <img src="{% static 'banner-2/banner-31.png' %}" alt="zir-logo" class="zir-logo1" />
                     <img src="{% static 'banner-2/Group281.webp' %}" alt="ele-pic1" class="ele-pic2" />
                     <img src="{% static 'banner-2/letter-1.webp' %}" alt="let-pic" class="let-pic1" />
-                    {% comment %} <button class="btn btn-read-more1"><a href="/zir-icon/">Discover More <i class="fa-solid fa-arrow-right ms-1"></i></a></button> {% endcomment %}
                 </div>
                 <div class="larger-ele position-relative">
                     <img src="{% static 'banner-2/image27.webp' %}" alt="grass-pic" class="grass-pic1" />
@@ -57,7 +90,7 @@
                     <img src="{% static 'banner-2/banner-32.webp' %}" alt="slide2-optional" class="slide2-optional1" />
                 </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
         </div>
     </section>
 

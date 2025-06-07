@@ -65,25 +65,28 @@
   left: 0%;
   right: 0%;
 }
+.new-banner2-bg{
+  height: 100% !important;
+}
 .new-banner2-logo {
   position: absolute;
   top: 25px;
-  right: 2%;
+  right: 0%;
   width: 11% !important;
   z-index: 1;
 }
 .new-banner2-text {
   position: absolute;
   top: 140px;
-  right: 2%;
+  right: 5%;
   width: 38% !important;
   z-index: 1;
 }
 .btn-read-more1 {
   position: absolute;
   z-index: 5;
-  top: 330px !important;
-  right: 2%;
+  top: 320px !important;
+  right: 5%;
   background-color: rgba(27, 137, 118, 1) !important;
   padding: 4px 6px !important;
   border-radius: 8px !important;
@@ -573,6 +576,7 @@
   .banner2-swiper-slide {
     margin-top: -6%;
   }
+  
   .new-banner2-bg {
     aspect-ratio: 2/0.9;
   }
@@ -589,6 +593,19 @@
     width: 14% !important;
     padding: 4px 6px !important;
     font-size: 18px !important;
+  }
+  /* zirconia pge */
+  .zirconia-hero-section .new-banner2-bg{
+    aspect-ratio: auto;
+    height: auto !important;
+  }
+  .zirconia-hero-section .new-banner2-logo {
+    top: 150px;
+    /* width: 14% !important; */
+  }
+  .zirconia-hero-section .new-banner2-text {
+    top: 340px;
+    width: 520px !important;
   }
   /* new banner 3(implant) css */
   .home-implant-text {
@@ -816,17 +833,17 @@
   /* new banner2(zirconia banner) css */
   .new-banner2-logo {
     top: 30px;
-    right: 8%;
+    right: 6%;
   }
   .new-banner2-text {
-    right: 8%;
+    right: 10%;
     top: 160px;
     width: 38% !important;
   }
   .btn-read-more1 {
     top: 415px !important;
     width: 12% !important;
-    right: 8%;
+    right: 10%;
     padding: 4px 6px !important;
   }
   /* implant page  */
@@ -913,6 +930,9 @@
     height: 100%;
   }
   .home-implant-text {
+    font-size: 40px;
+  }
+  .home-implant-rolling-text{
     font-size: 40px;
   }
   .btn-implant-button {
