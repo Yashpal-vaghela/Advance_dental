@@ -64,7 +64,7 @@
         <div class="container position-relative">
           <div class="row g-4 justify-content-center">
             <div class="col-10 col-sm-12 col-lg-6 col-xl-6 order-2 order-lg-1">
-              <h1 class="Implantfirst-headS">What is an AD-Implant Prosthesis ?</h1>
+              <h2 class="Implantfirst-headS">What is an AD-Implant Prosthesis ?</h2>
               <div class="Implantfirst-text zirfirst-text">
                 <p>
                   These finely crafted prosthetic teeth are custom-made to match the
@@ -528,7 +528,7 @@
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                     <p>After years of struggling with traditional dentures, getting AD implant prosthesis changed my life. The stability and comfort they offer are unmatched. I can eat my favour-ite foods without worry, and my confidence has soared. The procedure was smoother than I expected, and the results are beyond my dreams. My implant-supported dentures feel just like natural teeth. Thanks to this life-changing experience, I feel like myself again, and I can't thank my dentist enough for giving me back my smile.</p>
-                    <h2>Pt Name: Mr. Arun Shah</h2>
+                    <span>Pt Name: Mr. Arun Shah</span>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
                     <img src="{% static 'img/review-img12.png' %}" class="patient-img img-fluid" /> 
@@ -545,7 +545,7 @@
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                    <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
-                      <h2>Pt Name: Mrs. Rekhaben</h2>
+                      <span>Pt Name: Mrs. Rekhaben</span>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
                   <img src="{% static 'img/review-img22.png' %}" class="patient-img img-fluid" /> </div>
@@ -561,7 +561,7 @@
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                      <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
-                    <h2>Pt Name: Mrs. khushbu</h2>
+                    <span>Pt Name: Mrs. Khushbu</span>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
                     <img src="{% static 'img/review-img32.png' %}" class="patient-img img-fluid" /> 
@@ -576,28 +576,28 @@
           </div>
         </div>
       </section>
-      <section class="faq-section TypeofImplants">
+      <section class="faq-section-implant implant-faq">
         <div class="container  position-relative">
           <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
           <h2 class="product-section-title mb-0">Frequently Asked Questions</h2>
           <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
           <div class="row">
-            <div class="col-md-12 p-0 m-0">
+            <div class="col-md-12 p-0 m-0 pt-5">
               <div class="faq" id="accordion">
                 {% for item in faq_data %}
                 <div class="card">
                   <div class="card-header" id="faqHeading-{{ forloop.counter }}">
                     <div class="mb-0">
-                      <h5 class="faq-title collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-{{ forloop.counter }}">
+                      <h3 class="faq-title faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-{{ forloop.counter }}">
                         <span class="badge"><div class="test-xs">{{ forloop.counter }}</div></span>
                         <div class="pt-2">{{ item.question }}</div>
-                      </h5>
+                      </h3>
                     </div>
                   </div>
                   <div id="faqCollapse-{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="faqHeading-{{ forloop.counter }}" data-bs-parent="#accordion">
                     <div class="card-body">
                       <div class="container">
-                        <span class="p3"><p>{{ item.answer }}</p></span>
+                        <span class="p3"><p class="text-start" style="font-size: 14px;">{{ item.answer }}</p></span>
                       </div>
                     </div>
                   </div>
