@@ -285,12 +285,6 @@
   .ImplantProsthesis .vector2{
     right:-1%;
   }
-  .implant-faq .vector1{
-    left: -1% !important;
-  }
-  .implant-faq .vector2{
-    right: -1% !important;
-  }
 }
 @media (max-width: 991px) {
   #ImplantProsthesis.unpinned {
@@ -687,26 +681,6 @@
     width: 100%;
   }
 } */
-.implant-faq .vector1 {
-  position: absolute;
-  top: 0.7%;
-  left: 1%;
-}
-.implant-faq .vector2 {
-  position: absolute;
-  top: 0.7%;
-  right: 1%;
-}
-.implant-faq {
-  padding: 0px 0px 50px;
-  background-color: #fff;
-  z-index: 1;
-  position: relative;
-}
-.faq-answer{
-  font-size: 14px;
-  text-align: left;  
-}
 @media (max-width: 1200px) {
   .TypeofImplants{
     margin: -22% auto 0px;
@@ -770,17 +744,6 @@
     top: 0.8%;
     right: 2%;
   }
-  .implant-faq .product-section-title{
-    text-align: start;
-  }
-  .implant-faq .vector1{
-    display: none;
-  }
-  .implant-faq .vector2{
-    width: 32%;
-    top: 3%;
-    right: 2%
-  }
   .type-product_left-block {
     padding: 20px 0px 10px;
   }
@@ -811,26 +774,10 @@
   .Type-content h3 {
     font-size: 18px;
   }
-  .implant-faq  .container {
-    --bs-gutter-x: 6rem;
-  }
-  .implant-faq .product-section-title{
-    font-size: 22px;
-  }
-  .implant-faq .vector1{
-    display: none;
-  }
-  .implant-faq .vector2{
-    display: none;
-  }
   .type-product_left-block{
     padding: 14px 0px 10px;
   }
-  .faq-answer{
-    font-size: 14px;
-    text-align: left; 
-    letter-spacing: 0.2; 
-  }
+  
 }
 @media(max-width:450px){
   .TypeofImplants {
@@ -1030,9 +977,9 @@
   position: absolute;
   text-align: center;
   /* left: 30.9%; */
-  left: 33.5%;
+  left: 32.9%;
   /* font-weight: 500; */
-  background: linear-gradient(72deg, #1b8976 80%, #fff 35%);
+  background: linear-gradient(90deg, #1b8976 82%, #fff 35%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1189,7 +1136,7 @@
 
 /* ------------------------ patient success story section ---------------------- */
 .patient-success{
-  margin: 3% auto;
+  margin: 1.5% auto;
   background-color: #fff;
   z-index: 1;
   position: relative;
@@ -1268,17 +1215,13 @@
 .patientSwiper .swiper-wrapper{
   padding: 0px 0px 20px;
 }
-.faq-section-implant {
-    position: relative;
-    text-align: center;
-}
-.faq-question{
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-}
+
 @media(max-width:1200px){
   .patient-success .product-section-title{
     font-size: 26px;
+  }
+  .patient-success{
+    margin: 3% auto;
   }
 }
 @media(max-width:991px){
@@ -1348,7 +1291,7 @@
   }
   .patientSwiper .swiper-slide{
     color: #000;
-    margin: 3% auto 4%;
+    margin: 3% auto 0%;
   }
 }
 @media(max-width:768px){
@@ -1401,7 +1344,101 @@
     height:35%;
   }
 }
-
+/* --------------------------- faq section implant --------------------------------- */
+.implant-faq .vector1 {
+  position: absolute;
+  top: 1.9%;
+  left: 1%;
+}
+.implant-faq .vector2 {
+  position: absolute;
+  top: 1.9%;
+  right: 1%;
+}
+.implant-faq {
+  padding: 10px 0px 50px;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
+.faq-answer{
+  font-size: 14px;
+  text-align: left;  
+}
+.faq-section-implant {
+    position: relative;
+    text-align: center;
+}
+.faq-question{
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+@media(max-width:1200px){
+  .implant-faq{
+    padding: 20px 0px  50px;
+  }
+  .implant-faq .product-section-title{
+    font-size: 26px;
+  }
+  .implant-faq .vector1{
+    left: 2% !important;
+    width:29%;
+    top:2%;
+  }
+   .implant-faq .vector2{
+    right: 2% !important;
+    width:29%;
+    top:2%;
+  }
+}
+@media(max-width:991px){
+  .implant-faq{
+    padding: 30px 0px 50px;
+  }
+  .implant-faq .product-section-title{
+    font-size: 25px;
+    text-align: left;
+  }
+  .implant-faq .vector1{
+   display: none;
+  }
+  .implant-faq .vector2{
+   width:38%;
+   top:2.5%;
+  }
+}
+@media(max-width:768px){
+  .implant-faq .product-section-title{
+    text-align: start;
+  }
+  .implant-faq .vector1{
+    display: none;
+  }
+  .implant-faq .vector2{
+    width: 32%;
+    top: 3%;
+    right: 2%
+  }
+}
+@media(max-width:576px){
+  .implant-faq .container {
+    --bs-gutter-x: 6rem;
+  }
+  .implant-faq .product-section-title{
+    font-size: 22px;
+  }
+  .implant-faq .vector1{
+    display: none;
+  }
+  .implant-faq .vector2{
+    display: none;
+  }
+  .faq-answer{
+    font-size: 14px;
+    text-align: left; 
+    letter-spacing: 0.2; 
+  }
+}
 /* min and max width */
 @media(min-width:1300px) and (max-width:1440px){
   /* type of implants */

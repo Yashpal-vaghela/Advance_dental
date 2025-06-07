@@ -322,7 +322,6 @@
                     performance.
                   </p>
                 </div>
-               
               </div>
 
               <div class="swiper-slide">
@@ -333,8 +332,6 @@
                     shape, and texture, enhancing aesthetics and confidence.
                   </p>
                 </div>
-                
-             
                 <div class="implant-type-card-image">
                   <img
                     src="{% static 'implant-type-vector1.svg' %}"
@@ -577,12 +574,12 @@
         </div>
       </section>
       <section class="faq-section-implant implant-faq">
-        <div class="container  position-relative">
+        <div class="container position-relative">
           <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
           <h2 class="product-section-title mb-0">Frequently Asked Questions</h2>
           <img src="{% static 'img/line.svg' %}" class="img-fluid vector2" />
           <div class="row">
-            <div class="col-md-12 p-0 m-0 pt-5">
+            <div class="col-md-12 p-0 m-0 pt-4">
               <div class="faq" id="accordion">
                 {% for item in faq_data %}
                 <div class="card">
@@ -1031,7 +1028,7 @@
 
           let card1 = 0.05;
           let card2 = 0.52;
-          let card3 = 1.15;
+          let card3 = 1.1;
           function updateScaleValues() {
             if(window.innerWidth >= 992 && window.innerWidth <= 1200){
               card1 = 0.05;
