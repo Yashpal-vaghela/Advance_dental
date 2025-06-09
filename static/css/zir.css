@@ -29,9 +29,17 @@
     position: relative;
     z-index: 10;
 }
+@media(max-width:768px){
+    .zirconia-second{
+        padding: 30px 0px;
+    }
+}
 @media(max-width:576px){
+    .zirconia-second{
+        padding: 30px 0px;
+    }
     .zirfirst-headS{
-        font-size: 20px;
+        font-size: 22px;
     }
     .zirconia-second .col-10{
         padding:0px 8px;
@@ -428,28 +436,7 @@
     margin-top: 24px;
     width: 100%;
 }
-.faq-section {
-    position: relative;
-    padding:60px 0;
-    text-align: center;
-}
-.zirconia-faq{
-    z-index: 1;
-    position: relative;
-}
-.zirconia-faq h2{
-    color: #1B8976;
-}
-.zirconia-faq .vector1{
-    position: absolute;
-    top: 1%;
-    left: 1%;
-}
-.zirconia-faq .vector2{
-    position: absolute;
-    top: 1%;
-    right: 1%;
-}
+
 /* media query */
 @media(min-width:1400px){
     .typeOfZirconia .line-2{
@@ -524,7 +511,7 @@
     }
     .mobileviewofType {
         display: block;
-        padding:25px 0px 50px;
+        padding:25px 0px 25px;
     }
     .mobile_innerproess_Card{
         padding:0px;
@@ -789,9 +776,9 @@
         display:none;
     }
     .zirconia-wrapper-title{
-        font-size: 20px;
+        font-size: 22px;
         text-align: left;
-        /* padding-left: 32px; */
+        padding-top: 20px !important;
     }
     .zirconia-content-item h2{
         font-size: 20px;
@@ -799,6 +786,13 @@
     .zirconia-wrapper .swiper-slide{
         padding: 10px 20px;
         height: 95%;
+    }
+    .zirconia-faq .container{
+        --bs-gutter-x: 6rem;
+    }
+    .zirconia-faq .vector1,
+    .zirconia-faq .vector2 {
+        display: none;
     }
 }
 @media(max-width:420px){
@@ -1159,6 +1153,9 @@
 .galleryCaseImg-wrapper{
     scroll-behavior:smooth;
 }
+.galleryCaseImg-wrapper img{
+height: auto !important;
+}
 .galleryCaseImg-wrapper.d-block{
     top: 0;
     width: 235px;
@@ -1383,6 +1380,7 @@
         color: black;
         font-size: 15px;
         margin-bottom: 35px;
+        text-align: start;
     }
     .zirfirst-text p{
         line-height: 1.75;
@@ -1407,44 +1405,90 @@
     z-index: 2;
 }
 
-
-/* unused css */
-/* .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-} */
-
-/* .swiper-pagination-bullet-active {
-    background-color: #1B8976 !important;
-} */
-
-/* .benefitheading {
-    color: #1b897a;
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 10px;
-} */
-
-/* Testimonials */
-/* .testimonial-subtitle {
-    max-width: 600px;
-    margin: 0 auto 40px;
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-} */
-/* .testimonial-card-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*-----------------------------faq Section Zirconia---------------------------*/
+.faq-section {
     position: relative;
-} */
-
-/* @media(max-width:576px){
-    .testimonial-subtitle{
-        font-size: 0.85rem;
-        line-height: 1.5;
+    padding:60px 0;
+    text-align: center;
+}
+.zirconia-faq{
+    z-index: 1;
+    position: relative;
+    text-align: left;
+}
+.zirconia-faq h2{
+    color: #1B8976;
+    text-align: center;
+}
+.zirconia-faq .vector1{
+    position: absolute;
+    top: 3%;
+    max-width: 25%;
+    left: 1%;
+}
+.zirconia-faq .vector2{
+    position: absolute;
+    top: 3%;
+    max-width: 25%;
+    right: 1%;
+}
+@media(min-width:1400px){
+    .zirconia-faq .vector1{
+        left: 2% ;
+        max-width: 30% ;
+        top: 2% 
     }
-} */
+    .zirconia-faq .vector2{
+        right: 2% ;
+        max-width: 30% ;
+        top: 2% 
+    }
+}
+@media(min-width: 1200px) and (max-width: 1399px) {
+    .zirconia-faq .vector1{
+        left: 2% !important;
+        width: 25% !important;
+        top: 2% !important
+    }
+    .zirconia-faq .vector2{
+        right: 2% !important;
+        width: 25% !important;
+        top: 2% !important
+    }
+}
+@media(max-width:991px){
+  .zirconia-faq{
+    padding: 30px 0px 50px;
+  }
+  .zirconia-faq .product-section-title{
+    font-size: 25px;    
+  }
+  .zirconia-faq .vector1{
+    width:38%;
+    top:2.5%;
+  }
+  .zirconia-faq .vector2{
+   width:38%;
+   top:2.5%;
+  }
+}
+@media(max-width: 768px){
+    .zirconia-faq .product-section-title{
+        font-size: 22px;
+        text-align: left;
+    }
+    .zirconia-faq .vector1{
+        display: none;
+    }
+    .zirconia-faq .vector2{
+        max-width: 40%;
+        top: 2%;
+        right: 2%;
+    }
+}
+
+@media(max-width: 576px){
+    .zir-faq-answer{
+        font-size: 14px;
+    }
+}

@@ -5676,7 +5676,7 @@ ul.blog-category-list li:hover {
   border-bottom: none;
 }
 
-#accordion .card-header h5 {
+#accordion .card-header h3 {
   font-weight: 600;
   line-height: 1;
   padding-right: 5%;
@@ -5999,7 +5999,7 @@ nav a#pull {
   }
 } */
 
-.faq-title h2 {
+/* .faq-title h2 {
   position: relative;
   margin-bottom: 45px;
   display: inline-block;
@@ -6021,7 +6021,7 @@ nav a#pull {
 .faq-title p {
   padding: 0 190px;
   margin-bottom: 10px;
-}
+} */
 
 .faq {
   background: #ffffff;
@@ -6057,7 +6057,7 @@ nav a#pull {
   padding-left: 30px;
   padding-right: 30px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 1px;
   color: #3b566e;
   text-decoration: none !important;

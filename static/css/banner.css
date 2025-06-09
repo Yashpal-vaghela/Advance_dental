@@ -68,6 +68,9 @@
 .new-banner2-bg{
   height: 100% !important;
 }
+.zirconia-hero-section .banner2-swiper-slide .new-banner2-bg{
+  height: auto !important;
+}
 .new-banner2-logo {
   position: absolute;
   top: 25px;
@@ -579,6 +582,7 @@
   
   .new-banner2-bg {
     aspect-ratio: 2/0.9;
+    height: auto !important;
   }
   .new-banner2-logo {
     top: 130px;
@@ -604,7 +608,7 @@
     /* width: 14% !important; */
   }
   .zirconia-hero-section .new-banner2-text {
-    top: 340px;
+    top: 320px;
     width: 520px !important;
   }
   /* new banner 3(implant) css */
@@ -865,6 +869,10 @@
   .btn-read-more1 {
     top: 370px !important;
     right: 2%;
+  }
+  .banner2-swiper-slide .new-banner2-bg{
+    aspect-ratio: 2/0.8;
+    height: auto !important;
   }
 }
 /* max width responsive css */
@@ -1165,7 +1173,7 @@
     top: 57%;
   }
   .banner1-img img {
-    width: 36%;
+    width: 75%;
   }
   .hero-section1 .h1s {
     font-size: 35px !important;
