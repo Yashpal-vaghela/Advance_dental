@@ -3226,8 +3226,12 @@ td.text-right {
   padding-bottom: 8px;
 }
 
-.doctor-meta h5 {
+.doctor-meta div {
   margin-top: 13px;
+  font-size: 1.05rem;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .doctor-meta h4 {
@@ -6749,6 +6753,12 @@ nav a#pull {
 .sblog-post-txt .content h2{
   font-size: 1.5rem;
 }
+.sblog-post-txt h2{
+  font-size: 1.5rem;
+}
+.sblog-post-txt h3{
+  font-size: 1.3rem;
+}
 .blog-post-img img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -6852,7 +6862,7 @@ nav a#pull {
   transform: translateY(-5px);
 }
 
-.sbox-72 h5 {
+.sbox-72 h3 {
   font-size: 1.2rem;
   font-weight: bold;
   color: #35af9a;
@@ -6946,11 +6956,12 @@ nav a#pull {
   height: 40px;
 }
 
-.text-box h4 {
+.text-box span {
   color: #1b8976;
   font-size: 24px;
   margin: 10px 0 5px;
   text-align: start;
+  font-weight: 700;
 }
 .text-box div{
   color: #1b8976;
@@ -7054,8 +7065,14 @@ nav a#pull {
   }
   .sblog-post-txt .content h2{
     font-size: 1.3rem;
-    text-align: left;
+    text-align: left; 
     line-height: 1.6;
+  }
+  .sblog-post-txt h2{
+    font-size: 1.3rem;
+  }
+  .sblog-post-txt h1{
+    font-size: 1.1rem;
   }
   /* .exhibition-gallery-wrap img{
     height: 400px;

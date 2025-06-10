@@ -701,7 +701,7 @@
     text-align: center;
     padding: 0px 30px;
 }
-.zirconia-content-item h2{
+.zirconia-content-item h3{
     font-size: 24px;
     color: #1B8976;
     font-weight: 700;
@@ -731,7 +731,7 @@
     .zirconia-wrapper .line-1,.zirconia-wrapper .line-2{
         top:5.2%;
     }
-    .zirconia-content-item h2{
+    .zirconia-content-item h3{
         font-size: 22px;
     }
 }
@@ -749,7 +749,7 @@
         display: block;
         font-size: 30px;
     }
-    .zirconia-content-item h2{
+    .zirconia-content-item h3{
         padding: 0px 10px;
         font-size: 22px;
     }
@@ -948,12 +948,13 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 15px;
+    color: #1B8976;
 }
 .testimonial-text {
     font-size: 15px;
     color: #333;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin: 15px 0px;
 }
 .testimonial-stars {
     color: #0b8e81;
@@ -1431,6 +1432,10 @@ height: auto !important;
     top: 3%;
     max-width: 25%;
     right: 1%;
+}
+.faq-question{
+  font-size: 1rem !important;
+  font-weight: 600 !important;
 }
 @media(min-width:1400px){
     .zirconia-faq .vector1{

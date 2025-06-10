@@ -390,8 +390,81 @@
   line-height: 1.5;
   letter-spacing: 0.2px;
 }
-.new-banner3-text h3 {
+.new-banner3-text span{
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #ffffff;
+  display: block;
+}
+.new-banner3-text p{
   color: #fff;
+  font-weight: 200;
+  margin-top: 15px;
+  letter-spacing: 1.8px;
+}
+.new-banner3-tnc {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: rotate(180deg) translateY(50%);
+    transform-origin: center right;
+    font-size: 16px;
+    opacity: 1;
+    z-index: 5; 
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    writing-mode: vertical-rl;
+    text-align: right;
+    padding-right: 8px;
+  }
+  .new-banner3-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: all 0.5s ease-in-out;
+    border: none;
+}
+.new-banner3-cta a {
+  color:#fff;
+  text-decoration: none;
+}
+
+.new-banner3-cta i {
+  padding: 10px;
+  margin-left: 10px !important;
+  background-color: #fff;
+  color: rgba(42, 42, 42, 1);
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  transition: all 0.7s ease-in-out;
+}
+
+.new-banner3-cta:hover,
+.new-banner3-cta:focus {
+  background-color: #fff;
+  border: 2px solid rgba(42, 42, 42, 1);
+  transform: scale(1);
+}
+
+.new-banner3-cta:hover a,
+.new-banner3-cta:focus a {
+  color: rgba(42, 42, 42, 1);
+  transform: scale(1);
+}
+
+.new-banner3-cta:hover i,
+.new-banner3-cta:focus i {
+  background-color: rgba(42, 42, 42, 1);
+  color: #fff;
+  transform: scale(1);
 }
 /* animation banner 4 css */
 .hero-section1 .swiper-slide-active .new-banner3-bg{
@@ -636,14 +709,19 @@
   }
   .new-banner3-text {
     top: 24%;
-    width:34%;
+    width:30%;
   }
   .new-banner3-text h2 {
     font-size: 60px;
   }
-  .new-banner3-text h3 {
-    font-size: 2rem;
+  .new-banner3-text span {
+    font-size: 60px;
   }
+  .new-banner3-text p {
+    font-size: 1.4rem;
+    
+  }
+  
   .new-banner3-productImg1 {
     width: 32% !important;
     right: -14.5%;
@@ -710,7 +788,6 @@
     width: 50% !important;
   }
   .home-implant-text{
-    font-size: 55px;
     margin-top: -10%;
     margin-left: 2%;
   }
@@ -725,8 +802,11 @@
   .new-banner3-text h2 {
     font-size: 70px;
   }
-  .new-banner3-text h3 {
-    font-size: 2.1rem;
+  .new-banner-text span{
+    font-size: 70px;
+  }
+  .new-banner3-text p {
+    font-size: 2rem;
   }
   .new-banner3-productImg1 {
     width: 32% !important;
@@ -796,8 +876,11 @@
   .new-banner3-text h2 {
     font-size: 65px;
   }
-  .new-banner3-text h3 {
-    font-size: 2rem;
+  .new-banner3-text h3{
+    font-size: 65px;
+  }
+  .new-banner3-text p{
+    font-size: 1.8rem;
     letter-spacing: 0.5px;
   }
   .new-banner3-productImg1 {
@@ -967,6 +1050,9 @@
   .new-banner3-text h2 {
     font-size: 50px;
   }
+  .new-banner3-text span {
+    font-size: 50px;
+  }
   .new-banner3-text h3 {
     font-size: 1.65rem;
   }
@@ -999,8 +1085,11 @@
   .new-banner3-text h2 {
     font-size: 45px;
   }
-  .new-banner3-text h3 {
-    font-size: 1.6rem;
+  .new-banner3-text span{
+    font-size: 45px;
+  }
+  .new-banner3-text p {
+    font-size: 1.4rem;
   }
   .new-banner3-productImg4 {
     width: 11% !important;
@@ -1018,6 +1107,7 @@
   .banner1-img {
     top: 51.5%;
   }
+
 }
 @media (max-width: 991px) {
   .hero-section1 {
@@ -1080,8 +1170,17 @@
     top: 35%;
     left: 8%;
   }
-  .new-banner3-text h2 {
+  .new-banner3-text span{
     font-size: 40px;
+  }
+  .new-banner3-cta {
+    padding: 8px 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .new-banner3-cta i{
+    padding: 7px;
   }
   .new-banner3-productImg1 {
     width: 35% !important;
