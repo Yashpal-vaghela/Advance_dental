@@ -424,9 +424,9 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 18px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 14px;
     text-decoration: none;
     margin-top: 30px;
     transition: all 0.5s ease-in-out;
@@ -450,7 +450,7 @@
 .new-banner3-cta:hover,
 .new-banner3-cta:focus {
   background-color: #fff;
-  border: 2px solid rgba(42, 42, 42, 1);
+  /* border: 2px solid rgba(42, 42, 42, 1); */
   transform: scale(1);
 }
 
@@ -719,9 +719,7 @@
   }
   .new-banner3-text p {
     font-size: 1.4rem;
-    
   }
-  
   .new-banner3-productImg1 {
     width: 32% !important;
     right: -14.5%;
@@ -735,7 +733,9 @@
   .new-banner3-productImg3 {
     width: 17.5% !important;
   }
- 
+ .new-banner3-cta{
+  font-size: 18px;
+ }
 }
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
   .hero-section1 {
@@ -915,7 +915,7 @@
 @media screen and (min-width: 1300px) and (max-width: 1440px) {
   /* banner 1 */
   .banner1-img img {
-    width: 84%;
+    width: 87%;
   }
   /* new banner2(zirconia banner) css */
   .new-banner2-logo {
@@ -929,9 +929,25 @@
   }
   .btn-read-more1 {
     top: 415px !important;
-    width: 12% !important;
+    width: 14% !important;
     right: 10%;
     padding: 4px 6px !important;
+  }
+  /* ace-scan banner */
+  .hero-section1 .swiper-slide-active .new-banner3-bg{
+    aspect-ratio: 3/1.4;
+  }
+  .new-banner3-productImg4{
+    width:10% !important;
+    right:24%;
+  }
+  .new-banner3-productImg5{
+     width:10% !important;
+     right:14.5% ;
+  }
+  .new-banner3-cta{
+    margin-top: 20px;
+    padding: 6px 12px;
   }
   /* implant page  */
   .implant-text {
@@ -951,11 +967,11 @@
   }
   .btn-read-more1 {
     top: 370px !important;
-    right: 2%;
+    right: 5%;
   }
   .banner2-swiper-slide .new-banner2-bg{
-    aspect-ratio: 2/0.8;
-    height: auto !important;
+    /* aspect-ratio: 2/0.8; */
+    height: 100% !important;
   }
 }
 /* max width responsive css */
