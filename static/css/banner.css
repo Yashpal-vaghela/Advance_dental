@@ -607,7 +607,13 @@
   /* banner 2 */
   .btn-read-more1 {
     top: 340px !important;
-    left: 2%;
+    left: 2%;    
+  }
+ 
+}
+@media screen and (min-width:2200px) and (max-width:2400px){
+ .col-lg-7 {
+      width: 49.33% !important;
   }
 }
 @media screen and (min-width: 2100px) and (max-width: 2400px) {
@@ -627,29 +633,37 @@
   }
   .btn-implant-button{
     top: 350px !important;
-    left: 8%;
+    left: 12.5%;
     padding: 6px 6px !important;
     font-size: 18px !important;
   }
   .col-lg-7{
-    width:43.33% !important;
+    width:50.33% !important;
   }
-  .implant-hero-section{
+  /* .implant-hero-section{
     height: 700px;
-  }
+  } */
   .implant-slider-wrapper .implant-banner-bg{
     height: 100%;
+    object-fit: contain;
+    background-color: #fff;
   }
   .implant-banner-img-wrapper .implant-banner-img{
-    /* width:90%; */
-    left:0%
+    width:83%;
+    left:-20.5%
   }
   .implant-text{
-    margin-top: -5%;
+    margin-top: 0%;
     margin-left: 13%;
     width:60%;
   }
-
+  .zirconia-hero-section .banner2-swiper-slide .new-banner2-bg{
+    object-fit: contain;
+    height: 100% !important;
+  }
+  .hero-section1 .swiper-slide-active .new-banner2-bg{
+    object-fit: contain;
+  }
 }
 @media screen and (min-width: 1800px) and (max-width: 2000px) {
   .hero-section1 {
@@ -669,6 +683,7 @@
   }
   .implant-text {
     margin-left: 36%;
+    margin-top: 10%;
   }
   /* banner 1  */
   .banner1-img {
@@ -727,7 +742,7 @@
     font-size: 50px;
   }
   .btn-implant-button {
-    top: 400px !important;
+    top: 415px !important;
     left: 14.5%;
     padding: 6px 6px !important;
     font-size: 18px !important;
@@ -802,6 +817,9 @@
   }
   .new-banner2-bg {
     aspect-ratio: 2/0.9;
+  }
+  .banner2-swiper-slide .new-banner2-bg{
+    height: auto !important;
   }
   .new-banner2-logo {
     top: 120px;
