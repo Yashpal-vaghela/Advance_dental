@@ -4917,9 +4917,10 @@ p.footer-copyright span {
   border-top: 1px solid #16739d;
 }
 
-#sidebar h5.h5-sm {
+#sidebar h2 {
   padding-bottom: 20px;
   margin-bottom: 25px;
+  font-size: 1.3rem;
   border-bottom: 1px solid #ddd;
 }
 
@@ -5365,6 +5366,11 @@ ul.blog-category-list li:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+}
+
+.sidebar-timetable span{
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .txt-widget-avatar {
@@ -7411,4 +7417,7 @@ body {
 
 .blog-body a {
   color: #1ABC9C;
+}
+.popular-posts h2{
+  font-size: 1.5rem;
 }

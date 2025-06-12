@@ -610,7 +610,7 @@
     margin-left:12.5%;
   }
 }
-@media screen and (min-width: 2400px) and (max-width: 2800px) {
+@media screen and (min-width: 2400px) and (max-width: 2799px) {
   .hero-section1 {
     height: 700px;
   }
@@ -638,7 +638,7 @@
     right: 5%;    
   }
   .new-banner2-text{
-    top:200px;
+    top:180px;
     width:39% !important;
   }
   .zirconia-hero-section .new-banner2-text{
@@ -678,7 +678,7 @@
     margin-top: 0.5%;
   }
 }
-@media screen and (min-width: 2100px) and (max-width: 2400px) {
+@media screen and (min-width: 2100px) and (max-width: 2399px) {
   .hero-section1 {
     height: 600px;
   }
@@ -800,7 +800,7 @@
     width: 14% !important;
   }
   .new-banner2-text {
-    top: 280x;
+    top: 280px;
     width: 520px !important;
   }
   .btn-read-more1 {
@@ -1113,7 +1113,7 @@
   }
   .btn-read-more1 {
     top: 380px !important;
-    width: 14% !important;
+    width: 12% !important;
     right: 10%;
     padding: 4px 6px !important;
   }
@@ -1138,7 +1138,7 @@
     margin-left: 25%;
   }
 }
-@media (min-width: 1200px) and (max-width: 1300px) {
+@media (min-width: 1200px) and (max-width: 1299px) {
   .hero-section1 {
     height: 530px;
   }

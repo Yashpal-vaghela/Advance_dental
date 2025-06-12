@@ -47,30 +47,11 @@
                                                           
         </div>	<!-- END TEXT WIDGET --> {% endcomment %}
 
-
-        <!-- BLOG CATEGORIES --> 
-        <div class="blog-categories sidebar-div mb-50">
-                
-            <!-- Title -->
-            <h5 class="h5-sm steelblue-color">Categories</h5>
-
-            <ul class="blog-category-list clearfix">
-                
-                {% for ie in data2 %}
-                <li><a href="#"><i class="fas fa-angle-double-right blue-color"></i> {{ie.category}}</a> <span>({{ie.tot}})</span></li>
-            
-                {% endfor %}
-                    
-            </ul>
-
-        </div>
-
-
         <!-- POPULAR POSTS -->
         <div class="popular-posts sidebar-div mb-50">
                 
             <!-- Title -->
-            <h5 class="h5-sm steelblue-color">Popular Posts</h5>
+            <h2 class="steelblue-color">Popular Posts</h2>
 
             <ul class="popular-posts">
                 
@@ -98,7 +79,7 @@
         <div class="tags-cloud sidebar-div mb-50">
                 
             <!-- Title -->
-            <h5 class="h5-sm steelblue-color">Products</h5> 
+            <h2 class="steelblue-color">Products</h2> 
           {% for ie in product %}
           <span class="badge"><a href="{% url 'productd' ie.slug %}">{{ie.h1}}</a></span>
           {% endfor %}
@@ -117,8 +98,8 @@
         <div class="sidebar-timetable sidebar-div mb-50">
 
             <!-- Title -->
-            <h5 class="h5-md mb-20 steelblue-color">Haresh Savani, Founder
-            </h5>
+            <span class="mb-20 steelblue-color">Haresh Savani, Founder
+            </span>
 
             <!-- Text -->
             <p class="p-sm">As an accomplished founder and CEO, seasoned digital dental technician, experienced ceramist, and a guide to thousands of budding professionals, my vision is to bring a dental renaissance to the global canvas.
