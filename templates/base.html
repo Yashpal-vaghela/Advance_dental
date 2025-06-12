@@ -176,7 +176,7 @@
 
   <body>
     {% load static %} {% if not hide_social_image %}
-    <div class="social">
+    {% comment %} <div class="social">
       <div class="social-all-items">
         <div class="social-item">
           <a
@@ -237,13 +237,13 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
     {% endif %}
     <!-- end -->
     <div id="page" class="page">
       <header id="header" class="header">
         {% include 'mobile.html' %}
-        <div class="headtoppart bg-steelblue clearfix">
+        {% comment %} <div class="headtoppart bg-steelblue clearfix">
           <div class="clearfix container p-0 mx-auto my-0">
             <div class="headertopleft">
               <div class="address clearfix">
@@ -289,7 +289,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         {% include 'pc.html' %}
       </header>
       {% block body %} {% endblock %}
