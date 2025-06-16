@@ -9,7 +9,7 @@
     </div>
 
     <!-- MAIN MENU -->
-    <nav class="wsmenu clearfix">
+    <nav class="wsmenu clearfix m-auto">
       <ul class="wsmenu-list">
         <!-- DROPDOWN MENU -->
         <li aria-haspopup="true">
@@ -134,13 +134,15 @@
         <li class="nl-simple" aria-haspopup="true">
           <a href="{% url 'home:contact_new' %}"><span {% if request.path == '/contact-us/' %}class="heasder_active"{% endif %} >Contact</span></a>
         </li>
+        
+           
           <li class="nl-simple header-btn clss">
             <a href="https://client.advancedentalexport.com/" target="_blank">Client Login</a>
           </li>
-          {% comment %} <li class="nl-simple header-btn d-none clss2">
+          <li class="nl-simple header-btn d-none clss2 d-lg-none">
             <a href="/api-logout/{{ pk }}/{{ did }}/">Logout</a>
-          </li> {% endcomment %}
-
+          </li>
+         
           <li class="nl-simple header-btn" aria-haspopup="true">
             <a href="{% url 'home:stl' %}">Submit STL File</a>
           </li>
@@ -150,5 +152,16 @@
             <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
           </li>
     </nav> <!-- END MAIN MENU -->
+    <div class="d-flex justify-content-between gap-2 ms-auto">
+            <button class="nl-simple header-btn clss">
+              <a href="https://client.advancedentalexport.com/">Client Login</a>
+            </button>
+            <button class="nl-simple header-btn clss">
+              <a href="{% url 'home:stl' %}">Submit STL File</a>
+            </button>
+            <button class="nl-simple header-btn clss">
+              <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
+            </button>
+        </div>
   </div>
 </div> <!-- END NAVIGATION MENU -->
