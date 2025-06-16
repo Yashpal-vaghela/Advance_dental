@@ -136,23 +136,23 @@
         </li>
         
            
-          <li class="nl-simple header-btn clss">
+          <li class="nl-simple header-btn clss d-lg-none d-xl-none">
             <a href="https://client.advancedentalexport.com/" target="_blank">Client Login</a>
           </li>
-          <li class="nl-simple header-btn d-none clss2 d-lg-none">
+          <li class="nl-simple header-btn d-none clss2 d-lg-none d-xl-none">
             <a href="/api-logout/{{ pk }}/{{ did }}/">Logout</a>
           </li>
          
-          <li class="nl-simple header-btn" aria-haspopup="true">
+          <li class="nl-simple header-btn d-lg-none d-xl-none" aria-haspopup="true">
             <a href="{% url 'home:stl' %}">Submit STL File</a>
           </li>
 
           <!-- NAVIGATION MENU BUTTON -->
-          <li class="nl-simple header-btn" aria-haspopup="true">
+          <li class="nl-simple header-btn d-lg-none d-xl-none" aria-haspopup="true">
             <a href="{% url 'home:verify_warrenty' %}" target="_blank">Verify Warranty</a>
           </li>
     </nav> <!-- END MAIN MENU -->
-    <div class="d-flex justify-content-between gap-2 ms-auto">
+    <div class="d-lg-flex d-none justify-content-between gap-2 ms-auto">
             <button class="nl-simple header-btn clss">
               <a href="https://client.advancedentalexport.com/">Client Login</a>
             </button>
