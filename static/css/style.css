@@ -2044,11 +2044,17 @@ p.header-widget-phone {
   font-size: 14px;
   font-weight: 800 !important;
 }
-
+.about-section .wlc-title{
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
 .wlc-subtitle {
   font-size: 1.5rem;
 }
-
+.about-section .wlc-subtitle{
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
 .wlc-text {
   font-size: 14px;
 }
@@ -3745,8 +3751,26 @@ td.text-right {
   background-image: url(../ADEcontact.jpg);
   padding-top: 120px;
   padding-bottom: 120px;
+  background-repeat: no-repeat;
+  /* background-size:100%; */
+  /* background-position: center; */
+  margin: auto;  
 }
-
+/* @media(min-width:1700px){
+  #banner-7{
+    background-image: none;
+    padding: 0px;
+  }
+  #banner-7 .container{
+  background-image: url(../ADEcontact5.png);
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position: center;
+  margin: auto;  
+  }
+} */
 .d-bbnone {
   display: none;
 }
@@ -3771,6 +3795,7 @@ td.text-right {
     background-image: url(../New-Project2.jpg);
   }
 }
+
 
 #banner-8 {
   background-image: url(../images/banner-8.jpg);

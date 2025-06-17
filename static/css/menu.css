@@ -688,6 +688,21 @@ video {
                               Start Mobile CSS
 ===============================================================================*/
 /* ================== Mobile Menu Change Brake Point ================== */
+@media(max-width:1200px){
+  .wsmenu > .wsmenu-list > li > a{
+    padding: 5px 8px 5px 8px;
+    font-size: 15px;
+  }
+  .wsmenu > .wsmenu-list > li > a .wsarrow {
+    padding: 0px 4px 0px 15px;
+  }
+  .wsmainwp .header-btn{
+    padding: 2px 8px 2px 8px;
+  }
+  .wsmainwp .header-btn a{
+    font-size: 14px;
+  }
+}
 @media only screen and (max-width: 991px) {
   /* ================== Mobile Base CSS ================== */
   /* html {
@@ -791,6 +806,7 @@ video {
   .wsmenu>.wsmenu-list>li>a>.hometext {
     display: inline-block;
   }
+
   /* ================== Mobile Slide Down Links CSS ================== */
   .wsmenu>.wsmenu-list>li>ul.sub-menu {
     display: none;
@@ -1012,8 +1028,9 @@ video {
     top: 0;
     left: 0;
     z-index: 10002;
-    height: 54px;
-    background-color: #eaecf0;
+    height: 70px;
+    /* background-color: #eaecf0; */
+    background-color: #fff;
     text-align: center;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -1058,7 +1075,7 @@ video {
   }
   .callusbtn i {
     vertical-align: top;
-    margin-top: 4px;
+    margin-top: 14px;
   }
   .callusbtn:hover i {
     color: #a9a9a9;
@@ -1078,7 +1095,7 @@ video {
   .wsanimated-arrow {
     cursor: pointer;
     padding: 16px 35px 16px 0px;
-    margin: 7px 0 0 15px;
+    margin: 16px 0 0 15px;
   }
   .wsanimated-arrow span,
   .wsanimated-arrow span:before,

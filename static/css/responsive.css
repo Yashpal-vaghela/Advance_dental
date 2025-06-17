@@ -10,6 +10,7 @@
   #hero-11 .caption-txt { margin-top: -120px; }
   /* HERO IMAGES CAROUSEL */
   #heroCarousel .carousel-item { min-height: 650px; }
+  
 }
 
 @media (min-width: 1440px) and (max-width: 1920.99px) {
@@ -821,7 +822,9 @@
 
   .hero-widget { display: none; }
 
-  .wsmobileheader { height: 70px; background-color: #fff; box-shadow: 0 0 2px rgba(50, 50, 50, 0.4); }
+  .wsmobileheader { height: 70px; 
+    /* background-color: #fff;  */
+    box-shadow: 0 0 2px rgba(50, 50, 50, 0.4); }
 
   .wsmobileheader .smllogo { margin-top: 15px; }
   .wsanimated-arrow { padding: 14px 28px 14px 0px; margin: 19px 0 0 20px; }
@@ -1438,6 +1441,14 @@
   /*------------------------------------------*/
 
   /* About */
+  /* .about-section .wlc-title{
+    letter-spacing: 0.5px;
+  } */
+  .about-section .wlc-subtitle{
+    font-size: 1.35rem;
+    /* line-height: 1.5;
+    letter-spacing: 0.5px; */
+  }
   #about-3 { margin-top: -80px; }
   #about-6 .txt-block { margin-bottom: 10px; }
 

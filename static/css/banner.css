@@ -74,7 +74,7 @@
 .new-banner2-logo {
   position: absolute;
   top: 25px;
-  right: 0%;
+  right: 5%;
   width: 11% !important;
   z-index: 1;
 }
@@ -355,21 +355,32 @@
 .new-banner3-productImg4 {
   position: absolute;
   z-index: 1;
-  width: 9% !important;
-  right: 27%;
-  top: 14.1%;
+  width:8.2% !important;
+  right: 27.5%;
+  /* top: 14.1%; */
+  top:19.4%;
 }
 .new-banner3-productImg5 {
   position: absolute;
   z-index: 1;
-  width: 9% !important;
-  right: 19%;
-  top: 6%;
+  /* width: 9% !important; */
+  /* right: 19%; */
+  /* top: 6%; */
+  width:6.5% !important;
+  right:20%;
+  top:9%;
+  /* position: absolute;
+  z-index: 1;
+  width: 20% !important;
+  right: 13%;
+  top: 12%; */
 }
 .new-banner3-text {
   position: absolute;
   z-index: 1;
-  top: 21%;
+  /* top: 21%; */
+  /* top:18%; */
+  top:13%;
   left: 12%;
   width: 38%;
   color: #fff;
@@ -382,17 +393,17 @@
   letter-spacing: 0.2px;
 }
 .new-banner3-text span{
-  font-size: 54px;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 600;
   letter-spacing: 1px;
-  line-height: 1.2;
+  line-height: 1.4;
   color: #ffffff;
   display: block;
 }
 .new-banner3-text p{
   color: #fff;
   font-weight: 200;
-  margin-top: 15px;
+  margin-top: 8px;
   letter-spacing: 1.8px;
 }
 .new-banner3-tnc {
@@ -419,7 +430,7 @@
     border-radius: 8px;
     font-size: 14px;
     text-decoration: none;
-    margin-top: 30px;
+    margin-top: 15px;
     transition: all 0.5s ease-in-out;
     border: none;
 }
@@ -427,7 +438,6 @@
   color:#fff;
   text-decoration: none;
 }
-
 .new-banner3-cta i {
   padding: 10px;
   margin-left: 10px !important;
@@ -444,13 +454,11 @@
   /* border: 2px solid rgba(42, 42, 42, 1); */
   transform: scale(1);
 }
-
 .new-banner3-cta:hover a,
 .new-banner3-cta:focus a {
   color: rgba(42, 42, 42, 1);
   transform: scale(1);
 }
-
 .new-banner3-cta:hover i,
 .new-banner3-cta:focus i {
   background-color: rgba(42, 42, 42, 1);
@@ -481,13 +489,17 @@
   animation: moveBottom1 2s ease forwards;
   transition-delay: 0.6s;
 }
-.hero-section1 .swiper-slide-active .new-banner3-text h2{
-  animation: fadeInLeft1 1.5s ease forwards;
-  transition-delay: 0.3s;
+.hero-section1 .swiper-slide-active .new-banner3-text span{
+  animation: fadeInLeft1 2s ease forwards;
+  transition-delay: 0.1s;
 }
-.hero-section1 .swiper-slide-active .new-banner3-text h3{
+.hero-section1 .swiper-slide-active .new-banner3-text p{
   animation: fadeInLeft1 2s ease forwards;
   transition-delay: 0.6s;
+}
+.hero-section1 .swiper-slide-active .new-banner3-cta{
+  animation: fadeInLeft3 2s ease forwards;
+  transition-delay: 0.2s;
 }
 @keyframes moveUp1 {
   0% {
@@ -517,7 +529,6 @@
     opacity: 0;
     transform: translate3d(50%, 0, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
@@ -533,7 +544,16 @@
     transform: none;
   }
 }
-
+@keyframes fadeInLeft3 {
+  from {
+    opacity: 0;
+    transform: translate3d(-150%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 /* pagination css */
 .hero-section1 .banner-1-wrap .swiper-button-next,
 .hero-section1 .swiper-wrapper .swiper-slide:first-child .swiper-button-prev {
@@ -559,7 +579,15 @@
 .swiper-pagination-fraction {
   bottom: var(--swiper-pagination-bottom, 50px) !important;
 }
-
+ .hero-section1 .swiper-pagination-bullet{
+    background: gray !important;
+    color:gray !important;
+    opacity: 1 !important;
+  }
+  .hero-section1 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #1b8976 !important;
+    color: #1b8976 !important;
+  }
 /* responsive all banner css */
 @media screen and (min-width: 992px) {
   .hero-section1 .swiper-slide-active .texts {
@@ -569,17 +597,43 @@
     width: 54% !important;
   }
 }
+
 @media screen and (min-width: 2800px) {
   .hero-section1 {
-    height: 600px;
+    /* height: 760px; */
+    height: 580px;
   }
   .hero-section1 .swiper {
     width: 50% !important;
   }
+  /* banner 1 */
+  .banner1-img{
+    top:37%;
+  }
+  .banner1-img img{
+    width:93%  
+  }
+  .texts{
+    top:30%
+  }
    /* banner2 */
   .btn-read-more1 {
-    top: 400px !important;
+    top: 420px !important;
     right: 5%;
+  }
+  /* .new-banner2-logo{
+    top:40px
+  } */
+  .new-banner2-text{
+    top:180px;
+    width: 35% !important;
+  }
+  /* banner 3 */
+  .btn-implant-button{
+    top:320px !important;
+  }
+  .home-implant-content2{
+    margin-top: -1%;
   }
   /* zirconia page */
   .zirconia-hero-section .new-banner2-text{
@@ -609,10 +663,36 @@
     width:87% !important;
     margin-left:12.5%;
   }
+  .new-banner3-text{
+    top:17%;
+    width:32%;
+    left:17%;
+  }
+  .new-banner3-text span{
+    font-size: 45px;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width:2900px){
+   .hero-section1 .swiper {
+    width: 37% !important;
+  }
+  /* banner 1 */
+  .banner1-img img{
+    width:95%;
+  }
+  .new-banner3-text{
+    top:21.5%;
+    width:30%;
+    left:19%;
+  }
+  .new-banner3-text span{
+    font-size: 42px;
+  }
 }
 @media screen and (min-width: 2400px) and (max-width: 2799px) {
   .hero-section1 {
-    height: 700px;
+    height: 780px;
   }
   .hero-section1 .swiper {
     width: 75% !important;
@@ -624,22 +704,27 @@
   }
   .banner1-img img {
      /* width: 66.5%; */
-      width:69%
+    width:73%
   }
   .texts {
     top: 34%;
   }
   /* banner 2 */
+  .new-banner2-logo{
+    top:50px;
+    right: 2%;
+  }
   .new-banner2-bg{
     object-fit: inherit !important;
   }
   .btn-read-more1 {
-    top: 470px !important;
-    right: 5%;    
+    top: 530px !important;
+    right: 2%;    
   }
   .new-banner2-text{
-    top:180px;
-    width:39% !important;
+    top:240px;
+    width:42% !important;
+    right:2%
   }
   .zirconia-hero-section .new-banner2-text{
     top:250px;
@@ -677,15 +762,31 @@
     left:16%;
     margin-top: 0.5%;
   }
+   /* new banner ace-scan css */
+  /* .new-banner3-bg {
+    aspect-ratio: 2/0.74;
+    object-fit: inherit !important;
+  } */
+  .new-banner3-text{
+    top:20%;
+    width:32%;
+    left:16%;
+  }
+  .new-banner3-productImg3{
+    width:18% !important;
+  }
+  .new-banner3-text span{
+    line-height: 1.6;
+    font-size: 65px;
+  }
 }
 @media screen and (min-width: 2100px) and (max-width: 2399px) {
   .hero-section1 {
-    height: 600px;
+    height: 650px;
   }
   .hero-section1 .swiper {
     width: 74% !important;
   }
-  
   /* banner 2 */
   .btn-read-more1 {
     top: 400px !important;
@@ -748,6 +849,25 @@
     width:80%;
     margin: 0px auto;
   }
+  /* new banner ace-scan css */
+  .new-banner3-bg {
+    /* aspect-ratio: 2/0.79; */
+    object-fit: inherit !important;
+  }
+ .new-banner3-text{
+    width:32%;
+    top:18%;
+    left:15%
+  }
+  .new-banner3-text span{
+    font-size: 55px;
+  }
+  .new-banner3-cta{
+    margin-top: 25px;
+  }
+  .new-banner3-cta i{
+    padding: 9px 10px 6px 8px;
+  }
 }
 @media screen and (min-width: 1800px) and (max-width: 2000px) {
   .hero-section1 {
@@ -798,16 +918,19 @@
   .new-banner2-logo {
     top: 80px;
     width: 14% !important;
+    right:2%;
   }
   .new-banner2-text {
     top: 280px;
     width: 520px !important;
+    right:2%;
   }
   .btn-read-more1 {
     top: 545px !important;
     width: 14% !important;
     padding: 4px 6px !important;
     font-size: 18px !important;
+    right:2%
   }
   /* zirconia pge */
   .zirconia-hero-section .new-banner2-bg{
@@ -844,15 +967,16 @@
   /* new banner acn-scan(banner4) css */
   .new-banner3-bg {
     /* aspect-ratio: 2/0.79; */
-    object-fit: inherit;
+    object-fit: inherit !important;
   }
   .new-banner3-text {
     top: 24%;
     width:30%;
+    left:17%;
   }
-  .new-banner3-text h2 {
+  /* .new-banner3-text h2 {
     font-size: 60px;
-  }
+  } */
   .new-banner3-text span {
     font-size: 60px;
   }
@@ -872,9 +996,15 @@
   .new-banner3-productImg3 {
     width: 17.5% !important;
   }
- .new-banner3-cta{
-  font-size: 18px;
- }
+  .new-banner3-productImg5{
+    top:11%;
+  }
+  .new-banner3-productImg4{
+    top:21.4%;
+  }
+  .new-banner3-cta{
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 1650px) and (max-width: 1800px) {
   .hero-section1 {
@@ -924,16 +1054,19 @@
   }
    .new-banner2-logo {
     top: 70px;
-    width: 12% !important;
+    width:12% !important;
+    right:2%;
   }
   .new-banner2-text {
     top: 230px;
     width: 40% !important;
+    right:2%
   }
   .btn-read-more1 {
     top: 490px !important;
-    width: 12% !important;
+    width:12% !important;
     padding: 4px 6px !important;
+    right:2%;
   }
   /* new-banner3(Implant) css */
    .home-implant-content2 {
@@ -948,9 +1081,16 @@
     left:10%;
   }
   /* new acn-scan(banner4) css */
+  .new-banner3-bg{
+    aspect-ratio: 2/0.78;
+  }
   .new-banner3-text {
     top: 18%;
+    width:30%;
   }
+   .new-banner3-text span{
+      line-height: 1.5;
+   }
   .new-banner3-text h2 {
     font-size: 70px;
   }
@@ -1002,12 +1142,14 @@
   }
   .new-banner2-logo {
     top: 30px;
+    right:2%;
   }
   .zirconia-hero-section .new-banner2-logo{
     top:60px
   }
   .new-banner2-text {
     top: 160px;
+    right:2%;
   }
   .zirconia-hero-section .new-banner2-text{
     top:200px
@@ -1019,8 +1161,10 @@
     top: 410px !important;
     width: 12% !important;
     padding: 4px 6px !important;
+    right:2%;
   }
   /* banner implant(banner3) css */
+
   .home-implant-text{
     font-size: 50px;
     margin-left: -27%;
@@ -1038,7 +1182,8 @@
   }
   /* new scan banner(banner4) css */
   .new-banner3-bg {
-     aspect-ratio: 2/0.82;
+    /* aspect-ratio: 2/0.77; */
+     /* aspect-ratio: 2/0.82; */
     /* aspect-ratio: 3/1.3; */
     object-fit: inherit !important;
     height: 100% !important;
@@ -1046,13 +1191,18 @@
   .new-banner3-text {
     left: 13%;
     top: 18%;
+    width:32%
   }
   .new-banner3-text h2 {
+    font-size: 55px;
+  }
+  .new-banner3-text span{
     font-size: 65px;
   }
   .new-banner3-text h3{
     font-size: 65px;
   }
+  
   .new-banner3-text p{
     font-size: 1.8rem;
     letter-spacing: 0.5px;
@@ -1072,10 +1222,14 @@
     width: 18% !important;
   }
   .new-banner3-productImg5 {
-    top: 5%;
+    /* top: 5%; */
+    top: 9%;
+  }
+  .new-banner3-productImg4{
+    top:18.8%;
   }
 }
-@media screen and (min-width: 1300px) and (max-width: 1649px) {
+@media screen and (min-width: 1299px) and (max-width: 1649px) {
   .hero-section1 {
     height: 590px;
   }
@@ -1083,9 +1237,9 @@
     height: 630px;
   }
   /* banner 1 */
-  .banner1-img {
-    top: 48.3%;
-  }
+  /* .banner1-img {
+    top: 43.3%;
+  } */
   .zirconia-hero-section .banner2-swiper-slide .new-banner2-bg{
     height: 100% !important;
   }
@@ -1096,42 +1250,65 @@
     height: 100% !important;
   }
 }
-@media screen and (min-width: 1300px) and (max-width: 1440px) {
+@media screen and (min-width:1299px) and (max-width:1350px){
+  .hero-section1 .swiper-slide-active .new-banner3-bg{
+    aspect-ratio: 3/1.36;
+  }
+}
+@media screen and (min-width:1349px) and (max-width:1439px){
+  .hero-section1 .swiper-slide-active .new-banner3-bg{
+    aspect-ratio: 3/1.31;
+  }
+}
+@media screen and (min-width: 1299px) and (max-width: 1439px) {
   /* banner 1 */
   .banner1-img img {
-    width: 87%;
+    width: 95%;
+  }
+  .banner1-img {
+    top: 40.3%;
   }
   /* new banner2(zirconia banner) css */
   .new-banner2-logo {
     top: 30px;
-    right: 6%;
+    right:6%;
   }
   .new-banner2-text {
-    right: 10%;
-    top: 160px;
-    width: 38% !important;
+    right: 6%;
+    top: 175px;
+    width: 35% !important;
   }
   .btn-read-more1 {
-    top: 380px !important;
-    width: 12% !important;
-    right: 10%;
-    padding: 4px 6px !important;
+    top: 400px !important;
+    /* width: 12% !important; */
+    right: 6%;
+    padding: 4px 8px !important;
   }
   /* ace-scan banner */
-  .hero-section1 .swiper-slide-active .new-banner3-bg{
-    aspect-ratio: 3/1.4;
+ 
+  .new-banner3-productImg1{
+    right:-18.8%;
   }
   .new-banner3-productImg4{
-    width:10% !important;
-    right:24%;
+    /* width:10% !important;
+    right:24%; */
+    width:8.8% !important;
+    right:26%;
+    top:19.8%;
   }
   .new-banner3-productImg5{
-     width:10% !important;
-     right:14.5%;
+     /* width:7.6% !important;
+     right:14.5%; */
+     width:6.7% !important;
+     right:18.5%;
+     top:11%
   }
   .new-banner3-cta{
     margin-top: 20px;
     padding: 6px 12px;
+  }
+  .new-banner3-text{
+    width:36%
   }
   /* implant page  */
   .implant-text {
@@ -1172,6 +1349,7 @@
   }
   .new-banner3-text {
     top: 19%;
+    width:36%;
   }
   .new-banner3-productImg1 {
     width: 33% !important;
@@ -1187,13 +1365,17 @@
     width: 18% !important;
   }
   .new-banner3-productImg4 {
-    width: 10% !important;
+    /* width: 10% !important;
     right: 25%;
-    top: 15.1%;
+    top: 15.1%; */
+    width: 9% !important;
+    right: 25.4%;
+    top: 21.1%;
   }
   .new-banner3-productImg5 {
-    width: 10% !important;
-    right: 16%;
+    width: 7.2% !important;
+    right: 17%;
+    top:11%;
   }
    .zirconia-hero-section .banner2-swiper-slide .new-banner2-bg{
     height: 100% !important;
@@ -1274,20 +1456,26 @@
   .new-banner3-text h2 {
     font-size: 50px;
   }
+  .new-banner3-text{
+    left:14%;
+  }
   .new-banner3-text span {
-    font-size: 50px;
+    font-size: 42px;
   }
   .new-banner3-text h3 {
     font-size: 1.65rem;
   }
   .new-banner3-productImg4 {
-    width: 9.5% !important;
-    right: 24.8%;
+    width: 9% !important;
+    right: 25%;
   }
   .new-banner3-productImg5 {
-    width: 9.5% !important;
+    /* width: 9.5% !important;
     right: 16.5%;
-    top: 6.5%;
+    top: 6.5%; */
+      width: 7.2% !important;
+      right: 17.5%;
+      top: 10.5%;
   }
   .implant-hero-section .implant-text{
     margin-left: 14%;
@@ -1325,20 +1513,39 @@
     font-size: 1.4rem;
   }
   .new-banner3-productImg4 {
-    width: 10.5% !important;
+    /* width: 10.5% !important;
     right: 23.5%;
-    top: 12.5%;
+    top: 12.5%; */
+    width: 9% !important;
+    right: 25%;
+    top: 20.8%;
   }
   .new-banner3-productImg5 {
-    width: 10.5% !important;
+    /* width: 10.5% !important;
     right: 15%;
-    top: 6%;
+    top: 6%; */
+    width: 7.3% !important;
+    right: 16.5%;
+    top: 12%;
+  }
+  .new-banner3-tnc{
+    right:4%;
   }
 }
 @media (max-width: 1024px) {
   /* banner 1 */
   .banner1-img {
     top: 51.5%;
+  }
+  .new-banner3-productImg4 {
+    width: 9.5% !important;
+    right: 23.5%;
+    top: 22.8%;
+  }
+  .new-banner3-productImg5 {
+    width: 7.8% !important;
+    right: 14%;
+    top: 12%;
   }
 }
 @media (max-width: 991px) {
@@ -1426,16 +1633,24 @@
   }
   /* new acn-scan(banner4) css */
   .new-banner3-text {
-    top: 35%;
+    top:26%;
+    width: 40%;
+    /* top: 35%; */
     left: 8%;
   }
   .new-banner3-text span{
-    font-size: 40px;
+    font-size: 36px;
   }
-  .new-banner3-cta {
+  /* .new-banner3-cta {
     padding: 8px 10px;
     margin-top: 20px;
     font-size: 16px;
+    border-radius: 10px;
+  } */
+  .new-banner3-cta {
+    padding: 6px 8px;
+    margin-top: 5px;
+    font-size: 14px;
     border-radius: 10px;
   }
   .new-banner3-cta i{
@@ -1446,14 +1661,23 @@
     bottom: 3%;
   }
   .new-banner3-productImg4 {
-    width: 12.5% !important;
+    /* width: 12.5% !important;
     right: 25%;
-    top: 24%;
+    top: 24%; */
+    width: 10% !important;
+    right: 28.8%;
+    top: 29.5%;
   }
   .new-banner3-productImg5 {
-    width: 12.5% !important;
+    /* width: 12.5% !important;
     right: 14%;
-    top: 17%;
+    top: 17%; */
+    width: 8% !important;
+    right: 19.5%;
+    top: 21%;
+  }
+  .new-banner3-tnc{
+    right: 5%;
   }
   /* pagination */
   .hero-section1 .swiper-button-next::after,
@@ -1466,10 +1690,16 @@
   .hero-section1 .swiper-button-prev {
     left: var(--swiper-navigation-sides-offset, 35px) !important;
   }
-  .hero-section1 .swiper-pagination-bullet-active {
+  /* .hero-section1 .swiper-pagination-bullet{
     background: #fff !important;
-    color: #fff !important;
-  }
+    color:#fff !important;
+    opacity: 0.5 !important;
+  } */
+  /* .hero-section1 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #1b8976 !important;
+    color: #1b8976 !important;
+  } */
+ 
   .hero-section1 .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
@@ -1481,6 +1711,16 @@
 @media (max-width: 800px) {
   .home-implant-banner-img-wrapper {
     top: 24%;
+  }
+   .new-banner3-productImg4 {
+    width: 10.5% !important;
+    right: 27.8%;
+    top: 32.5%;
+  }
+  .new-banner3-productImg5 {
+    width: 8.5% !important;
+    right: 18%;
+    top: 23%;
   }
 }
 @media (max-width: 900px) {
@@ -1602,7 +1842,7 @@
   }
   /* banner 1 */
   .banner1-img {
-    top: 60%;
+    top: 58%;
     left: 1%;
   }
   .banner1-img img {
