@@ -83,8 +83,8 @@ class Product(models.Model):
     main = models.BooleanField(default=False)
     most_visited = models.BooleanField(default=False)
     status  = models.BooleanField(default=True)
-    page_name = models.CharField(max_length = 1256,blank=True, null=True)
-    
+    page_name = models.CharField(max_length = 1256, blank=True, null=True)
+    category = models.ManyToManyField(Category, null=False, blank=False)
     h1  = models.CharField(max_length = 156)
     slug =models.CharField(max_length = 1256, unique=True)
     keyword = models.CharField(max_length = 156)

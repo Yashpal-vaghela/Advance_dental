@@ -297,7 +297,6 @@
   .blog-post-img.mb-40 { margin-bottom: 25px; }
   .sblog-post-txt h5.h5-md { margin-top: 15px; margin-bottom: 15px; }
   .sblog-post-txt p.mt-30 { margin-top: 15px; }
-
   .post-inner-img { margin-top: 30px; margin-bottom: 30px; }
   .post-tags-list { margin-bottom: 30px; }
 
@@ -721,7 +720,10 @@
   .blog-post-txt h5.h5-sm { font-size: 1.5rem; }
   .blog-post-txt p { font-size: 1rem; }
   .comment-form { margin-bottom: 30px; }
-
+  .sblog-post-txt h2 { font-size: 1.35rem;}
+  .sbox-post-txt h3 {font-size: 1.25rem;}
+  .sblog-post-txt .content h2 { font-size: 1.35rem; }
+  .sblog-post-txt .content h3 { font-size: 1.25rem; }
   /* Google Map */
   #gmap { margin-top: 70px; }
   #gmap {height: 350px;}
@@ -1191,7 +1193,11 @@
   .blog-post-txt span {font-size: 1.133rem; }
   .blog-post-txt p { font-size: 1.075rem; }
   .comment-form { margin-bottom: 30px; }
-
+  .sblog-post-txt h2 { font-size: 1.25rem; text-align: left;}
+  .sbox-post-txt h3 {font-size: 1.15rem;  text-align: left;}
+  .sblog-post-txt .content h2 { font-size: 1.25rem; text-align: left;}
+  .sblog-post-txt .content h3 { font-size: 1.15rem; text-align: left;}
+  .sblog-post-txt .content p { font-size: 16px; }
   .post-share-links { margin-top: 60px; padding-top: 60px; }
   .post-tags-list { margin-bottom: 30px; }
   .post-tags-list span a { font-size: 1rem; }
@@ -1433,7 +1439,7 @@
 
   /* About */
   #about-3 { margin-top: -80px; }
-  #about-6 .txt-block { margin-bottom: 40px; }
+  #about-6 .txt-block { margin-bottom: 10px; }
 
   #abox-3 { border-radius: 6px; margin-bottom: 20px; }
 
@@ -1658,6 +1664,11 @@
   .blog-post-txt h5 { margin-bottom: 10px; }
   .blog-post-txt span {font-size: 1.133rem; }
   .blog-post-txt p { font-size: 1.1075rem; }
+  .sblog-post-txt h2 { font-size: 1.15rem; text-align: left;}
+  .sbox-post-txt h3 {font-size: 1.05rem;  text-align: left;}
+  .sblog-post-txt .content h2 { font-size: 1.15rem; text-align: left;}
+  .sblog-post-txt .content h3 { font-size: 1.05rem; text-align: left;}
+  .sblog-post-txt .content p { font-size: 14px; }
   .comment-form { margin-bottom: 30px; }
   .sblog-post-txt span, #blog-page .blog-post-txt span { font-size: 1.1075rem; }
   .post-share-links { margin-top: 60px; padding-top: 50px; }
@@ -2055,6 +2066,9 @@
 @media (max-width: 768px) {
   .row.d-flex {
       flex-direction: column;
+  }
+  .about-section .row{
+    margin: 20px 0px;
   }
   .about-info h4, p{
       text-align: left; 

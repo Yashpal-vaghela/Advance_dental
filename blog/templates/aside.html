@@ -81,7 +81,7 @@
             <!-- Title -->
             <h2 class="steelblue-color">Products</h2> 
           {% for ie in product %}
-          <span class="badge"><a href="{% url 'productd' ie.slug %}">{{ie.h1}}</a></span>
+          <span class="badge"><a href="{% url 'productd' ie.slug %}">{{ie.breadcrumb}}</a></span>
           {% endfor %}
             
      						
