@@ -77,7 +77,7 @@
         <div class="container">
             <div class="row">
                 <!-- BLOG POSTS HOLDER -->
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="posts-holder">
                         <div class="single-blog-post">
                             <!-- BLOG POST IMAGE -->
@@ -172,10 +172,33 @@
                             </div> <!-- END BLOG POST TEXT -->
                         </div>
                     </div>
+
+                    <!-- IMAGE WIDGET -->						
+                    <div class="sidebar-founder d-flex align-items-center flex-wrap">
+                        <!-- Image -->
+                        <div class="founder-image me-4 mb-4 mb-lg-0">
+                            <img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="image-widget" />	
+                        </div>
+
+                        <!-- Content -->
+                        <div class="founder-description">
+                            <!-- Title -->
+                            <span class="mb-3 d-block steelblue-color founder-name">Haresh Savani, Founder</span>
+
+                            <!-- Text -->
+                            <p class="p-sm mb-3">
+                                As an accomplished founder and CEO, seasoned digital dental technician, experienced ceramist, and a guide to thousands of budding professionals, my vision is to bring a dental renaissance to the global canvas.
+                            </p>
+
+                            <!-- Button -->
+                            <a href="{% url 'home:contact_new' %}" class="btn btn-blue blue-hover mt-10">Get In Touch</a>
+                        </div>
+                    </div>
+
                 </div> <!-- END BLOG POSTS HOLDER -->
 
                 <!-- SIDEBAR -->
-                {% include 'aside.html' %}
+                {% comment %} {% include 'aside.html' %} {% endcomment %}
             </div>
         </div>
       </div>
@@ -214,13 +237,13 @@
         slidesPerView: 1,
       },
       768: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       991: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
       1200: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
     },
   })

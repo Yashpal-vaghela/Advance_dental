@@ -5995,6 +5995,43 @@ nav a#pull {
 .client-logo-section .swiper-slide {
   border-radius: 5px;
 }
+.sidebar-founder {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.founder-image img {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.founder-description {
+    max-width: 600px;
+}
+
+.founder-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1b8976;
+}
+
+.founder-description p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.founder-description .btn {
+    padding: 8px 16px;
+    border-radius: 50px;
+}
 
 @media (max-width: 991px) {
   .faq {

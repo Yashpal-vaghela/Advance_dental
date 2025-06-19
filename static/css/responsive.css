@@ -375,7 +375,7 @@
   /* Timetable Page */
   #timetable-page { padding-top: 100px; padding-bottom: 160px; }
 
-
+ 
 
 }
 @media (min-width: 768px) and (max-width: 991.99px) { 
@@ -778,8 +778,17 @@
   /* Timetable Page */
   #timetable-page { padding-top: 80px; padding-bottom: 70px; }
 
-
-
+   /*product Page */
+  .founder-description {
+    max-width: 400px;
+  }
+  .founder-name {
+    font-size: 1.15rem;
+  }
+  .founder-description p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
 /* ------------------------------------------------------------------------ */
 @media (max-width: 767px) { 
@@ -853,7 +862,11 @@
   /* Timetable Page */
   #timetable-page { padding-top: 80px; padding-bottom: 70px; }
 
-
+  /*product Page */
+  .sidebar-founder {
+    align-items: center;
+    justify-content: center;
+  }
 
 }
 /* ------------------------------------------------------------------------ */
