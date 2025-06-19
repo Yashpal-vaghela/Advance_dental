@@ -5922,7 +5922,7 @@ nav a#pull {
 
 .faq .card .card-header:hover {
   background: rgb(0 163 200 / 16%);
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .faq .card .card-header .faq-title {
@@ -6000,17 +6000,20 @@ nav a#pull {
   .faq {
     margin-bottom: 30px;
   }
-
   .faq .card .card-header .faq-title {
     line-height: 26px;
     margin-top: 10px;
   }
-
   .hero-section1 .swiper-slide {
     padding-top: 70px;
   }
 }
-
+@media(max-width:576px){
+  .faq .card .card-header .faq-title{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 ::-webkit-scrollbar {
   display: none;
 }

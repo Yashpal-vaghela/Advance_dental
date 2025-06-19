@@ -39,7 +39,7 @@
         padding: 30px 0px;
     }
     .zirfirst-headS{
-        font-size: 22px;
+        font-size: 18px;
     }
     .zirconia-second .col-10{
         padding:0px 8px;
@@ -48,11 +48,11 @@
 
 /* --------------- the path to Radial smile --------------  */
 .radial_smile .line-2{
-    top: 1.7%;
+    top: 1.3%;
     left: 1%;
 }
 .radial_smile .line-1{
-    top: 1.7%;
+    top: 1.3%;
     right: 1%;
 }
 .bigcont {
@@ -196,10 +196,16 @@
 }
 @media(max-width:1200px){
     .radial_smile .line-2,.radial_smile .line-1{
-        top: 2%;
+        top: 1.5%;
     }
 }
 @media(max-width:991px){
+    .radient-amile-card-head{
+        font-size: 24px;
+    }
+    .radient-amile-card-head.left{
+        text-align: end;
+    }
     .radial_smile .line-2 {
         /* top: 2.6%; */
         left:0%;
@@ -210,6 +216,9 @@
         right: 0%;
         width: 27%;
     }
+    .radial_smile .zirconia-wrapper-title{
+        margin-bottom: 10px;
+    }
     .left-column{
         padding-right: 40px;
     }
@@ -219,12 +228,14 @@
 }
 @media(max-width:768px){
     .radial_smile .line-2 {
-        top: 1.18%;
-        left:-6%;
+        /* top: 0.85%;
+        left:-6%; */
+        display: none;
     }
     .radial_smile .line-1{
-        top: 1.18%;
-        right: -6.4%;
+        top: 0.75%;
+        right: 0%;
+        width:40%;
     }
     .webviewofprocess {
         display: none;
@@ -248,9 +259,8 @@
         justify-content: flex-start;
         align-items: start;
     }
-    
     .radient-amile-card-head{
-        font-size: 26px;
+        font-size: 22px;
     }
 }
 @media(max-width:576px){
@@ -258,7 +268,7 @@
         margin: 0px 0px 0px;
     }
     .radial_smile .zirconia-wrapper-title{
-        padding-left: 32px;
+        padding-left: 24px;
     }
     .radial_smile .line-2, .radial_smile .line-1 {
         display: none;
@@ -280,11 +290,14 @@
         width:85%;
     }
     .radient-amile-card-subhead{
-        font-size: 16px;
+        font-size: 14px;
     }
     .radient-amile-card-head{
-        font-size: 20px;
+        font-size: 16px;
         margin-bottom: 14px;
+    }
+    .mobileviewofprocess .flex-column{
+        margin-top: 40px;
     }
 }
 @media(max-width:420px){
@@ -312,10 +325,12 @@
     top:3.2%
 }
 .typeOfZirconia .swiper-button-prev{
-    top:8%;
-    left:72%;
+    top:6%;
+    left:75%;
     background-color: rgb(27, 137, 118,0.1);
-    padding: 10px 22px;
+    /* padding: 10px 22px; */
+    padding: 11px 21px 3px 21px;
+    /* padding: 11px 21.5px 8px 22px; */
     border-radius: 50%;
 }
 .typeOfZirconia .swiper-button-prev::after{
@@ -323,31 +338,39 @@
     font-weight: 900;
     color:#1B8976;
     /* padding: 20px; */
-    padding: 7px 0px 7px 0px;
+    padding: 7px 0px 7px 1px;
     margin: 0px -6px;
     /* padding: 7px 15px 7px 11px; */
 }
 .typeOfZirconia .swiper-button-next{
-    top:8%;
+    top:6%;
+    right: var(--swiper-navigation-sides-offset, 20px);
     background-color: rgb(27, 137, 118,0.1);
-    padding: 10px 22px;
+    /* padding: 10px 22px; */
+      padding: 11px 21px 3px 21px;
     border-radius: 50%;
 }
 .typeOfZirconia .swiper-button-next::after{
     font-size: 15px;
     font-weight: 900;
     color:#1B8976;
-    margin: 0px -2px;
+    margin: 0px -2.5px;
+    padding: 7px 0px 7px 0px;
     /* padding: 20px; */
     /* padding: 0px 9px 0px 12px; */
     /* padding: 7px 11px 7px 15px; */
 }
+.typeOfZirconia .swiper-button-next.swiper-button-disabled, 
+.typeOfZirconia .swiper-button-prev.swiper-button-disabled{
+    opacity: .35 !important;
+    cursor: auto;
+    pointer-events: none;
+}
 .webviewoftype {
-    padding: 50px 0px;
+    padding: 35px 0px;
 }
 .main_process_card {
     position: relative;
-    
 }
 .main_process_card::before {
     content: "";
@@ -433,7 +456,8 @@
 .pagination-two {
     display: flex;
     justify-content: center;
-    margin-top: 24px;
+    /* margin-top: 24px; */
+    margin-top: 18px;
     width: 100%;
 }
 
@@ -471,11 +495,11 @@
         padding: 10px 0px 20px;
     }
     .typeOfZirconia .line-2{
-        left: 4%;
+        left: 2%;
         top:4%
     }
     .typeOfZirconia .line-1{
-        right: 4%;
+        right: 2%;
         top:4%
     }
     .main_process_card{
@@ -491,13 +515,16 @@
     }
 }
 @media(max-width:991px){
+    /* .typeOfZirconia .zirconia-wrapper-title{
+        padding-top: 1.3rem !important;
+    } */
     .typeOfZirconia .line-2{
-        left: 7%;
-        top:5%
+        left: 5%;
+        top:5.2%;
     }
     .typeOfZirconia .line-1{
-        right: 7%;
-        top:5%
+        right: 5%;
+        top:5.2%;
     }
     .side-img {
         display: none;
@@ -511,7 +538,16 @@
     }
     .mobileviewofType {
         display: block;
-        padding:25px 0px 25px;
+        padding: 25px 0px 25px;
+    }
+    .mobileviewofType .mobileviewofType-content span{
+        margin-bottom: 10px;
+        display: block;
+    }
+    .mobileviewofType .mobileviewofType-content p{
+        height: 190px;
+        font-size: 15px;
+        letter-spacing: 0.2px;
     }
     .mobile_innerproess_Card{
         padding:0px;
@@ -520,7 +556,7 @@
     .mobile_innerproess_Card h3{
         font-size:20px;
     }
-    .swiper-one .swiper-slide:nth-child(1) .mobileviewofType-content p{
+    /* .swiper-one .swiper-slide:nth-child(1) .mobileviewofType-content p{
         margin-bottom: 51px;
     }
     .swiper-one .swiper-slide:nth-child(2) .mobileviewofType-content p{
@@ -531,16 +567,22 @@
     }
     .swiper-one .swiper-slide:nth-child(4) .mobileviewofType-content p{
         margin-bottom: 10px;
-    }
+    } */
     .numbersvgmobile{
         width: 60px  !important;
         height:60px !important;
     }
 }
 @media(max-width:768px){
-    .typeOfZirconia .line-2,.typeOfZirconia .line-1 {
-        /* left: 10%; */
-        top: 4.4%;
+    .typeOfZirconia .line-2 {
+        /* left: 1%;
+        top: 4.2%; */
+        display: none;
+    }
+    .typeOfZirconia .line-1{
+        right:3%;
+        top: 5%;
+        width:40%;
     }
     /* .typeOfZirconia .line-1 {
         right: 10%;
@@ -562,8 +604,8 @@
         padding: 0px;
     }
     .mobile_innerproess_Card{
-        margin:12px;
-        padding:12px
+        margin:0px;
+        padding:0px
     }
     .side-img-mobile {
         width: 90% !important;
@@ -572,7 +614,10 @@
     .pagination-one{
         margin-top: 0px;
     }
-  
+    .mobileviewofType .mobileviewofType-content p{
+        height: 125px;
+    }
+/*   
     .swiper-one .swiper-slide:nth-child(1) .mobileviewofType-content p{
         margin-bottom: 35px;
     }
@@ -584,11 +629,35 @@
     }
     .swiper-one .swiper-slide:nth-child(4) .mobileviewofType-content p{
         margin-bottom: 15px;
-    }
+    } */
 }
 @media(max-width:576px){
     .typeOfZirconia .zirconia-wrapper-title{
         padding-left: 30px;
+        font-size: 18px;
+    }
+    .typeOfZirconia .swiper-button-prev{
+         --swiper-navigation-size: 40px;
+          padding: 10px 19px 3px 19px;
+    }
+    .typeOfZirconia .swiper-button-prev::after{
+        padding: 0px;
+        top:-1px;
+        position: relative;
+        font-size: 14px;
+        margin: 0px -5px;
+    }
+    .typeOfZirconia .swiper-button-next{
+        --swiper-navigation-size: 40px;
+        /* width: calc((40px) / 44 * 27); */
+        padding: 10px 19px 3px 19px;
+        right: var(--swiper-navigation-sides-offset, 15px);
+    }
+    .typeOfZirconia .swiper-button-next::after{
+        padding: 0px;
+        top:-1px;
+        position: relative;
+        font-size: 14px;
     }
     .side-img {
         display: none;
@@ -607,9 +676,21 @@
         margin: 0px 25px;
     }
     .mobileviewofType-content p{
-        font-size: 15px;
+        font-size: 14px;
     }
-    .swiper-one .swiper-slide:nth-child(1) .mobileviewofType-content p{
+    .mobileviewofType .mobileviewofType-content span{
+        font-size: 16px;
+        font-weight: 500;
+    }
+   .mobile_innerproess_Card{
+    margin: auto;
+   }
+    .mobileviewofType .mobileviewofType-content p{
+        height: 160px;
+        font-size: 14px;
+        font-weight: 450px;
+    }
+    /* .swiper-one .swiper-slide:nth-child(1) .mobileviewofType-content p{
         margin-bottom: 12px;
     }
     .swiper-one .swiper-slide:nth-child(2) .mobileviewofType-content p{
@@ -620,14 +701,14 @@
     }
     .swiper-one .swiper-slide:nth-child(4) .mobileviewofType-content p{
         margin-bottom: 12px;
-    }
+    } */
     .side-img-mobile {
         width: 100% !important;
     }
 }
 /* ------------------- why zirconia crown css --------------------- */
 .zirconia-wrapper{
-    padding: 10px 0px 6px;
+    padding: 10px 0px 0px;
 }
 .zirconia-content-wrapper{
     grid-row-gap: 35px;
@@ -663,12 +744,12 @@
 }
 .line-1{
     position: absolute;
-    top: 5.2%;
+    top: 5.6%;
     right:0%;
 }
 .line-2{
     position: absolute;
-    top: 5.2%;
+    top: 5.6%;
     left:0%;
 }
 .zirconia-content-item{
@@ -686,13 +767,13 @@
     background-color: #fff;
 } 
 .zirconia-content-item._1{
-    top: 20px;
+    top: 70px;
 }
 .zirconia-content-item._2{
-    top: 40px;
+    top:90px;
 }
 .zirconia-content-item._3{
-    top: 60px;
+    top: 110px;
 }
 .zirconia-content-item span{
     font-size: 26px;
@@ -709,7 +790,6 @@
     text-align: center;
     padding: 0px 30px;
 }
-
 /* media query  */
 @media(max-width:1200px){
     .line-1,.line-2{
@@ -725,7 +805,7 @@
         top: 3.4%;
     }
     .zirconia-wrapper-title{
-        font-size: 26px;
+        font-size: 24px;
         margin-bottom: 0px;
     }
     .zirconia-wrapper .line-1,.zirconia-wrapper .line-2{
@@ -734,6 +814,15 @@
     .zirconia-content-item h3{
         font-size: 22px;
     }
+    .zirconia-content-item._1{
+        top:80px;
+    }
+    .zirconia-content-item._2{
+        top:100px;
+    }
+    .zirconia-content-item._3{
+        top:120px;
+    }
 }
 @media(max-width:768px){
     .line-1,.line-2{
@@ -741,7 +830,9 @@
         top: 3%;
     }
     .zirconia-wrapper-title{
-        font-size: 24px;
+        font-size: 22px;
+        text-align: left;
+        /* padding-top: 1.8rem !important; */
     }
     .zirconia-content-item span{
         padding: 0px 10px;
@@ -754,7 +845,15 @@
         font-size: 22px;
     }
     .zirconia-wrapper .line-1, .zirconia-wrapper .line-2{
-        top:4.5%
+        top:4.2%;
+        width:40%;
+    }
+    .zirconia-wrapper .line-1{
+        right:2%;
+    }
+    .zirconia-wrapper .line-2{
+        /* left:-5%; */
+        display: none;
     }
     .zirconia-content-item p{
         text-align: center;
@@ -770,15 +869,21 @@
         /* --bs-gutter-x: 4.5rem; */
         --bs-gutter-x: 5.8rem;
     }
+    .zirconia-content-item h3{
+        font-size: 16px;
+    }
+    .zirconia-content-item p{
+        font-size: 14px;
+    }
     .line-1,.line-2{
-        width:22%;
-        top: 2.5%;
+        /* width:22%;
+        top: 2.5%; */
         display:none;
     }
     .zirconia-wrapper-title{
         font-size: 22px;
         text-align: left;
-        padding-top: 20px !important;
+        padding-top: 25px !important;
     }
     .zirconia-content-item h2{
         font-size: 20px;
@@ -804,7 +909,7 @@
         font-size: 18px;
     }
 }
-/* ---------------- Benefit od zirconia ---------------- */
+/* ---------------- Benefit of zirconia ---------------- */
 .BenefitOfZirconia {
     padding: 50px 0px;
 }
@@ -881,22 +986,39 @@
     .BenefitOfZirconia .line-2{
         width:20%;
         top:5.5%;
-        left: -1%;
+        left: 2%;
     }
     .BenefitOfZirconia .line-1{
         width:20%;
         top:5.5%;
-        right: -1%;
+        right: 2%;
+    }
+}
+@media(max-width:991px){
+    .BenefitOfZirconia{
+        padding: 30px 0px;
+    }
+    .BenefitOfZirconia .line-2{
+        left:0%;
+    }
+    .BenefitOfZirconia .line-1{
+        right: 0%;
     }
 }
 @media(max-width:768px){
     .BenefitOfZirconia .line-2{
-        left:-8%;
-        top:5%;
+        /* left:-3%;
+        top:5%; */
+        display: none;
+        /* width:28%; */
+    }
+    .BenefitOfZirconia .zirconia-wrapper-title{
+        text-align: left;
     }
     .BenefitOfZirconia .line-1{
-        right: -8%;
+        right:-3%;
         top:5%;
+        width:32%;
     } 
 }
 @media(max-width:576px){
@@ -905,6 +1027,13 @@
     }    
     .BenefitOfZirconia .container{
         --bs-gutter-x: 5.8rem;
+    }
+    .benhead{
+        font-size: 16px;
+    }
+    .bantext{
+        font-size: 14px;
+        letter-spacing:0.2px
     }
     /* .BenefitOfZirconia .swiper-slide{
         margin:0px 0px 0px 25px !important; 
@@ -966,10 +1095,26 @@
     height: 400px !important;
     margin: 0 auto;
 }
+@media(max-width:1200px){
+    .testimonial-card{
+        padding: 20px 20px;
+    }
+}
 @media(max-width:991px){
+    .testimonial-wrapper{
+        padding: 20px 0px 0px;
+    }
     .testimonial-wrapper .swiper{
         height: 450px !important;
         width:76%;
+    }
+    .testimonial-wrapper .line-2t{
+        display: none;
+    }
+    .testimonial-wrapper .line-1t{
+        width:50%;
+        top:1%;
+        right:2%;
     }
 }
 @media(max-width:768px){
@@ -986,13 +1131,16 @@
         max-width: 700px;
         padding: 20px 15px;
     }
+    .testimonial-wrapper{
+        margin-bottom: 30px;
+    }
     .testimonial-wrapper .swiper{
-        width:85%;
+        width:90%;
         height: 530px !important;
     }
     .testimonial-text{
         /* font-size: 0.90rem; */
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 5px;
         line-height: 1.6;
     }
@@ -1011,15 +1159,17 @@
     .testimonial-name{
         margin-bottom: 10px;
     }
+    .mySwiper .swiper-wrapper .testimonial-card{
+        height: 95% !important;
+    }
     .testimonial-wrapper .swiper{
-        width:86.5%;
-        height: 580px !important;
+        width:95.5%;
+        height: 520px !important;
     }
 }
 /* ------------------ Gallery section ----------------- */
 .Gallery-section .container{
     margin: 55px auto 60px;
-    
 }
 .gallery-wrapper p{
     font-size:18px;
@@ -1060,7 +1210,6 @@
     justify-content: center;
     /* box-shadow: 0px 0px 3px rgb(27, 137, 118,0.9); */
 }
-
 .gallery-img:has(.galleryCaseImg-wrapper.d-block img) {
     margin: 20px;
 }
@@ -1098,7 +1247,6 @@
     margin-left: 10px;
     transition: filter 0.3s ease;
 }
-
 .gallery-swiper .swiper-button-next, 
 .gallery-swiper .swiper-button-prev{
     /* color:#1B8976 !important; */
@@ -1155,7 +1303,7 @@
     scroll-behavior:smooth;
 }
 .galleryCaseImg-wrapper img{
-height: auto !important;
+    height: auto !important;
 }
 .galleryCaseImg-wrapper.d-block{
     top: 0;
@@ -1232,7 +1380,6 @@ height: auto !important;
 }
 
 /* media query  */
-
 /* @media(min-width:1300px) and (max-width:1440px){
     .galleryCaseImg-wrapper.d-block{
         width: 270px;
@@ -1275,6 +1422,9 @@ height: auto !important;
     .gallery-swiper{
         margin-top: 8.5%;
     }  
+    .Gallery-section .container{
+        margin: 55px auto 45px;
+    }
 }
 @media(max-width:991px){
     .gallery-swiper{
@@ -1286,6 +1436,12 @@ height: auto !important;
     }
     .gallery-bg-text{
         font-size: 100px;
+    }
+    .gallery-swiper .gallery-img{
+        margin-bottom: 0px;
+    }
+    .Gallery-section .container{
+        margin: 55px auto 15px;
     }
 }
 @media(max-width:768px){
@@ -1370,6 +1526,9 @@ height: auto !important;
         font-size: 26px;
         right:5%;
     }
+    .Gallery-section .container{
+        margin: 30px auto 20px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1386,7 +1545,6 @@ height: auto !important;
     .zirfirst-text p{
         line-height: 1.75;
     }
-
 }
 
 /* ------------ on scroll video start --------------*/
@@ -1409,7 +1567,7 @@ height: auto !important;
 /*-----------------------------faq Section Zirconia---------------------------*/
 .faq-section {
     position: relative;
-    padding:60px 0;
+    padding:0px 0;
     text-align: center;
 }
 .zirconia-faq{
@@ -1437,6 +1595,11 @@ height: auto !important;
   font-size: 1rem !important;
   font-weight: 600 !important;
 }
+@media(max-width:1200px){
+    .faq-section{
+        padding: 5px 0px;
+    }
+}
 @media(min-width:1400px){
     .zirconia-faq .vector1{
         left: 2% ;
@@ -1463,18 +1626,18 @@ height: auto !important;
 }
 @media(max-width:991px){
   .zirconia-faq{
-    padding: 30px 0px 50px;
+    padding: 30px 0px 0px;
   }
   .zirconia-faq .product-section-title{
     font-size: 25px;    
   }
   .zirconia-faq .vector1{
     width:38%;
-    top:2.5%;
+    top:2%;
   }
   .zirconia-faq .vector2{
    width:38%;
-   top:2.5%;
+   top:2%;
   }
 }
 @media(max-width: 768px){
@@ -1487,8 +1650,8 @@ height: auto !important;
     }
     .zirconia-faq .vector2{
         max-width: 40%;
-        top: 2%;
-        right: 2%;
+        top: 1.3%;
+        right: 0%;
     }
 }
 
