@@ -555,17 +555,17 @@
     <script src="{% static 'js/jquery.easing.js' %}"></script>
     <script src="{% static 'js/jquery.appear.js' %}"></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-    <script src="{% static 'js/menu.js' %}"></script>
-    <script src="{% static 'js/sticky.js' %}"></script>
+    <script src="{% static 'js/menu.min.js' %}"></script>
+    <script src="{% static 'js/sticky.min.js' %}"></script>
     <script src="{% static 'js/jquery.scrollto.js' %}"></script>
-    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
     {% block js %} {% endblock %}
-    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
     <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
     <script src="{% static 'js/changer.js' %}"></script>
@@ -609,7 +609,7 @@
         src="https://www.facebook.com/tr?id=700687238635946&ev=PageView&noscript=1"
       />
     </noscript>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
+    {% comment %} <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script> {% endcomment %}
     {% for ie in messages %}
     <script>
       Swal.fire({
