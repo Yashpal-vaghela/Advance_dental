@@ -40,7 +40,7 @@
   position: absolute;
   top: 41%;
   left: 6%;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .banner1-img img {
   width: 91%;
@@ -50,7 +50,7 @@
   top: 19.8%;
   border-radius: 20px;
   padding: 15px;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .hero-section1 .h1s {
   font-size: 45px !important;
@@ -64,43 +64,43 @@
 }
 .hero-section1 .swiper-slide-active .texts{
   animation: ZoomInText 0.8s ease-in-out forwards;
-  animation-delay: 0.4s;
+  /* animation-delay: 0.4s; */
 }
 .hero-section1 .swiper-slide-active .banner1-img{
   animation: fadeInUp 0.8s ease-in-out forwards;
-  animation-delay: 0.5s;
+  /* animation-delay: 0.5s; */
 }
 @keyframes ZoomInbg {
   from {
-    opacity: 0;
-    filter: blur(5px);
-    transform: scale(0.85);
+    /* opacity: 0; */
+    /* filter: blur(5px); */
+    transform: scale(1.1);
   }
   to {
-    filter: blur(0);
-    opacity: 0.5;
+    /* filter: blur(0); */
+    /* opacity: 0.5; */
     transform: scale(1);
   }
 }
 @keyframes fadeInUp{
   0%{
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateY(40px);
   }
   100%{
-    opacity: 1;
+    /* opacity: 1; */
     transform: translateY(0);
   }
 }
 @keyframes ZoomInText {
   from {
-    opacity: 0;
-    filter: blur(10px);
+    /* opacity: 0; */
+    /* filter: blur(10px); */
     transform: scale(0.75);
   }
   to {
-    filter: blur(0);
-    opacity: 1;
+    /* filter: blur(0); */
+    /* opacity: 1; */
     transform: scale(1);
   }
 }
@@ -1930,10 +1930,13 @@
     width: 75%;
   }
   .hero-section1 .h1s {
-    font-size: 35px !important;
+    font-size: 28px !important;
+  }
+  .hero-section1 .h2s{
+    font-size:27px !important;
   }
   .texts {
-    top: 35%;
+    top: 41%;
     padding: 0px !important;
   }
   .optional1 {
@@ -2008,7 +2011,7 @@
   }
   /* banner 1 */
   .banner1-img {
-    top: 58%;
+    top: 60%;
     left: 1%;
   }
   .banner1-img img {
