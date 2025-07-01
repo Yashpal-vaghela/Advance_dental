@@ -2,7 +2,6 @@ html {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
 }
-
 body {
   font-family: "Montserrat", sans-serif;
   color: #333;
@@ -11,31 +10,24 @@ body {
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch;
 }
-
 @-webkit-viewport {
   width: device-width;
 }
-
 @-moz-viewport {
   width: device-width;
 }
-
 @-ms-viewport {
   width: device-width;
 }
-
 @-o-viewport {
   width: device-width;
 }
-
 @viewport {
   width: device-width;
 }
-
 #page {
   overflow-x: clip;
 }
-
 .wide-100 {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -690,7 +682,7 @@ td.text-right {
   box-shadow: 0 10px 10px rgb(0 0 0 / 0.3);
 }
 .teamSwiper .sbox-5{
-  margin: 0 8px 30px 0px;
+  margin: 0 8px 40px 0px;
 }
 .teamSwiper .swiper-pagination-bullet{
   width:10px !important;
@@ -702,6 +694,20 @@ td.text-right {
 }
 .teamSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
   top:var(--swiper-pagination-top, 97%) !important; 
+}
+.equipmentSwiper{
+  width:99%;
+}
+.equipmentSwiper .swiper-slide{
+  background-color: transparent;
+  /* margin-left: 8px; */
+}
+.equipmentSwiper .sbox-5{
+  margin: 0px 12px 40px;
+  background-color: transparent;
+}
+@media(max-width:576px){
+  .equipmentSwiper .sbox-5{margin: 0px 20px 40px;}
 }
 .sbox-5 {
   text-align: center;
@@ -3112,7 +3118,6 @@ nav a#pull {
     padding: 0 15px;
   }
 }
-
 .contacts-types-card {
   background: #fff;
   box-shadow: 0 0 96.2px 7px rgb(29 144 124 / 0.33);
@@ -3123,7 +3128,6 @@ nav a#pull {
   padding: 35px 24px;
   justify-content: center;
 }
-
 .contacts-types-card .contact-type {
   color: #1d907c;
   display: flex;

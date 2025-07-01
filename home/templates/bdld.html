@@ -36,7 +36,6 @@
 {% block css %}
 {% endblock css %}
 
-
 {% block body %}
 <div id="breadcrumb" class="division">
 	<div class="container">
@@ -60,7 +59,6 @@
 		</div> <!-- End row -->
 	</div> <!-- End container -->
 </div> <!-- END BREADCRUMB -->
-
 <section id="about-6" class="pt-50 pb-50 about-section division">
 	<div class="container">
 		<div class="row d-flex align-items-center">
@@ -116,58 +114,58 @@
 	</div>
 </section>
 <section>
-<!--Static Counter -->
-<div class="container text-center my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-3 col-6">
-      <div class="stat-box d-flex align-items-center justify-content-center">
-        <div class="icon-box">
-          <img src="{% static 'cases.png' %}" alt = "cases">
-        </div>
-        <div class="text-box">
-          <h4><span class="count-element">6</span>L+</h4>
-          <p>Cases</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-6">
-      <div class="stat-box d-flex align-items-center justify-content-center">
-        <div class="icon-box">
-          <img src="{% static 'doctor.png' %}" alt = "doctor">
-        </div>
-        <div class="text-box">
-          <h4><span class="count-element">400</span>+</h4>
-          <p>Qualified Professional</p>
+  <!--Static Counter -->
+  <div class="container text-center my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'cases.png' %}" alt = "cases">
+          </div>
+          <div class="text-box">
+            <h4><span class="count-element">6</span>L+</h4>
+            <p>Cases</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-3 col-6">
-      <div class="stat-box d-flex align-items-center justify-content-center">
-        <div class="icon-box">
-          <img src="{% static 'dentist-new.png' %}" alt = "cases">
-        </div>
-        <div class="text-box">
-          <h4><span class="count-element">3500</span>+</h4>
-          <p>Trusted Dentists</p>
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'doctor.png' %}" alt = "doctor">
+          </div>
+          <div class="text-box">
+            <h4><span class="count-element">400</span>+</h4>
+            <p>Qualified Professional</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-3 col-6">
-      <div class="stat-box d-flex align-items-center justify-content-center">
-        <div class="icon-box">
-          <img src="{% static 'location-new.png' %}" alt = "cases">
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'dentist-new.png' %}" alt = "cases">
+          </div>
+          <div class="text-box">
+            <h4><span class="count-element">3500</span>+</h4>
+            <p>Trusted Dentists</p>
+          </div>
         </div>
-        <div class="text-box">
-          <h4><span class="count-element">500</span>+</h4>
-          <p>Local Partners</p>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'location-new.png' %}" alt = "cases">
+          </div>
+          <div class="text-box">
+            <h4><span class="count-element">500</span>+</h4>
+            <p>Local Partners</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
-  <!-- About team -->
-  <section id="banner-7" class="bg-fixed banner-section division">
+<!-- About team -->
+<section id="banner-7" class="bg-fixed banner-section division">
     <div class="container white-color px-0">
       <div class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto">
         <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
@@ -190,8 +188,7 @@
         </div>
       </div>
     </div>
-  </section>
-
+</section>
 <section id="services-7" class="bg-lightgrey wide-601 servicess-section division">
     <div class="container">
       <div class="row">
@@ -270,10 +267,9 @@
         </div>
       </div>
     </div>
-  </section>
-
+</section>
  <!-- - SERVICE SECTION -->
- <section id="services-6" class="bg-blue wide-40 servicess-section division">
+<section id="services-6" class="bg-blue wide-40 servicess-section division">
     <div class="container white-color">
       <div class="row">
         <div class="col-lg-12 mx-auto section-title">
@@ -326,7 +322,7 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 <!-- new desgine of before & after -->
 <section id="gallery-2" class="gallery-section division">
     <div class="container">
@@ -334,22 +330,35 @@
         <div class="col-lg-12 mx-auto section-title">
           <h3 class="h3-md steelblue-color mb-0">Before & After</h3>
         </div>
-
-        <div class="owl-carousel owl-theme gallery-holder listing-gallery-img-item">
-          {% for ie in gallery21 %}
-            <!-- SERVICE BOX #1 -->
-            <div class="gbox listing-gallery-link-block">
-              <div class="hover03 wow zoomSlider w-100 h-100">
-                <!-- Doctor Photo -->
-                <img class="img-fluid w-100 h-100" src="{{ ie.image.url }}" data-src="{{ ie.image.url }}" alt="Before & After" width="100%" height="100%" />
+        <div class="swiper beforeSwiper">
+          <div class="swiper-wrapper">
+            {% for ie in gallery21 %}
+              <div class="swiper-slide">
+                <div class="hover03 wow zoomSlider">
+                  <!-- Doctor Photo -->
+                  <div class="image-item">
+                    <img
+                      class="img-fluid lazy"
+                      src="{{ ie.image.url }}"
+                      alt="doctor-foto"
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-
         <div class="col-md-12 text-center">
-          <div class="all-posts-btn mb-50 wow fadeInUp" data-wow-delay="1s">
-            <a href="{% url 'home:beforeafter' %}" class="btn btn-blue blue-hover submit" aria-label="See more in the Ade after befor">See More</a>
+          <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+            <a
+              href="{% url 'home:gallery' %}"
+              class="btn btn-blue blue-hover submit"
+              aria-label="See more in the Ade Gallery"
+              >See More</a
+            >
           </div>
         </div>
       </div>
@@ -394,36 +403,43 @@
         </div>
       </div>
     </div>
-  </section>
-
-
- <!-- Testimonials-video -->
- <section id="gallery-1" class="gallery-section division pt-50">
+</section>
+<!-- Testimonials-video -->
+<section id="gallery-1" class="gallery-section division pt-50">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto section-title">
           <h2 class="h2-m steelblue-color mb-0">In Their Own Words: Tales of Trust from Our Clientele</h2>
         </div>
-        <div class="owl-carousel owl-theme services-holder3">
-          <!-- SERVICE BOX #1 -->
-          {% for ie in video %}
-            <div class="sbox-5 index-video1" data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}">
+        <div class="swiper gallerySwiper">
+          <div class="swiper-wrapper">
+            {% for ie in video %}
+            <div
+              class="swiper-slide sbox-52 index-video1"
+              data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
+            >
               <div class="video-container">
-                <img src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg" alt="Video Thumbnail" class="video-thumbnail1" width="100%" height="100%" />
+                <img
+                  src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
+                  alt="Video Thumbnail"
+                  class="video-thumbnail1"
+                  width="100%"
+                  height="100%"
+                />
                 <button class="play-button">▶</button>
               </div>
             </div>
-          {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
-  </section>
+</section>
 <!-- INFO-4
 			============================================= -->
 <section id="info-4" class="wide-100 info-section division">
 	<div class="container">
-
-
 		<!-- TOP ROW -->
 		<div class="top-row mb-0">
 			<div class="row d-flex align-items-center">
@@ -714,106 +730,74 @@
       </div>
   </div>
 </section>
-
 {% endblock body %}
 {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-  $(document).ready(function () {
-    var owl = $(".services-holder");
-    var owl1 = $(".gallery-holder");
-    if (owl.length) {
-      owl.owlCarousel({
-        items: 2,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        navBy: 1,
-        responsive: {
-          0: { items: 1 },
-          767: { items: 1 },
-          768: { items: 2 },
-          991: { items: 2 },
-          1200: { items: 3 },
-        },
-      });
-    }
-    if (owl1.length) {
-      owl1.owlCarousel({
-        items: 2,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        navBy: 1,
-        responsive: {
-          0: { items: 1 },
-          767: { items: 1 },
-          768: { items: 2 },
-          991: { items: 3 },
-          1200: { items: 3 },
-        },
-      });
-    }
-  });
-  var swiper1 = new Swiper(".clientLogo", {
-    slidesPerView: 7,
-    spaceBetween: 20,
-    speed: 500,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      380:{
-        slidesPerView: 4,
-      },
-      576: {
-        slidesPerView: 5,
-      },
-      768: {
-        slidesPerView: 6,
-      },
-      991: {
-        slidesPerView: 7,
-      },
-      1024: {
-        slidesPerView: 7,
-      },
-      1200: {
-        slidesPerView: 7,
-      },
-      1500: {
-        slidesPerView: 8,
-      },
-      1900: {
-        slidesPerView: 10,
-      },
-    },
-  });
-  var swiper = new Swiper(".mySwiper", {
+<script>
+  var galleryswiper = new Swiper(".gallerySwiper", {
     speed: 600,
-    parallax: !0,
+    slidesPerView: 2,
     loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
+    autoplay: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      1000: {
+        slidesPerView: 2,
+      },
+    },
+  });
+  var BeforeSwiper = new Swiper(".beforeSwiper", {
+    speed: 600,
+    slidesPerView: 3,
+    loop: true,
+    autoplay: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
+    },
   });
 </script>
-  <script src="{% static 'js/galleryanimation.js' %}"></script>
+{% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script> {% endcomment %}
 {% comment %} {{pk.schema|safe}} {% endcomment %}
 <script type="application/ld+json">
   {
@@ -849,6 +833,5 @@
       }
     }
   }
-  </script>
-
+</script>
 {% endblock js %}

@@ -1,1105 +1,1384 @@
 {% extends 'base.html' %} {% load static %} {% block seo %}
-  <title>Advance Dental Export | Leading Dental Laboratory in India</title>
-  <meta name="description" content="Advance Dental Export is one of the best dental labs in India since 2009. We provide custom dental solutions for Indian as well as global dentists and clients." />
+<title>Advance Dental Export | Leading Dental Laboratory in India</title>
+<meta
+  name="description"
+  content="Advance Dental Export is one of the best dental labs in India since 2009. We provide custom dental solutions for Indian as well as global dentists and clients."
+/>
 
-  <link rel="canonical" href="https://advancedentalexport.com/" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Advance Dental Export" />
-  <meta property="og:description" content="Advance Dental Export" />
-  <meta property="og:url" content="https://advancedentalexport.com/" />
-  <meta name="og:image" content="{% static 'img/feature.webp' %}" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/webp" />
-  <meta property="og:site_name" content="Advance Dental Export" />    
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content=" Advance Dental Export is one of the best dental labs in India and a trusted dental prosthetics manufacturer, custom dental solutions for global clients since 2009." />
-  <meta name="twitter:title" content="Advance Dental Export" />
-  <meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
-  <link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/" />
-  <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/" />
-  <link rel="preload" as="video" href="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm" type="video/webm" />
-  <link rel="preload" as="video" href="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4" type="video/mp4" />
-  <link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" />
-{% endblock %} 
-{% block css %}
-  <link href="{% static 'css/review.css' %}" rel="stylesheet" />
-  <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
-  <link href="{% static 'css/banner.css' %}" rel="stylesheet" />
-  {% comment %} <link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet" /> {% endcomment %}
-  <link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-{% endblock %} 
-{% block body %}
-  <section class="hero-section1 mb-0">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide banner-1-wrap position-relative">
-          {% comment %} <video id="player" autoplay muted playsinline loop>
-            <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4" />
-          </video> {% endcomment %}
-          <video
-              class="h-full w-full object-cover"
-              preload="none"
-              playsinline
-              muted
-              autoplay
-              loop
-              id="player"
-              poster="{% static 'banner-2/banner-12.webp' %}"
-            >
-            <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm" type="video/webm" />
-            <source src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4" type="video/mp4" />Your browser does not support the video tag.
-          </video>
-          {% comment %} <video width="100%" controls autoplay muted playsinline loop controlslist="nodownload nofullscreen noremoteplayback" id="background-video" oncontextmenu="return false;">
-            <source src="{% static 'banner-2/banner-1-video2.mp4' %}" type="video/mp4" />
-          </video> {% endcomment %}
-          <div class="container">
-            <div class="row mx-auto justify-content-center">
-              <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
-                <img src="{% static 'banner-2/banner-12.webp' %}" alt="Bringing Digital Revolution In Dentistry" width="800" height="600" class="banner-1-img img-fluid " />
+<link rel="canonical" href="https://advancedentalexport.com/" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Advance Dental Export" />
+<meta property="og:description" content="Advance Dental Export" />
+<meta property="og:url" content="https://advancedentalexport.com/" />
+<meta name="og:image" content="{% static 'img/feature.webp' %}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/webp" />
+<meta property="og:site_name" content="Advance Dental Export" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:description"
+  content=" Advance Dental Export is one of the best dental labs in India and a trusted dental prosthetics manufacturer, custom dental solutions for global clients since 2009."
+/>
+<meta name="twitter:title" content="Advance Dental Export" />
+<meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href="https://advancedentalexport.com/"
+/>
+<link
+  rel="alternate"
+  hreflang="en-IN"
+  href="https://advancedentalexport.com/"
+/>
+{% if not is_mobile %}
+<link
+  rel="preload"
+  as="video"
+  href="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm"
+  type="video/webm"
+/>
+<link
+  rel="preload"
+  as="video"
+  href="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4"
+  type="video/mp4"
+/>
+{% endif %}
+<link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" />
+{% endblock %} {% block css %} 
+{% comment %} <link href="{% static 'css/review.css' %}" rel="stylesheet" /> {% endcomment %}
+{% comment %} <link href="{% static 'css/blog.css' %}" rel="stylesheet" /> {% endcomment %}
+<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
+{% comment %}
+<link
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  rel="stylesheet"
+/>
+{% endcomment %}
+<link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+{% endblock %} {% block body %}
+<section class="hero-section1 mb-0">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide banner-1-wrap position-relative">
+        <video
+          class="h-full w-full object-cover"
+          preload="none"
+          playsinline
+          muted
+          autoplay
+          loop
+          id="player"
+          poster="{% static 'banner-2/banner-12.webp' %}"
+        >
+          <source
+            src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        {% comment %}
+        <video
+          width="100%"
+          controls
+          autoplay
+          muted
+          playsinline
+          loop
+          controlslist="nodownload nofullscreen noremoteplayback"
+          id="background-video"
+          oncontextmenu="return false;"
+        >
+          <source
+            src="{% static 'banner-2/banner-1-video2.mp4' %}"
+            type="video/mp4"
+          />
+        </video>
+        {% endcomment %}
+        <div class="container">
+          <div class="row mx-auto justify-content-center">
+            <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
+              <img
+                src="{% static 'banner-2/banner-12.webp' %}"
+                alt="Bringing Digital Revolution In Dentistry"
+                width="800"
+                height="600"
+                class="banner-1-img img-fluid"
+              />
+            </div>
+            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
+              <div
+                class="title h1s text-white"
+                data-swiper-parallax="-300"
+                style="transform: translate3d(0px, 0px, 0px)"
+              >
+                Bringing Digital Revolution In
               </div>
-              <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
-                <div class="title h1s text-white" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px)">Bringing Digital Revolution In</div>
-                <div class="subtitle h2s" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px)">Digital Dentistry</div>
+              <div
+                class="subtitle h2s"
+                data-swiper-parallax="-200"
+                style="transform: translate3d(0px, 0px, 0px)"
+              >
+                Digital Dentistry
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="swiper-slide banner2-swiper-slide position-relative">
+        <img
+          rel="preload"
+          src="{% static 'banner-2/new-banner2-img12.webp' %}"
+          class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
+          alt="banner2-bg"
+        />
+        <img
+          rel="preload"
+          src="{% static 'banner-2/new-banner2-img16.webp' %}"
+          class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
+          alt="banner2-bg"
+        />
+        <a href="/zirconia-crown/">
+          <img
+            rel="preload"
+            src="{% static 'banner-2/new-banner2-mobileSize2.webp' %}"
+            class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
+            alt="banner2-bg"
+          />
+        </a>
 
-        {% comment %} <div class="swiper-slide">
-          <div class="container banner-2 position-relative">
-            <img src="{% static 'banner-2/banner-31.png' %}" alt="zir-logo" class="zir-logo1" />
-            <img src="{% static 'banner-2/Group281.webp' %}" alt="ele-pic1" class="ele-pic2" />
-            <img src="{% static 'banner-2/letter-1.webp' %}" alt="let-pic" class="let-pic1" />
-            <button class="btn btn-read-more1"><a href="/zirconia-crown/">Discover More <i class="fa-solid fa-arrow-right ms-1"></i></a></button>
-          </div>
-          <div class="larger-ele position-relative">
-            <img src="{% static 'banner-2/image27.webp' %}" alt="grass-pic" class="grass-pic1" />
-          </div>
-          <div class="optional1">
-            <a href="/zirconia-crown/"><img src="{% static 'banner-2/banner-31.webp' %}" alt="slide2-optional" class="slide2-optional1" /></a>
-          </div>
-        </div> {% endcomment %}
-        
-        <div class="swiper-slide banner2-swiper-slide position-relative">
+        <div class="container new-banner2">
           <img
             rel="preload"
-            src="{% static 'banner-2/new-banner2-img12.webp' %}"
-            class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
-            alt="banner2-bg"
+            src="{% static 'banner-2/new-banner2-logo.webp' %}"
+            class="new-banner2-logo img-fluid"
+            alt="banner2-logo"
           />
           <img
             rel="preload"
-            src="{% static 'banner-2/new-banner2-img16.webp' %}"
-            class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
-            alt="banner2-bg"
+            src="{% static 'banner-2/new-banner2-text.webp' %}"
+            class="new-banner2-text img-fluid"
+            alt="banner2-text"
           />
-          <a href="/zirconia-crown/">
-            <img
-              rel="preload"
-              src="{% static 'banner-2/new-banner2-mobileSize2.webp' %}"
-              class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
-              alt="banner2-bg"
-            />
-          </a>
-         
-          <div class="container new-banner2">
-            <img
-              rel="preload"
-              src="{% static 'banner-2/new-banner2-logo.webp' %}"
-              class="new-banner2-logo img-fluid"
-              alt="banner2-logo"
-            />
-            <img
-              rel="preload"
-              src="{% static 'banner-2/new-banner2-text.webp' %}"
-              class="new-banner2-text img-fluid"
-              alt="banner2-text"
-            />
-            <button class="btn btn-read-more1">
-              <a href="/zirconia-crown/"
-                >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
+          <button class="btn btn-read-more1">
+            <a href="/zirconia-crown/"
+              >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
+            ></a>
+          </button>
+        </div>
+      </div>
+      <div class="swiper-slide home-implant-slider-wrapper position-relative">
+        <img
+          rel="preload"
+          src="{% static '/banner-2/Implant-banner-bg9.webp' %}"
+          class="img-fluid home-implant-banner-bg"
+        />
+        <a href="/ad-implant/">
+          <img
+            rel="preload"
+            src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
+            class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
+          />
+        </a>
+        <div
+          class="container home-implant-banner-img-wrapper position-absolute"
+        >
+          <div class="row align-items-center justify-content-end">
+            <div class="col-lg-5 col-md-5 col-xl-4">
+              <div class="home-implant-text">
+                <span class="home-implant-text1">Plant Your Implant with</span>
+                <b class="home-implant-rolling-text">
+                  <div class="letter" style="--i: 0">
+                    <div class="letter-track">
+                      <span>A</span>
+                      <span>A</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 1">
+                    <div class="letter-track">
+                      <span>D</span>
+                      <span>D</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 2">
+                    <div class="letter-dash">
+                      <span>-</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 3">
+                    <div class="letter-track">
+                      <span>I</span>
+                      <span>I</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 4">
+                    <div class="letter-track">
+                      <span>m</span>
+                      <span>m</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 5">
+                    <div class="letter-track">
+                      <span>p</span>
+                      <span>p</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 6">
+                    <div class="letter-track">
+                      <span>l</span>
+                      <span>l</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 7">
+                    <div class="letter-track">
+                      <span>a</span>
+                      <span>a</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 8">
+                    <div class="letter-track">
+                      <span>n</span>
+                      <span>n</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 9">
+                    <div class="letter-track">
+                      <span>t</span>
+                      <span>t</span>
+                    </div>
+                  </div>
+                </b>
+              </div>
+
+              <button class="btn btn-implant-button">
+                <a href="/ad-implant/"
+                  >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
+                ></a>
+              </button>
+            </div>
+            <div class="col-lg-7 col-md-7 p-0 home-implant-content2">
+              <img
+                src="{% static '/banner-2/implant-banner-img4.webp' %}"
+                class="img-fluid home-implant-banner-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="new-banner-wrapper position-relative">
+          <img
+            src="{% static '/banner-2/new-banner3-bg24.webp'%}"
+            class="new-banner3-bg img-fluid d-none d-lg-block"
+          />
+          <img
+            src="{% static '/banner-2/new-banner3-bg8.webp'%}"
+            class="new-banner3-bg img-fluid d-sm-none d-md-block d-lg-none d-none"
+          />
+          <img
+            src="{% static '/banner-2/new-banner3-mobileSize5.webp' %}"
+            class="new-banner3-bg d-block d-md-none img-fluid"
+          />
+        </div>
+        <div class="container new-banner-productWrapper">
+          <img
+            src="{% static '/banner-2/new-banner3-productImg4.webp' %}"
+            class="new-banner3-productImg1 img-fluid"
+          />
+          <img
+            src="{% static '/banner-2/new-banner3-productImg2.webp' %}"
+            class="new-banner3-productImg2 img-fluid"
+          />
+          <img
+            src="{% static '/banner-2/new-banner3-productImg3.webp' %}"
+            class="new-banner3-productImg3 img-fluid"
+          />
+          <img
+            src="{% static '/banner-2/new-banner3-productImg10.webp' %}"
+            class="new-banner3-productImg4 img-fluid"
+          />
+          <img
+            src="{% static '/banner-2/new-banner3-productImg15.webp' %}"
+            class="new-banner3-productImg5 img-fluid"
+          />
+          <div class="new-banner3-text">
+            <span>FREE ACE SCAN For You</span>
+            <p>Future-Ready Dentistry</p>
+            <button class="btn new-banner3-cta">
+              <a href="/contact-us/"
+                >Contact Now<i class="fa-solid fa-arrow-right ms-1"></i
               ></a>
             </button>
           </div>
+          <div class="new-banner3-tnc">*T&C apply</div>
         </div>
-
-        <div class="swiper-slide home-implant-slider-wrapper position-relative">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- About us -->
+<section id="about-6" class="pb-0 about-section division">
+  <div class="container">
+    <div class="row d-flex align-items-center mt-md-4 mt-lg-4 mt-lg-0 mx-0">
+      <div class="col-lg-7 d-flex">
+        <div class="txt-block pc-30 wow fadeInUp">
+          <p class="blue-color wlc-title mb-1">
+            Welcome to Advance Dental Export
+          </p>
+          <h1 class="steelblue-color mb-3 mb-sm-4 wlc-subtitle">
+            The Art Of Aesthetic Dental Laboratory
+          </h1>
+          <p class="wlc-text">
+            With over 20 years of expertise in the dental industry, Advance
+            Dental Export is trusted by dental professionals, clinics, and
+            distributors across the globe for delivering certified,
+            custom-engineered solutions that combine cutting-edge technology
+            with expert craftsmanship.
+          </p>
+          <p class="wlc-text">
+            “As the founder and driving force behind Advance Dental Export, I
+            take immense pride in our journey—from a small dental lab to a
+            trusted provider of dental prosthetics, serving professionals
+            throughout the field of restorative dentistry.” <br />
+            <span class="fw-semibold">Haresh Savani, Founder</span>
+          </p>
+          <p class="wlc-text">
+            We are honored that the dental community sees us as a benchmark for
+            international excellence—and we remain committed to exceeding those
+            expectations every single day.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-4 d-flex">
+        <div class="about-img text-center wow fadeInUp">
           <img
-            rel="preload"
-            src="{% static '/banner-2/Implant-banner-bg9.webp' %}"
-            class="img-fluid home-implant-banner-bg"
+            class="img-fluid"
+            src="{% static 'about-ade.webp' %}"
+            alt="Haresh Savani, Founder"
+            title="Haresh Savani, Founder"
+            width="100%"
+            height="100%"
+            loading="eager"
           />
-          <a href="/ad-implant/">
-            <img
-              rel="preload"
-              src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
-              class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
-            />
-          </a>
-          <div
-            class="container home-implant-banner-img-wrapper position-absolute"
-          >
-            <div class="row align-items-center justify-content-end">
-              <div class="col-lg-5 col-md-5 col-xl-4">
-                <div class="home-implant-text">
-                  <span class="home-implant-text1">Plant Your Implant with</span>
-                  <b class="home-implant-rolling-text">
-                    <div class="letter" style="--i: 0">
-                      <div class="letter-track">
-                        <span>A</span>
-                        <span>A</span>
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 1">
-                      <div class="letter-track">
-                        <span>D</span>
-                        <span>D</span>
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 2">
-                      <div class="letter-dash">
-                        <span>-</span>
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 3">
-                      <div class="letter-track">
-                        <span>I</span>
-                        <span>I</span>
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 4">
-                      <div class="letter-track">
-                        <span>m</span>
-                        <span>m</span>
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 5">
-                      <div class="letter-track">
-                        <span>p</span>
-                        <span>p</span>
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 6">
-                      <div class="letter-track">
-                        <span>l</span>
-                        <span>l</span>  
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 7">
-                      <div class="letter-track">
-                        <span>a</span>
-                        <span>a</span>  
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 8">
-                      <div class="letter-track">
-                        <span>n</span>
-                        <span>n</span>  
-                      </div>
-                    </div>
-                    <div class="letter" style="--i: 9">
-                      <div class="letter-track">
-                        <span>t</span>
-                        <span>t</span>
-                      </div>
-                    </div>
-                  </b>
-                </div>
-
-                <button class="btn btn-implant-button">
-                  <a href="/ad-implant/">Discover More <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                </button>
-              </div>
-              <div class="col-lg-7 col-md-7 p-0 home-implant-content2">
-                <img
-                  src="{% static '/banner-2/implant-banner-img4.webp' %}"
-                  class="img-fluid home-implant-banner-img"
-                />
-              </div>
-            </div>
-          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="swiper-slide">
-          <div class="new-banner-wrapper position-relative">
-            <img
-              src="{% static '/banner-2/new-banner3-bg24.webp'%}"
-              class="new-banner3-bg img-fluid d-none d-lg-block"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-bg8.webp'%}"
-              class="new-banner3-bg img-fluid d-sm-none d-md-block d-lg-none d-none"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-mobileSize5.webp' %}"
-              class="new-banner3-bg d-block d-md-none img-fluid"
-            />
+  <!--Static Counter -->
+  <div class="container text-center my-4">
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'cases.svg' %}" alt="cases" />
           </div>
-          <div class="container new-banner-productWrapper">
-            <img
-              src="{% static '/banner-2/new-banner3-productImg4.webp' %}"
-              class="new-banner3-productImg1 img-fluid"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg2.webp' %}"
-              class="new-banner3-productImg2 img-fluid"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg3.webp' %}"
-              class="new-banner3-productImg3 img-fluid"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg10.webp' %}"
-              class="new-banner3-productImg4 img-fluid"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg15.webp' %}"
-              class="new-banner3-productImg5 img-fluid"
-            />
-            <div class="new-banner3-text">
-              <span>FREE ACE SCAN For You</span>
-              <p>Future-Ready Dentistry</p>
-              <button class=" btn new-banner3-cta">
-                <a href="/contact-us/">Contact Now<i class="fa-solid fa-arrow-right ms-1"></i></a>
-              </button>
+          <div class="text-box">
+            <div class="text-center">
+              <span class="count-element">6</span>L+
             </div>
-            <div class="new-banner3-tnc">*T&C apply</div>
+            <p>Cases</p>
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'doctor.svg' %}" alt="doctor" />
+          </div>
+          <div class="text-box">
+            <div class="text-center">
+              <span class="count-element">400</span>+
+            </div>
+            <p>Qualified Professional</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'dentist.svg' %}" alt="cases" />
+          </div>
+          <div class="text-box">
+            <div class="text-center">
+              <span class="count-element">3500</span>+
+            </div>
+            <p>Trusted Dentists</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box d-flex align-items-center justify-content-center">
+          <div class="icon-box">
+            <img src="{% static 'location-new.svg' %}" alt="cases" />
+          </div>
+          <div class="text-box">
+            <div class="text-center">
+              <span class="count-element">500</span>+
+            </div>
+            <p>Local Partners</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-  <!-- About us -->
-  <section id="about-6" class="pb-0 about-section division">
-    <div class="container">
-      <div class="row d-flex align-items-center mt-md-4  mt-lg-4 mt-lg-0 mx-0">
-        <div class="col-lg-7 d-flex">
-          <div class="txt-block pc-30 wow fadeInUp">
-            <p class="blue-color wlc-title  mb-1">Welcome to Advance Dental Export</p>
-            <h1 class="steelblue-color mb-3 mb-sm-4 wlc-subtitle">The Art Of Aesthetic Dental Laboratory</h1>
-            <p class="wlc-text">With over 20 years of expertise in the dental industry, Advance Dental Export is trusted by dental professionals, clinics, and distributors across the globe for delivering certified, custom-engineered solutions that combine cutting-edge technology with expert craftsmanship.</p>
-            <p class="wlc-text">
-              “As the founder and driving force behind Advance Dental Export, I take immense pride in our journey—from a small dental lab to a trusted provider of dental prosthetics, serving professionals throughout the field of restorative dentistry.” <br/> <span class="fw-semibold">Haresh Savani, Founder</span>
+  </div>
+</section>
+<!-- Static cards hero -->
+<section>
+  <div class="container mt-5 mb-4">
+    <div class="col-lg-12 mx-auto section-title">
+      <h2 class="h2-m steelblue-color home-section-title">
+        Why We Are the Best Dental Lab Across the Globe?
+      </h2>
+      <p class="h5-lg mb-0">
+        Crafting smiles worldwide, we’ve earned our place among the leading
+        dental labs by delivering excellence in every dental restoration.
+      </p>
+    </div>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="firstCard globalCard">
+          <img
+            src="{% static 'quality_bg.svg' %}"
+            alt="Quality Check"
+            class="cd_bg_icon_1"
+          />
+          <div>
+            <img
+              src="{% static 'quality.svg' %}"
+              alt="Quality Check"
+              class="cd_icon"
+            />
+            <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
+            <h3 class="cd_heading">Highest Quality Dental Prosthesis</h3>
+            <p class="cd_text">
+              We never cut corners when it comes to quality. With decades of
+              experience in dentistry, we combine craftsmanship with advanced
+              technology to ensure our product meets the highest standards.
             </p>
-            <p class="wlc-text">We are honored that the dental community sees us as a benchmark for international excellence—and we remain committed to exceeding those expectations every single day.</p>
           </div>
         </div>
-        <div class="col-lg-5 col-xl-4 d-flex">
-          <div class="about-img text-center wow fadeInUp">
-            <img class="img-fluid" src="{% static 'about-ade.webp' %}" alt="Haresh Savani, Founder" title="Haresh Savani, Founder" width="100%" height="100%" loading="eager" />
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="middle_card globalCard">
+          <img
+            src="{% static 'worldwide_bg.svg' %}"
+            alt="Quality Check"
+            class="cd_bg_icon_1"
+          />
+          <div>
+            <img
+              src="{% static 'worldwide.svg' %}"
+              alt="Quality Check"
+              class="cd_icon"
+            />
+            <p class="cd_subheading">WORLD WIDE PRESENCE</p>
+            <h3 class="cd_heading">
+              Global Trust in Dental <br />
+              Supply
+            </h3>
+            <p class="cd_text">
+              With a strong global footprint, we supply a wide range of
+              high-quality dental prosthetics to clients overseas, proudly
+              supporting dental professionals, clinics, and distributors around
+              the world.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="thirdCard globalCard">
+          <img
+            src="{% static 'fda_bg.svg' %}"
+            alt="Quality Check"
+            class="cd_bg_icon_1"
+          />
+          <div>
+            <img
+              src="{% static 'FDA.svg' %}"
+              alt="Quality Check"
+              class="cd_icon"
+            />
+            <p class="cd_subheading">FDA REGISTERED</p>
+            <h3 class="cd_heading">
+              FDA Certified Quality <br />
+              Assurance
+            </h3>
+            <p class="cd_text">
+              At Advance Dental Export, we proudly hold an FDA certificate. From
+              manufacturing to final delivery, our processes are validated to
+              ensure dental professionals receive only the most reliable and
+              compliant products.
+            </p>
           </div>
         </div>
       </div>
     </div>
-     
-    <!--Static Counter -->
-    <div class="container text-center my-4">
-      <div class="row justify-content-center">
-        <div class="col-md-3 col-6">
-          <div class="stat-box d-flex align-items-center justify-content-center">
-            <div class="icon-box">
-              <img src="{% static 'cases.svg' %}" alt = "cases">
-            </div>
-            <div class="text-box">
-              <div class="text-center"><span class="count-element">6</span>L+</div>
-              <p>Cases</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stat-box d-flex align-items-center justify-content-center">
-            <div class="icon-box">
-              <img src="{% static 'doctor.svg' %}" alt = "doctor">
-            </div>
-            <div class="text-box">
-              <div class="text-center"><span class="count-element">400</span>+</div>
-              <p>Qualified Professional</p>
-            </div>
-          </div> 
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stat-box d-flex align-items-center justify-content-center">
-            <div class="icon-box">
-              <img src="{% static 'dentist.svg' %}" alt = "cases">
-            </div>
-            <div class="text-box">
-              <div class="text-center"><span class="count-element">3500</span>+</div>
-              <p>Trusted Dentists</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stat-box d-flex align-items-center justify-content-center">
-            <div class="icon-box">
-              <img src="{% static 'location-new.svg' %}" alt = "cases">
-            </div>
-            <div class="text-box">
-              <div class="text-center"><span class="count-element">500</span>+</div>
-              <p>Local Partners</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-   <!-- Static cards hero -->
-  <section>
-    <div class="container mt-5 mb-4">
+  </div>
+</section>
+<link rel="preload" as="image" href="{% static 'fn.webp' %}" />
+<!-- All Product sort information -->
+<section id="services-5" class="bg-lightgrey wide-75 services-section division">
+  <div class="container">
+    <div class="row align-items-center justify-content-center mx-auto">
       <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color home-section-title">Why We Are the Best Dental Lab Across the Globe?</h2>
-        <p class="h5-lg mb-0">Crafting smiles worldwide, we’ve earned our place among the leading dental labs by delivering excellence in every dental restoration.</p>
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          Complete Dental Solutions with Advanced Digital Dentistry
+        </h2>
+        <!-- <h3 class="h4-lg steelblue-color mb-0">Pioneering Modern Technology for Dentists</h3> -->
       </div>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="firstCard globalCard">
-            <img src="{% static 'quality_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
-            <div>
-              <img src="{% static 'quality.svg' %}" alt="Quality Check" class="cd_icon" />
-              <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
-              <h3 class="cd_heading">Highest Quality Dental Prosthesis</h3>
-              <p class="cd_text">We never cut corners when it comes to quality. With decades of experience in dentistry, we combine craftsmanship with advanced technology to ensure our product meets the highest standards.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="middle_card globalCard">
-            <img src="{% static 'worldwide_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
-            <div>
-              <img src="{% static 'worldwide.svg' %}" alt="Quality Check" class="cd_icon" />
-              <p class="cd_subheading">WORLD WIDE PRESENCE</p>
-              <h3 class="cd_heading">Global Trust in Dental <br/> Supply</h3>
-              <p class="cd_text">With a strong global footprint, we supply a wide range of high-quality dental prosthetics to clients overseas, proudly supporting dental professionals, clinics, and distributors around the world.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="thirdCard globalCard">
-            <img src="{% static 'fda_bg.svg' %}" alt="Quality Check" class="cd_bg_icon_1" />
-            <div>
-              <img src="{% static 'FDA.svg' %}" alt="Quality Check" class="cd_icon" />
-              <p class="cd_subheading">FDA REGISTERED</p>
-              <h3 class="cd_heading">FDA Certified Quality <br/> Assurance</h3>
-              <p class="cd_text">At Advance Dental Export, we proudly hold an FDA certificate. From manufacturing to final delivery, our processes are validated to ensure dental professionals receive only the most reliable and compliant products.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <link rel="preload" as="image" href="{% static 'fn.webp' %}" />
-  <!-- All Product sort information -->
-  <section id="services-5" class="bg-lightgrey wide-75 services-section division">
-    <div class="container">
-      <div class="row align-items-center justify-content-center mx-auto">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m steelblue-color mb-0 home-section-title">
-            Complete Dental Solutions with Advanced Digital Dentistry
-          </h2>
-          <!-- <h3 class="h4-lg steelblue-color mb-0">Pioneering Modern Technology for Dentists</h3> -->
-        </div>
-        <div class="col-md-12 col-sm-12 col-12 px-0">
-          <div class="swiper servicesSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      class="mb-0 mt-sm-0 mt-3"
-                      src="{% static 'fn.webp' %}"
-                      alt="Advance Dental Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}"
-                        class="title-link"
-                        >Porcelain fused to metal (PFM)</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      Porcelain fused to metal crown offers both beauty and
-                      strength. Ideal choice of dental professionals, they are
-                      made from durable porcelain fused to metal crown materials.
-                      Perfect for restoring, they combine the aesthetics of
-                      porcelain with the reliability of metal.
-                    </p>
+      <div class="col-md-12 col-sm-12 col-12 px-0">
+        <div class="swiper servicesSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    class="mb-0 mt-sm-0 mt-3"
+                    src="{% static 'fn.webp' %}"
+                    alt="Advance Dental Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
                     <a
                       href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}"
-                      class="card-link"
+                      class="title-link"
+                      >Porcelain fused to metal (PFM)</a
                     >
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+                  </h3>
+                  <p class="card-desc">
+                    Porcelain fused to metal crown offers both beauty and
+                    strength. Ideal choice of dental professionals, they are
+                    made from durable porcelain fused to metal crown materials.
+                    Perfect for restoring, they combine the aesthetics of
+                    porcelain with the reliability of metal.
+                  </p>
+                  <a
+                    href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}"
+                    class="card-link"
+                  >
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      src="{% static 'img/zirconi-advance.webp' %}"
-                      class="mb-0 mt-sm-0 mt-3"
-                      alt="Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'zirconia-crown' %}"
-                        class="title-link"
-                        >Advance Zirconia</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      Our advanced zirconia delivers unmatched strength and
-                      natural appearance. Discover the benefits of real-world
-                      zirconia with expert advice. Learn about zirconia in
-                      dentistry and why it’s a top choice for long-lasting dental
-                      solutions in modern dentistry.
-                    </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    src="{% static 'img/zirconi-advance.webp' %}"
+                    class="mb-0 mt-sm-0 mt-3"
+                    alt="Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
                     <a
                       href="{% url 'productd' 'zirconia-crown' %}"
-                      class="card-link"
+                      class="title-link"
+                      >Advance Zirconia</a
                     >
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+                  </h3>
+                  <p class="card-desc">
+                    Our advanced zirconia delivers unmatched strength and
+                    natural appearance. Discover the benefits of real-world
+                    zirconia with expert advice. Learn about zirconia in
+                    dentistry and why it’s a top choice for long-lasting dental
+                    solutions in modern dentistry.
+                  </p>
+                  <a
+                    href="{% url 'productd' 'zirconia-crown' %}"
+                    class="card-link"
+                  >
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      src="{% static 'img/IPS.webp' %}"
-                      class="mb-0 mt-sm-0 mt-3"
-                      alt="Advance Dental Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'aesthetic-maxima' %}"
-                        class="title-link"
-                        >IPS E Max</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      Enhance your smile with IPS e max, an all-ceramic
-                      restoration for teeth. It offers superb translucency and
-                      natural aesthetics. Learn about the benefits of e max in
-                      dental restoration and compare with other clear and durable
-                      options like zirconia.
-                    </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    src="{% static 'img/IPS.webp' %}"
+                    class="mb-0 mt-sm-0 mt-3"
+                    alt="Advance Dental Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
                     <a
                       href="{% url 'productd' 'aesthetic-maxima' %}"
-                      class="card-link"
+                      class="title-link"
+                      >IPS E Max</a
                     >
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+                  </h3>
+                  <p class="card-desc">
+                    Enhance your smile with IPS e max, an all-ceramic
+                    restoration for teeth. It offers superb translucency and
+                    natural aesthetics. Learn about the benefits of e max in
+                    dental restoration and compare with other clear and durable
+                    options like zirconia.
+                  </p>
+                  <a
+                    href="{% url 'productd' 'aesthetic-maxima' %}"
+                    class="card-link"
+                  >
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      src="{% static 'img/Implant.webp' %}"
-                      class="mb-0 mt-sm-0 mt-3"
-                      alt="Advance Dental Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'ad-implant' %}"
-                        class="title-link"
-                        >Advanced Dental Implant Solutions</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      Our advanced dental implant solutions include dental implant
-                      with abutment for a complete and permanent tooth
-                      replacement. We provide reliable and affordable implants
-                      that restore both function and confidence in your smile.
-                    </p>
-                    <a href="{% url 'productd' 'ad-implant' %}" class="card-link">
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    src="{% static 'img/Implant.webp' %}"
+                    class="mb-0 mt-sm-0 mt-3"
+                    alt="Advance Dental Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
+                    <a
+                      href="{% url 'productd' 'ad-implant' %}"
+                      class="title-link"
+                      >Advanced Dental Implant Solutions</a
+                    >
+                  </h3>
+                  <p class="card-desc">
+                    Our advanced dental implant solutions include dental implant
+                    with abutment for a complete and permanent tooth
+                    replacement. We provide reliable and affordable implants
+                    that restore both function and confidence in your smile.
+                  </p>
+                  <a href="{% url 'productd' 'ad-implant' %}" class="card-link">
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      src="{% static 'img/17.webp' %}"
-                      class="mb-0 mt-sm-0 mt-3"
-                      alt="Advance Dental Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'digital-crown-bridge' %}"
-                        class="title-link"
-                        >Digital Bridges & Crown</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      Using advanced scanning and design tech, our digital crown
-                      and bridges ensure a perfect fit and comfort. Whether it's
-                      dental bridge teeth or a single dental crown zirconia, enjoy
-                      high-precision restorations that look and feel natural, with
-                      minimal chair time.
-                    </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    src="{% static 'img/17.webp' %}"
+                    class="mb-0 mt-sm-0 mt-3"
+                    alt="Advance Dental Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
                     <a
                       href="{% url 'productd' 'digital-crown-bridge' %}"
-                      class="card-link"
+                      class="title-link"
+                      >Digital Bridges & Crown</a
                     >
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+                  </h3>
+                  <p class="card-desc">
+                    Using advanced scanning and design tech, our digital crown
+                    and bridges ensure a perfect fit and comfort. Whether it's
+                    dental bridge teeth or a single dental crown zirconia, enjoy
+                    high-precision restorations that look and feel natural, with
+                    minimal chair time.
+                  </p>
+                  <a
+                    href="{% url 'productd' 'digital-crown-bridge' %}"
+                    class="card-link"
+                  >
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      src="{% static 'img/BPS.webp' %}"
-                      class="mb-0 mt-sm-0 mt-3"
-                      alt="Advance Dental Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'bps-biofunctional-prosthetic-system' %}"
-                        class="title-link"
-                        >BPS Dentures</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      Our biofunctional prosthetic system provides customized
-                      prosthetic dental and prosthetic teeth designed for comfort
-                      and function. Ideal for patients needing dentures, these
-                      systems offer natural movement and appearance, ensuring
-                      better speech, chewing, and smiling with confidence.
-                    </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    src="{% static 'img/BPS.webp' %}"
+                    class="mb-0 mt-sm-0 mt-3"
+                    alt="Advance Dental Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
                     <a
                       href="{% url 'productd' 'bps-biofunctional-prosthetic-system' %}"
-                      class="card-link"
+                      class="title-link"
+                      >BPS Dentures</a
                     >
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+                  </h3>
+                  <p class="card-desc">
+                    Our biofunctional prosthetic system provides customized
+                    prosthetic dental and prosthetic teeth designed for comfort
+                    and function. Ideal for patients needing dentures, these
+                    systems offer natural movement and appearance, ensuring
+                    better speech, chewing, and smiling with confidence.
+                  </p>
+                  <a
+                    href="{% url 'productd' 'bps-biofunctional-prosthetic-system' %}"
+                    class="card-link"
+                  >
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="sbox-51 mx-auto">
-                  <div class="sbox-51-img">
-                    <img
-                      src="{% static 'img/nolbel-procera.webp' %}"
-                      class="mb-0 mt-sm-0 mt-3"
-                      alt="Advance Dental Image"
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      loading="eager"
-                    />
-                  </div>
-                  <div class="sbox-51-txt">
-                    <h3 class="card-title">
-                      <a
-                        href="{% url 'productd' 'nobelprocera' %}"
-                        class="title-link"
-                        >NobelProcera Solution</a
-                      >
-                    </h3>
-                    <p class="card-desc">
-                      NobelProcera restorations are ideal for highly aesthetic and
-                      strong dental prosthetic restorations. Using CAD/CAM
-                      precision, they support everything from dental implants with
-                      abutments to bridges, providing premium quality in both
-                      materials and finish.
-                    </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="sbox-51 mx-auto">
+                <div class="sbox-51-img">
+                  <img
+                    src="{% static 'img/nolbel-procera.webp' %}"
+                    class="mb-0 mt-sm-0 mt-3"
+                    alt="Advance Dental Image"
+                    srcset=""
+                    width="100%"
+                    height="100%"
+                    loading="eager"
+                  />
+                </div>
+                <div class="sbox-51-txt">
+                  <h3 class="card-title">
                     <a
                       href="{% url 'productd' 'nobelprocera' %}"
-                      class="card-link"
+                      class="title-link"
+                      >NobelProcera Solution</a
                     >
-                      Learn more
-                      <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                    </a>
-                  </div>
+                  </h3>
+                  <p class="card-desc">
+                    NobelProcera restorations are ideal for highly aesthetic and
+                    strong dental prosthetic restorations. Using CAD/CAM
+                    precision, they support everything from dental implants with
+                    abutments to bridges, providing premium quality in both
+                    materials and finish.
+                  </p>
+                  <a
+                    href="{% url 'productd' 'nobelprocera' %}"
+                    class="card-link"
+                  >
+                    Learn more
+                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- About team -->
-  <section id="banner-7" class="bg-fixed banner-section division">
-    <div class="container white-color px-0">
-      <div class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto">
-        <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
-          <div class="banner-txt wow fadeInUp" style="
-            visibility: visible;
-            animation-name: fadeInUp;
-          ">
-            <h2 class="h2-xs text-center text-sm-start text-lg-start home-section-title" style="font-size: 2.1rem">
-              Where Quality <br />
-              Meets Excellence
-            </h2>
-            <p>
-              One common dream fuels us:<br />
-              Elevating Digital Dentistry to unparalleled <br />
-              heights worldwide
-            </p>
-            <a href="{% url 'home:contact_new' %}" class="btn btn-blue tra-white-hover mt-20">Get In Touch</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials-video -->
-  <section id="gallery-1" class="gallery-section division pt-50">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m steelblue-color mb-0 home-section-title">
-            In Their Own Words: Tales of Trust from Our Clientele
-          </h2>
-        </div>
-        <div class="swiper gallerySwiper">
-          <div class="swiper-wrapper">
-            {% for ie in video %}
-            <div
-              class="swiper-slide sbox-52 index-video1"
-              data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
-            >
-              <div class="video-container">
-                <img
-                  src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
-                  alt="Video Thumbnail"
-                  class="video-thumbnail1"
-                  width="100%"
-                  height="100%"
-                />
-                <button class="play-button">▶</button>
-              </div>
-            </div>
-            {% endfor %}
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Introduction for the lab -->
-  <section id="services-7" class="bg-lightgrey wide-601 servicess-section division">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m steelblue-color mb-0 home-section-title">Building The Future Of Digital Dentistry</h2>
-        </div>
-        <div class="col-lg-12">
-          <div class="row mx-sm-0">
-            <div class="col-md-6 col-lg-4 future-card">
-              <div class="sbox-7 icon-xs wow fadeInUp"  style="visibility: visible">
-                <div class="hexagon">
-                  <span class="flaticon-137-doctor blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h3 class="h3-m steelblue-color">Skilled Dental Specialists</h3>
-                  <p class="p-sm" style="font-size: 12px">We take pride in delivering exceptional results through the hands of our expert dental technicians. With deep expertise, advanced techniques, and an eye for precision, our team ensures every restoration meets the highest standards.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 future-card">
-              <div class="sbox-7 icon-xs wow fadeInUp"  style="visibility: visible">
-                <div class="hexagon">
-                  <span class="flaticon-076-microscope blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h3 class="h3-m steelblue-color">Digital Dentistry Equipment</h3>
-                  <p class="p-sm" style="font-size: 12px">At Advance Dental Export, we embrace cutting-edge digital dentistry to craft precise, high-quality dental prosthetics. Using the latest equipment and manufacturing technology, we ensure accuracy, consistency, and excellence in every product.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 future-card">
-              <div class="sbox-7 icon-xs wow fadeInUp" style="visibility: visible">
-                <div class="hexagon">
-                  <span class="flaticon-080-shield blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h3 class="h3-m steelblue-color">Advanced Laboratory Setup</h3>
-                  <p class="p-sm" style="font-size: 12px">Our state-of-the-art facilities and dedicated team work in harmony to ensure every dental prosthesis meets the highest industry standards. From materials to final finish, excellence is built into every step because your patients deserve nothing less.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 future-card">
-              <div class="sbox-7 icon-xs wow fadeInUp" style="visibility: visible">
-                <div class="hexagon">
-                  <span class="flaticon-113-clinic-history-4 blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h3 class="h3-m steelblue-color">Professional Dental Services</h3>
-                  <p class="p-sm" style="font-size: 12px">We specialize in professional dental solutions, with a focus on crown and bridge preparations tailored to individual needs. Our expert team crafts customized smile designs that reflect each patient’s unique vision.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 future-card">
-              <div class="sbox-7 icon-xs wow fadeInUp" style="visibility: visible">
-                <div class="hexagon">
-                  <span class="flaticon-143-teeth blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h3 class="h3-m steelblue-color">Commitment to Accuracy</h3>
-                  <p class="p-sm" style="font-size: 12px">At Advance Dental Export, every restoration is a work of precision. Our skilled team combines expert craftsmanship with advanced technology to deliver flawless fit, optimal function, and lifelike aesthetics.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 future-card">
-              <div class="sbox-7 icon-xs wow fadeInUp" style="visibility: visible">
-                <div class="hexagon">
-                  <span class="flaticon-079-safebox blue-color"></span>
-                </div>
-                <div class="sbox-7-txt">
-                  <h3 class="h3-m steelblue-color">Client-Centric Approach</h3>
-                  <p class="p-sm" style="font-size: 12px">We believe every successful smile starts with strong collaboration. Our team works closely with dentists, maintaining open communication to craft solutions tailored to your clinical preferences.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- - SERVICE SECTION -->
-  <section id="services-6" class="bg-blue wide-40 servicess-section division">
-    <div class="container white-color">
-      <div class="row">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m home-section-title">Our Core Dental Services for Crowns, Bridges, and Implants</h2>
-          <p>Experience an Unmatched Spectrum of Services: Catering to Every Dental Professional's Needs Today!</p>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex first">
-          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-            <h3 class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center">CAD/CAM Technology</h3>
-            <p>We support 3M True Definition, Cadent iTero, and other open systems to deliver accurate, digitally designed restorations. Our team is here to assist with seamless digital case submissions.</p>
-          </div>
-          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-            <h3 class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center">Shade Analysis</h3>
-            <p>
-              We offer precise shade matching through digital photos or in-lab consultations. For best results, send images to:
-              <a href="mailto:color@advancedentalexport.com">color@advancedentalexport.com</a>
-            </p>
-          </div>
-          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-            <h3 class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center">Case Planning Assistance</h3>
-            <p>We offer one-on-one consultations to help plan cases with confidence, providing technical insights and treatment recommendations tailored to your clinical goals.</p>
-          </div>
-          <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-            <h3 class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center">Diagnostic Wax-Ups</h3>
-            <p>We offer detailed diagnostic wax-ups to support effective treatment planning and patient communication.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 d-lg-flex align-items-center s6-img">
-          <div class="sbox-6-img text-center wow fadeInUp">
-            <img class="img-fluid lazy" src="{% static 'img/teeth-img93.webp' %}" data-src="{% static 'img/teeth-img93.webp' %}" alt="services-image" width="100%" height="100%" />
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex second">
-          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-            <h3 class="h3-m">Cosmetic Dentistry</h3>
-            <p>We create aesthetic diagnostic wax-ups and silicone matrices for mock-ups and temporaries. Using advanced materials and techniques, we deliver consistent, natural-looking results every time.</p>
-          </div>
-          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-            <h3 class="h3-m">Implant Specialists</h3>
-            <p>We support implant cases with diagnostic wax-ups, stent fabrication, and implant components. Custom abutments and denture bars are designed in-house for precision and reliability.</p>
-          </div>
-          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-            <h3 class="h3-m">Custom Milling</h3>
-            <p>We provide precision milling for zirconia, implant abutments, overdenture bars, temporaries, and ceramics, crafted in-house for quality and accuracy.</p>
-          </div>
-          <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-            <h3 class="h3-m">Laser Welding</h3>
-            <p>Instead of replacing full prosthetics, we support modern restorative dentistry with quick, accurate laser welding of metal frameworks and components.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- new desgine of before & after -->
-  <section id="gallery-2" class="gallery-section division">
-    <div class="container">
-      <div class="row gallery-item-list text-center listing-gallery-img-items">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m steelblue-color mb-0 home-section-title">
-            Before & After
+  </div>
+</section>
+<!-- About team -->
+<section id="banner-7" class="bg-fixed banner-section division">
+  <div class="container white-color px-0">
+    <div
+      class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto"
+    >
+      <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
+        <div
+          class="banner-txt wow fadeInUp"
+        >
+          <h2
+            class="h2-xs text-center text-sm-start text-lg-start home-section-title"
+            style="font-size: 2.1rem"
+          >
+            Where Quality <br />
+            Meets Excellence
           </h2>
+          <p>
+            One common dream fuels us:<br />
+            Elevating Digital Dentistry to unparalleled <br />
+            heights worldwide
+          </p>
+          <a
+            href="{% url 'home:contact_new' %}"
+            class="btn btn-blue tra-white-hover mt-20"
+            >Get In Touch</a
+          >
         </div>
-        <div class="swiper beforeSwiper">
-          <div class="swiper-wrapper">
-            {% for ie in gallery21 %}
-            <div class="swiper-slide">
-              <div class="hover03 wow zoomSlider w-100 h-100">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials-video -->
+<section id="gallery-1" class="gallery-section division pt-50">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          In Their Own Words: Tales of Trust from Our Clientele
+        </h2>
+      </div>
+      <div class="swiper gallerySwiper">
+        <div class="swiper-wrapper">
+          {% for ie in video %}
+          <div
+            class="swiper-slide sbox-52 index-video1"
+            data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
+          >
+            <div class="video-container">
+              <img
+                src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
+                alt="Video Thumbnail"
+                class="video-thumbnail1"
+                width="100%"
+                height="100%"
+              />
+              <button class="play-button">▶</button>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Introduction for the lab -->
+<section
+  id="services-7"
+  class="bg-lightgrey wide-601 servicess-section division"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          Building The Future Of Digital Dentistry
+        </h2>
+      </div>
+      <div class="col-lg-12">
+        <div class="row mx-sm-0">
+          <div class="col-md-6 col-lg-4 future-card">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+              style="visibility: visible"
+            >
+              <div class="hexagon">
+                <span class="flaticon-137-doctor blue-color"></span>
+              </div>
+              <div class="sbox-7-txt">
+                <h3 class="h3-m steelblue-color">Skilled Dental Specialists</h3>
+                <p class="p-sm" style="font-size: 12px">
+                  We take pride in delivering exceptional results through the
+                  hands of our expert dental technicians. With deep expertise,
+                  advanced techniques, and an eye for precision, our team
+                  ensures every restoration meets the highest standards.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 future-card">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+            >
+              <div class="hexagon">
+                <span class="flaticon-076-microscope blue-color"></span>
+              </div>
+              <div class="sbox-7-txt">
+                <h3 class="h3-m steelblue-color">
+                  Digital Dentistry Equipment
+                </h3>
+                <p class="p-sm" style="font-size: 12px">
+                  At Advance Dental Export, we embrace cutting-edge digital
+                  dentistry to craft precise, high-quality dental prosthetics.
+                  Using the latest equipment and manufacturing technology, we
+                  ensure accuracy, consistency, and excellence in every product.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 future-card">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+            >
+              <div class="hexagon">
+                <span class="flaticon-080-shield blue-color"></span>
+              </div>
+              <div class="sbox-7-txt">
+                <h3 class="h3-m steelblue-color">Advanced Laboratory Setup</h3>
+                <p class="p-sm" style="font-size: 12px">
+                  Our state-of-the-art facilities and dedicated team work in
+                  harmony to ensure every dental prosthesis meets the highest
+                  industry standards. From materials to final finish, excellence
+                  is built into every step because your patients deserve nothing
+                  less.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 future-card">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+            >
+              <div class="hexagon">
+                <span class="flaticon-113-clinic-history-4 blue-color"></span>
+              </div>
+              <div class="sbox-7-txt">
+                <h3 class="h3-m steelblue-color">
+                  Professional Dental Services
+                </h3>
+                <p class="p-sm" style="font-size: 12px">
+                  We specialize in professional dental solutions, with a focus
+                  on crown and bridge preparations tailored to individual needs.
+                  Our expert team crafts customized smile designs that reflect
+                  each patient’s unique vision.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 future-card">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+            >
+              <div class="hexagon">
+                <span class="flaticon-143-teeth blue-color"></span>
+              </div>
+              <div class="sbox-7-txt">
+                <h3 class="h3-m steelblue-color">Commitment to Accuracy</h3>
+                <p class="p-sm" style="font-size: 12px">
+                  At Advance Dental Export, every restoration is a work of
+                  precision. Our skilled team combines expert craftsmanship with
+                  advanced technology to deliver flawless fit, optimal function,
+                  and lifelike aesthetics.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 future-card">
+            <div
+              class="sbox-7 icon-xs wow fadeInUp"
+            >
+              <div class="hexagon">
+                <span class="flaticon-079-safebox blue-color"></span>
+              </div>
+              <div class="sbox-7-txt">
+                <h3 class="h3-m steelblue-color">Client-Centric Approach</h3>
+                <p class="p-sm" style="font-size: 12px">
+                  We believe every successful smile starts with strong
+                  collaboration. Our team works closely with dentists,
+                  maintaining open communication to craft solutions tailored to
+                  your clinical preferences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- - SERVICE SECTION -->
+<section id="services-6" class="bg-blue wide-40 servicess-section division">
+  <div class="container white-color">
+    <div class="row">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m home-section-title">
+          Our Core Dental Services for Crowns, Bridges, and Implants
+        </h2>
+        <p>
+          Experience an Unmatched Spectrum of Services: Catering to Every Dental
+          Professional's Needs Today!
+        </p>
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex first">
+        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
+          <h3
+            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            CAD/CAM Technology
+          </h3>
+          <p>
+            We support 3M True Definition, Cadent iTero, and other open systems
+            to deliver accurate, digitally designed restorations. Our team is
+            here to assist with seamless digital case submissions.
+          </p>
+        </div>
+        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
+          <h3
+            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            Shade Analysis
+          </h3>
+          <p>
+            We offer precise shade matching through digital photos or in-lab
+            consultations. For best results, send images to:
+            <a href="mailto:color@advancedentalexport.com"
+              >color@advancedentalexport.com</a
+            >
+          </p>
+        </div>
+        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
+          <h3
+            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            Case Planning Assistance
+          </h3>
+          <p>
+            We offer one-on-one consultations to help plan cases with
+            confidence, providing technical insights and treatment
+            recommendations tailored to your clinical goals.
+          </p>
+        </div>
+        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
+          <h3
+            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
+          >
+            Diagnostic Wax-Ups
+          </h3>
+          <p>
+            We offer detailed diagnostic wax-ups to support effective treatment
+            planning and patient communication.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 d-lg-flex align-items-center s6-img">
+        <div class="sbox-6-img text-center wow fadeInUp">
+          <img
+            class="img-fluid"
+            src="{% static 'img/teeth-img93.webp' %}"
+            data-src="{% static 'img/teeth-img93.webp' %}"
+            alt="services-image"
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex second">
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
+          <h3 class="h3-m">Cosmetic Dentistry</h3>
+          <p>
+            We create aesthetic diagnostic wax-ups and silicone matrices for
+            mock-ups and temporaries. Using advanced materials and techniques,
+            we deliver consistent, natural-looking results every time.
+          </p>
+        </div>
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
+          <h3 class="h3-m">Implant Specialists</h3>
+          <p>
+            We support implant cases with diagnostic wax-ups, stent fabrication,
+            and implant components. Custom abutments and denture bars are
+            designed in-house for precision and reliability.
+          </p>
+        </div>
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
+          <h3 class="h3-m">Custom Milling</h3>
+          <p>
+            We provide precision milling for zirconia, implant abutments,
+            overdenture bars, temporaries, and ceramics, crafted in-house for
+            quality and accuracy.
+          </p>
+        </div>
+        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
+          <h3 class="h3-m">Laser Welding</h3>
+          <p>
+            Instead of replacing full prosthetics, we support modern restorative
+            dentistry with quick, accurate laser welding of metal frameworks and
+            components.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- new desgine of before & after -->
+<section id="gallery-2" class="gallery-section division">
+  <div class="container">
+    <div class="row gallery-item-list text-center listing-gallery-img-items">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          Before & After
+        </h2>
+      </div>
+      <div class="swiper beforeSwiper">
+        <div class="swiper-wrapper">
+          {% for ie in gallery21 %}
+          <div class="swiper-slide">
+            <div class="hover03 wow zoomSlider w-100 h-100">
+              <img
+                class="img-fluid"
+                src="{{ ie.image.url }}"
+                data-src="{{ ie.image.url }}"
+                alt="Before & After"
+              />
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="col-md-12 text-center">
+        <div class="all-posts-btn mb-50 wow fadeInUp">
+          <a
+            href="{% url 'home:beforeafter' %}"
+            class="btn btn-blue blue-hover submit"
+            aria-label="See more in the Ade after befor"
+            >See More</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- client reviews -->
+<section id="reviews-2">
+  <div class="section-title text-center">
+    <h2 class="h2-m steelblue-color mb-0 home-section-title">
+      Client Chronicles: Their Stories, Their Experiences
+    </h2>
+  </div>
+  <div class="review-section testimonials-slider">
+    <div
+      class="review-overlay"
+      style="opacity: 0.7; background-color: rgb(36, 169, 146)"
+    ></div>
+    <div class="container position-relative text-center">
+      <div class="row justify-content-center carousel-row">
+        <div
+          class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
+          data-bs-ride="carousel"
+          id="carouselExampleControls"
+        >
+          <div class="review-slider-testimonials">
+            <div class="carousel-inner">
+              {% for ie in data %}
+              <div
+                class="{% if forloop.first %}active{% endif %} carousel-item"
+                aria-label="Slide {{ forloop.counter }}"
+              >
+                <div
+                  class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
+                >
+                  <div class="user_image">
+                    <img
+                      src="{% static 'img/profile-user-3.png' %}"
+                      class="d-block w-100"
+                      alt="user"
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                  <p class="review-user-txt">
+                    <i class="fa-solid fa-quote-left"></i>
+                    {{ ie.review }}
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
+                  <p class="review-user-name mb-0">{{ ie.name }}</p>
+                  <span class="review-user-desk" style="float: right"
+                    >{{ ie.position }}</span
+                  >
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="carousel-controls">
+              <button
+                class="carousel-control-prev review-prev-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next review-next-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery-1" class="gallery-section division pt-50">
+  <div class="container">
+    <div class="row gallery-items-list text-center">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          Gallery - Advance Dental Export
+        </h2>
+      </div>
+      <div class="swiper beforeSwiper">
+        <div class="swiper-wrapper">
+          {% for ie in gallery %}
+          <div class="swiper-slide">
+            <div class="hover03 wow zoomSlider">
+              <!-- Doctor Photo -->
+              <div class="image-item">
                 <img
                   class="img-fluid"
                   src="{{ ie.image.url }}"
-                  data-src="{{ ie.image.url }}"
-                  alt="Before & After"
+                  alt="doctor-foto"
+                  width="100%"
+                  height="100%"
                 />
               </div>
             </div>
-            {% endfor %}
           </div>
-          <div class="swiper-pagination"></div>
+          {% endfor %}
         </div>
-        <div class="col-md-12 text-center">
-          <div class="all-posts-btn mb-50 wow fadeInUp">
-            <a
-              href="{% url 'home:beforeafter' %}"
-              class="btn btn-blue blue-hover submit"
-              aria-label="See more in the Ade after befor"
-              >See More</a
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="col-md-12 text-center">
+        <div class="all-posts-btn mb-40 wow fadeInUp">
+          <a
+            href="{% url 'home:gallery' %}"
+            class="btn btn-blue blue-hover submit"
+            aria-label="See more in the Ade Gallery"
+            >See More in the Gallery</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact us -->
+{% include 'contact_section.html' %}
+
+<!-- Blogs section -->
+<section class="news1-wrapper">
+  <div class="news-blog-wrapper mt-5 mb-3 container">
+    <div class="section-title">
+      <h2 class="h2-m steelblue-color mb-0 home-section-title">
+        Our Stories, Tips & Latest News
+      </h2>
+    </div>
+    <div class="row mx-0 mt-0 g-4 justify-content-center">
+      {% for blog in data2 %}
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 col-11 mt-0 mt-sm-4 mt-lg-0 mt-md-4"
+      >
+        <div class="news-blog-card card">
+          <img
+            src="{{ blog.image.url }}"
+            class="news-img img-fluid"
+            alt="news-blog-1"
+            width="100%"
+            height="100%"
+          />
+          <div class="card-body">
+            <div
+              class="d-flex align-items-center position-relative justify-content-between"
+            >
+              <p style="font-size: 16px; color: #24a992" class="mb-0">
+                <i class="fa-solid fa-calendar-days me-1"></i>
+                {{ blog.published }}
+              </p>
+              <div class="news-blogs-admin-title">
+                <i class="fas fa-user-alt me-2"></i>
+                <span>{{ blog.author }}</span>
+              </div>
+            </div>
+            <a href="{% url 'home:blogd' blog.slug %}"
+              ><h3 class="h3-m blogs-title fw-bold">{{ blog.title }}</h3></a
             >
           </div>
+          <div class="card-footer border-0 d-flex">
+            <a href="{% url 'home:blogd' blog.slug %}">Read More</a
+            ><i class="fa-solid fa-arrow-right ms-2"></i>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="col-md-12 text-center">
+        <div class="all-posts-btn mb-30 mt-20 wow fadeInUp">
+          <a href="{% url 'blog:blog' %}" class="btn btn-blue blue-hover submit"
+            >Read More Posts</a
+          >
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- client reviews -->
-  <section id="reviews-2">
-    <div class="section-title text-center">
-      <h2 class="h2-m steelblue-color mb-0 home-section-title">Client Chronicles: Their Stories, Their Experiences</h2>
-    </div>
-    <div class="review-section testimonials-slider">
-      <div class="review-overlay" style="opacity: 0.7; background-color: rgb(36, 169, 146)"></div>
-      <div class="container position-relative text-center">
-        <div class="row justify-content-center carousel-row">
-          <div class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide" data-bs-ride="carousel" id="carouselExampleControls">
-            <div class="review-slider-testimonials">
-              <div class="carousel-inner">
-                {% for ie in data %}
-                  <div class="{% if forloop.first %}active{% endif %} carousel-item" aria-label="Slide {{ forloop.counter }}">
-                    <div class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12">
-                      <div class="user_image">
-                        <img src="{% static 'img/profile-user-3.png' %}" class="d-block w-100" alt="user" width="100%" height="100%" />
-                      </div>
-                      <p class="review-user-txt">
-                        <i class="fa-solid fa-quote-left"></i>
-                        {{ ie.review }}
-                        <i class="fa-solid fa-quote-right"></i>
-                      </p>
-                      <p class="review-user-name mb-0">{{ ie.name }}</p>
-                      <span class="review-user-desk" style="float: right">{{ ie.position }}</span>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-              <div class="carousel-controls">
-                <button class="carousel-control-prev review-prev-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
-                <button class="carousel-control-next review-next-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- company parter logo -->
+<section class="client-logo-section mb-0">
+  <div class="swiper clientLogo">
+    <div class="swiper-wrapper">
+      {% for ie in client %}
+      <div class="swiper-slide position-relative">
+        <img
+          src="{{ ie.image.url }}"
+          class="company-partner-image img-fluid"
+          alt="Client Of ADE"
+          width="100%"
+          height="100%"
+        />
       </div>
+      {% endfor %}
     </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery-1" class="gallery-section division pt-50">
-    <div class="container">
-      <div class="row gallery-items-list text-center">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m steelblue-color mb-0 home-section-title">
-            Gallery - Advance Dental Export
-          </h2>
-        </div>
-        <div class="swiper beforeSwiper">
-          <div class="swiper-wrapper">
-            {% for ie in gallery %}
-            <div class="swiper-slide">
-              <div class="hover03 wow zoomSlider">
-                <!-- Doctor Photo -->
-                <div class="image-item">
-                  <img
-                    class="img-fluid lazy"
-                    src="{{ ie.image.url }}"
-                    alt="doctor-foto"
-                    width="100%"
-                    height="100%"
-                  />
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <div class="col-md-12 text-center">
-          <div class="all-posts-btn mb-40 wow fadeInUp">
-            <a
-              href="{% url 'home:gallery' %}"
-              class="btn btn-blue blue-hover submit"
-              aria-label="See more in the Ade Gallery"
-              >See More in the Gallery</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Contact us -->
-  {% include 'contact_section.html' %}
-
-  <!-- Blogs section -->
-  <section class="news1-wrapper">
-    <div class="news-blog-wrapper mt-5 mb-3 container">
-      <div class="section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">Our Stories, Tips & Latest News</h2>
-      </div>
-      <div class="row mx-0 mt-0 g-4 justify-content-center">
-        {% for blog in data2 %}
-          <div class="col-lg-4 col-md-6 col-sm-12 col-11 mt-0 mt-sm-4 mt-lg-0 mt-md-4">
-            <div class="news-blog-card card">
-              <img src="{{ blog.image.url }}" class="news-img img-fluid lazy" alt="news-blog-1" width="100%" height="100%" />
-              <div class="card-body">
-                <div class="d-flex align-items-center position-relative justify-content-between">
-                  <p style="font-size: 16px; color: #24a992" class="mb-0">
-                    <i class="fa-solid fa-calendar-days me-1"></i>
-                    {{ blog.published }}
-                  </p>
-                  <div class="news-blogs-admin-title">
-                    <i class="fas fa-user-alt me-2"></i>
-                    <span>{{ blog.author }}</span>
-                  </div>
-                </div>
-                <a href="{% url 'home:blogd' blog.slug %}"><h3 class="h3-m blogs-title fw-bold">{{ blog.title }}</h3></a>
-              </div>
-              <div class="card-footer border-0 d-flex">
-                <a href="{% url 'home:blogd' blog.slug %}">Read More</a><i class="fa-solid fa-arrow-right ms-2"></i>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-        <div class="col-md-12 text-center">
-          <div class="all-posts-btn mb-30 mt-20 wow fadeInUp">
-            <a href="{% url 'blog:blog' %}" class="btn btn-blue blue-hover submit">Read More Posts</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- company parter logo -->
-  <section class="client-logo-section mb-0">
-    <div class="swiper clientLogo">
-      <div class="swiper-wrapper">
-        {% for ie in client %}
-          <div class="swiper-slide position-relative">
-            <img src="{{ ie.image.url }}" class="company-partner-image img-fluid" alt="Client Of ADE" width="100%" height="100%" />
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 {% endblock %}
 <!-- jQuery (required by Owl Carousel) -->
-{% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{% comment %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> {% endcomment %}
-{% block javascript %}
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-  {% comment %} $(document).ready(function () {
-    var owl = $(".services-holder");
-    var owl1 = $(".gallery-holder");
-    if (owl.length) {
-      owl.owlCarousel({
-        items: 2,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        navBy: 1,
-        responsive: {
-          0: { items: 1 },
-          767: { items: 1 },
-          768: { items: 2 },
-          991: { items: 2 },
-          1200: { items: 3 },
-        },
-      });
-    }
-    if (owl1.length) {
-      owl1.owlCarousel({
-        items: 2,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        navBy: 1,
-        responsive: {
-          0: { items: 1 },
-          767: { items: 1 },
-          768: { items: 2 },
-          991: { items: 3 },
-          1200: { items: 3 },
-        },
-      });
-    }
-  }); {% endcomment %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+{% endcomment %} {% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
   var swiper1 = new Swiper(".clientLogo", {
     slidesPerView: 7,
     spaceBetween: 20,
@@ -1110,7 +1389,7 @@
       disableOnInteraction: false,
     },
     breakpoints: {
-      380:{
+      380: {
         slidesPerView: 4,
       },
       576: {
@@ -1141,9 +1420,9 @@
     parallax: !0,
     loop: true,
     autoplay: {
-			delay: 10000,
-			disableOnInteraction: false,
-		},
+      delay: 10000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
@@ -1159,9 +1438,9 @@
     spaceBetween: 20,
     loop: true,
     autoplay: {
-      delay: 2000, 
+      delay: 2000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -1184,7 +1463,6 @@
       },
       991: {
         slidesPerView: 2,
-        
       },
       1200: {
         slidesPerView: 3,
@@ -1195,7 +1473,7 @@
     speed: 1500,
     slidesPerView: 2,
     loop: true,
-    autoplay:false,
+    autoplay: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -1227,9 +1505,9 @@
     slidesPerView: 3,
     loop: true,
     autoplay: {
-      delay: 2000, 
+      delay: 2000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -1258,9 +1536,11 @@
     },
   });
 </script>
-  {% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script>
-  <script src="{% static 'js/modernizr.custom.js' %}"></script> {% endcomment %}
-  <script>
+{% comment %}
+<script src="{% static 'js/galleryanimation.js' %}"></script>
+<script src="{% static 'js/modernizr.custom.js' %}"></script>
+{% endcomment %}
+<script>
   const videoWrappers = document.querySelectorAll(".index-video1");
   videoWrappers.forEach((wrapper) => {
     wrapper.onclick = () => {
@@ -1281,8 +1561,8 @@
     };
   });
 </script>
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script>
   document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("player");
 
@@ -1290,7 +1570,7 @@
     video.muted = true;
 
     // Try to play the video immediately
-    video.play().catch(error => {
+    video.play().catch((error) => {
       console.log("Autoplay blocked:", error);
     });
 
@@ -1298,7 +1578,7 @@
     document.addEventListener("click", () => {
       video.play();
     });
-});
+  });
 </script>
 <script type="application/ld+json">
   {

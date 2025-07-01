@@ -22,8 +22,9 @@
   <link rel="canonical" href="https://advancedentalexport.com/about-us/" />
   <link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/about-us/" />
   <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/about-us/" />
+  <link rel="preload" as="image" href="{% static 'aboutnew.webp' %}" media="(max-width: 768px)">
 {% endblock %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+{% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> {% endcomment %}
 {% block css %}
   <style>
     .ytbe {
@@ -67,15 +68,21 @@
 
   <!--  INFO-4
 			=============================================  -->
-  <section id="info-4" class="wide-75 info-section division">
+  <section id="info-4" class="wide-75 info-section division pb-2">
     <div class="container">
       <!-- TOP ROW -->
       <div class="top-row mb-50">
         <div class="row d-flex">
           <!-- INFO IMAGE -->
           <div class="col-lg-4">
-            <div class="info-4-img text-center wow fadeInUp" data-wow-delay="0.6s">
-              <img class="img-fluid" src="{% static 'aboutnew.png' %}" width="356" height="485" alt="info-image" />
+            <div class="info-4-img text-center" >
+              <img class="img-fluid" 
+                src="{% static 'aboutnew.webp' %}"  
+                srcset="{% static 'aboutnew-mobile.webp' %} 480w, {% static 'aboutnew.webp' %} 768w"
+                sizes="(max-width: 480px) 100vw, 356px" 
+                width="356" 
+                height="485" 
+                alt="info-image" />
             </div>
             <!-- Singnature -->
             <div class="singnature mt-20 text-center">
@@ -89,7 +96,6 @@
               <img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="50" alt="signature-image" />
             </div>
           </div>
-
           <!-- INFO TEXT -->
           <div class="col-lg-8 about-info">
             <div class="txt-block wow fadeInUp" data-wow-delay="0.4s">
@@ -135,37 +141,37 @@
             </div>
           </div> 
           <!-- END TEXT BLOCK -->
-		  <div class="col-lg-12">
-        <div class="text-center w-75 mx-auto">
-          <h2 class="mb-3 mt-3 h4-md steelblue-color">Why Dentists Trust ADE ?</h2>
-          <p class="mt-4 mb-4">We understand that a radiant, healthy smile isn’t just about looks—it’s about confidence and
-            well-being. That’s why our team works closely with dentists to ensure every patient receives a
-            smile that looks as good as it feels
-          </p>
-        </div>  
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="trust-card">
-              100% In-House Production No outsourcing, just precision-crafted quality
+          <div class="col-lg-12 mt-4">
+            <div class="text-center w-75 mx-auto">
+              <h2 class="mb-3 mt-3 h4-md steelblue-color">Why Dentists Trust ADE ?</h2>
+              <p class="mt-4 mb-4">We understand that a radiant, healthy smile isn’t just about looks—it’s about confidence and
+                well-being. That’s why our team works closely with dentists to ensure every patient receives a
+                smile that looks as good as it feels
+              </p>
+            </div>  
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="trust-card">
+                  100% In-House Production No outsourcing, just precision-crafted quality
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="trust-card1">
+                  Minimal Adjustments & Remakes Designed for a seamless fit
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="trust-card1">
+                  Unmatched Aesthetic & Durability Because every smile deserves the best
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="trust-card">
+                  Authentic Implant Manufacturer’s Hardware We guarantee quality & warranty protection
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="trust-card1">
-              Minimal Adjustments & Remakes Designed for a seamless fit
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="trust-card1">
-              Unmatched Aesthetic & Durability Because every smile deserves the best
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="trust-card">
-              Authentic Implant Manufacturer’s Hardware We guarantee quality & warranty protection
-            </div>
-          </div>
-        </div>
-		  </div>
         </div> <!-- End row -->
       </div> <!-- END TOP ROW -->
       <!--Static Counter -->
@@ -235,24 +241,25 @@
           <h2 class="h2-m steelblue-color">Meet Our Passionate Team of Dental Artisans</h2>
         </div>
         <div class="col-md-12">
-          <div class="owl-carousel owl-theme services-holder4">
-            {% for ie in team %}
-              <!-- SERVICE BOX #1 -->
-              <div class="sbox-5">
-                <div class="doctors-2">
-                  <!-- Doctor Photo -->
-                  <div class="hover-overlay-about">
-                    <img class="img-fluid" src="{{ ie.image.url }}" width="262" height="393" alt="doctor-foto" />
-                  </div>
-                  <!-- Doctor Meta -->
-                  <div class="doctor-meta">
-                    <div class="h5 mb-2 blue-color">{{ ie.name }}</div>
-                    <small><span>{{ ie.role }}</span></small>
-                    <span class="mt-1 pb-2">{{ ie.position }}</span>
+          <div class="swiper teamSwiper">
+            <div class="swiper-wrapper">
+              {% for ie in team %}
+                <div class="swiper-slide sbox-5">
+                  <div class="doctors-2">
+                    <div class="hover-overlay-about">
+                      <img class="img-fluid" src="{{ ie.image.url }}" width="262" height="393" alt="doctor-foto" />
+                    </div>
+                    <!-- Doctor Meta -->
+                    <div class="doctor-meta">
+                      <div class="h5 mb-2 blue-color">{{ ie.name }}</div>
+                      <small><span>{{ ie.role }}</span></small>
+                      <span class="mt-1 pb-2">{{ ie.position }}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            {% endfor %}
+              {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -304,7 +311,27 @@
             <h2 class="mb-5 white-color" style="font-size: 32px;">Our Associates in Cad Cam Equipment</h2>
           </div>
         </div> <!-- END INFO TEXT -->
-        <swiper-container class="mySwiper1" pagination="true" pagination-dynamic-bullets="true" space-between="10" loop="true">
+        <div class="swiper equipmentSwiper">
+          <div class="swiper-wrapper">
+            {% for ie in imagez %}
+            <div class="swiper-slide">
+                <div class="sbox-5">
+                  <div class="doctors-2">
+                    <!-- Doctor Photo -->
+                    <div class="hover-overlay">
+                      <img class="img-thumbnail" src="{{ ie.image.url }}" alt="{{ ie.name }}" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% comment %} <div class="swiper-slide">1</div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div> {% endcomment %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        {% comment %} <swiper-container class="mySwiper1" pagination="true" pagination-dynamic-bullets="true" space-between="10" loop="true">
           {% for ie in imagez %}
             <swiper-slide>
               <!-- SERVICE BOX #1 -->
@@ -318,7 +345,7 @@
               </div>
             </swiper-slide>
           {% endfor %}
-        </swiper-container>
+        </swiper-container> {% endcomment %}
       </div> <!-- END SERVICES CONTENT -->
     </div>
   </section>
@@ -418,9 +445,82 @@
     </div>
   </section>
 {% endblock %}
-
 {% block js %}
-  <script type="application/ld+json">
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> {% endcomment %}
+<script>
+  var teamslider = new Swiper(".teamSwiper",{
+    speed: 1000,
+    slidesPerView: 4,
+    spaceBetween:16,
+    loop:true,
+    autoplay:{
+      delay:1500,
+      disableOnInteraction:false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1000: {
+        slidesPerView: 4,
+      },
+    },
+  })
+  var equipmentslider = new Swiper(".equipmentSwiper",{
+    speed: 200,
+    slidesPerView: 4,
+    spaceBetween:12,
+    loop:true,
+    autoplay:{
+      delay:2500,
+      disableOnInteraction:false,
+
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1000: {
+        slidesPerView: 4,
+      },
+    },
+  })
+</script>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
@@ -429,8 +529,8 @@
       "description": "Learn more about Advance Dental Export – one of the best dental labs in India, offering high-quality implants, crowns, bridges, cosmetic dentistry solutions, and dental prosthetics across India.",
       "datePublished": "2011-03-27T09:00:00+00:00"
     }
-  </script>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -450,10 +550,10 @@
       ]
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  {% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> {% endcomment %}
 
   <script>
-	const swiper1=document.querySelector(".mySwiper1");Object.assign(swiper1,{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0,dynamicBullets:!0},autoplay:{delay:2500,disableOnInteraction:!1},breakpoints:{640:{slidesPerView:2,spaceBetween:10},768:{slidesPerView:3,spaceBetween:15},1024:{slidesPerView:4,spaceBetween:20}}}),swiper1.initialize();
+	{% comment %} const swiper1=document.querySelector(".mySwiper1");Object.assign(swiper1,{slidesPerView:1,spaceBetween:10,pagination:{el:".swiper-pagination",clickable:!0,dynamicBullets:!0},autoplay:{delay:2500,disableOnInteraction:!1},breakpoints:{640:{slidesPerView:2,spaceBetween:10},768:{slidesPerView:3,spaceBetween:15},1024:{slidesPerView:4,spaceBetween:20}}}),swiper1.initialize(); {% endcomment %}
   // const swiper1 = document.querySelector('.mySwiper1');
 
 	
@@ -488,8 +588,8 @@
 	// swiper1.initialize(); 
   
 </script>
-  <script>
-	const videoWrapper=document.querySelector(".ytbe.about_video"), playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)});
+<script>
+	{% comment %} const videoWrapper=document.querySelector(".ytbe.about_video"), playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)}); {% endcomment %}
     
     // {% comment %} const videoWrapper = document.querySelector(".ytbe.about_video");
 

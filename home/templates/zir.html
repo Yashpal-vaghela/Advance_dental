@@ -40,6 +40,7 @@
             playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video>
     </div>
     <div id="video-spacer"></div> -->
+
     <!-- hero section -->
     <section class="hero-section1 zirconia-hero-section position-relative mx-auto p-0 overflow-hidden d-block ">
         <div class="swiper-wrapper">
@@ -207,7 +208,6 @@
         </div>
     </section>
     <!-- Type Of Zirconia Crown -->
-    {% comment %} <hr /> {% endcomment %}
     <section class="typeOfZirconia position-relative">
         <div class="container">
             <img src="{% static 'img/line.svg' %}" class="img-fluid line-2">
@@ -384,10 +384,8 @@
                     <img src="{% static 'img/Monolithic.webp' %}" class="img-fluid side-img" loading="lazy"
                         alt="Smile Step Group 5" />
                 </div> -->
-
         </div>
     </section>
-    {% comment %} <hr /> {% endcomment %}
     <!-- Why Zirconia Crown -->
     <section class="zirconia-wrapper">
         <div class="container position-relative">
@@ -474,7 +472,6 @@
             <div class="custom-pagination pagination-two"></div>
         </div>
     </section>
-
     <!-- >Testimonials -->
     <section class="testimonial-wrapper zirconia-wrapper mb-sm-5 user-reviews"  data-user-content="true">
         <div class="container position-relative text-center">
@@ -665,6 +662,7 @@
             </div>
         </div>
     </section>
+    <!-- faq section -->
     <section class="faq-section zirconia-faq">
         <div class="container  position-relative">
           <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" />
@@ -699,7 +697,6 @@
     </section>
 </div>
 {% endblock body %}
-
 {% block js %}
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -1030,16 +1027,6 @@
         initialSlide: 2,
     });
 </script>
-<script>
-    if(window.location.pathname == "/zirconia-crown/"){
-      const a = document.getElementsByClassName("page");
-      const b = document.querySelectorAll(".wsmenucontainer");
-      a[0].classList.add("overflow-visible");
-    }else{
-       const a = document.getElementsByClassName("page");
-       a[0].classList.remove("overflow-visible");
-    }
-</script>
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1060,8 +1047,8 @@
       ]
     }
 
-  </script>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -1077,8 +1064,8 @@
       },
       "description": "Advance Dental Export is one of the best dental labs in India and a trusted dental prosthetics manufacturer, custom dental solutions for global clients since 2009."
     }
-  </script>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -1087,5 +1074,5 @@
       "description": "Discover the benefits, types, and pricing of Advance Zirconia in dental prosthetics. We provide durable, aesthetic Zirconia crowns, bridges, implants, and dental prosthetics, ideal for natural-looking, long-lasting tooth restoration.",
       "datePublished": "2022-11-09T10:00:00+05:30"
     }
-    </script>
+</script>
 {% endblock  %}

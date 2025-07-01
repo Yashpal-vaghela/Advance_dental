@@ -1,81 +1,114 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block seo %}    
+{% extends 'base.html' %} {% load static %} {% block seo %}
 <title>Advance Dental Export Reviews, Testimonials, & Feedback</title>
-<meta name="description" content="Hear directly from our clients. Read authentic reviews of Advance Dental Export dental lab. Explore testimonials and feedback from our satisfied clients & dentists." />
+<meta
+  name="description"
+  content="Hear directly from our clients. Read authentic reviews of Advance Dental Export dental lab. Explore testimonials and feedback from our satisfied clients & dentists."
+/>
 <link rel="canonical" href="https://advancedentalexport.com/testimonials/" />
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Advance Dental Export Reviews, Testimonials, & Feedback" />
-<meta property="og:description" content="Hear directly from our clients. Read authentic reviews of Advance Dental Export dental lab. Explore testimonials and feedback from our satisfied clients & dentists." />
-<meta property="og:url" content="https://advancedentalexport.com/testimonials/" />
+<meta
+  property="og:title"
+  content="Advance Dental Export Reviews, Testimonials, & Feedback"
+/>
+<meta
+  property="og:description"
+  content="Hear directly from our clients. Read authentic reviews of Advance Dental Export dental lab. Explore testimonials and feedback from our satisfied clients & dentists."
+/>
+<meta
+  property="og:url"
+  content="https://advancedentalexport.com/testimonials/"
+/>
 <meta property="og:site_name" content="Advance Dental Export" />
 <meta name="og:image" content="{% static 'img/feature.webp' %}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Hear directly from our clients. Read authentic reviews of Advance Dental Export dental lab. Explore testimonials and feedback from our satisfied clients & dentists." />
-<meta name="twitter:title" content="Advance Dental Export Reviews, Testimonials, & Feedback" />
+<meta
+  name="twitter:description"
+  content="Hear directly from our clients. Read authentic reviews of Advance Dental Export dental lab. Explore testimonials and feedback from our satisfied clients & dentists."
+/>
+<meta
+  name="twitter:title"
+  content="Advance Dental Export Reviews, Testimonials, & Feedback"
+/>
 <meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
-<link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/testimonials/" />
-<link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/testimonials/" />
-{% endblock seo %}
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href="https://advancedentalexport.com/testimonials/"
+/>
+<link
+  rel="alternate"
+  hreflang="en-IN"
+  href="https://advancedentalexport.com/testimonials/"
+/>
+{% endblock seo %} {% block css %} {% endblock css %} {% block body %}
+<!-- BREADCRUMB ============================================= -->
+<div id="breadcrumb" class="division">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="breadcrumb-holder">
+          <!-- Breadcrumb Nav -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'home:home' %}">Home</a>
+              </li>
+              <li class="breadcrumb-item active">
+                <a href="#"> Testimonials</a>
+              </li>
+            </ol>
+          </nav>
 
-{% block css %}
-{% endblock css %}
-    
-
-{% block body %}
- <!-- BREADCRUMB ============================================= -->
-            <div id="breadcrumb" class="division">
-                <div class="container">
-                    <div class="row">                       
-                        <div class="col">
-                            <div class=" breadcrumb-holder">
-                                
-                                <!-- Breadcrumb Nav -->
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
-                                        <li class="breadcrumb-item active"><a href="#"> Testimonials</a></li>
-                                    </ol>
-                                </nav>
-
-                                <!-- Title -->
-                                <h1 class="h4-sm steelblue-color">Testimonials: Voices of Dentists & Clientele</h1>
-
-                            </div>
-                        </div>
-                    </div>  <!-- End row -->    
-                </div>  <!-- End container -->      
-            </div>  <!-- END BREADCRUMB --> 
-
-            <div id="gallery-1" class="gallery-section division pt-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 offset-lg-1 section-title">
-                            <h2 class="h2-ms steelblue-color">Hear It From Them - Our Clientele</h2></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="owl-carousel owl-theme services-holder3">
-                    <!-- SERVICE BOX #1 -->
-                    {% for ie in videoData %}
-                      <div class="sbox-5 index-video1" data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}">
-                        <div class="video-container">
-                          <img src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg" alt="Video Thumbnail" class="video-thumbnail1" />
-                          <button class="play-button">▶</button>
-                        </div>
-                      </div>
-                    {% endfor %}
-                    </div>
-                </div>
-                <!-- client reviews -->
-<section id="reviews-2 pt-20">
+          <!-- Title -->
+          <h1 class="h4-sm steelblue-color">
+            Testimonials: Voices of Dentists & Clientele
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- End row -->
+  </div>
+  <!-- End container -->
+</div>
+<!-- END BREADCRUMB -->
+<div id="gallery-1" class="gallery-section division pt-50">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 section-title">
+        <h2 class="h2-ms steelblue-color">Hear It From Them - Our Clientele</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="swiper gallerySwiper">
+      <div class="swiper-wrapper">
+        {% for ie in videoData %}
+        <div
+          class="swiper-slide sbox-52 index-video1"
+          data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
+        >
+          <div class="video-container">
+            <img
+              src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
+              alt="Video Thumbnail"
+              class="video-thumbnail1"
+            />
+            <button class="play-button">▶</button>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- client reviews -->
+  <section id="reviews-2 pt-20">
     <div class="section-title text-center">
-      <h2 class="h2-ms steelblue-color pt-30">
+      <h2 class="h2-ms steelblue-color pt-50">
         Client Chronicles: Their Stories, Their Experiences
       </h2>
     </div>
@@ -94,7 +127,6 @@
             >
               <div class="review-slider-testimonials">
                 <div class="carousel-inner">
-          
                   {% for ie in data %}
                   <div
                     class="{% if forloop.first %}active{% endif %} carousel-item"
@@ -155,134 +187,138 @@
     </div>
   </section>
 
-                 <div class="container mt-30">
-                    <div class="row gallery-items-list">
-                        <div class="owl-carousel owl-theme services-holder3 pt-30">
-                            <div class="" >
-                                <iframe
-                                  width="100%"
-                                  height="500"
-                                  src="https://player.vimeo.com/video/790146326?h=211a9911a2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                  frameborder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowfullscreen
-                                ></iframe>
-                              </div>    
-                              <div class="">
-                                <iframe
-                                  width="100%"
-                                  height="500"
-                                  src="https://player.vimeo.com/video/781419231?h=8ce2f809d6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                  frameborder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowfullscreen
-                                ></iframe>
-                              </div>
-                            
-                            <div class="">
-                                <iframe
-                                  width="100%"
-                                  height="500"
-                                  src="https://player.vimeo.com/video/781418955?h=7c269d8ab9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                                  frameborder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowfullscreen
-                                ></iframe>
-                              </div>    
-                                {% comment %} <div class="sbox-5">
-                                    <div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/790146326?h=211a9911a2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonial_-_3"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                                </div>
-                                <div class="sbox-5">
-                                    <div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/781419231?h=8ce2f809d6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VID-20221130-WA0021_HLbYZzr"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                                </div>
-                                
-                                <div class="sbox-5">
-                                    <div style="padding:125% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/781418955?h=7c269d8ab9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonial Dr.Brijesh Patel"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                                </div> {% endcomment %}
-                        </div>
-                    </div>
-                    
-                </div> 
+  <div class="container mt-30 pt-5">
+    <div class="row gallery-items-list">
+      <div class="swiper testimonalSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="">
+              <iframe
+                width="100%"
+                height="500"
+                src="https://player.vimeo.com/video/790146326?h=211a9911a2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
-           
-
-{% endblock body %}
-    
-
-{% block javascript %}
-<script src="{% static 'js/galleryanimation.js' %}"></script>
-  <script src="{% static 'js/modernizr.custom.js' %}"></script>
-
-  <script>
-    {% comment %} const videoWrappers=document.querySelectorAll(".index-video1");videoWrappers.forEach(e=>{e.onclick=()=>{let r=e.getAttribute("data-video-id"),t=document.createElement("iframe1");t.src=`https://www.youtube.com/embed/${r}?autoplay=1`,t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.style.width="100%",t.style.height="100%";let o=e.querySelector(".video-container");o.innerHTML="",o.appendChild(t)}}); {% endcomment %}
-    const videoWrappers = document.querySelectorAll(".index-video1");
-    videoWrappers.forEach((wrapper) => {
-      wrapper.onclick = () => {
-        const videoId = wrapper.getAttribute("data-video-id");
-        const iframe = document.createElement("iframe");
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        iframe.frameBorder = "0";
-        iframe.allow =
-          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-        iframe.allowFullscreen = true;
-
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-
-        const videoContainer = wrapper.querySelector(".video-container");
-        videoContainer.innerHTML = "";
-        videoContainer.appendChild(iframe);
-      };
-    });
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-
+          </div>
+          <div class="swiper-slide">
+            <div class="">
+              <iframe
+                width="100%"
+                height="500"
+                src="https://player.vimeo.com/video/781419231?h=8ce2f809d6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              width="100%"
+              height="500"
+              src="https://player.vimeo.com/video/781418955?h=7c269d8ab9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %} {% block javascript %}
+{% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script> {% endcomment %}
+{% comment %} <script src="{% static 'js/modernizr.custom.js' %}"></script> {% endcomment %}
 <script>
-$(document).ready(function () {
-  var $customerLogos = $(".customer-logos");
-  var owl = $('.services-holder');
-
-  $customerLogos.slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000,
-      arrows: false,
-      dots: false,
-      pauseOnHover: false,
-      infinite: true,
-      responsive: [
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 4,
-              },
-          },
-          {
-              breakpoint: 520,
-              settings: {
-                  slidesToShow: 3,
-              },
-          },
-      ],
+  var galleryswiper = new Swiper(".gallerySwiper", {
+    speed: 600,
+    slidesPerView: 2,
+    loop: true,
+    autoplay: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      1000: {
+        slidesPerView: 2,
+      },
+    },
   });
-
-  $customerLogos.on('afterChange', function (event, slick, currentSlide) {
-    var totalSlides = slick.$slides.length;
-    var slidesToShow = slick.options.slidesToShow;
-
-    // When the last 5 slides are displayed
-    if (currentSlide >= totalSlides - slidesToShow - 1) {
-      setTimeout(function () {
-        $customerLogos.slick('slickGoTo', 0, true);
-      }, 1000); 
-    }
+  var testionalswiper = new Swiper(".testimonalSwiper", {
+    speed: 600,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      1000: {
+        slidesPerView: 2,
+      },
+    },
   });
-
-   
-});
 </script>
-        
+<script>
+  {% comment %} const videoWrappers=document.querySelectorAll(".index-video1");videoWrappers.forEach(e=>{e.onclick=()=>{let r=e.getAttribute("data-video-id"),t=document.createElement("iframe1");t.src=`https://www.youtube.com/embed/${r}?autoplay=1`,t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.style.width="100%",t.style.height="100%";let o=e.querySelector(".video-container");o.innerHTML="",o.appendChild(t)}}); {% endcomment %}
+  const videoWrappers = document.querySelectorAll(".index-video1");
+  videoWrappers.forEach((wrapper) => {
+    wrapper.onclick = () => {
+      const videoId = wrapper.getAttribute("data-video-id");
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      iframe.frameBorder = "0";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+
+      const videoContainer = wrapper.querySelector(".video-container");
+      videoContainer.innerHTML = "";
+      videoContainer.appendChild(iframe);
+    };
+  });
+</script>
 {% endblock javascript %}

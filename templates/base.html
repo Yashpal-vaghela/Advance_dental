@@ -15,17 +15,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
+    
     <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" media="print" onload="this.media='all'">
     <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
     <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
     <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
+    
     <link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
     <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
-    <link  rel="preload" href="{% static 'css/owl.carousel.min.css' %}" as='stylesheet'/>
-    <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
-    <link  rel="preload" href="{% static 'css/owl.theme.default.min.css' %}" as='stylesheet'/>
-    <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    {% comment %} <link  rel="preload" href="{% static 'css/owl.carousel.min.css' %}" as='stylesheet'/> {% endcomment %}
+    {% comment %} <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/> {% endcomment %}
+    {% comment %} <link  rel="preload" href="{% static 'css/owl.theme.default.min.css' %}" as='stylesheet'/> {% endcomment %}
+    {% comment %} <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/> {% endcomment %}
     <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
     <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
     <link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
@@ -34,25 +36,23 @@
     <link  href="{% static 'css/animate.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
     <link  rel="preload" href="{% static 'css/jquery.datetimepicker.min.css' %}" as='stylesheet' />
     <link  href="{% static 'css/jquery.datetimepicker.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
-    
-    <link  href="{% static 'css/style.css' %}" rel='stylesheet' />
-    <link  href="{% static 'css/responsive.css' %}" rel='stylesheet'/>
-    <link  href="{% static 'css/zir.css' %}" rel='stylesheet'/>
+    <link rel="preload" href="{% static 'css/style.css' %}" as="style">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="preload" href="{% static 'css/responsive.css' %}" as="style">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="preload" href="{% static 'css/zir.css' %}" as="style">
+    <link href="{% static 'css/zir.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <!-- Plyr CSS -->
 
      <!--CDN LINKS-->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="print" onload="this.media='all'">
+    {% comment %} <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" as="style"> {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="print" onload="this.media='all'"> {% endcomment %}
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" /> {% endcomment %}
   
     {% block css %} {% endblock %}
     <script type="application/ld+json">
@@ -176,120 +176,11 @@
 
   <body>
     {% load static %} {% if not hide_social_image %}
-    {% comment %} <div class="social">
-      <div class="social-all-items">
-        <div class="social-item">
-          <a
-            href="https://www.facebook.com/advance.dental.exports"
-            target="_blank"
-            rel="nofollow"
-          >
-            Facebook
-            <i class="fa-brands fa-facebook-f" style="font-size: 15px"></i>
-          </a>
-        </div>
-        <div class="social-item">
-          <a
-            href="https://www.instagram.com/advance_dental_export/"
-            target="_blank"
-            rel="nofollow"
-          >
-            Instagram
-            <i
-              class="fa-brands fa-instagram"
-              style="font-size: 15px; font-weight: 600"
-            ></i>
-          </a>
-        </div>
-        <div class="social-item">
-          <a
-            href="https://www.linkedin.com/company/advance-dental-export/"
-            target="_blank"
-            rel="nofollow"
-          >
-            Linkedin
-            <i class="fa-brands fa-linkedin" style="font-size: 15px"></i>
-          </a>
-        </div>
-        <div class="social-item">
-          <a
-            href="https://wa.link/u0qly1"
-            target="_blank"
-            id="whatsappLink"
-            rel="nofollow"
-          >
-            Whatsapp
-            <i
-              class="fa-brands fa-whatsapp"
-              style="font-size: 15px; font-weight: 600"
-            ></i>
-          </a>
-        </div>
-        <div class="social-item">
-          <a
-            href="tel:+918469888877"
-            target="_blank"
-            id="phoneLink"
-            rel="nofollow"
-          >
-            Phone
-            <i class="fa-solid fa-phone" style="font-size: 15px"></i>
-          </a>
-        </div>
-      </div>
-    </div> {% endcomment %}
     {% endif %}
     <!-- end -->
     <div id="page" class="page">
       <header id="header" class="header">
         {% include 'mobile.html' %}
-        {% comment %} <div class="headtoppart bg-steelblue clearfix">
-          <div class="clearfix container p-0 mx-auto my-0">
-            <div class="headertopleft">
-              <div class="address clearfix">
-                <span>
-                  <i class="fas fa-map-marker-alt"></i>
-                  Velanja Road, Umra, Surat (Gujarat) India.
-                </span>
-                <a href="tel:+918488888877" class="callusbtn"
-                  ><i class="fas fa-phone"></i>+91 84888 88877</a
-                >
-                <a href="tel:+918469888877" class="callusbtn"
-                  ><i class="fas fa-phone"></i>+91 84698 88877</a
-                >
-              </div>
-            </div>
-            <div class="headertopright">
-              <a
-                class="linkedinicon"
-                title="Linkedin"
-                target="_blank"
-                href="https://www.linkedin.com/company/advance-dental-export/"
-              >
-                <i class="fab fa-linkedin-in"></i>
-                <span class="mobiletext02">Linkedin</span>
-              </a>
-              <a
-                class="twittericon"
-                title="Twitter"
-                target="_blank"
-                href="https://www.instagram.com/advance_dental_export/"
-              >
-                <i class="fab fa-instagram"></i>
-                <span class="mobiletext02">Instagram</span>
-              </a>
-              <a
-                class="facebookicon"
-                title="Facebook"
-                target="_blank"
-                href="https://www.facebook.com/advance.dental.exports"
-              >
-                <i class="fab fa-facebook-f"></i>
-                <span class="mobiletext02">Facebook</span>
-              </a>
-            </div>
-          </div>
-        </div> {% endcomment %}
         {% include 'pc.html' %}
       </header>
       {% block body %} {% endblock %}
@@ -374,28 +265,7 @@
           </div>
         </section>
       </div>
-      {% comment %} <div id="chat-container">
-        <div id="chat-box">
-            <div id="chat-messages"></div>
-            <input type="text" id="chat-input" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
-            <button class="btn-blue chatbot-button"onclick="sendMessage()">Send</button>
-        </div>
-      </div> {% endcomment %}
-      <!-- Floating Chatbot Button -->
-      <!-- <button id="chat-popup-btn"><i class="fa fa-solid fa-message"></i></button>
-      <div id="chat-container">
-        <div class="chat-head">
-          <a href="{% url 'home:home' %}"><img src="{% static 'img/logo.png' %}" width="137" height="40" alt="header-logo" /></a>
-          
-          <button id="closePopup" class="popup-btn"><i class="fa fa-solid fa-xmark "></i></button>
-          
-          
-        </div>
-        <div id="chat-box">
-            <div id="chat-messages"></div>
-            <div id="chat-buttons"></div> 
-        </div>
-      </div> -->
+
       <footer class="footer-section">
         <div class="container">
           <div class="row justify-lg-content-center">
@@ -419,18 +289,6 @@
                   long-lasting and esthetically pleasing outcomes for every
                   dental lab product.
                 </p>
-                {% comment %}
-                <p>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.dental.doctore_app"
-                    target="_blank"
-                    ><img
-                      src="{% static 'lo.png' %}"
-                      class="download"
-                      alt="Download"
-                  /></a>
-                </p>
-                {% endcomment %}
                 <div class="footer-socials-links mt-20">
                   <ul class="foo-socials text-center clearfix">
                     <li>
@@ -506,10 +364,6 @@
                       >Verify Warranty</a
                     >
                   </li>
-                  {% comment %} <button class="nl-simple header-btn clss">
-                    <a href="https://client.advancedentalexport.com/">
-                    Client Login</a>
-                  </button> {% endcomment %}
                   <li class="nl-simple clss">
                     <a href="https://client.advancedentalexport.com/">Client Login</a>
                   </li> 
@@ -556,21 +410,23 @@
     <script src="{% static 'js/jquery.appear.js' %}"></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
     <script src="{% static 'js/menu.min.js' %}"></script>
-    <script src="{% static 'js/sticky.min.js' %}"></script>
+    {% comment %} <script src="{% static 'js/sticky.min.js' %}"></script> {% endcomment %}
     <script src="{% static 'js/jquery.scrollto.js' %}"></script>
-    <script src="{% static 'js/materialize.min.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    {% comment %} <script src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'js/owl.carousel.min.js' %}"></script> {% endcomment %}
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     {% block js %} {% endblock %}
     <script src="{% static 'js/custom.min.js' %}"></script>
-    <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
-    <script src="{% static 'js/changer.js' %}"></script>
-    <script src="{% static 'js/styleswitch.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script> {% endcomment %}
+    {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'js/changer.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'js/styleswitch.js' %}"></script> {% endcomment %}
+    {% comment %} <script> src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> {% endcomment %}
+   
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -609,7 +465,7 @@
         src="https://www.facebook.com/tr?id=700687238635946&ev=PageView&noscript=1"
       />
     </noscript>
-    {% comment %} <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script> {% endcomment %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
     {% for ie in messages %}
     <script>
       Swal.fire({
@@ -640,22 +496,7 @@
       });
     </script>
     {% endfor %} 
-    <script>
-      {% comment %} document.getElementById("closePopup").addEventListener("click", function () {
-        document.getElementById("chat-container").style.display = "none";
-    });
-      document.getElementById("chat-popup-btn").addEventListener("click", function() {
-        let chatContainer = document.getElementById("chat-container");
-        let currentDisplay = window.getComputedStyle(chatContainer).display;  // Get actual visibility
-    
-        if (currentDisplay === "none") {
-            chatContainer.style.display = "block";  // Show on first click
-        } else {
-            chatContainer.style.display = "none";   // Hide on second click
-        }
-    }); {% endcomment %}
-    
-    
+    <script>    
       const questionFlow = {
         "start": ["How may i help you?", ["Dental Implants 🙂‍↔️", "Cosmetic Dentistry 🙂‍↔️", "Digital Dentistry 😊"]],
         "Dental Implants 🙂‍↔️": ["Do you need full mouth implants?", ["Yes", "No"]],
@@ -665,9 +506,8 @@
         "No": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
         "Restart": ["Restarting chat...", ["Dental Implants", "Cosmetic Dentistry", "Digital Dentistry"]],
         "End Chat": ["Chat Ended. Thank you!", []]
-    };
+      };
     
-  
       function addMessageToChatBox(text, sender) {
           let chatMessages = document.getElementById("chat-messages");
           let messageDiv = document.createElement("div");
@@ -729,85 +569,7 @@
               addMessageToChatBox("Thank you for chatting with us! 😊", "bot");
           }
       }
-  
-      {% comment %} function startChat() {
-
-        document.getElementById("chat-messages").innerHTML = ""; // Clear previous messages
-        document.getElementById("chat-buttons").innerHTML = "";
-
-          let firstMessage = questionFlow["start"][0];
-          let firstOptions = questionFlow["start"][1];
-  
-          addMessageToChatBox(firstMessage, "bot");
-          setTimeout(() => addButtons(firstOptions), 1000);
-      }
-  
-      window.onload = startChat; // Start chatbot when page loads {% endcomment %}
   </script>
-  
-    {% comment %} <script>
-      function addMessageToChatBox(text, sender) {
-        let chatMessages = document.getElementById("chat-messages");
-        let messageDiv = document.createElement("div");
-        messageDiv.classList.add("chat-bubble");
-
-        if (sender === "user") {
-            messageDiv.classList.add("user-message");
-        } else {
-            messageDiv.classList.add("bot-message");
-        }
-
-        messageDiv.innerHTML = text;
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-      async function sendMessage() {
-          let inputField = document.getElementById("chat-input");
-          let userMessage = inputField.value.trim();
-          if (userMessage === "") return;
-  
-          let chatMessages = document.getElementById("chat-messages");
-          
-          addMessageToChatBox(userMessage, "user");
-          inputField.value = ""; // Clear input field
-  
-          try {
-              let response = await fetch("/chatbot/chat/", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ message: userMessage })
-              });
-  
-              let data = await response.json();
-  
-              if (response.ok) {
-                  addMessageToChatBox(data.reply, "bot"); 
-                  
-              } else {
-                  addMessageToChatBox("Error: " + data.reply, "bot");
-                  
-              }
-  
-              chatMessages.scrollTop = chatMessages.scrollHeight;
-  
-          } catch (error) {
-              console.error("Error:", error);
-              chatMessages.innerHTML += `<p><b>Bot:</b> Error communicating with chatbot.</p>`;
-          }
-      }
-  
-      function handleKeyPress(event) {
-          if (event.key === "Enter") sendMessage();
-      }
-  </script> {% endcomment %}
-    {% block javascript %}{% endblock %}
+  {% block javascript %}{% endblock %}
   </body>
 </html>
-
-
-{% comment %}
-chatMessages.innerHTML += `<p><b>You:</b> ${userMessage}</p>`;
-chatMessages.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
-chatMessages.innerHTML += `<p><b>Bot:</b> Error: ${data.reply}</p>`;
- {% endcomment %}
