@@ -47,7 +47,7 @@
   type="video/mp4"
 />
 {% endif %}
-<link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" />
+<link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" imagesrcset="{% static 'banner-2/banner-12.webp' %}" />
 {% endblock %} {% block css %} 
 {% comment %} <link href="{% static 'css/review.css' %}" rel="stylesheet" /> {% endcomment %}
 {% comment %} <link href="{% static 'css/blog.css' %}" rel="stylesheet" /> {% endcomment %}
@@ -73,6 +73,7 @@
           loop
           id="player"
           poster="{% static 'banner-2/banner-12.webp' %}"
+          fetchpriority="high"
         >
           <source
             src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm"
@@ -84,24 +85,6 @@
           />
           Your browser does not support the video tag.
         </video>
-        {% comment %}
-        <video
-          width="100%"
-          controls
-          autoplay
-          muted
-          playsinline
-          loop
-          controlslist="nodownload nofullscreen noremoteplayback"
-          id="background-video"
-          oncontextmenu="return false;"
-        >
-          <source
-            src="{% static 'banner-2/banner-1-video2.mp4' %}"
-            type="video/mp4"
-          />
-        </video>
-        {% endcomment %}
         <div class="container">
           <div class="row mx-auto justify-content-center">
             <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
@@ -330,7 +313,7 @@
 <section id="about-6" class="pb-0 about-section division">
   <div class="container">
     <div class="row d-flex align-items-center mt-md-4 mt-lg-4 mt-lg-0 mx-0">
-      <div class="col-lg-7 d-flex">
+      <div class="col-12 col-lg-7 d-flex">
         <div class="txt-block pc-30 wow fadeInUp">
           <p class="blue-color wlc-title mb-1">
             Welcome to Advance Dental Export
@@ -359,7 +342,7 @@
           </p>
         </div>
       </div>
-      <div class="col-lg-5 col-xl-4 d-flex">
+      <div class="col-12 col-lg-5 col-xl-4 d-flex">
         <div class="about-img text-center wow fadeInUp">
           <img
             class="img-fluid"

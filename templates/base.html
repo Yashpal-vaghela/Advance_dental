@@ -175,8 +175,7 @@
   </head>
 
   <body>
-    {% load static %} {% if not hide_social_image %}
-    {% endif %}
+    {% load static %} 
     <!-- end -->
     <div id="page" class="page">
       <header id="header" class="header">
@@ -272,7 +271,7 @@
             <div class="col-md-6 col-lg-6 col-sm-11">
               <div class="footer-info ml-25">
                 <img
-                  src="{% static 'img/logo.png' %}"
+                  src="{% static 'img/logo.webp' %}"
                   width="auto"
                   height="90"
                   alt="footer-logo"
@@ -421,6 +420,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     {% block js %} {% endblock %}
     <script src="{% static 'js/custom.min.js' %}"></script>
+    
     {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script> {% endcomment %}
     {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/changer.js' %}"></script> {% endcomment %}
@@ -569,7 +569,7 @@
               addMessageToChatBox("Thank you for chatting with us! 😊", "bot");
           }
       }
-  </script>
+    </script>
   {% block javascript %}{% endblock %}
   </body>
 </html>

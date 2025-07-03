@@ -143,12 +143,12 @@ def exhibition(request):
 
 def zirconiacrown(request):
     cards = [
-        {"title": "Planning","subtitle": "Plan The Treatment","image": "img/try1.png"},
-        {"title": "Presentation", "subtitle": "Present The Treatment", "image": "img/try2.png"},
-        {"title": "Accuracy", "subtitle": "Provide Accurate And Reliable Results","image": "img/try3.png"},
-        {"title": "Preparation","subtitle": "Custom Restoration Preparation","image": "img/try4.png"},
-        {"title": "Provision","subtitle": "Provide The Temporaries","image": "img/try5.png"},
-        {"title": "Collection","subtitle": "Collect Smile Data","image": "img/try6.png"},
+        {"title": "Planning","subtitle": "Plan The Treatment","image": "img/try1.webp"},
+        {"title": "Presentation", "subtitle": "Present The Treatment", "image": "img/try2.webp"},
+        {"title": "Accuracy", "subtitle": "Provide Accurate And Reliable Results","image": "img/try3.webp"},
+        {"title": "Preparation","subtitle": "Custom Restoration Preparation","image": "img/try4.webp"},
+        {"title": "Provision","subtitle": "Provide The Temporaries","image": "img/try5.webp"},
+        {"title": "Collection","subtitle": "Collect Smile Data","image": "img/try6.webp"},
     ]
  
     Benefit = [

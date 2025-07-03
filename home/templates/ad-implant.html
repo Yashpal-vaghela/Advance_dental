@@ -23,36 +23,37 @@
 {% endblock seo %}
 {% block css %}
 {% comment %} <link href="{% static 'css/adImplant.css' %}" rel="stylesheet" /> {% endcomment %}
-<link href="{% static 'css/adImplant1.css' %}" rel="stylesheet" />
-{% comment %} <link href="{% static 'css/adImplant2.css '%}" rel="stylesheet" /> {% endcomment %}
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link href="{% static 'css/zir.css' %}" rel="stylesheet" />
-<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
-{% comment %} <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-/>  {% endcomment %}
+<link rel="preload" href="{% static 'css/adImplant1.css' %}" as="stylesheet" />
+<link href="{% static 'css/adImplant1.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+{% comment %} <link rel="preload" href="{% static 'css/zir.css' %}" as="stylesheet" />
+<link href="{% static 'css/zir.css' %}" rel="stylesheet" media="print" onload="this.media='all'" /> {% endcomment %}
+<link rel="preload" href="{% static 'css/banner.css' %}" as="stylesheet" />
+<link href="{% static 'css/banner.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+<link rel="preload" as="image" href="{% static 'ImplantfirstGroup2.webp' %}" type="image/webp" fetchpriority="high">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" as="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'"/>
 
-<link
-  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-  rel="stylesheet"
-/>
+{% if not is_mobile %}
+<link rel="preload" as="image" href="{% static '/img/implant-banner-bg9.webp' %}" type="image/png" fetchpriority="high">
+<link rel="preload" as="image" href="{% static '/img/implant-banner-img4.webp' %}" type="image/png" fetchpriority="high">
+{% else %}
+<link rel="preload" as="image" href="{% static '/img/implant-mobile-banner2.webp' %}" type="image/png" fetchpriority="high">
+{% endif%}
 <!-- Splide JS -->
-{% comment %} <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> {% endcomment %}
 {% endblock %} {% block body %}
   <div class="page1">
       <section class="hero-section1 implant-hero-section position-relative mx-auto p-0 overflow-hidden d-block ">
           <div class="swiper-wrapper">
               <div class="swiper-slide implant-slider-wrapper position-relative">
-                  <img src="{% static '/img/implant-banner-bg9.png' %}" class="img-fluid implant-banner-bg" />
-                  <img src="{% static '/img/implant-mobile-banner2.png' %}" class="img-fluid implant-mobile-banner"/>
+                  <img src="{% static '/img/implant-banner-bg9.webp' %}" class="img-fluid implant-banner-bg"  loading="eager" fetchpriority="high" />
+                  <img src="{% static '/img/implant-mobile-banner2.webp' %}" class="img-fluid implant-mobile-banner" loading="eager" fetchpriority="high"/>
                   <div class="container implant-banner-img-wrapper position-absolute">
                       <div class="row align-items-center justify-content-end">
                         <div class="col-lg-5 col-md-5">
                           <h1 class="implant-text">Plant Your Implant with <b>AD-Implant</b></h1>
                         </div>
                         <div class="col-lg-7 col-md-7 p-0" >
-                          <img src="{% static '/img/implant-banner-img4.png' %}" class="img-fluid implant-banner-img" />
+                          <img src="{% static '/img/implant-banner-img4.webp' %}" class="img-fluid implant-banner-img" loading="eager" fetchpriority="high" />
                         </div>
                       </div>
                   </div>
@@ -89,6 +90,7 @@
                 src="{% static 'Implant-txt.svg' %}"
                 class="d-lg-block d-none Implant-text1"
                 alt="Smile Step Group 1"
+               
               />
             </div>
             <div class="col-10 col-sm-12 col-lg-6 col-xl-5 order-1 order-lg-2">
@@ -102,6 +104,8 @@
                   src="{% static 'ImplantfirstGroup2.webp' %}"
                   class="position-relative groupImage"
                   alt="Smile Step Group 1"
+                  loading="eager"
+                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -122,7 +126,7 @@
             </div>
             <div class="col-lg-6 col-12 px-md-0 position-sticky ImplantProsthesis-firstcontent">
               <figure class="ImplantImageWrapper" id="ImplantImg1"  data-scroll  data-scroll-speed="2"  style="opacity: 0" >
-                <img src="{% static '/img/ImplantProsthesis1.png' %}" class="implant-prosthesis-img img-fluid" />
+                <img src="{% static '/img/ImplantProsthesis1.webp' %}" class="implant-prosthesis-img img-fluid" />
               </figure>
             </div>
             <div class="col-lg-6 col-12 px-md-0 ImplantProsthesis-secondcontent">
@@ -159,7 +163,7 @@
         </div>
       </section>
       <!-- why Implant section -->
-       <section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
+      <section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
           <div class="container">
               <div class="why-Implant-titleWrapper">
                 <h2 class="why-Implant-title" id="text1" data-scroll data-scroll-speed="0.5">why AD-Implant Prothesis ?</h2>
@@ -518,58 +522,63 @@
               <div class="swiper-slide">
                 <div class="row justify-content-center align-items-center">
                   <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
-                    <div class="flipper">
-                      <img src="{% static 'img/review-img11.png' %}" class="front patient-img _1 img-fluid" />
-                      <img src="{% static 'img/review-img12.png' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                    <div class="patient-img-wrapper">
+                        <img src="{% static 'img/review-img12.webp' %}" class="d-lg-none d-md-block patient-img img-fluid" /> 
                     </div>
+                    {% comment %} <div class="flipper">
+                      <img src="{% static 'img/review-img11.png' %}" class="front patient-img _1 img-fluid" />
+                    </div> {% endcomment %}
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                     <p>After years of struggling with traditional dentures, getting AD implant prosthesis changed my life. The stability and comfort they offer are unmatched. I can eat my favour-ite foods without worry, and my confidence has soared. The procedure was smoother than I expected, and the results are beyond my dreams. My implant-supported dentures feel just like natural teeth. Thanks to this life-changing experience, I feel like myself again, and I can't thank my dentist enough for giving me back my smile.</p>
                     <span>Pt Name: Mr. Arun Shah</span>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
-                    <img src="{% static 'img/review-img12.png' %}" class="patient-img img-fluid" /> 
+                    <img src="{% static 'img/review-img12.webp' %}" class="patient-img img-fluid" /> 
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                <div class="row justify-content-center align-items-center">
                   <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
-                    <div class="flipper">
-                      <img src="{% static 'img/review-img21.png' %}" class="front patient-img _1 img-fluid" />
-                      <img src="{% static 'img/review-img22.png' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
+                    <div class="patient-img-wrapper">
+                      <img src="{% static 'img/review-img22.webp' %}" class="d-lg-none d-md-block  patient-img img-fluid" /> 
                     </div>
+                    {% comment %} <div class="flipper">
+                      <img src="{% static 'img/review-img21.png' %}" class="front patient-img _1 img-fluid" />
+                    </div> {% endcomment %}
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                    <p>I can't express how thankful I am for my implant-supported bridge.Losing multiple teeth was daunting,but the implants provided a solid foundation for my new teeth.The bridge feels incredibly natural, and I forgot I even have implants sometimes.Eating is a joy,and I no longer worry about my teeth shifting.The process was painless, and my dentist's expertise paired with the supreme quality AD implant prosthesis made all the difference.My confidence is restored,and I'm genuinely grateful for this life-changing solution.</p>
                       <span>Pt Name: Mrs. Rekhaben</span>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
-                  <img src="{% static 'img/review-img22.png' %}" class="patient-img img-fluid" /> </div>
+                  <img src="{% static 'img/review-img22.webp' %}" class="patient-img img-fluid" /> </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="row justify-content-center align-items-center">
                   <div class="col-11 col-sm-11 col-md-11 col-lg-2 order-1 py-3 pe-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
-                    <div class="flipper">
+                    <div class="patient-img-wrapper">
+                       <img src="{% static 'img/review-img32.webp' %}" class="d-lg-none d-md-block  patient-img img-fluid" /> 
+                    </div>
+                    {% comment %} <div class="flipper">
                       <img src="{% static 'img/review-img31.png' %}" class="front patient-img _1 img-fluid" />
                       <img src="{% static 'img/review-img32.png' %}" class="d-lg-none d-md-block back patient-img img-fluid" /> 
-                    </div>
+                    </div> {% endcomment %}
                   </div>
                   <div class="col-11 col-sm-11 order-2 order-md-3 col-lg-7 col-md-11 patient-success-content">
                      <p>Implant prosthesis turned my life around.I had struggled with self-esteem issues due to missing teeth,but implant-supported crowns changed everything. Nowc,my smile is flawless, and I feel more confident than ever.My implants look and function like real teeth,I can't believe the transformation,I'm back to enjoying my favourite foods without any discomfort. If you're considering implants,don't hesitate.It's decision that transformed my life,and I couldn't be happier with the results.Thank you to my dentist and AD implant prosthesis,for giving me my confidence back.</p>
                     <span>Pt Name: Mrs. Khushbu</span>
                   </div>
                   <div class="col-12 col-md-12 col-lg-2 order-3 order-md-2 order-lg-3 d-none d-lg-block ps-4">
-                    <img src="{% static 'img/review-img32.png' %}" class="patient-img img-fluid" /> 
+                    <img src="{% static 'img/review-img32.webp' %}" class="patient-img img-fluid" /> 
                   </div>
                 </div>
               </div>
             </div>
-             <!-- Optional: navigation arrows -->
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
-              <!-- Optional: pagination -->
           </div>
         </div>
       </section>
@@ -610,8 +619,6 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 <script>
   AOS.init({
         duration: 1000, 
@@ -1134,20 +1141,6 @@
     },
   })
 </script>
-{% comment %} <script>
-  if (window.location.pathname == "/ad-implant/") {
-    const a = document.getElementsByClassName("page");
-    const b = document.querySelectorAll(".wsmenucontainer");
-    const c = document.getElementsByClassName('page1');
-    console.log("c",c,a)
-    c[0].classList.add("overflow-visible");
-    a[0].classList.add("overflow-hidden");
-  } else {
-    const a = document.getElementsByClassName("page");
-    c[0].classList.remove("overflow-visible");
-    a[0].classList.remove("overflow-hidden");
-  }
-</script> {% endcomment %}
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",

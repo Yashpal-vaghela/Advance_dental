@@ -25,76 +25,71 @@
 {% endblock header %}
 
 {% block css %}
-<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
-<link
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link  rel="preload" href="{% static 'css/bannner.css' %}" as='stylesheet' />
+<link  href="{% static 'css/banner.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+{% comment %} <link href="{% static 'css/banner.css' %}" rel="stylesheet" /> {% endcomment %}
+{% comment %} <link
   href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
   rel="stylesheet"
-/>
+/> {% endcomment %}
+{% if not is_mobile %}
+<link rel="preload" as="image" href="{% static 'banner-2/new-banner2-img12.webp' %}" type="image/png" fetchpriority="high">
+<link rel="preload" as="image" href="{% static 'banner-2/new-banner2-img16.webp' %}" type="image/png" fetchpriority="high">
+<link rel="preload" as="image" href="{% static 'banner-2/new-banner2-logo.png' %}" type="image/png" fetchpriority="high">
+<link rel="preload" as="image" href="{% static 'banner-2/new-banner2-text.png' %}" type="image/png" fetchpriority="high">
+{% else %}
+<link rel="preload" as="image" href="{% static 'banner-2/new-banner2-mobileSize33.webp' %}" type="image/png" fetchpriority="high">
+{% endif%}
+
 {% endblock css %}
 
 {% block body %}
 <div style="background-color: white; z-index:2; ">
-    <!-- Main Content -->
-    <!-- <div id="container">
-        <video src="https://ace-dental.s3.ap-south-1.amazonaws.com/Advance+Dental+Export+Milling+2.webm"
-            playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video>
-    </div>
-    <div id="video-spacer"></div> -->
-
     <!-- hero section -->
     <section class="hero-section1 zirconia-hero-section position-relative mx-auto p-0 overflow-hidden d-block ">
         <div class="swiper-wrapper">
-         <div class="swiper-slide banner2-swiper-slide position-relative">
-          <img
-            src="{% static 'banner-2/new-banner2-img12.webp' %}"
-            class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
-            alt="banner2-bg"
-          />
-          <img
-            src="{% static 'banner-2/new-banner2-img16.webp' %}"
-            class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
-            alt="banner2-bg"
-          />
-          <img
-            src="{% static 'banner-2/new-banner2-mobileSize33.webp' %}"
-            class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
-            alt="banner2-bg"
-          />
-          <div class="container new-banner2">
-            <img
-              src="{% static 'banner-2/new-banner2-logo.png' %}"
-              class="new-banner2-logo img-fluid"
-              alt="banner2-logo"
-            />
-            <img
-              src="{% static 'banner-2/new-banner2-text.png' %}"
-              class="new-banner2-text img-fluid"
-              alt="banner2-text"
-            />
-            {% comment %} <button class="btn btn-read-more1">
-              <a href="/zirconia-crown/"
-                >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
-              ></a>
-            </button> {% endcomment %}
-          </div>
-        </div>
-            {% comment %} <div class="swiper-slide zirconia-slider-wrapper">
-                <div class="container banner-2 position-relative">
-                    <img src="{% static 'banner-2/banner-31.png' %}" alt="zir-logo" class="zir-logo1" />
-                    <img src="{% static 'banner-2/Group281.webp' %}" alt="ele-pic1" class="ele-pic2" />
-                    <img src="{% static 'banner-2/letter-1.webp' %}" alt="let-pic" class="let-pic1" />
-                </div>
-                <div class="larger-ele position-relative">
-                    <img src="{% static 'banner-2/image27.webp' %}" alt="grass-pic" class="grass-pic1" />
-                </div>
-                <div class="optional1">
-                    <img src="{% static 'banner-2/banner-32.webp' %}" alt="slide2-optional" class="slide2-optional1" />
-                </div>
-                </div>
-            </div> {% endcomment %}
+            <div class="swiper-slide banner2-swiper-slide position-relative">
+                <img
+                    src="{% static 'banner-2/new-banner2-img12.webp' %}"
+                    class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
+                    alt="banner2-bg"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+                <img
+                    src="{% static 'banner-2/new-banner2-img16.webp' %}"
+                    class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
+                    alt="banner2-bg"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+                <img
+                    src="{% static 'banner-2/new-banner2-mobileSize33.webp' %}"
+                    class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
+                    alt="banner2-bg"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+            <div class="container new-banner2">
+                <img
+                    src="{% static 'banner-2/new-banner2-logo.png' %}"
+                    class="new-banner2-logo img-fluid"
+                    alt="banner2-logo"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+                <img
+                    src="{% static 'banner-2/new-banner2-text.png' %}"
+                    class="new-banner2-text img-fluid"
+                    alt="banner2-text"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+            </div>
+            </div>
         </div>
     </section>
-
     <!-- what is zirconia -->
     <section class="zirconia-second">
         <div class="container position-relative">
@@ -115,7 +110,7 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="zirfirstgroup">
-                        <img src="{% static 'zirfirstgroup.webp' %}" class="position-relative groupImage" loading="lazy"
+                        <img src="{% static 'zirfirstgroup.webp' %}" class="position-relative groupImage" 
                             alt="Smile Step Group 1" />
                         <!-- <img src="{% static 'zir-txt.png' %}" class="zirconia-text1" loading="lazy"
                             alt="Smile Step Group 1" /> -->
@@ -124,20 +119,6 @@
             </div>
         </div>
     </section>
-
-    {% comment %} <div class="radient-amile-card ">
-        <p class="radient-amile-card-subhead">Presentation</p>
-        <div class="radient-amile-card-head">present The Treatment</div>
-        <div class="image-wrapper">
-            <div class="overlay slice-1"></div>
-            <div class="overlay slice-2"></div>
-            <div class="overlay slice-3"></div>
-            <div class="overlay slice-4"></div>
-            <div class="overlay slice-5"></div>
-            <img src="{% static '01crown.png' %}" class="animated-image" loading="lazy" alt="Smile Step Group 1" />
-        </div>
-    </div> {% endcomment %}
-
     <!-- radial smile -->
     <section class="radial_smile mt-md-4 mt-lg-4">
         <div class="container position-relative">
@@ -158,7 +139,7 @@
                             <div class="overlay slice-3"></div>
                             <div class="overlay slice-4"></div>
                             <div class="overlay slice-5"></div>
-                            <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                            <img src="{% static card.image %}" class="animated-image" 
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -177,7 +158,7 @@
                             <div class="overlay slice-3"></div>
                             <div class="overlay slice-4"></div>
                             <div class="overlay slice-5"></div>
-                            <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                            <img src="{% static card.image %}" class="animated-image"
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -198,7 +179,7 @@
                             <div class="overlay slice-3"></div>
                             <div class="overlay slice-4"></div>
                             <div class="overlay slice-5"></div>
-                            <img src="{% static card.image %}" class="animated-image" loading="lazy"
+                            <img src="{% static card.image %}" class="animated-image" 
                                 alt="Smile Step Group 1" />
                         </div>
                     </div>
@@ -222,7 +203,7 @@
                         <div class="swiper-slide text-start pb-0 p-3" style="background-color: #edf6f4;">
                             <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                                 <div class="d-flex ">
-                                    <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                    <img src="{% static '01.svg' %}" class="img-fluid numbersvgmobile" 
                                         alt="Smile Step Group 1" />
                                     <div class="mobileviewofType-content">
                                         <span style="color: #1B8976" class="pl-2">Monolithic Zirconia Crown</span>
@@ -232,14 +213,14 @@
                                         </p>
                                     </div>
                                 </div>
-                                <img src="{% static 'img/01mobileSize.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                                <img src="{% static 'img/01mobileSize.webp' %}" class="img-fluid side-img-mobile" 
                                     alt="Smile Step Group 1" />
                             </div>
                         </div>
                         <div class="swiper-slide text-start p-3" style="background-color: #edf6f4;">
                             <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                                 <div class="d-flex">
-                                    <img src="{% static '02.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                    <img src="{% static '02.svg' %}" class="img-fluid numbersvgmobile" 
                                         alt="Smile Step Group 1" />
                                     <div class="pl-5 mobileviewofType-content" style="padding-left: 8px">
                                         <span style="color: #1B8976">Multi-Layered Zirconia</span>
@@ -248,14 +229,14 @@
                                         </p>
                                     </div>
                                 </div>
-                                <img src="{% static 'img/Multilayered-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                                <img src="{% static 'img/Multilayered-M.webp' %}" class="img-fluid side-img-mobile" 
                                     alt="Smile Step Group 1" />
                             </div>
                         </div>
                         <div class="swiper-slide text-start text-start p-3" style="background-color: #edf6f4;">
                             <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                                 <div class="d-flex">
-                                    <img src="{% static '03.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                    <img src="{% static '03.svg' %}" class="img-fluid numbersvgmobile"
                                         alt="Smile Step Group 1" />
                                     <div class="pl-5 mobileviewofType-content" style="padding-left: 8px">
                                         <span style="color: #1B8976">Zirconia Implant</span>
@@ -264,14 +245,14 @@
                                         </p>
                                     </div>
                                 </div>
-                                <img src="{% static 'img/Implant-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                                <img src="{% static 'img/Implant-M.webp' %}" class="img-fluid side-img-mobile" 
                                     alt="Smile Step Group 1" />
                             </div>
                         </div>
                         <div class="swiper-slide text-start p-3" style="background-color: #edf6f4;">
                             <div class=" item-left d-flex align-items-center flex-column mobile_innerproess_Card">
                                 <div class="d-flex">
-                                    <img src="{% static '04.svg' %}" class="img-fluid numbersvgmobile" loading="lazy"
+                                    <img src="{% static '04.svg' %}" class="img-fluid numbersvgmobile" 
                                         alt="Smile Step Group 1" />
                                     <div class="pl-5 mobileviewofType-content" style="padding-left: 8px">
                                         <span style="color: #1B8976">E Max Layered Zirconia</span>
@@ -280,7 +261,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <img src="{% static 'img/Emaxlayered-M.webp' %}" class="img-fluid side-img-mobile" loading="lazy"
+                                <img src="{% static 'img/Emaxlayered-M.webp' %}" class="img-fluid side-img-mobile" 
                                     alt="Smile Step Group 1" />
                             </div>
                         </div>
@@ -309,7 +290,7 @@
         <div class="webviewoftype">
                 <div class="main_process_card">
                         <div class="container item-left d-flex align-items-start inner_process_card">
-                            <img src="{% static '01.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1" data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
+                            <img src="{% static '01.svg' %}" class="img-fluid px-2 numbersvg"  alt="Smile Step Group 1" data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
                             <div>
                                 <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" style="color: #1B8976">Monolithic Zirconia Crown</h3>
                                 <p data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" data-aos-delay="250" style="color: #000" class="pb-3">
@@ -318,11 +299,11 @@
                                 </p>
                             </div>
                         </div>
-                        <img src="{% static 'img/01crown.webp' %}" class="img-fluid side-img" loading="lazy"   alt="Smile Step Group 1" />
+                        <img src="{% static 'img/01crown.webp' %}" class="img-fluid side-img"    alt="Smile Step Group 1" />
                 </div>
                 <div class="main_process_card">
                     <div class="container item-left d-flex align-items-start inner_process_card">
-                        <img src="{% static '02.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        <img src="{% static '02.svg' %}" class="img-fluid px-2 numbersvg"  alt="Smile Step Group 1"
                             data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
                         <div>
                             <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
@@ -333,12 +314,12 @@
                             </p>
                         </div>
                     </div>
-                    <img src="{% static 'img/Multilayered.webp' %}" class="img-fluid side-img" loading="lazy"
+                    <img src="{% static 'img/Multilayered.webp' %}" class="img-fluid side-img" 
                         alt="Smile Step Group 2" />
                 </div>
                 <div class="main_process_card">
                     <div class="container item-left d-flex align-items-start inner_process_card">
-                        <img src="{% static '03.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        <img src="{% static '03.svg' %}" class="img-fluid px-2 numbersvg"  alt="Smile Step Group 1"
                             data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
                         <div>
                             <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
@@ -349,12 +330,12 @@
                             </p>
                         </div>
                     </div>
-                    <img src="{% static 'img/Implant31.webp' %}" class="img-fluid side-img" loading="lazy"
+                    <img src="{% static 'img/Implant31.webp' %}" class="img-fluid side-img" 
                         alt="Smile Step Group 3" />
                 </div>
                 <div class="main_process_card">
                     <div class="container item-left d-flex align-items-start inner_process_card">
-                        <img src="{% static '04.svg' %}" class="img-fluid px-2 numbersvg" loading="lazy" alt="Smile Step Group 1"
+                        <img src="{% static '04.svg' %}" class="img-fluid px-2 numbersvg"  alt="Smile Step Group 1"
                             data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500" />
                         <div>
                             <h3 data-aos="fade-up-left" data-aos-anchor-placement="right-bottom" data-aos-duration="1500"
@@ -365,7 +346,7 @@
                             </p>
                         </div>
                     </div>
-                    <img src="{% static 'img/Emaxlayered.webp' %}" class="img-fluid side-img" loading="lazy"
+                    <img src="{% static 'img/Emaxlayered.webp' %}" class="img-fluid side-img" 
                         alt="Smile Step Group 4" />
                 </div>
                 <!-- <div class="main_process_card">
@@ -459,7 +440,7 @@
                     {% for ie in Benefit %}
                      <div class="swiper-slide benslide">
                         <div class="freebennum">{{ie.id}}</div>
-                        <img src="{% static 'img/'|add:ie.imgUrl %}" class="img-fluid benicons" loading="lazy"
+                        <img src="{% static 'img/'|add:ie.imgUrl %}" class="img-fluid benicons" 
                             alt="Smile Step Group 1" />
                         <div class="benhead">
                             {{ie.title}}
@@ -487,7 +468,7 @@
             <div class="swiper pt-3 mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide testimonial-card">
-                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <img src="{% static 'img/avtar.webp' %}" alt="Avatar" class="testimonial-avatar" />
                         <span class="testimonial-name">Dr. Shefali Phogat</span>
                         <p class="testimonial-text">
                             It’s always a great experience to work in collaboration with Advance dental lab. We have done multiple cases of Full mouth rehabilitation with zirconia & Emax. They do excellent work with utmost precision. Their team is highly efficient and easy to reach. Keep up the good work.
@@ -497,7 +478,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonial-card">
-                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <img src="{% static 'img/avtar.webp' %}" alt="Avatar" class="testimonial-avatar" />
                         <span class="testimonial-name">Dr. Skpatel</span>
                         <p class="testimonial-text">
                             Excellent work especially for zirconia & e-max veneers.
@@ -509,7 +490,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonial-card">
-                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <img src="{% static 'img/avtar.webp' %}" alt="Avatar" class="testimonial-avatar" />
                         <span class="testimonial-name">Dr. Jay Patel</span>
                         <p class="testimonial-text">
                             As a specialist prosthodontist, working very closely with Advanced Dental Export makes me extremely delighted to deliver dream smile design projects to our elite clients.Their quality of dental prosthesis is par international standards along with FDA approved materials.Technical aspects like crown margins, contact areas, occlusion, implant prosthetics,final denture processing are achieved and executed with utter precision and updated innovation.ADE has a professional and technical team dedicated to quality services and exact needs of the doctors,that is very unique virtue reflects in their team members.
@@ -519,7 +500,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonial-card">
-                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <img src="{% static 'img/avtar.webp' %}" alt="Avatar" class="testimonial-avatar" />
                         <span class="testimonial-name">Dr. Ankita</span>
                         <p class="testimonial-text">
                             I had the pleasure of working with Advance Dental Lab for over 8 years. It is such a joy to have a lab that can provide helpful and successful alternative options for extremely difficult cases and export level quality . Ultimate smile Designing is best. Support Digital dentistry . They have skilled technicians to provide Fast work. Ultimate smile designer .
@@ -529,7 +510,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonial-card">
-                        <img src="{% static 'img/avtar.png' %}" alt="Avatar" class="testimonial-avatar" />
+                        <img src="{% static 'img/avtar.webp' %}" alt="Avatar" class="testimonial-avatar" />
                         <span class="testimonial-name">Dr. Jugal Sherdiwala</span>
                         <p class="testimonial-text">
                             I have been sending my work to Advanced Lab since their inception. Their work is extraordinary along with quick service. I have worked with many labs but I always faced problems either with communication, not getting work on time or work satisfaction. I have never faced such issues with Advanced Lab. Their work is impeccable. If there is someone out there making life of a dentist easy- It’s them.
@@ -698,8 +679,10 @@
 </div>
 {% endblock body %}
 {% block js %}
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
 <script>
     AOS.init({
         offset: 10,
@@ -725,9 +708,7 @@
             }
         });
     });
-
 </script>
-
 <script>
    var swiper = new Swiper(".swiper-two", {
             slidesPerView: 6,
@@ -764,89 +745,6 @@
         });
 
 </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-{% comment %} <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        console.clear();
-
-        const video = document.querySelector(".video-background");
-        // console.log(video, src);
-
-        /* Ensure video is activated on iOS */
-        function once(el, event, fn, opts) {
-            var onceFn = function (e) {
-                el.removeEventListener(event, onceFn);
-                fn.apply(this, arguments);
-            };
-            el.addEventListener(event, onceFn, opts);
-            return onceFn;
-        }
-
-        once(document.documentElement, "touchstart", function (e) {
-            video.play();
-            video.pause();
-        });
-
-        /* Scroll Control */
-        gsap.registerPlugin(ScrollTrigger);
-
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#container",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 10,
-                onUpdate: (self) => {
-                    if (video.readyState >= 2) {
-                        requestAnimationFrame(() => {
-                            video.currentTime = video.duration * self.progress;
-                        });
-                    }
-                    const fadeOutOpacity = gsap.utils.mapRange(0.95, 1, 1, 0, self.progress);
-                    gsap.to(video, {
-                        opacity: fadeOutOpacity,
-                        duration: 0.2,
-                        ease: "none"
-                    });
-                }
-            }
-        });
-
-        once(video, "loadedmetadata", () => {
-            tl.fromTo(
-                video,
-                { currentTime: 0 },
-                { currentTime: video.duration || 1 }
-            );
-        });
-
-        video.addEventListener("loadedmetadata", function () {
-            console.log("Metadata loaded. Duration:", video.duration);
-        });
-
-        video.addEventListener("timeupdate", function () {
-            console.log("Current Time:", video.currentTime, "Duration:", video.duration);
-        });
-        video.addEventListener("ended", function () {
-            console.log("video ended.");
-        });
-
-        /* Reset video when scrolling back up */
-        ScrollTrigger.create({
-            trigger: "#container",
-            start: "top 80%",
-            onEnterBack: () => {
-                console.log("Scrolled back to video section, resetting video.");
-                video.currentTime = 0;
-                gsap.to(video, { opacity: 1, duration: 0.3 });
-            }
-        });
-    });
-</script> {% endcomment %}
-
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const wrappers = document.querySelectorAll(".image-wrapper");
@@ -868,7 +766,6 @@
         wrappers.forEach(wrapper => observer.observe(wrapper));
     });
 </script>
-
 <script>
     var swiper1 = new Swiper(".gallery-swiper", {
         slidesPerView: 6,
@@ -1019,7 +916,6 @@
         });
     });
 </script>
-
 <script>
     var swiper = new Swiper(".mySwiper", {
         effect: "cards",
