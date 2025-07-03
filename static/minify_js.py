@@ -29,6 +29,6 @@ for js_path in js_files:
     with open(minified_path, 'w') as minified_file:
         minified_file.write(minified_js)
 
-    print(f"✅ Minified {js_path} → {minified_path}")
+    print(f" Minified {js_path} → {minified_path}")
 
-print("🎉 All done!")
+print("All done!")

@@ -37,13 +37,12 @@
     title="{{ data.meta_title }}"
     publisher="Your Brand"
     publisher-logo-src="https://example.com/logo.png"
-    poster-portrait-src="https://example.com/poster.jpg">
+    poster-portrait-src="{{ story.image.url }}">
     {% for video in videos %}
     <!-- Story Page -->
     <amp-story-page id="page-{{ forloop.counter }}" auto-advance-after="video-{{ forloop.counter }}">
         <amp-story-grid-layer template="fill">
-            <amp-video id="video-{{ forloop.counter }}" autoplay loop noaudio
-                width="720" height="1280" layout="responsive">
+            <amp-video id="video-{{ forloop.counter }}" autoplay loop noaudio layout="fill">
                 <source src="{{ video.video.url }}" type="video/mp4">
             </amp-video>
         </amp-story-grid-layer>
