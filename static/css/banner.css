@@ -1842,4 +1842,10 @@
   .hero-section1 .swiper-slide-active .new-banner3-text {
     animation: none;
   }
+  .hero-section1 .swiper-slide-active .banner1-img {
+    animation: fadeInUp 0.3s ease-in-out forwards;
+  }
+  .hero-section1 .swiper-slide-active .texts{
+    animation: ZoomInText 0.3s ease-in-out forwards;
+  }
 }

@@ -17,8 +17,11 @@
 <meta name="twitter:description" content="{% spaceless %}{{ data.meta_description }}{% endspaceless %}">
 <link rel="alternate" hreflang="x-default" href="{% spaceless %}{{ data.canonical }}{% endspaceless %}" />
 <link rel="alternate" hreflang="en-IN" href="{% spaceless %}{{ data.canonical }}{% endspaceless %}" />
+
 {% endblock seo%}
 {% block css %} 
+    <link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
 {% endblock %}
 
 {% block body %}
@@ -82,7 +85,7 @@
                             <p>No blogs found in this category.</p>
                         </div>
                     {% endfor %}
-						<div class="blog-page-pagination mt-2 b-top justify-content-center col-12">
+						<div class="blog-page-pagination mt-2 pt-3 pt-sm-0 b-top justify-content-center col-12">
 							<nav aria-label="Page navigation justify-content-center">
 								<ul class="pagination justify-content-center primary-theme ">
 									{% if page_obj.has_previous %}

@@ -50,16 +50,9 @@
 <link rel="preload" as="image" href="{% static 'banner-2/poster-banner1.webp' %}" imagesrcset="{% static 'banner-2/poster-banner1.webp' %}" />
 <link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" imagesrcset="{% static 'banner-2/banner-12.webp' %}" />
 {% endblock %} {% block css %} 
-{% comment %} <link href="{% static 'css/review.css' %}" rel="stylesheet" /> {% endcomment %}
-{% comment %} <link href="{% static 'css/blog.css' %}" rel="stylesheet" /> {% endcomment %}
-<link href="{% static 'css/banner.css' %}" rel="stylesheet" />
-{% comment %}
-<link
-  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-  rel="stylesheet"
-/>
-{% endcomment %}
-<link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link  rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
+<link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
 {% endblock %} {% block body %}
 <section class="hero-section1 mb-0">
   <div class="swiper mySwiper">
@@ -167,7 +160,7 @@
         <a href="/ad-implant/">
           <img
             rel="preload"
-            src="{% static '/banner-2/implant-mobile-banner52.webp' %}"
+            src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
             class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
           />
         </a>
@@ -1360,7 +1353,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Owl Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-{% endcomment %} {% block javascript %}
+{% endcomment %} 
+{% block javascript %}
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   var swiper1 = new Swiper(".clientLogo", {
@@ -1545,6 +1539,7 @@
     };
   });
 </script>
+
 <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {

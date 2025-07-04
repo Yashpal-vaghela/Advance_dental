@@ -21,6 +21,8 @@
 <meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
 <link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}" />
 <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}" />
+<link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
+<link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
 {% endblock seo %}
 
 {% block css %}
@@ -117,6 +119,9 @@
 
 
 {% block javascript %}
-		
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/gallery.js' %}"></script>
 {% endblock javascript %}
     

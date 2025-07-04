@@ -36,6 +36,10 @@
         padding-left: 25px!important;
     }
 </style>
+<link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
+<link  href="{% static 'css/blog.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+<link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
+<link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
 {% endblock css %}
     
 

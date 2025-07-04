@@ -22,7 +22,10 @@
 <link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/blog/" />
 <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/blog/" />
 {% endblock seo %} 
-{% block css %} {% endblock css %}
+{% block css %} 
+    <link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+{% endblock css %}
 {% block body %}
 <!-- BREADCRUMB
 			============================================= -->

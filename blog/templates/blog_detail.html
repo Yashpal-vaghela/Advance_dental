@@ -51,10 +51,30 @@
   name="twitter:image"
   content="{% spaceless %}{{data.image.url}}{% endspaceless %}"
 />
-<link rel="alternate" hreflang="x-default" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
-<link rel="alternate" hreflang="en-IN" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href="{% spaceless %}{{data.canonical}}{% endspaceless %}"
+/>
+<link
+  rel="alternate"
+  hreflang="en-IN"
+  href="{% spaceless %}{{data.canonical}}{% endspaceless %}"
+/>
 {% endblock seo %} {% block css %}
-<link href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="preload" href="{% static 'css/blog.css' %}" as="stylesheet" />
+<link
+  href="{% static 'css/blog.css' %}"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
+/>
+{% comment %}
+<link
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  rel="stylesheet"
+/>
+{% endcomment %}
 <style>
   p {
     font-size: 18px;
@@ -71,9 +91,9 @@
     font-weight: 800;
   }
 
-  @media(max-width:576px){
-    .breadcrumb-text{
-      font-size:1.3rem;
+  @media (max-width: 576px) {
+    .breadcrumb-text {
+      font-size: 1.3rem;
       line-height: 1.6;
     }
   }
@@ -103,7 +123,9 @@
           </nav>
 
           <!-- Title -->
-          <div class="breadcrumb-text steelblue-color text-start">{{data.breadcrumb}}</div>
+          <div class="breadcrumb-text steelblue-color text-start">
+            {{data.breadcrumb}}
+          </div>
           {% comment %}
           <h4 class="h4-sm steelblue-color">{{data.h1}}</h4>
           {% endcomment %}
@@ -152,7 +174,8 @@
 
               <div class="content mt-4 blog-body">{{data.content|safe}}</div>
               <!-- BLOG POST SHARE LINKS -->
-              {% comment %} <div class="post-share-links">
+              {% comment %}
+              <div class="post-share-links">
                 <!-- POST TAGS -->
                 <div class="post-tags-list">
                   {% for ie in data.tag.all %}
@@ -186,7 +209,8 @@
                     </li>
                   </ul>
                 </div>
-              </div> {% endcomment %}
+              </div>
+              {% endcomment %}
               <!-- END BLOG POST SHARE -->
             </div>
             <!-- END BLOG POST TEXT -->
@@ -212,61 +236,93 @@
             <div class="related-posts position-relative">
               <!-- Title -->
               <p class="h5-md steelblue-color fw-bold">Related Posts</p>
-                <!-- BLOG POST #1 -->
-                <div class="swiper-container">
-                    <div class="swiper related-blog-swiper">
-                      <div class="swiper-wrapper">
-                      {% for ie in related_blogs %}
-                        <div class="swiper-slide position-relative">
-                          <!-- BLOG POST #1 -->
-                                <div class="position-relative mx-auto all-blog-content card">
-                                  <img src="{{ie.image.url}}" alt="{{ie.h1}}" class="card-img-top h-100 img-fluid" />
-                                    <div class="card-body">
-                                        <div class="blog-content-txt">
-                                          <div class="my-2 blog-author-date-content  d-flex justify-content-between">
-                                            <div class="blog-author-wrapper">
-                                              <img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
-                                              <span class="blog-author-txt"> By {{ ie.author }}</span>
-                                            </div>
-                                            <div class="blog-author-wrapper">
-                                              <img src="{% static 'celender.png'%}" alt="Author-Icon" class="blog-author"/>
-                                              <span class="blog-author-txt"> {{ ie.published|date:"M. d, Y" }} </span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="blog-main-content text-start steelblue-color">
-                                          <h2 class="mt-3 card-title"><a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}" >{{ie.title}}</a></h2>
-                                          <!-- Post Text -->
-                                          <p class="blog-content-descripation mb-0">
-                                            {{ie.description}}
-                                          </p>
-                                          <div class="card-footer blog-footer">
-                                            <a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
-                                            <hr class="blog-divider">
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
+              <!-- BLOG POST #1 -->
+              <div class="swiper-container">
+                <div class="swiper related-blog-swiper">
+                  <div class="swiper-wrapper">
+                    {% for ie in related_blogs %}
+                    <div class="swiper-slide position-relative">
+                      <!-- BLOG POST #1 -->
+                      <div
+                        class="position-relative mx-auto all-blog-content card"
+                      >
+                        <img
+                          src="{{ie.image.url}}"
+                          alt="{{ie.h1}}"
+                          class="card-img-top h-100 img-fluid"
+                        />
+                        <div class="card-body">
+                          <div class="blog-content-txt">
+                            <div
+                              class="my-2 blog-author-date-content d-flex justify-content-between"
+                            >
+                              <div class="blog-author-wrapper">
+                                <img
+                                  src="{% static 'author.png'%}"
+                                  alt="Author-Icon"
+                                  class="blog-author"
+                                />
+                                <span class="blog-author-txt">
+                                  By {{ ie.author }}</span
+                                >
+                              </div>
+                              <div class="blog-author-wrapper">
+                                <img
+                                  src="{% static 'celender.png'%}"
+                                  alt="Author-Icon"
+                                  class="blog-author"
+                                />
+                                <span class="blog-author-txt">
+                                  {{ ie.published|date:"M. d, Y" }}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="blog-main-content text-start steelblue-color"
+                          >
+                            <h2 class="mt-3 card-title">
+                              <a
+                                href="{% url 'home:blogd' ie.slug %}"
+                                class="blog-item"
+                                data-title="{{ ie.title|lower }}"
+                                >{{ie.title}}</a
+                              >
+                            </h2>
+                            <!-- Post Text -->
+                            <p class="blog-content-descripation mb-0">
+                              {{ie.description}}
+                            </p>
+                            <div class="card-footer blog-footer">
+                              <a
+                                href="{% url 'home:blogd' ie.slug %}"
+                                class="blog-read-more"
+                                >Read More</a
+                              >
+                              <hr class="blog-divider" />
+                            </div>
+                          </div>
                         </div>
-                        {% endfor %}
-           
                       </div>
                     </div>
-                                 <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- Navigation Buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                    {% endfor %}
+                  </div>
                 </div>
-              
-                <!-- END  BLOG POST #1 -->   
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <!-- END  BLOG POST #1 -->
               {% endif %}
               <!-- End row -->
             </div>
             <!-- END RELATED POSTS -->
             <hr />
-            
+
             <!-- COMMENT FORM -->
             {% comment %}
             <div id="leave-comment">
@@ -345,12 +401,12 @@
 {% endblock body %} {% block js %}
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script> 
-  var swiper = new Swiper(".related-blog-swiper",{
+<script>
+  var swiper = new Swiper(".related-blog-swiper", {
     slidesPerView: 1,
     spaceBetween: 20,
-    speed:600,
-    loop:true,
+    speed: 600,
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
@@ -377,7 +433,7 @@
         slidesPerView: 3,
       },
     },
-  })
+  });
 </script>
 <script type="application/ld+json">
   {

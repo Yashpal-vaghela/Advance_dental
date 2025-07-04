@@ -44,7 +44,15 @@
   hreflang="en-IN"
   href="https://advancedentalexport.com/testimonials/"
 />
-{% endblock seo %} {% block css %} {% endblock css %} {% block body %}
+{% endblock seo %} {% block css %}
+<link rel="preload" href="{% static 'css/review.css' %}" as="stylesheet" />
+<link
+  href="{% static 'css/review.css' %}"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
+/>
+{% endblock css %} {% block body %}
 <!-- BREADCRUMB ============================================= -->
 <div id="breadcrumb" class="division">
   <div class="container">
@@ -232,8 +240,8 @@
   </div>
 </div>
 {% endblock body %} {% block javascript %}
-{% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script> {% endcomment %}
-{% comment %} <script src="{% static 'js/modernizr.custom.js' %}"></script> {% endcomment %}
+<script src="{% static 'js/galleryanimation.js' %}"></script>
+<script src="{% static 'js/modernizr.custom.js' %}"></script>
 <script>
   var galleryswiper = new Swiper(".gallerySwiper", {
     speed: 600,

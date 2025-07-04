@@ -122,103 +122,73 @@ $(document).ready(function () {
     });
   };
   /*----------------------------------------------------*/
-  /*	Services Rotator
+  /*	Portfolio Grid
   /*----------------------------------------------------*/
-  // var owl = $(".services-holder4");
-  // owl.owlCarousel({
-  //   items: 4,
-  //   loop: true,
-  //   autoplay: true,
-  //   navBy: 1,
-  //   autoplayTimeout: 4500,
-  //   autoplayHoverPause: true,
-  //   smartSpeed: 1500,
-  //   responsive: {
-  //     0: {
-  //       items: 1,
+  // $(".grid-loaded").imagesLoaded(function () {
+  //   // filter items on button click
+  //   $(".gallery-filter").on("click", "button", function () {
+  //     var filterValue = $(this).attr("data-filter");
+  //     $grid.isotope({
+  //       filter: filterValue,
+  //     });
+  //   });
+
+  //   // change is-checked class on buttons
+  //   $(".gallery-filter button").on("click", function () {
+  //     $(".gallery-filter button").removeClass("is-checked");
+  //     $(this).addClass("is-checked");
+  //     var selector = $(this).attr("data-filter");
+  //     $grid.isotope({
+  //       filter: selector,
+  //     });
+  //     return false;
+  //   });
+
+  //   // init Isotope
+  //   var $grid = $(".masonry-wrap").isotope({
+  //     itemSelector: ".gallery-item",
+  //     percentPosition: true,
+  //     transitionDuration: "0.7s",
+  //     masonry: {
+  //       // use outer width of grid-sizer for columnWidth
+  //       columnWidth: ".gallery-item",
   //     },
-  //     576: {
-  //       items: 2,
-  //     },
-  //     768: {
-  //       items: 3,
-  //     },
-  //     991: {
-  //       items: 3,
-  //     },
-  //     1000: {
-  //       items: 4,
+  //   });
+  // });
+  /*----------------------------------------------------*/
+  /*	Single Image Lightbox
+  /*----------------------------------------------------*/
+  // $(".image-link").magnificPopup({
+  //   type: "image",
+  // });
+  /*----------------------------------------------------*/
+  /*	Video Link #1 Lightbox
+  // /*----------------------------------------------------*/
+  // $(".video-popup1").magnificPopup({
+  //   type: "iframe",
+  //   iframe: {
+  //     patterns: {
+  //       youtube: {
+  //         index: "youtube.com",
+  //         src: "https://www.youtube.com/embed/SZEflIVnhH8",
+  //       },
   //     },
   //   },
   // });
   /*----------------------------------------------------*/
-  /*	Portfolio Grid
-  /*----------------------------------------------------*/
-  $(".grid-loaded").imagesLoaded(function () {
-    // filter items on button click
-    $(".gallery-filter").on("click", "button", function () {
-      var filterValue = $(this).attr("data-filter");
-      $grid.isotope({
-        filter: filterValue,
-      });
-    });
-
-    // change is-checked class on buttons
-    $(".gallery-filter button").on("click", function () {
-      $(".gallery-filter button").removeClass("is-checked");
-      $(this).addClass("is-checked");
-      var selector = $(this).attr("data-filter");
-      $grid.isotope({
-        filter: selector,
-      });
-      return false;
-    });
-
-    // init Isotope
-    var $grid = $(".masonry-wrap").isotope({
-      itemSelector: ".gallery-item",
-      percentPosition: true,
-      transitionDuration: "0.7s",
-      masonry: {
-        // use outer width of grid-sizer for columnWidth
-        columnWidth: ".gallery-item",
-      },
-    });
-  });
-  /*----------------------------------------------------*/
-  /*	Single Image Lightbox
-  /*----------------------------------------------------*/
-  $(".image-link").magnificPopup({
-    type: "image",
-  });
-  /*----------------------------------------------------*/
-  /*	Video Link #1 Lightbox
-  /*----------------------------------------------------*/
-  $(".video-popup1").magnificPopup({
-    type: "iframe",
-    iframe: {
-      patterns: {
-        youtube: {
-          index: "youtube.com",
-          src: "https://www.youtube.com/embed/SZEflIVnhH8",
-        },
-      },
-    },
-  });
-  /*----------------------------------------------------*/
   /*	Video Link #2 Lightbox
   /*----------------------------------------------------*/
-  $(".video-popup2").magnificPopup({
-    type: "iframe",
-    iframe: {
-      patterns: {
-        youtube: {
-          index: "youtube.com",
-          src: "https://www.youtube.com/embed/7e90gBu4pas",
-        },
-      },
-    },
-  });
+  // $(".video-popup2").magnificPopup({
+  //   type: "iframe",
+  //   iframe: {
+  //     patterns: {
+  //       youtube: {
+  //         index: "youtube.com",
+  //         src: "https://www.youtube.com/embed/7e90gBu4pas",
+  //       },
+  //     },
+  //   },
+  // });
   /*----------------------------------------------------*/
   /*	Statistic Counter
  /*----------------------------------------------------*/

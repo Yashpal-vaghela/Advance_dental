@@ -16,21 +16,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
     <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" media="print" onload="this.media='all'">
-    <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    {% comment %} <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"> {% endcomment %}
     <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
     <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
     <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
     
-    <link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    
     {% comment %} <link  rel="preload" href="{% static 'css/owl.carousel.min.css' %}" as='stylesheet'/> {% endcomment %}
     {% comment %} <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/> {% endcomment %}
     {% comment %} <link  rel="preload" href="{% static 'css/owl.theme.default.min.css' %}" as='stylesheet'/> {% endcomment %}
     {% comment %} <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/> {% endcomment %}
-    <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
-    <link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+    {% comment %} <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" /> {% endcomment %}
     <link  rel="preload" href="{% static 'css/animate.css' %}" as='stylesheet' />
     <link  href="{% static 'css/animate.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
     <link rel="preload" href="{% static 'css/style.css' %}" as="style">
@@ -399,24 +396,22 @@
         </div>
       </footer>
     </div>
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}" defer></script>
-    <script src="{% static 'js/bootstrap1.min.js' %}" defer></script>
-    <script src="{% static 'js/modernizr.custom.js' %}" defer></script>
-    <script src="{% static 'js/jquery.easing.js' %}" defer></script>
-    <script src="{% static 'js/jquery.appear.js' %}" defer></script>
-    <script src="{% static 'js/jquery.stellar.min.js' %}" defer></script>
-    <script src="{% static 'js/menu.min.js' %}" defer></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}" ></script>
+    <script src="{% static 'js/bootstrap1.min.js' %}" ></script>
+    <script src="{% static 'js/modernizr.custom.js' %}" ></script>
+    {% comment %} <script src="{% static 'js/jquery.easing.js' %}" ></script> {% endcomment %}
+    {% comment %} <script src="{% static 'js/jquery.appear.js' %}" ></script> {% endcomment %}
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/menu.min.js' %}" ></script>
     {% comment %} <script src="{% static 'js/sticky.min.js' %}"></script> {% endcomment %}
-    <script src="{% static 'js/jquery.scrollto.js' %}" defer></script>
+    {% comment %} <script src="{% static 'js/jquery.scrollto.js' %}"></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/owl.carousel.min.js' %}"></script> {% endcomment %}
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}" defer></script>
-    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"defer></script>
-    <script src="{% static 'js/isotope.pkgd.min.js' %}" defer></script>
+ 
     <script src="{% static 'js/wow.min.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" ></script>
     {% block js %} {% endblock %}
-    <script src="{% static 'js/custom.min.js' %}" defer></script>
+    <script src="{% static 'js/custom.js' %}" ></script>
     
     {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script> {% endcomment %}
     {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script> {% endcomment %}
