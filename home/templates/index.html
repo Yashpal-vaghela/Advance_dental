@@ -47,6 +47,7 @@
   type="video/mp4"
 />
 {% endif %}
+<link rel="preload" as="image" href="{% static 'banner-2/poster-banner1.webp' %}" imagesrcset="{% static 'banner-2/poster-banner1.webp' %}" />
 <link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" imagesrcset="{% static 'banner-2/banner-12.webp' %}" />
 {% endblock %} {% block css %} 
 {% comment %} <link href="{% static 'css/review.css' %}" rel="stylesheet" /> {% endcomment %}
@@ -72,7 +73,7 @@
           autoplay
           loop
           id="player"
-          poster="{% static 'banner-2/banner-12.webp' %}"
+          poster="{% static 'banner-2/poster-banner1.webp' %}"
           fetchpriority="high"
         >
           <source
@@ -166,7 +167,7 @@
         <a href="/ad-implant/">
           <img
             rel="preload"
-            src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
+            src="{% static '/banner-2/implant-mobile-banner52.webp' %}"
             class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
           />
         </a>
