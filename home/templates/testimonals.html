@@ -244,10 +244,13 @@
 <script src="{% static 'js/modernizr.custom.js' %}"></script>
 <script>
   var galleryswiper = new Swiper(".gallerySwiper", {
-    speed: 600,
+    speed: 1500,
     slidesPerView: 2,
     loop: true,
-    autoplay: false,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -275,11 +278,14 @@
     },
   });
   var testionalswiper = new Swiper(".testimonalSwiper", {
-    speed: 600,
+    speed: 1500,
     slidesPerView: 2,
     spaceBetween: 20,
     loop: true,
-    autoplay: false,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

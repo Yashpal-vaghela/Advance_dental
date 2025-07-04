@@ -1418,7 +1418,6 @@
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -1451,7 +1450,10 @@
     speed: 1500,
     slidesPerView: 2,
     loop: true,
-    autoplay: false,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -1483,9 +1485,8 @@
     slidesPerView: 3,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 4000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",

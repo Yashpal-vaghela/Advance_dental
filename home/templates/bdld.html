@@ -737,10 +737,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   var galleryswiper = new Swiper(".gallerySwiper", {
-    speed: 600,
+    speed: 1500,
     slidesPerView: 2,
     loop: true,
-    autoplay: false,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -768,10 +771,13 @@
     },
   });
   var BeforeSwiper = new Swiper(".beforeSwiper", {
-    speed: 600,
+    speed: 1500,
     slidesPerView: 3,
     loop: true,
-    autoplay: false,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
