@@ -1290,7 +1290,10 @@
     margin: 0 0 0px;
     padding: 20px 0px;
   }
-  #services-6 .container .row,
+  #services-6 .container .row{
+    margin: 0 0 40px;
+    padding: 0px 0px;
+  }
   .sbox-3 {
     margin: 0 0 40px;
     padding: 60px 35px;
@@ -1835,6 +1838,7 @@
   }
   .second {
     gap: 8px;
+    margin-top: 8px;
   }
   h5.h5-md {
     font-size: 1.2rem;
@@ -1913,7 +1917,7 @@
     font-size: 0.9rem;
   }
   .features-product-section .txt-block h2 {
-    font-size: 32px !important;
+    font-size: 25px !important;
   }
   .footer-section .container .row .footer-info {
     margin-left: 0px !important;

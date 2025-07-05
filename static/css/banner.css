@@ -509,6 +509,7 @@
 }
 .hero-section1 .swiper-slide-active .new-banner3-bg {
   animation: ZoomIn4 1s ease-in-out forwards;
+  /* object-fit: none; */
 }
 .hero-section1 .swiper-slide-active .new-banner3-productImg1 {
   animation: fadeInRight1 1.2s ease-in-out forwards;
@@ -638,6 +639,9 @@
 .swiper-pagination-fraction {
   bottom: var(--swiper-pagination-bottom, 50px) !important;
 }
+ .equipmentSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
+     bottom: var(--swiper-pagination-bottom, 10px) !important;
+  }
 .hero-section1 .swiper-pagination-bullet {
   background: gray !important;
   color: gray !important;
@@ -1715,11 +1719,15 @@
     width: 18% !important;
     right: 2%;
   }
+
   .hero-section1 .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
     bottom: var(--swiper-pagination-bottom, 18px) !important;
+  }
+  .equipmentSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
+     bottom: var(--swiper-pagination-bottom, 8px) !important;
   }
   .implant-hero-section .implant-banner-img {
     margin-top: 0%;
@@ -1834,6 +1842,7 @@
   .banner1-img {
     top: 60%;
     left: 1%;
+
   }
   .banner1-img img {
     width: 38%;

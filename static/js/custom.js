@@ -10,7 +10,6 @@ $(window).on("load", function () {
 
   $(window).stellar({});
 });
-
 $(document).ready(function () {
   "use strict";
   /*----------------------------------------------------*/
@@ -37,7 +36,6 @@ $(document).ready(function () {
         }
       );
   });
-
   /*----------------------------------------------------*/
   /*	ScrollUp
   /*----------------------------------------------------*/
@@ -54,10 +52,8 @@ $(document).ready(function () {
       scrollImg: false, // Set true to use image
       activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
     };
-
     var o = $.extend({}, defaults, options),
       scrollId = "#" + o.scrollName;
-
     // Create element
     $("<a/>", {
       id: o.scrollName,
@@ -76,7 +72,6 @@ $(document).ready(function () {
       position: "fixed",
       "z-index": "2147483647",
     });
-
     // Active point overlay
     if (o.activeOverlay) {
       $("body").append("<div id='" + o.scrollName + "-active'></div>");
@@ -88,7 +83,6 @@ $(document).ready(function () {
         "z-index": "2147483647",
       });
     }
-
     // Scroll function
     $(window).on("scroll", function () {
       switch (o.animation) {
@@ -114,81 +108,12 @@ $(document).ready(function () {
           );
       }
     });
-
     // To the top
     $(scrollId).on("click", function (event) {
       $("html, body").animate({ scrollTop: 0 }, o.topSpeed);
       event.preventDefault();
     });
   };
-  /*----------------------------------------------------*/
-  /*	Portfolio Grid
-  /*----------------------------------------------------*/
-  // $(".grid-loaded").imagesLoaded(function () {
-  //   // filter items on button click
-  //   $(".gallery-filter").on("click", "button", function () {
-  //     var filterValue = $(this).attr("data-filter");
-  //     $grid.isotope({
-  //       filter: filterValue,
-  //     });
-  //   });
-
-  //   // change is-checked class on buttons
-  //   $(".gallery-filter button").on("click", function () {
-  //     $(".gallery-filter button").removeClass("is-checked");
-  //     $(this).addClass("is-checked");
-  //     var selector = $(this).attr("data-filter");
-  //     $grid.isotope({
-  //       filter: selector,
-  //     });
-  //     return false;
-  //   });
-
-  //   // init Isotope
-  //   var $grid = $(".masonry-wrap").isotope({
-  //     itemSelector: ".gallery-item",
-  //     percentPosition: true,
-  //     transitionDuration: "0.7s",
-  //     masonry: {
-  //       // use outer width of grid-sizer for columnWidth
-  //       columnWidth: ".gallery-item",
-  //     },
-  //   });
-  // });
-  /*----------------------------------------------------*/
-  /*	Single Image Lightbox
-  /*----------------------------------------------------*/
-  // $(".image-link").magnificPopup({
-  //   type: "image",
-  // });
-  /*----------------------------------------------------*/
-  /*	Video Link #1 Lightbox
-  // /*----------------------------------------------------*/
-  // $(".video-popup1").magnificPopup({
-  //   type: "iframe",
-  //   iframe: {
-  //     patterns: {
-  //       youtube: {
-  //         index: "youtube.com",
-  //         src: "https://www.youtube.com/embed/SZEflIVnhH8",
-  //       },
-  //     },
-  //   },
-  // });
-  /*----------------------------------------------------*/
-  /*	Video Link #2 Lightbox
-  /*----------------------------------------------------*/
-  // $(".video-popup2").magnificPopup({
-  //   type: "iframe",
-  //   iframe: {
-  //     patterns: {
-  //       youtube: {
-  //         index: "youtube.com",
-  //         src: "https://www.youtube.com/embed/7e90gBu4pas",
-  //       },
-  //     },
-  //   },
-  // });
   /*----------------------------------------------------*/
   /*	Statistic Counter
  /*----------------------------------------------------*/
