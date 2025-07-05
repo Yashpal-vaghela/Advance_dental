@@ -15,27 +15,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
-    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}">
     {% comment %} <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"> {% endcomment %}
     <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet'/>
     <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
     
     
     {% comment %} <link  rel="preload" href="{% static 'css/owl.carousel.min.css' %}" as='stylesheet'/> {% endcomment %}
-    {% comment %} <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/> {% endcomment %}
+    {% comment %} <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet'/> {% endcomment %}
     {% comment %} <link  rel="preload" href="{% static 'css/owl.theme.default.min.css' %}" as='stylesheet'/> {% endcomment %}
-    {% comment %} <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/> {% endcomment %}
+    {% comment %} <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet'/> {% endcomment %}
     {% comment %} <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" /> {% endcomment %}
+    <link  href="{% static 'css/review.css' %}" rel='stylesheet' /> {% endcomment %}
     <link  rel="preload" href="{% static 'css/animate.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/animate.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+    <link  href="{% static 'css/animate.css' %}" rel='stylesheet' />
     <link rel="preload" href="{% static 'css/style.css' %}" as="style">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link rel="preload" href="{% static 'css/responsive.css' %}" as="style">
-    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
     <link rel="preload" href="{% static 'css/banner.css' %}" as="stylesheet" />
-    <link href="{% static 'css/banner.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="{% static 'css/banner.css' %}" rel="stylesheet" />
 
     <!-- Plyr CSS -->
 
@@ -398,7 +398,7 @@
     </div>
     <script src="{% static 'js/jquery-3.3.1.min.js' %}" ></script>
     <script src="{% static 'js/bootstrap1.min.js' %}" ></script>
-    <script src="{% static 'js/modernizr.custom.js' %}" ></script>
+    {% comment %} <script src="{% static 'js/modernizr.custom.js' %}" ></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/jquery.easing.js' %}" ></script> {% endcomment %}
     <script src="{% static 'js/jquery.appear.js' %}" ></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
@@ -407,7 +407,7 @@
     <script src="{% static 'js/jquery.scrollto.js' %}"></script> 
     {% comment %} <script src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/owl.carousel.min.js' %}"></script> {% endcomment %}
- 
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" ></script>
     {% block js %} {% endblock %}

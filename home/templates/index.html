@@ -33,67 +33,106 @@
   hreflang="en-IN"
   href="https://advancedentalexport.com/"
 />
-<link 
-  rel="preload" 
-  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm" 
-  as="video" 
-  type="video/webm">
-  <link 
-  rel="preload" 
-  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4" 
-  as="video" 
-  type="video/mp4">
-<link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" imagesrcset="{% static 'banner-2/banner-12.webp' %}" />
-{% endblock %} {% block css %} 
-<link  rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-<link rel="preload" href="{% static 'css/review.css' %}" as="style">
-<link href="{% static 'css/review.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="{% static 'css/review.css' %}"></noscript>
+<link
+  rel="preload"
+  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm"
+  as="video"
+  type="video/webm"
+/>
+<link
+  rel="preload"
+  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4"
+  as="video"
+  type="video/mp4"
+/>
+<link
+  rel="preload"
+  as="image"
+  href="{% static 'banner-2/banner-12.webp' %}"
+  imagesrcset="{% static 'banner-2/banner-12.webp' %}"
+/>
+{% endblock %} {% block css %}
+<link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="preload" href="{% static 'css/review.css' %}" as="style" />
+<link
+  href="{% static 'css/review.css' %}"
+  rel="stylesheet"
+/>
+<noscript
+  ><link rel="stylesheet" href="{% static 'css/review.css' %}"
+/></noscript>
 {% endblock %} {% block body %}
 <section class="hero-section1 mb-0">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide banner-1-wrap position-relative">
-          <video
-            id="player" 
-            class="h-full w-full object-cover" 
-            width="1920" 
-            height="800"
-            preload="auto" 
-            playsinline 
-            muted 
-            autoplay 
-            loop 
-          >
-            <source src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm" type="video/webm" />
-            <source src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="container">
-            <div class="row mx-auto justify-content-center">
-              <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
-                <img src="{% static 'banner-2/banner-12.webp' %}" class="banner-1-img img-fluid " loading="eager"/>
+        <video
+          id="player"
+          class="h-full w-full object-cover"
+          width="1920"
+          height="800"
+          preload="auto"
+          playsinline
+          muted
+          autoplay
+          loop
+        >
+          <source
+            src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="container">
+          <div class="row mx-auto justify-content-center">
+            <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
+              <img
+                src="{% static 'banner-2/banner-125.webp' %}"
+                class="banner-1-img img-fluid"
+                width="800"
+                height="600"
+                loading="eager"
+                alt="Bringing Digital Revolution In Dentistry"
+              />
+            </div>
+            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
+              <div
+                class="title h1s text-white"
+                data-swiper-parallax="-300"
+                style="transform: translate3d(0px, 0px, 0px)"
+              >
+                Bringing Digital Revolution In
               </div>
-              <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
-                <div class="title h1s text-white" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px)">Bringing Digital Revolution In</div>
-                <div class="subtitle h2s" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px)">Digital Dentistry</div>
+              <div
+                class="subtitle h2s"
+                data-swiper-parallax="-200"
+                style="transform: translate3d(0px, 0px, 0px)"
+              >
+                Digital Dentistry
               </div>
             </div>
           </div>
         </div>
+      </div>
       <!-- Second banner -->
       <div class="swiper-slide banner2-swiper-slide position-relative">
         <img
           src="{% static 'banner-2/new-banner2-img12.webp' %}"
           class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
           alt="banner2-bg"
-          width="1920" height="750"
+          width="1920"
+          height="750"
         />
         <img
           src="{% static 'banner-2/new-banner2-img16.webp' %}"
           class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
           alt="banner2-bg"
-          width="1920" height="750"
+          width="1920"
+          height="750"
         />
         <a href="/zirconia-crown/">
           <img
@@ -129,7 +168,7 @@
         />
         <a href="/ad-implant/">
           <img
-            src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
+            src="{% static '/banner-2/implant-mobile-banner5124.png' %}"
             class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
           />
         </a>
@@ -230,8 +269,11 @@
             class="new-banner3-bg img-fluid d-sm-none d-md-block d-lg-none d-none"
           />
           <img
-            src="{% static '/banner-2/new-banner3-mobileSize5.webp' %}"
+            src="{% static '/banner-2/new-banner3-mobileSize52.webp' %}"
             class="new-banner3-bg d-block d-md-none img-fluid"
+            alr="aceScan-mobilescreen-banner-img"
+            width="582"
+            height="335"
           />
         </div>
         <div class="container new-banner-productWrapper">
@@ -310,7 +352,7 @@
         <div class="about-img text-center wow fadeInUp">
           <img
             class="img-fluid"
-            src="{% static 'about-ade.webp' %}"
+            src="{% static 'about-ade1.webp' %}"
             alt="Haresh Savani, Founder"
             title="Haresh Savani, Founder"
             width="400"
@@ -322,63 +364,57 @@
     </div>
   </div>
 </section>
-  <!--Static Counter -->
-  <div class="container text-center my-4">
-    <div class="row justify-content-center">
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'cases.svg' %}" alt="cases" />
-          </div>
-          <div class="text-box">
-            <div class="text-center">
-              <span class="count-element">6</span>L+
-            </div>
-            <p>Cases</p>
-          </div>
+<!--Static Counter -->
+<div class="container text-center my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-6">
+      <div class="stat-box d-flex align-items-center justify-content-center">
+        <div class="icon-box">
+          <img src="{% static 'cases.svg' %}" alt="cases" />
+        </div>
+        <div class="text-box">
+          <div class="text-center"><span class="count-element">6</span>L+</div>
+          <p>Cases</p>
         </div>
       </div>
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'doctor.svg' %}" alt="doctor" />
-          </div>
-          <div class="text-box">
-            <div class="text-center">
-              <span class="count-element">400</span>+
-            </div>
-            <p>Qualified Professional</p>
-          </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="stat-box d-flex align-items-center justify-content-center">
+        <div class="icon-box">
+          <img src="{% static 'doctor.svg' %}" alt="doctor" />
+        </div>
+        <div class="text-box">
+          <div class="text-center"><span class="count-element">400</span>+</div>
+          <p>Qualified Professional</p>
         </div>
       </div>
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'dentist.svg' %}" alt="cases" />
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="stat-box d-flex align-items-center justify-content-center">
+        <div class="icon-box">
+          <img src="{% static 'dentist.svg' %}" alt="cases" />
+        </div>
+        <div class="text-box">
+          <div class="text-center">
+            <span class="count-element">3500</span>+
           </div>
-          <div class="text-box">
-            <div class="text-center">
-              <span class="count-element">3500</span>+
-            </div>
-            <p>Trusted Dentists</p>
-          </div>
+          <p>Trusted Dentists</p>
         </div>
       </div>
-      <div class="col-md-3 col-6">
-        <div class="stat-box d-flex align-items-center justify-content-center">
-          <div class="icon-box">
-            <img src="{% static 'location-new.svg' %}" alt="cases" />
-          </div>
-          <div class="text-box">
-            <div class="text-center">
-              <span class="count-element">500</span>+
-            </div>
-            <p>Local Partners</p>
-          </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="stat-box d-flex align-items-center justify-content-center">
+        <div class="icon-box">
+          <img src="{% static 'location-new.svg' %}" alt="cases" />
+        </div>
+        <div class="text-box">
+          <div class="text-center"><span class="count-element">500</span>+</div>
+          <p>Local Partners</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 <!-- Static cards hero -->
 <section>
   <div class="container mt-5 mb-4">
@@ -500,8 +536,6 @@
                     alt="Advance Dental Image"
                     srcset=""
                     width="100%"
-                    height="100%"
-                    loading="eager"
                   />
                 </div>
                 <div class="sbox-51-txt">
@@ -639,7 +673,8 @@
                 </div>
               </div>
             </div>
-            {% comment %} <div class="swiper-slide">
+            {% comment %}
+            <div class="swiper-slide">
               <div class="sbox-51 mx-auto">
                 <div class="sbox-51-img">
                   <img
@@ -676,8 +711,9 @@
                   </a>
                 </div>
               </div>
-            </div> {% endcomment %}
-            {% comment %} <div class="swiper-slide">
+            </div>
+            {% endcomment %} {% comment %}
+            <div class="swiper-slide">
               <div class="sbox-51 mx-auto">
                 <div class="sbox-51-img">
                   <img
@@ -714,8 +750,9 @@
                   </a>
                 </div>
               </div>
-            </div> {% endcomment %}
-            {% comment %} <div class="swiper-slide">
+            </div>
+            {% endcomment %} {% comment %}
+            <div class="swiper-slide">
               <div class="sbox-51 mx-auto">
                 <div class="sbox-51-img">
                   <img
@@ -752,11 +789,12 @@
                   </a>
                 </div>
               </div>
-            </div> {% endcomment %}
+            </div>
+            {% endcomment %}
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </section>
@@ -767,9 +805,7 @@
       class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto"
     >
       <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
-        <div
-          class="banner-txt wow fadeInUp"
-        >
+        <div class="banner-txt wow fadeInUp">
           <h2
             class="h2-xs text-center text-sm-start text-lg-start home-section-title"
             style="font-size: 2.1rem"
@@ -860,9 +896,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-            >
+            <div class="sbox-7 icon-xs wow fadeInUp">
               <div class="hexagon">
                 <span class="flaticon-076-microscope blue-color"></span>
               </div>
@@ -880,9 +914,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-            >
+            <div class="sbox-7 icon-xs wow fadeInUp">
               <div class="hexagon">
                 <span class="flaticon-080-shield blue-color"></span>
               </div>
@@ -899,9 +931,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-            >
+            <div class="sbox-7 icon-xs wow fadeInUp">
               <div class="hexagon">
                 <span class="flaticon-113-clinic-history-4 blue-color"></span>
               </div>
@@ -919,9 +949,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-            >
+            <div class="sbox-7 icon-xs wow fadeInUp">
               <div class="hexagon">
                 <span class="flaticon-143-teeth blue-color"></span>
               </div>
@@ -937,9 +965,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-            >
+            <div class="sbox-7 icon-xs wow fadeInUp">
               <div class="hexagon">
                 <span class="flaticon-079-safebox blue-color"></span>
               </div>
@@ -968,7 +994,7 @@
         <h2 class="h2-m home-section-title">
           Our Core Dental Services for Crowns, Bridges, and Implants
         </h2>
-        <p>
+        <p class="text-center">
           Experience an Unmatched Spectrum of Services: Catering to Every Dental
           Professional's Needs Today!
         </p>
@@ -1028,11 +1054,11 @@
         <div class="sbox-6-img text-center wow fadeInUp">
           <img
             class="img-fluid"
-            src="{% static 'img/teeth-img93.webp' %}"
-            data-src="{% static 'img/teeth-img93.webp' %}"
+            src="{% static 'img/teeth-img931.webp' %}"
+            data-src="{% static 'img/teeth-img931.webp' %}"
             alt="services-image"
-            width="100%"
-            height="100%"
+            width="356"
+            height="auto"
           />
         </div>
       </div>
@@ -1093,6 +1119,8 @@
                 src="{{ ie.image.url }}"
                 data-src="{{ ie.image.url }}"
                 alt="Before & After"
+                width="308"
+                height="auto"
               />
             </div>
           </div>
@@ -1145,7 +1173,7 @@
                 >
                   <div class="user_image">
                     <img
-                      src="{% static 'img/profile-user-3.png' %}"
+                      src="{% static 'img/profile-user-3.webp' %}"
                       class="d-block w-100"
                       alt="user"
                       width="100%"
@@ -1317,7 +1345,6 @@
   </div>
 </section>
 {% endblock %}
-<!-- jQuery (required by Owl Carousel) -->
 {% comment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Owl Carousel JS -->
@@ -1509,7 +1536,7 @@
   });
 </script>
 
-<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js" defer></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("player");
