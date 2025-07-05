@@ -33,98 +33,70 @@
   hreflang="en-IN"
   href="https://advancedentalexport.com/"
 />
-{% if not is_mobile %}
-<link
-  rel="preload"
-  as="video"
-  href="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm"
-  type="video/webm"
-/>
-<link
-  rel="preload"
-  as="video"
-  href="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4"
-  type="video/mp4"
-/>
-{% endif %}
-<link rel="preload" as="image" href="{% static 'banner-2/poster-banner1.webp' %}" imagesrcset="{% static 'banner-2/poster-banner1.webp' %}" />
+<link 
+  rel="preload" 
+  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm" 
+  as="video" 
+  type="video/webm">
+  <link 
+  rel="preload" 
+  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4" 
+  as="video" 
+  type="video/mp4">
 <link rel="preload" as="image" href="{% static 'banner-2/banner-12.webp' %}" imagesrcset="{% static 'banner-2/banner-12.webp' %}" />
 {% endblock %} {% block css %} 
 <link  rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-<link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
-<link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+<link rel="preload" href="{% static 'css/review.css' %}" as="style">
+<link href="{% static 'css/review.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{% static 'css/review.css' %}"></noscript>
 {% endblock %} {% block body %}
 <section class="hero-section1 mb-0">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide banner-1-wrap position-relative">
-        <video
-          class="h-full w-full object-cover"
-          preload="none"
-          playsinline
-          muted
-          autoplay
-          loop
-          id="player"
-          poster="{% static 'banner-2/poster-banner1.webp' %}"
-          fetchpriority="high"
-        >
-          <source
-            src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.webm"
-            type="video/webm"
-          />
-          <source
-            src="https://advancedentalexport.s3.ap-south-1.amazonaws.com/banner-1-video2.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div class="container">
-          <div class="row mx-auto justify-content-center">
-            <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
-              <img
-                src="{% static 'banner-2/banner-12.webp' %}"
-                alt="Bringing Digital Revolution In Dentistry"
-                width="800"
-                height="600"
-                class="banner-1-img img-fluid"
-              />
-            </div>
-            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
-              <div
-                class="title h1s text-white"
-                data-swiper-parallax="-300"
-                style="transform: translate3d(0px, 0px, 0px)"
-              >
-                Bringing Digital Revolution In
+          <video
+            id="player" 
+            class="h-full w-full object-cover" 
+            width="1920" 
+            height="800"
+            preload="auto" 
+            playsinline 
+            muted 
+            autoplay 
+            loop 
+          >
+            <source src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm" type="video/webm" />
+            <source src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="container">
+            <div class="row mx-auto justify-content-center">
+              <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
+                <img src="{% static 'banner-2/banner-12.webp' %}" class="banner-1-img img-fluid " loading="eager"/>
               </div>
-              <div
-                class="subtitle h2s"
-                data-swiper-parallax="-200"
-                style="transform: translate3d(0px, 0px, 0px)"
-              >
-                Digital Dentistry
+              <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
+                <div class="title h1s text-white" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px)">Bringing Digital Revolution In</div>
+                <div class="subtitle h2s" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px)">Digital Dentistry</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      <!-- Second banner -->
       <div class="swiper-slide banner2-swiper-slide position-relative">
         <img
-          rel="preload"
           src="{% static 'banner-2/new-banner2-img12.webp' %}"
           class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
           alt="banner2-bg"
+          width="1920" height="750"
         />
         <img
-          rel="preload"
           src="{% static 'banner-2/new-banner2-img16.webp' %}"
           class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
           alt="banner2-bg"
+          width="1920" height="750"
         />
         <a href="/zirconia-crown/">
           <img
-            rel="preload"
             src="{% static 'banner-2/new-banner2-mobileSize2.webp' %}"
             class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
             alt="banner2-bg"
@@ -133,13 +105,11 @@
 
         <div class="container new-banner2">
           <img
-            rel="preload"
             src="{% static 'banner-2/new-banner2-logo.webp' %}"
             class="new-banner2-logo img-fluid"
             alt="banner2-logo"
           />
           <img
-            rel="preload"
             src="{% static 'banner-2/new-banner2-text.webp' %}"
             class="new-banner2-text img-fluid"
             alt="banner2-text"
@@ -151,15 +121,14 @@
           </button>
         </div>
       </div>
+      <!-- third banner -->
       <div class="swiper-slide home-implant-slider-wrapper position-relative">
         <img
-          rel="preload"
           src="{% static '/banner-2/Implant-banner-bg9.webp' %}"
           class="img-fluid home-implant-banner-bg"
         />
         <a href="/ad-implant/">
           <img
-            rel="preload"
             src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
             class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
           />
@@ -249,6 +218,7 @@
           </div>
         </div>
       </div>
+      <!-- fourth banner -->
       <div class="swiper-slide">
         <div class="new-banner-wrapper position-relative">
           <img
@@ -343,15 +313,15 @@
             src="{% static 'about-ade.webp' %}"
             alt="Haresh Savani, Founder"
             title="Haresh Savani, Founder"
-            width="100%"
-            height="100%"
+            width="400"
+            height="400"
             loading="eager"
           />
         </div>
       </div>
     </div>
   </div>
-
+</section>
   <!--Static Counter -->
   <div class="container text-center my-4">
     <div class="row justify-content-center">
@@ -409,7 +379,6 @@
       </div>
     </div>
   </div>
-</section>
 <!-- Static cards hero -->
 <section>
   <div class="container mt-5 mb-4">
@@ -670,7 +639,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            {% comment %} <div class="swiper-slide">
               <div class="sbox-51 mx-auto">
                 <div class="sbox-51-img">
                   <img
@@ -707,8 +676,8 @@
                   </a>
                 </div>
               </div>
-            </div>
-            <div class="swiper-slide">
+            </div> {% endcomment %}
+            {% comment %} <div class="swiper-slide">
               <div class="sbox-51 mx-auto">
                 <div class="sbox-51-img">
                   <img
@@ -745,8 +714,8 @@
                   </a>
                 </div>
               </div>
-            </div>
-            <div class="swiper-slide">
+            </div> {% endcomment %}
+            {% comment %} <div class="swiper-slide">
               <div class="sbox-51 mx-auto">
                 <div class="sbox-51-img">
                   <img
@@ -783,11 +752,11 @@
                   </a>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </div>
+      </div>  
     </div>
   </div>
 </section>
@@ -1355,7 +1324,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 {% endcomment %} 
 {% block javascript %}
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   var swiper1 = new Swiper(".clientLogo", {
     slidesPerView: 7,
@@ -1560,6 +1528,7 @@
     });
   });
 </script>
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -400,19 +400,18 @@
     <script src="{% static 'js/bootstrap1.min.js' %}" ></script>
     <script src="{% static 'js/modernizr.custom.js' %}" ></script>
     {% comment %} <script src="{% static 'js/jquery.easing.js' %}" ></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/jquery.appear.js' %}" ></script> {% endcomment %}
+    <script src="{% static 'js/jquery.appear.js' %}" ></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
     <script src="{% static 'js/menu.min.js' %}" ></script>
-    {% comment %} <script src="{% static 'js/sticky.min.js' %}"></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/jquery.scrollto.js' %}"></script> {% endcomment %}
+    <script src="{% static 'js/sticky.min.js' %}"></script> 
+    <script src="{% static 'js/jquery.scrollto.js' %}"></script> 
     {% comment %} <script src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/owl.carousel.min.js' %}"></script> {% endcomment %}
  
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" ></script>
     {% block js %} {% endblock %}
-    <script src="{% static 'js/custom.js' %}" ></script>
-    
+    <script src="{% static 'js/custom.min.js' %}" ></script>  
     {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script> {% endcomment %}
     {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script> {% endcomment %}
     {% comment %} <script src="{% static 'js/changer.js' %}"></script> {% endcomment %}
@@ -484,7 +483,7 @@
             gtag("js", new Date());
             gtag("config", "G-Q54R2WNM7Y");
           };
-        }, 2000); // Load after 2 seconds (Adjust delay if needed)
+        }, 500); // Load after 2 seconds (Adjust delay if needed)
       });
     </script>
     {% endfor %} 

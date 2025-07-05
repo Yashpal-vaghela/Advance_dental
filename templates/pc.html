@@ -24,6 +24,7 @@
           <span class="wsmenu-click"><i class="wsmenu-arrow"></i></span><a href="#"><span {% if request.path == '/' %}class=" "{% endif %} >Products</span> <span class="wsarrow"></span></a>
           <ul class="sub-menu">
             {% for ie in product %}
+            {% if ie.slug not in 'nobelprocera,bps-biofunctional-prosthetic-system,digital-crown-bridge' %}
               <li aria-haspopup="true">
                 <a href="{% url 'productd' ie.slug %}">{{ ie.breadcrumb }}</a>
 
@@ -37,6 +38,7 @@
                   </ul>
                 {% endif %}
               </li>
+            {% endif %}  
             {% endfor %}
           </ul>
         </li>
