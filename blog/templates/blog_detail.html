@@ -62,19 +62,8 @@
   href="{% spaceless %}{{data.canonical}}{% endspaceless %}"
 />
 {% endblock seo %} {% block css %}
-<link rel="preload" href="{% static 'css/blog.css' %}" as="stylesheet" />
-<link
-  href="{% static 'css/blog.css' %}"
-  rel="stylesheet"
-  media="print"
-  onload="this.media='all'"
-/>
-{% comment %}
-<link
-  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-  rel="stylesheet"
-/>
-{% endcomment %}
+    <link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
 <style>
   p {
     font-size: 18px;
@@ -85,10 +74,6 @@
   .content ul,
   .content ol {
     padding-left: 25px !important;
-  }
-  .breadcrumb-text {
-    font-size: 1.5rem;
-    font-weight: 800;
   }
 
   @media (max-width: 576px) {
@@ -126,9 +111,6 @@
           <div class="breadcrumb-text steelblue-color text-start">
             {{data.breadcrumb}}
           </div>
-          {% comment %}
-          <h4 class="h4-sm steelblue-color">{{data.h1}}</h4>
-          {% endcomment %}
         </div>
       </div>
     </div>
@@ -218,15 +200,33 @@
             <!-- ABOUT POST AUTHOR -->
             <div class="author-senoff">
               <!-- Avatar -->
-              <img src="{{data.author.image.url}}" alt="{{data.author}}" />
+              <img src="{{data.author.image.url}}" alt="Haresh Savani Author Advance Dental Export Image" />
 
               <!-- Text -->
               <div class="author-senoff-txt">
                 <!-- Title -->
-                <p class="h5-sm steelblue-color">
+                <span class="steelblue-color">
                   Published by {{data.author}}
-                </p>
+                </span>
+                <p class="fw-bold">{{data.author.position}}</p>
                 <p>{{data.author.description|safe}}</p>
+                <div class="author-social-links mt-2">
+                  {% if data.author.fb %}
+                    <a href="{{ data.author.fb }}" target="_blank" class="author-social-link">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  {% endif %}
+                  {% if data.author.insta %}
+                    <a href="{{ data.author.insta }}" target="_blank" class="author-social-link">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  {% endif %}
+                  {% if data.author.linkedin %}
+                    <a href="{{ data.author.linkedin }}" target="_blank" class="author-social-link">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  {% endif %}
+                </div>
               </div>
             </div>
             <!-- END ABOUT POST AUTHOR -->
@@ -235,7 +235,9 @@
             {% if related_blogs|length >= 1 %}
             <div class="related-posts position-relative">
               <!-- Title -->
-              <p class="h5-md steelblue-color fw-bold">Related Posts</p>
+              <div class="related-posts-title">
+                <span class="steelblue-color">Similar Blogs</span>
+              </div>
               <!-- BLOG POST #1 -->
               <div class="swiper-container">
                 <div class="swiper related-blog-swiper">
@@ -321,8 +323,6 @@
               <!-- End row -->
             </div>
             <!-- END RELATED POSTS -->
-            <hr />
-
             <!-- COMMENT FORM -->
             {% comment %}
             <div id="leave-comment">
@@ -410,6 +410,8 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
+      dynamicBullets: true,
+      dynamicMainBullets: 4,
     },
     autoplay: {
       delay: 1500,

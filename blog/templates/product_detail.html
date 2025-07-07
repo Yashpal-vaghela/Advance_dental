@@ -128,7 +128,37 @@
                                         {% endfor %}
                                     </div>
                                 </section>
+                                <!-- ABOUT POST AUTHOR -->
+                                    <div class="author-senoff">
+                                    <!-- Avatar -->
+                                    <img src="{{author.image.url}}" alt="Haresh Savani Author Advance Dental Export Image" />
 
+                                    <!-- Text -->
+                                    <div class="author-senoff-txt">
+                                        <!-- Title -->
+                                        <span class="steelblue-color"> {{author}} </span>
+                                        <p class="fw-bold">{{author.position}}</p>
+                                        <p>{{author.description|safe}}</p>
+                                        <div class="author-social-links mt-2">
+                                        {% if author.fb %}
+                                            <a href="{{ author.fb }}" target="_blank" class="author-social-link">
+                                            <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if author.insta %}
+                                            <a href="{{ author.insta }}" target="_blank" class="author-social-link">
+                                            <i class="fab fa-instagram"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if author.linkedin %}
+                                            <a href="{{ author.linkedin }}" target="_blank" class="author-social-link">
+                                            <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                    </div>
+                                <!-- END ABOUT POST AUTHOR -->
                                 <!-- RELATED BLOG POSTS -->
                                 {% if related_blogs %}
                                     <div class="related-product-posts mt-5">
@@ -177,28 +207,6 @@
                         </div>
                     </div>
 
-                    <!-- IMAGE WIDGET -->						
-                    <div class="sidebar-founder d-flex align-items-center flex-wrap">
-                        <!-- Image -->
-                        <div class="founder-image me-4 mb-4 mb-lg-0">
-                            <img class="img-fluid" src="{% static 'harsh.jpg' %}" alt="image-widget" />	
-                        </div>
-
-                        <!-- Content -->
-                        <div class="founder-description">
-                            <!-- Title -->
-                            <span class="mb-3 d-block steelblue-color founder-name">Haresh Savani, Founder</span>
-
-                            <!-- Text -->
-                            <p class="p-sm mb-3">
-                                As an accomplished founder and CEO, seasoned digital dental technician, experienced ceramist, and a guide to thousands of budding professionals, my vision is to bring a dental renaissance to the global canvas.
-                            </p>
-
-                            <!-- Button -->
-                            <a href="{% url 'home:contact_new' %}" class="btn btn-blue blue-hover mt-10">Get In Touch</a>
-                        </div>
-                    </div>
-
                 </div> <!-- END BLOG POSTS HOLDER -->
 
                 <!-- SIDEBAR -->
@@ -227,6 +235,8 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
+      dynamicBullets: true,
+      dynamicMainBullets: 3,
     },
     autoplay: {
       delay: 2000,

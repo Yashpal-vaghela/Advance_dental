@@ -52,7 +52,9 @@
 			<div class="newblog-page-section">
 				<div class="container">
 					<div class="row gap-4 gap-md-0 gap-lg-0 mt-5 mb-sm-4 mb-5 position-relative justify-content-center">
+						{% if page_obj.number == 1 %}
 						<h2 class="blog-content-title order-lg-1 order-2 mb-0 mb-sm-3">Latest Blog</h2>
+						{% endif %}
 						{% for blog in first_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 order-lg-1 order-2">
 										<div class="position-relative mx-auto all-blog-content card">
@@ -85,6 +87,7 @@
 										</div>
 							</div>
 						{% endfor %}
+						
 						<div class="col-lg-4 order-lg-2 d-md-flex d-lg-block justify-content-between align-items-center align-items-sm-start order-1">
 							<form class="blog_search_form" action="/blog/" method="GET">
 								<input class="blog-txt-field form-control" type="text" id="searchInput" onchange="searchBlogs(event)" oninput="searchBlogs(event)" placeholder="Search Blogs and Tags" name="q">

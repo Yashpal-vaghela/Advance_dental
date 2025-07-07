@@ -65,13 +65,15 @@ def product_detail(request, slug):
     data3 = Blog.objects.filter(main3=True).order_by('-id')
     data4 = Faqpage.objects.filter(product=data).order_by('-id')
     related_blogs = Blog.objects.filter(category__in=data.category.all()).distinct()
+    author = Author.objects.first()
     print(related_blogs)
     context = {
         'data':data,
         'data2':data2,
         'data3':data3,
         'data4':data4,
-        'related_blogs': related_blogs
+        'related_blogs': related_blogs,
+        'author': author,
     }
     return render(request, 'product_detail.html', context)
 
@@ -102,13 +104,15 @@ def blog_detail(request, slug):
         data3 = Blog.objects.filter(main3=True).order_by('-id')
         data4 = Faqpage.objects.filter(product=data).order_by('-id')
         related_blogs = Blog.objects.filter(category__in=data.category.all()).distinct()
+        author = Author.objects.first()
 
         context = {
             'data':data,
             'data2':data2,
             'data3':data3,
             'data4':data4,
-            'related_blogs': related_blogs
+            'related_blogs': related_blogs,
+            'author': author,
         }
         return render(request, 'product_detail.html', context)
     
