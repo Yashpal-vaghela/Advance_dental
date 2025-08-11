@@ -965,6 +965,32 @@ def bdld(request, slug):
     video      =VideoTestimonals.objects.all().order_by('-id')[:4]
     pk = Place.objects.get(slug=slug)
     
+    faq_data = [
+        {
+            'question': f"Which is the best dental laboratory near me in {pk.name}?",
+            'answer': f"For the best dental laboratory in {pk.name}, Advance Dental Export (ADE) is a leading choice for high precision, advanced technology and quality services. We provide services all over {pk.name} and internationally as well, making it a perfect and reliable choice."
+        },
+        {
+            'question': "How do I choose a dental lab?",
+            'answer': "While choosing a dental lab, aspects like its technology, team experience, quality certifications (such as FDA registration), quality of materials used, turnaround time and customer service should be considered. The best lab can deliver superior results by understanding your clinical needs."
+        },
+        {
+            'question': "Which dental services are provided at ADE dental laboratory?",
+            'answer': "Advance Dental Export offers a wide range of dental services such as dental implant prosthetics, crowns and bridges including Zirconia and IPS E.Max, removable prosthetics (BPS denture), cosmetic dental solutions (veneers) and other specialized services."
+        },
+        {
+            'question': "What makes our dental laboratory the best?",
+            'answer': f"Factors such as advanced technology like CAD/CAM and 3D printing, a team of over 400 skilled and experienced technicians, commitment to quality with FDA registration, use of premium biocompatible materials, efficient turnaround time and close collaboration with dentists in {pk.name}."
+        },
+        {
+            'question': f"Which dental labs in {pk.name} offer the best services?",
+            'answer': f"Advance Dental Export (ADE) is at the forefront among the dental labs offering the best services in {pk.name}. With its cutting-edge technology, experienced team, quality products and collaboration with clinicians, ADE consistently delivers outstanding results."
+        },
+        {
+            'question': "What certifications do the ADE have?",
+            'answer': "Advance Dental Export (ADE) adheres to the highest standards of quality and safety and is an FDA registered laboratory. This certification demonstrates their commitment to quality."
+        }
+    ]
     context = { 
         'pk':pk,
         'main3':main3,
@@ -974,9 +1000,15 @@ def bdld(request, slug):
         'gallery':gallery,
         'gallery21':gallery21,
         'video':video,
+        'faq_data': faq_data,
 
     }
-    return render(request, 'bdld.html', context)
+    if pk.type == 'city':
+        template_name = 'bdld.html'
+    else:
+        template_name = 'state-bdlb.html'
+
+    return render(request, template_name, context)
     
 def error_404(request):
         return render(request,'404.html')

@@ -36,6 +36,8 @@
 {% block css %}
   <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
   <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+  <link  rel="preload" href="{% static 'css/bdlb.css' %}" as='stylesheet' />
+  <link  href="{% static 'css/bdlb.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
 {% endblock css %}
 
 {% block body %}
@@ -80,38 +82,68 @@
             offering a wide range of dental solutions including dentures, implants, bridges, and more. 
             Our commitment to excellence has made us a trusted name in the dental industry not only in {{pk.name}} but across the nation.
           </p>
-					<h2 class="h2-m section-id blue-color ">Here's why we stand out:</h2>
-					<p>
-						<b style="font-weight: bold;"> Quality Products:</b>We’re committed to delivering top-quality dental prosthetics 
-            in {{pk.name}} that meet international standards. Our skilled team uses the latest technology to ensure every dental 
-            appliance we create is precise and reliable.
-					</p>
-
-					<p>
-						<b style="font-weight: bold;">Competitive Prices:</b> We know how important affordability is. That's why,
-            even with our high-quality services, we offer competitive prices to make dental care accessible to 
-            everyone in {{pk.name}}.
-					</p>
-
-					<p>
-						<b style="font-weight: bold;">Experience and Expertise:</b> With years of experience in the dental industry, 
-            our team is made up of passionate experts who always strive for the best results. We stay updated on the 
-            latest advancements in dental technology to offer the best, cutting-edge solutions.
-					</p>
-
-					<p>
-						<b style="font-weight: bold;">Imports and Exports:</b> We not only serve local clients in {{pk.name}} but also work 
-            with national and international clients by importing and exporting dental prosthetic.
-					</p>
+					
 				</div>
 			</div>
 			<div class="col-lg-5">
-				<div class="about-img text-center wow fadeInUp" data-wow-delay="0.6s"
+				<div class="about-img-new text-center wow fadeInUp" data-wow-delay="0.6s"
 					style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-					<img class="img-fluid" src="{% static 'harsh3.png' %}" alt="Haresh Savani, Founder"
+					<img class="img-fluid" src="{% static 'about-ade1.webp' %}" alt="Haresh Savani, Founder"
 						title="Haresh Savani, Founder" />
 				</div>
 			</div>
+      <div class="mt-3 align-items-center">
+        <h2 class="h2-m section-id blue-color">Here's why we stand out:</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6">
+            <div class="bdlb-card h-100 shadow-sm border-0 p-4">
+              <h3 class="bdlb-card-title fw-bold">Quality Products</h3>
+              <p class="bdlb-card-text">
+                We’re committed to delivering top-quality dental prosthetics 
+                in {{pk.name}} that meet international standards. Our skilled team uses the latest technology to ensure every dental 
+                appliance we create is precise and reliable.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6">
+            <div class="bdlb-card h-100 shadow-sm border-0 p-4">
+              <h3 class="bdlb-card-title fw-bold">Competitive Prices</h3>
+              <p class="bdlb-card-text">
+                We know how important affordability is. That's why,
+                even with our high-quality services, we offer competitive prices to make dental care accessible to 
+                everyone in {{pk.name}}.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6">
+            <div class="bdlb-card h-100 shadow-sm border-0 p-4">
+              <h3 class="bdlb-card-title fw-bold">Experience and Expertise</h3>
+              <p class="bdlb-card-text">
+                With years of experience in the dental industry, our team is made up of passionate 
+                experts who always strive for the best results. We stay updated on the latest advancements 
+                in dental technology to offer the best, cutting-edge solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6">
+            <div class="bdlb-card h-100 shadow-sm border-0 p-4">
+              <h3 class="bdlb-card-title fw-bold">Imports and Exports</h3>
+              <p class="bdlb-card-text">
+                We not only serve local clients in {{pk.name}} but also work 
+                with national and international clients by importing and exporting dental prosthetics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
 		</div>
 	</div>
 </section>

@@ -4,22 +4,24 @@ import os
 # Always resolve relative to this script’s location
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# css_files = [
+#     'css/animate.css',
+#     'css/adImplant1.css',
+#     'css/responsive.css',
+#     'css/banner.css',
+#     'css/blog.css',
+#     'css/magnific-popup.css',
+#     'css/menu.css',
+#     'css/product.css',
+#     'css/style.css',
+#     'css/timetable.css',
+#     'css/web_story.css',
+#     'css/zir.css',
+#     'css/bootstrap1.min.css'
+# ]
 css_files = [
-    'css/animate.css',
-    'css/adImplant1.css',
-    'css/responsive.css',
-    'css/banner.css',
-    'css/blog.css',
-    'css/magnific-popup.css',
-    'css/menu.css',
-    'css/product.css',
-    'css/style.css',
-    'css/timetable.css',
-    'css/web_story.css',
-    'css/zir.css',
-    'css/bootstrap1.min.css'
+    'css/style.css'
 ]
-
 for css_path in css_files:
     full_css_path = os.path.join(BASE_DIR, css_path)
 

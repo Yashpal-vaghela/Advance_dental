@@ -280,6 +280,11 @@ class BeforeAfter(models.Model):
         return self.name
         
 class Place(models.Model):
+    place_type = (
+        ('city', 'City'),
+        ('state', 'State'),
+    )
+    type = models.CharField(max_length=10, choices=place_type, default='city')
     name = models.CharField(max_length = 156)
     h1  = models.CharField(max_length = 156,blank=True, null=True)
     slug =models.CharField(max_length = 1256,blank=True, null=True)

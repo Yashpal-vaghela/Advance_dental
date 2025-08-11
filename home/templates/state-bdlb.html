@@ -1,0 +1,1072 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export</title>
+<meta name="description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis."/>
+<meta name="keyword" content="{% spaceless %}{{pk.keyword}}{% endspaceless %}" />
+<link rel="canonical" href="https://advancedentalexport.com/best-dental-lab-in-{{pk.slug}}/" />
+<!-- Opengraphs -->
+<meta property="og:title" content="{% spaceless %}{{pk.title}}{% endspaceless %}" />
+<meta property="og:type" content="{% spaceless %}{{pk.og_type}}{% endspaceless %}" />
+<meta property="og:url" content="https://advancedentalexport.com/best-dental-lab-in-{{pk.slug}}/" />
+<meta property="og:site_name" content="Advance Dental Export"/>
+{% if pk.image %}
+<meta property="og:image" content="{% static 'img/feature.webp' %}" />
+<meta property="og:image:alt" content="Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export"/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/webp" />
+{% endif %}
+<meta name="og:description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@advancedentalexport" />
+<meta name="twitter:title" content="Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export" />
+<meta name="twitter:description" content="Looking for the best dental lab in {{pk.name}}? Advance Dental Export provides the best quality dental crowns, bridges, implants, dentures, and other dental prosthesis." />
+
+{% if pk.image %}
+<meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
+<meta property="twitter:image:alt" content="Best Dental Lab in {{pk.name}} & Near by | Advance Dental Export"/>
+{% endif %}
+<link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/best-dental-lab-in-{{pk.slug}}/" />
+<link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/best-dental-lab-in-{{pk.slug}}/" />
+{% endblock seo %}
+
+{% block css %}
+  <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
+  <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+  <link  rel="preload" href="{% static 'css/bdlb.css' %}" as='stylesheet' />
+  <link  href="{% static 'css/bdlb.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+  <link  rel="preload" href="{% static 'css/zir.css' %}" as='stylesheet' />
+  <link  href="{% static 'css/zir.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+{% endblock css %}
+
+{% block body %}
+<div id="breadcrumb" class="division">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class=" breadcrumb-holder">
+
+					<!-- Breadcrumb Nav -->
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Best Dental Lab in {{pk.name}}</li>
+						</ol>
+					</nav>
+
+					<!-- Title -->
+					<h1 class="h4-sm steelblue-color">Best Dental Lab in {{pk.name}}</h1>
+
+				</div>
+			</div>
+		</div> <!-- End row -->
+	</div> <!-- End container -->
+</div> <!-- END BREADCRUMB -->
+<section id="about-hero" class="pt-50 pb-50">
+  <div class="container">
+    <div class="row d-flex align-items-start">
+      <div class="col-md-4">
+        <div class="small-heading">
+          <h2 class="h2-m mb-0">
+            Best Dental Laboratory in
+            <span class="steelblue-color">{{pk.name}}</span> The Address of
+            Accuracy, Quality, and Trust
+          </h2>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="main-descripation">
+          <p>
+            Welcome to Advance Dental Export! We are the best dental laboratory
+            in {{pk.name}}, and we assure you of exceptional precision,
+            unmatched quality, and complete trust. At the heart of {{pk.name}}’s
+            dental innovation, we blend technology with craftsmanship to deliver
+            restorations that dentists rely on.
+          </p>
+          <p>
+            From crowns to implants, every case reflects our commitment to
+            precision, consistency, and lasting partnerships built on trust. We
+            make every smile perfect through advanced technology and experienced
+            craftsmanship, which makes us the top dental laboratory of
+            {{pk.name}}.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="new-advantage-section mb-5" id="newadvantage_section">
+  <div class="new__valores_pin">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 d-lg-block d-none image-container1">
+          <img
+            src="{% static 'images/vector.png' %}"
+            alt="Image 1"
+            class="styled-image img-fluid image1"
+          />
+          <img
+            src="{% static 'images/vector.png' %}"
+            alt="Image 2"
+            class="styled-image img-fluid image2"
+          />
+          <img
+            src="{% static 'images/vector.png' %}"
+            alt="Image 3"
+            class="styled-image img-fluid image3"
+          />
+          <img
+            src="{% static 'images/vector.png' %}"
+            alt="Image 4"
+            class="styled-image img-fluid image4"
+          />
+        </div>
+        <div class="col-lg-8 col-12 new__valores">
+          <h2 class="new-advantage-section-title">
+            Why We Stand as the Best Dental Laboratory of Gujarat?
+          </h2>
+          <div class="swiper advantageSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="vector-img-wrapper mt-5" id="vector-img1">
+                  <img
+                    src="{% static 'images/vector-mobile411.png' %}"
+                    alt="Image1"
+                    class="vector-Image1 img-fluid d-md-block d-lg-none"
+                  />
+                </div>
+                <div
+                  class="advantage-section-content d-block d-md-flex align-items-center"
+                >
+                  <h3 class="mb-lg-0">Advanced Technology</h3>
+                  <p>
+                    Our laboratory is equipped with advanced facilities like
+                    CAD/CAM technology, 3D printing, and digital scanning.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vector-img-wrapper mt-5" id="vector-img2">
+                  <img
+                    src="{% static 'images/vector-mobile44.png' %}"
+                    alt="Image1"
+                    class="vector-Image2 img-fluid d-md-block d-lg-none"
+                  />
+                </div>
+                <div
+                  class="advantage-section-content d-block d-md-flex align-items-center"
+                >
+                  <h3>Experienced and Skilled Team</h3>
+                  <p>
+                    Our team of over 400 experienced and skilled technicians,
+                    with years of knowledge and artistry, prepares each product
+                    to the highest standards.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vector-img-wrapper mt-5" id="vector-img3">
+                  <img
+                    src="{% static 'images/vector-mobile32.png' %}"
+                    alt="Image1"
+                    class="vector-Image3 img-fluid d-md-block d-lg-none"
+                  />
+                </div>
+                <div
+                  class="advantage-section-content d-block d-md-flex align-items-center"
+                >
+                  <h3>Quality and Certifications</h3>
+                  <p>
+                    We are FDA registered and use only premium, biocompatible
+                    materials. This never compromises on quality and ensures
+                    patient safety.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vector-img-wrapper mt-5" id="vector-img4">
+                  <img
+                    src="{% static 'images/vector-mobile431.png' %}"
+                    alt="Image1"
+                    class="vector-Image4 d-md-block d-lg-none"
+                  />
+                </div>
+                <div
+                  class="advantage-section-content d-block d-md-flex align-items-center"
+                >
+                  <h3>Efficiency and Turnaround Time</h3>
+                  <p>
+                    Our efficient manufacturing and operational processes result
+                    in fast turnaround times.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="vector-img-wrapper mt-5 mt-sm-5 mt-md-0"
+                  id="vector-img5"
+                >
+                  <img
+                    src="{% static 'images/vector-mobile53.png' %}"
+                    alt="Image1"
+                    class="vector-Image4 d-md-block d-lg-none"
+                  />
+                </div>
+                <div
+                  class="advantage-section-content d-block d-md-flex align-items-center"
+                >
+                  <h3>Collaboration with Dentists in Gujarat</h3>
+                  <p>
+                    Our close collaboration with dental professionals across
+                    Gujarat ensures that you and your patients receive only
+                    outstanding results.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bdld-services-section pb-4" id="bdld-services-section">
+  <div class="scroll-container container">
+    <div
+      class="row mx-auto mx-md-0 justify-content-center justify-content-lg-start swiper-card"
+    >
+      <div
+        class="col-lg-5 col-md-11 col-sm-12 col-11 bdld-services-section-title"
+      >
+        <h2 class="mb-3 mb-lg-5">Our Comprehensive Dental Services</h2>
+        <p>
+          As a trusted dental laboratory for {{pk.name}}’s dentists, we offer a
+          wide range of quality and comprehensive dental solutions for your
+          patients
+        </p>
+      </div>
+      <div class="col-11 col-md-12 col-lg-7 mt-lg-3">
+        <div class="swiper serviceSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">Dental Implant Prosthetics</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    We offer state-of-the-art implant solutions including custom
+                    abutments, implant based dental restorations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">Zirconia Crowns and Bridges</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Extremely strong and natural-looking zirconia crowns and
+                    bridges give your patients a stunning smile.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">IPS E.Max Ceramic Restorations</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Our IPS E.Max restorations are the best choice for high
+                    aesthetics and biocompatibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">PFM (Porcelain-Fused-to-Metal) Crowns</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    PFM crowns provide reliable results for time-tested
+                    durability and excellent functionality.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">Metal-Free Crowns</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Metal-free crowns are ideal for avoiding allergic reactions
+                    and achieving natural aesthetic results.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">
+                    BPS (Biofunctional Prosthetic System) Dentures
+                  </h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    BPS dentures are specially designed for improved
+                    functionality and exceptional patient comfort.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">Veneers</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    We create thin, custom-made veneers to improve the
+                    appearance of teeth.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">Orthodontic Appliances</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    We provide quality service for a variety of removable
+                    retainers and other orthodontic appliances.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mx-auto">
+                <div class="card-title">
+                  <h3 class="mt-2">Custom Milling</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    We perform precision custom milling for materials including
+                    zirconia and implant abutments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-tracker">
+    <div class="progress-bar"></div>
+  </div>
+</section>
+
+<!-- client reviews -->
+<section id="reviews-2" class="mb-5 mt-5">
+  <div class="section-title text-center">
+    <h2 class="h2-m steelblue-color mb-0 home-section-title">
+      Hear from Our Clients
+    </h2>
+  </div>
+  <div class="review-section testimonials-slider">
+    <div
+      class="review-overlay"
+      style="opacity: 0.7; background-color: rgb(36, 169, 146)"
+    ></div>
+    <div class="container position-relative text-center">
+      <div class="row justify-content-center carousel-row">
+        <div
+          class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
+          data-bs-ride="carousel"
+          id="carouselExampleControls"
+        >
+          <div class="review-slider-testimonials">
+            <div class="carousel-inner">
+              {% for ie in data %}
+              <div
+                class="{% if forloop.first %}active{% endif %} carousel-item"
+                aria-label="Slide {{ forloop.counter }}"
+              >
+                <div
+                  class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
+                >
+                  <div class="user_image">
+                    <img
+                      src="{% static 'img/profile-user-3.webp' %}"
+                      class="d-block w-100"
+                      alt="user"
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                  <p class="review-user-txt">
+                    <i class="fa-solid fa-quote-left"></i>
+                    {{ ie.review }}
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
+                  <p class="review-user-name mb-0">{{ ie.name |capfirst}}</p>
+                  <span class="review-user-desk" style="float: right"
+                    >{{ ie.position }}</span
+                  >
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="carousel-controls">
+              <button
+                class="carousel-control-prev review-prev-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next review-next-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BEfore and After -->
+<section id="gallery-2" class="gallery-section division">
+  <div class="container">
+    <div class="row gallery-item-list text-center listing-gallery-img-items">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          Before & After
+        </h2>
+        <p>
+          Curious about what true smile transformation looks like? Explore our exclusive 
+          before-and-after gallery and see the impact of expert craftsmanship and advanced 
+          dental technology.
+        </p>
+      </div>
+      <div class="swiper beforeSwiper">
+        <div class="swiper-wrapper">
+          {% for ie in gallery21 %}
+          <div class="swiper-slide">
+            <div class="hover03 wow zoomSlider w-100 h-100">
+              <img
+                class="img-fluid"
+                src="{{ ie.image.url }}"
+                data-src="{{ ie.image.url }}"
+                alt="Before & After"
+                width="308"
+                height="auto"
+              />
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="col-md-12 text-center">
+        <div class="all-posts-btn mb-50 wow fadeInUp">
+          <a
+            href="{% url 'home:beforeafter' %}"
+            class="btn btn-blue blue-hover submit"
+            aria-label="See more in the Ade after befor"
+            >See More</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact-us -->   
+<section id="contacts-1" class="wide-75 contact-section division" >
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 section-title">
+            <h2 class="steelblue-color">Ready to Partner with Us?</h2>
+            <p>
+              As {{pk.name}}’s leading dental laboratory, we turn vision into reality. We are ready to 
+              provide you with the highest quality, accuracy, and reliability. Contact us today to get a 
+              quote for your next case, or learn more about our services.
+            </p>
+          </div>
+          <div class="contact-wrapper d-lg-flex d-md-flex d-sm-block">
+            <div class="col-md-5 col-lg-4 icon-xs wow fadeInUp mb-sm-4 mb-4 mb-md-0"
+              data-wow-delay="0.4s"
+              style="
+                visibility: visible;
+                animation-delay: 0.4s;
+                animation-name: fadeInUp;
+              ">
+              <div class="contact-main-content">
+                <h3 class="mb-3 contact-title">Contact Address</h3>
+                <div class="contact-box mb-20">
+                  <h4 class="contact-content">India Office</h4>
+                  <a href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47" target="_blank" class="contact-content">
+                    <p>
+                      Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel
+                      Royal, Velanja Road, Umra, Surat, Gujarat, India - 394 130.
+                    </p>
+                  </a>
+                  <p class="contact-phone">
+                      <div style="font-size: 12px;">
+                          <i class="fa-sharp fa-solid fa-phone"></i> :
+                          +91 84 88 88 88 77
+                      </div>
+                      <div style="font-size: 12px;">
+                          <i class="fa-sharp fa-solid fa-phone"></i> :
+                          +91 84 69 88 88 77
+                      </div>
+                  </p>
+                  <p>
+                    <i class="fa-sharp fa-solid fa-envelope"></i> :
+                    <a href="mailto:info@advancedentalexport.com" class="blue-color" rel="nofollow">info@advancedentalexport.com</a>
+                  </p>
+                </div>
+                <div class="contact-box mb-20">
+                  <h4 class="contact-content mb-2">Canada Office</h4>
+                  <p>
+                    <i class="fa-sharp fa-solid fa-phone"></i> :
+                    +1 306-290-9222
+                  </p>
+                  <p>
+                    <i class="fa-sharp fa-solid fa-envelope"></i> :
+                    <a href="mailto: advancedentalservice@gmail.com" class="blue-color" rel="nofollow">advancedentalservice@gmail.com</a>
+                  </p>
+                </div>
+                <div class="contact-box mb-15">
+                  <h4 class="contact-content">USA Office</h4>
+                  <p>
+                    <i class="fa-sharp fa-solid fa-phone"></i> :
+                    +1 551-380-0385
+                  </p>
+                  <p class="d-flex align-items-center">
+                    <i class="fa-sharp fa-solid fa-envelope me-1"></i>:
+                    <a href="mailto:overseas@advancedentalexport.com" class="blue-color ms-1" rel="nofollow">overseas@advancedentalexport.com</a>
+                  </p>
+                </div>
+              </div>
+          </div>
+
+            <div class="col-md-7 col-lg-8 icon-xs wow fadeInUp"  data-wow-delay="0.4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;">
+                <div
+                  class="form-holder mb-0 d-flex align-items-center justify-content-center h-100">
+                  <form
+                    class="row contact-form2 form align-items-center justify-content-center"
+                    method="post"
+                    action="{% url 'enquiry:contactd' %}"
+                  >
+                    {% csrf_token %}
+                    <div class="col-md-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          id="form_name"
+                          name="name"
+                          class="form-control name"
+                          placeholder="Your Name*"
+                          required
+                          data-error="Enter no more than (2) characters."
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          id="form_email"
+                          class="form-control email"
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          required
+                          data-error="Email is required"
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          id="form_phone"
+                          class="form-control phone"
+                          type="tel"
+                          name="contact"
+                          placeholder="Your Phone Number"
+                          required
+                          data-error="Please enter only digits."
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          id="form_subject"
+                          class="form-control subject"
+                          name="subject"
+                          placeholder="Subject*"
+                          required
+                          data-error="Subject is required"
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 input-message">
+                      <div class="form-group">
+                        <textarea
+                          id="form-message"
+                          class="form-control message"
+                          name="message"
+                          rows="8"
+                          placeholder="Your Message ..."
+                          required  
+                          data-error="Enter no more than (10) characters."
+                        ></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mt-15 form-btn submit-btn">
+                      <button type="submit" class="btn-blue submit">
+                        Send Your Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section zirconia-faq mt-4">
+  <div class="container position-relative">
+    <h2 class="product-section-title mb-4">Frequently Asked Questions</h2>
+    <div class="row">
+      <div class="col-md-12 p-0 m-0">
+        <div class="faq" id="accordion">
+          {% for item in faq_data %}
+          <div class="card position-relative overflow-hidden">
+            
+            <!-- ✅ Individual SVG wave for each question -->
+            <svg viewBox="0 0 1000 100" preserveAspectRatio="none" class="bg-filler">
+              <path d="M 0 100 V 100 Q 500 100 1000 100 V 100 z"
+                class="transition_bg-reveal-path"
+                fill="currentColor"></path>
+            </svg>
+
+            <div class="card-header" id="faqHeading-{{ forloop.counter }}">
+              <div class="mb-0">
+                <div
+                  class="faq-title faq-question collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse-{{ forloop.counter }}"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-{{ forloop.counter }}"
+                >
+                  <span class="badge">
+                    <div class="test-xs">{{ forloop.counter }}</div>
+                  </span>
+                  <div class="pt-0 pt-sm-2">{{ item.question }}</div>
+                  <span class="faq-toggle-icon"></span>
+                </div>
+              </div>
+            </div>
+            <div
+              id="faqCollapse-{{ forloop.counter }}"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqHeading-{{ forloop.counter }}"
+              data-bs-parent="#accordion"
+            >
+              <div class="card-body">
+                <div class="container">
+                  <span class="p3 text-start">
+                    <p class="zir-faq-answer">{{ item.answer|safe }}</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock body %}
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  let swiperInstance = null;
+  let swiperInstance1 = null;
+
+  function handleResizeLogic() {
+    const isMobile = window.innerWidth < 991;
+
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+    }
+    if (swiperInstance1) {
+      swiperInstance1.destroy(true, true);
+      swiperInstance1 = null;
+    }
+
+    if (isMobile) {
+      swiperInstance = new Swiper(".serviceSwiper", {
+        speed: 1500,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          767: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          991: { slidesPerView: 2 },
+          1200: { slidesPerView: 3 },
+        },
+      });
+
+      swiperInstance1 = new Swiper(".advantageSwiper", {
+        speed: 1500,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: false,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      document.querySelectorAll(".swiper-slide .advantage-section-content").forEach(content => {
+        content.style.opacity = "";
+        content.style.transform = "";
+        content.style.position = "";
+      });
+    } else {
+      let currentState = 1;
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".new-advantage-section",
+          start: "top 10%",
+          end: "+=400%",
+          pin: true,
+          scrub: true,
+          onUpdate: (self) => {
+            const p = self.progress * 100;
+            let newState = 1;
+            if (p >= 0 && p < 20) newState = 1;
+            else if (p >= 20 && p < 40) newState = 2;
+            else if (p >= 40 && p < 60) newState = 3;
+            else if (p >= 60 && p < 80) newState = 4;
+            else newState = 5;
+
+            if (newState !== currentState) {
+              currentState = newState;
+              const container = document.querySelector(".image-container1");
+              const images = document.querySelectorAll(".styled-image");
+
+              container.classList.remove("state-2", "state-3", "state-4", "state-5");
+              if (currentState > 1) {
+                container.classList.add(`state-${currentState}`);
+                container.classList.remove("img-active");
+              }
+
+              images.forEach((img) => img.classList.add("animate-in"));
+
+              /*document.querySelectorAll(".swiper-slide").forEach((content, i) => {
+                content.classList.toggle("swiper-slide-active", i === currentState - 1);
+              });
+
+              const allContents = document.querySelectorAll(".advantage-section-content");
+                allContents.forEach((content, i) => {
+                  if (i === currentState - 1) {
+                    content.classList.add("active");
+                  } else {
+                    content.classList.remove("active");
+                  }
+                });*/
+                document
+                .querySelectorAll(".swiper-slide")
+                .forEach((content, i) => {
+                  if (i === currentState - 1) {
+                    content.classList.add("swiper-slide-active");
+                  } else {
+                    content.classList.remove("swiper-slide-active");
+                  }
+                });
+
+              const newContent = document.querySelector(
+                `.animation${currentState}-content`
+              );
+              if (newContent) {
+                newContent.classList.add("swiper-slide-active");
+              }
+
+            }
+          },
+          onEnter: () => {
+            document.querySelector(".image-container1")?.classList.add("img-active");
+          },
+          onLeave: () => {
+            document.querySelector(".image-container1")?.classList.remove("img-active");
+            document.getElementById("newadvantage_section").classList.add("unpinned");
+
+            gsap.to(window, {
+              scrollTo: { y: ".bdld-services-section", offsetY: 0 },
+              duration: 1,
+              ease: "power2.out",
+              onComplete: () => {
+                initDesktopHorizontalScroll();
+              },
+            });
+          },
+          onLeaveBack: () => {
+            document.getElementById("newadvantage_section").classList.remove("unpinned");
+          },
+          onEnterBack: () => {
+            document.getElementById("newadvantage_section").classList.remove("unpinned");
+            ScrollTrigger.getById("horizontal-scroll")?.kill();
+          },
+        },
+      });
+    }
+  }
+  // Initial run
+  handleResizeLogic();
+
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      handleResizeLogic();
+      ScrollTrigger.refresh();
+    }, 300);
+  });
+</script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  function initHorizontalScroll() {
+    const section = document.querySelector(".bdld-services-section");
+    const scrollContainer = section.querySelector(".scroll-container");
+    const cardsWrapper = section.querySelector(".swiper-wrapper");
+    const progressBar = section.querySelector(".progress-bar");
+    const progressTracker = section.querySelector(".progress-tracker");
+
+    if (!section || !scrollContainer || !cardsWrapper) return;
+
+    // Reset progress bar
+    progressBar.style.width = '0%';
+
+    // Total scroll width including heading/description + cards
+    const totalScrollWidth = scrollContainer.scrollWidth;
+
+    // Horizontal scroll effect
+    gsap.to(scrollContainer, {
+      x: () => `-${totalScrollWidth - window.innerWidth * 0.83}`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 15%",
+        end: () => `+=${totalScrollWidth - window.innerWidth}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        onUpdate: (self) => {
+          const progress = self.progress.toFixed(3);
+
+          if (self.scroll() >= window.innerHeight * 0.3) {
+            progressTracker.classList.add("progress-visible");
+            gsap.to(progressBar, {
+              width: `${progress * 100}%`,
+              duration: 0.4,
+              ease: "power1.out",
+            });
+          } else {
+            progressTracker.classList.remove("progress-visible");
+            gsap.to(progressBar, {
+              width: "0%",
+              duration: 0.3,
+              ease: "power1.out",
+            });
+          }
+        },
+        onEnterBack: () => {
+          gsap.to(progressBar, {
+            width: "0%",
+            duration: 0.3,
+            ease: "power1.out"
+          });
+        }
+      }
+    });
+
+    // Fade-in for heading and paragraph
+    gsap.from(".bdld-services-section-title h2, .bdld-services-section-title p", {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Fade-in each card as it appears in scroll
+    gsap.utils.toArray(".swiper-slide").forEach((card, index) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        delay: index * 0.05,
+        scrollTrigger: {
+          trigger: card,
+          start: "left center",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initHorizontalScroll();
+  });
+</script>
+
+
+<!--Swiper for the before-After-->
+<script>
+  var BeforeSwiper = new Swiper(".beforeSwiper", {
+    speed: 1500,
+    slidesPerView: 3,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: !0,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+{% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script> {% endcomment %}
+{% comment %} {{pk.schema|safe}} {% endcomment %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Dental Prosthesis Laboratory",
+    "url": "https://advancedentalexport.com/",
+    "provider": {
+      "@type": "Organization",
+      "name": "Advance Dental Export",
+      "url": "https://advancedentalexport.com/"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "{{pk.name}}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{pk.name}}",
+        "addressCountry": "IN"
+      }
+    },
+    "description": "Explore Advance Dental Export - the best dental lab in {{pk.name}} offering high-quality dental prosthetics including crowns, bridges, implants, dentures and all types of artificial teeths. Trusted by top dentists of {{pk.name}} for quality, our lab is well-quipped with advanced digital dentistry technologies like CAD/CAM lab, 3D printing, and intraoral scanning.",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "{{pk.canonical}}",
+      "serviceLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{pk.name}}",
+          "addressCountry": "IN"
+        }
+      }
+    }
+  }
+</script>
+{% endblock js %}
