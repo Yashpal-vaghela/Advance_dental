@@ -1,1511 +1,1515 @@
 .product-section-title {
-    color: #1b8976;
-    font-size: 30px
+  color: #1b8976;
+  font-size: 30px;
 }
 
 .pin-spacer {
-    overflow: hidden !important
+  overflow: hidden !important;
 }
 
 .implant-slider-wrapper {
-    background-color: #000
+  background-color: #000;
 }
 
 .implant-slider-wrapper .implant-banner-bg {
-    object-fit: cover
+  object-fit: cover;
 }
 
 .implant-banner-img-wrapper {
-    top: 5%;
-    z-index: 9999;
-    width: 100%;
-    max-width: 100%
+  top: 5%;
+  z-index: 9999;
+  width: 100%;
+  max-width: 100%;
 }
 
 .implant-banner-img {
-    position: relative;
-    top: 0%;
-    z-index: 9999
+  position: relative;
+  top: 0%;
+  z-index: 9999;
 }
 
 .implant-text {
-    color: #fff;
-    text-align: left;
-    margin-left: 19%;
-    font-size: 45px;
-    line-height: 1.6;
-    margin-top: 15%
+  color: #fff;
+  text-align: left;
+  margin-left: 19%;
+  font-size: 45px;
+  line-height: 1.6;
+  margin-top: 0%;
 }
 
 .implant-text b {
-    background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%);
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    color: transparent !important;
-    font-weight: 700
+  background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%);
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-weight: 700;
 }
 
 .implant-mobile-banner {
-    display: none !important
+  display: none !important;
 }
 
 .groupImage {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    z-index: 10
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 10;
 }
 
-@media screen and (min-width:1439px) and (max-width:1649px) {
-    .implant-banner-img {
-        width: 90% !important;
-        margin-left: auto;
-        top: 4%
-    }
+@media screen and (min-width: 1439px) and (max-width: 1649px) {
+  .implant-banner-img {
+    width: 90% !important;
+    margin-left: auto;
+    top: 4%;
+  }
+}
+@media screen and (min-width:1800px) and (max-width:2000px){
+.implant-hero-section .implant-text{
+  margin-top: 0%;
+  margin-left: 28%;
+}
 }
 
-@media (max-width:1200px) {
-    .implant-text {
-        font-size: 40px
-    }
+@media (max-width: 1200px) {
+  .implant-text {
+    font-size: 40px;
+  }
 
-    .implant-slider-wrapper .implant-banner-bg {
-        height: 100%
-    }
+  .implant-slider-wrapper .implant-banner-bg {
+    height: 100%;
+  }
 
-    .implant-banner-img-wrapper {
-        top: 5%
-    }
+  .implant-banner-img-wrapper {
+    top: 5%;
+  }
 
-    .implant-banner-img {
-        width: 95% !important;
-        margin-left: auto
-    }
+  .implant-banner-img {
+    width: 95% !important;
+    margin-left: auto;
+  }
 
-    .implant-text {
-        margin-left: 25%
-    }
+  .implant-text {
+    margin-left: 25%;
+  }
 }
 
-@media (max-width:1165px) {
-    .implant-text {
-        margin-left: 19%
-    }
+@media (max-width: 1165px) {
+  .implant-text {
+    margin-left: 19%;
+  }
 }
 
-@media (max-width:991px) {
-    .implant-text {
-        font-size: 35px
-    }
+@media (max-width: 991px) {
+  .implant-text {
+    font-size: 35px;
+  }
 
-    .implant-banner-img-wrapper {
-        top: 26%
-    }
+  .implant-banner-img-wrapper {
+    top: 26%;
+  }
 }
 
-@media (max-width:800px) {
-    .implant-banner-img-wrapper {
-        top: 24%
-    }
+@media (max-width: 800px) {
+  .implant-banner-img-wrapper {
+    top: 24%;
+  }
 }
 
-@media (max-width:768px) {
-    .implant-mobile-banner {
-        display: block !important
-    }
+@media (max-width: 768px) {
+  .implant-mobile-banner {
+    display: block !important;
+  }
 
-    .implant-slider-wrapper .implant-banner-bg,
-    .implant-banner-img-wrapper {
-        display: none
-    }
+  .implant-slider-wrapper .implant-banner-bg,
+  .implant-banner-img-wrapper {
+    display: none;
+  }
 }
 
 .Implant-second-section {
-    padding: 50px 0px;
-    position: relative;
-    z-index: 3;
-    background: white
+  padding: 50px 0px;
+  position: relative;
+  z-index: 3;
+  background: white;
 }
 
 .Implantfirst-headS {
-    color: #1b897a;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 12px
+  color: #1b897a;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
 .Implantfirst-text {
-    color: black;
-    font-size: 16px
+  color: black;
+  font-size: 16px;
 }
 
 .Implantfirstgroup {
-    width: 100%;
-    height: 100%;
-    padding: 0px 30px;
-    position: relative
+  width: 100%;
+  height: 100%;
+  padding: 0px 30px;
+  position: relative;
 }
 
 .Implant-text1 {
-    padding: 10px 0px;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 0;
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .Implant-text1 {
+    bottom: -5%;
+    left: -3%;
+  }
+}
+
+@media (max-width: 991px) {
+  .Implant-second-section {
+    margin: 6% auto 3%;
+    padding: 0px;
+  }
+
+  .Implant-text1 {
+    left: -5%;
+    bottom: 0%;
+    top: 0%;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .Implantfirst-text p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+  }
+
+  .Implantfirst-headS {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Implant-second-section {
+    margin: 10% auto 6.5%;
+  }
+
+  .Implantfirst-headS {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .Implantfirst-text {
+    font-size: 15px;
+    margin-bottom: 0px !important;
+  }
+
+  .Implantfirst-text p {
+    line-height: 1.75;
+  }
+
+  .Implantfirst-text p:last-child {
+    margin-bottom: 0px !important;
+  }
+
+  .Implantfirstgroup {
+    padding: 0px 30px;
+  }
+
+  .Implant-text1 {
     position: absolute;
     bottom: 0%;
+    top: 0%;
     left: 0%;
     z-index: 0;
-    width: 50%
+    width: 100%;
+    padding: 0px;
+  }
+
+  .Implantfirstgroup .groupImage {
+    padding-top: 32%;
+  }
 }
 
-@media (max-width:1200px) {
-    .Implant-text1 {
-        bottom: -5%;
-        left: -3%
-    }
-}
-
-@media (max-width:991px) {
-    .Implant-second-section {
-        margin: 6% auto 3%;
-        padding: 0px
-    }
-
-    .Implant-text1 {
-        left: -5%;
-        bottom: 0%;
-        top: 0%;
-        width: 100%;
-        position: relative
-    }
-}
-
-@media (max-width:768px) {
-    .Implantfirst-text p {
-        font-size: 15px;
-        letter-spacing: 0.5px;
-        line-height: 1.8
-    }
-
-    .Implantfirst-headS {
-        font-size: 22px
-    }
-}
-
-@media (max-width:576px) {
-    .Implant-second-section {
-        margin: 10% auto 6.5%
-    }
-
-    .Implantfirst-headS {
-        font-size: 22px;
-        line-height: 1.4
-    }
-
-    .Implantfirst-text {
-        font-size: 15px;
-        margin-bottom: 0px !important
-    }
-
-    .Implantfirst-text p {
-        line-height: 1.75
-    }
-
-    .Implantfirst-text p:last-child {
-        margin-bottom: 0px !important
-    }
-
-    .Implantfirstgroup {
-        padding: 0px 30px
-    }
-
-    .Implant-text1 {
-        position: absolute;
-        bottom: 0%;
-        top: 0%;
-        left: 0%;
-        z-index: 0;
-        width: 100%;
-        padding: 0px
-    }
-
-    .Implantfirstgroup .groupImage {
-        padding-top: 32%
-    }
-}
-
-@media (max-width:450px) {
-    .Implant-second-section {
-        margin: 10% auto 5%;
-        padding: 0px auto 20px
-    }
+@media (max-width: 450px) {
+  .Implant-second-section {
+    margin: 10% auto 5%;
+    padding: 0px auto 20px;
+  }
 }
 
 .pin-spacer:has(.ImplantProsthesis) {
-    overflow: visible !important
+  overflow: visible !important;
 }
 
 .ImplantProsthesis {
-    background-color: #fff
+  background-color: #fff;
 }
 
 .ImplantProsthesis .product-section-title {
-    width: 100%;
-    text-align: center
+  width: 100%;
+  text-align: center;
 }
 
 .ImplantProsthesis .vector1 {
-    position: absolute;
-    top: 1.7%;
-    left: 1%;
-    width: 22%
+  position: absolute;
+  top: 1.7%;
+  left: 1%;
+  width: 22%;
 }
 
 .ImplantProsthesis .vector2 {
-    position: absolute;
-    top: 1.7%;
-    right: 1%;
-    width: 22%
+  position: absolute;
+  top: 1.7%;
+  right: 1%;
+  width: 22%;
 }
 
 .ImplantProsthesis-firstcontent {
-    top: 60px
+  top: 60px;
 }
 
 .ImplantProsthesis-content {
-    background-image: url("../../static/img/bg-card.png");
-    background-position: center;
-    background-size: cover;
-    height: auto;
-    border-radius: 14px;
-    width: 82%;
-    padding: 20px 20px;
-    margin: 10px auto 10px;
-    opacity: 0
+  background-image: url("../../static/img/bg-card.png");
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  border-radius: 14px;
+  width: 82%;
+  padding: 20px 20px;
+  margin: 10px auto 10px;
+  opacity: 0;
 }
 
 .ImplantProsthesis-content.active {
-    width: 60%
+  width: 60%;
 }
 
 .ImplantProsthesis-content p {
-    color: #000;
-    line-height: 1.7;
-    margin-bottom: 0px;
-    font-weight: 400;
-    letter-spacing: 0.43px;
-    text-align: center
+  color: #000;
+  line-height: 1.7;
+  margin-bottom: 0px;
+  font-weight: 400;
+  letter-spacing: 0.43px;
+  text-align: center;
 }
 
 .ImplantProsthesis-content p:first-child {
-    text-align: start
+  text-align: start;
 }
 
-@media (min-width:1200px) and (max-width:1460px) {
+@media (min-width: 1200px) and (max-width: 1460px) {
+  .implant-prosthesis-img,
+  .ImplantImageWrapper {
+    height: 100%;
+  }
 
-    .implant-prosthesis-img,
-    .ImplantImageWrapper {
-        height: 100%
-    }
-
-    .ImplantImageWrapper {
-        margin-top: 3%
-    }
+  .ImplantImageWrapper {
+    margin-top: 3%;
+  }
 }
 
-@media (max-width:1350px) {
-    .ImplantProsthesis-content {
-        margin: 10px auto;
-        padding: 12px 20px
-    }
+@media (max-width: 1350px) {
+  .ImplantProsthesis-content {
+    margin: 10px auto;
+    padding: 12px 20px;
+  }
 }
 
-@media (max-width:1200px) {
-    .ImplantProsthesis-content {
-        margin: 0px auto
-    }
+@media (max-width: 1200px) {
+  .ImplantProsthesis-content {
+    margin: 0px auto;
+  }
 
-    .ImplantProsthesis .product-section-title {
-        font-size: 26px
-    }
+  .ImplantProsthesis .product-section-title {
+    font-size: 26px;
+  }
 
-    .ImplantProsthesis .vector1 {
-        left: -1%
-    }
+  .ImplantProsthesis .vector1 {
+    left: -1%;
+  }
 
-    .ImplantProsthesis .vector2 {
-        right: -1%
-    }
+  .ImplantProsthesis .vector2 {
+    right: -1%;
+  }
 }
 
-@media (max-width:991px) {
-    #ImplantProsthesis.unpinned {
-        height: auto !important
-    }
+@media (max-width: 991px) {
+  #ImplantProsthesis.unpinned {
+    height: auto !important;
+  }
 
-    .ImplantProsthesis .product-section-title {
-        font-size: 25px;
-        margin: 0px;
-        text-align: start
-    }
+  .ImplantProsthesis .product-section-title {
+    font-size: 25px;
+    margin: 0px;
+    text-align: start;
+  }
 
-    .ImplantProsthesis .vector1 {
-        left: -1%;
-        display: none
-    }
+  .ImplantProsthesis .vector1 {
+    left: -1%;
+    display: none;
+  }
 
-    .ImplantProsthesis .vector2 {
-        right: 2%;
-        top: 1%;
-        width: 26%
-    }
+  .ImplantProsthesis .vector2 {
+    right: 2%;
+    top: 1%;
+    width: 26%;
+  }
 
-    .ImplantImageWrapper,
-    .ImplantProsthesis-content {
-        opacity: 1 !important
-    }
+  .ImplantImageWrapper,
+  .ImplantProsthesis-content {
+    opacity: 1 !important;
+  }
 
-    .ImplantImageWrapper,
-    .ImplantProsthesis-firstcontent {
-        display: none
-    }
+  .ImplantImageWrapper,
+  .ImplantProsthesis-firstcontent {
+    display: none;
+  }
 
-    .ImplantProsthesis .container .row .d-block {
-        top: 80px
-    }
+  .ImplantProsthesis .container .row .d-block {
+    top: 80px;
+  }
 
-    .ImplantImageWrapper-mobile {
-        background-image: url("../../static/img/ImplantProsthesis1.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        width: 100%
-    }
+  .ImplantImageWrapper-mobile {
+    background-image: url("../../static/img/ImplantProsthesis1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
 
-    .ImplantProsthesis-content {
-        border-radius: 10px;
-        width: 55%;
-        z-index: 1;
-        position: relative;
-        margin: 20px auto 20px;
-        padding: 15px 20px
-    }
+  .ImplantProsthesis-content {
+    border-radius: 10px;
+    width: 55%;
+    z-index: 1;
+    position: relative;
+    margin: 20px auto 20px;
+    padding: 15px 20px;
+  }
 
-    .ImplantProsthesis-content:last-child {
-        margin-bottom: 30%
-    }
+  .ImplantProsthesis-content:last-child {
+    margin-bottom: 30%;
+  }
 
-    .ImplantProsthesis-content p,
-    .ImplantProsthesis-content ul li {
-        text-align: left
-    }
+  .ImplantProsthesis-content p,
+  .ImplantProsthesis-content ul li {
+    text-align: left;
+  }
 }
 
-@media (max-width:768px) {
-    .ImplantProsthesis-content {
-        width: 65%
-    }
+@media (max-width: 768px) {
+  .ImplantProsthesis-content {
+    width: 65%;
+  }
 
-    .ImplantProsthesis .vector2 {
-        display: none
-    }
+  .ImplantProsthesis .vector2 {
+    display: none;
+  }
 }
 
-@media (max-width:576px) {
-    .ImplantProsthesis .container .row .d-block {
-        top: 20%
-    }
+@media (max-width: 576px) {
+  .ImplantProsthesis .container .row .d-block {
+    top: 20%;
+  }
 
-    .ImplantImageWrapper-mobile {
-        background-size: 100% 75%;
-        background-position: top;
-        margin-bottom: -8%
-    }
+  .ImplantImageWrapper-mobile {
+    background-size: 100% 75%;
+    background-position: top;
+    margin-bottom: -8%;
+  }
 
-    .ImplantProsthesis-content {
-        transition: all 0.5s ease;
-        opacity: 0.5;
-        width: 85%
-    }
+  .ImplantProsthesis-content {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    width: 85%;
+  }
 
-    .ImplantProsthesis-content.active {
-        opacity: 1;
-        z-index: 3;
-        width: 72%
-    }
+  .ImplantProsthesis-content.active {
+    opacity: 1;
+    z-index: 3;
+    width: 72%;
+  }
 
-    .ImplantProsthesis-content.prev,
-    .ImplantProsthesis-content.next {
-        opacity: 0.8 !important
-    }
+  .ImplantProsthesis-content.prev,
+  .ImplantProsthesis-content.next {
+    opacity: 0.8 !important;
+  }
 
-    .ImplantProsthesis-content:last-child {
-        margin-bottom: 55%
-    }
+  .ImplantProsthesis-content:last-child {
+    margin-bottom: 55%;
+  }
 
-    .ImplantProsthesis-content:has(.ImplantProsthesis-content.prev) {
-        display: none !important
-    }
+  .ImplantProsthesis-content:has(.ImplantProsthesis-content.prev) {
+    display: none !important;
+  }
 
-    .ImplantProsthesis .product-section-title {
-        font-size: 22px
-    }
+  .ImplantProsthesis .product-section-title {
+    font-size: 22px;
+  }
 }
 
-@media (max-width:450px) {
-    .ImplantImageWrapper-mobile {
-        margin-top: -32%;
-        background-position: center
-    }
+@media (max-width: 450px) {
+  .ImplantImageWrapper-mobile {
+    margin-top: -22%;
+    background-position: center;
+  }
 }
 
 .why-Implant-section {
-    background-image: url("../img/country-map1.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: sticky;
-    top: 70px !important;
-    margin-top: 3%
+  background-image: url("../img/country-map1.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 70px !important;
+  margin-top: 3%;
 }
 
 .why-Implant-section.fixed {
-    position: sticky;
-    top: 0px
+  position: sticky;
+  top: 0px;
 }
 
 .why-Implant-titleWrapper {
-    width: 100%;
-    height: 60%
+  width: 100%;
+  height: 60%;
 }
 
 .why-Implant-title {
-    font-weight: 500;
-    color: rgba(27, 137, 118, 1);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 65px;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: capitalize;
-    width: 40%;
-    transition: transform 0.1s linear;
-    will-change: transform;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    height: 100%
+  font-weight: 500;
+  color: rgba(27, 137, 118, 1);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 65px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 40%;
+  transition: transform 0.1s linear;
+  will-change: transform;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  height: 100%;
 }
 
 .why-Implant-content {
-    background-color: #fff;
-    padding: 15px 20px;
-    width: 34%;
-    margin: 20px auto;
-    border-radius: 20px;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-    position: sticky;
-    top: 100px
+  background-color: #fff;
+  padding: 15px 20px;
+  width: 34%;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 100px;
 }
 
 .why-Implant-content._1 {
-    top: 30px;
-    opacity: 0
+  top: 30px;
+  opacity: 0;
 }
 
 .why-Implant-content h3 {
-    font-size: 20px;
-    line-height: 1.6;
-    letter-spacing: 0.6px
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
 }
 
 .why-Implant-content p {
-    font-size: 16px;
-    letter-spacing: 0.6px
+  font-size: 16px;
+  letter-spacing: 0.6px;
 }
 
 .why-Implant-section .container {
-    position: relative;
-    height: 100%
+  position: relative;
+  height: 100%;
 }
 
 .unpinned .why-Implant-content._1 {
-    position: relative;
-    top: 0px;
-    z-index: 1
+  position: relative;
+  top: 0px;
+  z-index: 1;
 }
 
 .unpinned .why-Implant-content._2 {
-    position: relative;
-    top: 0px;
-    z-index: 2
+  position: relative;
+  top: 0px;
+  z-index: 2;
 }
 
 .unpinned .why-Implant-content._3 {
-    position: relative;
-    top: 0px;
-    z-index: 2
+  position: relative;
+  top: 0px;
+  z-index: 2;
 }
 
 .pin-spacer:has(.unpinned) {
-    padding: 0px 0px 0px !important
+  padding: 0px 0px 0px !important;
 }
 
 .why-Implant-section:has(.pin-spacer) {
-    padding: 0px !important
+  padding: 0px !important;
 }
 
 .pin-spacer:has(.why-Implant-section) {
-    overflow: hidden !important
+  overflow: hidden !important;
 }
 
-@media (min-width:2500px) and (max-width:1400px) {
-    .why-Implant-content {
-        width: 45%
-    }
+@media (min-width: 2500px) and (max-width: 1400px) {
+  .why-Implant-content {
+    width: 45%;
+  }
 }
 
-@media (max-width:1200px) {
-    .why-Implant-title {
-        font-size: 38px;
-        width: 44%
-    }
+@media (max-width: 1200px) {
+  .why-Implant-title {
+    font-size: 38px;
+    width: 44%;
+  }
 
-    .why-Implant-content {
-        width: 40%
-    }
+  .why-Implant-content {
+    width: 40%;
+  }
 
-    .why-Implant-section.unpinned {
-        top: 25px !important
-    }
+  .why-Implant-section.unpinned {
+    top: 25px !important;
+  }
 }
 
-@media (max-width:991px) {
-    .why-Implant-title {
-        font-size: 35px;
-        width: 50%
-    }
+@media (max-width: 991px) {
+  .why-Implant-title {
+    font-size: 35px;
+    width: 50%;
+  }
 
-    .why-Implant-content {
-        width: 54%
-    }
+  .why-Implant-content {
+    width: 54%;
+  }
 
-    .why-Implant-section.unpinned {
-        top: 25px !important
-    }
+  .why-Implant-section.unpinned {
+    top: 25px !important;
+  }
 
-    .why-Implant-section {
-        background-size: 100% 60%
-    }
+  .why-Implant-section {
+    background-size: 100% 60%;
+  }
 }
 
-@media (max-width:768px) {
-    .why-Implant-title {
-        font-size: 32px;
-        width: 60%;
-        height: 100%;
-        line-height: 55px
-    }
+@media (max-width: 768px) {
+  .why-Implant-title {
+    font-size: 32px;
+    width: 60%;
+    height: 100%;
+    line-height: 55px;
+  }
 
-    .why-Implant-content {
-        width: 68%
-    }
+  .why-Implant-content {
+    width: 68%;
+  }
 
-    .why-Implant-section {
-        margin-top: 0%;
-        background-size: 100% 52%
-    }
+  .why-Implant-section {
+    margin-top: 0%;
+    background-size: 100% 52%;
+  }
 }
 
-@media (max-width:576px) {
-    .pin-spacer:has(.why-Implant-section) {
-        margin-top: -32% !important;
-        width: 100% !important
-    }
+@media (max-width: 576px) {
+  .pin-spacer:has(.why-Implant-section) {
+    margin-top: -19% !important;
+    width: 100% !important;
+  }
 
-    .why-Implant-title {
-        font-size: 28px;
-        line-height: 1.5;
-        width: 60%
-    }
+  .why-Implant-title {
+    font-size: 28px;
+    line-height: 1.5;
+    width: 60%;
+  }
 
-    .why-Implant-titleWrapper {
-        height: 60%
-    }
+  .why-Implant-titleWrapper {
+    height: 60%;
+  }
 
-    .why-Implant-section {
-        background-size: auto 85%;
-        background-position: top;
-        width: 100% !important
-    }
+  .why-Implant-section {
+    background-size: auto 85%;
+    background-position: top;
+    width: 100% !important;
+  }
 
-    .why-Implant-content {
-        width: 65%
-    }
+  .why-Implant-content {
+    width: 65%;
+  }
 
-    .why-Implant-content h3 {
-        font-size: 18px
-    }
+  .why-Implant-content h3 {
+    font-size: 18px;
+  }
 
-    .why-Implant-content p {
-        font-size: 14px
-    }
+  .why-Implant-content p {
+    font-size: 14px;
+  }
 }
 
-@media (max-width:480px) {
-    .why-Implant-title {
-        font-size: 22px;
-        line-height: 1.5;
-        width: 58%
-    }
+@media (max-width: 480px) {
+  .why-Implant-title {
+    font-size: 22px;
+    line-height: 1.5;
+    width: 58%;
+  }
 
-    .why-Implant-content {
-        width: 78%;
-        margin: 20px auto
-    }
+  .why-Implant-content {
+    width: 78%;
+    margin: 20px auto;
+  }
 
-    .why-Implant-titleWrapper {
-        height: 75%
-    }
+  .why-Implant-titleWrapper {
+    height: 75%;
+  }
 }
 
 .TypeofImplants {
-    padding: 0px 0px 50px;
-    margin: -11% auto 0px;
-    background-color: #fff;
-    z-index: 1;
-    position: relative
+  padding: 0px 0px 50px;
+  margin: -11% auto 0px;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
 .TypeofImplants .product-section-title {
-    width: 100%;
-    text-align: center
+  width: 100%;
+  text-align: center;
 }
 
 .TypeofImplants .vector1 {
-    position: absolute;
-    top: 0.7%;
-    left: 1%
+  position: absolute;
+  top: 0.7%;
+  left: 1%;
 }
 
 .TypeofImplants .vector2 {
-    position: absolute;
-    top: 0.7%;
-    right: 1%
+  position: absolute;
+  top: 0.7%;
+  right: 1%;
 }
 
 .TypeWrapper {
-    border-top: 1px solid #1b8976;
-    border-bottom: 1px solid #1b8976;
-    position: relative;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    display: grid
+  border-top: 1px solid #1b8976;
+  border-bottom: 1px solid #1b8976;
+  position: relative;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
 }
 
 .TypeWrapper:first-child {
-    border-top: 1.5px solid #1b8976
+  border-top: 1.5px solid #1b8976;
 }
 
 .TypeWrapper:last-child {
-    border-bottom: 1.5px solid #1b8976
+  border-bottom: 1.5px solid #1b8976;
 }
 
 .type-product_left-block {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    flex-flow: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
 }
 
 .Type-content h3 {
-    color: #1b8976
+  color: #1b8976;
 }
 
 .type-product_right-block {
-    overflow: hidden
+  overflow: hidden;
 }
 
 .type-product_img {
-    object-fit: scale-down;
-    width: 30rem;
-    height: 20rem;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle
+  object-fit: scale-down;
+  width: 30rem;
+  height: 20rem;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-@media (max-width:1200px) {
-    .TypeofImplants {
-        margin: -22% auto 0px
-    }
+@media (max-width: 1200px) {
+  .TypeofImplants {
+    margin: -22% auto 0px;
+  }
 
-    .TypeofImplants .product-section-title {
-        font-size: 26px
-    }
+  .TypeofImplants .product-section-title {
+    font-size: 26px;
+  }
 
-    .TypeofImplants .vector1,
-    .TypeofImplants .vector2 {
-        width: 32%
-    }
+  .TypeofImplants .vector1,
+  .TypeofImplants .vector2 {
+    width: 32%;
+  }
 
-    .Type-content h3 {
-        font-size: 24px
-    }
+  .Type-content h3 {
+    font-size: 24px;
+  }
 }
 
-@media (max-width:991px) {
-    .TypeofImplants {
-        margin: -26% auto 0px;
-        padding: 0px 0px 30px
-    }
+@media (max-width: 991px) {
+  .TypeofImplants {
+    margin: -26% auto 0px;
+    padding: 0px 0px 30px;
+  }
 
-    .TypeofImplants .product-section-title {
-        font-size: 25px
-    }
+  .TypeofImplants .product-section-title {
+    font-size: 25px;
+  }
 
-    .TypeofImplants .vector1,
-    .TypeofImplants .vector2 {
-        width: 30%;
-        top: 1.25%
-    }
+  .TypeofImplants .vector1,
+  .TypeofImplants .vector2 {
+    width: 30%;
+    top: 1.25%;
+  }
 
-    .Type-content h3 {
-        font-size: 20px;
-        letter-spacing: 0.5px;
-        line-height: 1.4
-    }
+  .Type-content h3 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+  }
 
-    .Type-content p {
-        font-size: 15px;
-        letter-spacing: 0.5px;
-        line-height: 1.7;
-        margin-bottom: 0px
-    }
+  .Type-content p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    margin-bottom: 0px;
+  }
 
-    .type-product_img {
-        height: 15.5rem
-    }
+  .type-product_img {
+    height: 15.5rem;
+  }
 }
 
-@media (max-width:768px) {
-    .TypeofImplants {
-        margin: -46% auto 0px
-    }
+@media (max-width: 768px) {
+  .TypeofImplants {
+    margin: -46% auto 0px;
+  }
 
-    .TypeWrapper {
-        flex-direction: column
-    }
+  .TypeWrapper {
+    flex-direction: column;
+  }
 
-    .TypeofImplants .product-section-title {
-        text-align: start
-    }
+  .TypeofImplants .product-section-title {
+    text-align: start;
+  }
 
-    .TypeofImplants .vector1 {
-        display: none
-    }
+  .TypeofImplants .vector1 {
+    display: none;
+  }
 
-    .TypeofImplants .vector2 {
-        width: 38%;
-        top: 0.8%;
-        right: 2%
-    }
+  .TypeofImplants .vector2 {
+    width: 38%;
+    top: 0.8%;
+    right: 2%;
+  }
 
-    .type-product_left-block {
-        padding: 20px 0px 10px
-    }
+  .type-product_left-block {
+    padding: 20px 0px 10px;
+  }
 
-    .Type-content h3 {
-        font-size: 20px
-    }
+  .Type-content h3 {
+    font-size: 20px;
+  }
 
-    .Type-content p {
-        margin-bottom: 0px
-    }
+  .Type-content p {
+    margin-bottom: 0px;
+  }
 }
 
-@media (max-width:576px) {
-    .TypeofImplants {
-        margin: 1.1% auto;
-        padding: 0px 0px 35px
-    }
+@media (max-width: 576px) {
+  .TypeofImplants {
+    margin: 1.1% auto;
+    padding: 0px 0px 35px;
+  }
 
-    .TypeofImplants .product-section-title {
-        font-size: 22px
-    }
+  .TypeofImplants .product-section-title {
+    font-size: 22px;
+  }
 
-    .TypeofImplants .vector1 {
-        display: none
-    }
+  .TypeofImplants .vector1 {
+    display: none;
+  }
 
-    .TypeofImplants .vector2 {
-        display: none
-    }
+  .TypeofImplants .vector2 {
+    display: none;
+  }
 
-    .TypeofImplants .container {
-        --bs-gutter-x: 6rem
-    }
+  .TypeofImplants .container {
+    --bs-gutter-x: 6rem;
+  }
 
-    .Type-content h3 {
-        font-size: 18px
-    }
+  .Type-content h3 {
+    font-size: 18px;
+  }
 
-    .type-product_left-block {
-        padding: 14px 0px 10px
-    }
+  .type-product_left-block {
+    padding: 14px 0px 10px;
+  }
 }
 
-@media (max-width:450px) {
-    .TypeofImplants {
-        margin: 0% auto 0px
-    }
+@media (max-width: 450px) {
+  .TypeofImplants {
+    margin: 0% auto 0px;
+  }
 
-    .type-product_img {
-        padding: 0px !important;
-        height: 15em
-    }
+  .type-product_img {
+    padding: 0px !important;
+    height: 15em;
+  }
 
-    .type-product_left-block {
-        padding: 20px 0px 0px
-    }
+  .type-product_left-block {
+    padding: 20px 0px 0px;
+  }
 
-    .TypeofImplants .vector2 {
-        top: 0.8%;
-        width: 29%
-    }
+  .TypeofImplants .vector2 {
+    top: 0.8%;
+    width: 29%;
+  }
 }
 
 .typeslider {
-    background-color: #fff;
-    z-index: 1;
-    position: relative
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
 .typeslider .slider {
-    margin: 10px auto 40px;
-    max-width: 100%;
-    height: 550px;
-    overflow: hidden
+  margin: 10px auto 40px;
+  max-width: 100%;
+  height: 550px;
+  overflow: hidden;
 }
 
 .typeslider .implant-type-card {
-    border-radius: 12px;
-    height: 230px;
-    border: 2px solid #1b8976;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: start;
-    padding: 16px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: black
+  border-radius: 12px;
+  height: 230px;
+  border: 2px solid #1b8976;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  padding: 16px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
 }
 
 .typeslider .implant-type-card:hover {
-    background-color: #1b8976 !important;
-    color: white !important
+  background-color: #1b8976 !important;
+  color: white !important;
 }
 
 .typeslider .implant-type-card-heading {
-    font-weight: 500
+  font-weight: 500;
 }
 
 .implant-type-card-body {
-    font-size: 14px;
-    margin-bottom: 0px
+  font-size: 14px;
+  margin-bottom: 0px;
 }
 
 .implant-type-card-image {
-    height: 230px;
-    padding: 8px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: visible
+  height: 230px;
+  padding: 8px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
 
 .implant-type-card-image .iv3 {
-    width: 70% !important
+  width: 70% !important;
 }
 
 .typeslider .swiper-container {
-    padding-bottom: 20px
+  padding-bottom: 20px;
 }
 
 .typeslider .swiper-scrollbar {
-    background: #d6d6d6
+  background: #d6d6d6;
 }
 
-.typeslider .swiper-container-horizontal>.swiper-scrollbar {
-    border-radius: 2px;
-    height: 30px;
-    width: 200px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%)
+.typeslider .swiper-container-horizontal > .swiper-scrollbar {
+  border-radius: 2px;
+  height: 30px;
+  width: 200px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .typeslider .swiper-scrollbar-drag {
-    background: #1b8976;
-    cursor: grab;
-    height: 8px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: -3px;
-    content: "=";
-    color: white
+  background: #1b8976;
+  cursor: grab;
+  height: 8px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -3px;
+  content: "=";
+  color: white;
 }
 
 .typeslider .swiper-slide img {
+  width: 90%;
+  overflow: visible;
+}
+
+@media (max-width: 991px) {
+  .product-section-title {
+    font-size: 25px;
+    line-height: 1.7;
+  }
+
+  .typeslider-wrapper img {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .typeslider-wrapper img {
+    width: 44%;
+  }
+
+  .typeslider .slider {
+    margin: 0px auto 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .implant-type-card {
+    margin: 12px 0px 0px 0px;
+  }
+
+  .typeslider .swiper-slide img {
+    width: 60%;
+    overflow: visible;
+  }
+
+  .typeslider .container {
+    --bs-gutter-x: 4.8rem;
+  }
+
+  .iv3 {
+    width: 48% !important;
+  }
+
+  .implant-type-card-image .iv3 {
+    width: 58% !important;
+  }
+
+  .product-section-title {
+    font-size: 22px;
+  }
+
+  .ImplantProsthesis .product-section-title {
+    left: 5%;
+    position: relative;
+    margin-bottom: 12px;
     width: 90%;
-    overflow: visible
+  }
+
+  .typeslider-wrapper .vector2 {
+    width: 45%;
+    display: none;
+  }
+
+  .typeslider .implant-type-card {
+    margin-top: 15px;
+  }
 }
 
-@media (max-width:991px) {
-    .product-section-title {
-        font-size: 25px;
-        line-height: 1.7
-    }
-
-    .typeslider-wrapper img {
-        width: 55%
-    }
-}
-
-@media (max-width:768px) {
-    .typeslider-wrapper img {
-        width: 44%
-    }
-
-    .typeslider .slider {
-        margin: 0px auto 40px
-    }
-}
-
-@media (max-width:576px) {
-    .implant-type-card {
-        margin: 12px 0px 0px 0px
-    }
-
-    .typeslider .swiper-slide img {
-        width: 60%;
-        overflow: visible
-    }
-
-    .typeslider .container {
-        --bs-gutter-x: 4.8rem
-    }
-
-    .iv3 {
-        width: 48% !important
-    }
-
-    .implant-type-card-image .iv3 {
-        width: 58% !important
-    }
-
-    .product-section-title {
-        font-size: 22px
-    }
-
-    .ImplantProsthesis .product-section-title {
-        left: 5%;
-        position: relative;
-        margin-bottom: 12px;
-        width: 90%
-    }
-
-    .typeslider-wrapper .vector2 {
-        width: 45%;
-        display: none
-    }
-
-    .typeslider .implant-type-card {
-        margin-top: 15px
-    }
-}
-
-@media (max-width:450px) {
-    .typeslider-wrapper {
-        width: 84%;
-        justify-content: center;
-        align-items: center
-    }
+@media (max-width: 450px) {
+  .typeslider-wrapper {
+    width: 84%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .pin-spacer:has(.future-Implants.unpinned) {
-    overflow: hidden !important;
-    height: 4080px !important
+  overflow: hidden !important;
+  height: 4080px !important;
 }
 
 .future-Implants {
-    padding: 0px 0px 0px !important;
-    background-color: #fff;
-    z-index: 1;
-    position: relative
+  padding: 0px 0px 0px !important;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
 .future-Implants .col-lg-6 {
-    align-self: flex-start
+  align-self: flex-start;
 }
 
 .future-title {
-    color: #1b8976;
-    position: absolute;
-    text-align: center;
-    left: 32.9%;
-    background: linear-gradient(90deg, #1b8976 82%, #fff 35%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 2
+  color: #1b8976;
+  position: absolute;
+  text-align: center;
+  left: 32.9%;
+  background: linear-gradient(90deg, #1b8976 82%, #fff 35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
 }
 
 .future-title.fixed {
-    position: fixed;
-    top: 86px;
-    z-index: 999;
-    left: 34.5%
+  position: fixed;
+  top: 86px;
+  z-index: 999;
+  left: 34.5%;
 }
 
 .future-Implants .splide {
-    visibility: visible
+  visibility: visible;
 }
 
 #future-slider .future-content-wrapper {
-    margin-top: 45px !important;
-    padding-top: 50px !important
+  margin-top: 45px !important;
+  padding-top: 50px !important;
 }
 
 .future-content {
-    position: relative;
-    width: 100%
+  position: relative;
+  width: 100%;
 }
 
 .future-content-num {
-    margin-bottom: 35px
+  margin-bottom: 35px;
 }
 
 .future-content h3 {
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    font-size: 25px;
-    letter-spacing: 1px;
-    line-height: 45px;
-    color: #1b8976
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 45px;
+  color: #1b8976;
 }
 
 .future-content p {
-    letter-spacing: 1.4px;
-    line-height: 27px
+  letter-spacing: 1.4px;
+  line-height: 27px;
 }
 
 .future-content .future-p {
-    margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
-@media screen and (min-width:1100px) and (max-width:1300px) {
-    .future-title {
-        left: 30.2%
-    }
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  .future-title {
+    left: 30.2%;
+  }
 }
 
-@media (max-width:1200px) {
-    .pin-spacer:has(.future-Implants.unpinned) {
-        height: 3600px !important
-    }
+@media (max-width: 1200px) {
+  .pin-spacer:has(.future-Implants.unpinned) {
+    height: 3600px !important;
+  }
 
-    #future-slider .future-content-wrapper {
-        margin-top: 40px !important;
-        padding-top: 0px !important
-    }
+  #future-slider .future-content-wrapper {
+    margin-top: 40px !important;
+    padding-top: 0px !important;
+  }
 
-    .future-content-num {
-        margin-bottom: 25px
-    }
+  .future-content-num {
+    margin-bottom: 25px;
+  }
 
-    .future-content .future-p {
-        margin-bottom: 20px
-    }
+  .future-content .future-p {
+    margin-bottom: 20px;
+  }
 
-    .future-title {
-        left: 30.55%;
-        font-size: 26px
-    }
+  .future-title {
+    left: 30.55%;
+    font-size: 26px;
+  }
 }
 
-@media (max-width:991px) {
-    #future-slider .future-content-wrapper {
-        margin-top: 30px !important
-    }
+@media (max-width: 991px) {
+  #future-slider .future-content-wrapper {
+    margin-top: 30px !important;
+  }
 
-    .future-Implants {
-        padding: 20px 0px 0px !important
-    }
+  .future-Implants {
+    padding: 20px 0px 0px !important;
+  }
 
-    .future-title {
-        position: relative;
-        left: 0%;
-        font-size: 25px;
-        margin-bottom: 12px
-    }
+  .future-title {
+    position: relative;
+    left: 0%;
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
 
-    .future-content {
-        margin-bottom: 30px
-    }
+  .future-content {
+    margin-bottom: 30px;
+  }
 
-    .future-content h3 {
-        line-height: 35px;
-        margin-bottom: 10px;
-        font-size: 22px
-    }
+  .future-content h3 {
+    line-height: 35px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
 
-    .future-content .future-p {
-        margin-bottom: 16px
-    }
+  .future-content .future-p {
+    margin-bottom: 16px;
+  }
 
-    .future-content p {
-        letter-spacing: 1px
-    }
+  .future-content p {
+    letter-spacing: 1px;
+  }
 }
 
-@media (max-width:768px) {
-    .future-Implants {
-        padding: 0px 0px 0px !important
-    }
+@media (max-width: 768px) {
+  .future-Implants {
+    padding: 0px 0px 0px !important;
+  }
 
-    .future-content {
-        margin-bottom: 25px
-    }
+  .future-content {
+    margin-bottom: 25px;
+  }
 
-    .future-title {
-        background: linear-gradient(72deg, #1b8976 100%);
-        background-clip: text;
-        -webkit-background-clip: text
-    }
+  .future-title {
+    background: linear-gradient(72deg, #1b8976 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
 
-    .future-content h3 {
-        font-size: 20px;
-        margin-bottom: 10px
-    }
+  .future-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 
-    .future-content .future-p,
-    .future-content .sec_copy_para {
-        font-size: 15px;
-        letter-spacing: 1px
-    }
+  .future-content .future-p,
+  .future-content .sec_copy_para {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
 
-    #future-slider .future-content-wrapper {
-        margin-top: 30px !important
-    }
+  #future-slider .future-content-wrapper {
+    margin-top: 30px !important;
+  }
 }
 
-@media (max-width:576px) {
-    .future-title {
-        font-size: 22px;
-        text-align: left;
-        left: 8%;
-        position: relative
-    }
+@media (max-width: 576px) {
+  .future-title {
+    font-size: 22px;
+    text-align: left;
+    left: 8%;
+    position: relative;
+  }
 
-    .future-content .future-p,
-    .future-content .sec_copy_para {
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        line-height: 24px;
-        font-weight: 480px
-    }
+  .future-content .future-p,
+  .future-content .sec_copy_para {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    font-weight: 480px;
+  }
 
-    .future-content h3 {
-        line-height: 30px;
-        font-weight: 400;
-        letter-spacing: 0.4px;
-        font-size: 18px
-    }
+  .future-content h3 {
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-size: 18px;
+  }
 
-    .future-Implants .col-lg-6 {
-        padding: 0px
-    }
+  .future-Implants .col-lg-6 {
+    padding: 0px;
+  }
 
-    .future-Implants .row {
-        --bs-gutter-x: 0.2rem
-    }
+  .future-Implants .row {
+    --bs-gutter-x: 0.2rem;
+  }
 }
 
 .patient-success {
-    margin: 1.5% auto;
-    background-color: #fff;
-    z-index: 1;
-    position: relative
+  margin: 1.5% auto;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
 .patient-success .product-section-title {
-    width: 100%;
-    text-align: center
+  width: 100%;
+  text-align: center;
 }
 
 .patient-success .vector1 {
-    position: absolute;
-    top: 1.7%;
-    left: 1%;
-    width: 26%
+  position: absolute;
+  top: 1.7%;
+  left: 1%;
+  width: 26%;
 }
 
 .patient-success .vector2 {
-    position: absolute;
-    top: 1.7%;
-    right: 1%;
-    width: 26%
+  position: absolute;
+  top: 1.7%;
+  right: 1%;
+  width: 26%;
 }
 
 .patientSwiper .swiper-slide {
-    color: #000;
-    margin: 3% auto 1%
+  color: #000;
+  margin: 3% auto 1%;
 }
 
 .patient-img {
-    border-radius: 50%
+  border-radius: 50%;
 }
 
 .patient-success-content {
-    background-color: #fff;
-    box-shadow: 0px 0px 34px 3px rgba(0, 0, 0, 0.1);
-    padding: 30px 30px
+  background-color: #fff;
+  box-shadow: 0px 0px 34px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px;
 }
 
 .patient-success-content p {
-    letter-spacing: 0.4px;
-    line-height: 1.7;
-    font-size: 14px
+  letter-spacing: 0.4px;
+  line-height: 1.7;
+  font-size: 14px;
 }
 
 .patient-success-content h2 {
-    color: #1b8976;
-    font-size: 24px;
-    letter-spacing: 0.3px
+  color: #1b8976;
+  font-size: 24px;
+  letter-spacing: 0.3px;
 }
 
 .patient-success-content span {
-    font-weight: 600;
-    color: #1b8976;
-    font-size: 24px;
-    letter-spacing: 0.3px
+  font-weight: 600;
+  color: #1b8976;
+  font-size: 24px;
+  letter-spacing: 0.3px;
 }
 
 .patientSwiper .swiper-button-next {
-    top: var(--swiper-navigation-top-offset, 100%);
-    right: var(--swiper-navigation-sides-offset, 47%) !important;
-    width: 20px;
-    height: 20px
+  top: var(--swiper-navigation-top-offset, 100%);
+  right: var(--swiper-navigation-sides-offset, 47%) !important;
+  width: 20px;
+  height: 20px;
 }
 
 .patientSwiper .swiper-button-next:after {
-    font-size: 20px;
-    font-weight: 900;
-    color: #1b8976
+  font-size: 20px;
+  font-weight: 900;
+  color: #1b8976;
 }
 
 .patientSwiper .swiper-button-prev {
-    top: var(--swiper-navigation-top-offset, 100%);
-    left: var(--swiper-navigation-sides-offset, 47%) !important;
-    width: 20px;
-    height: 20px
+  top: var(--swiper-navigation-top-offset, 100%);
+  left: var(--swiper-navigation-sides-offset, 47%) !important;
+  width: 20px;
+  height: 20px;
 }
 
 .patientSwiper .swiper-button-prev:after {
-    font-size: 20px;
-    font-weight: 900;
-    color: #1b8976
+  font-size: 20px;
+  font-weight: 900;
+  color: #1b8976;
 }
 
 .patientSwiper .swiper-wrapper {
-    padding: 0px 0px 20px
+  padding: 0px 0px 20px;
 }
 
-@media (max-width:1200px) {
-    .patient-success .product-section-title {
-        font-size: 26px
-    }
+@media (max-width: 1200px) {
+  .patient-success .product-section-title {
+    font-size: 26px;
+  }
 
-    .patient-success {
-        margin: 3% auto
-    }
+  .patient-success {
+    margin: 3% auto;
+  }
 }
 
-@media (max-width:991px) {
-    .patient-success .product-section-title {
-        font-size: 25px;
-        text-align: left
-    }
+@media (max-width: 991px) {
+  .patient-success .product-section-title {
+    font-size: 25px;
+    text-align: left;
+  }
 
-    .patient-success {
-        margin: 0px auto;
-        padding: 1.5% 0px
-    }
+  .patient-success {
+    margin: 0px auto;
+    padding: 1.5% 0px;
+  }
 
-    .patient-success .vector1 {
-        display: none
-    }
+  .patient-success .vector1 {
+    display: none;
+  }
 
-    .patient-success .vector2 {
-        top: 2%;
-        width: 40%;
-        right: 5%
-    }
+  .patient-success .vector2 {
+    top: 2%;
+    width: 40%;
+    right: 5%;
+  }
 
-    .swiper-slide .order-1 {
-        perspective: 1000px;
-        position: relative;
-        background-color: #fff;
-        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1)
-    }
+  .swiper-slide .order-1 {
+    perspective: 1000px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
 
-    .swiper-slide .order-1 .patient-img-wrapper {
-        width: 25%;
-        height: 25%;
-        position: relative;
-        transform: rotateY(0deg)
-    }
+  .swiper-slide .order-1 .patient-img-wrapper {
+    width: 25%;
+    height: 25%;
+    position: relative;
+    transform: rotateY(0deg);
+  }
 
-    .swiper-slide .order-1 .patient-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        object-fit: cover
-    }
+  .swiper-slide .order-1 .patient-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    object-fit: cover;
+  }
 
-    .patient-success-content {
-        border: none;
-        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1)
-    }
+  .patient-success-content {
+    border: none;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
 
-    .patientSwiper .swiper-button-next {
-        right: var(--swiper-navigation-sides-offset, 45.5%) !important
-    }
+  .patientSwiper .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 45.5%) !important;
+  }
 
-    .patientSwiper .swiper-button-prev {
-        left: var(--swiper-navigation-sides-offset, 45.5%) !important
-    }
+  .patientSwiper .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 45.5%) !important;
+  }
 
-    .patientSwiper .swiper-slide {
-        color: #000;
-        margin: 3% auto 0%
-    }
+  .patientSwiper .swiper-slide {
+    color: #000;
+    margin: 3% auto 0%;
+  }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+  .swiper-slide .order-1,
+  .patient-success-content {
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  }
 
-    .swiper-slide .order-1,
-    .patient-success-content {
-        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1)
-    }
+  .patient-success .vector2 {
+    width: 40%;
+    right: 4%;
+    top: 2.5%;
+  }
 
-    .patient-success .vector2 {
-        width: 40%;
-        right: 4%;
-        top: 2.5%
-    }
+  .patientSwiper .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 44%) !important;
+  }
 
-    .patientSwiper .swiper-button-next {
-        right: var(--swiper-navigation-sides-offset, 44%) !important
-    }
+  .patientSwiper .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 44%) !important;
+  }
 
-    .patientSwiper .swiper-button-prev {
-        left: var(--swiper-navigation-sides-offset, 44%) !important
-    }
-
-    .patientSwiper .swiper-wrapper {
-        padding: 0px 0px 30px
-    }
+  .patientSwiper .swiper-wrapper {
+    padding: 0px 0px 30px;
+  }
 }
 
-@media (max-width:576px) {
-    .patient-success .product-section-title {
-        font-size: 22px
-    }
+@media (max-width: 576px) {
+  .patient-success .product-section-title {
+    font-size: 22px;
+  }
 
-    .patient-success-content span {
-        font-size: 20px
-    }
+  .patient-success-content span {
+    font-size: 20px;
+  }
 
-    .patient-success-content p {
-        letter-spacing: 0.34px
-    }
+  .patient-success-content p {
+    letter-spacing: 0.34px;
+  }
 
-    .patient-success .container {
-        --bs-gutter-x: 6rem
-    }
+  .patient-success .container {
+    --bs-gutter-x: 6rem;
+  }
 
-    .patient-success .vector2 {
-        display: none
-    }
+  .patient-success .vector2 {
+    display: none;
+  }
 
-    .patientSwiper .swiper-button-next {
-        right: var(--swiper-navigation-sides-offset, 41%) !important
-    }
+  .patientSwiper .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 41%) !important;
+  }
 
-    .patientSwiper .swiper-button-prev {
-        right: var(--swiper-navigation-sides-offset, 41%) !important
-    }
+  .patientSwiper .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 41%) !important;
+  }
 
-    .patient-success-content {
-        padding: 20px 20px
-    }
+  .patient-success-content {
+    padding: 20px 20px;
+  }
 
-    .patient-success-content h2 {
-        font-size: 18px
-    }
+  .patient-success-content h2 {
+    font-size: 18px;
+  }
 
-    .swiper-slide .order-1 .patient-img-wrapper {
-        width: 35%;
-        height: 35%
-    }
+  .swiper-slide .order-1 .patient-img-wrapper {
+    width: 35%;
+    height: 35%;
+  }
 }
 
 .implant-faq .vector1 {
-    position: absolute;
-    top: 1.9%;
-    left: 1%
+  position: absolute;
+  top: 1.9%;
+  left: 1%;
 }
 
 .implant-faq .vector2 {
-    position: absolute;
-    top: 1.9%;
-    right: 1%
+  position: absolute;
+  top: 1.9%;
+  right: 1%;
 }
 
 .implant-faq {
-    padding: 10px 0px 50px;
-    background-color: #fff;
-    z-index: 1;
-    position: relative
+  padding: 10px 0px 50px;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
 .faq-answer {
-    font-size: 14px;
-    text-align: left
+  font-size: 14px;
+  text-align: left;
 }
 
 .faq-section-implant {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .faq-question {
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-    position: relative;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  position: relative;
 }
 .faq-toggle-icon {
   display: inline-block;
@@ -1516,7 +1520,7 @@
 }
 
 .faq-toggle-icon::after {
-  content: '+';
+  content: "+";
   font-weight: bold;
   font-size: 1.5rem;
   display: block;
@@ -1524,148 +1528,147 @@
 }
 
 .faq-question:not(.collapsed) .faq-toggle-icon::after {
-  content: '−';
+  content: "−";
 }
 
+@media (max-width: 1200px) {
+  .implant-faq {
+    padding: 20px 0px 50px;
+  }
 
-@media (max-width:1200px) {
-    .implant-faq {
-        padding: 20px 0px 50px
-    }
+  .implant-faq .product-section-title {
+    font-size: 26px;
+  }
 
-    .implant-faq .product-section-title {
-        font-size: 26px
-    }
+  .implant-faq .vector1 {
+    left: 2% !important;
+    width: 29%;
+    top: 2%;
+  }
 
-    .implant-faq .vector1 {
-        left: 2% !important;
-        width: 29%;
-        top: 2%
-    }
-
-    .implant-faq .vector2 {
-        right: 2% !important;
-        width: 29%;
-        top: 2%
-    }
+  .implant-faq .vector2 {
+    right: 2% !important;
+    width: 29%;
+    top: 2%;
+  }
 }
 
-@media (max-width:991px) {
-    .implant-faq {
-        padding: 30px 0px 50px
-    }
+@media (max-width: 991px) {
+  .implant-faq {
+    padding: 30px 0px 50px;
+  }
 
-    .implant-faq .product-section-title {
-        font-size: 25px;
-        text-align: left
-    }
+  .implant-faq .product-section-title {
+    font-size: 25px;
+    text-align: left;
+  }
 
-    .implant-faq .vector1 {
-        display: none
-    }
+  .implant-faq .vector1 {
+    display: none;
+  }
 
-    .implant-faq .vector2 {
-        width: 38%;
-        top: 2.5%
-    }
+  .implant-faq .vector2 {
+    width: 38%;
+    top: 2.5%;
+  }
 }
 
-@media (max-width:768px) {
-    .implant-faq .product-section-title {
-        text-align: start
-    }
+@media (max-width: 768px) {
+  .implant-faq .product-section-title {
+    text-align: start;
+  }
 
-    .implant-faq .vector1 {
-        display: none
-    }
+  .implant-faq .vector1 {
+    display: none;
+  }
 
-    .implant-faq .vector2 {
-        width: 32%;
-        top: 3%;
-        right: 2%
-    }
+  .implant-faq .vector2 {
+    width: 32%;
+    top: 3%;
+    right: 2%;
+  }
 }
 
-@media (max-width:576px) {
-    .implant-faq .container {
-        --bs-gutter-x: 6rem
-    }
+@media (max-width: 576px) {
+  .implant-faq .container {
+    --bs-gutter-x: 6rem;
+  }
 
-    .implant-faq .product-section-title {
-        font-size: 22px
-    }
+  .implant-faq .product-section-title {
+    font-size: 22px;
+  }
 
-    .implant-faq .vector1 {
-        display: none
-    }
+  .implant-faq .vector1 {
+    display: none;
+  }
 
-    .implant-faq .vector2 {
-        display: none
-    }
+  .implant-faq .vector2 {
+    display: none;
+  }
 
-    .faq-answer {
-        font-size: 14px;
-        text-align: left;
-        letter-spacing: 0.2
-    }
+  .faq-answer {
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0.2;
+  }
 }
 
-@media (min-width:1300px) and (max-width:1440px) {
-    .TypeofImplants {
-        margin: 1% auto 0px
-    }
+@media (min-width: 1300px) and (max-width: 1440px) {
+  .TypeofImplants {
+    margin: 1% auto 0px;
+  }
 
-    .pin-spacer:has(.future-Implants.unpinned) {
-        height: 3630px !important
-    }
+  .pin-spacer:has(.future-Implants.unpinned) {
+    height: 3630px !important;
+  }
 
-    .why-Implant-titleWrapper {
-        height: 70%
-    }
+  .why-Implant-titleWrapper {
+    height: 70%;
+  }
 }
 
-@media (min-width:1439px) and (max-width:1649px) {
-    .TypeofImplants {
-        margin: 6% auto 0px
-    }
+@media (min-width: 1439px) and (max-width: 1649px) {
+  .TypeofImplants {
+    margin: 6% auto 0px;
+  }
 
-    .why-Implant-titleWrapper {
-        height: 80%
-    }
+  .why-Implant-titleWrapper {
+    height: 80%;
+  }
 
-    .pin-spacer:has(.future-Implants.unpinned) {
-        height: 3630px !important
-    }
+  .pin-spacer:has(.future-Implants.unpinned) {
+    height: 3630px !important;
+  }
 }
 
-@media (min-width:1650px) and (max-width:1800px) {
-    .TypeofImplants {
-        margin: 7% auto 0px
-    }
+@media (min-width: 1650px) and (max-width: 1800px) {
+  .TypeofImplants {
+    margin: 7% auto 0px;
+  }
 
-    .why-Implant-titleWrapper {
-        height: 85%
-    }
+  .why-Implant-titleWrapper {
+    height: 85%;
+  }
 
-    .pin-spacer:has(.future-Implants.unpinned) {
-        height: 3650px !important
-    }
+  .pin-spacer:has(.future-Implants.unpinned) {
+    height: 3650px !important;
+  }
 }
 
-@media (min-width:1800px) and (max-width:2000px) {
-    .TypeofImplants {
-        margin: 7% auto 0px
-    }
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .TypeofImplants {
+    margin: 7% auto 0px;
+  }
 
-    .why-Implant-section {
-        background-size: 100% 100%
-    }
+  .why-Implant-section {
+    background-size: 100% 100%;
+  }
 
-    .why-Implant-titleWrapper {
-        height: 100%
-    }
+  .why-Implant-titleWrapper {
+    height: 100%;
+  }
 
-    .pin-spacer:has(.future-Implants.unpinned) {
-        height: 3650px !important
-    }
+  .pin-spacer:has(.future-Implants.unpinned) {
+    height: 3650px !important;
+  }
 }

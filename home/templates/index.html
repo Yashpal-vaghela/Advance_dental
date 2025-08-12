@@ -54,10 +54,7 @@
 {% endblock %} {% block css %}
 <link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 <link rel="preload" href="{% static 'css/review.css' %}" as="style" />
-<link
-  href="{% static 'css/review.css' %}"
-  rel="stylesheet"
-/>
+<link href="{% static 'css/review.css' %}" rel="stylesheet" />
 <noscript
   ><link rel="stylesheet" href="{% static 'css/review.css' %}"
 /></noscript>
@@ -268,13 +265,15 @@
             src="{% static '/banner-2/new-banner3-bg8.webp'%}"
             class="new-banner3-bg img-fluid d-sm-none d-md-block d-lg-none d-none"
           />
-          <img
-            src="{% static '/banner-2/new-banner3-mobileSize5.webp' %}"
-            class="new-banner3-bg d-block d-md-none img-fluid"
-            alr="aceScan-mobilescreen-banner-img"
-            width="582"
-            height="335"
-          />
+          <a href="/contact-us/">
+            <img
+              src="{% static '/banner-2/new-banner3-mobileSize5.webp' %}"
+              class="new-banner3-bg d-block d-md-none img-fluid"
+              alr="aceScan-mobilescreen-banner-img"
+              width="582"
+              height="335"
+            />
+          </a>
         </div>
         <div class="container new-banner-productWrapper">
           <img
@@ -1344,13 +1343,11 @@
     </div>
   </div>
 </section>
-{% endblock %}
-{% comment %}
+{% endblock %} {% comment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Owl Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-{% endcomment %} 
-{% block javascript %}
+{% endcomment %} {% block javascript %}
 <script>
   var swiper1 = new Swiper(".clientLogo", {
     slidesPerView: 7,
