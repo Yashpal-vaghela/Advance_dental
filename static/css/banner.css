@@ -1073,8 +1073,8 @@
 
   .btn-implant-button {
     top: 350px !important;
-    left: 0%;
-    margin-left: 7%;
+    left: 6.5%;
+    /* margin-left: 7%; */
     padding: 6px 6px !important;
     font-size: 18px !important;
   }
@@ -1155,6 +1155,9 @@
   }
   .btn-read-more1 {
     top: 430px !important;
+  }
+  .btn-implant-button{
+    left:10.5%
   }
 }
 @media screen and (min-width: 1999px) and (max-width: 2099px) {
@@ -1257,8 +1260,8 @@
   }
 
   .home-implant-text {
-    margin-left: 8%;
-    margin-top: -8%;
+    margin-left: 0%;
+    margin-top: -16%;
     font-size: 50px;
   }
 
@@ -1267,8 +1270,8 @@
   }
 
   .btn-implant-button {
-    top: 420px !important;
-    left: 16%;
+    top: 405px !important;
+    left: 13.4%;
     padding: 6px 6px !important;
     font-size: 18px !important;
   }
