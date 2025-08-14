@@ -143,24 +143,77 @@ def exhibition(request):
 
 def zirconiacrown(request):
     cards = [
-        {"title": "Planning","subtitle": "Plan The Treatment","image": "img/try1.webp"},
-        {"title": "Presentation", "subtitle": "Present The Treatment", "image": "img/try2.webp"},
-        {"title": "Accuracy", "subtitle": "Provide Accurate And Reliable Results","image": "img/try3.webp"},
-        {"title": "Preparation","subtitle": "Custom Restoration Preparation","image": "img/try4.webp"},
-        {"title": "Provision","subtitle": "Provide The Temporaries","image": "img/try5.webp"},
-        {"title": "Collection","subtitle": "Collect Smile Data","image": "img/try6.webp"},
+        {"title": "Planning","subtitle": "Plan The Treatment","image": "img/try1.webp", "alt":"Zirconia dental treatment planning for customized and precise restorative care solutions"},
+        {"title": "Presentation", "subtitle": "Present The Treatment", "image": "img/try2.webp", "alt":"Zirconia dental treatment plan presentation to patient for personalized restorative care"},
+        {"title": "Accuracy", "subtitle": "Provide Accurate And Reliable Results","image": "img/try3.webp", "alt":"Digital display showing zirconia dental treatment plan for advanced restorative procedures" },
+        {"title": "Preparation","subtitle": "Custom Restoration Preparation","image": "img/try4.webp", "alt":"Custom zirconia dental restoration preparation for precise and personalized patient treatment"},
+        {"title": "Provision","subtitle": "Provide The Temporaries","image": "img/try5.webp", "alt":"Placement phase of zirconia dental treatment temporaries for trial fit and aesthetic evaluation"},
+        {"title": "Collection","subtitle": "Collect Smile Data","image": "img/try6.webp", "alt": "Completed zirconia dental treatment with successful results at Advance Dental Export laboratory"},
     ]
  
     Benefit = [
-        {'id':'01','title':"Protects Opposing Teeth",'imgUrl':"011Benefit.svg",'description':"Gentle yet strong, Advance Zirconia helps reduce wear on the teeth it bites against. It protects your natural teeth while still offering long-lasting durability."},
-        {'id':'02','title':"Longevity",'imgUrl':"02Benefit.svg",'description':"Designed for long-term use, Advance Zirconia resists chipping, cracking, and decay, offering a reliable and durable solution that stands the test of time."},
-        {'id':'03','title':"Precision and Fit",'imgUrl':"03Benefit.svg",'description':"Crafted using advanced technology, Advance Zirconia crowns provide a custom fit that ensures comfort, stability, and a natural bite alignment."},
-        {'id':'04','title':"Versatility",'imgUrl':"04Benefit.svg",'description':"Advance Zirconia is suitable for a wide range of dental treatments—including crowns, bridges, and implants—delivering dependable performance with a natural look."},
-        {'id':'05','title':"Aesthetics",'imgUrl':"05Benefit.svg",'description':"With its lifelike translucency and excellent color-matching, Advance Zirconia creates a seamless, beautiful restoration that blends perfectly with your natural teeth."},
-        {'id':'06','title':"Metal-Free Material",'imgUrl':"06Benefit.svg",'description':"Made without any metal, Advance Zirconia is a great option for people who are allergic or sensitive to metals. It’s safe, comfortable, and looks more natural, too."},
-        {'id':'07','title':"Minimal Tooth Removal",'imgUrl':"07Benefit.svg",'description':"Advance Zirconia allows for thinner, stronger restorations. Your dentist can remove less enamel, helping preserve more of your natural tooth structure."},
-        {'id':'08','title':"Resistance To Staining",'imgUrl':"08Benefit.svg",'description':"Thanks to its smooth, non-porous finish, Advance Zirconia resists stains from coffee, tea, or wine, keeping your smile bright and clean over time."},
-        {'id':'09','title':"Gum-Friendly Surface",'imgUrl':"09Benefit.svg",'description':"Its smooth surface helps prevent plaque from building up around the crown, making it easier to keep your gums clean and healthy."},
+        {
+            'id':'01',
+            'title':"Protects Opposing Teeth",
+            'imgUrl':"011Benefit.svg",
+            'description':"Gentle yet strong, Advance Zirconia helps reduce wear on the teeth it bites against. It protects your natural teeth while still offering long-lasting durability.", 
+            'alt':"Advance Zirconia SVG icon showing strong yet gentle protection for opposing natural teeth"
+        },
+        {
+            'id':'02','title':"Longevity",
+            'imgUrl':"02Benefit.svg",
+            'description':"Designed for long-term use, Advance Zirconia resists chipping, cracking, and decay, offering a reliable and durable solution that stands the test of time.", 
+            'alt':"Icon depicting Advance Zirconia’s durability resisting chips, cracks, and decay for long-lasting use"
+        },
+        {
+            'id':'03',
+            'title':"Precision and Fit",
+            'imgUrl':"03Benefit.svg",
+            'description':"Crafted using advanced technology, Advance Zirconia crowns provide a custom fit that ensures comfort, stability, and a natural bite alignment.", 
+            'alt':"Icon representing precise custom fit and advanced technology of Advance Zirconia crowns for comfort"
+        },
+        {
+            'id':'04',
+            'title':"Versatility",
+            'imgUrl':"04Benefit.svg",
+            'description':"Advance Zirconia is suitable for a wide range of dental treatments—including crowns, bridges, and implants—delivering dependable performance with a natural look.", 
+            'alt':"Icon illustrating Advance Zirconia’s versatility for crowns, bridges, and implants with natural aesthetics"
+        },
+        {
+            'id':'05',
+            'title':"Aesthetics",
+            'imgUrl':"05Benefit.svg",
+            'description':"With its lifelike translucency and excellent color-matching, Advance Zirconia creates a seamless, beautiful restoration that blends perfectly with your natural teeth.", 
+            'alt':"Advance Zirconia icon for lifelike translucency and color-matching in natural-looking restorations"
+        },
+        {
+            'id':'06',
+            'title':"Metal-Free Material",
+            'imgUrl':"06Benefit.svg",
+            'description':"Made without any metal, Advance Zirconia is a great option for people who are allergic or sensitive to metals. It’s safe, comfortable, and looks more natural, too.", 
+            'alt':"Metal-free Advance Zirconia icon showing safe, natural option for metal-sensitive dental patients"
+        },
+        {
+            'id':'07',
+            'title':"Minimal Tooth Removal",
+            'imgUrl':"07Benefit.svg",
+            'description':"Advance Zirconia allows for thinner, stronger restorations. Your dentist can remove less enamel, helping preserve more of your natural tooth structure.", 
+            'alt':"Advance Zirconia icon representing minimal tooth removal and preservation of natural enamel structure"
+        },
+        {
+            'id':'08',
+            'title':"Resistance To Staining",
+            'imgUrl':"08Benefit.svg",
+            'description':"Thanks to its smooth, non-porous finish, Advance Zirconia resists stains from coffee, tea, or wine, keeping your smile bright and clean over time.", 
+            'alt':"Advance Zirconia icon showing stain resistance from coffee, tea, and wine for a lasting bright smile"
+        },
+        {
+            'id':'09',
+            'title':"Gum-Friendly Surface",
+            'imgUrl':"09Benefit.svg",
+            'description':"Its smooth surface helps prevent plaque from building up around the crown, making it easier to keep your gums clean and healthy.", 
+            'alt':"Advance Zirconia icon showing smooth, gum-friendly surface that resists plaque buildup for oral health"
+        },
     ]
 
     faq_data =[

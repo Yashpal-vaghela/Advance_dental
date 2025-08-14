@@ -4045,7 +4045,10 @@ ul {
   width: 40px;
   height: 40px;
 }
-
+.icon-box svg{
+    width: 40px;
+    height: 40px;
+}
 .text-box span {
   color: #1b8976;
   font-size: 24px;
@@ -4205,10 +4208,15 @@ ul {
   position: absolute;
   top: -18%;
   right: -21%;
-  height: 309.18px;
+  height: 350px;
   width: 246;
 }
-
+.cd_bg_icon_2{
+    position: absolute;
+    top: -18%;
+    right: -21%;
+    height: 100%;
+}
 .cd_subheading {
   font-weight: 400;
   font-size: 15px;

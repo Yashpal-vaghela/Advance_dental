@@ -58,12 +58,12 @@
 						{% for blog in first_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 order-lg-1 order-2">
 										<div class="position-relative mx-auto all-blog-content card">
-											<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" />
+											<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" alt="{{blog.alt}}"/>
 											<div class="card-body">
 												<div class="blog-content-txt">
 													<div class="my-2 blog-author-date-content d-flex justify-content-between">
 														<div class="blog-author-wrapper">
-															<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+															<img src="{% static 'author.png'%}" alt="Author profile identification icon for blog or article" class="blog-author"/>
 															<span class="blog-author-txt"> By {{ blog.author }}</span>
 														</div>
 														<div class="blog-author-wrapper">
@@ -73,7 +73,7 @@
 													</div>
 												</div>
 												<div class="blog-main-content steelblue-color">
-												<h2 class="mt-3 card-title text-start"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.title|lower }}" >{{blog.title}}</a></h2>
+												<h2 class="mt-3 card-title text-start"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.h1|lower }}" >{{blog.h1}}</a></h2>
 													<!-- Post Text -->
 													<p class="blog-content-descripation mb-0">
 														{{blog.description}}
@@ -121,12 +121,12 @@
 						{% for blog in all_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 mb-md-4 mb-lg-4 d-md-block blog-page-wrapper">
 								<div class="position-relative mx-auto all-blog-content card">
-										<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" />
+										<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" alt="{{blog.alt}}"/>
 										<div class="card-body ">
 											<div class="blog-content-txt">
 												<div class="my-2 blog-author-date-content d-flex justify-content-between">
 													<div class="blog-author-wrapper">
-														<img src="{% static 'author.png'%}" alt="Author-Icon" class="blog-author"/>
+														<img src="{% static 'author.png'%}" alt="Author profile identification icon for blog or article" class="blog-author"/>
 														<span class="blog-author-txt"> By {{ blog.author }}</span>
 													</div>
 													<div class="blog-author-wrapper">
@@ -136,7 +136,7 @@
 												</div>
 											</div>
 											<div class="blog-main-content steelblue-color">
-												<h2 class="mt-3 card-title text-start"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.title|lower }}" >{{blog.title}}</a></h2>
+												<h2 class="mt-3 card-title text-start"><a href="{% url 'home:blogd' blog.slug %}" class="blog-item" data-title="{{ blog.h1|lower }}" >{{blog.h1}}</a></h2>
 												<!-- Post Text -->
 												<p class="blog-content-descripation mb-0">
 													{{blog.description}}

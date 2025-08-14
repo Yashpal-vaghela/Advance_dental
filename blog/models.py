@@ -53,11 +53,12 @@ class Blog(models.Model):
     description = models.CharField(max_length = 900)
     title = models.CharField(max_length = 156)
     breadcrumb = models.CharField(max_length = 156)
-    canonical = models.CharField(max_length = 900, default="https://advancedentalexport.com/")
+    canonical = models.CharField(max_length = 900, default="https://advancedentalexport.com/blog/")
     og_type =models.CharField(max_length = 156)
     og_card = models.CharField(max_length = 156)
-    og_site = models.CharField(max_length = 156)
+    og_site = models.CharField(max_length = 156, default="https://advancedentalexport.com/")
     image  = models.ImageField(upload_to="SEO")
+    alt = models.CharField(max_length=156, blank=True, null=True)
     updated  = models.DateField(auto_now=True)
     published  = models.DateField()
     content = RichTextUploadingField()
@@ -76,7 +77,11 @@ class Blog(models.Model):
     
     def get_absolute_url(self):
         return reverse('blogd', kwargs={'slug': self.slug})
-
+    
+    def save(self, *args, **kwargs):
+        if not self.alt and self.title:
+            self.alt = self.title
+        super().save(*args, **kwargs)
 
 
 class Product(models.Model):
