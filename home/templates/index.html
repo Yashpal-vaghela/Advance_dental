@@ -99,7 +99,7 @@
                 alt="Smiling girl representing digital revolution in modern digital dentistry banner"
               />
             </div>
-            <div class="texts col-lg-5 col-md-7 col-sm-6 col-5">
+            <div class="texts col-lg-5 col-md-5 col-sm-6 col-5">
               <div
                 class="title h1s text-white"
                 data-swiper-parallax="-300"
@@ -359,7 +359,7 @@
           </p>
         </div>
       </div>
-      <div class="col-12 col-lg-5 col-xl-4 d-flex">
+      <div class="col-12 col-lg-5 col-xl-4 d-flex justify-content-center justify-content-lg-start">
         <div class="about-img text-center wow fadeInUp">
           <img
             class="img-fluid"
@@ -462,7 +462,7 @@
         dental labs by delivering excellence in every dental restoration.
       </p>
     </div>
-    <div class="row">
+    <div class="row justify-content-md-center">
       <!-- Card 1 -->
       <div class="col-lg-4 col-md-6">
         <div class="firstCard globalCard">
@@ -1509,7 +1509,6 @@
     </div>
   </section>
 </main>
-
 {% endblock %}
 {% comment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -1522,10 +1521,10 @@
     speed: 600,
     parallax: !0,
     loop: true,
-    /*autoplay: {
+    autoplay: {
       delay: 10000,
       disableOnInteraction: false,
-    },*/
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
@@ -1714,6 +1713,9 @@
     });
   });
 
+  const container = document.querySelector(".company_logo_col_inner");
+  container.innerHTML += container.innerHTML; 
+  
   //partner's logo marquee
   function isIntersecting(element1, element2) {
     const rect1 = element1.getBoundingClientRect();
