@@ -5039,7 +5039,7 @@ a {
     width: 90%;
   }
   .company_logo_col {
-    animation: clientlogoloop 12s linear infinite;
+    animation: clientlogoloop 25s linear infinite;
   }
   @keyframes clientlogoloop {
     0% {
@@ -5133,7 +5133,7 @@ a {
     font-size: 15px;
   }
   .company_logo_col {
-    animation: clientlogoloop 30s linear infinite;
+    animation: clientlogoloop 40s linear infinite;
   }
   @keyframes clientlogoloop {
     0% {
