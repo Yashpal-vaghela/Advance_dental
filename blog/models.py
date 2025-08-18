@@ -101,6 +101,7 @@ class Product(models.Model):
     og_card = models.CharField(max_length = 156)
     og_site = models.CharField(max_length = 156)
     image  = models.ImageField(upload_to="SEO")
+    alt = models.CharField(max_length=156, blank=True, null=True)
     updated  = models.DateField(auto_now=True)
     published  = models.DateField()
     content = RichTextUploadingField()
@@ -120,7 +121,10 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('productd', kwargs={'slug': self.slug})
     
-
+    def save(self, *args, **kwargs):
+        if not self.alt and self.title:
+            self.alt = self.title
+        super().save(*args, **kwargs)
 
 class SubProduct(models.Model):
     main = models.BooleanField(default=False)
@@ -197,6 +201,7 @@ class AboutPage(models.Model):
 
 class Team(models.Model):   
     image  = models.ImageField(upload_to="SEO")
+    alt = models.CharField(max_length=156, blank=True, null=True)
     name = models.CharField(max_length = 156)
     position = models.CharField(max_length = 1156)
     role = models.CharField(max_length = 1256, null=True)
@@ -227,13 +232,16 @@ class Events(models.Model):
     name = models.CharField(max_length = 156)
     slug =models.CharField(max_length = 1256,blank=True, null=True)
     image  = models.ImageField(upload_to="SEO", blank=True, null=True)
+    alt = models.CharField(max_length=156, blank=True, null=True)
     meta_description = models.TextField(blank=True, null=True)
+
     def __str__(self):
         return self.name
 
 class EventsGallery(models.Model):   
     name = models.CharField(max_length = 156)
     image  = models.ImageField(upload_to="SEO")
+    alt = models.CharField(max_length=156, blank=True, null=True)
     category = models.ForeignKey(Events, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -254,7 +262,7 @@ class NewEventLink(models.Model):
 class AboutImage(models.Model):   
     name = models.CharField(max_length = 156)
     image  = models.ImageField(upload_to="SEO")
-    
+    alt = models.CharField(max_length=156, blank=True, null=True)
     def __str__(self):
         return self.name
 
@@ -263,7 +271,7 @@ class AboutImage(models.Model):
 class Client(models.Model):   
     name = models.CharField(max_length = 156)
     image  = models.ImageField(upload_to="SEO")
-    
+    alt = models.CharField(max_length=156, blank=True, null=True)
     def __str__(self):
         return self.name
 
@@ -271,6 +279,7 @@ class Client(models.Model):
 class Gallery(models.Model):   
     name = models.CharField(max_length = 156)
     image  = models.ImageField(upload_to="SEO")
+    alt = models.CharField(max_length=156, blank=True, null=True)
     
     def __str__(self):
         return self.name
@@ -280,6 +289,7 @@ class Gallery(models.Model):
 class BeforeAfter(models.Model):   
     name = models.CharField(max_length = 156)
     image  = models.ImageField(upload_to="SEO")
+    alt = models.CharField(max_length=156, blank=True, null=True)
     
     def __str__(self):
         return self.name
@@ -329,12 +339,18 @@ class WebStory(models.Model):
     slug = models.SlugField(unique=True, null=True)
     description = models.TextField()
     image = models.ImageField(upload_to="SEO/images/")
+    alt = models.CharField(max_length=156, blank=True, null=True)           
     links = models.URLField(blank=True, null=True)  
     author = models.CharField(max_length=100)  
     publish_date = models.DateField()  
 
     def __str__(self):
-        return self.title         
+        return self.title  
+
+    def save(self,*args, **kwargs):
+        if not self.alt:
+            self.alt = self.title
+        super().save(*args, **kwargs)  
 
 class WebStoryVideo(models.Model):
     web_story = models.ForeignKey(WebStory, on_delete=models.CASCADE, related_name="videos")

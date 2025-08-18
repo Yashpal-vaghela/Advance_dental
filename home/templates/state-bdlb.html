@@ -141,7 +141,7 @@
         </div>
         <div class="col-lg-8 col-12 new__valores">
           <h2 class="new-advantage-section-title">
-            Why We Stand as the Best Dental Laboratory of Gujarat?
+            Why We Stand as the Best Dental Laboratory of {{pk.name}}?
           </h2>
           <div class="swiper advantageSwiper">
             <div class="swiper-wrapper">
@@ -233,10 +233,10 @@
                 <div
                   class="advantage-section-content d-block d-md-flex align-items-center"
                 >
-                  <h3>Collaboration with Dentists in Gujarat</h3>
+                  <h3>Collaboration with Dentists in {{pk.name}}</h3>
                   <p>
                     Our close collaboration with dental professionals across
-                    Gujarat ensures that you and your patients receive only
+                    {{pk.name}} ensures that you and your patients receive only
                     outstanding results.
                   </p>
                 </div>
@@ -498,12 +498,12 @@
         <div class="swiper-wrapper">
           {% for ie in gallery21 %}
           <div class="swiper-slide">
-            <div class="hover03 wow zoomSlider w-100 h-100">
+            <div class="w-100 h-100">
               <img
                 class="img-fluid"
                 src="{{ ie.image.url }}"
                 data-src="{{ ie.image.url }}"
-                alt="Before & After"
+                alt="{{ie.alt}}"
                 width="308"
                 height="auto"
               />
