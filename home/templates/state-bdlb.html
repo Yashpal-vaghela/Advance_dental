@@ -65,39 +65,53 @@
 		</div> <!-- End row -->
 	</div> <!-- End container -->
 </div> <!-- END BREADCRUMB -->
-<section id="about-hero" class="pt-50 pb-50">
+
+<section id="about-7">
   <div class="container">
-    <div class="row d-flex align-items-start">
-      <div class="col-md-4">
-        <div class="small-heading">
-          <h2 class="h2-m mb-0">
-            Best Dental Laboratory in
-            <span class="steelblue-color">{{pk.name}}</span> The Address of
-            Accuracy, Quality, and Trust
-          </h2>
+    <div class="row d-flex align-items-center">
+
+      <div class = "about-heading">
+        <h2 class="h2">Best Dental Laboratory in 
+          <span class="fw-bold steelblue-color">{{ pk.name }}: </span> The Address of
+          {% comment %} <span class="pc-break"></span> {% endcomment %}
+           Accuracy, Quality, and Trust
+        </h2>       
+      </div>
+
+      <div class="about-img-section col-lg-5">
+        <div class="about-img-new1 text-left wow fadeInUp" data-wow-delay="0.6s">
+          <img 
+            class="img-fluid" 
+            src="{% static 'about-ade1.webp' %}" 
+            alt="Portrait of Haresh Savani, Founder of Advance Dental Export" 
+            title="Haresh Savani, Founder" 
+            loading="lazy" 
+          />
         </div>
       </div>
-      <div class="col-md-8">
-        <div class="main-descripation">
+
+      <div class="col-lg-12">
+        <div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s">
           <p>
-            Welcome to Advance Dental Export! We are the best dental laboratory
-            in {{pk.name}}, and we assure you of exceptional precision,
-            unmatched quality, and complete trust. At the heart of {{pk.name}}’s
-            dental innovation, we blend technology with craftsmanship to deliver
-            restorations that dentists rely on.
+            <span class="blue-color">Welcome to Advance Dental Export!</span>
+            We are the best dental laboratory in 
+            <span class="fw-bold">{{ pk.name }}</span>, and we assure you of exceptional precision, unmatched quality, and complete trust.
+            At the heart of <span class="fw-bold">{{ pk.name }}’s</span> dental innovation, we blend technology with craftsmanship
+            to deliver restorations that dentists rely on.
           </p>
           <p>
-            From crowns to implants, every case reflects our commitment to
-            precision, consistency, and lasting partnerships built on trust. We
-            make every smile perfect through advanced technology and experienced
-            craftsmanship, which makes us the top dental laboratory of
-            {{pk.name}}.
+            From crowns to implants, every case reflects our commitment to precision, consistency, and 
+            lasting partnerships built on trust. We make every smile perfect through advanced technology 
+            and experienced craftsmanship, which makes us the top dental laboratory of 
+            <span class="fw-bold">{{ pk.name }}</span>.
           </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <section class="new-advantage-section mb-5" id="newadvantage_section">
   <div class="new__valores_pin">
@@ -417,7 +431,7 @@
                     <img
                       src="{% static 'img/profile-user-3.webp' %}"
                       class="d-block w-100"
-                      alt="User icon representing profile identity or personal account avatar in interface design"
+                      alt="user"
                       width="100%"
                       height="100%"
                     />
@@ -465,6 +479,7 @@
     </div>
   </div>
 </section>
+
 <!-- BEfore and After -->
 <section id="gallery-2" class="gallery-section division">
   <div class="container">
@@ -671,6 +686,7 @@
         </div>
     </div>
 </section>
+
 <section class="faq-section zirconia-faq mt-4">
   <div class="container position-relative">
     <h2 class="product-section-title mb-4">Frequently Asked Questions</h2>
