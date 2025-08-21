@@ -95,7 +95,7 @@
                           class="form-control email"
                           type="email"
                           name="email"
-                          placeholder="Your Email"
+                          placeholder="Your Email*"
                           required
                           data-error="Email is required"
                         />
@@ -109,7 +109,7 @@
                           class="form-control phone"
                           type="tel"
                           name="contact"
-                          placeholder="Your Phone Number"
+                          placeholder="Your Phone Number*"
                           required
                           data-error="Please enter only digits."
                         />
@@ -117,6 +117,19 @@
                       </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
+                      <div class="form-group">
+                        <input
+                          id="form_city"
+                          class="form-control city"
+                          name="city"
+                          placeholder="Your City*"
+                          required
+                          data-error="City is required"
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
                       <div class="form-group">
                         <input
                           id="form_subject"
@@ -144,6 +157,7 @@
                       </div>
                     </div>
                     <div class="col-md-12 mt-15 form-btn submit-btn">
+                      <div class="g-recaptcha mb-3" data-sitekey="6Le8GKwrAAAAAI4AeSbEagkEiuafu8gVaLSqb98D"></div>
                       <button type="submit" class="btn-blue submit">
                         Send Your Message
                       </button>

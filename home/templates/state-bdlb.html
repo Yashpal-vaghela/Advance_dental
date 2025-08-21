@@ -145,7 +145,7 @@
           </h2>
           <div class="swiper advantageSwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide swiper-slide-active">
                 <div class="vector-img-wrapper mt-5" id="vector-img1">
                   <img
                     src="{% static 'images/vector-mobile411.png' %}"
@@ -480,52 +480,46 @@
   </div>
 </section>
 
-<!-- BEfore and After -->
+<!-- new desgine of before & after -->
 <section id="gallery-2" class="gallery-section division">
-  <div class="container">
-    <div class="row gallery-item-list text-center listing-gallery-img-items">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">
-          Before & After
-        </h2>
-        <p>
-          Curious about what true smile transformation looks like? Explore our exclusive 
-          before-and-after gallery and see the impact of expert craftsmanship and advanced 
-          dental technology.
-        </p>
-      </div>
-      <div class="swiper beforeSwiper">
-        <div class="swiper-wrapper">
-          {% for ie in gallery21 %}
-          <div class="swiper-slide">
-            <div class="w-100 h-100">
-              <img
-                class="img-fluid"
-                src="{{ ie.image.url }}"
-                data-src="{{ ie.image.url }}"
-                alt="{{ie.alt}}"
-                width="308"
-                height="auto"
-              />
-            </div>
-          </div>
-          {% endfor %}
+    <div class="container">
+      <div class="row gallery-items-list text-center listing-gallery-img-items">
+        <div class="col-lg-12 mx-auto section-title">
+          <h2 class="h2-m steelblue-color mb-0">Before & After</h2>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-50 wow fadeInUp">
-          <a
-            href="{% url 'home:beforeafter' %}"
-            class="btn btn-blue blue-hover submit"
-            aria-label="See more in the Ade after befor"
+        <div class="swiper beforeSwiper">
+          <div class="swiper-wrapper">
+            {% for ie in gallery21 %}
+              <div class="swiper-slide">
+                <div class="hover03 wow zoomSlider">
+                  <!-- Doctor Photo -->
+                  <div class="image-item">
+                    <img
+                      class="img-fluid lazy"
+                      src="{{ ie.image.url }}"
+                      alt="{{ ie.alt }}"
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="col-md-12 text-center">
+          <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
+            <a
+              href="{% url 'home:gallery' %}"
+              class="btn btn-blue blue-hover submit"
+              aria-label="See more in the Ade Gallery"
+              >See More</a
             >
-            See More
-          </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <!-- Contact-us -->   
@@ -991,7 +985,7 @@
     });
 
     // Fade-in each card as it appears in scroll
-    gsap.utils.toArray(".swiper-slide").forEach((card, index) => {
+    gsap.utils.toArray(".advantageSwiper .swiper-slide").forEach((card, index) => {
       gsap.from(card, {
         opacity: 0,
         y: 20,
@@ -1085,5 +1079,61 @@
       }
     }
   }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which is the best dental laboratory in {{pk.name}}?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the best dental laboratory in {{pk.name}}, Advance Dental Export (ADE) is a leading choice for high precision, advanced technology and quality services. We provide services all over {{pk.name}} and internationally as well, making it a perfect and reliable choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose a dental lab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While choosing a dental lab, aspects like its technology, team experience, quality certifications (such as FDA registration), quality of materials used, turnaround time and customer service should be considered. The best lab can deliver superior results by understanding your clinical needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which dental services are provided at ADE dental laboratory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Advance Dental Export offers a wide range of dental services such as dental implant prosthetics, crowns and bridges including Zirconia and IPS E.Max, removable prosthetics (BPS denture), cosmetic dental solutions (veneers) and other specialized services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes our dental laboratory the best?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Factors such as advanced technology like CAD/CAM and 3D printing, a team of over 400 skilled and experienced technicians, commitment to quality with FDA registration, use of premium biocompatible materials, efficient turnaround time and close collaboration with dentists in {{pk.name}}."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which dental labs in {{pk.name}} offer the best services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Advance Dental Export (ADE) is at the forefront among the dental labs offering the best services in {{pk.name}}. With its cutting-edge technology, experienced team, quality products and collaboration with clinicians, ADE consistently delivers outstanding results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications do the ADE have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Advance Dental Export (ADE) adheres to the highest standards of quality and safety and is an FDA registered laboratory. This certification demonstrates their commitment to quality."
+      }
+    }
+  ]
+}
 </script>
 {% endblock js %}

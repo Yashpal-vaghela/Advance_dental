@@ -20,6 +20,29 @@ from blog.sitemaps import *
 # from enquiry.models import InstaPost
 # Create your views here.
 def home(request):
+    if request.method == "POST":
+        recaptcha_response = request.POST.get("g-recaptcha-response")
+        data = {
+            "secret": settings.RECAPTCHA_SECRET_KEY,
+            "response": recaptcha_response
+        }
+        verfiy_url = "https://www.google.com/recaptcha/api/siteverify"
+        r = requests.post(verfiy_url, data=data)
+        result = r.json()
+
+        if result.get("success"):
+            ContactDetails.objects.create(
+                name=request.POST.get("name"),
+                email=request.POST.get("email"),
+                contact=request.POST.get("contact"),
+                subject=request.POST.get("subject"),
+                message=request.POST.get("message"),
+            )
+            messages.success(request, "Your message has been sent successfully.")
+            return redirect("contact")
+        else:
+            messages.error(request,"Invalid reCAPTCHA. Please try again")
+
     # data = InstaPost.objects.all().order_by('-id')
     main3 = Blog.objects.filter(main3=True).order_by('-id')[:3]
     data = Testimonials.objects.all().order_by('-id')[:20]
@@ -37,7 +60,7 @@ def home(request):
         'gallery':gallery,
         'gallery21':gallery21,
         'video':video,
-        
+        'recaptcha_site_key' : settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, 'index.html', context)
 
@@ -46,7 +69,7 @@ def testimonals(request):
     data = Testimonials.objects.all().order_by('-id')[:20]
     context = { 
         'videoData':videoData,
-         'data':data,
+        'data':data,
     }
     return render(request, 'testimonals.html', context)
 
@@ -108,17 +131,63 @@ def blogd(request, pk):
 
 
 def contact(request):
+    if request.method == "POST":
+        recaptcha_response = request.POST.get("g-recaptcha-response")
+        data ={
+            "secret": settings.RECAPTCHA_SECRET_KEY,
+            "response": recaptcha_response
+        }
+        verify_url = "https://www.google.com/recaptcha/api/siteverify"
+        r = requests.post(verify_url, data=data)
+        result = r.json()
+
+        if result.get("success"):
+            ContactDetails.objects.create(
+                name=request.POST.get("name"),
+                email=request.POST.get("email"),
+                contact=request.POST.get("contact"),
+                subject=request.POST.get("subject"),
+                message=request.POST.get("message"),
+            )
+            messages.success(request, "Your message has been sent successfully.")
+            return redirect("contact")
+        else:
+            messages.error(request,"Invalid reCAPTCHA. Please try again")
     data= ContactDetails.objects.all()
     context = {
         'data':data,
+        'recaptcha_site_key' : settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, 'contact.html', context)
     
 
 def contact_new(request):
+    if request.method == "POST":
+        recaptcha_response = request.POST.get("g-recaptcha-response")
+        data ={
+            "secret": settings.RECAPTCHA_SECRET_KEY,
+            "response": recaptcha_response
+        }
+        verify_url = "https://www.google.com/recaptcha/api/siteverify"
+        r = requests.post(verify_url, data=data)
+        result = r.json()
+
+        if result.get("success"):
+            ContactDetails.objects.create(
+                name=request.POST.get("name"),
+                email=request.POST.get("email"),
+                contact=request.POST.get("contact"),
+                subject=request.POST.get("subject"),
+                message=request.POST.get("message"),
+            )
+            messages.success(request, "Your message has been sent successfully.")
+            return redirect("contact")
+        else:
+            messages.error(request,"Invalid reCAPTCHA. Please try again")
     data= ContactDetails.objects.all()
     context = {
         'data':data,
+        'recaptcha_site_key' : settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, 'contact_new.html', context)
 

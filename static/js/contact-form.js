@@ -8,6 +8,7 @@ $(document).ready(function() {
         var name = $(".name");
         var email = $(".email");
         var phone = $(".phone");
+        var city = $(".city");
         var patient = $(".patient");
         var subject = $(".subject");
         var msg = $(".message");
@@ -33,6 +34,13 @@ $(document).ready(function() {
             return false;
         } else {
             phone.closest(".form-control").removeClass("error").addClass("success");
+        } if (city.val() == "") {
+            city.closest(".form-control").addClass("error");
+            city.focus();
+            flag = false;
+            return false;
+        } else {
+            city.closest(".form-control").removeClass("error").addClass("success");
         } if (patient.val() == "") {
             patient.closest(".form-control").addClass("error");
             patient.focus();
@@ -56,7 +64,20 @@ $(document).ready(function() {
             msg.closest(".form-control").removeClass("error").addClass("success");
             flag = true;
         }
-        var dataString = "name=" + name.val() + "&email=" + email.val() + "&phone=" + phone.val() + "&patient=" + patient.val() + "&subject=" + subject.val() + "&msg=" + msg.val();
+        var recaptchaResponse = grecaptcha.getResponse();
+        if (recaptchaResponse.length === 0) {
+            $(".loading").fadeIn("slow").html('<font color="#ff5607">Please verify reCAPTCHA.</font>').delay(3000).fadeOut("slow");
+            return false;
+        }
+        var dataString = 
+            "name=" + name.val() + 
+            "&email=" + email.val() + 
+            "&phone=" + phone.val() + 
+            "&city=" + city.val() +
+            "&patient=" + patient.val() + 
+            "&subject=" + subject.val() + 
+            "&msg=" + msg.val() +
+            "&g-recaptcha-response=" + recaptchaResponse;
         $(".loading").fadeIn("slow").html("Loading...");
         $.ajax({
             type: "POST",
@@ -65,11 +86,13 @@ $(document).ready(function() {
             cache: false,
             success: function (d) {
                 $(".form-control").removeClass("success");
-                    if(d == 'success') // Message Sent? Show the 'Thank You' message and hide the form
+                    if(d == 'success'){ // Message Sent? Show the 'Thank You' message and hide the form
                         $('.loading').fadeIn('slow').html('<font color="#48af4b">Mail sent Successfully.</font>').delay(3000).fadeOut('slow');
-                         else
+                    } else {
                         $('.loading').fadeIn('slow').html('<font color="#ff5607">Mail not sent.</font>').delay(3000).fadeOut('slow');
-                                }
+                    }
+                    grecaptcha.reset();
+                }
         });
         return false;
     });
@@ -78,6 +101,3 @@ $(document).ready(function() {
     });
     
 })
-
-
-
