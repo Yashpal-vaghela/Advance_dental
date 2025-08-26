@@ -861,6 +861,27 @@
     },
   });
 </script>
+<script>
+  const videoWrappers = document.querySelectorAll(".index-video1");
+  videoWrappers.forEach((wrapper) => {
+    wrapper.onclick = () => {
+      const videoId = wrapper.getAttribute("data-video-id");
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      iframe.frameBorder = "0";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+
+      const videoContainer = wrapper.querySelector(".video-container");
+      videoContainer.innerHTML = "";
+      videoContainer.appendChild(iframe);
+    };
+  });
+</script>
 {% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script> {% endcomment %}
 {% comment %} {{pk.schema|safe}} {% endcomment %}
 <script type="application/ld+json">

@@ -26,8 +26,8 @@ def home(request):
             "secret": settings.RECAPTCHA_SECRET_KEY,
             "response": recaptcha_response
         }
-        verfiy_url = "https://www.google.com/recaptcha/api/siteverify"
-        r = requests.post(verfiy_url, data=data)
+        verify_url = "https://www.google.com/recaptcha/api/siteverify"
+        r = requests.post(verify_url, data=data)
         result = r.json()
 
         if result.get("success"):
