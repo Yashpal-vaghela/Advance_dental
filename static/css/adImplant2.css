@@ -1,0 +1,317 @@
+/* .why-Implant-section{
+    background-image: url('../img/country-map1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 800px;
+    position:relative;
+}
+.why-Implant-section.fixed{
+    position: sticky;
+    top: 0px;
+}
+.why-Implant-titleWrapper{
+    width:100%;
+}
+.why-Implant-title{
+    font-weight: 500;
+    color: rgba(27, 137, 118, 1);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 65px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    width:40%;
+    margin: 0px auto 23%;
+}
+.why-Implant-content{
+    background-color: #fff;
+    padding: 15px 20px;
+    width:34%;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top:100px;
+}
+.why-Implant-content._2{
+    transform: rotate(5deg) !important;
+}
+.why-Implant-content h3{
+    font-size: 20px;
+    line-height: 1.6;
+}
+.why-Implant-section .container {
+    top:25%;
+} */
+  
+/* ----------------------------- what is Implant section -------------------- */
+.Implant-second-section{
+    padding: 50px 0px;
+    position: relative;
+    z-index: 3;
+    background: white;
+  }
+  .Implantfirst-headS{
+    color: #1b897a;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 12px;
+  }
+  .Implantfirst-text{
+    color: black;
+    font-size: 16px;
+  }
+  .Implantfirstgroup{
+    width: 100%;
+    height: 100%;
+    padding: 0px 30px;
+    position: relative;
+  }
+  .Implant-text1 {
+    padding: 10px 0px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    /* left: -65%; */
+    z-index: 0;
+    width:50%;
+  }
+  @media(max-width:1200px){
+    .Implant-text1{
+      bottom: -5%;
+      left:-3%;
+    }
+  }
+  @media(max-width:991px){
+    .Implant-second-section{
+      margin: 40px auto;
+    }
+    .Implant-text1{
+      left:-5%;
+      bottom: 0%;
+      top:0%;
+      width:100%;
+      position: relative;
+    }
+  }
+  @media(max-width:576px){
+    .Implantfirst-headS{
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .Implantfirst-text{
+      font-size: 15px;
+      margin-bottom: 35px;
+    }
+    .Implantfirst-text p{
+      line-height: 1.75;
+    }
+    .Implantfirstgroup {
+      padding: 0px 30px;
+    }
+    .Implant-text1 {
+      position: absolute;
+      bottom: 0%;
+      top:0%;
+      left: 0%;
+      z-index: 0;
+      width:100%;
+      padding: 0px;
+    }
+    .Implantfirstgroup .groupImage{
+      padding-top: 32%;
+    }
+  }
+  
+  
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  /* section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.1s linear;
+  } */
+  .scroll-text {
+    color: white;
+    transition: transform 0.1s linear;
+    will-change: transform;
+  }
+  .why-Implant-section{
+    background-image: url('../img/country-map1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 100%;
+    position:sticky;
+    top:0px !important;
+  }
+  .why-Implant-section.fixed{
+    position: sticky;
+    top: 0px;
+  }
+  .why-Implant-titleWrapper{
+    width:100%;
+  }
+  .why-Implant-title{
+    font-weight: 500;
+    color: rgba(27, 137, 118, 1);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 65px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    width:40%;
+    margin: 0px auto 0px;
+    /* margin: 0px auto 23%; */
+    transition: transform 0.1s linear;
+    will-change: transform;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    height: 100%;
+  }
+
+.why-Implant-content{
+  background-color: #fff;
+  padding: 15px 20px;
+  width:34%;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top:100px;
+}
+
+
+.why-Implant-content._1{
+  /* transform: rotate(-5deg) !important; */
+  /* margin-top: 30%; */
+  top:30px;
+  opacity: 0;
+}
+/* .why-Implant-content._2{
+  transform: rotate(5deg) !important;
+} */
+.why-Implant-content h3{
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+}
+.why-Implant-content p{
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}
+.why-Implant-section .container {
+  /* top:-95%; */
+  /* top:25%; */
+  position: relative;
+
+} 
+/* #Implant3{
+ display: none;
+} */
+/* #Implant3{
+    display: none;
+} */
+.unpinned .why-Implant-content._1{
+  /* transform: translate(0px, 0px) rotate(-5deg) !important; */
+  position: relative;
+  top:0px;
+  z-index: 1;
+}
+.unpinned .why-Implant-content._2{
+  /* transform: translate(0px, 0px) rotate(-5deg) !important; */
+  position: relative;
+  top:0px;
+  z-index: 2;
+}
+.unpinned .why-Implant-content._3{
+  /* transform: translate(0px, 0px) rotate(-5deg) !important; */
+  position: relative;
+  top:0px;
+  z-index: 2;
+}
+@media(min-width:2500px) and (max-width:1400px){
+  .why-Implant-content{
+    width: 45%;
+  }
+}
+@media(max-width:1200px){
+  .why-Implant-title{
+    font-size: 38px;
+    width: 44%;
+  }
+  .why-Implant-content{
+    width: 40%;
+  }
+}
+@media(max-width:991px){
+  .why-Implant-title{
+    font-size: 35px;
+    width: 50%;
+  }
+  .why-Implant-content{
+    width: 54%;
+  }
+}
+@media(max-width:768px){
+  .why-Implant-title{
+    font-size: 32px;
+    width: 60%;
+  }
+  .why-Implant-content{
+    width: 68%;
+  }
+}
+@media(max-width:576px){
+  .why-Implant-title{
+    font-size: 28px;
+    line-height: 1.5;
+    width: 60%;
+  }
+
+  .why-Implant-section{
+    background-size: auto 100%;
+    background-position: center;
+  }
+  /* .why-Implant-content{
+    padding: 12px 15px;
+  } */
+  .why-Implant-content{
+    width: 65%;
+    /* margin: 50px auto; */
+  }
+  .why-Implant-content h3{
+    font-size: 18px;
+  }
+  .why-Implant-content p{
+    font-size: 14px;
+    /* margin-bottom: 0px; */
+  }
+}
+@media(max-width:480px){
+  .why-Implant-title{
+    font-size: 22px;
+    line-height: 1.5;
+    width: 58%;
+  }
+
+  .why-Implant-content{
+    width: 78%;
+    margin: 20px auto;
+  }
+}
