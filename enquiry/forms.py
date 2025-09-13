@@ -47,7 +47,7 @@ class ReviewForm(forms.ModelForm):
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = '__all__'
+        fields = ['name', 'email', 'contact', 'city', 'subject', 'message']
 
 class STLForm(forms.ModelForm):
     class Meta:

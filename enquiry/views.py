@@ -11,33 +11,33 @@ def byebye(request):
     logout(request)
     return redirect ('home:home')
 
-def singup_user(request):
+# def singup_user(request):
     
-    user_form = RegisterForm()
-    if request.method == "POST":
-        user_form = RegisterForm(request.POST)
-        if user_form.is_valid(): 
-            username=user_form.cleaned_data['username']
-            password=user_form.cleaned_data['password1']
-            user = user_form.save()
-            print(username)
-            print(password)
-            messages.success(request, 'Your profile was successfully created!')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    if 'next' in request.POST:
-                        return redirect('home:gp')
-                    else:
-                        return redirect('home:gp')
-            else:
-                return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))            
+#     user_form = RegisterForm()
+#     if request.method == "POST":
+#         user_form = RegisterForm(request.POST)
+#         if user_form.is_valid(): 
+#             username=user_form.cleaned_data['username']
+#             password=user_form.cleaned_data['password1']
+#             user = user_form.save()
+#             print(username)
+#             print(password)
+#             messages.success(request, 'Your profile was successfully created!')
+#             user = authenticate(username=username, password=password)
+#             if user is not None:
+#                 if user.is_active:
+#                     login(request, user)
+#                     if 'next' in request.POST:
+#                         return redirect('home:gp')
+#                     else:
+#                         return redirect('home:gp')
+#             else:
+#                 return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))            
 
             
-        else:
-            messages.error(request, 'Please correct the error below.')
-            return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+#         else:
+#             messages.error(request, 'Please correct the error below.')
+#             return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
             
 
 def login_user(request):

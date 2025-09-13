@@ -28,8 +28,11 @@ class Contact(models.Model):
     message  = models.TextField()
     date = models.DateField(auto_now_add=True)
     feedback = models.TextField(blank=True, null=True)
+    class Meta:
+        ordering = ['-date']
+
     def __str__(self):
-        return self.email
+        return f"{self.name} - {self.email}"
 
 class STLFile(models.Model):
     name  = models.CharField(max_length = 150)

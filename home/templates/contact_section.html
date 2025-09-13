@@ -72,7 +72,7 @@
                   <form
                     class="row contact-form2 form align-items-center justify-content-center"
                     method="post"
-                    action="{% url 'enquiry:contactd' %}"
+                    action="{% url 'home:home' %}"
                   >
                     {% csrf_token %}
                     <div class="col-md-12 col-lg-6">
@@ -157,7 +157,7 @@
                       </div>
                     </div>
                     <div class="col-md-12 mt-15 form-btn submit-btn">
-                      <div class="g-recaptcha mb-3" data-sitekey="6Le8GKwrAAAAAI4AeSbEagkEiuafu8gVaLSqb98D"></div>
+                      <div class="g-recaptcha mb-3" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                       <button type="submit" class="btn-blue submit">
                         Send Your Message
                       </button>

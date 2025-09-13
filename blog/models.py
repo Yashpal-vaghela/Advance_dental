@@ -38,7 +38,7 @@ class Author(models.Model):
     linkedin = models.CharField(max_length = 156, blank=True, null=True)
     image  = models.ImageField(upload_to="SEO")
     def __str__(self):
-        return self.name     
+        return self.name    
                
 # Create your models here.
 class Blog(models.Model):

@@ -35,7 +35,6 @@ class ContactAdmin(admin.ModelAdmin):
 
 admin.site.register(NewsLetter)
 admin.site.register(Review)
-
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(InstaPost)
 admin.site.register(STLFile)
