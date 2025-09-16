@@ -48,13 +48,29 @@ class STLFile(models.Model):
 
 class STLFileData(models.Model):
     files = models.FileField(upload_to="STL_FILE")
-    stl_data  = models.ForeignKey(STLFile, on_delete=models.CASCADE, blank=True, null=True)
+    stl_data  = models.ForeignKey(STLFile, on_delete = models.CASCADE, blank=True, null=True)
     date = models.DateField(auto_now_add=True)
     def __str__(self):
         return str(self.stl_data)
 
+class Career(models.Model):
+    name = models.CharField(max_length=180, blank=True, null=True)
+    contact = models.CharField(max_length=150, blank=True, null=True)
+    email = models.EmailField()
+    message = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
 
-
+    def __str__(self):
+        return self.name
+    
+class CareerFile(models.Model):
+    resume = models.FileField(upload_to="Career_Files")
+    career = models.ForeignKey(Career, on_delete=models.CASCADE, related_name="files")
+    date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"Resume of {self.career.name}"
+    
 class InstaPost(models.Model):
     name  = models.CharField(max_length = 150)
     image  = models.ImageField(upload_to="INSTA")

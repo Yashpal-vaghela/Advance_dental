@@ -32,6 +32,15 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ['email', 'name', 'city']
     actions = [export_contacts_csv]
 
+class CareerAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'contact', 'date']
+    search_fields = ['name', 'email', 'contact']
+    list_filter = ['date']
+
+
+class CareerFileAdmin(admin.ModelAdmin):
+    list_display = ['career', 'resume', 'date']
+    list_filter = ['date']
 
 admin.site.register(NewsLetter)
 admin.site.register(Review)
@@ -39,3 +48,5 @@ admin.site.register(Contact, ContactAdmin)
 admin.site.register(InstaPost)
 admin.site.register(STLFile)
 admin.site.register(STLFileData)
+admin.site.register(Career, CareerAdmin)
+admin.site.register(CareerFile, CareerFileAdmin)

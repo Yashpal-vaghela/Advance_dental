@@ -16,7 +16,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 import requests
 from blog.sitemaps import *
-from enquiry.forms import ContactForm
+from enquiry.forms import ContactForm, CareerForm, CareerFileForm
 
 # from enquiry.models import InstaPost
 # Create your views here.
@@ -235,10 +235,66 @@ def connect(request):
     return render(request, 'connect.html', context)
     
 def career(request):
-    context = {
+    if request.method == 'POST':
+        career_form = CareerForm(request.POST)
+        resume_file = request.FILES.get('files')
 
+        # recaptcha_response = request.POST.get("g-recaptcha-response")
+        # data = {
+        #     'secret' : settings.RECAPTCHA_SECRET_KEY,
+        #     'response' : recaptcha_response,
+        # },
+        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        # result = r.json()
+
+        if career_form.is_valid() and resume_file:
+            # Create career object
+            career_obj = career_form.save(commit=False)
+            career_obj.save()
+
+            # if not result.get("success"):
+            #     messages.error(request, "Invalid reCAPTCHA. Please try again.")
+            #     return redirect(request.META.get("HTTP_REFERER", "home:career"))
+
+            # Attach file
+            career_file_form = CareerFileForm(
+                {'career': career_obj.id},
+                {'resume': resume_file}
+            )
+
+            if career_file_form.is_valid():
+                career_file_form.save()
+                messages.success(request, 'Your career application has been submitted successfully.')
+                return redirect('home:career')
+            else:
+                # rollback career_obj if file form fails
+                career_obj.delete()
+                for field, errors in career_file_form.errors.items():
+                    for error in errors:
+                        messages.error(request, f"{field.capitalize()}: {error}")
+
+        else:
+            # Collect errors for missing resume or invalid career_form
+            if not resume_file:
+                messages.error(request, "Please upload your resume before submitting.")
+
+            if not career_form.is_valid():
+                for field, errors in career_form.errors.items():
+                    for error in errors:
+                        if field == "__all__":
+                            messages.error(request, error)
+                        else:
+                            messages.error(request, f"{field.capitalize()}: {error}")
+
+    else:
+        career_form = CareerForm()
+
+    context = {
+        'career_form': career_form,
+        # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, 'career.html', context)
+
 
 
 def exhibition(request):
@@ -400,9 +456,6 @@ def stl(request):
 
         name.save()
         name = STLFile.objects.all().last()
-        
-        
-        print(documents, '========================')
         
         for f in documents:
             pp = STLFileData.objects.create(stl_data=name, files=f)

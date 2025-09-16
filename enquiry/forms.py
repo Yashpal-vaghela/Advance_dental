@@ -59,3 +59,13 @@ class STLFileForm(forms.ModelForm):
         model = STLFileData
         fields = '__all__'
 
+
+class CareerForm(forms.ModelForm):
+    class Meta:
+        model = Career
+        fields = '__all__'
+
+class CareerFileForm(forms.ModelForm):
+    class Meta:
+        model = CareerFile
+        fields = '__all__'
