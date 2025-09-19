@@ -8,47 +8,122 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    {% comment %} <meta name="google-site-verification" content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w" /> {% endcomment %}
-    {% load static %} {% block seo %} {% endblock %}
-    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
+    {% comment %}
+    <meta
+      name="google-site-verification"
+      content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w"
+    />
+    {% endcomment %} {% load static %} {% block seo %} {% endblock %}
+    <link
+      rel="shortcut icon"
+      href="{% static 'favicon.png' %}"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
-    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}">
-    {% comment %} <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"> {% endcomment %}
-    <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet'/>
-    <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
-    
-    
-    {% comment %} <link  rel="preload" href="{% static 'css/owl.carousel.min.css' %}" as='stylesheet'/> {% endcomment %}
-    {% comment %} <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet'/> {% endcomment %}
-    {% comment %} <link  rel="preload" href="{% static 'css/owl.theme.default.min.css' %}" as='stylesheet'/> {% endcomment %}
-    {% comment %} <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet'/> {% endcomment %}
-    {% comment %} <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/review.css' %}" rel='stylesheet' /> {% endcomment %}
-    <link  rel="preload" href="{% static 'css/animate.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/animate.css' %}" rel='stylesheet' />
-    <link rel="preload" href="{% static 'css/style.css' %}" as="style">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="{% static 'css/bootstrap1.min.css' %}"
+      as="style"
+    />
+    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" />
+    {% comment %}
+    <link
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      rel="stylesheet"
+    />
+    {% endcomment %}
+    <link
+      rel="preload"
+      href="{% static 'css/flaticon.css' %}"
+      as="stylesheet"
+    />
+    <link href="{% static 'css/flaticon.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet" />
+
+    {% comment %}
+    <link
+      rel="preload"
+      href="{% static 'css/owl.carousel.min.css' %}"
+      as="stylesheet"
+    />
+    {% endcomment %} {% comment %}
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" />
+    {% endcomment %} {% comment %}
+    <link
+      rel="preload"
+      href="{% static 'css/owl.theme.default.min.css' %}"
+      as="stylesheet"
+    />
+    {% endcomment %} {% comment %}
+    <link
+      href="{% static 'css/owl.theme.default.min.css' %}"
+      rel="stylesheet"
+    />
+    {% endcomment %} {% comment %}
+    <link rel="preload" href="{% static 'css/review.css' %}" as="stylesheet" />
+    <link href="{% static 'css/review.css' %}" rel="stylesheet" />
+    {% endcomment %}
+    <link rel="preload" href="{% static 'css/animate.css' %}" as="stylesheet" />
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+    <link rel="preload" href="{% static 'css/style.css' %}" as="style" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <link rel="preload" href="{% static 'css/responsive.css' %}" as="style">
+    <link rel="preload" href="{% static 'css/responsive.css' %}" as="style" />
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
     <link rel="preload" href="{% static 'css/banner.css' %}" as="stylesheet" />
     <link href="{% static 'css/banner.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/footer.css'%}" rel="stylesheet" />
 
     <!-- Plyr CSS -->
 
-     <!--CDN LINKS-->
-    {% comment %} <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" as="style"> {% endcomment %}
-    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="print" onload="this.media='all'"> {% endcomment %}
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
-    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" /> {% endcomment %}
-  
-    {% block css %} {% endblock %}
+    <!--CDN LINKS-->
+    {% comment %}
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      as="style"
+    />
+    {% endcomment %} {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    {% endcomment %}
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    {% comment %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    {% endcomment %} {% block css %} {% endblock %}
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -71,7 +146,7 @@
           "telephone": "+91 84 88 88 88 77",
           "contactType": "customer service",
           "areaServed": ["IN", "US"],
-          "availableLanguage": ["English","Hindi","Gujarati"]
+          "availableLanguage": ["English", "Hindi", "Gujarati"]
         },
         "sameAs": [
           "https://www.facebook.com/advance.dental.surat/",
@@ -94,7 +169,7 @@
           ".footer-contact-title.phone"
         );
         const emailElements = document.querySelectorAll(
-          ".footer-contact-title.email" 
+          ".footer-contact-title.email"
         );
 
         fetch("https://ipinfo.io/json?token=718446798cd1d4")
@@ -158,264 +233,160 @@
       })(window, document, "clarity", "script", "pxdorhfpga");
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-Q54R2WNM7Y');
+      gtag("config", "G-Q54R2WNM7Y");
     </script>
   </head>
 
   <body>
-    {% load static %} 
+    {% load static %}
     <!-- end -->
     <div id="page" class="page">
       <header id="header" class="header">
-        {% include 'mobile.html' %}
-        {% include 'pc.html' %}
+        {% include 'mobile.html' %} {% include 'pc.html' %}
       </header>
       {% block body %} {% endblock %}
-      <div class="container mt-5 pt-1">
-        <section class="footer-contact-section">
-          <div class="footer-contact-wrapper">
-            <div class="row mx-0">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2 px-sm-4">
-                <div class="d-flex footer-content-wrapper">
-                  <i
-                    aria-hidden="true"
-                    class="fas fa-map-marked-alt footer-contact-icon"
-                  ></i>
-                  <a
-                    href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47"
-                    target="_blank"
-                    class=""
-                  >
-                    <p class="footer-contact-title mb-0">
-                      Plot No. 1 to 8, Marutidham Industrial Estate, Behind
-                      Hotel Royal, Velanja Road, Umra, Surat - 394 130.
-                      (Gujarat) INDIA.
-                    </p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
-                <div class="d-flex footer-content-wrapper">
-                  <i
-                    aria-hidden="true"
-                    class="fas fa-envelope-open-text footer-contact-icon"
-                  ></i>
-                  <div class="d-block footer-contact-title">
-                    <!-- Default Emails -->
-                    <a
-                      href="mailto:info@advancedentalexport.com"
-                      class="footer-contact-title email"
-                      data-default="info@advancedentalexport.com"
-                      rel="nofollow"
-                      >info@advancedentalexport.com</a
-                    >
-                    <a
-                      href="mailto:overseas@advancedentalexport.com"
-                      class="footer-contact-title email"
-                      data-default="overseas@advancedentalexport.com"
-                      rel="nofollow"
-                      >overseas@advancedentalexport.com</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
-                <div class="d-flex footer-content-wrapper">
-                  <i
-                    aria-hidden="true"
-                    class="fas fa-phone-alt footer-contact-icon fa-flip-horizontal"
-                  ></i>
-                  <div class="d-block">
-                    <!-- Default Phone Numbers -->
-                    <a
-                      href="tel:+91 8488888877"
-                      class="footer-contact-title phone"
-                      data-default="+91 84888 88877"
-                      >+91 84888 88877</a
-                    ><br />
-                    <a
-                      href="tel:+91 8469888877"
-                      class="footer-contact-title phone"
-                      data-default="+91 84698 88877"
-                      >+91 84698 88877</a
-                    ><br />
-                    <a
-                      href="tel:+1 551-380-0385"
-                      class="footer-contact-title phone"
-                      data-default="+1 551-380-0385 (overseas)"
-                      >+1 5513800385</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <footer class="footer-section">
+      <footer class="new-footer-section">
         <div class="container">
-          <div class="row justify-lg-content-center">
-            <div class="col-md-6 col-lg-6 col-sm-11">
-              <div class="footer-info ml-25">
-                <img
-                  src="{% static 'img/logo.webp' %}"
-                  width="auto"
-                  height="90"
-                  alt="Advance Dental Export official logo representing premium dental laboratory services in India"
-                  class="footer-logo"
-                />
-                <p class="p-sm mt-20">
-                  <a href="https://advancedentalexport.com/">Advance Dental Export</a>
-                  is a full service dental lab that specializes in dental
-                  implants, cosmetic dentistry and digital dentistry. Haresh
-                  Savani, CEO, started’ ADE’ in 2009 with a vision to fabricate
-                  only the highest quality dental prosthetics to ensure
-                  long-lasting and esthetically pleasing outcomes for every
-                  dental lab product.
+          <div class="new-footer-main-content">
+            <div
+              class="row d-flex justify-content-between align-items-center new-footer-first-content"
+            >
+              <div class="col-xl-5 col-lg-6 col-6">
+                <h2>Do you have any questions?</h2>
+                <p class="mb-5">
+                  We're ready to help you find the perfect fit for your
+                  practice.
                 </p>
-                <div class="footer-socials-links mt-20">
-                  <ul class="foo-socials text-center clearfix">
-                    <li>
-                      <a
-                        href="https://www.facebook.com/advance.dental.exports"
-                        target="_blank"
-                        class="ico-facebook"
-                        rel="nofollow"
-                        ><i class="fab fa-facebook-f"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/advance_dental_export/"
-                        target="_blank"
-                        class="ico-twitter"
-                        rel="nofollow"
-                        ><i class="fab fa-instagram"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/company/advance-dental-export/"
-                        target="_blank"
-                        class="ico-google-plus"
-                        rel="nofollow"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></a>
-                    </li>
-                  </ul>
+                <a href="#">
+                  <button class="btn btn-dafult btn-contactUs">
+                    CONTACT US
+                  </button>
+                </a>
+              </div>
+              <div class="col-lg-5 col-6">
+                <p>
+                  As India's leading provider of custom dental prosthetics,
+                  we're here to offer expert answers and solutions
+                  for your practice.
+                </p>
+              </div>
+            </div>
+            <div class="new-footer-link-content d-grid">
+              <div class="new-footer-link-wrapper">
+                <span class="new-footer-link-title">Discover</span>
+                <ul class="new-footer-link-list">
+                  <li><a href="{% url 'home:about' %}">About Us <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Testimonials  <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Gallery  <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15"/></a></li>
+                  <li><a href="#">Exhibition Gallery  <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Before After  <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="{% url 'home:contact_new' %}">Contact Us  <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15"/></a></li>
+                </ul>
+              </div>
+              <div class="new-footer-link-wrapper" style="grid-column:span 3">
+                <span class="new-footer-link-title">Important Links</span>
+                <ul class="new-footer-link-list">
+                  <li><a href="{% url 'blog:blog' %}">Blogs  <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">USD <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Webstories <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Privacy Policy <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Sitemap <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid"alt="arrow-icon"  width="15" /></a></li>
+                </ul>
+              </div>
+              <div class="new-footer-link-wrapper">
+                <span class="new-footer-link-title">Products</span>
+                <ul class="new-footer-link-list">
+                  <li><a href="#">Zirconia <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">PFM <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Implant <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Emax <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                  <li><a href="#">Aligner <img src="{% static 'arrow-icon.svg'%}" class="arrow-icon img-fluid" alt="arrow-icon" width="15" /></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="new-footer-contact-info d-grid">
+              <div class="new-footer-contact-card">
+                <span class="new-footer-link-title">Contact</span>
+                <p>+91 84888 88877</p>
+                <p>+91 84698 88877</p>
+                <p>+1 551-380-0385 (overseas)</p>
+              </div>
+              <div class="new-footer-contact-card" >
+                <span class="new-footer-link-title">Address</span>
+                <p>
+                  Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel
+                  Royal, Velanja Road, Umra, Surat - 394 130. (Gujarat) INDIA.
+                </p>
+              </div>
+              <div class="new-footer-contact-card" style="grid-column:span 2">
+                <div class="new-footer-social-link">
+                  <a href="#">Facebook</a>
+                  <a href="#">Linked</a>
+                  <a href="#">Instagram</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="footer-links mb-40">
-                <span class="footer-title">Important Links</span>
-                <ul class="foo-links clearfix" style="margin-top: 30px">
-                  <li>
-                    <a href="{% url 'home:about' %}">About us</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'blog:blog' %}">Blogs</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:web_story' %}">Web-Story</a>
-                  </li>                
-                  <li>
-                    <a href="{% url 'home:career' %}">Careers</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:contact_new' %}">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:privacy' %}">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:testimonals' %}">Testimonials</a>
-                  </li>
-                  <li>
-                    <a href="https://ultimatesmiledesign.com" target="_blank"
-                      >Ultimate Smile Design</a
-                    >
-                  </li>
-                </ul>
+            <div class="new-footer-copyright-info row justify-content-between align-items-center">
+              <div class="col-lg-5 col-12 mb-lg-0 mb-3">
+                <span class="new-footer-link-title">Email</span>
+                <a href="#">info@advancedentalexport.com</a>
+                <a href="#">overseas@advancedentalexport.com</a>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="footer-links mb-40">
-                <span class="footer-title">Discover</span>
-                <ul class="clearfix foo-links" style="margin-top: 30px">
-                  <li>
-                    <a href="{% url 'home:verify_warrenty' %}" target="_blank"
-                      >Verify Warranty</a
-                    >
-                  </li>
-                  <li class="nl-simple clss">
-                    <a href="https://client.advancedentalexport.com/">Client Login</a>
-                  </li> 
-                  <li>
-                    <a href="{% url 'home:gallery' %}">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:exhibition' %}">Exhibition Gallery</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:beforeafter' %}">Before After</a>
-                  </li>
-                  <li class="nl-simple" aria-haspopup="true">
-                    <a href="{% url 'home:stl' %}">Submit STL File</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'home:sitemap' %}">Site Map</a>
-                  </li>
-                </ul>
+              <div class="col-12 d-lg-none d-md-block mb-lg-0 mb-3">
+                <div class="new-footer-social-link justify-content-between">
+                  <a href="#">Facebook</a>
+                  <a href="#">Linked</a>
+                  <a href="#">Instagram</a>
+                </div>
               </div>
+              <div class="col-lg-3 new-footer-copyright">
+                <p>@2025 <a href="https://advancedentalexport.com/">Advance Dental Export</a> All Rights Reserved.</p>
+              </div>
+              
             </div>
           </div>
+          <img src="{% static 'footer-bg3.webp'%}" class="footer-bg-img1 img-fluid" alt="footer-bg-img" /> 
         </div>
-        <div class="bottom-footer">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="footer-copyright">
-                &copy; 2025
-                <span
-                  ><a href="https://advancedentalexport.com/"
-                    >Advance Dental Export</a
-                  ></span
-                >. All Rights Reserved
-              </p>
-            </div>
-          </div>
-        </div>
+         <img src="{% static 'footer-bg3.webp'%}" class="footer-bg-img img-fluid" alt="footer-bg-img" /> 
       </footer>
     </div>
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}" ></script>
-    <script src="{% static 'js/bootstrap1.min.js' %}" ></script>
-    {% comment %} <script src="{% static 'js/modernizr.custom.js' %}" ></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/jquery.easing.js' %}" ></script> {% endcomment %}
-    <script src="{% static 'js/jquery.appear.js' %}" ></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-    <script src="{% static 'js/menu.min.js' %}" ></script>
-    <script src="{% static 'js/sticky.min.js' %}"></script> 
-    <script src="{% static 'js/jquery.scrollto.js' %}"></script> 
-    {% comment %} <script src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/owl.carousel.min.js' %}"></script> {% endcomment %}
+    <script src="{% static 'js/menu.min.js' %}"></script>
+    <script src="{% static 'js/sticky.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollto.js' %}"></script>
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     {% block js %} {% endblock %}
-    <script src="{% static 'js/custom.min.js' %}" ></script>  
-    {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script> {% endcomment %}
-    {% comment %} <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/changer.js' %}"></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/styleswitch.js' %}"></script> {% endcomment %}
-    {% comment %} <script> src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> {% endcomment %}
-   
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    {% comment %}
+    <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
+    {% endcomment %} {% comment %}
+    <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
+    {% endcomment %} {% comment %}
+    <script src="{% static 'js/changer.js' %}"></script>
+    {% endcomment %} {% comment %}
+    <script src="{% static 'js/styleswitch.js' %}"></script>
+    {% endcomment %} {% comment %}
+    <script>
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+    </script>
+    {% endcomment %}
+
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -469,10 +440,11 @@
       window.addEventListener("load", function () {
         setTimeout(function () {
           var script = document.createElement("script");
-          script.src = "https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y";
+          script.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y";
           script.async = true;
           document.body.appendChild(script);
-    
+
           script.onload = function () {
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -484,81 +456,106 @@
         }, 500); // Load after 2 seconds (Adjust delay if needed)
       });
     </script>
-    {% endfor %} 
-    <script>    
+    {% endfor %}
+    <script>
       const questionFlow = {
-        "start": ["How may i help you?", ["Dental Implants 🙂‍↔️", "Cosmetic Dentistry 🙂‍↔️", "Digital Dentistry 😊"]],
-        "Dental Implants 🙂‍↔️": ["Do you need full mouth implants?", ["Yes", "No"]],
-        "Cosmetic Dentistry 🙂‍↔️": ["Are you looking for veneers or crowns?", ["Veneers", "Crowns"]],
+        start: [
+          "How may i help you?",
+          [
+            "Dental Implants 🙂‍↔️",
+            "Cosmetic Dentistry 🙂‍↔️",
+            "Digital Dentistry 😊",
+          ],
+        ],
+        "Dental Implants 🙂‍↔️": [
+          "Do you need full mouth implants?",
+          ["Yes", "No"],
+        ],
+        "Cosmetic Dentistry 🙂‍↔️": [
+          "Are you looking for veneers or crowns?",
+          ["Veneers", "Crowns"],
+        ],
         "Digital Dentistry": ["Do you need scanning services?", ["Yes", "No"]],
-        "Yes": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
-        "No": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
-        "Restart": ["Restarting chat...", ["Dental Implants", "Cosmetic Dentistry", "Digital Dentistry"]],
-        "End Chat": ["Chat Ended. Thank you!", []]
+        Yes: [
+          "Would you like to restart or end the chat?",
+          ["Restart", "End Chat"],
+        ],
+        No: [
+          "Would you like to restart or end the chat?",
+          ["Restart", "End Chat"],
+        ],
+        Restart: [
+          "Restarting chat...",
+          ["Dental Implants", "Cosmetic Dentistry", "Digital Dentistry"],
+        ],
+        "End Chat": ["Chat Ended. Thank you!", []],
       };
-    
+
       function addMessageToChatBox(text, sender) {
-          let chatMessages = document.getElementById("chat-messages");
-          let messageDiv = document.createElement("div");
-          messageDiv.classList.add("chat-bubble");
-  
-          if (sender === "user") {
-            messageDiv.classList.add("user-message");
+        let chatMessages = document.getElementById("chat-messages");
+        let messageDiv = document.createElement("div");
+        messageDiv.classList.add("chat-bubble");
+
+        if (sender === "user") {
+          messageDiv.classList.add("user-message");
         } else if (text.includes("Chat has ended")) {
-            messageDiv.classList.add("chat-ended"); // Custom style for "Chat Ended"
+          messageDiv.classList.add("chat-ended"); // Custom style for "Chat Ended"
         } else {
-            messageDiv.classList.add("bot-message");
+          messageDiv.classList.add("bot-message");
         }
-          messageDiv.innerHTML = text;
-          chatMessages.appendChild(messageDiv);
-          setTimeout(() => {
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+        messageDiv.innerHTML = text;
+        chatMessages.appendChild(messageDiv);
+        setTimeout(() => {
+          chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 100);
       }
-  
-      function addButtons(options) {
-          // let chatButtons = document.getElementById("chat-buttons");
-          let chatButtons = document.getElementById("chat-messages");
-          chatButtons.innerHTML.add = ""; 
-  
-          options.forEach(option => {
-              let button = document.createElement("button");
-              button.classList.add("chatbot-button");
-              button.innerHTML = option;
-              button.onclick = function() {
-                  handleUserChoice(option);
-              };
-              chatButtons.appendChild(button);
-          });
-          chatButtons.scrollTop = chatButtons.scrollHeight;
-      }
-  
-      function handleUserChoice(choice) {
-          addMessageToChatBox(choice, "user"); // Show user choice
-          document.getElementById("chat-buttons").innerHTML = ""; // Remove buttons
-  
-          // Get next bot message and options
-          let nextStep = questionFlow[choice];
-          if (nextStep) {
-              let botMessage = nextStep[0];
-              let options = nextStep[1];
-  
-              setTimeout(() => {
-                  addMessageToChatBox(botMessage, "bot");
 
-                  if (choice === "Restart") {
-                    setTimeout(() => startChat(), 100); // Restart chat
-                } else if (choice === "End Chat") {
-                    addMessageToChatBox("Chat has ended. Refresh to start again. 😊", "bot");
-                } else if (options.length > 0) {
-                    setTimeout(() => addButtons(options), 100);
-                }
-              }, 100);
-          } else {
-              addMessageToChatBox("Thank you for chatting with us! 😊", "bot");
-          }
+      function addButtons(options) {
+        // let chatButtons = document.getElementById("chat-buttons");
+        let chatButtons = document.getElementById("chat-messages");
+        chatButtons.innerHTML.add = "";
+
+        options.forEach((option) => {
+          let button = document.createElement("button");
+          button.classList.add("chatbot-button");
+          button.innerHTML = option;
+          button.onclick = function () {
+            handleUserChoice(option);
+          };
+          chatButtons.appendChild(button);
+        });
+        chatButtons.scrollTop = chatButtons.scrollHeight;
+      }
+
+      function handleUserChoice(choice) {
+        addMessageToChatBox(choice, "user"); // Show user choice
+        document.getElementById("chat-buttons").innerHTML = ""; // Remove buttons
+
+        // Get next bot message and options
+        let nextStep = questionFlow[choice];
+        if (nextStep) {
+          let botMessage = nextStep[0];
+          let options = nextStep[1];
+
+          setTimeout(() => {
+            addMessageToChatBox(botMessage, "bot");
+
+            if (choice === "Restart") {
+              setTimeout(() => startChat(), 100); // Restart chat
+            } else if (choice === "End Chat") {
+              addMessageToChatBox(
+                "Chat has ended. Refresh to start again. 😊",
+                "bot"
+              );
+            } else if (options.length > 0) {
+              setTimeout(() => addButtons(options), 100);
+            }
+          }, 100);
+        } else {
+          addMessageToChatBox("Thank you for chatting with us! 😊", "bot");
+        }
       }
     </script>
-  {% block javascript %}{% endblock %}
+    {% block javascript %}{% endblock %}
   </body>
 </html>
