@@ -127,6 +127,9 @@
   }
   .footer-bg-img1 {
     display: block;
+    margin-top: -6%;
+    z-index: 2;
+    position: relative;
   }
   .new-footer-section {
     padding-bottom: 0px;
