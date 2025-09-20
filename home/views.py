@@ -239,13 +239,13 @@ def career(request):
         career_form = CareerForm(request.POST)
         resume_file = request.FILES.get('files')
 
-        # recaptcha_response = request.POST.get("g-recaptcha-response")
-        # data = {
-        #     'secret' : settings.RECAPTCHA_SECRET_KEY,
-        #     'response' : recaptcha_response,
-        # },
-        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
-        # result = r.json()
+        recaptcha_response = request.POST.get("g-recaptcha-response")
+        data = {
+            'secret' : settings.RECAPTCHA_SECRET_KEY,
+            'response' : recaptcha_response,
+        }
+        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        result = r.json()
 
         if career_form.is_valid() and resume_file:
             # Create career object
@@ -291,7 +291,7 @@ def career(request):
 
     context = {
         'career_form': career_form,
-        # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, 'career.html', context)
 

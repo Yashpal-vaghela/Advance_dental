@@ -1,7 +1,6 @@
 .new-footer-section {
   background-color: #fff;
   padding: 40px 0px 0px;
-  box-shadow: 1px 2px 9px #000;
   position: relative;
   padding-bottom: 15%;
 }
@@ -11,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  padding: 40px 30px;
+  padding: 40px 30px ;
   background-color: rgba(255, 255, 255, 0.1);
 }
 .new-footer-first-content {
@@ -58,8 +57,43 @@
 .new-footer-link-list li a {
   font-weight: 500;
   color: #000;
+  font-size: 14px;
   line-height: 1.6;
   letter-spacing: 0.3px;
+}
+.new-footer-link-list a span,
+.new-footer-social-link a span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+}
+.new-footer-link-list a span::before,
+.new-footer-social-link a span::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  text-align: center;
+  color: #000;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0;
+  transition: color 0.5s;
+}
+.new-footer-link-list a:hover span,
+.new-footer-link-list a:focus span,
+.new-footer-social-link a:hover span,
+.new-footer-social-link a:focus span {
+  transform: rotateX(90deg) translateY(-22px);
+}
+.new-footer-link-list a:hover span::before,
+.new-footer-link-list a:focus span::before,
+.new-footer-social-link a:hover span::before,
+.new-footer-social-link a:focus span::before {
+  color: #000;
 }
 /* .new-footer-link-list li a .arrow-icon{
     margin-bottom: 1%;
@@ -69,6 +103,7 @@
     text-align: end;
     display: block;
 } */
+
 .new-footer-contact-info {
   padding: 10px 0px 30px;
   grid-template-columns: repeat(4, 1fr);
@@ -80,6 +115,10 @@
 }
 .new-footer-social-link a {
   margin: 0px 10px;
+  color:#000;
+}
+.new-footer-social-link a:hover{
+	color: rgba(0, 0, 0, 0.5);
 }
 .new-footer-contact-card:nth-child(2) p {
   letter-spacing: 0.5px;
@@ -87,13 +126,32 @@
   font-weight: 500;
   font-size: 14px;
 }
+.new-footer-copyright-info{
+  position: relative;
+  z-index: 3;
+}
 .new-footer-copyright-info a {
   line-height: 1.9;
   letter-spacing: 0.3px;
   font-weight: 500;
+  color:#000;
+  font-size: 14px;
+}
+.new-footer-email a{
+  display: block;
 }
 .new-footer-copyright p a {
   color: rgba(0, 0, 0, 0.5);
+  font-size: 16px !important;
+}
+.new-footer-contact-card a{
+	display: block; color:#000;
+	margin-bottom: 0.5rem;
+	font-weight:500;
+	font-size:14px;
+}
+.new-footer-contact-card p{
+	color:#000;
 }
 /* .new-footer-copyright-info .col-lg-5 a {
   color: rgba(0, 0, 0, 0.5);
@@ -242,6 +300,9 @@
     font-size: 15px;
   }
   .new-footer-link-list li a {
+    font-size: 14px;
+  }
+  .new-footer-contact-card a{
     font-size: 14px;
   }
   .new-footer-first-content .col-lg-5:last-child p {
