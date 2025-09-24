@@ -1,6 +1,6 @@
 .new-footer-section {
   background-color: #fff;
-  padding: 40px 0px 0px;
+  padding: 0px 0px 0px;
   position: relative;
   padding-bottom: 15%;
 }
@@ -62,7 +62,9 @@
   letter-spacing: 0.3px;
 }
 .new-footer-link-list a span,
-.new-footer-social-link a span {
+.new-footer-social-link a span,
+.new-footer-email a span,
+.new-footer-contact-card a span {
   position: relative;
   display: inline-block;
   transition: transform 0.3s ease;
@@ -70,7 +72,9 @@
   transform-style: preserve-3d;
 }
 .new-footer-link-list a span::before,
-.new-footer-social-link a span::before {
+.new-footer-social-link a span::before,
+.new-footer-email a span::before,
+.new-footer-contact-card a span::before {
   content: attr(data-hover);
   position: absolute;
   top: 100%;
@@ -86,13 +90,21 @@
 .new-footer-link-list a:hover span,
 .new-footer-link-list a:focus span,
 .new-footer-social-link a:hover span,
-.new-footer-social-link a:focus span {
+.new-footer-social-link a:focus span,
+.new-footer-email a:hover span,
+.new-footer-email a:focus span,
+.new-footer-contact-card a:hover span,
+.new-footer-contact-card a:focus span {
   transform: rotateX(90deg) translateY(-22px);
 }
 .new-footer-link-list a:hover span::before,
 .new-footer-link-list a:focus span::before,
 .new-footer-social-link a:hover span::before,
-.new-footer-social-link a:focus span::before {
+.new-footer-social-link a:focus span::before,
+.new-footer-email a:hover span::before,
+.new-footer-email a:focus span::before,
+.new-footer-contact-card a:hover span::before,
+.new-footer-contact-card a:focus span::before {
   color: #000;
 }
 /* .new-footer-link-list li a .arrow-icon{
