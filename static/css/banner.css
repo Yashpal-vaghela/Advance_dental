@@ -716,6 +716,9 @@
   color: transparent !important;
   /* box-shadow: 2px 0px 3px #000; */
 }
+.hero-section1 .swiper-slide-active .banner4-title{
+  animation: ZoomInText 1.5s ease-in-out forwards;
+}
 @media screen and (min-width: 992px) {
   .hero-section1 .swiper-slide-active .texts {
     width: 38.5% !important;
