@@ -262,7 +262,13 @@
       <!-- fourth banner -->
       <div class="swiper-slide">
         <div class="new-banner-wrapper position-relative">
-          <img
+          <video id="ace-scan" class="h-full w-full object-over video-bg1" width="1920" height="800"  preload="auto" playsinline muted autoplay loop>
+            <source  src="https://d3aobjm2ribp2o.cloudfront.net/trios-scanner-video.mp4" type="video/mp4" />
+          </video>
+          <div class="banner4-text-wrapper">
+            <h2 class="banner4-title">Now more Affordable Than Ever… <br/>The <b>3 SHAPE TRIOS 3</b></h2>
+          </div>
+          {% comment %} <img
             src="{% static '/banner-2/new-banner3-bg24.webp'%}"
             class="new-banner3-bg img-fluid d-none d-lg-block"
             alt="Free ACE Scan digital impression tool banner background for accurate dental scanning"
@@ -318,7 +324,7 @@
             </button>
           </div>
           <div class="new-banner3-tnc">*T&C apply</div>
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
     <div class="swiper-button-next"></div>
@@ -1534,10 +1540,7 @@
     speed: 600,
     parallax: !0,
     loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
+    autoplay:false,
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
