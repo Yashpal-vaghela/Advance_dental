@@ -687,7 +687,7 @@
 }
 .banner4-text-wrapper {
   position: absolute;
-  top: 3%;
+  top: 2%;
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -700,8 +700,8 @@
   position: relative;
   color: #fff;
   width: 100%;
-  font-size: 32px;
-  line-height: 1.5;
+  font-size: 30px;
+  line-height: 1.3;
   letter-spacing: 0.5px;
 }
 .banner4-text-wrapper .banner4-title b {
@@ -709,7 +709,6 @@
   /* color: #08977e; */
   /* -webkit-text-stroke: 0.5px #fff;  */
   background: linear-gradient(90deg, #42BCA7 0%, #00D5FF 100%);
-
   /* background: linear-gradient(90deg, #1b8976 5%, #00d5ff 100%); */
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -718,6 +717,43 @@
 }
 .hero-section1 .swiper-slide-active .banner4-title{
   animation: ZoomInText 1.5s ease-in-out forwards;
+}
+.hero-section1 .swiper-slide-active .btn-contact{
+  animation:ZoomOut 1.5s ease-in-out forwards;
+}
+@keyframes ZoomOut {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* @keyframes ZoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+  }
+} */
+.banner4-text-wrapper .btn-contact{
+  /* background-color: ; */
+  /* background: linear-gradient(90deg, #1b8976 0%, #00d5ff 100%); */
+  background-color: rgba(42, 42, 42, 1) !important;
+  padding: 10px 24px;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  margin-top: 1%;
+}
+.banner4-text-wrapper .btn-contact a{
+  /* color:#fff; */
+  color: rgba(12, 177, 190, 1);
 }
 @media screen and (min-width: 992px) {
   .hero-section1 .swiper-slide-active .texts {
@@ -1876,6 +1912,9 @@
   .banner4-text-wrapper .banner4-title{
     font-size: 30px;
   }
+  .banner4-text-wrapper .btn-contact{
+    padding: 8px 12px;
+  }
 }
 @media (max-width: 800px) {
   .home-implant-banner-img-wrapper {
@@ -2091,5 +2130,9 @@
   .banner4-text-wrapper .banner4-title{
     font-size: 16px;
     margin-top: 2%;
+  }
+  .banner4-text-wrapper .btn-contact{
+    font-size: 14px;
+    padding: 6px 12px;
   }
 }
