@@ -2089,6 +2089,7 @@
     animation: ZoomInText 0.3s ease-in-out forwards;
   }
   .banner4-text-wrapper .banner4-title{
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 2%;
   }
 }

@@ -266,7 +266,7 @@
             <source  src="https://d3aobjm2ribp2o.cloudfront.net/trios-scanner-video.mp4" type="video/mp4" />
           </video>
           <div class="banner4-text-wrapper">
-            <h2 class="banner4-title">Now more Affordable Than Ever… <br/>The <b>3 SHAPE TRIOS 3</b></h2>
+            <h2 class="banner4-title">Now More Affordable Than Ever… <br/>The <b>3 SHAPE TRIOS 3</b></h2>
           </div>
           {% comment %} <img
             src="{% static '/banner-2/new-banner3-bg24.webp'%}"
@@ -1540,7 +1540,10 @@
     speed: 600,
     parallax: !0,
     loop: true,
-    autoplay:false,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: !0,
