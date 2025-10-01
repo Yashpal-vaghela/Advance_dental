@@ -1414,7 +1414,6 @@
   .implant-hero-section .implant-banner-img-wrapper .implant-text {
     margin-top: 0%;
   }
-
   .new-banner3-bg {
     object-fit: inherit !important;
     height: 100% !important;
@@ -1459,10 +1458,10 @@
 }
 @media screen and (min-width: 1440px) and (max-width: 1550px) {
   .banner1-img {
-    top: 47.7%;
+    top: 53.7%;
   }
   .banner1-img img {
-    width: 73%;
+    width: 75%;
     aspect-ratio: 4 / 3.7;
   }
   .home-implant-banner-img-wrapper {
@@ -1471,7 +1470,7 @@
 }
 @media screen and (min-width: 1550px) and (max-width: 1650px) {
   .banner1-img {
-    top: 47%;
+    top: 48%;
   }
   .banner1-img img {
     width: 79%;
@@ -1514,7 +1513,7 @@
     aspect-ratio: 4/3.7;
   }
   .banner1-img {
-    top: 36.3%;
+    top: 36.8%;
   }
   .new-banner2-logo {
     top: 30px;

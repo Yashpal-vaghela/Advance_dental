@@ -300,6 +300,9 @@
   .new-footer-contact-card p {
     font-size: 14px;
   }
+  .new-footer-first-content h2{
+    line-height: 1.5;
+  }
 }
 @media (max-width: 576px) {
   .footer-bg-img {
@@ -309,10 +312,14 @@
     gap: 25px;
   }
   .new-footer-link-title {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .new-footer-link-list li{
+    margin-bottom: 5px;
   }
   .new-footer-link-list li a {
-    font-size: 14px;
+    font-size: 12px;
   }
   .new-footer-contact-card a{
     font-size: 14px;

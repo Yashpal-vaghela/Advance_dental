@@ -361,6 +361,7 @@
   }
   .review-section .review-user .review-user-txt {
     font-size: 12px !important;
+    padding: 0px 10px;
   }
   .review-user-name,
   .review-user-desk {

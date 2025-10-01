@@ -1708,7 +1708,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 <script>
   gsap.registerPlugin(ScrollTrigger);
-
   //parallexglobal
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-parallax]").forEach((element) => {
@@ -1732,54 +1731,78 @@
       }
     });
   });
-
-  const container = document.querySelector(".company_logo_col_inner");
-  container.innerHTML += container.innerHTML; 
-  
-  //partner's logo marquee
-  function isIntersecting(element1, element2) {
-    const rect1 = element1.getBoundingClientRect();
-    const rect2 = element2.getBoundingClientRect();
-    return rect1.top < rect2.bottom && rect1.bottom > rect2.top;
-  }
-
-  function checkIntersection() {
-    const logos = document.querySelectorAll(".company_logo");
-    const trigger = document.querySelector(".company_logo_trigger");
-
-    logos.forEach((logo) => {
-      if (isIntersecting(logo, trigger)) {
-        logo.style.opacity = "0";
-        logo.style.filter = "blur(5px)";
-      } else {
-        logo.style.opacity = "1";
-        logo.style.filter = "blur(0px)";
-      }
-    });
-  }
-
-  setInterval(checkIntersection, 50);
 </script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".company_logo_col_inner");
-    const logos = container.innerHTML;
-    container.innerHTML += logos; // Clone logos once
+  document.addEventListener("DOMContentLoaded", () => {
+    const col = document.querySelector(".company_logo_col");
+    const inner = col.querySelector(".company_logo_col_inner");
+
+    if (!col || !inner) {
+      console.error("Missing .company_logo_col or .company_logo_col_inner");
+      return;
+    }
+    
+    inner.classList.add("original-logo-inner");
+    // Clone inner logos for seamless loop
+    const clone = inner.cloneNode(true);
+    clone.classList.remove("original-logo-inner"); // Remove if copied
+    clone.classList.add("cloned-logo-inner");
+    col.appendChild(clone);
+
+    let pos = 0;
+    let speed = 1.45; // px per frame
+
+    function animate() {
+      pos += speed;
+
+      // Reset position after full scroll
+      if (pos >= inner.offsetHeight) {
+        pos = 0;
+      }
+      console.log("pos",pos)
+      col.style.transform = `translateY(${-pos}px)`;
+
+      // Run intersection check on each frame
+      checkIntersection();
+      requestAnimationFrame(animate);
+    }
+
+    // Intersection check functions
+    function isIntersecting(element1, element2) {
+      const rect1 = element1.getBoundingClientRect();
+      const rect2 = element2.getBoundingClientRect();
+      return rect1.top < rect2.bottom && rect1.bottom > rect2.top;
+    }
+
+    function checkIntersection() {
+      const logos = document.querySelectorAll(".company_logo");
+      const trigger = document.querySelector(".company_logo_trigger");
+
+      logos.forEach((logo) => {
+        if (isIntersecting(logo, trigger)) {
+          logo.style.opacity = "0";
+          logo.style.filter = "blur(5px)";
+        } else {
+          logo.style.opacity = "1";
+          logo.style.filter = "blur(0px)";
+        }
+      });
+    }
+    // Start animation
+    animate();
   });
 </script> 
 <script>
   function updateContactLink() {
     const link = document.getElementById("contact-link");
     if (window.innerWidth < 768) {
-      link.setAttribute("href", "tel:+918469888877");
+      link.setAttribute("href", "tel:+917265888877");
     } else {
       link.setAttribute("href", "/contact-us/");
     }
   }
-
   // Run on load
   updateContactLink();
-
   // Run on resize
   window.addEventListener("resize", updateContactLink);
 </script>
