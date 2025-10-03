@@ -105,7 +105,16 @@
               alt="Video Thumbnail"
               class="video-thumbnail1"
             />
-            <button class="play-button">▶</button>
+            <button class="play-button" aria-label="Play">
+              <svg height="100%" viewBox="0 0 68 48" width="100%">
+                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+                C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+                C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+                S67.94,13.05,66.52,7.74z"
+                fill="#212121" fill-opacity="0.8"></path>
+                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+              </svg>
+            </button>
           </div>
         </div>
         {% endfor %}
@@ -242,41 +251,8 @@
 {% endblock body %} {% block javascript %}
 <script src="{% static 'js/galleryanimation.js' %}"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-  var galleryswiper = new Swiper(".gallerySwiper", {
-    speed: 1500,
-    slidesPerView: 2,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: !0,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 2,
-      },
-    },
-  });
   var testionalswiper = new Swiper(".testimonalSwiper", {
     speed: 1500,
     slidesPerView: 2,
@@ -292,47 +268,139 @@
     },
     pagination: {
       el: ".swiper-pagination",
-      clickable: !0,
+      clickable: true,
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 2,
-      },
+      0: { slidesPerView: 1 },
+      767: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      991: { slidesPerView: 2 },
+      1000: { slidesPerView: 2 },
     },
+  });
+
+  // Select all Vimeo iframes
+  const vimeoIframes = document.querySelectorAll(".testimonalSwiper iframe");
+
+  vimeoIframes.forEach((iframe) => {
+    const player = new Vimeo.Player(iframe);
+
+    // When video starts playing, stop Swiper autoplay
+    player.on("play", function() {
+      testionalswiper.autoplay.stop();
+    });
+
+    // When video pauses or ends, resume Swiper autoplay
+    player.on("pause", function() {
+      testionalswiper.autoplay.start();
+    });
+    player.on("ended", function() {
+      testionalswiper.autoplay.start();
+    });
   });
 </script>
 <script>
-  {% comment %} const videoWrappers=document.querySelectorAll(".index-video1");videoWrappers.forEach(e=>{e.onclick=()=>{let r=e.getAttribute("data-video-id"),t=document.createElement("iframe1");t.src=`https://www.youtube.com/embed/${r}?autoplay=1`,t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.style.width="100%",t.style.height="100%";let o=e.querySelector(".video-container");o.innerHTML="",o.appendChild(t)}}); {% endcomment %}
-  const videoWrappers = document.querySelectorAll(".index-video1");
-  videoWrappers.forEach((wrapper) => {
-    wrapper.onclick = () => {
-      const videoId = wrapper.getAttribute("data-video-id");
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-      iframe.frameBorder = "0";
-      iframe.allow =
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      iframe.allowFullscreen = true;
+  const gallerySwiper = new Swiper(".gallerySwiper", {
+    speed: 1500,
+    slidesPerView: 2,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      767: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      991: { slidesPerView: 2 },
+      1000: { slidesPerView: 2 },
+    },
+  });
 
-      iframe.style.width = "100%";
-      iframe.style.height = "100%";
+  const videoWrappers = document.querySelectorAll(".index-video1");
+
+  function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  }
+
+  function createYouTubeIframe(videoId) {
+    const iframe = document.createElement("iframe");
+    if (isMobile()) {
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&autoplay=1`;
+    } else {
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
+    }
+    iframe.frameBorder = "0";
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    return iframe;
+  }
+
+  function restoreThumbnail(wrapper) {
+    const videoId = wrapper.getAttribute("data-video-id");
+    const videoContainer = wrapper.querySelector(".video-container");
+    videoContainer.innerHTML = `
+      <img
+        src="https://img.youtube.com/vi/${videoId}/sddefault.jpg"
+        alt="Video Thumbnail"
+        class="video-thumbnail1"
+      />
+      <button class="play-button" aria-label="Play">
+        <svg height="100%" viewBox="0 0 68 48" width="100%">
+          <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+          C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+          C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+          S67.94,13.05,66.52,7.74z"
+          fill="#212121" fill-opacity="0.8"></path>
+          <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+        </svg>
+      </button>
+    `;
+  }
+
+  videoWrappers.forEach((wrapper) => {
+    wrapper.addEventListener("click", (e) => {
+      const existingIframe = wrapper.querySelector("iframe");
+
+      if (existingIframe) {
+        restoreThumbnail(wrapper);
+        gallerySwiper.autoplay.start();
+        return;
+      }
+
+      // Close any other open videos
+      videoWrappers.forEach((w) => restoreThumbnail(w));
+
+      gallerySwiper.autoplay.stop();
+
+      const videoId = wrapper.getAttribute("data-video-id");
+      const iframe = createYouTubeIframe(videoId);
 
       const videoContainer = wrapper.querySelector(".video-container");
       videoContainer.innerHTML = "";
       videoContainer.appendChild(iframe);
-    };
+
+      e.stopPropagation();
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    const isInsideVideo = e.target.closest(".index-video1");
+    if (!isInsideVideo) {
+      videoWrappers.forEach((wrapper) => restoreThumbnail(wrapper));
+      gallerySwiper.autoplay.start();
+    }
   });
 </script>
 {% endblock javascript %}
