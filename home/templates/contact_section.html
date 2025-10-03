@@ -9,7 +9,7 @@
             </p>
           </div>
           <div class="contact-wrapper d-lg-flex d-md-flex d-sm-block">
-            <div class="col-md-5 col-lg-4 icon-xs wow fadeInUp mb-sm-4 mb-4 mb-md-0"
+            <div class="col-md-5 col-lg-4 icon-xs wow fadeInUp mb-sm-4 mb-4 mb-md-0 px-0"
               data-wow-delay="0.4s"
               style="
                 visibility: visible;
@@ -60,7 +60,7 @@
               </div>
           </div>
 
-            <div class="col-md-7 col-lg-8 icon-xs wow fadeInUp"  data-wow-delay="0.4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;">
+            <div class="col-md-7 col-lg-8 icon-xs wow fadeInUp px-0"  data-wow-delay="0.4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;">
                 <div
                   class="form-holder mb-0 d-flex align-items-center justify-content-center h-100">
                   <form
@@ -69,7 +69,7 @@
                     action="{% url 'home:home' %}"
                   >
                     {% csrf_token %}
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_name"
@@ -82,7 +82,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_email"
@@ -96,7 +96,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_phone"
@@ -110,7 +110,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_city"
@@ -123,7 +123,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-12">
+                    <div class="col-md-12 col-lg-12 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_subject"
@@ -136,7 +136,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 input-message">
+                    <div class="col-md-12 input-message px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <textarea
                           id="form-message"
@@ -150,7 +150,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 mt-15 form-btn submit-btn">
+                    <div class="col-md-12 mt-15 form-btn submit-btn px-4 px-sm-0 px-md-2">
                       <div class="g-recaptcha mb-3" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                       <button type="submit" class="btn-blue submit">
                         Send Your Message

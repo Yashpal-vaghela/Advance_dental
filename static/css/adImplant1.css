@@ -888,6 +888,7 @@
   background-color: #fff;
   z-index: 1;
   position: relative;
+  margin-bottom: 0px !important;
 }
 .future-Implants .col-lg-6 {
   align-self: flex-start;
@@ -992,7 +993,8 @@
 }
 @media (max-width: 768px) {
   .future-Implants {
-    padding: 0px 0px 0px !important;
+    padding: 0px 0px 2rem !important;
+    margin-bottom: 0px;
   }
   .future-content {
     margin-bottom: 25px;
@@ -1047,6 +1049,7 @@
   background-color: #fff;
   z-index: 1;
   position: relative;
+  padding: 2rem 0px 1rem;
 }
 .patient-success .product-section-title {
   width: 100%;
@@ -1118,7 +1121,7 @@
   color: #1b8976;
 }
 .patientSwiper .swiper-wrapper {
-  padding: 0px 0px 20px;
+  padding: 0px 0px 30px;
 }
 @media (max-width: 1200px) {
   .patient-success .product-section-title {
@@ -1218,7 +1221,7 @@
     right: var(--swiper-navigation-sides-offset, 41%) !important;
   }
   .patientSwiper .swiper-button-prev {
-    right: var(--swiper-navigation-sides-offset, 41%) !important;
+    left: var(--swiper-navigation-sides-offset, 41%) !important;
   }
   .patient-success-content {
     padding: 20px 10px;
