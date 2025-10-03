@@ -4824,7 +4824,7 @@ a {
 }
 .company_logo_col_inner .col-lg-3:nth-child(4n + 1),
 .company_logo_col_inner .col-lg-3:nth-child(4n + 3) {
-  margin-top: -70px 8px 0px;
+  margin: -70px 8px 0px;
 }
 /* .original-logo-inner {
   margin-top: 100px !important;
@@ -4879,21 +4879,18 @@ a {
   .company_logo_col_inner .col-lg-3:nth-child(4n + 3){
     margin-top: -75px;
   }
-
 }
 @media (min-width: 1440px) and (max-width: 1650px) {
   .company_logo_col_inner .col-lg-3:nth-child(4n + 1),
   .company_logo_col_inner .col-lg-3:nth-child(4n + 3) {
     margin-top: -80px;
   }
-
 }
 @media (min-width: 1650px) and (max-width: 1799px) {
   .company_logo_col_inner .col-lg-3:nth-child(4n + 1),
   .company_logo_col_inner .col-lg-3:nth-child(4n + 3) {
     margin-top: -87px;
   }
-
 }
 @media (min-width: 1800px) and (max-width: 2000px) {
   .company_content_title {
@@ -4912,7 +4909,6 @@ a {
   .company_logo_col_inner .col-lg-3:nth-child(4n + 3) {
     margin-top: -80px;
   }
-
 }
 @media (min-width: 2400px) and (max-width: 2799px) {
   .company_logo_img {
@@ -4931,7 +4927,6 @@ a {
   .company_logo_col_inner .col-lg-3 {
     width: 20% !important;
   }
- 
 }
 @media (min-width: 768px) {
   .company_logo_col_inner .col-md-4 {

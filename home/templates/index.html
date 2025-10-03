@@ -1798,7 +1798,7 @@
     });
   });
 </script>
-{% comment %} <script>
+<script>
   document.addEventListener("DOMContentLoaded", () => {
     const col = document.querySelector(".company_logo_col");
     const inner = col.querySelector(".company_logo_col_inner");
@@ -1825,7 +1825,6 @@
       if (pos >= inner.offsetHeight) {
         pos = 0;
       }
-      console.log("pos",pos)
       col.style.transform = `translateY(${-pos}px)`;
 
       // Run intersection check on each frame
@@ -1857,7 +1856,7 @@
     // Start animation
     animate();
   });
-</script>  {% endcomment %}
+</script> 
 <script>
   function updateContactLink() {
     const link = document.getElementById("contact-link");
