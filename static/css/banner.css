@@ -2142,3 +2142,12 @@
     border-radius: 5px;
   }
 }
+
+@media(max-width:420px){
+  .banner1-img{
+    top:60%;
+  }
+  .banner1-img img{
+    width:40%;
+  }
+}
