@@ -20,9 +20,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #     'css/bootstrap1.min.css'
 # ]
 css_files = [
-    'css/style.css',
-    'css/animate.css',
-    'css/bdlb.css'
+    'css/banner.css'
 ]
 for css_path in css_files:
     full_css_path = os.path.join(BASE_DIR, css_path)
