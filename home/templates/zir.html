@@ -595,7 +595,7 @@
     <!-- Benefits of the zirconia -->
     <section class="BenefitOfZirconia">
         <div class="container position-relative">
-            <div class="col-12 text-center">
+            <div class="col-12 text-start text-md-center">
                 <!-- <div class="zirfirst-headS"></div> -->
                 {% comment %} <img src="{% static 'img/line.svg' %}" class="img-fluid line-2"> {% endcomment %}
                 <svg class="img-fluid line-2" width="358" height="23" viewBox="0 0 358 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -640,14 +640,19 @@
             <div class="swiper swiper-two">
                 <div class="swiper-wrapper">
                     {% for ie in Benefit %}
-                     <div class="swiper-slide benslide">
-                        <div class="freebennum">{{ie.id}}</div>
-                        <img src="{% static 'img/'|add:ie.imgUrl %}" class="img-fluid benicons" 
-                            alt="Smile Step Group 1" />
-                        <div class="benhead">
-                            {{ie.title}}
+                    <div class="swiper-slide benslide card">
+                        <div class="card-header p-0 border-0 bg-white">
+                            <div class="freebennum">{{ie.id}}</div>
+                            <img src="{% static 'img/'|add:ie.imgUrl %}" class="img-fluid benicons" alt="Smile Step Group 1" />
                         </div>
-                        <p class="bantext">{{ie.description}}</p>
+                        <div class="card-body p-0">
+                            <div class="benhead-wrapper">
+                                <div class="benhead">
+                                    {{ie.title}}
+                                </div>
+                                <p class="bantext">{{ie.description}}</p>
+                            </div>
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
@@ -756,7 +761,7 @@
     </section>
     <!-- gallery section -->
     <section class="Gallery-section">
-        <div class="container p-0">
+        <div class="container p-sm-0">
             <div class="row gallery-wrapper position-relative justify-content-center">
                 <div class="col-11 col-md-6 col-lg-4 px-1 ">
                     <p>Step into our Advanced Zirconia Gallery, where precision meets innovation. Explore a stunning
@@ -910,16 +915,16 @@
             <path d="M123.744 8.37865L120.23 11.1165L123.744 13.8543C124.39 14.357 125.296 14.2932 125.868 13.7046L128.384 11.1172L125.868 8.5298C125.296 7.9398 124.39 7.87601 123.744 8.37865Z" fill="#1B8976"/>
             <path d="M114.59 8.52877L112.074 11.1162L114.59 13.7035C115.163 14.2922 116.069 14.3566 116.714 13.8533L120.228 11.1155L116.714 8.37762C116.07 7.87637 115.163 7.94016 114.59 8.52877Z" fill="#1B8976"/>
             </svg>
-          <div class="row">
+          <div class="row mx-auto">
             <div class="col-md-12 p-0 m-0">
               <div class="faq" id="accordion">
                 {% for item in faq_data %}
                 <div class="card">
                   <div class="card-header" id="faqHeading-{{ forloop.counter }}">
                     <div class="mb-0">
-                      <div class="faq-title faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-{{ forloop.counter }}">
+                      <div class="faq-title faq-question collapsed align-items-center" data-bs-toggle="collapse" data-bs-target="#faqCollapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-{{ forloop.counter }}">
                         <span class="badge"><div class="test-xs">{{ forloop.counter }}</div></span>
-                        <div class="pt-0 pt-sm-2">{{ item.question }}</div>
+                        <div class="pt-0 pt-sm-0 px-2">{{ item.question }}</div>
                         <span class="faq-toggle-icon"></span>
                       </div>
                     </div>
@@ -976,10 +981,7 @@
             slidesPerView: 6,
             spaceBetween: 20,
             loop: true,
-            autoplay: {
-                delay: 3000, 
-                disableOnInteraction: false, 
-            },
+            autoplay:false,
             pagination: {
                 el: ".pagination-two",
                 clickable: !0,
@@ -1205,7 +1207,6 @@
         }
       ]
     }
-
 </script>
 <script type="application/ld+json">
     {

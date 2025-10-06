@@ -1240,6 +1240,13 @@ video {
     transform: rotate(-45deg);
     margin-top: 23px;
   }
+  .wsmenu-click.ws-activearrow .wsmenu-arrow{
+    display: block !important;
+  }
+  .wsmenu-dropdown:has(.ws-activearrow) .wsmenu-click .wsmenu-arrow{
+    display: none;
+  }
+
   .wsmenu > .wsmenu-list > li > .wsmenu-click > i {
     display: block;
     height: 8px;

@@ -77,144 +77,165 @@
 
 
 			<!-- BLOG PAGE CONTENT ============================================= -->
-			<div id="blog-page" class="wide-75 blog-page-section division">
-        <div class="container">
-            <div class="row">
-                <!-- BLOG POSTS HOLDER -->
-                <div class="col-lg-12">
-                    <div class="posts-holder">
-                        <div class="single-blog-post">
-                            <!-- BLOG POST IMAGE -->
-                            <div class="blog-post-img mb-40">
-                                <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}">
-                            </div>
-
-                            <!-- BLOG POST TEXT -->
-                            <div class="sblog-post-txt">
-                                {% comment %} <h2 class="steelblue-color">{{ data.title }}</h2> {% endcomment %}
-
-                                <div class="content mt-3">
-                                    {{ data.content|safe }}
-                                </div>
-
-                                <!-- FAQ Section -->
-                                <h2 class="h2-m mt-5 steelblue-color">Frequently Asked Questions</h2>
-                                <section class="faq-section-product">
-                                    <div class="faq" id="accordion">
-                                        {% for ie in data4 %}
-                                            <div class="card">
-                                                <div class="card-header" id="faqHeading-1{{ forloop.counter }}">
-                                                    <div class="mb-0">
-                                                        <div class="faq-title collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-1{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-1{{ forloop.counter }}">
-                                                            <span class="badge">
-                                                                <div class="test-xs">
-                                                                    {{ forloop.counter }}
-                                                                </div>
-                                                            </span>
-                                                            <div class="pt-2">
-                                                                {{ ie.question }}
-                                                            </div>
-                                                            <span class="faq-toggle-icon"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="faqCollapse-1{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="faqHeading-1{{ forloop.counter }}" data-bs-parent="#accordion">
-                                                    <div class="card-body">
-                                                        <span class="p3 faq-answer-product">
-                                                            <p>{{ ie.answer|safe }}</p>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        {% endfor %}
-                                    </div>
-                                </section>
-                                <!-- ABOUT POST AUTHOR -->
-                                    <div class="author-senoff">
-                                    <!-- Avatar -->
-                                    <img src="{{author.image.url}}" alt="Haresh Savani Author Advance Dental Export Image" />
-
-                                    <!-- Text -->
-                                    <div class="author-senoff-txt">
-                                        <!-- Title -->
-                                        <span class="steelblue-color"> {{author}} </span>
-                                        <p class="fw-bold">{{author.position}}</p>
-                                        <p>{{author.description|safe}}</p>
-                                        <div class="author-social-links mt-2">
-                                        {% if author.fb %}
-                                            <a href="{{ author.fb }}" target="_blank" class="author-social-link">
-                                            <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                        {% endif %}
-                                        {% if author.insta %}
-                                            <a href="{{ author.insta }}" target="_blank" class="author-social-link">
-                                            <i class="fab fa-instagram"></i>
-                                            </a>
-                                        {% endif %}
-                                        {% if author.linkedin %}
-                                            <a href="{{ author.linkedin }}" target="_blank" class="author-social-link">
-                                            <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        {% endif %}
-                                        </div>
-                                    </div>
-                                    </div>
-                                <!-- END ABOUT POST AUTHOR -->
-                                <!-- RELATED BLOG POSTS -->
-                                {% if related_blogs %}
-                                    <div class="related-product-posts mt-5">
-                                        <h2 class="steelblue-color mt-4">Related Blog Post</h2>
-                                        <div class="swiper-container">
-                                            <div class="swiper related-product-swiper">
-                                                <div class="swiper-wrapper">
-                                                    {% for ie in related_blogs %}
-                                                        <div class="swiper-slide position-relative">
-                                                            <div class="position-relative all-blog-content card">
-                                                                <img src="{{ ie.image.url }}" alt="{{ ie.alt }}" class="card-img-top h-100 img-fluid" />
-                                                                <div class="card-body">
-                                                                    <div class="blog-content-txt">
-                                                                        <div class="my-2 blog-author-date-content d-flex justify-content-between">
-                                                                            <div class="blog-author-wrapper">
-                                                                                <img src="{% static 'author.png' %}" alt="Author profile identification icon for blog or article" class="blog-author" />
-                                                                                <span class="blog-author-txt">By {{ ie.author }}</span>
-                                                                            </div>
-                                                                            <div class="blog-author-wrapper">
-                                                                                <img src="{% static 'celender.png' %}" alt="Calendar-Icon" class="blog-author" />
-                                                                                <span class="blog-author-txt">{{ ie.published|date:"M. d, Y" }}</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="blog-main-content text-start steelblue-color">
-                                                                        <span class="mt-3 card-title">
-                                                                            <a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}">{{ ie.title }}</a>
-                                                                        </span>
-                                                                        <p class="blog-content-descripation mb-0">{{ ie.description }}</p>
-                                                                        <div class="card-footer blog-footer">
-                                                                            <a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
-                                                                            <hr class="blog-divider">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    {% endfor %}
-                                                </div>
-                                            </div>
-                                            <div class="swiper-pagination"></div>
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            </div> <!-- END BLOG POST TEXT -->
+	        <div id="blog-page" class="wide-75 blog-page-section division">
+                {% if request.path == "/porcelain-fused-to-metal-pfm/" %}
+                    <div class="pfm-main">
+                        <div class="pfm-left">
+                            <img src="{% static '/img/rotate1.png' %}" alt="Rotating" class="pfm-rotate" />
+                        </div>
+                        <div class="pfm-right">
+                            <img src="{% static '/img/pfm-product.png' %}" class="img-fluid" width="1479" height="808" alt="static"/>
                         </div>
                     </div>
+                {% endif %}
+                <div class="container">
+                    <div class="row">
+                        <!-- BLOG POSTS HOLDER -->
+                        <div class="col-lg-12">
+                            <div class="posts-holder">
+                                <div class="single-blog-post">
+                                    <!-- BLOG POST IMAGE -->
+                                    <div class="blog-post-img mb-40">
+                                        {% if request.path != "/porcelain-fused-to-metal-pfm/" %}
+                                            {% comment %} <div class="pfm-main">
+                                                <div class="pfm-left">
+                                                    <img src="{% static '/img/rotate.png' %}" alt="Rotating" class="pfm-rotate" />
+                                                </div>
+                                                <div class="pfm-right">
+                                                    <img src="{% static '/img/pfm-product.png' %}" class="img-fluid" alt="static"/>
+                                                </div>
+                                            </div> {% endcomment %}
+                                            <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}" />
+                                            {% comment %} <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}"> {% endcomment %}
+                                        {% endif %}
+                                    </div>
 
-                </div> <!-- END BLOG POSTS HOLDER -->
+                                    <!-- BLOG POST TEXT -->
+                                    <div class="sblog-post-txt">
+                                        {% comment %} <h2 class="steelblue-color">{{ data.title }}</h2> {% endcomment %}
 
-                <!-- SIDEBAR -->
-                {% comment %} {% include 'aside.html' %} {% endcomment %}
+                                        <div class="content mt-3">
+                                            {{ data.content|safe }}
+                                        </div>
+
+                                        <!-- FAQ Section -->
+                                        <h2 class="h2-m mt-5 steelblue-color">Frequently Asked Questions</h2>
+                                        <section class="faq-section-product">
+                                            <div class="faq" id="accordion">
+                                                {% for ie in data4 %}
+                                                    <div class="card">
+                                                        <div class="card-header" id="faqHeading-1{{ forloop.counter }}">
+                                                            <div class="mb-0">
+                                                                <div class="faq-title collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-1{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-1{{ forloop.counter }}">
+                                                                    <span class="badge">
+                                                                        <div class="test-xs">
+                                                                            {{ forloop.counter }}
+                                                                        </div>
+                                                                    </span>
+                                                                    <div class="pt-2">
+                                                                        {{ ie.question }}
+                                                                    </div>
+                                                                    <span class="faq-toggle-icon"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="faqCollapse-1{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="faqHeading-1{{ forloop.counter }}" data-bs-parent="#accordion">
+                                                            <div class="card-body">
+                                                                <span class="p3 faq-answer-product">
+                                                                    <p>{{ ie.answer|safe }}</p>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </section>
+                                        <!-- ABOUT POST AUTHOR -->
+                                            <div class="author-senoff">
+                                            <!-- Avatar -->
+                                            <img src="{{author.image.url}}" alt="Haresh Savani Author Advance Dental Export Image" />
+
+                                            <!-- Text -->
+                                            <div class="author-senoff-txt">
+                                                <!-- Title -->
+                                                <span class="steelblue-color"> {{author}} </span>
+                                                <p class="fw-bold">{{author.position}}</p>
+                                                <p>{{author.description|safe}}</p>
+                                                <div class="author-social-links mt-2">
+                                                {% if author.fb %}
+                                                    <a href="{{ author.fb }}" target="_blank" class="author-social-link">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                {% endif %}
+                                                {% if author.insta %}
+                                                    <a href="{{ author.insta }}" target="_blank" class="author-social-link">
+                                                    <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                {% endif %}
+                                                {% if author.linkedin %}
+                                                    <a href="{{ author.linkedin }}" target="_blank" class="author-social-link">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                {% endif %}
+                                                </div>
+                                            </div>
+                                            </div>
+                                        <!-- END ABOUT POST AUTHOR -->
+                                        <!-- RELATED BLOG POSTS -->
+                                        {% if related_blogs %}
+                                            <div class="related-product-posts mt-5">
+                                                <h2 class="steelblue-color mt-4">Related Blog Post</h2>
+                                                <div class="swiper-container">
+                                                    <div class="swiper related-product-swiper">
+                                                        <div class="swiper-wrapper">
+                                                            {% for ie in related_blogs %}
+                                                                <div class="swiper-slide position-relative">
+                                                                    <div class="position-relative all-blog-content card">
+                                                                        <img src="{{ ie.image.url }}" alt="{{ ie.alt }}" class="card-img-top h-100 img-fluid" />
+                                                                        <div class="card-body">
+                                                                            <div class="blog-content-txt">
+                                                                                <div class="my-2 blog-author-date-content d-flex justify-content-between">
+                                                                                    <div class="blog-author-wrapper">
+                                                                                        <img src="{% static 'author.png' %}" alt="Author profile identification icon for blog or article" class="blog-author" />
+                                                                                        <span class="blog-author-txt">By {{ ie.author }}</span>
+                                                                                    </div>
+                                                                                    <div class="blog-author-wrapper">
+                                                                                        <img src="{% static 'celender.png' %}" alt="Calendar-Icon" class="blog-author" />
+                                                                                        <span class="blog-author-txt">{{ ie.published|date:"M. d, Y" }}</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="blog-main-content text-start steelblue-color">
+                                                                                <span class="mt-3 card-title">
+                                                                                    <a href="{% url 'home:blogd' ie.slug %}" class="blog-item" data-title="{{ ie.title|lower }}">{{ ie.title }}</a>
+                                                                                </span>
+                                                                                <p class="blog-content-descripation mb-0">{{ ie.description }}</p>
+                                                                                <div class="card-footer blog-footer">
+                                                                                    <a href="{% url 'home:blogd' ie.slug %}" class="blog-read-more">Read More</a>
+                                                                                    <hr class="blog-divider">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div> <!-- END BLOG POST TEXT -->
+                                </div>
+                            </div>
+
+                        </div> <!-- END BLOG POSTS HOLDER -->
+
+                        <!-- SIDEBAR -->
+                        {% comment %} {% include 'aside.html' %} {% endcomment %}
+                    </div>
+                </div>
             </div>
-        </div>
-      </div>
 	
       <!-- END BLOG PAGE CONTENT -->
 
