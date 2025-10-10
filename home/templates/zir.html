@@ -219,8 +219,8 @@
         </div>
     </section>
     <!-- Type Of Zirconia Crown -->
-    <section class="typeOfZirconia position-relative">
-        <div class="container">
+    <section class="typeOfZirconia ">
+        <div class="container position-relative">
             {% comment %} <img src="{% static 'img/line.svg' %}" class="img-fluid line-2"> {% endcomment %}
             <svg class="img-fluid line-2" width="358" height="23" viewBox="0 0 358 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M358 10H0V12H358V10Z" fill="#1B8976"/>
@@ -237,7 +237,7 @@
             <path d="M123.744 8.37865L120.23 11.1165L123.744 13.8543C124.39 14.357 125.296 14.2932 125.868 13.7046L128.384 11.1172L125.868 8.5298C125.296 7.9398 124.39 7.87601 123.744 8.37865Z" fill="#1B8976"/>
             <path d="M114.59 8.52877L112.074 11.1162L114.59 13.7035C115.163 14.2922 116.069 14.3566 116.714 13.8533L120.228 11.1155L116.714 8.37762C116.07 7.87637 115.163 7.94016 114.59 8.52877Z" fill="#1B8976"/>
             </svg>
-            <h2 class="zirconia-wrapper-title pt-md-4 pt-sm-4 pt-5 pb-0">Type Of Advance Zirconia</h2>
+            <h2 class="zirconia-wrapper-title pt-md-3 pt-sm-4 pt-5 pb-0">Type Of Advance Zirconia</h2>
             {% comment %} <img src="{% static 'img/line.svg' %}" class="img-fluid line-1"> {% endcomment %}
             <svg class="img-fluid line-1" width="358" height="23" viewBox="0 0 358 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M358 10H0V12H358V10Z" fill="#1B8976"/>
@@ -774,7 +774,7 @@
                 </div>
             </div>
             <div class="swiper gallery-swiper">
-                <div class="swiper-wrapper mb-4">
+                <div class="swiper-wrapper mb-4" id="swiperWrapper">
                     <div class="swiper-slide">
                         <div class="gallery-container">
                             <img src="{% static 'img/case1.webp'%}" class="gallery-img img-fluid" alt="Advance Zirconia crown transformation before and after dental restoration" width="100%" height="100%" />
@@ -949,7 +949,6 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-
 <script>
     AOS.init({
         offset: 10,
@@ -981,7 +980,10 @@
             slidesPerView: 6,
             spaceBetween: 20,
             loop: true,
-            autoplay:false,
+            autoplay: {
+                delay: 3000, 
+                disableOnInteraction: false, 
+            },
             pagination: {
                 el: ".pagination-two",
                 clickable: !0,
@@ -1067,8 +1069,11 @@
         const images1 = document.querySelectorAll(".gallery-caseimg");
         const overlay = document.querySelectorAll(".overlays-background");
         const clickhereButton = document.querySelectorAll(".gallery-btn");
+       
+        
+       
         let isDeactivating = activeCase === e;
-
+        
         cases.forEach((current, index) => {
             let img = images[index];
             let button = clickhereButton[index];
@@ -1106,7 +1111,7 @@
             let button = clickhereButton[index];
             if (window.innerWidth >= 576) {
                 if (activeCase && cases[index].id == activeCase) {
-                    img.style.margin = "0px 0px 15px";
+                    img.style.margin = "0px auto 15px";
                     img.style.width = "100%";
                     img.style.animation = "zoomOut .7s ease forwards";
                 } else if (activeCase === null) {

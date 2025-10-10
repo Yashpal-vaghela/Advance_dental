@@ -52,12 +52,12 @@
   }
 }
 .radial_smile .line-2 {
-  top: 1.3%;
+  top: 1.6%;
   left: 1%;
 }
 .radial_smile .line-1 {
-  top: 1.3%;
-  right: 1%;
+  top: 1.6%;
+  right: 0.4%;
 }
 .bigcont {
   height: 220px;
@@ -195,6 +195,16 @@
     left: 7%;
   }
 }
+@media(min-width:1400px){
+  .radial_smile .line-1{
+    top:1.42%;
+    right:6.2%;
+  }
+  .radial_smile .line-2{
+    top:1.42%;
+    left:6.7%;
+  }
+}
 @media (max-width: 1200px) {
   .radial_smile .line-2,
   .radial_smile .line-1 {
@@ -315,12 +325,14 @@
   background-color: rgb(27 137 118 / 0.08);
 }
 .typeOfZirconia .line-2 {
-  left: 6%;
-  top: 3.6%;
+  left: 4%;
+  top: 47%;
+  width:28%;
 }
 .typeOfZirconia .line-1 {
-  right: 6%;
-  top: 3.6%;
+  right: 3.4%;
+  top: 47%;
+  width:28%;  
 }
 .typeOfZirconia .swiper-button-prev {
   top: 6%;
@@ -448,22 +460,22 @@
 }
 @media (min-width: 1400px) {
   .typeOfZirconia .line-2 {
-    top: 4%;
-    left: 10%;
+    top: 47%;
+    left: 6%;
   }
   .typeOfZirconia .line-1 {
-    top: 4%;
-    right: 9.6%;
+    top: 47%;
+    right: 5.6%;
   }
 }
 @media (min-width: 1600px) {
   .typeOfZirconia .line-2 {
-    top: 4.5%;
-    left: 20.2%;
+    /* top: 4.5%; */
+    left: 6.2%;
   }
   .typeOfZirconia .line-1 {
-    top: 4.5%;
-    right: 20%;
+    /* top: 4.5%; */
+    right: 5.5%;
   }
   .side-img {
     top: -17.5%;
@@ -474,12 +486,12 @@
 }
 @media (min-width: 1440px) and (max-width: 1799px) {
   .typeOfZirconia .line-2 {
-    top: 4.3%;
-    left: 15%;
+    top: 45%;
+    left: 6.2%;
   }
   .typeOfZirconia .line-1 {
-    top: 4.3%;
-    right: 15%;
+    top: 45%;
+    right: 5.8%;
   }
 }
 @media (max-width: 1200px) {
@@ -487,12 +499,12 @@
     padding: 10px 0 20px;
   }
   .typeOfZirconia .line-2 {
-    left: 5%;
-    top: 4.3%;
+    left: 1.5%;
+    top: 51%;
   }
   .typeOfZirconia .line-1 {
-    right: 4.5%;
-    top: 4.3%;
+    right: 0.8%;
+    top: 51%;
   }
   .main_process_card {
     padding: 0 40px;
@@ -507,12 +519,12 @@
 }
 @media (max-width: 991px) {
   .typeOfZirconia .line-2 {
-    left: 8%;
-    top: 5.6%;
+    left: 0%;
+    top: 4.8%;
   }
   .typeOfZirconia .line-1 {
-    right: 8%;
-    top: 5.6%;
+    right: -0.5%;
+    top: 4.8%;
   }
   .side-img {
     display: none;
@@ -699,13 +711,13 @@
 }
 .line-1 {
   position: absolute;
-  top: 5.6%;
-  right: 0%;
+  top: 6.6%;
+  right: 1.3%;
 }
 .line-2 {
   position: absolute;
-  top: 5.6%;
-  left: 0%;
+  top: 6.6%;
+  left: 1.4%;
 }
 .zirconia-content-item {
   grid-row-gap: 84px;
@@ -748,11 +760,11 @@
 @media (min-width: 1400px) {
   .zirconia-wrapper .line-2 {
     top: 7.3%;
-    left: 8.5%;
+    left: 7.5%;
   }
   .zirconia-wrapper .line-1 {
     top: 7.3%;
-    right: 8.5%;
+    right: 7.5%;
   }
 }
 @media (min-width: 1600px) {
@@ -911,16 +923,17 @@
 }
 .BenefitOfZirconia .line-2 {
   width: 26%;
-  top: 5%;
+  top: 6%;
 }
 .BenefitOfZirconia .line-1 {
   width: 26%;
-  top: 5%;
+  top: 6%;
 }
 .benefittxt {
   margin-bottom: 45px;
   line-height: 1.7;
   letter-spacing: 0.3px;
+  text-align: left;
 }
 .benslide {
   position: relative;
@@ -983,22 +996,22 @@
     top: 6.2%;
   }
   .BenefitOfZirconia .line-2 {
-    left: 3%;
+    left: 2.7%;
   }
   .BenefitOfZirconia .line-1 {
-    right: 3%;
+    right: 2.5%;
   }
 }
 @media (min-width: 1600px) {
   .BenefitOfZirconia .line-2,
   .BenefitOfZirconia .line-1 {
-    top: 6.5%;
+    top: 6%;
   }
   .BenefitOfZirconia .line-1 {
     right: 2.5%;
   }
   .BenefitOfZirconia .line-2 {
-    left: 2.5%;
+    left: 2.8%;
   }
 }
 @media (max-width: 1200px) {
@@ -1069,13 +1082,13 @@
 }
 .testimonial-wrapper .line-1t {
   position: absolute;
-  top: 1.7%;
-  right: 5%;
+  top: 2.2%;
+  right: 7.6%;
 }
 .testimonial-wrapper .line-2t {
   position: absolute;
-  top: 1.7%;
-  left: 5%;
+  top: 2.2%;
+  left: 8%;
 }
 .testimonial-card {
   background: #fffdfd;
@@ -1127,11 +1140,11 @@
 }
 @media (min-width: 1400px) {
   .testimonial-wrapper .line-2t {
-    top: 2.1%;
+    top: 2.2%;
     left: 14%;
   }
   .testimonial-wrapper .line-1t {
-    top: 2.1%;
+    top: 2.2%;
     right: 13.8%;
   }
 }
@@ -1142,9 +1155,11 @@
   }
   .testimonial-wrapper .line-1t {
     right: 13.7%;
+    top:2.2%;
   }
   .testimonial-wrapper .line-2t {
     left: 13.9%;
+    top:2.2%;
   }
 }
 @media (max-width: 1200px) {
@@ -1177,7 +1192,7 @@
   .testimonial-wrapper .line-1t {
     width: 36%;
     top: 1.7%;
-    right: 2%;
+    right: 1.6%;
   }
 }
 @media (max-width: 768px) {
@@ -1492,10 +1507,31 @@
   .Gallery-section .container {
     margin: 55px auto 15px;
   }
-  .galleryCaseImg-wrapper.d-block {
+  .galleryCaseImg-wrapper.d-block{
     width: 235px;
+    /* margin-left: -5px; */
     margin-left: -10px;
   }
+  /* .gallery-swiper .swiper-slide{
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+  } */
+  /* .gallery-swiper .swiper-wrapper .swiper-slide-prev .galleryCaseImg-wrapper .d-block,
+  .gallery-swiper .swiper-wrapper .swiper-slide-active .galleryCaseImg-wrapper .d-block{
+    margin-left: 0px !important;
+  }
+  .gallery-swiper .swiper-wrapper .swiper-slide-next .galleryCaseImg-wrapper .d-block{
+    margin-left: -10px;
+  } */
+  .gallery-swiper .swiper-wrapper .swiper-slide-active .galleryCaseImg-wrapper .d-block{
+    margin-left: 0px !important;
+  }
+  /* .galleryCaseImg-wrapper.d-block:first-child{
+    margin-left: 0px !important;
+  }
+  .galleryCaseImg-wrapper.d-block:last-child{
+    margin-left: -10px !important;
+  } */
 }
 @media (max-width: 768px) {
   .gallery-swiper {
@@ -1683,7 +1719,7 @@
 }
 @media (min-width: 1400px) {
   .zirconia-faq .vector1 {
-    left: 4.1%;
+    left: 4.2%;
     max-width: 30%;
     top: 2%;
   }
@@ -1695,14 +1731,14 @@
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .zirconia-faq .vector1 {
-    left: 2% !important;
+    left: 3.6% !important;
     width: 25% !important;
-    top: 2% !important;
+    top: 2.7% !important;
   }
   .zirconia-faq .vector2 {
-    right: 2% !important;
+    right: 3.6% !important;
     width: 25% !important;
-    top: 2% !important;
+    top: 2.7% !important;
   }
 }
 @media (max-width: 991px) {
