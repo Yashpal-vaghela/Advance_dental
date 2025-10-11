@@ -130,7 +130,7 @@
         <div class="posts-holder pr-30">
           <div class="single-blog-post pr-30">
             <!-- BLOG POST IMAGE -->
-            <div class="blog-post-img mb-40">
+            <div class="blog-post-img mb-40 mt-5">
               <img
                 class="img-fluid"
                 src="{{data.image.url}}"
@@ -144,12 +144,7 @@
               {% comment %}
               <h2 class="h1-sm steelblue-color">{{data.title}}</h2>
               {% endcomment %}
-              <p
-                style="
-                  font-size: 1.1rem !important;
-                  color: rgba(0, 0, 0, 0.6);
-                "
-              >
+              <p>
                 Posted {{data.published}} by <span>{{data.author}}</span>
               </p>
 
