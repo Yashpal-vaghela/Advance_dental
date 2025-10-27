@@ -55,9 +55,9 @@
 <link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 <link rel="preload" href="{% static 'css/review.css' %}" as="style" />
 <link href="{% static 'css/review.css' %}" rel="stylesheet" />
-<noscript
-  ><link rel="stylesheet" href="{% static 'css/review.css' %}"
-/></noscript>
+<noscript>
+  <link rel="stylesheet" href="{% static 'css/review.css' %}" />
+</noscript>
 {% endblock %} {% block body %}
 <section class="hero-section1 mb-0">
   <div class="swiper mySwiper">
@@ -478,7 +478,7 @@
             />
             {% endcomment %}
             <svg
-              class="cd_icon"
+              class="cd_icon mb-3"
               width="76"
               height="76"
               viewBox="0 0 76 76"
@@ -603,7 +603,7 @@
             />
             {% endcomment %}
             <svg
-              class="cd_icon"
+              class="cd_icon mb-3"
               width="76"
               height="76"
               viewBox="0 0 76 76"
@@ -723,7 +723,7 @@
             />
             {% endcomment %}
             <svg
-              class="cd_icon"
+              class="cd_icon mb-3"
               width="76"
               height="76"
               viewBox="0 0 80 100"
@@ -1016,6 +1016,231 @@
   </div>
 </section>
 <!-- Introduction for the lab -->
+<section class="service-section section" id="serviceSection">
+  <div class="page-padding">
+    <div class="container container-large scroll-jack">
+      <div class="padding-section-challenge">
+        <div class="service-title-wrapper">
+          <h2 class="service-title" lines-slide-up="" split-text="">
+            Building The Future Of Digital <br />
+            <span>Dentistry</span>
+          </h2>
+          <p class="service-subtitle" lines-slide-up="" split-text="">
+            We build the future of digital dentistry by delivering innovative
+            solutions and unmatched expertise. Our commitment to quality and
+            precision makes us the trusted choice for dentists worldwide.
+          </p>
+        </div>
+        <div
+          class="service-card-wrapper row challenge-list challenge-section"
+          id="serviceCardWrapper"
+        >
+          <div
+            class="challenge-item service-card d-flex justify-content-between"
+            id="service-card1"
+          >
+            <div class="challenge-grid flex-wrap">
+              <span class="challenge-number service-number order-1 order-lg-1"
+                >01</span
+              >
+              <div
+                class="service-card-content challenge-div order-3 order-lg-2"
+              >
+                <h3 class="challenge-heading">Skilled Dental Specialists</h3>
+                <div class="challenge-text w-richtext">
+                  <p>
+                    We take pride in delivering exceptional results through the
+                    hands of our expert dental technicians. With deep expertise,
+                    advanced techniques, and an eye for precision, our team
+                    ensures every restoration meets the highest standards.
+                  </p>
+                </div>
+              </div>
+              <div class="service-icon order-2 order-lg-3">
+                <img
+                  src="{% static 'dental-icon.svg'%}"
+                  class="svgInject"
+                  alt="animated-icon"
+                  width="120"
+                  height="120"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="challenge-item service-card d-flex justify-content-between"
+            id="service-card2"
+          >
+            <div class="challenge-grid flex-wrap">
+              <span class="challenge-number service-number order-1 order-lg-1"
+                >02</span
+              >
+              <div
+                class="service-card-content challenge-div order-3 order-lg-2"
+              >
+                <h3 class="challenge-heading">Digital Dentistry Equipment</h3>
+                <div class="challenge-text w-richtext">
+                  <p>
+                    At Advance Dental Export, we embrace cutting-edge digital
+                    dentistry to craft precise, high-quality dental prosthetics.
+                    Using the latest equipment and manufacturing technology, we
+                    ensure accuracy, consistency, and excellence in every
+                    product.
+                  </p>
+                </div>
+              </div>
+              <div class="service-icon order-2 order-lg-3">
+                <img
+                  src="{% static 'digital-icon.svg' %}"
+                  class="svgInject"
+                  width="120"
+                  height="120"
+                  alt="animated-icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="challenge-item service-card d-flex justify-content-between"
+            id="service-card3"
+          >
+            <div class="challenge-grid flex-wrap">
+              <span class="challenge-number service-number order-1 order-lg-1"
+                >03</span
+              >
+              <div
+                class="service-card-content challenge-div order-3 order-lg-2"
+              >
+                <h3 class="challenge-heading">Advanced Laboratory Setup</h3>
+                <div class="challenge-text w-richtext">
+                  <p>
+                    Our state-of-the-art facilities and dedicated team work in
+                    harmony to ensure every dental prosthesis meets the highest
+                    industry standards. From materials to final finish,
+                    excellence is built into every step because your patients
+                    deserve nothing less.
+                  </p>
+                </div>
+              </div>
+              <div class="service-icon order-2 order-lg-3">
+                <img
+                  src="{% static 'lab-icon.svg' %}"
+                  class="svgInject"
+                  width="120"
+                  height="120"
+                  alt="animated-icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="challenge-item service-card d-flex justify-content-between"
+            id="service-card4"
+          >
+            <div class="challenge-grid flex-wrap">
+              <span class="challenge-number service-number order-1 order-lg-1"
+                >04</span
+              >
+              <div
+                class="service-card-content challenge-div order-3 order-lg-2"
+              >
+                <h3 class="challenge-heading">Professional Dental Services</h3>
+                <div class="challenge-text w-richtext">
+                  <p>
+                    We specialize in professional dental solutions, with a focus
+                    on crown and bridge preparations tailored to individual
+                    needs. Our expert team crafts customized smile designs that
+                    reflect each patient’s unique vision.
+                  </p>
+                </div>
+              </div>
+              <div class="service-icon order-2 order-lg-3">
+                <img
+                  src="{% static 'professional-icon.svg' %}"
+                  class="svgInject"
+                  width="120"
+                  height="120"
+                  alt="animated-icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="challenge-item service-card d-flex justify-content-between"
+            id="service-card5"
+          >
+            <div class="challenge-grid flex-wrap">
+              <span class="challenge-number service-number order-1 order-lg-1"
+                >05</span
+              >
+              <div
+                class="service-card-content challenge-div order-3 order-lg-2"
+              >
+                <h3 class="challenge-heading">Commitment to Accuracy</h3>
+                <div class="challenge-text w-richtext">
+                  <p>
+                    At Advance Dental Export, every restoration is a work of
+                    precision. Our skilled team combines expert craftsmanship
+                    with advanced technology to deliver flawless fit, optimal
+                    function, and lifelike aesthetics.
+                  </p>
+                </div>
+              </div>
+              <div class="service-icon order-2 order-lg-3">
+                <img
+                  src="{% static 'commitment-icon.svg' %}"
+                  class="svgInject"
+                  width="120"
+                  height="120"
+                  alt="animated-icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="challenge-item service-card d-flex justify-content-between"
+            id="service-card6"
+          >
+            <div class="challenge-grid flex-wrap">
+              <span class="challenge-number service-number order-1 order-lg-1"
+                >06</span
+              >
+              <div
+                class="service-card-content challenge-div order-3 order-lg-2"
+              >
+                <h3 class="challenge-heading">Client-Centric Approach</h3>
+                <div class="challenge-text w-richtext">
+                  <p>
+                    We believe every successful smile starts with strong
+                    collaboration. Our team works closely with dentists,
+                    maintaining open communication to craft solutions tailored
+                    to your clinical preferences.
+                  </p>
+                </div>
+              </div>
+              <div class="service-icon order-2 order-lg-3">
+                <img
+                  src="{% static 'client-icon.svg' %}"
+                  class="svgInject"
+                  width="120"
+                  height="120"
+                  alt="animated-icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="challenge-track">
+            <div class="sticky-tracker">
+              <div class="tracker"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-hairline"></div>
+    </div>
+  </div>
+</section>
+
 <section
   id="services-7"
   class="bg-lightgrey wide-601 servicess-section division"
@@ -1512,13 +1737,11 @@
     </div>
   </section>
 </main>
-{% endblock %} 
-{% comment %}
+{% endblock %} {% comment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Owl Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-{% endcomment %} 
-{% block javascript %}
+{% endcomment %} {% block javascript %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {% if messages %}
@@ -1587,40 +1810,6 @@
       },
     },
   });
-  {% comment %} var gallerySwiper = new Swiper(".gallerySwiper", {
-    speed: 1500,
-    slidesPerView: 2,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: !0,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 2,
-      },
-    },
-  }); {% endcomment %}
   var BeforeSwiper = new Swiper(".beforeSwiper", {
     speed: 1500,
     slidesPerView: 3,
@@ -1656,6 +1845,8 @@
     },
   });
 </script>
+<script src="{% static 'js/svg-inject.min.js' %}"></script>
+<script src="{% static 'js/vivus.min.js'%}"></script>
 <script>
   const gallerySwiper = new Swiper(".gallerySwiper", {
     speed: 1500,
@@ -1795,6 +1986,684 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.matchMedia({
+      "(min-width:768px)": function () {
+        const section = document.querySelector("#serviceSection");
+        const grids = document.querySelectorAll(".challenge-grid");
+        const wrapper = document.querySelector("#serviceCardWrapper");
+        const stickyTracker = document.querySelector(".sticky-tracker");
+        const lastCard = document.getElementById("service-card6");
+        const activeCard = lastCard.querySelector(".active-card");
+        const firstCard = document.getElementById("service-card1");
+        const firstactiveCard = document.querySelector(".active-card");
+
+        if (!section || !wrapper || grids.length === 0) return;
+
+        // Keep wrapper relative and tall enough for scroll
+        wrapper.style.position = "relative";
+        wrapper.style.minHeight = grids.length * window.innerHeight + "px";
+        console.log("wrapper", wrapper.innerHeight);
+
+        let top1 = 5;
+        let top2 = 5;
+        function updateTopValue() {
+          if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+            top1 = 38;
+            top2 = 38;
+          } else if (window.innerWidth >= 992 && window.innerWidth <= 1200) {
+            top1 = 8;
+            top2 = 8;
+          } else if (window.innerWidth >= 1200 && window.innerWidth <= 1300) {
+            top1 = 10;
+            top2 = 10;
+          } else if (window.innerWidth >= 1300 && window.innerWidth <= 1440) {
+            top1 = 9;
+            top2 = 9;
+          } else if (window.innerWidth >= 1439 && window.innerWidth <= 1649) {
+            top1 = 8;
+            top2 = 8;
+          } else if (window.innerWidth >= 1650 && window.innerWidth <= 1800) {
+            top1 = 9;
+            top2 = 9;
+          } else if (window.innerWidth >= 1800 && window.innerWidth <= 2000) {
+            top1 = 7;
+            top2 = 7;
+          } else {
+            top1 = 5;
+            top2 = 5;
+          }
+        }
+        updateTopValue();
+        // Set initial state
+        grids.forEach((grid) => {
+          gsap.set(grid, {
+            opacity: 0,
+            top: window.innerHeight / top1 + 40,
+            position: "absolute",
+            left: 0,
+            width: "100%",
+          });
+          grid.classList.remove("active-card");
+        });
+        console.log("wrapper==", wrapper.offsetHeight, grids.length);
+        let stickyRemoved = false;
+        let stickyActive = false;
+
+        const pinTrigger = ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: () => `+=${section.scrollHeight} ${window.innerHeight - 100}`,
+          scrub: true,
+          markers: true,
+          pinSpacing: false,
+          onUpdate: (self) => {
+            // Calculate which card should be active
+            let idx = Math.floor(self.progress * grids.length);
+            if (idx >= grids.length) idx = grids.length - 1;
+
+            // 🟩 when last card becomes active => apply sticky
+            if (self.progress >= 0 && self.start >= 3374 && !stickyRemoved) {
+              section.style.position = "sticky";
+              section.style.top = "0px";
+              section.style.zIndex = "1";
+              stickyRemoved = true;
+              console.log("🟢 Section sticky applied on first card start");
+            }
+            // 🟥 when last card animation fully finishes => remove sticky
+            if (
+              idx >= grids.length - 1 &&
+              self.progress >= 1 &&
+              !stickyRemoved
+            ) {
+              section.style.position = "relative";
+              stickyRemoved = true;
+              console.log(
+                "🔴 Section sticky removed after last card animation"
+              );
+            }
+          },
+          onLeave: () => {
+            stickyRemoved = true;
+            section.style.position = "relative";
+            wrapper.style.minHeight =
+              (grids.length * window.innerHeight) / 1.12 + "px";
+            console.log("↩️ Leave sticky state on reverse scroll");
+          },
+          onEnterBack: () => {
+            stickyRemoved = false;
+            section.style.position = "sticky";
+            section.style.top = "0px";
+            wrapper.style.minHeight =
+              grids.length * window.innerHeight * 1.12 + "px";
+            console.log("↩️ Reset sticky state on reverse scroll");
+          },
+          onLeaveBack: () => {
+            // if reverse scrolling back before last card, re-enable stickyRemoved flag
+            stickyRemoved = false;
+            section.style.position = "sticky";
+            section.style.top = "0px";
+            wrapper.style.minHeight =
+              grids.length * window.innerHeight * 1.12 + "px";
+            console.log("↩️ Reset sticky state on reverse scroll");
+          },
+        });
+        // Main ScrollTrigger controlling which card is active
+        const mainTrigger = ScrollTrigger.create({
+          trigger: wrapper,
+          start: "top bottom",
+          end: () => `+=${wrapper.offsetHeight}`,
+          scrub: true,
+          onUpdate(self) {
+            const p = gsap.utils.clamp(0, 1, self.progress || 0);
+            let idx = Math.floor(p * grids.length);
+            if (idx >= grids.length) idx = grids.length - 1;
+            showCard(idx);
+          },
+          onLeave() {
+            clearAll();
+          },
+          onLeaveBack() {
+            clearAll();
+          },
+          markers: false,
+        });
+
+        // Show one card & play animation
+        function showCard(activeIndex) {
+          grids.forEach((grid, index) => {
+            const isActive = index === activeIndex;
+
+            if (isActive && !grid.classList.contains("active-card")) {
+              grid.classList.add("active-card");
+
+              // fade in grid
+              gsap.killTweensOf(grid);
+              gsap.to(grid, {
+                opacity: 1,
+                top: window.innerHeight / top2,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+
+              // child animations
+              const number = grid.querySelector(".challenge-number");
+              const heading = grid.querySelector(".challenge-heading");
+              const text = grid.querySelector(".challenge-text");
+              const image = grid.querySelector(
+                ".service-icon, .challenge-image"
+              );
+
+              const tl = gsap.timeline();
+              tl.set(image, { opacity: 0, scale: 0.9 });
+              tl.fromTo(
+                [number, heading, text].filter(Boolean),
+                { opacity: 0, y: 30 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.8,
+                  stagger: 0.15,
+                  ease: "power2.out",
+                }
+              );
+              // ⬇️ Add your SVGInject + Vivus animation call here
+              tl.call(() => {
+                const svgTargets = grid.querySelectorAll(".svgInject");
+                if (svgTargets.length > 0) {
+                  SVGInject(svgTargets, {
+                    makeIdsUnique: true,
+                    afterInject: function (imgEl, svgEl) {
+                      if (svgEl.dataset.vivusStarted) return;
+                      svgEl.dataset.vivusStarted = "1";
+                      new Vivus(svgEl, {
+                        duration: 80,
+                        type: "sync",
+                      });
+                    },
+                  });
+                }
+              });
+              // Faster zoom-in pop effect
+              tl.to(
+                image,
+                {
+                  opacity: 1,
+                  scale: 1.1,
+                  duration: 0.2,
+                  ease: "back.out(2)",
+                },
+                "-=0.2"
+              ).to(image, {
+                scale: 1,
+                duration: 0.1,
+                ease: "power1.inOut",
+              });
+            } else if (!isActive && grid.classList.contains("active-card")) {
+              grid.classList.remove("active-card");
+              gsap.killTweensOf(grid);
+              gsap.to(grid, {
+                opacity: 0,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            } else if (!isActive) {
+              gsap.set(grid, { opacity: 0 });
+              grid.classList.remove("active-card");
+            }
+          });
+          updateStickyTracker();
+        }
+
+        // Clear all cards
+        function clearAll() {
+          grids.forEach((g, i) => {
+            if (i === grids.length - 1) {
+              gsap.set(lastCard, { opacity: 1 });
+              lastCard.style.position = "relative";
+            } else if (i === grids.length - 5) {
+              gsap.set(firstCard, { opacity: 1 });
+            } else {
+              g.classList.remove("active-card");
+              gsap.killTweensOf(g);
+              gsap.to(g, { opacity: 0, duration: 0.25, ease: "power2.in" });
+              if (stickyTracker) stickyTracker.classList.remove("active");
+            }
+          });
+        }
+
+        // Update sticky tracker
+        function updateStickyTracker() {
+          const hasActive = Array.from(grids).some((grid) =>
+            grid.classList.contains("active-card")
+          );
+          if (!stickyTracker) return;
+          stickyTracker.classList.toggle("active", hasActive);
+        }
+
+        // Recalculate on refresh
+        ScrollTrigger.addEventListener("refreshInit", () => {
+          wrapper.style.minHeight = grids.length * window.innerHeight + "px";
+        });
+
+        window.addEventListener("resize", () => {
+          updateTopValue();
+          ScrollTrigger.refresh();
+        });
+      },
+      "(max-width:768px)": function () {
+        const section = document.querySelector("#serviceSection");
+        const grids = document.querySelectorAll(".challenge-grid");
+        const wrapper = document.querySelector("#serviceCardWrapper");
+        const stickyTracker = document.querySelector(".sticky-tracker");
+        const lastCard = document.getElementById("service-card6");
+        const activeCard = lastCard.querySelector(".active-card");
+        const firstCard = document.getElementById("service-card1");
+        const firstactiveCard = firstCard.querySelector(".active-card");
+
+        if (!section || !wrapper || grids.length === 0) return;
+
+        // Keep wrapper relative and tall enough for scroll
+        wrapper.style.position = "relative";
+        wrapper.style.minHeight = grids.length * window.innerHeight + "px";
+        console.log("wrapper", wrapper.innerHeight);
+
+        let top1 = 12;
+        let top2 = 12;
+        function updateTopValue() {
+          if (window.innerWidth >= 0 && window.innerWidth <= 576) {
+            top1 = 18;
+            top2 = 18;
+          } else {
+            top1 = 15;
+            top2 = 15;
+          }
+        }
+        updateTopValue();
+        // Set initial state
+        grids.forEach((grid) => {
+          gsap.set(grid, {
+            opacity: 0,
+            top: window.innerHeight / top1 + 20,
+            position: "absolute",
+            left: 0,
+            width: "100%",
+          });
+          grid.classList.remove("active-card");
+        });
+        console.log("wrapper==", wrapper.offsetHeight, grids.length);
+        let stickyRemoved = false;
+        let stickyActive = false;
+
+        const pinTrigger = ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: () => `+=${section.scrollHeight} ${window.innerHeight - 100}`,
+          scrub: true,
+          markers: true,
+          pinSpacing: false,
+          onUpdate: (self) => {
+            // Calculate which card should be active
+            let idx = Math.floor(self.progress * grids.length);
+            if (idx >= grids.length) idx = grids.length - 1;
+
+            // 🟩 when last card becomes active => apply sticky
+            if (self.progress >= 0 && self.start >= 3374 && !stickyRemoved) {
+              section.style.position = "sticky";
+              section.style.top = "0px";
+              section.style.zIndex = "1";
+              stickyRemoved = true;
+              console.log("🟢 Section sticky applied on first card start");
+            }
+            // 🟥 when last card animation fully finishes => remove sticky
+            if (
+              idx >= grids.length - 1 &&
+              self.progress >= 1 &&
+              !stickyRemoved
+            ) {
+              section.style.position = "relative";
+              stickyRemoved = true;
+              console.log(
+                "🔴 Section sticky removed after last card animation",
+                window.innerHeight
+              );
+            }
+          },
+          onLeave: () => {
+            stickyRemoved = true;
+            wrapper.style.minHeight =
+              (grids.length * window.innerHeight) / 1.15 + "px";
+            section.style.position = "relative";
+            console.log("↩️ Leave sticky state on reverse scroll", window);
+          },
+          onEnterBack: () => {
+            stickyRemoved = false;
+            section.style.position = "sticky";
+            section.style.top = "0px";
+            wrapper.style.minHeight =
+              grids.length * window.innerHeight * 1.15 + "px";
+            console.log("↩️ Reset sticky state on reverse scroll");
+          },
+          onLeaveBack: () => {
+            // if reverse scrolling back before last card, re-enable stickyRemoved flag
+            stickyRemoved = false;
+            section.style.position = "sticky";
+            section.style.top = "0px";
+            console.log("↩️ Reset sticky state on reverse scroll");
+          },
+        });
+        // Main ScrollTrigger controlling which card is active
+        const mainTrigger = ScrollTrigger.create({
+          trigger: wrapper,
+          start: "top bottom",
+          end: () => `+=${wrapper.offsetHeight}`,
+          scrub: true,
+          onUpdate(self) {
+            const p = gsap.utils.clamp(0, 1, self.progress || 0);
+            let idx = Math.floor(p * grids.length);
+            if (idx >= grids.length) idx = grids.length - 1;
+            showCard(idx);
+          },
+          onLeave() {
+            clearAll();
+          },
+          onLeaveBack() {
+            clearAll();
+          },
+          markers: false,
+        });
+
+        // Show one card & play animation
+        function showCard(activeIndex) {
+          grids.forEach((grid, index) => {
+            const isActive = index === activeIndex;
+            if (isActive && !grid.classList.contains("active-card")) {
+              grid.classList.add("active-card");
+
+              // fade in grid
+              gsap.killTweensOf(grid);
+              gsap.to(grid, {
+                opacity: 1,
+                top: window.innerHeight / top2,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+
+              // child animations
+              const number = grid.querySelector(".challenge-number");
+              const heading = grid.querySelector(".challenge-heading");
+              const text = grid.querySelector(".challenge-text");
+              const image = grid.querySelector(
+                ".service-icon, .challenge-image"
+              );
+
+              const tl = gsap.timeline();
+
+              tl.set(image, { opacity: 0, scale: 0.9 });
+              tl.fromTo(
+                [number, heading, text].filter(Boolean),
+                { opacity: 0, y: 30 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.8,
+                  stagger: 0.15,
+                  ease: "power2.out",
+                }
+              );
+              // ⬇️ Add your SVGInject + Vivus animation call here
+              tl.call(() => {
+                const svgTargets = grid.querySelectorAll(".svgInject");
+                if (svgTargets.length > 0) {
+                  SVGInject(svgTargets, {
+                    makeIdsUnique: true,
+                    afterInject: function (imgEl, svgEl) {
+                      if (svgEl.dataset.vivusStarted) return;
+                      svgEl.dataset.vivusStarted = "1";
+                      new Vivus(svgEl, {
+                        duration: 80,
+                        type: "sync",
+                      });
+                    },
+                  });
+                }
+              });
+              // Faster zoom-in pop effect
+              tl.to(
+                image,
+                {
+                  opacity: 1,
+                  scale: 1.1,
+                  duration: 0.2,
+                  ease: "back.out(2)",
+                },
+                "-=0.2"
+              ).to(image, {
+                scale: 1,
+                duration: 0.1,
+                ease: "power1.inOut",
+              });
+            } else if (!isActive && grid.classList.contains("active-card")) {
+              grid.classList.remove("active-card");
+              gsap.killTweensOf(grid);
+              gsap.to(grid, {
+                opacity: 0,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            } else if (!isActive) {
+              gsap.set(grid, { opacity: 0 });
+              grid.classList.remove("active-card");
+            }
+          });
+          updateStickyTracker();
+        }
+
+        // Clear all cards
+        function clearAll() {
+          grids.forEach((g, i) => {
+            console.log("g", i, grids.length - 1, activeCard);
+            if (i === grids.length - 1) {
+              gsap.set(lastCard, { opacity: 1 });
+            } else if (i === grids.length - 5) {
+              gsap.set(firstCard, { opacity: 1 });
+            } else {
+              g.classList.remove("active-card");
+              gsap.killTweensOf(g);
+              gsap.to(g, { opacity: 0, duration: 0.25, ease: "power2.in" });
+              if (stickyTracker) stickyTracker.classList.remove("active");
+            }
+          });
+        }
+
+        // Update sticky tracker
+        function updateStickyTracker() {
+          const hasActive = Array.from(grids).some((grid) =>
+            grid.classList.contains("active-card")
+          );
+          console.log("hasActive", hasActive);
+          if (!stickyTracker) return;
+          stickyTracker.classList.toggle("active", hasActive);
+        }
+
+        // Recalculate on refresh
+        ScrollTrigger.addEventListener("refreshInit", () => {
+          wrapper.style.minHeight = grids.length * window.innerHeight + "px";
+        });
+
+        window.addEventListener("resize", () => {
+          updateTopValue();
+          ScrollTrigger.refresh();
+        });
+      },
+    });
+  });
+</script>
+<script
+  defer=""
+  src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"
+></script>
+<script
+  src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=658031e408a50a76013e5183"
+  type="text/javascript"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"
+></script>
+<script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.0/dist/barba.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-countup@1.0/dist/countup.min.js"></script>
+<script>
+  // GSAP Animations
+  gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
+
+  // SplitText Handling
+  let split;
+  function runSplitType() {
+    split?.revert();
+    split = SplitText.create("[split-text]", {
+      type: "lines, words, chars",
+      mask: "lines",
+      linesClass: "line",
+      wordsClass: "word",
+      charsClass: "char",
+    });
+  }
+
+  runSplitType();
+
+  let windowWidth = window.innerWidth;
+  window.addEventListener("resize", () => {
+    if (windowWidth !== window.innerWidth) {
+      windowWidth = window.innerWidth;
+      runSplitType();
+    }
+  });
+
+  // Slide Up Effect
+  $("[lines-slide-up]").each(function () {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: $(this),
+          start: "top 75%",
+          end: "bottom bottom",
+        },
+      })
+      .from($(this).find(".line"), {
+        yPercent: 110,
+        duration: 1,
+        ease: "power2.out",
+        stagger: { amount: 0.1 },
+      });
+  });
+
+  // Word Fade Scrub
+  $("[scrub-each-word]").each(function () {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: $(this),
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      })
+      .from($(this).find(".word"), {
+        opacity: 0.3,
+        duration: 0.8,
+        ease: "power1.out",
+        stagger: { each: 0.6 },
+      });
+  });
+
+  // Fade In Children
+  $("[fade-in]").each(function () {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: this,
+          start: "top 75%",
+          end: "bottom bottom",
+        },
+      })
+      .from($(this).children(), {
+        opacity: 0,
+        y: "3.5rem",
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: { amount: 0.1 },
+      });
+  });
+
+  // Fade Grey to Black Scroll Animation
+  $(document).ready(function () {
+    $(".fade-grey-to-black").each(function () {
+      const fadeTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: this,
+          start: "center 80%",
+          end: "center 50%",
+          scrub: true,
+        },
+      });
+
+      fadeTl.fromTo(
+        this,
+        { color: "#000", backgroundColor: "#f9f9f9" },
+        { color: "#f9f9f9", backgroundColor: "#000" },
+        0
+      );
+
+      fadeTl.to(
+        $(this).find(".challenge-item"),
+        {
+          "--bg-color": "#0000",
+        },
+        0
+      );
+    });
+  });
+
+  // Button Hover Split Animation
+  document.querySelectorAll("[data-button-hover]").forEach((link) => {
+    const linkText = link.querySelector("[data-button-text]");
+    if (!linkText) return;
+
+    const splitText = new SplitText(linkText, {
+      type: "chars",
+      charsClass: "char",
+    });
+    const letters = link.querySelectorAll(".char");
+
+    link.addEventListener("mouseenter", () => {
+      gsap.to(letters, {
+        yPercent: -100,
+        duration: 0.6,
+        ease: "power3.inOut",
+        stagger: { each: 0.008, from: "center" },
+        overwrite: "auto",
+      });
+    });
+
+    link.addEventListener("mouseleave", () => {
+      gsap.to(letters, {
+        yPercent: 0,
+        duration: 0.6,
+        ease: "expo.out",
+        stagger: { each: 0.004, from: "center" },
+        overwrite: "auto",
+      });
+    });
+  });
+
+  // Prevent flash of unstyled text
+  gsap.set("[text-split]", { opacity: 1 });
+</script>
 <script>
   gsap.registerPlugin(ScrollTrigger);
   //parallexglobal
@@ -1884,7 +2753,7 @@
   function updateContactLink() {
     const link = document.getElementById("contact-link");
     if (window.innerWidth < 768) {
-      link.setAttribute("href", "tel:+917265888877");
+      link.setAttribute("href", "tel:+918469888877");
     } else {
       link.setAttribute("href", "/contact-us/");
     }
