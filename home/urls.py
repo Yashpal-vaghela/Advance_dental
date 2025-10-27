@@ -70,5 +70,5 @@ urlpatterns = [
     path('ad-implant/',views.adImplants, name='adImplants'),
     path('sitemap/',views.sitemap,name="sitemap"),
     path('404/',views.error_404,name="404"),
-    path('verify-warrenty/', views.verify_warrenty, name='verify_warrenty'),
+    path('verify-warranty/', views.verify_warrenty, name='verify_warrenty'),
 ]
