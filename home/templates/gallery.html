@@ -4,7 +4,11 @@
 {% block seo %}    
 <title>Gallery - Advance Dental Export</title>
 <meta name="description" content="Explore Advance Dental Export's Gallery to see our innovative dental products and designs. Discover cutting-edge technology and creative exhibits today." />
+{% if data.number > 1 %}
+<link rel="canonical" href="https://advancedentalexport.com/gallery/?page={{ data.number }}" />
+{% else %}
 <link rel="canonical" href="https://advancedentalexport.com/gallery/" />
+{% endif %}
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Gallery - Advance Dental Export" />
@@ -22,7 +26,7 @@
 <link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/gallery/" />
 <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/gallery/" />
 <link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
-    <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+<link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
 {% endblock seo %}
 
 {% block css %}
