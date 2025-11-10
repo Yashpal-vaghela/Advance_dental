@@ -5649,6 +5649,12 @@ a {
   background-image: linear-gradient(#0000, #0000 30%);
   /* background-color: #fff; */
 }
+/* #service-card3,
+#service-card4,
+#service-card5,
+#service-card6{
+  display: none !important;
+} */
 /* .service-card-wrapper #service-card5,
 .service-card-wrapper #service-card6{
   height:200px;
@@ -5657,6 +5663,8 @@ a {
 .service-card-wrapper .service-card .challenge-grid {
   display: flex;
   opacity: 0;
+  background-color: #fff;
+  padding: 20px;
   /* transform: translateY(20px);
   will-change: transform, opacity; */
 }
