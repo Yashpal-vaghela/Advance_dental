@@ -2058,7 +2058,7 @@
         const pinTrigger = ScrollTrigger.create({
           trigger: section,
           start: "top top",
-          end: () => `+=${section.scrollHeight} ${window.innerHeight - 100}`,
+          end: () => `+=${section.scrollHeight} ${window.innerHeight - 20}`,
           scrub: true,
           markers: true,
           pinSpacing: false,
@@ -2091,16 +2091,15 @@
           onLeave: () => {
             stickyRemoved = true;
             section.style.position = "relative";
-            wrapper.style.minHeight =
-              (grids.length * window.innerHeight) / 1.12 + "px";
-            console.log("↩️ Leave sticky state on reverse scroll");
+            wrapper.style.minHeight =  (grids.length * window.innerHeight) / 1.18 + "px";
+            console.log("↩️ Leave sticky state on reverse scroll",window.innerHeight,grids.length);
+            clearAll();
           },
           onEnterBack: () => {
             stickyRemoved = false;
             section.style.position = "sticky";
             section.style.top = "0px";
-            wrapper.style.minHeight =
-              grids.length * window.innerHeight * 1.12 + "px";
+            wrapper.style.minHeight = grids.length * window.innerHeight * 1.18 + "px";
             console.log("↩️ Reset sticky state on reverse scroll");
           },
           onLeaveBack: () => {
@@ -2108,16 +2107,16 @@
             stickyRemoved = false;
             section.style.position = "sticky";
             section.style.top = "0px";
-            wrapper.style.minHeight =
-              grids.length * window.innerHeight * 1.12 + "px";
+            wrapper.style.minHeight =  grids.length * window.innerHeight * 1. + "px";
             console.log("↩️ Reset sticky state on reverse scroll");
+            clearAll();
           },
         });
         // Main ScrollTrigger controlling which card is active
         const mainTrigger = ScrollTrigger.create({
           trigger: wrapper,
-          start: "top bottom",
-          end: () => `+=${wrapper.offsetHeight}`,
+          start:"top top",
+          end: () => `+=${window.innerHeight * grids.length}`,
           scrub: true,
           onUpdate(self) {
             const p = gsap.utils.clamp(0, 1, self.progress || 0);
@@ -2134,95 +2133,69 @@
           markers: false,
         });
 
-        // Show one card & play animation
+        const initialYFactors = [0.2, 0.5, 0.7, 0.9, 1.08, 1.24];
+        const midwayYFactors = [0.26, 0.38, 0.42, 0.45, 0.48, 0.50];
+        // const midwayYFactors = [0.14, 0.28, 0.42, 0.56, 0.70, 0.84];
+
+        grids.forEach((grid, i) => {
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: grid,
+              start: "top bottom",
+              end: () => `+=${grid.offsetHeight}`,
+              scrub: true,
+              markers: false,
+            },
+          })
+          .fromTo(
+            grid,
+            {
+              opacity:0,
+              y: () => window.innerHeight * initialYFactors[i],
+            },
+            {
+              opacity:0.5,
+              y: () => window.innerHeight * midwayYFactors[i],
+              duration: 1,
+              ease: "power1.out",
+            }
+          ).to(grid,{
+            opacity:1,
+            y: () => window.innerHeight / top1 - 130,
+            duration: 1,
+            ease: "power2.out",
+          });
+        });
+
+        // show one card & play animation
         function showCard(activeIndex) {
           grids.forEach((grid, index) => {
             const isActive = index === activeIndex;
 
             if (isActive && !grid.classList.contains("active-card")) {
               grid.classList.add("active-card");
-
-              // fade in grid
+              // Stop any old tweens on this grid
               gsap.killTweensOf(grid);
-              gsap.to(grid, {
-                opacity: 1,
-                top: window.innerHeight / top2,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-
-              // child animations
-              const number = grid.querySelector(".challenge-number");
-              const heading = grid.querySelector(".challenge-heading");
-              const text = grid.querySelector(".challenge-text");
-              const image = grid.querySelector(
-                ".service-icon, .challenge-image"
-              );
-
-              const tl = gsap.timeline();
-              tl.set(image, { opacity: 0, scale: 0.9 });
-              tl.fromTo(
-                [number, heading, text].filter(Boolean),
-                { opacity: 0, y: 30 },
-                {
-                  opacity: 1,
-                  y: 0,
-                  duration: 0.8,
-                  stagger: 0.15,
-                  ease: "power2.out",
-                }
-              );
-              // ⬇️ Add your SVGInject + Vivus animation call here
-              tl.call(() => {
-                const svgTargets = grid.querySelectorAll(".svgInject");
-                if (svgTargets.length > 0) {
-                  SVGInject(svgTargets, {
-                    makeIdsUnique: true,
-                    afterInject: function (imgEl, svgEl) {
-                      if (svgEl.dataset.vivusStarted) return;
-                      svgEl.dataset.vivusStarted = "1";
-                      new Vivus(svgEl, {
-                        duration: 80,
-                        type: "sync",
-                      });
-                    },
-                  });
-                }
-              });
-              // Faster zoom-in pop effect
-              tl.to(
-                image,
-                {
-                  opacity: 1,
-                  scale: 1.1,
-                  duration: 0.2,
-                  ease: "back.out(2)",
-                },
-                "-=0.2"
-              ).to(image, {
-                scale: 1,
-                duration: 0.1,
-                ease: "power1.inOut",
-              });
+              gsap.killTweensOf(grid.querySelectorAll("*")); 
+              clearAll();  
+             // gsap.to(grid, { opacity: 1, duration: 0.3, ease: "power2.inOut" });
             } else if (!isActive && grid.classList.contains("active-card")) {
+              // Fade out inactive cards
               grid.classList.remove("active-card");
-              gsap.killTweensOf(grid);
-              gsap.to(grid, {
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            } else if (!isActive) {
-              gsap.set(grid, { opacity: 0 });
+              //gsap.to(grid, { opacity: 0, duration: 0.3, ease: "power2.inOut" });
+            }else if(!isActive){
+              // gsap.set(grid,{opacity:0});
               grid.classList.remove("active-card");
             }
+            updateStickyTracker();
           });
-          updateStickyTracker();
         }
 
         // Clear all cards
         function clearAll() {
           grids.forEach((g, i) => {
+            console.log("clearAll");
+            
             if (i === grids.length - 1) {
               gsap.set(lastCard, { opacity: 1 });
               lastCard.style.position = "relative";
@@ -2231,6 +2204,7 @@
             } else {
               g.classList.remove("active-card");
               gsap.killTweensOf(g);
+              
               gsap.to(g, { opacity: 0, duration: 0.25, ease: "power2.in" });
               if (stickyTracker) stickyTracker.classList.remove("active");
             }
@@ -2242,251 +2216,6 @@
           const hasActive = Array.from(grids).some((grid) =>
             grid.classList.contains("active-card")
           );
-          if (!stickyTracker) return;
-          stickyTracker.classList.toggle("active", hasActive);
-        }
-
-        // Recalculate on refresh
-        ScrollTrigger.addEventListener("refreshInit", () => {
-          wrapper.style.minHeight = grids.length * window.innerHeight + "px";
-        });
-
-        window.addEventListener("resize", () => {
-          updateTopValue();
-          ScrollTrigger.refresh();
-        });
-      },
-      "(max-width:768px)": function () {
-        const section = document.querySelector("#serviceSection");
-        const grids = document.querySelectorAll(".challenge-grid");
-        const wrapper = document.querySelector("#serviceCardWrapper");
-        const stickyTracker = document.querySelector(".sticky-tracker");
-        const lastCard = document.getElementById("service-card6");
-        const activeCard = lastCard.querySelector(".active-card");
-        const firstCard = document.getElementById("service-card1");
-        const firstactiveCard = firstCard.querySelector(".active-card");
-
-        if (!section || !wrapper || grids.length === 0) return;
-
-        // Keep wrapper relative and tall enough for scroll
-        wrapper.style.position = "relative";
-        wrapper.style.minHeight = grids.length * window.innerHeight + "px";
-        console.log("wrapper", wrapper.innerHeight);
-
-        let top1 = 12;
-        let top2 = 12;
-        function updateTopValue() {
-          if (window.innerWidth >= 0 && window.innerWidth <= 576) {
-            top1 = 18;
-            top2 = 18;
-          } else {
-            top1 = 15;
-            top2 = 15;
-          }
-        }
-        updateTopValue();
-        // Set initial state
-        grids.forEach((grid) => {
-          gsap.set(grid, {
-            opacity: 0,
-            top: window.innerHeight / top1 + 20,
-            position: "absolute",
-            left: 0,
-            width: "100%",
-          });
-          grid.classList.remove("active-card");
-        });
-        console.log("wrapper==", wrapper.offsetHeight, grids.length);
-        let stickyRemoved = false;
-        let stickyActive = false;
-
-        const pinTrigger = ScrollTrigger.create({
-          trigger: section,
-          start: "top top",
-          end: () => `+=${section.scrollHeight} ${window.innerHeight - 100}`,
-          scrub: true,
-          markers: true,
-          pinSpacing: false,
-          onUpdate: (self) => {
-            // Calculate which card should be active
-            let idx = Math.floor(self.progress * grids.length);
-            if (idx >= grids.length) idx = grids.length - 1;
-
-            // 🟩 when last card becomes active => apply sticky
-            if (self.progress >= 0 && self.start >= 3374 && !stickyRemoved) {
-              section.style.position = "sticky";
-              section.style.top = "0px";
-              section.style.zIndex = "1";
-              stickyRemoved = true;
-              console.log("🟢 Section sticky applied on first card start");
-            }
-            // 🟥 when last card animation fully finishes => remove sticky
-            if (
-              idx >= grids.length - 1 &&
-              self.progress >= 1 &&
-              !stickyRemoved
-            ) {
-              section.style.position = "relative";
-              stickyRemoved = true;
-              console.log(
-                "🔴 Section sticky removed after last card animation",
-                window.innerHeight
-              );
-            }
-          },
-          onLeave: () => {
-            stickyRemoved = true;
-            wrapper.style.minHeight =
-              (grids.length * window.innerHeight) / 1.15 + "px";
-            section.style.position = "relative";
-            console.log("↩️ Leave sticky state on reverse scroll", window);
-          },
-          onEnterBack: () => {
-            stickyRemoved = false;
-            section.style.position = "sticky";
-            section.style.top = "0px";
-            wrapper.style.minHeight =
-              grids.length * window.innerHeight * 1.15 + "px";
-            console.log("↩️ Reset sticky state on reverse scroll");
-          },
-          onLeaveBack: () => {
-            // if reverse scrolling back before last card, re-enable stickyRemoved flag
-            stickyRemoved = false;
-            section.style.position = "sticky";
-            section.style.top = "0px";
-            console.log("↩️ Reset sticky state on reverse scroll");
-          },
-        });
-        // Main ScrollTrigger controlling which card is active
-        const mainTrigger = ScrollTrigger.create({
-          trigger: wrapper,
-          start: "top bottom",
-          end: () => `+=${wrapper.offsetHeight}`,
-          scrub: true,
-          onUpdate(self) {
-            const p = gsap.utils.clamp(0, 1, self.progress || 0);
-            let idx = Math.floor(p * grids.length);
-            if (idx >= grids.length) idx = grids.length - 1;
-            showCard(idx);
-          },
-          onLeave() {
-            clearAll();
-          },
-          onLeaveBack() {
-            clearAll();
-          },
-          markers: false,
-        });
-
-        // Show one card & play animation
-        function showCard(activeIndex) {
-          grids.forEach((grid, index) => {
-            const isActive = index === activeIndex;
-            if (isActive && !grid.classList.contains("active-card")) {
-              grid.classList.add("active-card");
-
-              // fade in grid
-              gsap.killTweensOf(grid);
-              gsap.to(grid, {
-                opacity: 1,
-                top: window.innerHeight / top2,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-
-              // child animations
-              const number = grid.querySelector(".challenge-number");
-              const heading = grid.querySelector(".challenge-heading");
-              const text = grid.querySelector(".challenge-text");
-              const image = grid.querySelector(
-                ".service-icon, .challenge-image"
-              );
-
-              const tl = gsap.timeline();
-
-              tl.set(image, { opacity: 0, scale: 0.9 });
-              tl.fromTo(
-                [number, heading, text].filter(Boolean),
-                { opacity: 0, y: 30 },
-                {
-                  opacity: 1,
-                  y: 0,
-                  duration: 0.8,
-                  stagger: 0.15,
-                  ease: "power2.out",
-                }
-              );
-              // ⬇️ Add your SVGInject + Vivus animation call here
-              tl.call(() => {
-                const svgTargets = grid.querySelectorAll(".svgInject");
-                if (svgTargets.length > 0) {
-                  SVGInject(svgTargets, {
-                    makeIdsUnique: true,
-                    afterInject: function (imgEl, svgEl) {
-                      if (svgEl.dataset.vivusStarted) return;
-                      svgEl.dataset.vivusStarted = "1";
-                      new Vivus(svgEl, {
-                        duration: 80,
-                        type: "sync",
-                      });
-                    },
-                  });
-                }
-              });
-              // Faster zoom-in pop effect
-              tl.to(
-                image,
-                {
-                  opacity: 1,
-                  scale: 1.1,
-                  duration: 0.2,
-                  ease: "back.out(2)",
-                },
-                "-=0.2"
-              ).to(image, {
-                scale: 1,
-                duration: 0.1,
-                ease: "power1.inOut",
-              });
-            } else if (!isActive && grid.classList.contains("active-card")) {
-              grid.classList.remove("active-card");
-              gsap.killTweensOf(grid);
-              gsap.to(grid, {
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            } else if (!isActive) {
-              gsap.set(grid, { opacity: 0 });
-              grid.classList.remove("active-card");
-            }
-          });
-          updateStickyTracker();
-        }
-
-        // Clear all cards
-        function clearAll() {
-          grids.forEach((g, i) => {
-            console.log("g", i, grids.length - 1, activeCard);
-            if (i === grids.length - 1) {
-              gsap.set(lastCard, { opacity: 1 });
-            } else if (i === grids.length - 5) {
-              gsap.set(firstCard, { opacity: 1 });
-            } else {
-              g.classList.remove("active-card");
-              gsap.killTweensOf(g);
-              gsap.to(g, { opacity: 0, duration: 0.25, ease: "power2.in" });
-              if (stickyTracker) stickyTracker.classList.remove("active");
-            }
-          });
-        }
-
-        // Update sticky tracker
-        function updateStickyTracker() {
-          const hasActive = Array.from(grids).some((grid) =>
-            grid.classList.contains("active-card")
-          );
-          console.log("hasActive", hasActive);
           if (!stickyTracker) return;
           stickyTracker.classList.toggle("active", hasActive);
         }
