@@ -1,0 +1,76 @@
+{% load static %} 
+{% block css %}
+{% endblock css %}
+<section class="singleBolg-explore-section">
+  <div class="container">
+    <div class="swiper exploreSwiper">
+      <h2>Explore Our Restorations</h2>
+      <div class="swiper-wrapper">
+      {% for ie in product %}
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-header">
+              <h3>{{ie.title}}</h3>
+            </div>
+            <div class="card-body">
+                  <img
+                  src="{% static  ie.img %}"
+                  class="img-fluid"
+                  alt="explore-img"
+                />
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center mt-3 mb-2">
+              <img src="{% static 'img/logo.png'%}" class="company-logo-img img-fluid" alt="logo-img" />
+              <a href="{{ie.slug}}">
+                <button class="btn btn-explore">
+                Explore Now
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.614 4.97875L2.06208 17.5306L0 15.4685L12.5504 2.91667H1.48896V0H17.5306V16.0417H14.614V4.97875Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+{% block js %} 
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    new Swiper(".exploreSwiper",{
+      slidesPerView:2,
+      spaceBetween:20,
+      loop:true,
+      // autoplay:false,
+      autoplay:{
+        delay:2500,
+        disableOnInteraction:false,
+      },
+      pagination:{
+        el:".swiper-pagination",
+        clickable:true,
+      },
+      breakpoints:{
+        0:{ slidesPerView:1},
+        576:{slidesPerView:1},
+        768:{slidesPerView:1},
+        992:{slidesPerView:2}
+      },
+    });
+  });
+</script>
+{% endblock js %}

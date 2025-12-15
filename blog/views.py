@@ -3,6 +3,12 @@ from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 from django.db.models import Q
+from enquiry.forms import ContactForm
+from django.contrib import messages
+import re
+import requests
+from django.template.loader import render_to_string
+from django.utils.safestring import mark_safe
 
 # Create your views here.
 def blog_home(request):
@@ -77,45 +83,185 @@ def product_detail(request, slug):
     }
     return render(request, 'product_detail.html', context)
 
+def inject_multiple_sections(html_content, inserts):
+    # Remove tags → count words
+    text_only = re.sub('<[^<]+?>', '', html_content)
+    words = text_only.split()
+    total_words = len(words)
+
+    if total_words < 50:
+        return html_content
+
+    cutoffs = { int(total_words * pct): html for pct, html in inserts }
+
+    current = 0
+    result = ""
+    pending_blocks = {}
+    injected_blocks = set()
+    inside_table = False
+
+    tokens = re.split(r"(<[^>]+>)", html_content)
+
+    closing_tags = [
+        "</p>", "</ul>", "</ol>", "</li>", "</div>",
+        "</section>", "</br>", "</h1>", "</h2>", "</h3>",
+        "</h4>", "</table>"
+    ]
+
+    for token in tokens:
+
+        # CASE 1 → HTML TAG
+        if token.startswith("<"):
+
+            # Detect entering table
+            if token.lower().startswith("<table"):
+                inside_table = True
+
+            # Detect leaving table
+            if token.lower().startswith("</table"):
+                inside_table = False
+
+            result += token
+
+            # Try injection only if NOT inside table
+            if not inside_table:
+                for cutoff, html in list(pending_blocks.items()):
+                    if cutoff not in injected_blocks:
+                        if any(token.startswith(tag) for tag in closing_tags):
+                            result += html
+                            injected_blocks.add(cutoff)
+                            pending_blocks.pop(cutoff, None)
+
+        # CASE 2 → TEXT
+        else:
+            if token.strip():
+                for w in token.split():
+                    current += 1
+
+                    # Mark pending cutoff
+                    if current in cutoffs and current not in injected_blocks:
+                        pending_blocks[current] = cutoffs[current]
+
+                    result += w + " "
+            else:
+                result += token
+
+    return result
 
 def blog_detail(request, slug):
-    try:
-        data = Blog.objects.get(slug=slug)
-        blog_id = data.id
-        data1 = Blog.objects.all().order_by('id')[:3]
-        data2 =  Category.objects.all().order_by('-id')
-        data3 = Blog.objects.filter(main3=True).order_by('-id')
-        related_blogs = Blog.objects.filter(category__in=data.category.all()).exclude(id=data.id).distinct()
+    form = ContactForm(request.POST)
+    if request.method == 'POST':
+    #    form = ContactForm(request.POST)
 
-        context = {
-            'data':data,
-            'data1':data1,
-            'data2':data2,
-            'data3':data3,
-            'related_blogs':related_blogs
-        }
-        return render(request, 'blog_detail.html', context)
-    # except:
-    #     pass
+        if form.is_valid():
+            form.save()
 
-    except:
-        data = Product.objects.get(slug=slug)
-        data2 =  Category.objects.all().order_by('-id')
-        data3 = Blog.objects.filter(main3=True).order_by('-id')
-        data4 = Faqpage.objects.filter(product=data).order_by('-id')
-        related_blogs = Blog.objects.filter(category__in=data.category.all()).distinct()
-        author = Author.objects.first()
+            context_dict = {
+                "Name": request.POST.get("name", ""),
+                "Email": request.POST.get("email", ""),
+                "Phone": request.POST.get("phone", ""),
+                "City": request.POST.get("city", ""),
+                "Message": request.POST.get("message", ""),
+                "Page URL": request.META.get("HTTP_REFERER", "Not available")
+            }
 
-        context = {
-            'data':data,
-            'data2':data2,
-            'data3':data3,
-            'data4':data4,
-            'related_blogs': related_blogs,
-            'author': author,
-        }
-        return render(request, 'product_detail.html', context)
+            # Send email to company
+            send_mail(
+                to_email="vaghela9632@gmail.com", 
+                subject=f"New Contact Form Submission from {context_dict['Name']}",
+                context_dict=context_dict
+            )
+            messages.success(request, 'Your data is sent successfully.')
+            full_name = request.POST.get("name", "").strip()
+            first_name, last_name = (full_name.split(" ", 1) + [""])[:2]
+
+            payload = {
+                "firstName": first_name or "Visitor",
+                "lastName": last_name,
+                "designation": "",
+                "email": request.POST.get("email", ""),
+                "countryCode": "91",
+                "mobile": request.POST.get("phone", ""),
+                "phoneCountryCode": "91",
+                "phone": request.POST.get("phone", ""),
+                "expectedRevenue": "0",
+                "description": request.POST.get("message", ""),
+                "companyName": "",
+                "companyState": "",
+                "companyStreet": "",
+                "companyCity": request.POST.get("city", ""),
+                "companyCountry": "India",
+                "companyPincode": "",
+                "leadPriority": "1",
+            }
+
+            headers = {
+                "Content-Type": "application/json",
+                "authToken": "79atXvY2ZVZXs32Tbnw89A==.icG8H90dELRwyW3euMFdTg==", 
+                "timeZone": "Asia/Calcutta",  
+            }
+
+            try:
+                crm_response = requests.post(
+                    "https://crm.my-company.app/api/v1/lead/webhook",
+                    json=payload,
+                    headers=headers,
+                    timeout=10,
+                )
+                crm_response.raise_for_status()
+                messages.success(request,"Thanks for contacting the Ultimate Smile Design Team. We will get back to you shortly.")
+            except requests.exceptions.RequestException as e:
+                messages.warning(request, f"Form saved but CRM sync failed: {str(e)}")
+
+            # return redirect('home:thankyou')
+        else:
+            messages.error(request, "Your query is not sent! Try again.")
+            return redirect(request.META.get('HTTP_REFERER', 'blog:blog'))
     
+        
+    data = Blog.objects.get(slug=slug)
+    blog_id = data.id
+    data1 = Blog.objects.all().order_by('id')[:3]
+    data2 =  Category.objects.all().order_by('-id')
+    data3 = Blog.objects.filter(main3=True).order_by('-id')
+    # related_blogs = Blog.objects.filter(category__in=data.category.all()).exclude(id=data.id).distinct()[1:4]
+    gallery = Gallery.objects.all().order_by("-id")[:7]
+    related_blogs = Blog.objects.all().order_by('-id')[1:4]
+    product = Product.objects.all()
+    products = [
+                {id:1,"title":"Plant Your Implant with AD-Implant","img":"explore-img1.webp","slug":"/ad-implant/"},
+                {id:2,"title":"Advanced Aligners for Tooth Alignment","img":"explore-img2.webp","slug":"/advanced-aligners/"},
+                {id:3,"title":"Advance Zirconia","img":"explore-img3.webp","slug":"/zirconia-crown/"},
+                {id:4,"title":"PFM Crown","img":"explore-img4.webp","slug":"/porcelain-fused-to-metal-pfm/"},
+                {id:5,"title":"Aesthetic Maxima IPS Emax Dental Solutions by ADE","img":"explore-img5.webp","slug":"/aesthetic-maxima/"},
+            ]
+    explore_50_html = render_to_string("custom-explore-product.html",{
+        'product':products
+    })
+    # form_30_html = render_to_string("custom-search-form.html")
+    section_70_html = render_to_string("custom-contact-form.html")
+
+    data.content = mark_safe(
+        inject_multiple_sections(
+            data.content,
+            inserts=[
+                (0.30,explore_50_html),
+                (0.70,section_70_html)
+            ]
+        )
+    )
+
+    context = {
+        'data':data,
+        'data1':data1,
+        'data2':data2,
+        'data3':data3,
+        'related_blogs':related_blogs,
+        'gallery':gallery
+    }
+
+    return render(request,'blog_detail.html',context)
+
 
 def myblogsearch(request):
     print('here')

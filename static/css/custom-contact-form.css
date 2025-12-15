@@ -1,0 +1,72 @@
+.blog-conatct-wrapper{
+  background-image: url("/static/single-blog-contact-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100%;
+  width:100%;
+  border:1.5px solid #000;
+  border-radius: 12px;
+}
+.blog-conatct-wrapper .contact-box{
+  width: 100%;
+  padding: 40px 30px;
+}
+.blog-conatct-wrapper .contact-box p{
+  font-size: 22px;
+  color:#1B8976;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  display: block;
+  margin: auto auto 20px;
+  width:85%;
+}
+.blog-conatct-wrapper .contact-box .new-contact-btn{
+  background-color: #fff;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-weight: 600;
+  color:#000;
+  width:fit-content;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin: auto;
+}
+.new-contact-btn svg{
+  margin-left: 5px;
+  width: 10%;
+  vertical-align: middle;
+  transition: 0.5s all ease;
+}
+@media(max-width:992px){
+  .blog-conatct-wrapper .contact-box{
+    padding: 30px 20px;
+  }
+  .blog-conatct-wrapper .contact-box p{
+    font-size: 20px;
+    width: 90%;
+  }
+  .blog-conatct-wrapper .contact-box .new-contact-btn{
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+}
+@media(max-width:768px){
+  .blog-conatct-wrapper .contact-box p{
+    font-size: 18px;
+    width: 95%;
+  }
+}
+@media(max-width:576px){
+  .blog-conatct-wrapper .contact-box{
+    padding: 20px !important;
+  }
+   .blog-conatct-wrapper .contact-box p{
+    font-size: 16px;
+
+  }
+}
