@@ -166,7 +166,7 @@
         />
         <a href="/ad-implant/">
           <img
-            src="{% static '/banner-2/implant-mobile-banner5.webp' %}"
+            src="{% static '/banner-2/implant-mobile-banner1.webp' %}"
             class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
             alt="AD Implant banner showing dental implant placement concept for teeth restoration"
           />
@@ -177,8 +177,52 @@
           <div class="row align-items-center justify-content-end">
             <div class="col-lg-5 col-md-5 col-xl-4">
               <div class="home-implant-text">
-                <span class="home-implant-text1">Plant Your Implant with</span>
+                <span class="home-implant-text1">Innovation In Dental 
                 <b class="home-implant-rolling-text">
+                  <div class="letter" style="--i: 3">
+                    <div class="letter-track">
+                      <span>I</span>
+                      <span>I</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 4">
+                    <div class="letter-track">
+                      <span>m</span>
+                      <span>m</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 5">
+                    <div class="letter-track">
+                      <span>p</span>
+                      <span>p</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 6">
+                    <div class="letter-track">
+                      <span>l</span>
+                      <span>l</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 7">
+                    <div class="letter-track">
+                      <span>a</span>
+                      <span>a</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 8">
+                    <div class="letter-track">
+                      <span>n</span>
+                      <span>n</span>
+                    </div>
+                  </div>
+                  <div class="letter" style="--i: 9">
+                    <div class="letter-track">
+                      <span>t</span>
+                      <span>t</span>
+                    </div>
+                  </div>
+                </b> Prosthesis</span>
+                {% comment %} <b class="home-implant-rolling-text">
                   <div class="letter" style="--i: 0">
                     <div class="letter-track">
                       <span>A</span>
@@ -238,7 +282,7 @@
                       <span>t</span>
                     </div>
                   </div>
-                </b>
+                </b> {% endcomment %}
               </div>
 
               <button class="btn btn-implant-button">
@@ -276,9 +320,9 @@
             />
           </video>
           <div class="banner4-text-wrapper d-block">
-            <h2 class="banner4-title">
+            <div class="banner4-title">
               Now More Affordable Than Ever… <br />The <b>3SHAPE TRIOS 3</b>
-            </h2>
+            </div>
             <a id="contact-link" class="btn btn-contact" href="/contact-us/"
               >Contact Now</a
             >
@@ -1016,7 +1060,7 @@
   </div>
 </section>
 <!-- Introduction for the lab -->
-<section class="service-section section" id="serviceSection">
+{% comment %} <section class="service-section section" id="serviceSection">
   <div class="page-padding">
     <div class="container container-large scroll-jack">
       <div class="padding-section-challenge">
@@ -1239,7 +1283,7 @@
       <div class="section-hairline"></div>
     </div>
   </div>
-</section>
+</section> {% endcomment %}
 
 <section
   id="services-7"
@@ -1856,10 +1900,6 @@
       delay: 4000,
       disableOnInteraction: false,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -1869,40 +1909,33 @@
       767: { slidesPerView: 1 },
       768: { slidesPerView: 2 },
       991: { slidesPerView: 2 },
-      1000: { slidesPerView: 2 },
     },
   });
-
   const videoWrappers = document.querySelectorAll(".index-video1");
-
   // Detect if mobile
   function isMobile() {
     return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   }
-
   // Create iframe depending on device
   function createYouTubeIframe(videoId) {
     const iframe = document.createElement("iframe");
-
-    if (isMobile()) {
-      // Mobile embed
-      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&autoplay=1`;
-    } else {
-      // Desktop embed
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
-    }
-
-    iframe.frameBorder = "0";
-    iframe.allow =
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.allowFullscreen = true;
+    const origin = window.location.origin;
+    const baseURL = `https://www.youtube.com/embed/${videoId}`;
+    const paramsDesktop = `?autoplay=1&enablejsapi=1&origin=${origin}&mute=1&playsinline=1`;
+    const paramsMobile = `?autoplay=1&mute=1&playsinline=1`;
+    iframe.src = baseURL + (isMobile() ? paramsMobile : paramsDesktop);
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    );
+    iframe.setAttribute("allowfullscreen", "");
     iframe.setAttribute("playsinline", "");
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
     iframe.style.width = "100%";
     iframe.style.height = "100%";
-
     return iframe;
   }
-
   function restoreThumbnail(wrapper) {
     const videoId = wrapper.getAttribute("data-video-id");
     const videoContainer = wrapper.querySelector(".video-container");
@@ -1916,8 +1949,8 @@
       />
       <button class="play-button" aria-label="Play">
         <svg height="100%" viewBox="0 0 68 48" width="100%">
-          <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
-          C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+          <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55
+          C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19
           C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
           S67.94,13.05,66.52,7.74z"
           fill="#212121" fill-opacity="0.8"></path>
@@ -1926,36 +1959,31 @@
       </button>
     `;
   }
-
   // Handle click on video wrapper
   videoWrappers.forEach((wrapper) => {
     wrapper.addEventListener("click", (e) => {
+      const videoId = wrapper.getAttribute("data-video-id");
+      const videoContainer = wrapper.querySelector(".video-container");
       const existingIframe = wrapper.querySelector("iframe");
-
-      // If video already playing → stop it and resume autoplay
+      // If video already playing → stop it
       if (existingIframe) {
         restoreThumbnail(wrapper);
         gallerySwiper.autoplay.start();
         return;
       }
-
-      // Remove all iframes first (only one video at a time)
+      // Remove all iframes first
       videoWrappers.forEach((w) => restoreThumbnail(w));
-
-      // Stop autoplay when video starts
+      // Stop autoplay
       gallerySwiper.autoplay.stop();
-
-      const videoId = wrapper.getAttribute("data-video-id");
-      const iframe = createYouTubeIframe(videoId);
-
-      const videoContainer = wrapper.querySelector(".video-container");
-      videoContainer.innerHTML = "";
-      videoContainer.appendChild(iframe);
-
-      e.stopPropagation(); // Prevent document click from firing immediately
+      videoContainer.innerHTML = ""; // Clear preview first
+      // Delay prevents "Video player config error 153"
+      setTimeout(() => {
+        const iframe = createYouTubeIframe(videoId);
+        videoContainer.appendChild(iframe);
+      }, 100); // 100ms delay = YouTube recommended fix
+      e.stopPropagation();
     });
   });
-
   // Close video if clicked outside
   document.addEventListener("click", (e) => {
     const isInsideVideo = e.target.closest(".index-video1");
@@ -1988,7 +2016,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
-<script>
+{% comment %} <script>
   document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -2232,7 +2260,399 @@
       },
     });
   });
-</script>
+</script> {% endcomment %}
+{% comment %} <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.matchMedia({
+      "(min-width:768px)": function () {
+        const section = document.querySelector("#serviceSection");
+        const grids = document.querySelectorAll(".challenge-grid");
+        const wrapper = document.querySelector("#serviceCardWrapper");
+        const stickyTracker = document.querySelector(".sticky-tracker");
+        const lastCard = document.getElementById("service-card6");
+        const activeCard = lastCard.querySelector(".active-card");
+        const firstCard = document.getElementById("service-card1");
+        const firstactiveCard = document.querySelector(".active-card");
+
+        if (!section || !wrapper || grids.length === 0) return;
+
+        // Keep wrapper relative and tall enough for scroll
+        wrapper.style.position = "relative";
+        wrapper.style.minHeight = grids.length * window.innerHeight + "px";
+        console.log("wrapper", wrapper.innerHeight);
+
+        let top1 = 5;
+        let top2 = 5;
+        function updateTopValue() {
+          if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+            top1 = 38;
+            top2 = 38;
+          } else if (window.innerWidth >= 992 && window.innerWidth <= 1200) {
+            top1 = 8;
+            top2 = 8;
+          } else if (window.innerWidth >= 1200 && window.innerWidth <= 1300) {
+            top1 = 9;
+            top2 = 9;
+          } else if (window.innerWidth >= 1300 && window.innerWidth <= 1440) {
+            top1 = 9;
+            top2 = 9;
+          } else if (window.innerWidth >= 1439 && window.innerWidth <= 1649) {
+            top1 = 9;
+            top2 = 9;
+          } else if (window.innerWidth >= 1650 && window.innerWidth <= 1800) {
+            top1 = 9;
+            top2 = 9;
+          } else if (window.innerWidth >= 1800 && window.innerWidth <= 2000) {
+            top1 = 8;
+            top2 = 8;
+          } else {
+            top1 = 5;
+            top2 = 5;
+          }
+        }
+        updateTopValue();
+        // Set initial state
+        grids.forEach((grid) => {
+          gsap.set(grid, {
+            opacity: 0,
+            top: window.innerHeight / top1 + 40,
+            position: "absolute",
+            left: 0,
+            width: "100%",
+          });
+          grid.classList.remove("active-card");
+        });
+        console.log("wrapper==", wrapper.offsetHeight, grids.length);
+        let stickyRemoved = false;
+        let stickyActive = false;
+
+        const pinTrigger = ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: () => `+=${section.scrollHeight} ${window.innerHeight - 100}`,
+          scrub: true,
+          markers: true,
+          pinSpacing: false,
+          onUpdate: (self) => {
+            // Calculate which card should be active
+            let idx = Math.floor(self.progress * grids.length);
+            if (idx >= grids.length) idx = grids.length - 1;
+
+            // 🟩 when last card becomes active => apply sticky
+            if (self.progress >= 0 && self.start >= 3374 && !stickyRemoved) {
+              section.style.position = "sticky";
+              section.style.top = "0px";
+              section.style.zIndex = "1";
+              stickyRemoved = true;
+              console.log("🟢 Section sticky applied on first card start");
+            }
+            // 🟥 when last card animation fully finishes => remove sticky
+            console.log("self",self.progress)
+            if (idx >= grids.length - 1 && self.progress >= 1 && !stickyRemoved) {
+              section.style.position = "relative";
+              stickyRemoved = true;
+              console.log("🔴 Section sticky removed after last card animation");
+            }
+          },
+          onLeave: () => {
+            stickyRemoved = true;
+            section.style.position = "relative";
+            wrapper.style.minHeight =  (grids.length * window.innerHeight) / 1.16 + "px";
+            console.log("↩️ Leave sticky state on reverse scroll",window.innerHeight,grids.length);
+            clearAll();
+          },
+          onEnterBack: () => {
+            stickyRemoved = false;
+            section.style.position = "sticky";
+            section.style.top = "0px";
+            wrapper.style.minHeight = grids.length * window.innerHeight * 1.16 + "px";
+            console.log("↩️ Reset sticky state on reverse scroll");
+            clearAll();
+          },
+          onLeaveBack: () => {
+            // if reverse scrolling back before last card, re-enable stickyRemoved flag
+            stickyRemoved = false;
+            section.style.position = "sticky";
+            section.style.top = "0px";
+            wrapper.style.minHeight =  grids.length * window.innerHeight * 1.16 + "px";
+            console.log("↩️ Reset sticky state on reverse scroll");
+            clearAll();
+          },
+        });
+        let currentIndex = -1; 
+        // Main ScrollTrigger controlling which card is active
+        const mainTrigger = ScrollTrigger.create({
+          trigger: wrapper,
+          start:"top top",
+          end: () => `+=${window.innerHeight * grids.length}`,
+          scrub: true,
+          onUpdate(self) {
+            const p = gsap.utils.clamp(0, 1, self.progress || 0);
+            let idx = Math.floor(p * grids.length);
+            if (idx >= grids.length) idx = grids.length - 1;
+            if (idx < 0) idx = 0;
+
+            console.log("cuurent",idx,currentIndex)
+            // ✅ Only run if index actually changes
+            if (idx !== currentIndex ) {
+              currentIndex = idx;
+              showCard(idx);
+            }
+          },
+          onLeave() {
+            clearAll();
+          },
+          onLeaveBack() {
+            clearAll();
+          },
+          markers: false,
+        });
+        // show one card & play animation
+        function showCard(activeIndex) {
+          const initialYFactors = [0.2, 0.3, 0.4, 0.5, 0.6, 0.6];
+          const midwayYFactors = [0.20, 0.25, 0.30, 0.30, 0.30, 0.30];
+
+          grids.forEach((grid, index) => {
+            const isActive = index === activeIndex;
+
+            // Kill old tweens to prevent overlap
+            gsap.killTweensOf(grid);
+
+            const number = grid.querySelector(".challenge-number");
+            const heading = grid.querySelector(".challenge-heading");
+            const text = grid.querySelector(".challenge-text");
+            const image = grid.querySelector(".service-icon, .challenge-image");
+
+            if (isActive && !grid.classList.contains("active-card")) {
+              // Animate in
+              const tl = gsap.timeline();
+              tl.fromTo(
+                grid,
+                {
+                  opacity: 0,
+                  y: window.innerHeight * initialYFactors[index],
+                },
+                {
+                  opacity: 0.5,
+                  y: window.innerHeight * midwayYFactors[index],
+                  duration: 0.5,
+                  ease: "power1.out",
+                }
+              )
+              .to(grid, {
+                opacity: 1,
+                y: window.innerHeight / top1 - 160,
+                duration: 0.5,
+                ease: "power2.out",
+              })
+              .set(image, { opacity: 0, scale: 0.9 })
+              .fromTo(
+                    [number, heading, text].filter(Boolean),
+                    { opacity: 0, y: 30 },
+                    {
+                      opacity: 1,
+                      y: 0,
+                      duration: 0.4,
+                      stagger: 0.10,
+                      ease: "power2.out",
+                    }
+              )
+              .call(() => {
+                    const svgTargets = grid.querySelectorAll(".svgInject");
+                    if (svgTargets.length > 0) {
+                      SVGInject(svgTargets, {
+                        makeIdsUnique: true,
+                        afterInject: function (imgEl, svgEl) {
+                          if (svgEl.dataset.vivusStarted) return;
+                          svgEl.dataset.vivusStarted = "1";
+                          new Vivus(svgEl, {
+                            duration: 80,
+                            type: "sync",
+                          });
+                        },
+                      });
+                    }
+              })
+              .to(
+                  image,
+                  {
+                    opacity: 1,
+                    scale: 1.1,
+                    duration: 0.2,
+                    ease: "back.out(2)",
+                  },
+                  "-=0.2"
+              ).to(image, {
+                  scale: 1,
+                  duration: 0.1,
+                  ease: "power1.inOut",
+              });
+            } else if(!isActive && grid.classList.contains("active-card")) {
+              // Animate out (fade + reset position)
+              gsap.killTweensOf(grid);
+              gsap.to(grid, {
+                opacity: 0,
+                // y: window.innerHeight * initialYFactors[index],
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+              // 👇 Reset children opacity if card was active but user scrolled back
+              gsap.to([number, heading, text, image].filter(Boolean), {
+                opacity: 0, 
+                duration: 0.6,
+                ease: "power1.inOut",
+              });
+            } else if(!isActive){
+              gsap.to(grid, {
+                opacity: 0,
+                // y: window.innerHeight * initialYFactors[index],
+              });
+              // Hide inactive cards completely
+              gsap.set([grid, number, heading, text, image].filter(Boolean), {
+                opacity: 0,
+              });
+            }
+
+            grid.classList.toggle("active-card", isActive);
+          });
+
+          updateStickyTracker();
+        }
+
+        // Clear all cards
+        function clearAll() {
+          grids.forEach((g, i) => {
+            console.log("clearAll");
+            
+            if (i === grids.length - 1) {
+              gsap.set(lastCard, { opacity: 1 });
+              lastCard.style.position = "relative";
+              currentIndex = -1; 
+            } else if (i === grids.length - 5) {
+              gsap.set(firstCard, { opacity: 1 });
+              currentIndex = -1; 
+            } else {
+              g.classList.remove("active-card");
+              gsap.killTweensOf(g);
+              gsap.to(g, { opacity: 0, duration: 0.25, ease: "power2.in" });
+              if (stickyTracker) stickyTracker.classList.remove("active");
+            }
+          });
+        }
+
+        // Update sticky tracker
+        function updateStickyTracker() {
+          const hasActive = Array.from(grids).some((grid) =>
+            grid.classList.contains("active-card")
+          );
+          if (!stickyTracker) return;
+          stickyTracker.classList.toggle("active", hasActive);
+        }
+
+        // Recalculate on refresh
+        ScrollTrigger.addEventListener("refreshInit", () => {
+          wrapper.style.minHeight = grids.length * window.innerHeight + "px";
+        });
+
+        window.addEventListener("resize", () => {
+          updateTopValue();
+          ScrollTrigger.refresh();
+        });
+      },
+      "(max-width:768px)": function () {
+
+  const grids = gsap.utils.toArray(".challenge-grid");
+  const wrapper = document.querySelector("#serviceCardWrapper");
+  const stickyTracker = document.querySelector(".sticky-tracker");
+  const progressBar = document.querySelector(".sticky-progress");
+
+  if (!wrapper || grids.length === 0) return;
+
+  gsap.set(grids, { opacity: 0, y: 50 });
+  if (progressBar) gsap.set(progressBar, { scaleX: 0, y: 0, transformOrigin: "left center" });
+
+  let activeIndex = -1;
+
+  ScrollTrigger.create({
+    trigger: wrapper,
+    start: "top 60%",
+    end: "bottom bottom",
+    scrub: true,
+    onUpdate(self) {
+      const progress = self.progress;
+      const index = Math.floor(progress * grids.length);
+
+      if (index !== activeIndex && grids[index]) {
+        activeIndex = index;
+
+        stickyTracker?.classList.add("active");
+
+        grids.forEach((grid, i) => {
+          gsap.to(grid, {
+            opacity: i === index ? 1 : 0.2,
+            y: i === index ? 0 : 30,
+            duration: 0.5
+          });
+        });
+
+        // ✅ MOVE PROGRESS BAR
+        if (progressBar) {
+          const targetGrid = grids[index];
+          const wrapperTop = wrapper.getBoundingClientRect().top;
+          const gridTop = targetGrid.getBoundingClientRect().top;
+
+          gsap.to(progressBar, {
+            y: gridTop - wrapperTop,
+            scaleX: (index + 1) / grids.length,
+            duration: 0.4,
+            ease: "power2.out"
+          });
+        }
+
+        animateCard(grids[index]);
+      }
+    },
+    onLeaveBack() {
+      stickyTracker?.classList.remove("active");
+      gsap.to(progressBar, { scaleX: 0, y: 0, duration: 0.3 });
+    }
+  });
+
+
+  function animateCard(grid) {
+    const number = grid.querySelector(".challenge-number");
+    const heading = grid.querySelector(".challenge-heading");
+    const text = grid.querySelector(".challenge-text");
+    const image = grid.querySelector(".service-icon, .challenge-image");
+
+    const tl = gsap.timeline();
+    tl.fromTo([number, heading, text],
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, stagger: 0.15, duration: 0.6 }
+    )
+    .fromTo(image,
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, duration: 0.6 },
+      "-=0.4"
+    );
+
+    SVGInject(grid.querySelectorAll(".svgInject"), {
+      makeIdsUnique: true,
+      afterInject: function (imgEl, svgEl) {
+        if (svgEl.dataset.vivusStarted) return;
+        svgEl.dataset.vivusStarted = "1";
+        new Vivus(svgEl, { duration: 80, type: "sync" });
+      },
+    });
+  }
+
+}
+
+    });
+  });
+</script> {% endcomment %}
 <script
   defer=""
   src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"
@@ -2246,7 +2666,7 @@
 <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.0/dist/barba.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-countup@1.0/dist/countup.min.js"></script>
-<script>
+{% comment %} <script>
   // GSAP Animations
   gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
 
@@ -2392,7 +2812,7 @@
 
   // Prevent flash of unstyled text
   gsap.set("[text-split]", { opacity: 1 });
-</script>
+</script> {% endcomment %}
 <script>
   gsap.registerPlugin(ScrollTrigger);
   //parallexglobal
@@ -2500,14 +2920,6 @@
     "name": "Advance Dental Export - Homepage",
     "description": "Welcome to Advance Dental Export, your trusted source for advanced dental solutions including implants, cosmetic restorations, zirconia crowns, and CAD/CAM technology.",
     "datePublished": "2011-03-27T09:00:00+00:00"
-  }
-</script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Advance Dental Export | Certified Dental Labs in India",
-    "url": "https://advancedentalexport.com/"
   }
 </script>
 {% endblock %}

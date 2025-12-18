@@ -42,11 +42,11 @@
           <div class="swiper-wrapper">
               <div class="swiper-slide implant-slider-wrapper position-relative">
                   <img src="{% static '/img/implant-banner-bg9.webp' %}" class="img-fluid implant-banner-bg"  loading="eager" fetchpriority="high" />
-                  <img src="{% static '/img/implant-mobile-banner2.webp' %}" class="img-fluid implant-mobile-banner" loading="eager" fetchpriority="high"/>
+                  <img src="{% static '/img/implant-mobile-banner3.webp' %}" class="img-fluid implant-mobile-banner" loading="eager" fetchpriority="high"/>
                   <div class="container implant-banner-img-wrapper position-absolute">
                       <div class="row align-items-center justify-content-end">
                         <div class="col-lg-5 col-md-5">
-                          <h1 class="implant-text">Plant Your Implant with <b>AD-Implant</b></h1>
+                          <h1 class="implant-text">Innovation In Dental <b>Implant</b> Prosthesis</h1>
                         </div>
                         <div class="col-lg-7 col-md-7 p-0" >
                           <img src="{% static '/img/implant-banner-img4.webp' %}" class="img-fluid implant-banner-img" loading="eager" fetchpriority="high" alt="Digital hand placing dental implant prosthesis for Advance Dental banner"/>
@@ -867,11 +867,11 @@
   ScrollTrigger.matchMedia({
     "(min-width:992px)": function () {
         const finalYValues = [
-          window.innerWidth <= 1200 ? -120 : -20,
-          window.innerWidth <= 1200 ? -100 : 0,
-          window.innerWidth <= 1200 ? -80 : 20,
-          window.innerWidth <= 1200 ? -60 : 40,
-          window.innerWidth <= 1200 ? -40 : 60,
+          (window.innerWidth <= 1200) ? -120 : -20,
+          (window.innerWidth <= 1200) ? -100 : 0,
+          (window.innerWidth <= 1200) ? -80 : 20,
+          (window.innerWidth <= 1200) ? -60 : 40,
+          (window.innerWidth <= 1200) ? -40 : 60,
         ];
 
         const initialYFactors = [0.6, 0.55, 0.5, 0.45, 0.4];

@@ -1977,28 +1977,49 @@ td.text-right {
 }
 
 #banner-7 {
-  background-image: url(../ADEcontact14.webp);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* background-image: url(../ADEcontact14.webp); */
+  background-image: url(../final-group-img1.jpg);
+  padding-top: 140px;
+  padding-bottom: 140px;
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
+  background-size: cover;
+  background-position:top;
   margin: auto;
 }
 
 @media (min-width: 1300px) {
   #banner-7 {
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background-position:top;
   }
 }
-
-@media (min-width: 1800px) and (max-width: 2000px) {
+@media(min-width:1300px) and (max-width:1649px){
+  #banner-7 {
+    padding-top: 170px;
+    padding-bottom: 170px;
+  }
+}
+@media(min-width:1650px) and (max-width:1800px){
+  #banner-7 {
+    padding-top: 180px;
+    padding-bottom: 180px;
+    /* background-size: auto 100%; */
+  }
+}
+@media(min-width:1800px){
+   #banner-7 {
+    padding-top: 180px;
+    padding-bottom: 180px;
+    background-size: auto 100%;
+  }
+}
+/* @media (min-width: 1800px) and (max-width: 2000px) {
   #banner-7 {
     padding-top: 160px;
     padding-bottom: 160px;
   }
-}
+} */
 
 @media (max-width: 768px) {
   #banner-7 {
