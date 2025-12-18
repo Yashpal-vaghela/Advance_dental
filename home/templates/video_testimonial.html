@@ -1,0 +1,149 @@
+{% load static %}
+<section id="gallery-1" class="gallery-section division pt-50">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          In Their Own Words: Tales of Trust from Our Clientele
+        </h2>
+      </div>
+      <div class="swiper gallerySwiper">
+        <div class="swiper-wrapper">
+          {% for ie in video %}
+          <div
+            class="swiper-slide sbox-52 index-video1"
+            data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
+          >
+            <div class="video-container">
+              <img
+                src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
+                alt="Video Thumbnail"
+                class="video-thumbnail1"
+                width="100%"
+                height="100%"
+              />
+              <button class="play-button" aria-label="Play">
+                <svg height="100%" viewBox="0 0 68 48" width="100%">
+                  <path
+                    d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+                  C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+                  C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+                  S67.94,13.05,66.52,7.74z"
+                    fill="#212121"
+                    fill-opacity="0.8"
+                  ></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const gallerySwiper = new Swiper(".gallerySwiper", {
+  speed: 1500,
+  slidesPerView: 2,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Important Fix
+  simulateTouch: false,
+  noSwiping: true,
+  noSwipingClass: "no-swiping",
+
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    767: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    991: { slidesPerView: 2 },
+  },
+});
+
+const videoWrappers = document.querySelectorAll(".index-video1");
+
+function isMobile() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+
+function createYouTubeIframe(videoId) {
+  const iframe = document.createElement("iframe");
+  const origin = window.location.origin;
+
+  iframe.src = isMobile()
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&mute=1`
+    : `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&origin=${origin}&mute=1`;
+
+  iframe.frameBorder = "0";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.allowFullscreen = true;
+  iframe.setAttribute("playsinline", "");
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  return iframe;
+}
+
+function restoreThumbnail(wrapper) {
+  const videoId = wrapper.dataset.videoId;
+  const videoContainer = wrapper.querySelector(".video-container");
+
+  videoContainer.innerHTML = `
+    <img
+      src="https://img.youtube.com/vi/${videoId}/sddefault.jpg"
+      class="video-thumbnail1"
+      width="100%" height="100%"
+    />
+    <button class="play-button" aria-label="Play">
+      <svg height="100%" viewBox="0 0 68 48" width="100%">
+        <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+        C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+        C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+        S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
+        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+      </svg>
+    </button>
+  `;
+}
+
+// 🟢 Play Video (click only on play button)
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".play-button");
+  if (!btn) return;
+
+  const wrapper = btn.closest(".index-video1");
+  const videoId = wrapper.dataset.videoId;
+
+  // Close any open videos
+  videoWrappers.forEach(restoreThumbnail);
+
+  gallerySwiper.autoplay.stop();
+
+  const iframe = createYouTubeIframe(videoId);
+  const videoContainer = wrapper.querySelector(".video-container");
+  videoContainer.innerHTML = "";
+  videoContainer.appendChild(iframe);
+
+  e.stopPropagation();
+});
+
+// 🟠 Click outside to close video
+document.addEventListener("click", function (e) {
+  const inside = e.target.closest(".index-video1");
+  if (!inside) {
+    videoWrappers.forEach(restoreThumbnail);
+    gallerySwiper.autoplay.start();
+  }
+});
+</script>

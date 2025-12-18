@@ -10,7 +10,7 @@ from enquiry.forms import STLForm, STLFileForm, LoginForm
 from django.contrib import messages
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.conf import settings
-from django.core.mail import send_mail
+from .utils import send_mail
 from django.template.loader import render_to_string, get_template
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
@@ -38,45 +38,46 @@ def home(request):
             return redirect(request.META.get("HTTP_REFERER", "home:home"))
 
         if form.is_valid():
-            form.save()
-            messages.success(request, "Your message has been sent successfully.")
-            full_name = request.POST.get("name", "").strip()
-            first_name, last_name = (full_name.split(" ", 1) + [""])[:2]
-
-            payload = {
-                "firstName": first_name or "Visitor",
-                "lastName": last_name,
-                "designation": "",
-                "email": request.POST.get("email", ""),
-                "countryCode": "91",
-                "mobile": request.POST.get("contact", ""),
-                "phoneCountryCode": "91",
-                "phone": request.POST.get("contact", ""),
-                "expectedRevenue": "0",
-                "description": request.POST.get("message", ""),
-                "companyName": "",
-                "companyState": "",
-                "companyStreet": "",
-                "companyCity": request.POST.get("city", ""),
-                "companyCountry": "India",
-                "companyPincode": "",
-                "leadPriority": "1",
+            submission = form.save()
+            context_dict = {
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
-
+            send_mail(
+                to_email="vaghela9632@gmail.com",   # company email
+                subject=f"New Contact Form Submission from {context_dict['Name']}",
+                context_dict=context_dict,
+            )
+            # messages.success(request, "Your message has been sent successfully.")
+            bikai_payload  ={
+               "Name": submission.name,
+               "Email": submission.email,
+               "Contact": submission.contact,
+               "City": submission.city,
+               "Subject": submission.subject,
+               "Message": submission.message,
+            }
+            bikai_url = (
+                "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
+            )
             headers = {
                 "Content-Type": "application/json",
-                "authToken": "nCHmNU+Z1u8EtVAl7YwdeA==.v6fpSALWxhoHrMmJm1WUhQ==",
             }
-
+ 
             try:
                 crm_response = requests.post(
-                    "https://crm.my-company.app/api/v1/lead/webhook",
-                    json=payload,
+                    bikai_url,
+                    json=bikai_payload,
                     headers=headers,
                     timeout=10,
                 )
                 crm_response.raise_for_status()
-                messages.success(request, "Thanks! We will get back to you shortly.")
+                messages.success(request, "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly.")
             except requests.exceptions.RequestException as e:
                 messages.warning(
                     request,
@@ -121,7 +122,6 @@ def testimonals(request):
     }
     return render(request, 'testimonals.html', context)
 
-
 def verify_warrenty(request):
     
     # Input parameters
@@ -159,7 +159,6 @@ def verify_warrenty(request):
             return redirect('home:verify_warrenty')
         
     return render(request, 'verify_warrenty.html')
-
 
 def blogd(request, pk):
     data =  Blog.objects.get(slug=pk)
@@ -210,12 +209,89 @@ def blogd(request, pk):
 #     }
 #     return render(request, 'contact.html', context)
 
+# def contact(request):
+#     if request.method == "POST":
+#         form = ContactForm(request.POST)
+
+#         recaptcha_response = request.POST.get("g-recaptcha-response")
+#         data ={
+#             "secret": settings.RECAPTCHA_SECRET_KEY,
+#             "response": recaptcha_response,
+#         }
+#         r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+#         result = r.json()
+
+#         if not result.get('success'):
+#             messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+#             return redirect(request.META.get('HTTP_REFERER','contact'))
+        
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'Your data is sent successfully.')
+        
+#             full_name = request.POST.get("name", "").strip()
+#             first_name, last_name = (full_name.split(" ", 1) + [""])[:2]
+
+#             payload = {
+#                 "firstName": first_name or "Visitor",
+#                 "lastName": last_name,
+#                 "designation": "",
+#                 "email": request.POST.get("email", ""),
+#                 "countryCode": "91",
+#                 "mobile": request.POST.get("contact", ""),
+#                 "phoneCountryCode": "91",
+#                 "phone": request.POST.get("contact", ""),
+#                 "expectedRevenue": "0",
+#                 "description": request.POST.get("message", ""),
+#                 "companyName": "",
+#                 "companyState": "",
+#                 "companyStreet": "",
+#                 "companyCity": request.POST.get("city", ""),
+#                 "companyCountry": "India",
+#                 "companyPincode": "",
+#                 "leadPriority": "1",
+#             }
+
+#             headers = {
+#                 "Content-Type": "application/json",
+#                 "authToken": "nCHmNU+Z1u8EtVAl7YwdeA==.v6fpSALWxhoHrMmJm1WUhQ==",
+#             }
+
+#             # Send data to CRM
+#             try:
+#                 crm_response = requests.post(
+#                     "https://crm.my-company.app/api/v1/lead/webhook",
+#                     json=payload,
+#                     headers=headers,
+#                     timeout=10,
+#                 )
+#                 crm_response.raise_for_status()
+#                 messages.success(
+#                     request,
+#                     "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly."
+#                 )
+#             except requests.exceptions.RequestException as e:
+#                 messages.warning(
+#                     request,
+#                     f"Form saved but could not send to CRM. Error: {str(e)}",
+#                 )
+
+#             return redirect("home:contact")
+#         else:
+#             messages.error(request, 'Something Went Wrong! Try Again.')
+#             return redirect(request.META.get('HTTP_REFERER', 'contact'))
+
+#     context = {
+#         "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+#     }
+#     return render(request, 'contact.html', context)
+
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
 
         recaptcha_response = request.POST.get("g-recaptcha-response")
-        data ={
+        data = {
             "secret": settings.RECAPTCHA_SECRET_KEY,
             "response": recaptcha_response,
         }
@@ -224,68 +300,66 @@ def contact(request):
 
         if not result.get('success'):
             messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-            return redirect(request.META.get('HTTP_REFERER','contact'))
-        
+            return redirect(request.META.get('HTTP_REFERER', 'contact'))
+
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Your data is sent successfully.')
-        
-            full_name = request.POST.get("name", "").strip()
-            first_name, last_name = (full_name.split(" ", 1) + [""])[:2]
+            submission = form.save()
 
-            payload = {
-                "firstName": first_name or "Visitor",
-                "lastName": last_name,
-                "designation": "",
-                "email": request.POST.get("email", ""),
-                "countryCode": "91",
-                "mobile": request.POST.get("contact", ""),
-                "phoneCountryCode": "91",
-                "phone": request.POST.get("contact", ""),
-                "expectedRevenue": "0",
-                "description": request.POST.get("message", ""),
-                "companyName": "",
-                "companyState": "",
-                "companyStreet": "",
-                "companyCity": request.POST.get("city", ""),
-                "companyCountry": "India",
-                "companyPincode": "",
-                "leadPriority": "1",
+            context_dict = {
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
-
+            send_mail(
+                to_email="vaghela9632@gmail.com",   # company email
+                subject=f"New Contact Form Submission from {context_dict['Name']}",
+                context_dict=context_dict,
+            )
+            bikai_payload  ={
+               "Name": submission.name,
+               "Email": submission.email,
+               "Contact": submission.contact,
+               "City": submission.city,
+               "Subject": submission.subject,
+               "Message": submission.message,
+            }
+            bikai_url = (
+                "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
+            )
             headers = {
                 "Content-Type": "application/json",
-                "authToken": "nCHmNU+Z1u8EtVAl7YwdeA==.v6fpSALWxhoHrMmJm1WUhQ==",
             }
-
-            # Send data to CRM
+ 
             try:
                 crm_response = requests.post(
-                    "https://crm.my-company.app/api/v1/lead/webhook",
-                    json=payload,
+                    bikai_url,
+                    json=bikai_payload,
                     headers=headers,
                     timeout=10,
                 )
                 crm_response.raise_for_status()
-                messages.success(
-                    request,
-                    "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly."
-                )
+                messages.success(request, "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly.")
             except requests.exceptions.RequestException as e:
                 messages.warning(
                     request,
                     f"Form saved but could not send to CRM. Error: {str(e)}",
                 )
 
-            return redirect("home:contact")
+            return redirect("home:home")
         else:
-            messages.error(request, 'Something Went Wrong! Try Again.')
-            return redirect(request.META.get('HTTP_REFERER', 'contact'))
+            messages.error(request, "Your form is not sent! Try Again.")
+            return redirect(request.META.get("HTTP_REFERER", "contact"))
 
-    context = {
-        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
-    }
-    return render(request, 'contact.html', context)
+    else:
+        form = ContactForm()          
+
+    # GET request fallback
+    return render(request, "contact.html", {"form": ContactForm()})
+
 
 def contact_new(request):
     if request.method == "POST":
@@ -304,41 +378,42 @@ def contact_new(request):
             return redirect(request.META.get('HTTP_REFERER','contact'))
 
         if form.is_valid():
-            form.save()
-            messages.success(request, "Your data is sent successfully.")
-
-            full_name = request.POST.get("name", "").strip()
-            first_name, last_name = (full_name.split(" ", 1) + [""])[:2]
-
-            payload = {
-                "firstName": first_name or "Visitor",
-                "lastName": last_name,
-                "designation": "",
-                "email": request.POST.get("email", ""),
-                "countryCode": "91",
-                "mobile": request.POST.get("contact", ""),
-                "phoneCountryCode": "91",
-                "phone": request.POST.get("contact", ""),
-                "expectedRevenue": "0",
-                "description": request.POST.get("message", ""),
-                "companyName": "",
-                "companyState": "",
-                "companyStreet": "",
-                "companyCity": request.POST.get("city", ""),
-                "companyCountry": "India",
-                "companyPincode": "",
-                "leadPriority": "1",
+            submission = form.save()
+            context_dict = {
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
+            send_mail(
+                to_email="vaghela9632@gmail.com",   # company email
+                subject=f"New Contact Form Submission from {context_dict['Name']}",
+                context_dict=context_dict,
+            )
+            # messages.success(request, "Your data is sent successfully.")
 
+            bikai_payload  ={
+               "Name": submission.name,
+               "Email": submission.email,
+               "Contact": submission.contact,
+               "City": submission.city,
+               "Subject": submission.subject,
+               "Message": submission.message,
+            }
+            bikai_url = (
+                "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
+            )
             headers = {
                 "Content-Type": "application/json",
-                "authToken": "nCHmNU+Z1u8EtVAl7YwdeA==.v6fpSALWxhoHrMmJm1WUhQ==",
             }
  
             try:
                 crm_response = requests.post(
-                    "https://crm.my-company.app/api/v1/lead/webhook",
-                    json=payload,
+                    bikai_url,
+                    json=bikai_payload,
                     headers=headers,
                     timeout=10,
                 )
@@ -350,10 +425,10 @@ def contact_new(request):
                     f"Form saved but could not send to CRM. Error: {str(e)}",
                 )
 
-            return redirect("home:contact_new")
+            return redirect("home:home")
         else:
-            messages.error(request, "Your query is not sent! Try Again.")
-            return redirect(request.META.get("HTTP_REFERER", "contact"))
+            messages.error(request, "Your form is not sent! Try Again.")
+            return redirect(request.META.get("HTTP_REFERER", "contact_new"))
 
     else:
         form = ContactForm()
@@ -361,7 +436,10 @@ def contact_new(request):
     return render(
         request,
         "contact_new.html",
-        {"form": form, "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY},
+        {
+            "form": form, 
+            "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+        },
     )
 
 

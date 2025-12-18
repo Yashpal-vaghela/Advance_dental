@@ -88,7 +88,7 @@ def contactd(request):
             subject = 'New Data In STL Form'
             message = "You have a new data in STL form."
             recipient_list = ['stl@advancedentalexport.com']
-            # send_mail( subject, message, email_from, recipient_list, html_message=html_content, fail_silently=False )
+            send_mail( subject, message, email_from, recipient_list, html_message=html_content, fail_silently=False )
             messages.success(request, 'Contact Details Sent Successfully')
             return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))  
 
