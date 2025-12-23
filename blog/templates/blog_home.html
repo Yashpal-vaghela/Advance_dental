@@ -62,7 +62,7 @@
 						{% for blog in first_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 order-lg-1 order-2">
 										<div class="position-relative mx-auto all-blog-content card">
-											<img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" alt="{{blog.alt}}"/>
+											<a href="{% url 'home:blogd' blog.slug %}"><img src="{{blog.image.url}}" class="card-img-top h-100 img-fluid" alt="{{blog.alt}}"/></a>
 											<div class="card-body">
 												<div class="blog-content-txt">
 													<div class="my-2 blog-author-date-content d-flex justify-content-between">

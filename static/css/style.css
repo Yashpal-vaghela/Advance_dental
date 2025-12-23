@@ -1977,10 +1977,12 @@ td.text-right {
 }
 
 #banner-7 {
-  /* background-image: url(../ADEcontact14.webp); */
-  background-image: url(../final-group-img1.jpg);
-  padding-top: 140px;
-  padding-bottom: 140px;
+  /* background-image: url(../group-bg-img62.jpg); */
+  background-image: url(../ADEcontact14.webp);
+  /* background-image: url(../final-group-img5.png); */
+  /* background-image: url(../group-bg-img8.jpg); */
+  padding-top: 130px;
+  padding-bottom: 130px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position:top;
@@ -1991,13 +1993,20 @@ td.text-right {
   #banner-7 {
     padding-top: 160px;
     padding-bottom: 160px;
-    background-position:top;
+    /* background-position:top; */
   }
 }
-@media(min-width:1300px) and (max-width:1649px){
+@media(min-width:1300px) and (max-width:1439px){
   #banner-7 {
     padding-top: 170px;
     padding-bottom: 170px;
+    /* background-size: contain; */
+  }
+}
+@media(min-width:1440px) and (max-width:1650px){
+  #banner-7 {
+    padding-top: 190px;
+    padding-bottom: 190px;
   }
 }
 @media(min-width:1650px) and (max-width:1800px){
@@ -2009,9 +2018,9 @@ td.text-right {
 }
 @media(min-width:1800px){
    #banner-7 {
-    padding-top: 180px;
-    padding-bottom: 180px;
-    background-size: auto 100%;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-size: 100% auto;
   }
 }
 /* @media (min-width: 1800px) and (max-width: 2000px) {

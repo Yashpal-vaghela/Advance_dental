@@ -248,7 +248,7 @@
 }
 .letter {
   overflow: hidden;
-  height: 1em;
+  height: 1.2em;
   width: 1ch;
   position: relative;
 }
@@ -265,7 +265,7 @@
   color: transparent;
 }
 .letter-track span {
-  line-height: 1em;
+  line-height: 0.95em;
   height: 1em;
   display: block;
   text-align: center;

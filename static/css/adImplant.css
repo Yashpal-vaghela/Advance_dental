@@ -62,9 +62,7 @@
     width: 100%;
   }
 }
-.typeslider-wrapper {
-  display: flex;
-}
+
 .typeslider .slider {
   margin: 10px auto 40px;
   max-width: 1200px;
