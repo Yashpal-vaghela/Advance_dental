@@ -996,6 +996,14 @@
 .exploreSwiper h2{
   margin: 1rem auto 0.8rem;
 }
+.exploreSwiper .swiper-slide .card .card-header p {
+    text-align: center;
+    margin: 0px auto !important;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px !important;
+    line-height: 2
+}
 .exploreSwiper h3{
   text-align: start;
   margin: 0px !important;
@@ -1063,4 +1071,147 @@
   .singleBolg-explore-section .container{
     padding: 0px !important;
   }
+}
+.pros-cons-wrapper {
+  margin: 30px auto;
+}
+
+.pros-cons-wrapper  .pros-cons-table {
+  width: 80% !important;
+  border-collapse: collapse !important;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  /* border: 1px solid #fcfcfc; */
+}
+
+
+.pros-cons-wrapper .pros-cons-table .pros-head {
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #000; 
+  background-color: rgba(27, 137, 118, 0.43);
+}
+
+.pros-cons-wrapper .pros-cons-table .cons-head {
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  background-color: rgb(250, 0, 0, 0.43);
+}
+
+.pros-cons-table td {
+  vertical-align: top;
+  padding: 20px;
+  border-left: 1px solid #000;
+}
+
+.pros-cons-table td:first-child {
+  border-left: none;
+}
+
+/* Lists */
+.pros-list,
+.cons-list {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+  padding-left: 0;
+}
+
+.pros-list li,
+.cons-list li {
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+/* Icons */
+.pros-list li::before {
+  content: "✔";
+  color: #0a8f4e;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.cons-list li::before {
+  content: "✖";
+  color: #d62828;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+@media(max-width:991px) {
+    .pros-cons-wrapper  .pros-cons-table{
+        width: 100% !important;
+    }
+}
+/* ICON ROW */
+.checklist-icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 10px;
+}
+
+.icon-col {
+  width: 50%;
+  text-align: center;
+}
+
+/* CHECKLIST BOX */
+.checklist-box {
+  display: flex;
+  border: 1px solid #999;
+}
+
+.checklist-col {
+  width: 50%;
+  padding: 25px;
+  border-right: 1px solid #999;
+}
+
+.checklist-col:last-child {
+  border-right: none;
+}
+
+/* HEADING + ROW LINE */
+.checklist-col h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 0px !important;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.checklist-col h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1B8976;
+  margin: 8px auto 0;
+}
+
+/* TEXT */
+.checklist-col p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.checklist-col ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.checklist-col li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
