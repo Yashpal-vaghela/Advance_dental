@@ -181,35 +181,38 @@
       {% include "static_counter.html" %}
     </div>
   </section>
-  <section id="about-video" class="about-video-section py-3">
-    <div class="container">
-      <div class="row mb-5 mt-3">
-        <div class="col-md-12">
-          <div class="w-100 ytbe about_video" style="height: 80vh;" data-video-id="vYkVXmQgqUI">
-            
-            <!-- Video Thumbnail -->
-            <img src="{% static 'img/team_about1.jpg' %}" 
-                alt="Group photo of expert dental professionals at Advance Dental Export laboratory team" 
-                class="video-thumbnail w-100" />
+  <!-- ABOUT VIDEO
+      =============================================  -->
+<section id="about-video" class="about-video-section py-3">
+  <div class="container">
+    <div class="row mb-5 mt-3">
+      <div class="col-md-12">
+        <div class="video-container ytbe about_video" style="height: 80vh;" data-video-id="vYkVXmQgqUI">
+          
+          <!-- Video Thumbnail -->
+          <img src="{% static 'img/team_about1.jpg' %}" 
+               alt="Group photo of expert dental professionals at Advance Dental Export laboratory team" 
+               class="video-thumbnail w-100" />
 
-            <!-- Play Button -->
-            <button class="play-button" aria-label="Play">
-              <svg height="100%" viewBox="0 0 68 48" width="100%">
-                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
-                        C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
-                        C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
-                        S67.94,13.05,66.52,7.74z" fill="#fff" fill-opacity="0.8"></path>
-                <path d="M 45,24 27,14 27,34" fill="#212121"></path>
-              </svg>
-            </button>
+          <!-- Play Button -->
+          <button class="play-button" aria-label="Play">
+            <svg height="100%" viewBox="0 0 68 48" width="100%">
+              <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+                      C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+                      C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+                      S67.94,13.05,66.52,7.74z" fill="#fff" fill-opacity="0.8"></path>
+              <path d="M 45,24 27,14 27,34" fill="#212121"></path>
+            </svg>
+          </button>
 
-            <!-- Overlay Text -->
-            <div class="video-text">Advance Dental Export</div>
-          </div>
+          <!-- Overlay Text -->
+          <div class="video-text">Advance Dental Export</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   <section id="team" class="team-section py-3">
     <div class="container">
       <div class="row">
@@ -554,29 +557,64 @@
   
 </script>
 <script>
-	 const videoWrapper=document.querySelector(".ytbe.about_video"), playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)});
-    
-    // {% comment %} const videoWrapper = document.querySelector(".ytbe.about_video");
+	 {% comment %} const videoWrapper=document.querySelector(".ytbe.about_video"), playButton=videoWrapper.querySelector(".play-button");playButton&&(playButton.onclick=()=>{let e=videoWrapper.getAttribute("data-video-id"),t=document.createElement("iframe");t.src=`https://www.youtube.com/embed/${e}?autoplay=1`,t.width="100%",t.height="100%",t.frameBorder="0",t.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,videoWrapper.innerHTML="",videoWrapper.appendChild(t)}); {% endcomment %}
 
-   
-    // const playButton = videoWrapper.querySelector(".play-button");
+document.addEventListener("DOMContentLoaded", function () {
+    const videoWrapper = document.querySelector(".ytbe.about_video");
+    if (!videoWrapper) return;
 
-   
-    // if (playButton) {
-    //     playButton.onclick = () => {
-    //         const videoId = videoWrapper.getAttribute("data-video-id");
-    //         const iframe = document.createElement("iframe");
-    //         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    //         iframe.width = "100%";
-    //         iframe.height = "100%";
-    //         iframe.frameBorder = "0";
-    //         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    //         iframe.allowFullscreen = true;
+    const playButton = videoWrapper.querySelector(".play-button");
+    const videoId = videoWrapper.dataset.videoId;
 
-          
-    //         videoWrapper.innerHTML = "";
-    //         videoWrapper.appendChild(iframe);
-    //     };
-    // } {% endcomment %}
+    function isMobile() {
+      return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    function createYouTubeIframe(videoId) {
+      const iframe = document.createElement("iframe");
+      const origin = window.location.origin;
+
+      const baseURL = `https://www.youtube.com/embed/${videoId}`;
+      const paramsDesktop =
+        `?autoplay=1&enablejsapi=1&origin=${origin}&mute=1&playsinline=1&rel=0`;
+      const paramsMobile =
+        `?autoplay=1&mute=1&playsinline=1&rel=0`;
+
+      iframe.src = baseURL + (isMobile() ? paramsMobile : paramsDesktop);
+
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      );
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("playsinline", "");
+      iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+
+      return iframe;
+    }
+
+    playButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Prevent double iframe creation
+      if (videoWrapper.querySelector("iframe")) return;
+
+      // Remove only thumbnail & button (CSS unchanged)
+      const thumbnail = videoWrapper.querySelector(".video-thumbnail");
+      if (thumbnail) thumbnail.remove();
+      playButton.remove();
+
+      // Delay = IMPORTANT (prevents Error 153)
+      setTimeout(() => {
+        const iframe = createYouTubeIframe(videoId);
+        videoWrapper.appendChild(iframe);
+      }, 100);
+    });
+  });
+
 </script>
 {% endblock %}
