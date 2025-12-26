@@ -19,7 +19,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #     'css/zir.css',
 # ]
 css_files = [
-    'css/style.css',
+    'css/blog.css',
+    # 'css/style.css',
+    # 'css/review.css',
 ]
 for css_path in css_files:
     full_css_path = os.path.join(BASE_DIR, css_path)

@@ -17,6 +17,10 @@ class WebStoryAdmin(admin.ModelAdmin):
     inlines = [WebStoryVideoInline]
     list_display = ('title', 'publish_date', 'author')
 
+class TestimonialsAdmin(admin.ModelAdmin):
+    list_display = ('name', 'priority')
+    search_fields = ['name']
+
 
 # Register your models here.
 
@@ -34,7 +38,7 @@ admin.site.register(Product)
 admin.site.register(SubProduct)
 admin.site.register(Faqpage)
 admin.site.register(Team)
-admin.site.register(Testimonials)
+admin.site.register(Testimonials, TestimonialsAdmin)
 admin.site.register(AboutImage)
 admin.site.register(Client)
 admin.site.register(Gallery)

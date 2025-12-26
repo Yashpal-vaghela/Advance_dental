@@ -53,6 +53,7 @@
 />
 {% endblock %} {% block css %}
 <link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="{% static 'css/swal.css' %}" />
 <link rel="preload" href="{% static 'css/review.css' %}" as="style" />
 <link href="{% static 'css/review.css' %}" rel="stylesheet" />
 <noscript>
@@ -1603,13 +1604,20 @@
                   </div>
                   <p class="review-user-txt">
                     <i class="fa-solid fa-quote-left"></i>
-                    {{ ie.review }}
+                    {{ ie.review|truncatechars:480 }}
+                    {% if ie.google_review_link and ie.review|length > 480%}
+                      <a
+                        href="{{ ie.google_review_link }}"
+                        target="_blank"
+                        rel="nofollow noopener"
+                        class="read-more-review-link fw-bold"
+                      >
+                      Read more
+                      </a>
+                    {% endif %}
                     <i class="fa-solid fa-quote-right"></i>
                   </p>
                   <p class="review-user-name mb-0">{{ ie.name }}</p>
-                  <span class="review-user-desk" style="float: right"
-                    >{{ ie.position }}</span
-                  >
                 </div>
               </div>
               {% endfor %}
@@ -1702,38 +1710,36 @@
       <div
         class="col-lg-4 col-md-6 col-sm-6 col-11 mt-0 mt-sm-4 mt-lg-0 mt-md-4"
       >
-        <div class="news-blog-card card">
-          <a href="{% url 'home:blogd' blog.slug %}">
-            <img
-              src="{{ blog.image.url }}"
-              class="news-img img-fluid"
-              alt="{{blog.alt}}"
-              width="100%"
-              height="100%"
-            />
-          </a>
-          <div class="card-body">
-            <div
-              class="d-flex align-items-center position-relative justify-content-between blog-meta"
-            >
-              <p class="mb-0">
-                <i class="fa-solid fa-calendar-days me-1"></i>
-                {{ blog.published }}
-              </p>
-              <div class="news-blogs-admin-title">
-                <i class="fas fa-user-alt me-2"></i>
-                <span>{{ blog.author }}</span>
+        <a href="{% url 'home:blogd' blog.slug %}">
+          <div class="news-blog-card card">
+              <img
+                src="{{ blog.image.url }}"
+                class="news-img img-fluid"
+                alt="{{blog.alt}}"
+                width="100%"
+                height="100%"
+              />
+            <div class="card-body">
+              <div
+                class="d-flex align-items-center position-relative justify-content-between blog-meta"
+              >
+                <p class="mb-0">
+                  <i class="fa-solid fa-calendar-days me-1"></i>
+                  {{ blog.published }}
+                </p>
+                <div class="news-blogs-admin-title">
+                  <i class="fas fa-user-alt me-2"></i>
+                  <span>{{ blog.author }}</span>
+                </div>
               </div>
+                <h3 class="blogs-title fw-bold">{{ blog.h1 }}</h3>
             </div>
-            <a href="{% url 'home:blogd' blog.slug %}">
-              <h3 class="blogs-title fw-bold">{{ blog.h1 }}</h3>
-            </a>
+            <div class="card-footer border-0 d-flex">
+                Read More
+              <i class="fa-solid fa-arrow-right ms-2"></i>
+            </div>
           </div>
-          <div class="card-footer border-0 d-flex">
-            <a href="{% url 'home:blogd' blog.slug %}">Read More</a
-            ><i class="fa-solid fa-arrow-right ms-2"></i>
-          </div>
-        </div>
+        </a>
       </div>
       {% endfor %}
       <div class="col-md-12 text-center">
@@ -1794,10 +1800,27 @@
 <script>
   {% for message in messages %}
     Swal.fire({
-      icon: "{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% else %}info{% endif %}",
-      title: "{{ message }}",
+      icon: "{{ message.tags }}",
+      title: "{{ message.tags|capfirst }}",
+
+      html: "<p>{{ message|escapejs }}</p>",
+
+      position: 'center',
+      timer: 3000,
       showConfirmButton: false,
-      timer: 3000
+
+      showClass: {
+        popup: 'animate__animated animate__zoomIn animate__faster'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOut animate__faster'
+      },
+
+      customClass: {
+        popup: 'swal-popup-custom',
+        title: 'swal-title-custom',
+        htmlContainer: 'swal-text-custom'
+      }
     });
   {% endfor %}
 </script>

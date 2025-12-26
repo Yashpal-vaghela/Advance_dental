@@ -210,12 +210,12 @@ class Team(models.Model):
         return self.name
 
 class Testimonials(models.Model):   
-    image  = models.ImageField(upload_to="SEO")
+    image  = models.ImageField(upload_to="SEO", blank=True, null=True)
     name = models.CharField(max_length = 156)
-    position = models.CharField(max_length = 156)
     review = models.TextField()
-    product =  models.ManyToManyField(Product, blank=True, null=True)
-    
+    google_review_link = models.CharField(max_length = 1256, blank=True, null=True)
+    priority = models.BooleanField(default=False, help_text="Priority testimonial (Yes / No)")
+    # product =  models.ManyToManyField(Product, blank=True, null=True)
     schema = models.TextField( blank=True, null=True)
     def __str__(self):
         return self.name
@@ -358,3 +358,4 @@ class WebStoryVideo(models.Model):
 
     def __str__(self):
         return f"Video for {self.web_story.title}"
+

@@ -1,0 +1,35 @@
+/* SweetAlert Responsive Styling */
+.swal-popup-custom {
+  width: 420px !important;
+  padding: 24px !important;
+  border-radius: 16px !important;
+}
+
+/* Title */
+.swal-title-custom {
+  font-size: 24px !important;
+  font-weight: 600;
+}
+
+/* Message text */
+.swal-text-custom {
+  font-size: 17px !important;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 576px) {
+  .swal-popup-custom {
+    width: 90% !important;
+    padding: 18px !important;
+  }
+
+  .swal-title-custom {
+    font-size: 20px !important;
+  }
+
+  .swal-text-custom {
+    font-size: 15px !important;
+  }
+}

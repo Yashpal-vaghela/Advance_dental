@@ -1,7 +1,7 @@
 {% load static %} 
 {% block css %}
 {% endblock css %}
-<section class="singleBolg-explore-section">
+<section class="singleBolg-explore-section mb-3">
   <div class="container">
     <div class="swiper exploreSwiper">
       <h2>Explore Our Restorations</h2>
@@ -10,7 +10,7 @@
         <div class="swiper-slide">
           <div class="card">
             <div class="card-header">
-              <h3>{{ie.title}}</h3>
+              <p>{{ie.title}}</p>
             </div>
             <div class="card-body">
                   <img
@@ -37,8 +37,7 @@
                   />
                 </svg>
               </button>
-              </a>
-              
+              </a> 
             </div>
           </div>
         </div>
@@ -55,10 +54,10 @@
       slidesPerView:2,
       spaceBetween:20,
       loop:true,
-      // autoplay:false,
+      //autoplay:false,
       autoplay:{
         delay:2500,
-        disableOnInteraction:false,
+         disableOnInteraction:false,
       },
       pagination:{
         el:".swiper-pagination",

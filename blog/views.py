@@ -5,10 +5,21 @@ from django.http import JsonResponse
 from django.db.models import Q
 from enquiry.forms import ContactForm
 from django.contrib import messages
+from django.conf import settings
 import re
 import requests
+import threading
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
+from home.utils import send_mail
+
+def send_email_async(context_dict):
+    send_mail(
+        to_email="vaghela9632@gmail.com",
+        subject=f"New Contact Form Submission from {context_dict['Name']}",
+        context_dict=context_dict,
+    )
+
 
 # Create your views here.
 def blog_home(request):
@@ -149,73 +160,81 @@ def inject_multiple_sections(html_content, inserts):
     return result
 
 def blog_detail(request, slug):
-    form = ContactForm(request.POST)
+    # form = ContactForm(request.POST)
     if request.method == 'POST':
-    #    form = ContactForm(request.POST)
+        form = ContactForm(request.POST)
+        # recaptcha_response = request.POST.get("g-recaptcha-response")
+        # data = {
+        #     "secret": settings.RECAPTCHA_SECRET_KEY,
+        #     "response": recaptcha_response,
+        # }
+        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        # result = r.json()
 
+        # if not result.get('success'):
+        #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+        #     return redirect(request.META.get('HTTP_REFERER', 'contact'))
         if form.is_valid():
-            form.save()
+            submission = form.save()
 
             context_dict = {
-                "Name": request.POST.get("name", ""),
-                "Email": request.POST.get("email", ""),
-                "Phone": request.POST.get("phone", ""),
-                "City": request.POST.get("city", ""),
-                "Message": request.POST.get("message", ""),
-                "Page URL": request.META.get("HTTP_REFERER", "Not available")
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
+            # send_mail(
+            #     to_email="vaghela9632@gmail.com", 
+            #     subject=f"New Contact Form Submission from {context_dict['Name']}",
+            #     context_dict=context_dict,
+            # )
+            threading.Thread(
+                target= send_email_async,
+                args=(context_dict,),
+                daemon=True
+            ).start()
 
-            # Send email to company
-            send_mail(
-                to_email="vaghela9632@gmail.com", 
-                subject=f"New Contact Form Submission from {context_dict['Name']}",
-                context_dict=context_dict
+            bikai_payload  ={
+               "Name": submission.name,
+               "Email": submission.email,
+               "Contact": submission.contact,
+               "City": submission.city,
+               "Subject": submission.subject,
+               "Message": submission.message,
+            }
+            bikai_url = (
+                "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
             )
-            messages.success(request, 'Your data is sent successfully.')
-            full_name = request.POST.get("name", "").strip()
-            first_name, last_name = (full_name.split(" ", 1) + [""])[:2]
-
-            payload = {
-                "firstName": first_name or "Visitor",
-                "lastName": last_name,
-                "designation": "",
-                "email": request.POST.get("email", ""),
-                "countryCode": "91",
-                "mobile": request.POST.get("phone", ""),
-                "phoneCountryCode": "91",
-                "phone": request.POST.get("phone", ""),
-                "expectedRevenue": "0",
-                "description": request.POST.get("message", ""),
-                "companyName": "",
-                "companyState": "",
-                "companyStreet": "",
-                "companyCity": request.POST.get("city", ""),
-                "companyCountry": "India",
-                "companyPincode": "",
-                "leadPriority": "1",
-            }
-
             headers = {
                 "Content-Type": "application/json",
-                "authToken": "79atXvY2ZVZXs32Tbnw89A==.icG8H90dELRwyW3euMFdTg==", 
-                "timeZone": "Asia/Calcutta",  
             }
-
+ 
             try:
                 crm_response = requests.post(
-                    "https://crm.my-company.app/api/v1/lead/webhook",
-                    json=payload,
+                    bikai_url,
+                    json=bikai_payload,
                     headers=headers,
                     timeout=10,
                 )
                 crm_response.raise_for_status()
-                messages.success(request,"Thanks for contacting the Ultimate Smile Design Team. We will get back to you shortly.")
+                messages.success(request, "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly.")
             except requests.exceptions.RequestException as e:
-                messages.warning(request, f"Form saved but CRM sync failed: {str(e)}")
+                messages.warning(
+                    request,
+                    f"Form saved but could not send to CRM. Error: {str(e)}",
+                )
+            
 
-            # return redirect('home:thankyou')
+            messages.success(
+                request,
+                "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly."
+            )
+            return redirect(request.META.get('HTTP_REFERER', 'blog:blog'))
         else:
-            messages.error(request, "Your query is not sent! Try again.")
+            messages.error(request, "Your form is not sent! Try again.")
             return redirect(request.META.get('HTTP_REFERER', 'blog:blog'))
     
         
@@ -228,12 +247,14 @@ def blog_detail(request, slug):
     gallery = Gallery.objects.all().order_by("-id")[:7]
     related_blogs = Blog.objects.all().order_by('-id')[1:4]
     product = Product.objects.all()
+    priority_testimonials = Testimonials.objects.filter(priority=True).order_by('?')[:3]
+    normal_testimonials = Testimonials.objects.filter(priority=False).order_by('?')[:6]
     products = [
-                {id:1,"title":"Plant Your Implant with AD-Implant","img":"explore-img1.webp","slug":"/ad-implant/"},
-                {id:2,"title":"Advanced Aligners for Tooth Alignment","img":"explore-img2.webp","slug":"/advanced-aligners/"},
+                {id:1,"title":"AD-Implant","img":"explore-img1.webp","slug":"/ad-implant/"},
+                {id:2,"title":"Advanced Aligners","img":"explore-img2.webp","slug":"/advanced-aligners/"},
                 {id:3,"title":"Advance Zirconia","img":"explore-img3.webp","slug":"/zirconia-crown/"},
                 {id:4,"title":"PFM Crown","img":"explore-img4.webp","slug":"/porcelain-fused-to-metal-pfm/"},
-                {id:5,"title":"Aesthetic Maxima IPS Emax Dental Solutions by ADE","img":"explore-img5.webp","slug":"/aesthetic-maxima/"},
+                {id:5,"title":"Aesthetic Maxima IPS Emax","img":"explore-img5.webp","slug":"/aesthetic-maxima/"},
             ]
     explore_50_html = render_to_string("custom-explore-product.html",{
         'product':products
@@ -257,11 +278,13 @@ def blog_detail(request, slug):
         'data2':data2,
         'data3':data3,
         'related_blogs':related_blogs,
-        'gallery':gallery
+        'gallery':gallery,
+        'priority_testimonials':priority_testimonials,
+        'normal_testimonials':normal_testimonials,
+        # 'RECAPTCHA_SITE_KEY': settings.RECAPTCHA_SITE_KEY,
     }
 
     return render(request,'blog_detail.html',context)
-
 
 def myblogsearch(request):
     print('here')

@@ -10,6 +10,8 @@ from enquiry.forms import STLForm, STLFileForm, LoginForm
 from django.contrib import messages
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.conf import settings
+import threading
+from django.utils import timezone
 from .utils import send_mail
 from django.template.loader import render_to_string, get_template
 from django.contrib.auth import login, authenticate, logout
@@ -18,27 +20,36 @@ import requests
 from blog.sitemaps import *
 from enquiry.forms import ContactForm, CareerForm, CareerFileForm
 
-# from enquiry.models import InstaPost
+# Thread function for email sending
+def send_email_async(context_dict):
+    send_mail(
+        to_email="vaghela9632@gmail.com",
+        subject=f"New Contact Form Submission from {context_dict['Name']}",
+        context_dict=context_dict,
+    )
+
 # Create your views here.
 def home(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
 
         # reCAPTCHA validation
-        recaptcha_response = request.POST.get("g-recaptcha-response")
-        data = {
-            "secret": settings.RECAPTCHA_SECRET_KEY,
-            "response": recaptcha_response,
-        }
-        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
-        result = r.json()
+        # recaptcha_response = request.POST.get("g-recaptcha-response")
+        # data = {
+        #     "secret": settings.RECAPTCHA_SECRET_KEY,
+        #     "response": recaptcha_response,
+        # }
+        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        # result = r.json()
 
-        if not result.get("success"):
-            messages.error(request, "Invalid reCAPTCHA. Please try again.")
-            return redirect(request.META.get("HTTP_REFERER", "home:home"))
+        # if not result.get("success"):
+        #     messages.error(request, "Invalid reCAPTCHA. Please try again.")
+        #     return redirect(request.META.get("HTTP_REFERER", "home:home"))
 
         if form.is_valid():
             submission = form.save()
+            current_datetime_ist = timezone.localtime(timezone.now())
+            formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
             context_dict = {
                 "Name": submission.name,
                 "Email": submission.email,
@@ -48,19 +59,25 @@ def home(request):
                 "Message": submission.message,
                 "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
-            send_mail(
-                to_email="vaghela9632@gmail.com",   # company email
-                subject=f"New Contact Form Submission from {context_dict['Name']}",
-                context_dict=context_dict,
-            )
+            # send_mail(
+            #     to_email="vaghela9632@gmail.com",   # company email
+            #     subject=f"New Contact Form Submission from {context_dict['Name']}",
+            #     context_dict=context_dict,
+            # )
+            threading.Thread(
+                target= send_email_async,
+                args=(context_dict,),
+                daemon=True
+            ).start()
             # messages.success(request, "Your message has been sent successfully.")
-            bikai_payload  ={
+            bikai_payload  = {
                "Name": submission.name,
                "Email": submission.email,
                "Contact": submission.contact,
                "City": submission.city,
                "Subject": submission.subject,
                "Message": submission.message,
+               "DateTime": formatted_datetime
             }
             bikai_url = (
                 "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
@@ -109,7 +126,7 @@ def home(request):
         "gallery21": gallery21,
         "video": video,
         "form": form,
-        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
+        # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, "index.html", context)
 
@@ -175,39 +192,6 @@ def blogd(request, pk):
     
     }
     return render(request, 'blogd.html', context)
-
-
-# def contact(request):
-#     if request.method == "POST":
-#         form = ContactForm(request.POST)
-
-#         recaptcha_response = request.POST.get("g-recaptcha-response")
-#         data ={
-#             "secret": settings.RECAPTCHA_SECRET_KEY,
-#             "response": recaptcha_response,
-#         }
-#         verify_url = "https://www.google.com/recaptcha/api/siteverify"
-#         r = requests.post(verify_url, data=data)
-#         result = r.json()
-
-#         if result.get("success"):
-#             ContactDetails.objects.create(
-#                 name=request.POST.get("name"),
-#                 email=request.POST.get("email"),
-#                 contact=request.POST.get("contact"),
-#                 subject=request.POST.get("subject"),
-#                 message=request.POST.get("message"),
-#             )
-#             messages.success(request, "Your message has been sent successfully.")
-#             return redirect("contact")
-#         else:
-#             messages.error(request,"Invalid reCAPTCHA. Please try again")
-#     data= ContactDetails.objects.all()
-#     context = {
-#         'data':data,
-#         'recaptcha_site_key' : settings.RECAPTCHA_SITE_KEY,
-#     }
-#     return render(request, 'contact.html', context)
 
 # def contact(request):
 #     if request.method == "POST":
@@ -304,7 +288,8 @@ def contact(request):
 
         if form.is_valid():
             submission = form.save()
-
+            current_datetime_ist = timezone.localtime(timezone.now())
+            formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
             context_dict = {
                 "Name": submission.name,
                 "Email": submission.email,
@@ -314,11 +299,12 @@ def contact(request):
                 "Message": submission.message,
                 "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
-            send_mail(
-                to_email="vaghela9632@gmail.com",   # company email
-                subject=f"New Contact Form Submission from {context_dict['Name']}",
-                context_dict=context_dict,
-            )
+            threading.Thread(
+                target= send_email_async,
+                args=(context_dict,),
+                daemon=True
+            ).start()
+
             bikai_payload  ={
                "Name": submission.name,
                "Email": submission.email,
@@ -326,6 +312,7 @@ def contact(request):
                "City": submission.city,
                "Subject": submission.subject,
                "Message": submission.message,
+               "DateTime": formatted_datetime,
             }
             bikai_url = (
                 "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
@@ -358,27 +345,36 @@ def contact(request):
         form = ContactForm()          
 
     # GET request fallback
-    return render(request, "contact.html", {"form": ContactForm()})
+    return render(
+        request,
+        "contact.html",
+        {
+            "form": form, 
+            "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+        },
+    )
 
 
 def contact_new(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
 
-        recaptcha_response = request.POST.get("g-recaptcha-response")
-        data ={
-            "secret": settings.RECAPTCHA_SECRET_KEY,
-            "response": recaptcha_response,
-        }
-        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
-        result = r.json()
+        # recaptcha_response = request.POST.get("g-recaptcha-response")
+        # data ={
+        #     "secret": settings.RECAPTCHA_SECRET_KEY,
+        #     "response": recaptcha_response,
+        # }
+        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        # result = r.json()
 
-        if not result.get('success'):
-            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-            return redirect(request.META.get('HTTP_REFERER','contact'))
+        # if not result.get('success'):
+        #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+        #     return redirect(request.META.get('HTTP_REFERER','contact'))
 
         if form.is_valid():
             submission = form.save()
+            current_datetime_ist = timezone.localtime(timezone.now())
+            formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
             context_dict = {
                 "Name": submission.name,
                 "Email": submission.email,
@@ -388,12 +384,16 @@ def contact_new(request):
                 "Message": submission.message,
                 "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
-            send_mail(
-                to_email="vaghela9632@gmail.com",   # company email
-                subject=f"New Contact Form Submission from {context_dict['Name']}",
-                context_dict=context_dict,
-            )
-            # messages.success(request, "Your data is sent successfully.")
+            # send_mail(
+            #     to_email="vaghela9632@gmail.com",   # company email
+            #     subject=f"New Contact Form Submission from {context_dict['Name']}",
+            #     context_dict=context_dict,
+            # )
+            threading.Thread(
+                target= send_email_async,
+                args=(context_dict,),
+                daemon=True
+            ).start()
 
             bikai_payload  ={
                "Name": submission.name,
@@ -402,6 +402,7 @@ def contact_new(request):
                "City": submission.city,
                "Subject": submission.subject,
                "Message": submission.message,
+               "DateTime": formatted_datetime,
             }
             bikai_url = (
                 "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
@@ -438,7 +439,7 @@ def contact_new(request):
         "contact_new.html",
         {
             "form": form, 
-            "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+            # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
         },
     )
 

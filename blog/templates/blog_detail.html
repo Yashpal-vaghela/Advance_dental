@@ -69,6 +69,7 @@
   media="print"
   onload="this.media='all'"
 />
+<link rel="stylesheet" href="{% static 'css/swal.css' %}" />
 <style>
   p {
     font-size: 18px;
@@ -180,13 +181,6 @@
           </span>
         </div>
         <div class="single-blog-page position-relative">
-          {% comment %}
-          <img
-            src="https://advancedentalexport.com/media/SEO/Dental-Bridges.webp"
-            class="img-fluid"
-            alt="single-blog-img"
-          />
-          {% endcomment %}
           <img src="{{data.image.url}}" alt="{{data.alt}}" class="img-fluid" />
         </div>
         <div class="single-page-main-content mt-4 mt-sm-4" id="blogContent">
@@ -209,7 +203,7 @@
                 <div class="author-bio">
                   {{data.author.description|safe}}
                 </div>
-
+                <!-- Author section -->
                 <div class="author-social-links">
                   {% if data.author.fb %}
                     <a
@@ -303,37 +297,47 @@
             </div>
           </div>
         </div>
+        <!-- Review section -->
         <div class="single-page-review">
           <div class="d-flex align-items-center justify-content-between">
             <div class="review-box">
               <div class="profile-images">
-                <img src="{% static 'review-user-img.png'%}" alt="" />
-                <img src="{% static 'review-user-img.png'%}" alt="" />
-                <img src="{% static 'review-user-img.png'%}" alt="" />
+                <img src="{% static 'dr-jay.png'%}" alt="" />
+                <img src="{% static 'dr-viren.png'%}" alt="" />
+                <img src="{% static 'dr-rohan.png'%}" alt="" />
               </div>
               <div class="rating-box">
                 <p class="rating">
-                  4.8/5
+                  5/5
                   <span class="stars">★★★★★</span>
                 </p>
-                <p class="review-text">Based on 14K+ reviews</p>
+                <p class="review-text">Based on google reviews</p>
               </div>
             </div>
             <button class="btn add-review-btn">+ Add review</button>
           </div>
           <div class="swiper reviewSwiper mt-2">
-            <div class="swiper-wrapper justify-content-center">
+            <div class="swiper-wrapper ">
+              {% if priority_testimonials %}
+              {% for p in priority_testimonials %}
               <div class="swiper-slide card">
                 <div class="review-image my-3">
+                  {% if p.image %}
+                  <img
+                    src="{{ p.image.url }}"
+                    class="img-fluid"
+                    alt="review-user-img"
+                  />
+                  {% else %}
                   <img
                     src="{% static 'review-user-img.png'%}"
                     class="img-fluid"
                     alt="review-user-img"
                   />
+                  {% endif %}
                 </div>
                 <div class="review-header">
-                  <h3>Dr. Priyanka Kathiriya</h3>
-                  <p>surat</p>
+                  <h3>{{ p.name }}</h3>
                 </div>
                 <div
                   class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
@@ -345,28 +349,52 @@
                   <i class="fa-solid fa-star filled"></i>
                 </div>
                 <p>
-                  It has been a game-changer for my financial life. I love how
-                  it helps me stay organized my spending.
+                  {{ p.review|truncatechars:180 }}
+                  {% if p.google_review_link and p.review|length > 180 %}
+                  <a
+                    href="{{ p.google_review_link }}"
+                    target="_blank"
+                    rel="nofollow noopener"
+                    class="read-more-link"
+                  >
+                    Read more
+                  </a>
+                  {% endif %}
                 </p>
-                <img
-                  src="{% static 'google-verified-img.png'%}"
-                  class="google-verified-img img-fluid"
-                  alt="google-verified-img"
-                  width="110"
-                  height="54"
-                />
+                {% if p.google_review_link %}
+                  <a href="{{ p.google_review_link }}" target="_blank" rel="nofollow noopener">
+                    <img
+                      src="{% static 'google-verified-img.png' %}"
+                      class="google-verified-img img-fluid mt-2"
+                      alt="Google Verified Review"
+                      width="110"
+                      height="54"
+                    />
+                  </a>
+                {% endif %}
               </div>
+              {% endfor %}
+              {% endif %}
+              {% if normal_testimonials %}
+              {% for n in normal_testimonials %}
               <div class="swiper-slide card">
                 <div class="review-image my-3">
+                  {% if n.image %}
+                  <img
+                    src="{{ n.image.url }}"
+                    class="img-fluid"
+                    alt="review-user-img"
+                  />
+                  {% else %}
                   <img
                     src="{% static 'review-user-img.png'%}"
                     class="img-fluid"
                     alt="review-user-img"
                   />
+                  {% endif %}
                 </div>
                 <div class="review-header">
-                  <h3>Dr. Priyanka Kathiriya</h3>
-                  <p>surat</p>
+                  <h3>{{ n.name }}</h3>
                 </div>
                 <div
                   class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
@@ -378,93 +406,37 @@
                   <i class="fa-solid fa-star filled"></i>
                 </div>
                 <p>
-                  It has been a game-changer for my financial life. I love how
-                  it helps me stay organized my spending.
+                  {{ n.review|truncatechars:180 }}
+                  {% if n.google_review_link and n.review|length > 180 %}
+                  <a
+                    href="{{ n.google_review_link }}"
+                    target="_blank"
+                    rel="nofollow noopener"
+                    class="read-more-link"
+                  >
+                    Read more
+                  </a>
+                  {% endif %}
                 </p>
-                <img
-                  src="{% static 'google-verified-img.png'%}"
-                  class="google-verified-img img-fluid"
-                  alt="google-verified-img"
-                  width="110"
-                  height="54"
-                />
+                {% if n.google_review_link %}
+                  <a href="{{ n.google_review_link }}" target="_blank" rel="nofollow noopener">
+                    <img
+                      src="{% static 'google-verified-img.png' %}"
+                      class="google-verified-img img-fluid mt-2"
+                      alt="Google Verified Review"
+                      width="110"
+                      height="54"
+                    />
+                  </a>
+                {% endif %}
               </div>
-              <div class="swiper-slide card">
-                <div class="review-image my-3">
-                  <img
-                    src="{% static 'review-user-img.png'%}"
-                    class="img-fluid"
-                    alt="review-user-img"
-                    width="64"
-                    height="64"
-                  />
-                </div>
-                <div class="review-header">
-                  <h3>Dr. Priyanka Kathiriya</h3>
-                  <p>surat</p>
-                </div>
-                <div
-                  class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
-                >
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                </div>
-                <p>
-                  It has been a game-changer for my financial life. I love how
-                  it helps me stay organized my spending.
-                </p>
-                <img
-                  src="{% static 'google-verified-img.png'%}"
-                  class="google-verified-img img-fluid"
-                  alt="google-verified-img"
-                  width="110"
-                  height="54"
-                />
-              </div>
-              <div class="swiper-slide card">
-                <div class="review-image my-3">
-                  <img
-                    src="{% static 'review-user-img.png'%}"
-                    class="img-fluid"
-                    alt="review-user-img"
-                    width="64"
-                    height="64"
-                  />
-                </div>
-                <div class="review-header">
-                  <h3>Dr. Priyanka Kathiriya</h3>
-                  <p>surat</p>
-                </div>
-                <div
-                  class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
-                >
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                </div>
-                <p>
-                  It has been a game-changer for my financial life. I love how
-                  it helps me stay organized my spending.
-                </p>
-                <img
-                  src="{% static 'google-verified-img.png'%}"
-                  class="google-verified-img img-fluid"
-                  alt="google-verified-img"
-                  width="110"
-                  height="54"
-                />
-              </div>
+              {% endfor %}
+              {% endif %}
             </div>
-            {% comment %} <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> {% endcomment %}
             <div class="swiper-pagination"></div>
           </div>
         </div>
+        <!-- Gallery section -->
         <div class="single-blog-gallery-section">
           <h2>Gallery</h2>
           <div class="swiper galleryBlogSwiper">
@@ -483,21 +455,21 @@
           </div>
         </div>
       </div>
+      <!-- Right sidebar section-->
       <div class="col-lg-4 col-md-4 col-12">
         <div class="sidebar-sticky-wrapper">
           {% if related_blogs|length >= 1 %}
             <div class="single-blog-content2 mb-3">
-              <div class="row align-items-center mb-4 mb-md-3 mb-sm-3">
+              <div class="row align-items-center mb-4  mb-md-3 mb-sm-3">
                 {% for ie in related_blogs %}
-                  <div class="col-lg-5 col-md-5 my-2  my-md-3">
+                  <div class="col-lg-5 col-md-12 my-2  my-md-3">
                     <img
-                      {% comment %} src="https://ultimatesmiledesign.com/media/SEO/Anterior-Teeth-Smile-Design.webp" {% endcomment %}
                       src="{{ie.image.url}}"
                       class="img-fluid"
                       alt="{{ie.alt}}"
                     />
                   </div>
-                  <div class="col-lg-7  col-md-7 mt-2 mb-2">
+                  <div class="col-lg-7  col-md-12 mt-2 mb-2">
                     <div class="single-blog-related-content">
                       <h3>
                         <a href="{% url 'home:blogd' ie.slug %}" data-title="{{ie.title|lower}}">
@@ -542,6 +514,7 @@
             <h2 class="single-blog-content2-title">Contact Us</h2>
             <form
               class="single-blog-contact-form form mb-3 mt-3"
+              method="post"
               action="{% url 'home:blogd' data.slug %}"
             >
               {% csrf_token %}
@@ -567,7 +540,7 @@
                 <div class="col-lg-12 mb-4">
                   <input
                     type="number"
-                    name="phone"
+                    name="contact"
                     placeholder="Phone"
                     class="form-control"
                     required
@@ -602,12 +575,10 @@
                   ></textarea>
                 </div>
                 <div class="col-md-12">
-                  {% comment %}
                   <div
                     class="g-recaptcha mb-3"
                     data-sitekey="{{ RECAPTCHA_SITE_KEY }}"
                   ></div>
-                  {% endcomment %}
                   <button class="btn btn-submit d-flex mx-auto" type="submit">
                     submit
                   </button>
@@ -624,9 +595,56 @@
   <!-- End container -->
 </div>
 {% endblock body %} {% block js %}
-{% comment %} <script src="https://www.google.com/recaptcha/api.js" async defer></script> {% endcomment %}
-{% comment %} <script src="{% static 'js/recaptcha-api.js' %}" async defer></script> {% endcomment %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="{% static 'js/recaptcha-api.js' %}" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{% comment %} {% if messages %}
+<script>
+  {% for message in messages %}
+    Swal.fire({
+      icon: "{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% else %}info{% endif %}",
+      title: "{{ message.tags|capfirst }}",
+      html: "<p>{{ message|escapejs }}</p>",
+      confirmButtonColor: "#1b9876",
+      timer:3000,
+      timerProgressBar:true,
+      confirmButtonText: "OK",
+    });
+  {% endfor %}
+</script>
+{% endif %} {% endcomment %}
+{% if messages %}
+<script>
+  {% for message in messages %}
+    Swal.fire({
+      icon: "{{ message.tags }}",
+      title: "{{ message.tags|capfirst }}",
+
+      html: "<p>{{ message|escapejs }}</p>",
+
+      position: 'center',
+      timer: 3000,
+      showConfirmButton: false,
+
+      showClass: {
+        popup: 'animate__animated animate__zoomIn animate__faster'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOut animate__faster'
+      },
+
+      customClass: {
+        popup: 'swal-popup-custom',
+        title: 'swal-title-custom',
+        htmlContainer: 'swal-text-custom'
+      }
+    });
+  {% endfor %}
+</script>
+{% endif %}
+
 <script>
   var swiper = new Swiper(".related-blog-swiper", {
     slidesPerView: 1,
@@ -768,23 +786,23 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".reviewSwiper", {
-      slidesPerView: 2.5,
+      slidesPerView: 2,
       spaceBetween: 30,
       loop: true,
-      autoplay: false,
-      // autoplay: {
-      // delay: 2500,
-      // disableOnInteraction: false, 
-      // },
+      // autoplay: false,
+       autoplay: {
+        delay: 2500,
+        disableOnInteraction: false, 
+        },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
       breakpoints: {
-        0: { slidesPerView: 1.02,spaceBetween:10 },
+        0: { slidesPerView: 1,spaceBetween:10 },
         576: { slidesPerView: 1 },
-        768: { slidesPerView: 1.1, spaceBetween:20},
-        992: { slidesPerView: 2.2, spaceBetween: 30 }, // Desktop show 3
+        768: { slidesPerView: 1, spaceBetween:20},
+        992: { slidesPerView: 2.5, spaceBetween: 30 },
       },
     });
   });
