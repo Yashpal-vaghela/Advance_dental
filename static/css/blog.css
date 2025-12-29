@@ -483,9 +483,14 @@
 .reviewSwiper {
     padding-bottom: 36px
 }
+.reviewSwiper .swiper-wrapper{
+    align-items: stretch;
+}
 
 .reviewSwiper .swiper-slide {
-    color: #000
+    color: #000;
+    display: flex;
+    height: auto;
 }
 
 .author-section {

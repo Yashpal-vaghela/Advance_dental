@@ -297,7 +297,7 @@
             </div>
           </div>
         </div>
-        <!-- Review section -->
+         <!--Review section -->
         <div class="single-page-review">
           <div class="d-flex align-items-center justify-content-between">
             <div class="review-box">
@@ -314,121 +314,125 @@
                 <p class="review-text">Based on google reviews</p>
               </div>
             </div>
-            <button class="btn add-review-btn">+ Add review</button>
+            <a href="https://link.advancedentalexport.com/google-review" target="_blank" class="btn add-review-btn">+ Add review</a>
           </div>
           <div class="swiper reviewSwiper mt-2">
             <div class="swiper-wrapper ">
               {% if priority_testimonials %}
               {% for p in priority_testimonials %}
-              <div class="swiper-slide card">
-                <div class="review-image my-3">
-                  {% if p.image %}
-                  <img
-                    src="{{ p.image.url }}"
-                    class="img-fluid"
-                    alt="review-user-img"
-                  />
-                  {% else %}
-                  <img
-                    src="{% static 'review-user-img.png'%}"
-                    class="img-fluid"
-                    alt="review-user-img"
-                  />
-                  {% endif %}
-                </div>
-                <div class="review-header">
-                  <h3>{{ p.name }}</h3>
-                </div>
-                <div
-                  class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
-                >
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                </div>
-                <p>
-                  {{ p.review|truncatechars:180 }}
-                  {% if p.google_review_link and p.review|length > 180 %}
-                  <a
-                    href="{{ p.google_review_link }}"
-                    target="_blank"
-                    rel="nofollow noopener"
-                    class="read-more-link"
-                  >
-                    Read more
-                  </a>
-                  {% endif %}
-                </p>
-                {% if p.google_review_link %}
-                  <a href="{{ p.google_review_link }}" target="_blank" rel="nofollow noopener">
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="review-image my-3">
+                    {% if p.image %}
                     <img
-                      src="{% static 'google-verified-img.png' %}"
-                      class="google-verified-img img-fluid mt-2"
-                      alt="Google Verified Review"
-                      width="110"
-                      height="54"
+                      src="{{ p.image.url }}"
+                      class="img-fluid"
+                      alt="review-user-img"
                     />
-                  </a>
-                {% endif %}
+                    {% else %}
+                    <img
+                      src="{% static 'review-user-img.png'%}"
+                      class="img-fluid"
+                      alt="review-user-img"
+                    />
+                    {% endif %}
+                  </div>
+                  <div class="review-header">
+                    <h3>{{ p.name }}</h3>
+                  </div>
+                  <div
+                    class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
+                  >
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                  </div>
+                  <p>
+                    {{ p.review|truncatechars:180 }}
+                    {% if p.google_review_link and p.review|length > 180 %}
+                    <a
+                      href="{{ p.google_review_link }}"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      class="read-more-link"
+                    >
+                      Read more
+                    </a>
+                    {% endif %}
+                  </p>
+                  {% if p.google_review_link %}
+                    <a href="{{ p.google_review_link }}" target="_blank" rel="nofollow noopener">
+                      <img
+                        src="{% static 'google-verified-img.png' %}"
+                        class="google-verified-img img-fluid mt-2"
+                        alt="Google Verified Review"
+                        width="110"
+                        height="54"
+                      />
+                    </a>
+                  {% endif %}
+                </div>
               </div>
               {% endfor %}
               {% endif %}
               {% if normal_testimonials %}
               {% for n in normal_testimonials %}
-              <div class="swiper-slide card">
-                <div class="review-image my-3">
-                  {% if n.image %}
-                  <img
-                    src="{{ n.image.url }}"
-                    class="img-fluid"
-                    alt="review-user-img"
-                  />
-                  {% else %}
-                  <img
-                    src="{% static 'review-user-img.png'%}"
-                    class="img-fluid"
-                    alt="review-user-img"
-                  />
-                  {% endif %}
-                </div>
-                <div class="review-header">
-                  <h3>{{ n.name }}</h3>
-                </div>
-                <div
-                  class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
-                >
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                  <i class="fa-solid fa-star filled"></i>
-                </div>
-                <p>
-                  {{ n.review|truncatechars:180 }}
-                  {% if n.google_review_link and n.review|length > 180 %}
-                  <a
-                    href="{{ n.google_review_link }}"
-                    target="_blank"
-                    rel="nofollow noopener"
-                    class="read-more-link"
-                  >
-                    Read more
-                  </a>
-                  {% endif %}
-                </p>
-                {% if n.google_review_link %}
-                  <a href="{{ n.google_review_link }}" target="_blank" rel="nofollow noopener">
+              <div class="swiper-slide ">
+                <div class="card">
+                  <div class="review-image my-3">
+                    {% if n.image %}
                     <img
-                      src="{% static 'google-verified-img.png' %}"
-                      class="google-verified-img img-fluid mt-2"
-                      alt="Google Verified Review"
-                      width="110"
-                      height="54"
+                      src="{{ n.image.url }}"
+                      class="img-fluid"
+                      alt="review-user-img"
                     />
-                  </a>
-                {% endif %}
+                    {% else %}
+                    <img
+                      src="{% static 'review-user-img.png'%}"
+                      class="img-fluid"
+                      alt="review-user-img"
+                    />
+                    {% endif %}
+                  </div>
+                  <div class="review-header">
+                    <h3>{{ n.name }}</h3>
+                  </div>
+                  <div
+                    class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
+                  >
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                    <i class="fa-solid fa-star filled"></i>
+                  </div>
+                  <p>
+                    {{ n.review|truncatechars:180 }}
+                    {% if n.google_review_link and n.review|length > 180 %}
+                    <a
+                      href="{{ n.google_review_link }}"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      class="read-more-link"
+                    >
+                      Read more
+                    </a>
+                    {% endif %}
+                  </p>
+                  {% if n.google_review_link %}
+                    <a href="{{ n.google_review_link }}" target="_blank" rel="nofollow noopener">
+                      <img
+                        src="{% static 'google-verified-img.png' %}"
+                        class="google-verified-img img-fluid mt-2"
+                        alt="Google Verified Review"
+                        width="110"
+                        height="54"
+                      />
+                    </a>
+                  {% endif %}
+                </div>
               </div>
               {% endfor %}
               {% endif %}
@@ -600,21 +604,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-{% comment %} {% if messages %}
-<script>
-  {% for message in messages %}
-    Swal.fire({
-      icon: "{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% else %}info{% endif %}",
-      title: "{{ message.tags|capfirst }}",
-      html: "<p>{{ message|escapejs }}</p>",
-      confirmButtonColor: "#1b9876",
-      timer:3000,
-      timerProgressBar:true,
-      confirmButtonText: "OK",
-    });
-  {% endfor %}
-</script>
-{% endif %} {% endcomment %}
 {% if messages %}
 <script>
   {% for message in messages %}
@@ -644,7 +633,6 @@
   {% endfor %}
 </script>
 {% endif %}
-
 <script>
   var swiper = new Swiper(".related-blog-swiper", {
     slidesPerView: 1,
@@ -789,11 +777,11 @@
       slidesPerView: 2,
       spaceBetween: 30,
       loop: true,
-      // autoplay: false,
-       autoplay: {
+      //autoplay: false,
+      autoplay: {
         delay: 2500,
         disableOnInteraction: false, 
-        },
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
