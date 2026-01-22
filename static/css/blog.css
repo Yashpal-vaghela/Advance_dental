@@ -1092,7 +1092,9 @@
     .blog-page-section {
         padding-top: 20px !important
     }
-
+    .product-page{
+        padding-top: 0px !important;
+    }
     .single-page-main-content ul {
         padding-left: 20px
     }

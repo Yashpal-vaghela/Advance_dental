@@ -49,7 +49,7 @@
 
 <!-- BREADCRUMB
 			============================================= -->
-            {% if request.path != "/porcelain-fused-to-metal-pfm/" %}
+            {% if request.path != "/porcelain-fused-to-metal-pfm/" and request.path != "/advanced-aligners/" %}
             <div id="breadcrumb" class="division">
 				<div class="container">
 					<div class="row">						
@@ -80,7 +80,7 @@
 
 
 			<!-- BLOG PAGE CONTENT ============================================= -->
-	        <div id="blog-page" class="wide-75 blog-page-section division">
+	        <div id="blog-page" class="wide-75 blog-page-section division product-page">
                 {% if request.path == "/porcelain-fused-to-metal-pfm/" %}
                     <div class="pfm-main">
                         <div class="pfm-left">
@@ -108,9 +108,15 @@
                                                     <img src="{% static '/img/pfm-product.png' %}" class="img-fluid" alt="static"/>
                                                 </div>
                                             </div> {% endcomment %}
-                                            <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}" />
+                                            {% if request.path == "/advanced-aligners/" %}
+                                                <img class="d-none d-sm-block img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}" />
+                                                <img src="{% static 'mobile-align-banner.webp'%}" class="d-block d-sm-none img-fluid" alt="Advanced Aligners | Clear Aligner Braces for Teeth" />
+                                            {% else %}
+                                                <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}" />
+                                            {% endif %}
                                             {% comment %} <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}"> {% endcomment %}
                                         {% endif %}
+                                       
                                     </div>
 
                                     <!-- BLOG POST TEXT -->

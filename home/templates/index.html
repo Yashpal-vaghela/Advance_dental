@@ -1583,7 +1583,7 @@
           data-bs-ride="carousel"
           id="carouselExampleControls"
         >
-          {% comment %} <div class="review-slider-testimonials">
+           <div class="review-slider-testimonials">
             <div class="carousel-inner">
               {% for ie in data %}
               <div
@@ -1605,7 +1605,7 @@
                   <p class="review-user-txt">
                     <i class="fa-solid fa-quote-left"></i>
                     {{ ie.review|truncatechars:480 }}
-                    {% if ie.google_review_link and ie.review|length > 480%}
+                    {% if ie.google_review_link and ie.review|length > 480 %}
                       <a
                         href="{{ ie.google_review_link }}"
                         target="_blank"
@@ -1646,7 +1646,7 @@
                 ></span>
               </button>
             </div>
-          </div> {% endcomment %}
+          </div> 
         </div>
       </div>
     </div>
@@ -1744,9 +1744,7 @@
       {% endfor %}
       <div class="col-md-12 text-center">
         <div class="all-posts-btn mb-30 mt-20 wow fadeInUp">
-          <a href="{% url 'blog:blog' %}" class="btn btn-blue blue-hover submit"
-            >Read More Posts</a
-          >
+          <a href="{% url 'blog:blog' %}" class="btn btn-blue blue-hover submit">Read More Posts</a>
         </div>
       </div>
     </div>
@@ -2121,7 +2119,7 @@
           start:"top top",
           end:()=> `+=${section.scrollHeight} ${window.innerHeight - 40}`,
           scrub:true,
-          markers:true,
+          markers:false,
           pinSpacing:false,
           onUpdate:(self)=>{
             let idx = Math.floor(self.progress * grids.length);
