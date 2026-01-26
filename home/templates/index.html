@@ -986,22 +986,23 @@
 </section>
 <!-- About team -->
 <section id="banner-7" class="bg-fixed banner-section division">
+  <div class="mobile-group-img"></div>
   <div class="container white-color px-0">
     <div
       class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto"
     >
-      <div class="col-md-8 col-lg-6 col-xl-5 col-sm-10">
+      <div class="col-md-8 col-lg-6 col-xl-5 col-sm-12 col-11 order-2 order-md-1">
         <div class="banner-txt wow fadeInUp">
           <h2
-            class="h2-xs text-center text-sm-start text-lg-start home-section-title"
+            class="h2-xs text-start text-lg-start home-section-title"
             style="font-size: 2.1rem"
           >
             Where Quality <br />
             Meets Excellence
           </h2>
           <p>
-            One common dream fuels us:<br />
-            Elevating Digital Dentistry to unparalleled <br />
+            One common dream fuels us:<br class="d-none d-md-block"/>
+            Elevating Digital Dentistry to unparalleled <br class="d-none d-md-block" />
             heights worldwide
           </p>
           <a
@@ -1061,7 +1062,7 @@
   </div>
 </section>
 <!-- Introduction for the lab -->
-<section class="service-section section" id="serviceSection">
+{% comment %} <section class="service-section section" id="serviceSection">
   <div class="page-padding">
     <div class="container container-large scroll-jack">
       <div class="padding-section-challenge">
@@ -1284,9 +1285,9 @@
       <div class="section-hairline"></div>
     </div>
   </div>
-</section>   
+</section>    {% endcomment %}
 <!-- old service section -->
-{% comment %} <section
+<section
   id="services-7"
   class="bg-lightgrey wide-601 servicess-section division"
 >
@@ -1407,7 +1408,7 @@
       </div>
     </div>
   </div>
-</section> {% endcomment %}
+</section> 
 <!-- - SERVICE SECTION -->
 <section id="services-6" class="bg-blue wide-40 servicess-section division">
   <div class="container white-color">
@@ -1591,7 +1592,7 @@
                 aria-label="Slide {{ forloop.counter }}"
               >
                 <div
-                  class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
+                  class="review-user mx-auto col-lg-9 col-md-12 col-sm-11 col-12"
                 >
                   <div class="user_image">
                     <img
@@ -1919,8 +1920,8 @@
     },
   });
 </script>
-<script src="{% static 'js/svg-inject.min.js' %}"></script>
-<script src="{% static 'js/vivus.min.js'%}"></script>
+{% comment %} <script src="{% static 'js/svg-inject.min.js' %}"></script> {% endcomment %}
+{% comment %} <script src="{% static 'js/vivus.min.js'%}"></script> {% endcomment %}
 <script>
   const gallerySwiper = new Swiper(".gallerySwiper", {
     speed: 1500,
@@ -1933,6 +1934,8 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 1,
     },
     breakpoints: {
       0: { slidesPerView: 1 },
@@ -2044,17 +2047,17 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
-<script>
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script> {% endcomment %}
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script> {% endcomment %}
+{% comment %} <script>
   document.addEventListener("DOMContentLoaded",()=>{
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.matchMedia({
       "(min-width:768px)":function(){
         const section = document.querySelector("#serviceSection");
-        const grids = document.querySelectorAll(".challenge-grid");
         const wrapper = document.querySelector("#serviceCardWrapper");
+        const grids = document.querySelectorAll(".challenge-grid");
         const stickyTracker = document.querySelector(".sticky-tracker");
         const lastCard = document.getElementById("service-card6");
         const activeCard = lastCard.querySelector(".active-card");
@@ -2071,31 +2074,15 @@
         let top1 = 5;
         let top2 = 5;
         function updateTopValue() {
-          if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-            top1 = 8;
-            top2 = 5.5;
-          } else if (window.innerWidth >= 992 && window.innerWidth <= 1200) {
-            top1 = 8;
-            top2 = 6;
-          } else if (window.innerWidth >= 1200 && window.innerWidth <= 1300) {
-            top1 = 9;
-            top2 = 8;
-          } else if (window.innerWidth >= 1300 && window.innerWidth <= 1440) {
-            top1 = 9;
-            top2 = 9;
-          } else if (window.innerWidth >= 1439 && window.innerWidth <= 1649) {
-            top1 = 9;
-            top2 = 6;
-          } else if (window.innerWidth >= 1650 && window.innerWidth <= 1800) {
-            top1 = 9;
-            top2 = 6;
-          } else if (window.innerWidth >= 1800 && window.innerWidth <= 2000) {
-            top1 = 8;
-            top2 = 6;
-          } else {
-            top1 = 5;
-            top2 = 5;
-          }
+          const w = window.innerWidth;
+          if (w >= 768 && w <= 991) { top1 = 8; top2 = 5.5; } 
+          else if (w >= 992 && w <= 1200) { top1 = 8; top2 = 6; } 
+          else if (w >= 1200 && w <= 1300) { top1 = 9;top2 = 8;} 
+          else if (w >= 1300 && w <= 1440) { top1 = 9; top2 = 9;}
+          else if (w >= 1439 && w <= 1649) { top1 = 9; top2 = 6;}
+          else if (w >= 1650 && w <= 1800) { top1 = 9; top2 = 6;} 
+          else if (w >= 1800 && w <= 2000) { top1 = 8; top2 = 6;} 
+          else { top1 = 5; top2 = 5;}
         }
         updateTopValue();
 
@@ -2119,7 +2106,7 @@
           start:"top top",
           end:()=> `+=${section.scrollHeight} ${window.innerHeight - 40}`,
           scrub:true,
-          markers:false,
+          markers:true,
           pinSpacing:false,
           onUpdate:(self)=>{
             let idx = Math.floor(self.progress * grids.length);
@@ -2461,21 +2448,21 @@
       }
     })
   })
-</script>  
-<script
+</script>   {% endcomment %}
+{% comment %} <script
   defer=""
   src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"
-></script>
+></script> {% endcomment %}
 <script
   src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=658031e408a50a76013e5183"
   type="text/javascript"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"
 ></script>
-<script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.0/dist/barba.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-countup@1.0/dist/countup.min.js"></script>
-<script>
+{% comment %} <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script> {% endcomment %}
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.0/dist/barba.umd.min.js"></script> {% endcomment %}
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-countup@1.0/dist/countup.min.js"></script> {% endcomment %}
+{% comment %} <script>
   // GSAP Animations
   gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
 
@@ -2621,7 +2608,7 @@
 
   // Prevent flash of unstyled text
   gsap.set("[text-split]", { opacity: 1 });
-</script>
+</script> {% endcomment %}
 <script>
   gsap.registerPlugin(ScrollTrigger);
   //parallexglobal

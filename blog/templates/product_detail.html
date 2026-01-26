@@ -98,26 +98,22 @@
                             <div class="posts-holder">
                                 <div class="single-blog-post">
                                     <!-- BLOG POST IMAGE -->
-                                    <div class="blog-post-img mb-40">
+                                    
                                         {% if request.path != "/porcelain-fused-to-metal-pfm/" %}
-                                            {% comment %} <div class="pfm-main">
-                                                <div class="pfm-left">
-                                                    <img src="{% static '/img/rotate.png' %}" alt="Rotating" class="pfm-rotate" />
-                                                </div>
-                                                <div class="pfm-right">
-                                                    <img src="{% static '/img/pfm-product.png' %}" class="img-fluid" alt="static"/>
-                                                </div>
-                                            </div> {% endcomment %}
                                             {% if request.path == "/advanced-aligners/" %}
+                                            <div class="blog-post-img">
                                                 <img class="d-none d-sm-block img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}" />
                                                 <img src="{% static 'mobile-align-banner.webp'%}" class="d-block d-sm-none img-fluid" alt="Advanced Aligners | Clear Aligner Braces for Teeth" />
+                                            </div>
                                             {% else %}
+                                            <div class="blog-post-img mb-40">
                                                 <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}" />
+                                            </div>
                                             {% endif %}
                                             {% comment %} <img class="img-fluid" src="{{ data.image.url }}" alt="{{ data.alt }}"> {% endcomment %}
                                         {% endif %}
                                        
-                                    </div>
+                                    
 
                                     <!-- BLOG POST TEXT -->
                                     <div class="sblog-post-txt">

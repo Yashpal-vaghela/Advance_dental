@@ -759,6 +759,22 @@
     align-items: center;
     justify-content: center;
   }
+  #banner-7 .banner-txt h2 {
+    color:#1B8976;
+    line-height: 1.65;
+  }
+  #banner-7 .banner-txt p{
+    color:#000;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+  }
+  #banner-7 .btn{
+    background-color: #1B8976;
+  }
+  #banner-7 .btn:hover{
+    border-color: #1B8976 !important;
+    /* border: 1px solid #1B8976; */
+  }
 }
 @media (min-width: 576px) and (max-width: 767.99px) {
   h5.h5-xs {
@@ -983,7 +999,7 @@
   }
   #banner-7 {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     background-position: left center;
   }
   #banner-2 .bg-inner h3.h3-lg {
@@ -997,6 +1013,7 @@
   }
   #banner-7 .btn {
     margin-top: 15px;
+    background: #1B8976;
   }
   #banner-2 .banner-txt p {
     margin-top: 15px;
@@ -1506,8 +1523,9 @@
   }
   #banner-7 {
     padding-top: 50px;
-    padding-bottom: 50px;
-    background-position: left center;
+    padding-bottom: 0px;
+    /* background-position: left center; */
+    background-position: center;
     background-size: cover;
   }
   #banner-7 .banner-txt {
@@ -1569,9 +1587,10 @@
     font-size: 1.05rem;
     text-align: left;
   }
-  .sblog-post-txt .content p {
+  .sblog-post-txt .content p,ul {
     font-size: 14px;
   }
+  
   .comment-form {
     margin-bottom: 30px;
   }
@@ -1582,6 +1601,9 @@
   #blog-page .blog-post-txt span {
     font-size: 1.1075rem;
     font-weight: 700 !important;
+  }
+  .faq-toggle-icon{
+    right: 15px;
   }
   .post-share-links {
     margin-top: 60px;
@@ -1851,6 +1873,12 @@
   .page #breadcrumb .breadcrumb-holder h1 {
     margin-top: 8px;
   }
+  #reviews-2 .section-title{
+    margin-bottom: 5px !important;
+  }
+  #reviews-2 .section-title h2{
+    font-size: 28px;
+  }
 }
 @media (max-width: 768px) {
   .second .sbox-6:nth-child(2) {
@@ -1900,6 +1928,9 @@
   .breadcrumb-item a,
   .breadcrumb-item.active {
     font-size: 1rem;
+  }
+  #reviews-2 .section-title h2{
+    font-size: 24px;
   }
 }
 @media (max-width: 576px) {
@@ -2145,9 +2176,6 @@
   }
   .text-box h4 {
     font-size: 18px;
-  }
-  #banner-7 p {
-    text-align: center;
   }
   .tra-white-hover {
     margin: auto;
