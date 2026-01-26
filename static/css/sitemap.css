@@ -148,7 +148,7 @@
         margin-left: 1rem;
     }
     .sitemap-section .container{
-        --bs-gutter-x: 5.8rem;
+        --bs-gutter-x: 1rem;
     }
     .sitemapSubContent .row .col-md-6 a::before{
         padding: 0px 10px 0px 0px;
