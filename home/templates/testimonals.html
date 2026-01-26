@@ -91,7 +91,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container mb-4">
     <div class="swiper gallerySwiper">
       <div class="swiper-wrapper">
         {% for ie in videoData %}
@@ -123,7 +123,7 @@
     </div>
   </div>
   <!-- client reviews -->
-  <section id="reviews-2 pt-20">
+  <section id="reviews-2">
     <div class="section-title text-center">
       <h2 class="h2-ms steelblue-color pt-50">
         Client Chronicles: Their Stories, Their Experiences
@@ -159,13 +159,23 @@
                           alt="Generic user profile icon representing individual identity or account avatar"
                         />
                       </div>
-                      <div class="review-user-txt">
-                        <p>
-                          <i class="fa-solid fa-quote-left"></i>
-                          {{ie.review}}
-                          <i class="fa-solid fa-quote-right"></i>
-                        </p>
-                      </div>
+                      <p class="review-user-txt" data-full-text="{{ ie.review|escape }}">
+                        <i class="fa-solid fa-quote-left"></i>
+                          <span class="review-text">
+                            {{ ie.review|truncatechars:480 }}
+                          </span>
+                        {% if ie.google_review_link and ie.review|length > 480%}
+                          <a
+                            href="{{ ie.google_review_link }}"
+                            target="_blank"
+                            rel="nofollow noopener"
+                            class="read-more-review-link fw-bold"
+                          >
+                          Read more
+                          </a>
+                        {% endif %}
+                        <i class="fa-solid fa-quote-right"></i>
+                      </p>
                       <div class="review-user-name">{{ie.name}}</div>
                       <div class="review-user-desk">{{ie.position}}</div>
                     </div>
@@ -311,6 +321,8 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 1,
     },
     breakpoints: {
       0: { slidesPerView: 1 },
@@ -418,6 +430,31 @@
       videoWrappers.forEach((wrapper) => restoreThumbnail(wrapper));
       gallerySwiper.autoplay.start();
     }
+  });
+</script>
+<!-- Truncate review text on mobile -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const MOBILE_WIDTH = 768;
+    const MOBILE_LIMIT = 300;
+
+    if (window.innerWidth > MOBILE_WIDTH) return;
+
+    document.querySelectorAll(".review-user-txt").forEach(el => {
+      const fullText = el.dataset.fullText;
+      if (!fullText || fullText.length <= MOBILE_LIMIT) return;
+
+      const textSpan = el.querySelector(".review-text");
+      const readMore = el.querySelector(".read-more-review-link");
+
+      if (textSpan) {
+        textSpan.textContent = fullText.slice(0, MOBILE_LIMIT) + "...";
+      }
+
+      if (readMore) {
+        readMore.classList.remove("d-none");
+      }
+    });
   });
 </script>
 {% endblock javascript %}

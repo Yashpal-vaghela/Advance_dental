@@ -399,10 +399,10 @@
 </section>
 
 <!-- client reviews -->
-<section id="reviews-2" class="mb-5 mt-5">
+<section id="reviews-2">
   <div class="section-title text-center">
     <h2 class="h2-m steelblue-color mb-0 home-section-title">
-      Hear from Our Clients
+      Client Chronicles: Their Stories, Their Experiences
     </h2>
   </div>
   <div class="review-section testimonials-slider">
@@ -417,7 +417,7 @@
           data-bs-ride="carousel"
           id="carouselExampleControls"
         >
-          <div class="review-slider-testimonials">
+           <div class="review-slider-testimonials">
             <div class="carousel-inner">
               {% for ie in data %}
               <div
@@ -431,20 +431,27 @@
                     <img
                       src="{% static 'img/profile-user-3.webp' %}"
                       class="d-block w-100"
-                      alt="user"
+                      alt="User icon representing profile identity or personal account avatar in interface design"
                       width="100%"
                       height="100%"
                     />
                   </div>
                   <p class="review-user-txt">
                     <i class="fa-solid fa-quote-left"></i>
-                    {{ ie.review }}
+                    {{ ie.review|truncatechars:480 }}
+                    {% if ie.google_review_link and ie.review|length > 480 %}
+                      <a
+                        href="{{ ie.google_review_link }}"
+                        target="_blank"
+                        rel="nofollow noopener"
+                        class="read-more-review-link fw-bold"
+                      >
+                      Read more
+                      </a>
+                    {% endif %}
                     <i class="fa-solid fa-quote-right"></i>
                   </p>
-                  <p class="review-user-name mb-0">{{ ie.name |capfirst}}</p>
-                  <span class="review-user-desk" style="float: right"
-                    >{{ ie.position }}</span
-                  >
+                  <p class="review-user-name mb-0">{{ ie.name }}</p>
                 </div>
               </div>
               {% endfor %}
@@ -473,13 +480,12 @@
                 ></span>
               </button>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- new desgine of before & after -->
 <section id="gallery-2" class="gallery-section division">
     <div class="container">
@@ -598,10 +604,10 @@
                   <form
                     class="row contact-form2 form align-items-center justify-content-center"
                     method="post"
-                    action="{% url 'enquiry:contactd' %}"
+                    action="{% url 'home:bdld' slug=pk.slug %}"
                   >
                     {% csrf_token %}
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_name"
@@ -614,7 +620,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_email"
@@ -628,7 +634,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_phone"
@@ -642,7 +648,20 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 col-lg-6">
+                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
+                      <div class="form-group">
+                        <input
+                          id="form_city"
+                          class="form-control city"
+                          name="city"
+                          placeholder="Your City*"
+                          required
+                          data-error="City is required"
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <input
                           id="form_subject"
@@ -655,7 +674,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-12 input-message">
+                    <div class="col-md-12 input-message px-4 px-sm-0 px-md-2">
                       <div class="form-group">
                         <textarea
                           id="form-message"
@@ -670,6 +689,7 @@
                       </div>
                     </div>
                     <div class="col-md-12 mt-15 form-btn submit-btn">
+                      <div class="g-recaptcha mb-3" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                       <button type="submit" class="btn-blue submit">
                         Send Your Message
                       </button>
@@ -743,6 +763,21 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="{% static 'js/recaptcha-api.js' %}" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% if messages %}
+<script>
+  {% for message in messages %}
+    Swal.fire({
+      icon: "{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% else %}info{% endif %}",
+      title: "{{ message }}",
+      showConfirmButton: false,
+      timer: 2000
+    });
+  {% endfor %}
+</script>
+{% endif %}
 <script>
   gsap.registerPlugin(ScrollTrigger);
 

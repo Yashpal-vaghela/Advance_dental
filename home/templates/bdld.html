@@ -354,74 +354,137 @@
 
 <!-- client reviews -->
 <section id="reviews-2">
-    <div class="section-title text-center">
-      <h2 class="h2-m steelblue-color mb-0">Client Chronicles: Their Stories, Their Experiences</h2>
-    </div>
-    <div class="review-section testimonials-slider">
-      <div class="review-overlay" style="opacity: 0.7; background-color: rgb(36, 169, 146)"></div>
-      <div class="container position-relative text-center">
-        <div class="row justify-content-center carousel-row">
-          <div class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide" data-bs-ride="carousel" id="carouselExampleControls">
-            <div class="review-slider-testimonials">
-              <div class="carousel-inner">
-                {% for ie in data %}
-                  <div class="{% if forloop.first %}active{% endif %} carousel-item" aria-label="Slide {{ forloop.counter }}">
-                    <div class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12">
-                      <div class="user_image">
-                        <img src="{% static 'img/profile-user-3.png' %}" class="d-block w-100" alt="Generic user profile icon representing individual identity or account avatar" width="100%" height="100%" />
-                      </div>
-                      <p class="review-user-txt">
-                        <i class="fa-solid fa-quote-left"></i>
-                        {{ ie.review }}
-                        <i class="fa-solid fa-quote-right"></i>
-                      </p>
-                      <p class="review-user-name mb-0">{{ ie.name }}</p>
-                      <span class="review-user-desk" style="float: right">{{ ie.position }}</span>
-                    </div>
+  <div class="section-title text-center">
+    <h2 class="h2-m steelblue-color mb-0 home-section-title">
+      Client Chronicles: Their Stories, Their Experiences
+    </h2>
+  </div>
+  <div class="review-section testimonials-slider">
+    <div
+      class="review-overlay"
+      style="opacity: 0.7; background-color: rgb(36, 169, 146)"
+    ></div>
+    <div class="container position-relative text-center">
+      <div class="row justify-content-center carousel-row">
+        <div
+          class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
+          data-bs-ride="carousel"
+          id="carouselExampleControls"
+        >
+           <div class="review-slider-testimonials">
+            <div class="carousel-inner">
+              {% for ie in data %}
+              <div
+                class="{% if forloop.first %}active{% endif %} carousel-item"
+                aria-label="Slide {{ forloop.counter }}"
+              >
+                <div
+                  class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
+                >
+                  <div class="user_image">
+                    <img
+                      src="{% static 'img/profile-user-3.webp' %}"
+                      class="d-block w-100"
+                      alt="User icon representing profile identity or personal account avatar in interface design"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
-                {% endfor %}
+                  <p class="review-user-txt">
+                    <i class="fa-solid fa-quote-left"></i>
+                    {{ ie.review|truncatechars:480 }}
+                    {% if ie.google_review_link and ie.review|length > 480 %}
+                      <a
+                        href="{{ ie.google_review_link }}"
+                        target="_blank"
+                        rel="nofollow noopener"
+                        class="read-more-review-link fw-bold"
+                      >
+                      Read more
+                      </a>
+                    {% endif %}
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
+                  <p class="review-user-name mb-0">{{ ie.name }}</p>
+                </div>
               </div>
-              <div class="carousel-controls">
-                <button class="carousel-control-prev review-prev-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
-                <button class="carousel-control-next review-next-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
-              </div>
+              {% endfor %}
             </div>
-          </div>
+            <div class="carousel-controls">
+              <button
+                class="carousel-control-prev review-prev-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next review-next-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </div> 
         </div>
       </div>
     </div>
+  </div>
 </section>
 <!-- Testimonials-video -->
 <section id="gallery-1" class="gallery-section division pt-50">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto section-title">
-          <h2 class="h2-m steelblue-color mb-0">In Their Own Words: Tales of Trust from Our Clientele</h2>
-        </div>
-        <div class="swiper gallerySwiper">
-          <div class="swiper-wrapper">
-            {% for ie in video %}
-            <div
-              class="swiper-slide sbox-52 index-video1"
-              data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
-            >
-              <div class="video-container">
-                <img
-                  src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
-                  alt="Video Thumbnail"
-                  class="video-thumbnail1"
-                  width="100%"
-                  height="100%"
-                />
-                <button class="play-button">▶</button>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto section-title">
+        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+          In Their Own Words: Tales of Trust from Our Clientele
+        </h2>
+      </div>
+      <div class="swiper gallerySwiper">
+        <div class="swiper-wrapper">
+          {% for ie in video %}
+          <div
+            class="swiper-slide sbox-52 index-video1"
+            data-video-id="{{ ie.link|cut:'https://www.youtube.com/embed/' }}"
+          >
+            <div class="video-container">
+              <img
+                src="https://img.youtube.com/vi/{{ ie.link|cut:'https://www.youtube.com/embed/' }}/sddefault.jpg"
+                alt="Video Thumbnail"
+                class="video-thumbnail1"
+                width="100%"
+                height="100%"
+              />
+              <button class="play-button" aria-label="Play">
+                <svg height="100%" viewBox="0 0 68 48" width="100%">
+                  <path
+                    d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+                  C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+                  C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+                  S67.94,13.05,66.52,7.74z"
+                    fill="#212121"
+                    fill-opacity="0.8"
+                  ></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </button>
             </div>
-            {% endfor %}
           </div>
-          <div class="swiper-pagination"></div>
+          {% endfor %}
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
+  </div>
 </section>
 <!-- INFO-4
 			============================================= -->
@@ -634,10 +697,10 @@
                 <form
                   class="row contact-form2 form align-items-center justify-content-center"
                   method="post"
-                  action="{% url 'enquiry:contactd' %}"
+                  action="{% url 'home:bdld' slug=pk.slug %}"
                 >
                   {% csrf_token %}
-                  <div class="col-md-12 col-lg-6">
+                  <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                     <div class="form-group">
                       <input
                         id="form_name"
@@ -650,7 +713,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-                  <div class="col-md-12 col-lg-6">
+                  <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                     <div class="form-group">
                       <input
                         id="form_email"
@@ -664,7 +727,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-                  <div class="col-md-12 col-lg-6">
+                  <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
                     <div class="form-group">
                       <input
                         id="form_phone"
@@ -678,7 +741,20 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-                  <div class="col-md-12 col-lg-6">
+                   <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
+                      <div class="form-group">
+                        <input
+                          id="form_city"
+                          class="form-control city"
+                          name="city"
+                          placeholder="Your City*"
+                          required
+                          data-error="City is required"
+                        />
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  <div class="col-md-12 col-lg-12 px-4 px-sm-0 px-md-2">
                     <div class="form-group">
                       <input
                         id="form_subject"
@@ -691,7 +767,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-                  <div class="col-md-12 input-message">
+                  <div class="col-md-12 input-message px-4 px-sm-0 px-md-2">
                     <div class="form-group">
                       <textarea
                         id="form-message"
@@ -706,6 +782,7 @@
                     </div>
                   </div>
                   <div class="col-md-12 mt-15 form-btn submit-btn">
+                    <div class="g-recaptcha mb-3" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                     <button type="submit" class="btn-blue submit">
                       Send Your Message
                     </button>
@@ -721,38 +798,25 @@
 {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
-  var galleryswiper = new Swiper(".gallerySwiper", {
+  const gallerySwiper = new Swiper(".gallerySwiper", {
     speed: 1500,
     slidesPerView: 2,
     loop: true,
     autoplay: {
       delay: 4000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      disableOnInteraction: false
     },
     pagination: {
       el: ".swiper-pagination",
-      clickable: !0,
+      clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 1,
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 2,
-      },
+      0: { slidesPerView: 1 },
+      767: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      991: { slidesPerView: 2 },
     },
   });
   var BeforeSwiper = new Swiper(".beforeSwiper", {
@@ -792,23 +856,85 @@
 </script>
 <script>
   const videoWrappers = document.querySelectorAll(".index-video1");
+  // Detect if mobile
+  function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  }
+  // Create iframe depending on device
+  function createYouTubeIframe(videoId) {
+    const iframe = document.createElement("iframe");
+    const origin = window.location.origin;
+    const baseURL = `https://www.youtube.com/embed/${videoId}`;
+    const paramsDesktop = `?autoplay=1&enablejsapi=1&origin=${origin}&mute=1&playsinline=1`;
+    const paramsMobile = `?autoplay=1&mute=1&playsinline=1`;
+    iframe.src = baseURL + (isMobile() ? paramsMobile : paramsDesktop);
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    );
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("playsinline", "");
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    return iframe;
+  }
+  function restoreThumbnail(wrapper) {
+    const videoId = wrapper.getAttribute("data-video-id");
+    const videoContainer = wrapper.querySelector(".video-container");
+    videoContainer.innerHTML = `
+      <img
+        src="https://img.youtube.com/vi/${videoId}/sddefault.jpg"
+        alt="Video Thumbnail"
+        class="video-thumbnail1"
+        width="100%"
+        height="100%"
+      />
+      <button class="play-button" aria-label="Play">
+        <svg height="100%" viewBox="0 0 68 48" width="100%">
+          <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55
+          C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19
+          C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
+          S67.94,13.05,66.52,7.74z"
+          fill="#212121" fill-opacity="0.8"></path>
+          <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+        </svg>
+      </button>
+    `;
+  }
+  // Handle click on video wrapper
   videoWrappers.forEach((wrapper) => {
-    wrapper.onclick = () => {
+    wrapper.addEventListener("click", (e) => {
       const videoId = wrapper.getAttribute("data-video-id");
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-      iframe.frameBorder = "0";
-      iframe.allow =
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      iframe.allowFullscreen = true;
-
-      iframe.style.width = "100%";
-      iframe.style.height = "100%";
-
       const videoContainer = wrapper.querySelector(".video-container");
-      videoContainer.innerHTML = "";
-      videoContainer.appendChild(iframe);
-    };
+      const existingIframe = wrapper.querySelector("iframe");
+      // If video already playing → stop it
+      if (existingIframe) {
+        restoreThumbnail(wrapper);
+        gallerySwiper.autoplay.start();
+        return;
+      }
+      // Remove all iframes first
+      videoWrappers.forEach((w) => restoreThumbnail(w));
+      // Stop autoplay
+      gallerySwiper.autoplay.stop();
+      videoContainer.innerHTML = ""; // Clear preview first
+      // Delay prevents "Video player config error 153"
+      setTimeout(() => {
+        const iframe = createYouTubeIframe(videoId);
+        videoContainer.appendChild(iframe);
+      }, 100); // 100ms delay = YouTube recommended fix
+      e.stopPropagation();
+    });
+  });
+  // Close video if clicked outside
+  document.addEventListener("click", (e) => {
+    const isInsideVideo = e.target.closest(".index-video1");
+    if (!isInsideVideo) {
+      videoWrappers.forEach((wrapper) => restoreThumbnail(wrapper));
+      gallerySwiper.autoplay.start();
+    }
   });
 </script>
 {% comment %} <script src="{% static 'js/galleryanimation.js' %}"></script> {% endcomment %}
