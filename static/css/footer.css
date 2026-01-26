@@ -305,6 +305,9 @@
   }
 }
 @media (max-width: 576px) {
+  .new-footer-main-content{
+    padding: 30px 5px;
+  }
   .footer-bg-img {
     bottom: 0%;
   }

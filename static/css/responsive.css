@@ -1522,7 +1522,7 @@
     font-size: 2.25rem;
   }
   #banner-7 {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 0px;
     /* background-position: left center; */
     background-position: center;
@@ -1932,6 +1932,10 @@
   #reviews-2 .section-title h2{
     font-size: 24px;
   }
+  .contact-wrapper .col-lg-4,
+  .contact-wrapper .col-lg-8{
+    padding: 0px 0px;
+  }
 }
 @media (max-width: 576px) {
   .services-section {
@@ -2123,6 +2127,10 @@
   .col-lg-8 {
     width: 100% !important;
     text-align: center;
+  }
+  .new__valores{
+    width: 95% !important;
+    margin: auto;
   }
   .info-4-img img {
     width: 70%;

@@ -174,6 +174,9 @@
   .Implant-second-section {
     margin: 10% auto 6.5%;
   }
+  .Implant-second-section .container{
+    --bs-gutter-x: 2rem;
+  }
   .Implantfirst-headS {
     font-size: 20px;
     line-height: 1.4;
@@ -323,7 +326,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
+    aspect-ratio: 1/1;
     width: 100%;
   }
   .ImplantProsthesis-content {
@@ -355,9 +359,11 @@
     top: 20%;
   }
   .ImplantImageWrapper-mobile {
-    background-size: 100% 75%;
+    background-size: cover;
     background-position: top;
     margin-bottom: -8%;
+    height: 100%;
+    aspect-ratio: 1/1.4;
   }
   .ImplantProsthesis-content {
     transition: all 0.5s ease;
@@ -388,7 +394,7 @@
 }
 @media (max-width: 450px) {
   .ImplantImageWrapper-mobile {
-    margin-top: -22%;
+    margin-top: -0%;
     background-position: center;
   }
 }
@@ -718,7 +724,7 @@
     display: none;
   }
   .TypeofImplants .container {
-    --bs-gutter-x: 6rem;
+    --bs-gutter-x: 2rem;
   }
   .Type-content h3 {
     font-size: 16px;
@@ -736,7 +742,7 @@
   }
   .type-product_img {
     padding: 0px !important;
-    height: 15em;
+    height: 18em;
   }
   .type-product_left-block {
     padding: 20px 0px 0px;
@@ -851,7 +857,7 @@
     overflow: visible;
   }
   .typeslider .container {
-    --bs-gutter-x: 4.8rem;
+    --bs-gutter-x: 0.8rem;
   }
   .iv3 {
     width: 48% !important;
@@ -863,10 +869,10 @@
     font-size: 22px;
   }
   .ImplantProsthesis .product-section-title {
-    left: 5%;
+    left: 1%;
     position: relative;
     margin-bottom: 12px;
-    width: 90%;
+    width: 100%;
   }
   .typeslider {
     padding-top: 1rem;
@@ -885,8 +891,8 @@
 }
 @media (max-width: 450px) {
   .typeslider-wrapper {
-    width: 84%;
-    justify-content: center;
+    /* width: 84%; */
+    justify-content: left;
     align-items: center;
   }
 }
@@ -1032,7 +1038,7 @@
   .future-title {
     font-size: 22px;
     text-align: left;
-    left: 8%;
+    left: 1%;
     position: relative;
   }
   .future-content .future-p,
@@ -1052,7 +1058,7 @@
     padding: 0px;
   }
   .future-Implants .row {
-    --bs-gutter-x: 0.2rem;
+    --bs-gutter-x: -0.9rem;
   }
 }
 .patient-success {
@@ -1222,9 +1228,10 @@
   }
   .patient-success-content p {
     letter-spacing: 0.34px;
+    font-size: 14px;
   }
   .patient-success .container {
-    --bs-gutter-x: 6rem;
+    --bs-gutter-x: 2rem;
   }
   .patient-success .vector2 {
     display: none;
@@ -1343,7 +1350,7 @@
 }
 @media (max-width: 576px) {
   .implant-faq .container {
-    --bs-gutter-x: 6rem;
+    --bs-gutter-x: 4rem;
   }
   .implant-faq .product-section-title {
     font-size: 22px;

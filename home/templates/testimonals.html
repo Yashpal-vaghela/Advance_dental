@@ -83,7 +83,7 @@
   <!-- End container -->
 </div>
 <!-- END BREADCRUMB -->
-<div id="gallery-1" class="gallery-section division pt-50">
+<div id="gallery-1" class="gallery-section division pt-50 pb-40">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 offset-lg-1 section-title">
@@ -123,96 +123,93 @@
     </div>
   </div>
   <!-- client reviews -->
-  <section id="reviews-2">
-    <div class="section-title text-center">
-      <h2 class="h2-ms steelblue-color pt-50">
-        Client Chronicles: Their Stories, Their Experiences
-      </h2>
-    </div>
-    <div class="review-section testimonials-slider">
-      <div
-        class="review-overlay"
-        style="opacity: 0.7; background-color: rgb(36, 169, 146)"
-      ></div>
-      <div class="container position-relative text-center">
-        <div class="row justify-content-center carousel-row">
-          <div class="col-sm-11 col-md-11 col-lg-10 col-11">
-            <div
-              class="carousel slide"
-              data-bs-ride="carousel"
-              id="carouselExampleControls"
-            >
-              <div class="review-slider-testimonials">
-                <div class="carousel-inner">
-                  {% for ie in data %}
-                  <div
-                    class="{% if forloop.first %}active{% endif %} carousel-item"
-                    aria-label="Slide {{ forloop.counter }}"
-                  >
-                    <div
-                      class="review-user mx-auto col-lg-8 col-md-10 col-sm-11 col-12"
-                    >
-                      <div class="user_image">
-                        <img
-                          src="{% static 'img/profile-user-3.png' %}"
-                          class="d-block w-100"
-                          alt="Generic user profile icon representing individual identity or account avatar"
-                        />
-                      </div>
-                      <p class="review-user-txt" data-full-text="{{ ie.review|escape }}">
-                        <i class="fa-solid fa-quote-left"></i>
-                          <span class="review-text">
-                            {{ ie.review|truncatechars:480 }}
-                          </span>
-                        {% if ie.google_review_link and ie.review|length > 480%}
-                          <a
-                            href="{{ ie.google_review_link }}"
-                            target="_blank"
-                            rel="nofollow noopener"
-                            class="read-more-review-link fw-bold"
-                          >
-                          Read more
-                          </a>
-                        {% endif %}
-                        <i class="fa-solid fa-quote-right"></i>
-                      </p>
-                      <div class="review-user-name">{{ie.name}}</div>
-                      <div class="review-user-desk">{{ie.position}}</div>
-                    </div>
+<section id="reviews-2">
+  <div class="section-title text-center">
+    <h2 class="h2-m steelblue-color mb-0 home-section-title">
+      Client Chronicles: Their Stories, Their Experiences
+    </h2>
+  </div>
+  <div class="review-section testimonials-slider">
+    <div
+      class="review-overlay"
+      style="opacity: 0.7; background-color: rgb(36, 169, 146)"
+    ></div>
+    <div class="container position-relative text-center">
+      <div class="row justify-content-center carousel-row">
+        <div
+          class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
+          data-bs-ride="carousel"
+          id="carouselExampleControls"
+        >
+           <div class="review-slider-testimonials">
+            <div class="carousel-inner">
+              {% for ie in data %}
+              <div
+                class="{% if forloop.first %}active{% endif %} carousel-item"
+                aria-label="Slide {{ forloop.counter }}"
+              >
+                <div
+                  class="review-user mx-auto col-lg-9 col-md-12 col-sm-11 col-12"
+                >
+                  <div class="user_image">
+                    <img
+                      src="{% static 'img/profile-user-3.webp' %}"
+                      class="d-block w-100"
+                      alt="User icon representing profile identity or personal account avatar in interface design"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
-                  {% endfor %}
-                </div>
-                <div class="carousel-controls">
-                  <button
-                    class="carousel-control-prev review-prev-button"
-                    type="button"
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
-                  <button
-                    class="carousel-control-next review-next-button"
-                    type="button"
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
+                  <p class="review-user-txt">
+                    <i class="fa-solid fa-quote-left"></i>
+                    {{ ie.review|truncatechars:480 }}
+                    {% if ie.google_review_link and ie.review|length > 480 %}
+                      <a
+                        href="{{ ie.google_review_link }}"
+                        target="_blank"
+                        rel="nofollow noopener"
+                        class="read-more-review-link fw-bold"
+                      >
+                      Read more
+                      </a>
+                    {% endif %}
+                    <i class="fa-solid fa-quote-right"></i>
+                  </p>
+                  <p class="review-user-name mb-0">{{ ie.name }}</p>
                 </div>
               </div>
+              {% endfor %}
             </div>
-          </div>
+            <div class="carousel-controls">
+              <button
+                class="carousel-control-prev review-prev-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <button
+                class="carousel-control-next review-next-button"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+          </div> 
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <div class="container mt-30 pt-5">
     <div class="row gallery-items-list">

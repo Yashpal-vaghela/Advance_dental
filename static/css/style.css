@@ -114,7 +114,9 @@ body {
 .pt-20 {
   padding-top: 20px;
 }
-
+.pb-40{
+  padding-bottom: 45px;
+}
 .pb-50 {
   padding-bottom: 50px;
 }
@@ -869,7 +871,7 @@ td.text-right {
 
 @media (max-width: 500px) {
   .sbox-51 {
-    width: 300px;
+    width: 350px;
   }
 }
 
@@ -1045,7 +1047,8 @@ td.text-right {
 }
 
 .related-product-posts .swiper-container .swiper-pagination {
-  margin-top: 55px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .swiper-container .swiper-pagination {
@@ -1387,7 +1390,9 @@ td.text-right {
   .beforeSwiper .swiper-pagination-fraction {
     top: var(--swiper-pagination-top, 92%) !important;
   }
-
+  .beforeSwiper .swiper-slide img{
+    width: 95% !important;
+  }
   .card-desc {
     font-size: 12px;
     text-align: center;
@@ -1401,13 +1406,21 @@ td.text-right {
   .beforeSwiper .swiper-pagination-fraction {
     top: var(--swiper-pagination-top, 96%) !important;
   }
-
+  .gallerySwiper .swiper-horizontal > .swiper-pagination-bullets,
+  .gallerySwiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .gallerySwiper .swiper-pagination-custom,
+  .gallerySwiper .swiper-pagination-fraction {
+    top: var(--swiper-pagination-top, 88%) !important;
+  }
+  .gallerySwiper{
+    padding-bottom: 10px !important;
+  }
   .gallerySwiper .swiper-slide {
     padding-bottom: 0;
   }
 
   .testimonalSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: var(--swiper-pagination-top, 92%) !important;
+    top: var(--swiper-pagination-top, 96%) !important;
   }
 }
 
@@ -4290,7 +4303,7 @@ ul {
   }
 
   .globalCard {
-    margin: 24px;
+    margin: 14px;
   }
 
   .cd_text {
@@ -5129,6 +5142,9 @@ a {
   .company_content_description {
     font-size: 14px;
     line-height: 1.55;
+  }
+  .company_partners_section .container{
+    width:95%;
   }
 }
 

@@ -119,22 +119,22 @@
       <div class="row">
         <div class="col-lg-4 d-lg-block d-none image-container1">
           <img
-            src="{% static 'images/vector.png' %}"
+            src="{% static 'images/vector.webp' %}"
             alt="Image 1"
             class="styled-image img-fluid image1"
           />
           <img
-            src="{% static 'images/vector.png' %}"
+            src="{% static 'images/vector.webp' %}"
             alt="Image 2"
             class="styled-image img-fluid image2"
           />
           <img
-            src="{% static 'images/vector.png' %}"
+            src="{% static 'images/vector.webp' %}"
             alt="Image 3"
             class="styled-image img-fluid image3"
           />
           <img
-            src="{% static 'images/vector.png' %}"
+            src="{% static 'images/vector.webp' %}"
             alt="Image 4"
             class="styled-image img-fluid image4"
           />
@@ -148,7 +148,7 @@
               <div class="swiper-slide swiper-slide-active">
                 <div class="vector-img-wrapper mt-5" id="vector-img1">
                   <img
-                    src="{% static 'images/vector-mobile411.png' %}"
+                    src="{% static 'images/vector-mobile1.webp' %}"
                     alt="Image1"
                     class="vector-Image1 img-fluid d-md-block d-lg-none"
                   />
@@ -166,7 +166,7 @@
               <div class="swiper-slide">
                 <div class="vector-img-wrapper mt-5" id="vector-img2">
                   <img
-                    src="{% static 'images/vector-mobile44.png' %}"
+                    src="{% static 'images/vector-mobile2.webp' %}"
                     alt="Image1"
                     class="vector-Image2 img-fluid d-md-block d-lg-none"
                   />
@@ -185,7 +185,7 @@
               <div class="swiper-slide">
                 <div class="vector-img-wrapper mt-5" id="vector-img3">
                   <img
-                    src="{% static 'images/vector-mobile32.png' %}"
+                    src="{% static 'images/vector-mobile3.webp' %}"
                     alt="Image1"
                     class="vector-Image3 img-fluid d-md-block d-lg-none"
                   />
@@ -204,7 +204,7 @@
               <div class="swiper-slide">
                 <div class="vector-img-wrapper mt-5" id="vector-img4">
                   <img
-                    src="{% static 'images/vector-mobile431.png' %}"
+                    src="{% static 'images/vector-mobile4.webp' %}"
                     alt="Image1"
                     class="vector-Image4 d-md-block d-lg-none"
                   />
@@ -225,7 +225,7 @@
                   id="vector-img5"
                 >
                   <img
-                    src="{% static 'images/vector-mobile53.png' %}"
+                    src="{% static 'images/vector-mobile5.webp' %}"
                     alt="Image1"
                     class="vector-Image4 d-md-block d-lg-none"
                   />
@@ -256,7 +256,7 @@
       class="row mx-auto mx-md-0 justify-content-center justify-content-lg-start swiper-card"
     >
       <div
-        class="col-lg-5 col-md-11 col-sm-12 col-11 bdld-services-section-title"
+        class="col-lg-5 col-md-11 col-sm-12 col-12 bdld-services-section-title"
       >
         <h2 class="mb-3 mb-lg-5">Our Comprehensive Dental Services</h2>
         <p>
@@ -265,7 +265,7 @@
           patients
         </p>
       </div>
-      <div class="col-11 col-md-12 col-lg-7 mt-lg-3">
+      <div class="col-12 col-md-12 col-lg-7 mt-lg-3">
         <div class="swiper serviceSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -399,8 +399,8 @@
 </section>
 
 <!-- client reviews -->
-<section id="reviews-2">
-  <div class="section-title text-center">
+<section id="reviews-2" class="mb-5 mt-lg-5 mt-2 mt-md-2">
+  <div class="section-title text-center container">
     <h2 class="h2-m steelblue-color mb-0 home-section-title">
       Client Chronicles: Their Stories, Their Experiences
     </h2>
@@ -425,7 +425,7 @@
                 aria-label="Slide {{ forloop.counter }}"
               >
                 <div
-                  class="review-user mx-auto col-lg-8 col-md-12 col-sm-11 col-12"
+                  class="review-user mx-auto col-lg-9 col-md-12 col-sm-11 col-12"
                 >
                   <div class="user_image">
                     <img
@@ -451,7 +451,7 @@
                     {% endif %}
                     <i class="fa-solid fa-quote-right"></i>
                   </p>
-                  <p class="review-user-name mb-0">{{ ie.name }}</p>
+                  <p class="review-user-name mb-0">{{ ie.name|capfirst }}</p>
                 </div>
               </div>
               {% endfor %}
@@ -514,7 +514,7 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 col-11 mx-auto text-center">
           <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
             <a
               href="{% url 'home:gallery' %}"
@@ -830,7 +830,11 @@
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
-        autoplay: false,
+        // autoplay: false,
+        autoplay:{
+          delay: 2000,
+          disableOnInteraction: false,
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -920,7 +924,7 @@
               duration: 1,
               ease: "power2.out",
               onComplete: () => {
-                initDesktopHorizontalScroll();
+                // initDesktopHorizontalScroll();
               },
             });
           },
@@ -947,8 +951,7 @@
     }, 300);
   });
 </script>
-
-<script>
+{% comment %} <script>
   gsap.registerPlugin(ScrollTrigger);
 
   function initHorizontalScroll() {
@@ -1038,6 +1041,129 @@
   document.addEventListener("DOMContentLoaded", () => {
     initHorizontalScroll();
   });
+</script> {% endcomment %}
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.matchMedia({
+    "(min-width:992px)": function(){
+      function initHorizontalScroll() {
+        const section = document.querySelector(".bdld-services-section");
+        const scrollContainer = section?.querySelector(".scroll-container");
+        const cardsWrapper = section?.querySelector(".swiper-wrapper");
+        const progressBar = section?.querySelector(".progress-bar");
+        const progressTracker = section?.querySelector(".progress-tracker");
+
+        if (!section || !scrollContainer || !cardsWrapper) return;
+
+        // Kill old triggers (VERY IMPORTANT)
+        ScrollTrigger.getAll().forEach(st => {
+          if (st.trigger === section) st.kill();
+        });
+
+        // Reset progress bar
+        gsap.set(progressBar, { width: "0%" });
+        progressTracker.classList.remove("progress-visible");
+        let top1 = 50;
+        function updateTopValue(){
+          const w = window.innerWidth;
+          if(w >= 992 && w <= 1024){
+            top1 = 35;
+          }else if(w >= 1024 && w <= 1200){
+            top1 = 120;
+          } else if(w >= 1200 && w <= 1300){
+            top1 = 80;
+          } else if(w >= 1300 && w <= 1440){
+            top1 = 60;
+          }else if(w >= 1439 && w <= 1649){
+            top1 = 155;
+          }else if(w >= 1650 && w <= 1800){
+            top1 = 210;
+          }else if(w >= 1800 && w <= 2000){
+            top1 = 315;
+          }else if(w>= 2000){
+            top1 = 640;
+          }else{
+            top1 = 80;
+          }
+        }
+        // Wait for layout to settle
+        requestAnimationFrame(() => {
+          updateTopValue();
+          const totalScrollWidth = scrollContainer.scrollWidth - section.offsetWidth + top1;
+          console.log("totalScrollWidth",totalScrollWidth,top1,scrollContainer.scrollWidth - section.offsetWidth / 0.5);
+          gsap.to(scrollContainer, {
+            x: () => `-${totalScrollWidth}`,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 15%",
+              end: () => `+=${totalScrollWidth}`,
+              scrub: true,
+              pin: true,
+              anticipatePin: 1,
+
+              onUpdate: (self) => {
+                const progress = self.progress * 100;
+
+                progressTracker.classList.add("progress-visible");
+
+                gsap.to(progressBar, {
+                  width: `${progress}%`,
+                  duration: 0.2,
+                  ease: "power1.out",
+                  overwrite: "auto",
+                });
+              },
+
+              onLeave: () => {
+                gsap.to(progressBar, {
+                  width: "100%",
+                  duration: 0.2
+                });
+              },
+              onEnterBack: () => {
+                gsap.set(progressBar, { width: "0%" });
+              }
+            }
+          });
+        });
+
+        // Fade-in heading
+        gsap.from(".bdld-services-section-title h2, .bdld-services-section-title p",
+          {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+              trigger: section,
+              start: "top center",
+              once: true,
+            }
+          }
+        );
+      }
+
+      // Init
+      window.addEventListener("load", () => {
+        initHorizontalScroll();
+        ScrollTrigger.refresh();
+      });
+
+      // Refresh on resize (debounced)
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          initHorizontalScroll();
+          ScrollTrigger.refresh();
+        }, 300);
+      });
+    }
+  })
+}) 
 </script>
 
 
