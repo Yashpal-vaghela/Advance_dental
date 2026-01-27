@@ -1973,8 +1973,13 @@
   .info-section .container,
   .about-qulified-section .container,
   .mySwiper1 {
-    padding-left: 30px;
-    padding-right: 30px;
+    /* padding-left: 30px;
+    padding-right: 30px; */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  h2.h2-m{
+    font-size: 22px !important;
   }
   .info-section .container .row {
     margin-left: 0;
@@ -2082,7 +2087,7 @@
     text-align: left;
   }
   .info-4-img img {
-    width: 80%;
+    width: 60%;
     height: auto;
   }
   .icon-box svg {

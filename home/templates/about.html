@@ -95,6 +95,7 @@
               <!-- Recommended sizes for Retina Ready displays is 400x68px; -->
               <img class="img-fluid" src="{% static 'img/puja.png' %}" width="200" height="50" alt="Cursive text image of Haresh Savani name in elegant handwritten style PNG format" />
             </div>
+            
           </div>
           <!-- INFO TEXT -->
           <div class="col-lg-8 about-info">
@@ -127,18 +128,31 @@
                 retain their full warranty.
               </p>
               <!-- Key Points  -->
-              <div class="ade-points">
+              <div class="ade-points d-block d-xl-block d-md-none">
                 <p>Join us in the evolution of modern dentistry.</p>
                 <p>Let’s create smiles that inspire confidence—one restoration at a time.</p>
                 <p>Faster. Smarter. Better. That’s the ADE promise.</p>
               </div>
-              <div class="text-left">
+              <div class="text-left d-block d-xl-block d-md-none">
                 <a href="{% url 'home:contact_new' %}" 
                    class="btn btn-blue blue-hover mt-20">
                     Get In Touch
                 </a>
               </div>
             </div>
+          </div>
+          <div class="col-md-12 d-md-block d-none d-xl-none">
+            <div class="ade-points">
+                <p>Join us in the evolution of modern dentistry.</p>
+                <p>Let’s create smiles that inspire confidence—one restoration at a time.</p>
+                <p>Faster. Smarter. Better. That’s the ADE promise.</p>
+            </div>
+             <div class="text-left">
+                <a href="{% url 'home:contact_new' %}" 
+                   class="btn btn-blue blue-hover mt-20">
+                    Get In Touch
+                </a>
+              </div>
           </div>
         </div> <!-- End row -->
       </div> <!-- END TOP ROW -->
@@ -331,15 +345,15 @@
     </div>
   </section>
 
-  <section id="services-7" class="wide-75 servicess-section division">
+  <section id="services-7" class="wide-50 servicess-section division">
     <div class="container">
-      <div class="row justify-content-center mb-3 mb-sm-5">
+      <div class="row justify-content-center mb-2 mb-sm-4">
         <div class="col-lg-10 text-center">
           <h2 class="h2-m steelblue-color">Quality Dental Services by ADE</h2>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">CAD/CAM Technology</h3>
               <div class="sbox-72-txt">
@@ -347,7 +361,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Cosmetic Restoration</h3>
               <div class="sbox-72-txt">
@@ -355,7 +369,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Implant Specialists</h3>
               <div class="sbox-72-txt">
@@ -363,7 +377,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Custom Milling</h3>
               <div class="sbox-72-txt">
@@ -371,7 +385,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Laser Welding</h3>
               <div class="sbox-72-txt">
@@ -379,7 +393,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Diagnostic Wax-Ups</h3>
               <div class="sbox-72-txt">
@@ -387,7 +401,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Case Planning Assistance</h3>
               <div class="sbox-72-txt">
@@ -395,7 +409,7 @@
               </div>
           </div>
         </div>
-        <div class="col-md-4 col-10">
+        <div class="col-md-6 col-lg-4 col-10">
           <div class="sbox-72 icon-xs wow fadeInUp" data-wow-delay="0.4s">
               <h3 class="steelblue-color">Shade Analysis</h3>
               <div class="sbox-72-txt">
