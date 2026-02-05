@@ -69,29 +69,24 @@
 <section id="about-7">
   <div class="container">
     <div class="row d-flex align-items-center">
-
-      <div class = "about-heading">
-        <h2 class="h2">Best Dental Laboratory in 
-          <span class="fw-bold steelblue-color">{{ pk.name }}: </span> The Address of
-          {% comment %} <span class="pc-break"></span> {% endcomment %}
-           Accuracy, Quality, and Trust
-        </h2>       
-      </div>
-
       <div class="about-img-section col-lg-5">
-        <div class="about-img-new1 text-left wow fadeInUp" data-wow-delay="0.6s">
+        <div class="about-img-new1 text-left">
           <img 
             class="img-fluid" 
             src="{% static 'about-ade1.webp' %}" 
             alt="Portrait of Haresh Savani, Founder of Advance Dental Export" 
-            title="Haresh Savani, Founder" 
-            loading="lazy" 
+            title="Haresh Savani, Founder"
           />
         </div>
       </div>
 
       <div class="col-lg-12">
-        <div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="txt-block pc-30">
+          <div class = "about-heading">
+            <h2 class="h2">Best Dental Laboratory in 
+              <span class="fw-bold steelblue-color">{{ pk.name }}, </span> The Address of Accuracy, Quality, and Trust
+            </h2>       
+          </div>
           <p>
             <span class="blue-color">Welcome to Advance Dental Export!</span>
             We are the best dental laboratory in 
@@ -112,7 +107,7 @@
   </div>
 </section>
 
-
+<!-- new advantage section -->
 <section class="new-advantage-section mb-5" id="newadvantage_section">
   <div class="new__valores_pin">
     <div class="container">
@@ -176,7 +171,7 @@
                 >
                   <h3>Experienced and Skilled Team</h3>
                   <p>
-                    Our team of over 400 experienced and skilled technicians,
+                    Our team of over 750 experienced and skilled technicians,
                     with years of knowledge and artistry, prepares each product
                     to the highest standards.
                   </p>
@@ -249,17 +244,17 @@
     </div>
   </div>
 </section>
-
+<!-- services section -->
 <section class="bdld-services-section pb-4" id="bdld-services-section">
   <div class="scroll-container container">
     <div
       class="row mx-auto mx-md-0 justify-content-center justify-content-lg-start swiper-card"
     >
       <div
-        class="col-lg-5 col-md-11 col-sm-12 col-12 bdld-services-section-title"
+        class="col-lg-5 col-sm-12 col-12 bdld-services-section-title"
       >
         <h2 class="mb-3 mb-lg-5">Our Comprehensive Dental Services</h2>
-        <p>
+        <p class="mb-3">
           As a trusted dental laboratory for {{pk.name}}’s dentists, we offer a
           wide range of quality and comprehensive dental solutions for your
           patients
@@ -517,9 +512,9 @@
         <div class="col-md-12 col-11 mx-auto text-center">
           <div class="all-posts-btn mb-40 wow fadeInUp" data-wow-delay="1s">
             <a
-              href="{% url 'home:gallery' %}"
+              href="{% url 'home:beforeafter' %}"
               class="btn btn-blue blue-hover submit"
-              aria-label="See more in the Ade Gallery"
+              aria-label="See more"
               >See More</a
             >
           </div>
@@ -541,164 +536,149 @@
             </p>
           </div>
           <div class="contact-wrapper d-lg-flex d-md-flex d-sm-block">
-            <div class="col-md-5 col-lg-4 icon-xs wow fadeInUp mb-sm-4 mb-4 mb-md-0"
-              data-wow-delay="0.4s"
-              style="
-                visibility: visible;
-                animation-delay: 0.4s;
-                animation-name: fadeInUp;
-              ">
-              <div class="contact-main-content">
-                <h3 class="mb-3 contact-title">Contact Address</h3>
-                <div class="contact-box mb-20">
-                  <h4 class="contact-content">India Office</h4>
-                  <a href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47" target="_blank" class="contact-content">
-                    <p>
-                      Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel
-                      Royal, Velanja Road, Umra, Surat, Gujarat, India - 394 130.
-                    </p>
-                  </a>
-                  <p class="contact-phone">
-                      <div style="font-size: 12px;">
-                          <i class="fa-sharp fa-solid fa-phone"></i> :
-                          +91 84 88 88 88 77
-                      </div>
-                      <div style="font-size: 12px;">
-                          <i class="fa-sharp fa-solid fa-phone"></i> :
-                          +91 84 69 88 88 77
-                      </div>
-                  </p>
-                  <p>
-                    <i class="fa-sharp fa-solid fa-envelope"></i> :
-                    <a href="mailto:info@advancedentalexport.com" class="blue-color" rel="nofollow">info@advancedentalexport.com</a>
-                  </p>
-                </div>
-                <div class="contact-box mb-20">
-                  <h4 class="contact-content mb-2">Canada Office</h4>
-                  <p>
-                    <i class="fa-sharp fa-solid fa-phone"></i> :
-                    +1 306-290-9222
-                  </p>
-                  <p>
-                    <i class="fa-sharp fa-solid fa-envelope"></i> :
-                    <a href="mailto: advancedentalservice@gmail.com" class="blue-color" rel="nofollow">advancedentalservice@gmail.com</a>
-                  </p>
-                </div>
-                <div class="contact-box mb-15">
-                  <h4 class="contact-content">USA Office</h4>
-                  <p>
-                    <i class="fa-sharp fa-solid fa-phone"></i> :
-                    +1 551-380-0385
-                  </p>
-                  <p class="d-flex align-items-center">
-                    <i class="fa-sharp fa-solid fa-envelope me-1"></i>:
-                    <a href="mailto:overseas@advancedentalexport.com" class="blue-color ms-1" rel="nofollow">overseas@advancedentalexport.com</a>
-                  </p>
-                </div>
-              </div>
-          </div>
-
-            <div class="col-md-7 col-lg-8 icon-xs wow fadeInUp"  data-wow-delay="0.4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;">
-                <div
-                  class="form-holder mb-0 d-flex align-items-center justify-content-center h-100">
-                  <form
-                    class="row contact-form2 form align-items-center justify-content-center"
-                    method="post"
-                    action="{% url 'home:bdld' slug=pk.slug %}"
-                  >
-                    {% csrf_token %}
-                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
+            <div class="col-md-5 col-lg-4 icon-xs wow fadeInUp mb-sm-4 mb-4 mb-md-0 px-0" data-wow-delay="0.4s" style="
+                          visibility: visible;
+                          animation-delay: 0.4s;
+                          animation-name: fadeInUp;
+                        ">
+                    <div class="contact-main-content">
+                    <h3 class="mb-3 contact-title">Contact Address</h3>
+                    <div class="contact-box mb-20">
+                      <h4 class="contact-content">India Office</h4>
+                      <a href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47" target="_blank" class="contact-content">
+                      <p> Plot No. 1 to 8, Marutidham Industrial Estate, Behind Hotel Royal, Velanja Road, Umra, Surat, Gujarat, India - 394 130. </p>
+                      </a>
+                      <p>
+                      <i class="fa-sharp fa-solid fa-phone"></i> : <a href="tel:+918488888877" class="blue-color">+91 84 88 88 88 77</a>
+                      </p>
+                      <p>
+                      <i class="fa-sharp fa-solid fa-phone"></i> : <a href="tel:+918469888877" class="blue-color">+91 84 69 88 88 77</a>
+                      </p>
+                      <p>
+                      <i class="fa-sharp fa-solid fa-envelope"></i> : <a href="mailto:info@advancedentalexport.com" class="blue-color" rel="nofollow">info@advancedentalexport.com</a>
+                      </p>
+                    </div>
+                    <div class="contact-box mb-20">
+                      <h4 class="contact-content mb-2">Canada Office</h4>
+                      <p>
+                      <i class="fa-sharp fa-solid fa-phone"></i> : <a href="tel:+13062909222" class="blue-color">+1 306-290-9222</a>
+                      </p>
+                      <p>
+                      <i class="fa-sharp fa-solid fa-envelope"></i> : <a href="mailto: advancedentalservice@gmail.com" class="blue-color" rel="nofollow">advancedentalservice@gmail.com</a>
+                      </p>
+                    </div>
+                    <div class="contact-box mb-15">
+                      <h4 class="contact-content">USA Office</h4>
+                      <p>
+                      <i class="fa-sharp fa-solid fa-phone"></i> : <a href="tel:+15513800385" class="blue-color">+1 551-380-0385</a>
+                      </p>
+                      <p class="d-flex align-items-center">
+                      <i class="fa-sharp fa-solid fa-envelope me-1"></i>: <a href="mailto:overseas@advancedentalexport.com" class="blue-color ms-1" rel="nofollow">overseas@advancedentalexport.com</a>
+                      </p>
+                    </div>
+                    </div>
+                  </div>			
+                  <div class="col-md-7 col-lg-8 icon-xs wow fadeInUp"  data-wow-delay="0.4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;">
+                    <div
+                    class="form-holder mb-40 d-flex align-items-center justify-content-center h-100">
+                    <form
+                      class="row contact-form2 form align-items-center justify-content-center"
+                      method="post"
+                      action="{% url 'home:bdld' slug=pk.slug %}"
+                    >
+                      {% csrf_token %}
+                      <div class="col-md-12 col-lg-6">
                       <div class="form-group">
                         <input
-                          id="form_name"
-                          name="name"
-                          class="form-control name"
-                          placeholder="Your Name*"
-                          required
-                          data-error="Enter no more than (2) characters."
+                        id="form_name"
+                        name="name"
+                        class="form-control name"
+                        placeholder="Your Name*"
+                        required
+                        data-error="Enter no more than (2) characters."
                         />
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
+                      </div>
+                      <div class="col-md-12 col-lg-6">
                       <div class="form-group">
                         <input
-                          id="form_email"
-                          class="form-control email"
-                          type="email"
-                          name="email"
-                          placeholder="Your Email"
-                          required
-                          data-error="Email is required"
+                        id="form_email"
+                        class="form-control email"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email*"
+                        required
+                        data-error="Email is required"
                         />
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
+                      </div>
+                      <div class="col-md-12 col-lg-6">
                       <div class="form-group">
                         <input
-                          id="form_phone"
-                          class="form-control phone"
-                          type="tel"
-                          name="contact"
-                          placeholder="Your Phone Number"
-                          required
-                          data-error="Please enter only digits."
+                        id="form_phone"
+                        class="form-control phone"
+                        type="tel"
+                        name="contact"
+                        placeholder="Your Phone Number*"
+                        required
+                        data-error="Please enter only digits."
                         />
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6 px-4 px-sm-0 px-md-2">
+                      </div>
+                      <div class="col-md-12 col-lg-6">
                       <div class="form-group">
-                        <input
+                          <input
                           id="form_city"
                           class="form-control city"
                           name="city"
                           placeholder="Your City*"
                           required
                           data-error="City is required"
-                        />
-                        <div class="help-block with-errors"></div>
+                          />
+                          <div class="help-block with-errors"></div>
                       </div>
-                    </div>
-                    <div class="col-md-12 col-lg-12 px-4 px-sm-0 px-md-2">
+                      </div>
+                      <div class="col-md-12 col-lg-12">
                       <div class="form-group">
                         <input
-                          id="form_subject"
-                          class="form-control subject"
-                          name="subject"
-                          placeholder="Subject*"
-                          required
-                          data-error="Subject is required"
+                        id="form_subject"
+                        class="form-control subject"
+                        name="subject"
+                        placeholder="Subject*"
+                        required
+                        data-error="Subject is required"
                         />
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
-                    <div class="col-md-12 input-message px-4 px-sm-0 px-md-2">
+                      </div>
+                      <div class="col-md-12 input-message">
                       <div class="form-group">
                         <textarea
-                          id="form-message"
-                          class="form-control message"
-                          name="message"
-                          rows="8"
-                          placeholder="Your Message ..."
-                          required  
-                          data-error="Enter no more than (10) characters."
+                        id="form-message"
+                        class="form-control message"
+                        name="message"
+                        rows="8"
+                        placeholder="Your Message ..."
+                        required  
+                        data-error="Enter no more than (10) characters."
                         ></textarea>
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
-                    <div class="col-md-12 mt-15 form-btn submit-btn">
+                      </div>
+                      <div class="col-md-12 mt-15 form-btn submit-btn">
                       <div class="g-recaptcha mb-3" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                       <button type="submit" class="btn-blue submit">
                         Send Your Message
                       </button>
+                      </div>
+                    </form>
                     </div>
-                  </form>
-                </div>
+                  </div>
             </div>
           </div>
-        </div>
     </div>
 </section>
 
@@ -815,6 +795,8 @@
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
         },
         breakpoints: {
           0: { slidesPerView: 1 },
@@ -842,6 +824,8 @@
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
         },
       });
 
@@ -1092,7 +1076,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         requestAnimationFrame(() => {
           updateTopValue();
           const totalScrollWidth = scrollContainer.scrollWidth - section.offsetWidth + top1;
-          console.log("totalScrollWidth",totalScrollWidth,top1,scrollContainer.scrollWidth - section.offsetWidth / 0.5);
+          // console.log("totalScrollWidth",totalScrollWidth,top1,scrollContainer.scrollWidth - section.offsetWidth / 0.5);
           gsap.to(scrollContainer, {
             x: () => `-${totalScrollWidth}`,
             ease: "none",
@@ -1133,7 +1117,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         // Fade-in heading
         gsap.from(".bdld-services-section-title h2, .bdld-services-section-title p",
           {
-            opacity: 0,
+            opacity: 1,
             y: 20,
             duration: 0.8,
             stagger: 0.2,

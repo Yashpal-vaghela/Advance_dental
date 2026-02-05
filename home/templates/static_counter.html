@@ -1,4 +1,4 @@
-<div class="container text-center my-4">
+<div id="stats-counter" class="container text-center my-4">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-3 col-6">
       <div class="stat-box d-flex align-items-center justify-content-center">
@@ -9,7 +9,7 @@
           </svg>
         </div>
         <div class="text-box">
-          <div class="text-center text-md-start "><span class="count-element">6</span>L+</div>
+          <div class="text-center text-md-start "><span class="count-element">12</span>L+</div>
           <p>Cases</p>
         </div>
       </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="text-box">
           <div class="text-center text-md-start">
-            <span class="count-element">5500</span>+
+            <span class="count-element">12000</span>+
           </div>
           <p>Trusted Dentists</p>
         </div>
@@ -69,3 +69,64 @@
     </div>
   </div>
 </div>
+
+<script>
+(function () {
+  const DURATION = 4000;
+
+  function parseTarget(el) {
+    const raw = (el.textContent || "").trim();
+    const numStr = raw.replace(/[^\d]/g, "");
+    const target = parseInt(numStr || "0", 10);
+    const suffix = raw.replace(/[\d]/g, "");
+    return { target, suffix };
+  }
+
+  function formatNumber(n, target, suffix) {
+    const useCommas = target >= 1000;
+    const v = useCommas ? n.toLocaleString("en-IN") : String(n);
+    return v + suffix;
+  }
+
+  function animateCount(el) {
+    if (el.dataset.counted === "1") return;
+    el.dataset.counted = "1";
+
+    const { target, suffix } = parseTarget(el);
+    const startTime = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - startTime) / DURATION, 1);
+      const eased = 1 - Math.pow(1 - progress, 7);
+      const current = Math.round(target * eased);
+      el.textContent = formatNumber(current, target, suffix);
+
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = formatNumber(target, target, suffix);
+    }
+
+    el.textContent = formatNumber(0, target, suffix);
+    requestAnimationFrame(tick);
+  }
+
+  function initCounter(sectionSelector) {
+    const section = document.querySelector(sectionSelector);
+    if (!section) return;
+
+    const counters = section.querySelectorAll(".count-element");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          counters.forEach(animateCount);
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+  }
+
+  initCounter("#stats-counter");
+})();
+</script>
