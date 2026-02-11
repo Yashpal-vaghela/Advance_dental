@@ -77,12 +77,7 @@ class StaticSitemap(Sitemap):
                 'changefreq':'weekly',
                 'images': [
                     {
-                        'loc':'https://advancedentalexport.com/static/img/team_about1.jpg',
-                        'title':'About Us – Advance Dental Export',
-                        'caption': 'Leader in Dental Implants, Cosmetic Dentistry &amp; Digital Dentistry. Providing top-notch Dental Lab Services for a perfect smile.'
-                    },
-                    {
-                        'loc':'https://advancedentalexport.com/static/ade.jpeg',
+                        'loc':'https://advancedentalexport.com/static/group-bg-img221.webp',
                         'title':'About Us – Advance Dental Export',
                         'caption': 'Leader in Dental Implants, Cosmetic Dentistry &amp; Digital Dentistry. Providing top-notch Dental Lab Services for a perfect smile.'
                     }
@@ -154,6 +149,7 @@ class ProductSitemap(Sitemap):
                 'description': escape(obj.description)
             }]
         return []
+
 class WebStorySitemap(Sitemap):
     def items(self):
         return ['webstory-index'] + list(WebStory.objects.all().order_by('-publish_date'))
@@ -191,7 +187,6 @@ class WebStorySitemap(Sitemap):
             'content_loc': video.video.url,
             'publication_date': str(item.publish_date)
         } for video in item.videos.all()]
-
     
 class ExhibitionSitemap(Sitemap):
 

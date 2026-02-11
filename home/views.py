@@ -796,17 +796,6 @@ def about(request):
     }
     return render(request, 'about.html', context)
 
-
-
-def sitemap(request):
-    return render(request, 'sitemap.xml', content_type='text/xml')
-
-def sitemap_index(request):
-    return HttpResponse(render_to_string("custom_sitemap_index.xml", {
-        'request': request
-    }), content_type="application/xml")
-
-#end
 def robots(request):
     return render(request, 'robot.txt', content_type='text')
 
@@ -1094,8 +1083,6 @@ def api_user_login(request):
     }
     return render(request, 'api_login.html', context)
     
-
-
 def ext_api(request, pk, fk):
     
     #order
@@ -1517,6 +1504,16 @@ def web_story_detail(request, story_slug):
     story = get_object_or_404(WebStory, slug=story_slug)
     videos = WebStoryVideo.objects.filter(web_story=story)
     return render(request, "web_story_detail.html", {"story": story, "videos": videos, "data": story})
+
+
+
+def sitemap(request):
+    return render(request, 'sitemap.xml', content_type='text/xml')
+
+def sitemap_index(request):
+    return HttpResponse(render_to_string("custom_sitemap_index.xml", {
+        'request': request
+    }), content_type="application/xml")
 
 def sitemap(request):
     products = Product.objects.all()

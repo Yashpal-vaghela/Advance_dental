@@ -872,6 +872,12 @@
     .info-heading {
         font-size: 20px
     }
+
+    .about-img-new {
+        max-width: 75%;
+        display: block;
+        margin: 0 auto
+    }
 }
 
 .bdld-services-section-title {
