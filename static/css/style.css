@@ -1239,13 +1239,17 @@ td.text-right {
 
 @media screen and (min-width:1200px) and (max-width:1500px) {
     .ytbe {
-        height: 60vh !important
+        height: auto !important
     }
 }
-
+@media screen and (min-width:1501px) and (max-width:2200px) {
+    .ytbe {
+        height: auto !important
+    }
+}
 @media screen and (min-width:2200px) and (max-width:3199px) {
     .ytbe {
-        height: 56vh !important
+        height: 44vh !important
     }
 }
 

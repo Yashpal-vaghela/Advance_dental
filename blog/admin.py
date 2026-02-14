@@ -21,6 +21,12 @@ class TestimonialsAdmin(admin.ModelAdmin):
     list_display = ('name', 'priority')
     search_fields = ['name']
 
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ('display_order', 'name')
+    list_editable = ('display_order',)
+    list_display_links = ("name",) 
+    ordering = ('display_order',)
+
 
 # Register your models here.
 
@@ -37,7 +43,7 @@ admin.site.register(NewEventLink)
 admin.site.register(Product)
 admin.site.register(SubProduct)
 admin.site.register(Faqpage)
-admin.site.register(Team)
+admin.site.register(Team, TeamAdmin)
 admin.site.register(Testimonials, TestimonialsAdmin)
 admin.site.register(AboutImage)
 admin.site.register(Client)

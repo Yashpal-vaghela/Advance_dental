@@ -36,6 +36,9 @@
       }
     }
   </style>
+  <link  rel="preload" href="{% static 'css/about.css' %}" as='stylesheet' />
+  <link href={% static 'css/about.css' %} rel="stylesheet" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 {% endblock %}
 
 {% block body %}
@@ -228,15 +231,16 @@
 </section>
 
   <section id="team" class="team-section py-3">
-    <div class="container">
-      <div class="row">
-        <!-- Section Title -->
-        <div class="col-md-12 text-center mb-4">
-          <h2 class="h2-m steelblue-color">Meet Our Passionate Team of Dental Artisans</h2>
+      <div class="container">
+        <div class="row">
+          <!-- Section Title -->
+          <div class="col-md-12 text-center mb-5">
+            <span class="team-section-id mb-3">Meet Our Team</span>
+            <h2 class="team-section-title text-center steelblue-color">Meet Our Passionate Team of Dental Artisans</h2>
+          </div>
         </div>
-
         <!-- Team Slider -->
-        <div class="col-md-12">
+        {% comment %} <div class="col-md-12">
           <div class="swiper teamSwiper">
             <div class="swiper-wrapper">
               {% for ie in team %}
@@ -262,9 +266,28 @@
             <!-- Swiper Pagination -->
             <div class="swiper-pagination"></div>
           </div>
+        </div> {% endcomment %}
+
+        <div class="row g-5 justify-content-center team-grid">
+
+          {% for ie in team %}
+          <div class="col-6 col-lg-3" data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="{{ forloop.counter0|add:'1' }}00">
+            <div class="team-card justify-content-center">
+              <div class="team-frame">
+                <img src="{{ ie.image.url }}" alt="{{ ie.alt }}" class="team-img img-fluid">
+              </div>
+              <div class="team-meta">
+                <div class="team-name">{{ ie.name }}</div>
+                {% comment %} <div class="team-position">{{ ie.position }}</div> {% endcomment %}
+                <div class="team-role">{{ ie.role }}</div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
-    </div>
   </section>
   {% comment %} <section class="mb-5 mb-sm-5 mt-5 about-qulified-section">
     <div class="container">
@@ -428,6 +451,16 @@
 {% endblock %}
 {% block js %}
 {% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> {% endcomment %}
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: false,
+    mirror: true,          
+    offset: 120,         
+    duration: 600,
+    easing: "ease-out",
+  });
+</script>
 <script>
   var teamslider = new Swiper(".teamSwiper",{
     speed: 1000,

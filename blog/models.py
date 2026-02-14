@@ -206,6 +206,10 @@ class Team(models.Model):
     position = models.CharField(max_length = 1156)
     role = models.CharField(max_length = 1256, null=True)
     schema = models.TextField( blank=True, null=True)
+    display_order = models.PositiveIntegerField(default=0)
+    class Meta:
+        ordering = ["display_order"]
+        
     def __str__(self):
         return self.name
 
