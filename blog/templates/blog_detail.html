@@ -795,6 +795,37 @@
     });
   });
 </script>
+<!-- Content whitespace manage scripts  -->
+<script>
+  (function () {
+    const root = document.getElementById("blogContent");
+    if (!root) return;
+
+    const INLINE = new Set(["A","SUB","SUP","STRONG","B","EM","I","U","SMALL","MARK"]);
+    const PUNCT = /^[,.;:!?]/;
+
+    const all = root.querySelectorAll("*");
+
+    all.forEach(el => {
+      if (!INLINE.has(el.tagName)) return;
+
+      let next = el.nextSibling;
+
+      if (next && next.nodeType === Node.TEXT_NODE) {
+        next.nodeValue = next.nodeValue.replace(/^\s+([,.;:!?])/g, "$1");
+      }
+
+      if (next && next.nodeType === Node.TEXT_NODE && PUNCT.test(next.nodeValue.replace(/^\s+/, ""))) {
+        const last = el.lastChild;
+        if (last && last.nodeType === Node.TEXT_NODE) {
+          last.nodeValue = last.nodeValue.replace(/\s+$/g, "");
+        }
+      }
+    });
+  })();
+</script>
+
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
