@@ -245,6 +245,7 @@ def blog_detail(request, slug):
     data3 = Blog.objects.filter(main3=True).order_by('-id')
     # related_blogs = Blog.objects.filter(category__in=data.category.all()).exclude(id=data.id).distinct()[1:4]
     gallery = Gallery.objects.all().order_by("-id")[:7]
+    beforeafter = BeforeAfter.objects.all().order_by("-id")[:5]
     related_blogs = Blog.objects.all().order_by('-id')[1:4]
     product = Product.objects.all()
     priority_testimonials = Testimonials.objects.filter(priority=True).order_by('?')[:3]
@@ -279,6 +280,7 @@ def blog_detail(request, slug):
         'data3':data3,
         'related_blogs':related_blogs,
         'gallery':gallery,
+        'beforeafter': beforeafter,
         'priority_testimonials':priority_testimonials,
         'normal_testimonials':normal_testimonials,
         # 'RECAPTCHA_SITE_KEY': settings.RECAPTCHA_SITE_KEY,
