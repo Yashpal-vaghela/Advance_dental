@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+{% endblock %}
+{% block header %}
+{% endblock header %}
+
+{% block css %}
+<link rel="preload" href="{% static 'css/e-max.css' %}" as='stylesheet' />
+<link href="{% static 'css/e-max.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+{% endblock css %}
+
+{% block body %}
+<section class="emax-hero emax-screen emax-intro desktop-hero">
+    <!-- Big Background Text -->
+    <div class="emax-bg-text">Emax</div>
+    <div class="container">
+        <!-- Image Stage -->
+        <div class="emax-stage">
+
+            <!-- Left Image -->
+            <div class="emax-card emax-left">
+                <img src="{% static 'img/Left.png' %}" alt="Emax Left">
+            </div>
+
+            <!-- Center Image -->
+            <div class="emax-card emax-center">
+                <img src="{% static 'img/e-max-center.png' %}" alt="Emax Center">
+            </div>
+
+            <!-- Right Image -->
+            <div class="emax-card emax-right">
+                <img src="{% static 'img/Right.png' %}" alt="Emax Right">
+            </div>
+
+        </div>
+
+        <div class="emax-heading">
+            <h1>
+                <span class="emax-sub">Aesthetic Maxima</span>
+                <span class="emax-main">
+                    <strong>IPS Emax</strong>
+                </span>
+            </h1>
+        </div>
+        <div class="emax-crown" id="emax-crown">
+            <div class="emax-crown-left">
+                <h2>
+                    <span class="emax-crown-text">E‑Max Crowns:</span>
+                    <span class="emax-crown-subtext">Durable, Aesthetic Restorations</span>
+                </h2>
+            </div>
+            <div class="emax-detail-right">
+                <p class="emax-detail-desc">
+                    Our Emax crowns are high-strength restorations crafted from IPS Emax lithium disilicate ceramic
+                    providing superior marginal fit.
+                </p>
+            </div>
+        </div>
+        <div class="emax-veneer" id="emax-veneer">
+            <div class="emax-veneer-left">
+                <h2>
+                    <span class="emax-veneer-text">E‑Max Veneers:</span>
+                    <span class="emax-veneer-subtext">Thin, Translucent Smile Enhancers</span>
+                </h2>
+            </div>
+            <div class="emax-veneer-right">
+                <p class="emax-veneer-desc">
+                    Our E-Max veneers are ultra-thin, wafer-like layers of IPS E-Max ceramic,
+                    manufactured by hand pressing or CAD/CAM methods.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Only for hero section for the mobile screen-->
+<div class="mobile-hero">
+    {% include "emax-hero-smallscreen.html" %}
+</div>
+<section class="emax-material">
+    <div class="container">
+        <h2 class="emax-material-title">
+            <span class="dot"></span>
+            Material Spotlight: What is E-Max Made of?
+        </h2>
+        <div class="emax-material-body">
+            <p>
+                IPS E-Max is made of a highly advanced monolithic lithium disilicate glass-ceramic material. It is
+                composed of a fine and interconnected network of plate-like crystals, which are embedded in a glass-like
+                matrix. This unique microstructure effectively prevents cracks and significantly increases the
+                durability of the material.
+            </p>
+            <p>
+                Our E-Max restorations are made exclusively from the premium IPS E-Max lithium disilicate glass-ceramic
+                material. It is manufactured using sophisticated methods such as heat-pressing or CAD/CAM milling, which
+                ensures its uniform density and homogeneity. E-Max is available in blocks and ingots, which support
+                various opacity levels and shade gradients.
+            </p>
+            <p>
+                Due to its finely crafted transparency, which is available in various opacity levels, E-Max offers an
+                extremely natural appearance. It blends easily with tooth shades and its unique "umbrella effect"
+                enhances realism by transmitting natural light, making your smile look wonderfully realistic and
+                attractive.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="emax-offering">
+    <div class="container">
+        <h2 class="emax-offerings-title">
+            <span class="dot"></span>
+            Our Offerings: Emax crowns & Emax Veneers
+        </h2>
+        <div class="emax-offer-card">
+            <div class="row align-items-center emax-offer-crown">
+
+                <div class="col-lg-6 col-12">
+                    <h3 class="emax-offer-heading">
+                        E‑Max Crowns: Durable, Aesthetic Restorations
+                    </h3>
+
+                    <p class="emax-offer-desc">
+                        Our E-Max crowns are made with the utmost precision from IPS E-Max lithium disilicate
+                        glass-ceramic. For this, we use advanced CAD/CAM or heat-pressed techniques. These monolithic
+                        and metal-free crowns have exceptional translucency and opalescence, which perfectly match
+                        natural teeth.
+                        With a flexural strength of around 400-500 MPa, they are an excellent choice for both anterior
+                        and posterior teeth. Their uniform microstructure ensures precise milling, minimal preparation,
+                        and seamless aesthetic integration with the tooth.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 col-12 text-center">
+                    <img src="{% static 'img/emax-crown.jpeg' %}" alt="E-Max crowns" class="img-fluid emax-offer-img">
+                </div>
+
+            </div>
+        </div>
+        <div class="emax-offer-card is-second">
+            <div class="row align-items-center emax-offer-veneer">
+
+                <div class="col-lg-5 col-12">
+                    <h3 class="emax-offer-heading">
+                        E‑Max Veneers: Thin, Translucent Smile Enhancers
+                    </h3>
+
+                    <p class="emax-offer-desc">
+                        Our E-Max veneers are ultra-thin, wafer-like layers of IPS E-Max ceramic, manufactured by hand
+                        pressing or CAD/CAM methods. These veneers combine high translucency with subtle light
+                        diffusion, resulting in a beautiful and natural smile even in extremely thin thicknesses
+                        (~0.3–0.5 mm). Emax veneers require minimal enamel reduction and provide excellent shade
+                        matching, making them ideal for aesthetic improvement with gentle tooth preservation
+                    </p>
+                </div>
+
+                <div class="col-lg-7 col-12 text-center">
+                    <img src="{% static 'img/emax-veneer.jpeg' %}" alt="E-Max crowns" class="img-fluid emax-offer-img">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body%}
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="{% static 'js/e-max.js' %}"></script>
+{% endblock %}

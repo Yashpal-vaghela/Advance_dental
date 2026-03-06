@@ -23,7 +23,7 @@ css_files = [
     # 'css/footer.css'
 ]
 css_files = [
-    'css/bdlb.css',
+    'css/blog.css',
     # 'css/style.css',
     # 'css/responsive.css'
 ]

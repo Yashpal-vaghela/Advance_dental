@@ -1659,3 +1659,9 @@ def news_sitemap(request):
         urlset.append(url_info)
     xml = render_to_string('sitemap-news.xml', {'urlset': urlset})
     return HttpResponse(xml, content_type='application/xml')
+
+def emax(request):
+    context = {
+
+    }
+    return render(request, 'e-max.html', context)
