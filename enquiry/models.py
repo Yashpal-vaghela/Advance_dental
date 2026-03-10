@@ -27,6 +27,7 @@ class Contact(models.Model):
     subject = models.CharField(max_length = 150)
     message  = models.TextField()
     date = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     feedback = models.TextField(blank=True, null=True)
     class Meta:
         ordering = ['-date']
