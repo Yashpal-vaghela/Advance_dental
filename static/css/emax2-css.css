@@ -1,0 +1,1012 @@
+/* ===========================================
+   ADE – Benefits of Emax Dental Material
+   Static layout – exact match to Figma
+   =========================================== */
+
+/* ── Tokens ──────────────────────────────── */
+:root {
+  --accent: #37a387;
+  /* teal */
+  --ink: #333333;
+  --muted: #454545;
+  --line: #37a387;
+  /* center line colour */
+}
+
+/* ── Reset ───────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  background: #fff;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* prevent horizontal scroll on all screen sizes */
+}
+
+/* ===========================================
+   SECTION WRAPPER
+   =========================================== */
+.benefits-section {
+  margin: 0 auto;
+  padding: 72px 32px 96px;
+}
+
+
+/* ===========================================
+   HEADER
+   =========================================== */
+.benefits-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.benefits-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.2px;
+  margin-bottom: 20px;
+}
+
+.benefits-title .dot {
+  margin-right: 6px;
+}
+
+.benefits-subtitle {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--muted);
+  letter-spacing: 1%;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+/* ===========================================
+   TIMELINE (the whole two-column grid)
+   =========================================== */
+.timeline {
+  position: relative;
+  overflow: hidden;
+}
+
+.center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  transform: translateX(-50%);
+
+  /* Ultra-soft Needle-like gradient to exactly match the image blur */
+  background: linear-gradient(to bottom,
+      rgba(55, 163, 135, 0) 0%,
+      rgba(55, 163, 135, 0.4) 20%,
+      var(--line) 45%,
+      var(--line) 55%,
+      rgba(55, 163, 135, 0.4) 80%,
+      rgba(55, 163, 135, 0) 100%);
+
+  /* The needle is exactly 40% of the screen height, acting like a long wand */
+  height: 40vh;
+  /* Start hidden at the very top */
+  top: 0%;
+  transform: translate(-50%, -50%);
+
+  /* Initial state for glide scroll animation */
+  will-change: top, transform;
+
+  /* Extra smooth buttery transition to dampen mouse wheel ticking */
+  transition: top 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.benefit-row {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 40px;
+}
+
+/* Stagger containers tightly by overlapping their empty space */
+.benefit-row+.benefit-row {
+  margin-top: -80px;
+  position: relative;
+}
+
+/* Half-width placeholder for the empty side */
+.benefit-empty {
+  flex: 1;
+}
+
+/* ===========================================
+   CARD
+   =========================================== */
+.benefit-card {
+  flex: 1;
+  padding: 32px 64px;
+  opacity: 0.15;
+  transform: scale(0.85);
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  text-align: center;
+}
+
+/* Headings */
+.benefit-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 18px;
+  line-height: 1.4;
+  letter-spacing: 1%;
+}
+
+/* Body text */
+.benefit-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 420px;
+  font-weight: 400;
+  letter-spacing: 1%;
+}
+
+.benefit-card .benefit-desc {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .benefits-section {
+    padding: 64px 24px 84px;
+  }
+
+  .benefits-header {
+    margin-bottom: 48px;
+  }
+
+  .benefits-title {
+    font-size: 1.4rem;
+  }
+
+  .benefits-subtitle {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .benefit-card {
+    padding: 28px 40px;
+  }
+
+  .benefit-heading {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .benefit-desc {
+    font-size: 16px;
+    max-width: 380px;
+  }
+
+  .benefit-row+.benefit-row {
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .benefits-section {
+    padding: 90px 20px 72px;
+  }
+
+  .benefits-header {
+    margin-bottom: 20px;
+  }
+
+  .benefits-title {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .benefits-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .benefit-row {
+    padding-bottom: 30px;
+  }
+
+  .benefit-row+.benefit-row {
+    margin-top: -30px;
+  }
+
+  .benefit-card {
+    padding: 24px 24px;
+  }
+
+  .benefit-heading {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .benefit-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 320px;
+  }
+
+  .center-line {
+    height: 34vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 70px 16px 56px;
+  }
+
+  .benefits-header {
+    margin-bottom: 28px;
+  }
+
+  .benefits-title {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .benefits-subtitle {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .timeline {
+    overflow: visible;
+  }
+
+  .center-line {
+    left: 24px;
+    width: 1px;
+    top: 30%;
+    bottom: 0;
+    transform: none;
+    background: linear-gradient(to bottom,
+        rgba(55, 163, 135, 0) 0%,
+        rgba(55, 163, 135, 0.35) 15%,
+        var(--line) 45%,
+        var(--line) 55%,
+        rgba(55, 163, 135, 0.35) 85%,
+        rgba(55, 163, 135, 0) 100%);
+  }
+
+  .benefit-row,
+  .benefit-row+.benefit-row {
+    display: block;
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .benefit-empty {
+    display: none;
+  }
+
+  .benefit-card {
+    width: 100%;
+    padding: 18px 16px 18px 48px;
+    transform: none;
+    opacity: 1;
+    text-align: left;
+  }
+
+  .benefit-heading {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .benefit-desc,
+  .benefit-card .benefit-desc {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.65;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits-header {
+    margin-bottom: 25px;
+  }
+}
+
+/* ===========================================
+   GOLD STANDARD SECTION
+   =========================================== */
+.gold-standard-section {
+  margin: 0 auto;
+  padding: 30px 32px 100px;
+}
+
+.gold-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.gold-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  letter-spacing: 2%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.highlight-underline {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Draws the beautiful marker-brush stroke curved arc underneath */
+.highlight-underline::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: -6px;
+  height: 16px;
+  top: 35px;
+  background: url("/static/images/Container.png") no-repeat center;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.gold-subtitle {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 1%;
+  font-weight: 400;
+  color: var(--muted);
+  margin: 5px auto;
+}
+
+.gold-subheading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 48px;
+  letter-spacing: 1%;
+}
+
+.gold-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.gold-card {
+  background: url("/static/images/gold-card-bg-1.jpg") no-repeat center;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.gold-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 60px;
+  line-height: 1.6;
+  max-width: 252px;
+}
+
+.gold-card-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(68, 68, 68, 1);
+  font-weight: 400;
+  letter-spacing: 1%;
+  margin-bottom: 0px !important;
+  margin-top: auto;
+}
+
+@media (max-width: 1280px) {
+  .gold-standard-section {
+    padding: 24px 24px 80px;
+  }
+
+  .gold-grid {
+    max-width: 920px;
+    gap: 20px;
+  }
+
+  .gold-card-title {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gold-standard-section {
+    padding: 18px 16px 52px;
+  }
+
+  .gold-header {
+    margin-bottom: 28px;
+  }
+
+  .gold-title {
+    font-size: 19px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    max-width: 500px;
+  }
+
+  .highlight-underline {
+    white-space: normal;
+  }
+
+  .highlight-underline::after {
+    top: auto;
+    bottom: -4px;
+    height: 11px;
+    left: -2px;
+    right: -2px;
+  }
+
+  .gold-subtitle {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+
+  .gold-subheading {
+    font-size: 18px;
+    margin-top: 22px;
+  }
+
+  .gold-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .gold-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .gold-card-title {
+    font-size: 17px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+  }
+
+  .gold-card-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Gold Standard Mobile styles */
+  .gold-header {
+    margin-bottom: 32px;
+  }
+
+  .highlight-underline::after {
+    height: 10px;
+    bottom: -4px;
+    left: -2px;
+    right: -2px;
+  }
+
+  .gold-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+  }
+
+  .gold-subheading {
+    margin-top: 32px;
+    font-size: 0.95rem;
+  }
+
+  .gold-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gold-card {
+    padding: 16px;
+  }
+
+  .gold-card-title {
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .gold-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .gold-card-title {
+    font-size: 17px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+    max-width: 450px;
+  }
+}
+
+/* ===========================================
+   FAQ SECTION
+   =========================================== */
+.faq-section {
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+.faq-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-title .dot {
+  margin-right: 6px;
+}
+
+/* .faq-container {
+  border-top: 1px solid #e0e0e0;
+} */
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 28px 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1%;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Pure CSS Plus (+) Icon */
+.faq-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-left: 24px;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* Horizontal line of the + */
+.faq-icon::before {
+  top: 11px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+}
+
+/* Vertical line of the + */
+.faq-icon::after {
+  top: 0;
+  left: 11px;
+  width: 2px;
+  height: 24px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-answer-inner {
+  padding-bottom: 15px;
+  padding-right: 50px;
+}
+
+.faq-answer-inner p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #444444;
+  letter-spacing: 2%;
+}
+
+/* ===========================================
+   CONTACT SECTION
+   =========================================== */
+.contact-section {
+  padding: 50px 15.5% 50px;
+  background: #ffffff;
+}
+
+.contact-card {
+  margin: 64px auto 0;
+  background: #ffffff;
+  border: 10px solid #F6F6F6;
+  border-radius: 50px;
+  padding: 80px 80px 64px;
+  position: relative;
+}
+
+.contact-logo {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 444px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.contact-logo img {
+  /* Exact Figma logo image: 271x79 */
+  width: 271px;
+  height: 79px;
+  object-fit: contain;
+}
+
+.contact-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.2;
+}
+
+.logo-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+.logo-brand sup {
+  font-size: 0.55em;
+  position: relative;
+  top: -0.5em;
+}
+
+.logo-sub {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.logo-tagline {
+  font-size: 0.7rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* ── Form Layout ──────────────────────────── */
+.contact-form {
+  row-gap: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.form-group--full {
+  width: 100%;
+}
+
+/* ── Labels ───────────────────────────────── */
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ── Input Wrapper (icon + input side by side) */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--accent);
+}
+
+.input-wrapper--textarea {
+  align-items: flex-start;
+}
+
+/* ── Icon ─────────────────────────────────── */
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  flex-shrink: 0;
+  color: #1B8976;
+}
+
+.input-icon--top {
+  padding-top: 14px;
+  align-self: flex-start;
+}
+
+/* ── Fields ───────────────────────────────── */
+.form-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #333;
+  padding: 14px 14px 14px 0;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 120px;
+  padding: 14px 16px 14px 0;
+  line-height: 1.6;
+}
+
+/* ── Consent Checkbox ─────────────────────── */
+.form-consent {
+  margin-top: 4px;
+}
+
+.consent-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Hide the native checkbox */
+.consent-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom checkbox box */
+.consent-custom {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+/* Checked state */
+.consent-checkbox:checked+.consent-custom {
+  background: #1B8976;
+  border-color: #1B8976;
+}
+
+.consent-checkbox:checked+.consent-custom::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.consent-text {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ── Submit Button ────────────────────────── */
+.form-submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.submit-btn {
+  display: inline-block;
+  background: #1B8976;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 52px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.submit-btn:hover {
+  background: #156b5e;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+
+/* Tablet (Under 900px) */
+
+
+/* Mobile (Under 640px) */
+@media (max-width: 640px) {
+  .benefits-title {
+    font-size: 1.35rem;
+  }
+
+  .benefits-subtitle {
+    font-size: 0.85rem;
+  }
+
+  /* Shift the timeline line to the left edge of the screen */
+  .center-line {
+    left: 24px;
+    /* JS applies translate(-50%, -50%). So physical center of line sits exactly at 24px */
+  }
+
+  /* Remove all staggered row overlaps; natural stacking */
+  .benefit-row {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+
+  .benefit-row+.benefit-row {
+    margin-top: 0;
+  }
+
+  /* Delete the empty spacer columns since it's a single column now */
+  .benefit-empty {
+    display: none;
+  }
+
+  /* Универсальный стиль: all cards become left-aligned with padding for the left-side needle */
+  .benefit-card.left,
+  .benefit-card.right {
+    padding: 24px 16px 24px 56px;
+    text-align: left;
+  }
+
+  /* Override the desktop margin auto-centering so all text sticks to the left */
+  .benefit-card.left .benefit-desc,
+  .benefit-card.right .benefit-desc {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  /* Reduce bottom margin of heading for tighter mobile look */
+  .benefit-heading {
+    margin-bottom: 10px;
+  }
+
+  /* FAQ Tablet & Mobile Styles */
+  .faq-section {
+    padding: 40px 24px 80px;
+  }
+
+  .faq-title {
+    font-size: 1.35rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 24px 0;
+  }
+
+  .faq-answer-inner p {
+    font-size: 0.82rem;
+  }
+
+  /* Contact Form Mobile */
+  .contact-section {
+    padding: 32px 16px 64px;
+  }
+
+  .contact-section {
+    padding: 72px 16px 64px;
+  }
+
+  .contact-card {
+    padding: 48px 20px 40px;
+    border-radius: 24px;
+    border-width: 5px;
+    margin-top: 44px;
+  }
+
+  .contact-logo {
+    width: 280px;
+    height: 80px;
+    top: -40px;
+  }
+
+  .contact-logo img {
+    width: 180px;
+    height: 52px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    /* Stack on mobile */
+    gap: 16px;
+  }
+}
