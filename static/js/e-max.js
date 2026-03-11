@@ -10,9 +10,55 @@ window.addEventListener("load", () => {
     initHeroSection();
   }
   initEmaxMaterialHighlightReversible();
+  initOfferingsSection();
   ScrollTrigger.refresh();
 });
 
+
+function initOfferingsSection() {
+  const section = document.querySelector(".emax-offering");
+  const card1 = section && section.querySelector(".emax-offer-card:not(.is-second)");
+  const card2 = section && section.querySelector(".emax-offer-card.is-second");
+  if (!section || !card1 || !card2) return;
+
+  // Helper: get current navbar height (recalculated every time)
+  function getNavH() {
+    const navbar = document.querySelector(".navbar, nav, header");
+    return navbar ? navbar.getBoundingClientRect().height : 70;
+  }
+
+  // Reset any previously applied transforms
+  gsap.set([card1, card2], { clearProps: "all" });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      // Always recalculate start based on current navbar height
+      start: () => "top top+=" + getNavH(),
+      end: () => "+=" + (window.innerHeight * 0.6),
+      scrub: 1.2,
+      pin: true,
+      pinSpacing: false,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+    }
+  });
+
+  // Phase 1: Slide card2 up so it overlaps card1, stopping 20px below card1's top
+  tl.to(card2, {
+    y: () => {
+      // Always recalculate at animation time for full responsiveness
+      const c1top = card1.getBoundingClientRect().top;
+      const c2top = card2.getBoundingClientRect().top;
+      return -(c2top - c1top - 20);
+    },
+    ease: "none",
+    duration: 1,
+  }, 0);
+
+  // Phase 2: Hold the stacked state so user can see it
+  tl.to({}, { duration: 0.5 });
+}
 
 function initHeroSection() {
   const hero = document.querySelector(".desktop-hero");
@@ -65,10 +111,9 @@ function initHeroSection() {
       scrollTrigger: {
         trigger: hero,
         start: "top top",
-        end: () => "+=" + window.innerHeight,
+        end: () => "+=" + (window.innerHeight * 3),
         scrub: true,
         pin: true,
-        // pinSpacing: window.innerWidth < 700,
         pinSpacing: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
@@ -150,6 +195,9 @@ function initHeroSection() {
       y: () => getBesideStageY(veneerLeft, 0),
       ease: "none",
     }, "veneerIn");
+
+    // Add extra duration at the end so the user can read the veneer text before it unpins
+    tl.to({}, { duration: 0.5 });
     return tl;
   }
 
@@ -360,7 +408,6 @@ function initEmaxMaterialHighlightReversible() {
           pinSpacing: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
-          refreshPriority: 1,
           onUpdate: (self) => {
             const p = self.progress;
             materialTL.progress(p);
