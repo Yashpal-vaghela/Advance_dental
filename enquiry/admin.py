@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.http import HttpResponse
+from django.utils import timezone
 import csv
 from .models import *
 # Register your models here.
@@ -28,10 +29,15 @@ def export_contacts_csv(modeladmin, request, queryset):
         ])
     return response
 class ContactAdmin(admin.ModelAdmin):
-    list_display=['email', 'date','city', 'message']
+    list_display=['email', 'date','city', 'message', "formatted_created_at"]
     search_fields = ['email', 'name', 'city']
     actions = [export_contacts_csv]
-
+    def formatted_created_at(self, obj):
+        if obj.created_at:
+            return timezone.localtime(obj.created_at).strftime("%d-%m-%Y %I:%M %p")
+        return "-"
+    formatted_created_at.short_description = "Submitted At"
+    
 class CareerAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'contact', 'date']
     search_fields = ['name', 'email', 'contact']
