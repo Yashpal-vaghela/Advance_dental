@@ -144,6 +144,8 @@ CKEDITOR_CONFIGS = {
     'default': {
         # 'skin': 'moono',
         # 'skin': 'office2013',
+        'allowedContent': True,
+        'extraAllowedContent': 'div(*)[*]{*}; label(*)[*]{*}; input(*)[*]{*}; p(*)[*]{*}',
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],

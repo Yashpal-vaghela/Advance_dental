@@ -22,17 +22,6 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Montserrat', 'Segoe UI', sans-serif;
-  background: #fff;
-  color: var(--ink);
-  -webkit-font-smoothing: antialiased;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  /* prevent horizontal scroll on all screen sizes */
-}
-
 /* ===========================================
    SECTION WRAPPER
    =========================================== */
@@ -86,8 +75,6 @@ body {
   bottom: 0;
   width: 1.5px;
   transform: translateX(-50%);
-
-  /* Ultra-soft Needle-like gradient to exactly match the image blur */
   background: linear-gradient(to bottom,
       rgba(55, 163, 135, 0) 0%,
       rgba(55, 163, 135, 0.4) 20%,
@@ -95,17 +82,10 @@ body {
       var(--line) 55%,
       rgba(55, 163, 135, 0.4) 80%,
       rgba(55, 163, 135, 0) 100%);
-
-  /* The needle is exactly 40% of the screen height, acting like a long wand */
   height: 40vh;
-  /* Start hidden at the very top */
   top: 0%;
   transform: translate(-50%, -50%);
-
-  /* Initial state for glide scroll animation */
   will-change: top, transform;
-
-  /* Extra smooth buttery transition to dampen mouse wheel ticking */
   transition: top 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -162,6 +142,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+@media (min-width: 1550px) {
+  .benefits-section {
+    padding: 200px 24px 84px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -595,7 +581,7 @@ body {
   text-align: left;
   background: transparent;
   border: none;
-  padding: 28px 0;
+  padding: 25px 0;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1%;
@@ -611,8 +597,8 @@ body {
 /* Pure CSS Plus (+) Icon */
 .faq-icon {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   margin-left: 24px;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -658,7 +644,7 @@ body {
 }
 
 .faq-answer-inner p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
   color: #444444;

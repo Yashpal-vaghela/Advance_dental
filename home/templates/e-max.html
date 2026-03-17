@@ -8,6 +8,7 @@
 {% block css %}
 <link rel="preload" href="{% static 'css/e-max.css' %}" as='stylesheet' />
 <link href="{% static 'css/e-max.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 {% endblock css %}
 
 {% block body %}
@@ -161,11 +162,30 @@
         </div>
     </div>
 </section>
-
+{% include "emax2.html"%}
 {% endblock body%}
 
 {% block js %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="{% static 'js/e-max.js' %}"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    once: false,
+    mirror: true,          
+    offset: 120,         
+    duration: 600,
+    easing: "ease-out",
+  });
+
+  // Re-calculate AOS coordinates after GSAP ScrollTriggers finish pinning
+  if (typeof ScrollTrigger !== 'undefined' && typeof AOS !== 'undefined') {
+    ScrollTrigger.addEventListener("refresh", () => AOS.refresh());
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 200);
+  }
+</script>
 {% endblock %}

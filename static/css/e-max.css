@@ -523,7 +523,7 @@
   }
 
   .emax-bg-text {
-    top: 13% !important;
+    /* top: 13% !important; */
     font-size: clamp(90px, 22vw, 320px);
     line-height: 1;
   }

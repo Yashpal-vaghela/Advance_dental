@@ -363,3 +363,11 @@ class WebStoryVideo(models.Model):
     def __str__(self):
         return f"Video for {self.web_story.title}"
 
+class ImageSearch(models.Model):
+    class Meta:
+        managed = False
+        verbose_name = "Image Usage Search"
+        verbose_name_plural = "Image Usage Search"
+
+    def __str__(self):
+        return "Image Usage Search"

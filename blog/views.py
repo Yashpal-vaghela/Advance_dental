@@ -253,7 +253,7 @@ def blog_detail(request, slug):
     products = [
                 {id:1,"title":"AD-Implant","img":"explore-img1.webp","slug":"/ad-implant/"},
                 {id:2,"title":"Advanced Aligners","img":"explore-img2.webp","slug":"/advanced-aligners/"},
-                {id:3,"title":"Advance Zirconia","img":"explore-img3.webp","slug":"/zirconia-crown/"},
+                {id:3,"title":"Advance Zirconia","img":"explore-imgi3.webp","slug":"/zirconia-crown/"},
                 {id:4,"title":"PFM Crown","img":"explore-img4.webp","slug":"/porcelain-fused-to-metal-pfm/"},
                 {id:5,"title":"Aesthetic Maxima IPS Emax","img":"explore-img5.webp","slug":"/aesthetic-maxima/"},
             ]
