@@ -1665,3 +1665,83 @@ def emax(request):
 
     }
     return render(request, 'e-max.html', context)
+
+def emax2(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        recaptcha_response = request.POST.get("g-recaptcha-response")
+        data ={
+            "secret": settings.RECAPTCHA_SECRET_KEY,
+            "response": recaptcha_response,
+        }
+        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        result = r.json()
+
+        if not result.get('success'):
+            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+            return redirect(request.META.get('HTTP_REFERER','contact'))
+        if form.is_valid():
+            submission = form.save()
+            submission.page = "emax2"
+            submission.save()
+            current_datetime_ist = timezone.localtime(timezone.now())
+            formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
+
+            context_dict = {
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Page URL": request.META.get("HTTP_REFERER", "Not available"),
+            }
+
+            # threading.Thread(
+            #     target=send_email_async,
+            #     args=(context_dict,),
+            #     daemon=True
+            # ).start()
+
+            bikai_payload = {
+                "Name": submission.name,
+                "Email": submission.email,
+                "Contact": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "DateTime": formatted_datetime,
+            }
+
+            bikai_url = "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
+            headers = {
+                "Content-Type": "application/json",
+            }
+            try:
+                crm_response = requests.post(
+                    bikai_url,
+                    json=bikai_payload,
+                    headers=headers,
+                    timeout=10,
+                )
+                crm_response.raise_for_status()
+                messages.success(
+                    request,
+                    "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly."
+                )
+            except requests.exceptions.RequestException as e:
+                messages.warning(
+                    request,
+                    f"Form saved but could not send to CRM. Error: {str(e)}",
+                )
+
+            return redirect("home:emax2")
+
+        messages.error(request, "Your form is not sent! Try Again.")
+        return redirect("home:emax2")
+    form = ContactForm()
+    context = {
+        "form": form,
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    }
+    return render(request, 'emax2.html', context)
