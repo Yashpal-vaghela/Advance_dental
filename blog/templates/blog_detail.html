@@ -825,6 +825,83 @@
   })();
 </script>
 
+<!-- CKEditor FAQ formatter script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqContainers = document.querySelectorAll(".blog-faq");
+
+    faqContainers.forEach((container) => {
+      const children = Array.from(container.children);
+      let items = [];
+      let currentItem = [];
+
+      children.forEach((child) => {
+        if (child.tagName === "INPUT" && child.type === "checkbox") {
+          if (currentItem.length > 0) items.push(currentItem);
+          currentItem = [child];
+        } else if (currentItem.length > 0) {
+          currentItem.push(child);
+        }
+      });
+      if (currentItem.length > 0) items.push(currentItem);
+
+      items.forEach((itemEls, index) => {
+        if (itemEls.length === 0) return;
+
+        const input = itemEls[0];
+        input.id = `faq-input-${index}-${Math.random().toString(36).substr(2, 9)}`;
+        
+        const wrapper = document.createElement("label");
+        wrapper.className = "faq-item-wrapper";
+        wrapper.setAttribute("for", input.id);
+        
+        container.insertBefore(wrapper, input.nextSibling);
+        // Move all sibling elements except the input into the <label>
+        itemEls.slice(1).forEach((el) => wrapper.appendChild(el));
+
+        const questionP = itemEls.find(el => el.tagName === "P");
+        if (questionP) questionP.classList.add("faq-question-text");
+        
+        const arrowDiv = itemEls.find(el => el.classList && el.classList.contains("faq-arrow"));
+
+        const answerWrapper = document.createElement("div");
+        answerWrapper.className = "faq-answer-wrapper";
+
+        let startAnswerContent = false;
+        itemEls.slice(1).forEach((el) => {
+          if (el === arrowDiv) {
+            startAnswerContent = true;
+          } else if (startAnswerContent && el !== questionP) {
+            answerWrapper.appendChild(el);
+          }
+        });
+        
+        if (!arrowDiv && questionP) {
+           let passedQ = false;
+           itemEls.slice(1).forEach(el => {
+               if (passedQ && el !== questionP) answerWrapper.appendChild(el);
+               if (el === questionP) passedQ = true;
+           });
+        }
+
+        wrapper.appendChild(answerWrapper);
+        
+        // Ensure only one question is open at a time
+        input.addEventListener('change', function() {
+          if (this.checked) {
+            const allInputs = container.querySelectorAll('input[type="checkbox"]');
+            allInputs.forEach(otherInput => {
+              if (otherInput !== this) {
+                otherInput.checked = false;
+              }
+            });
+          }
+        });
+      });
+    });
+  });
+</script>
+
 
 <script type="application/ld+json">
   {

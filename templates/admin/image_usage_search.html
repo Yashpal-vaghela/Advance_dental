@@ -1,0 +1,55 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+<div style="padding: 20px 0;">
+    <h1>Image Usage Search</h1>
+
+    <form method="get" style="margin: 20px 0;">
+        <input
+            type="text"
+            name="q"
+            value="{{ query }}"
+            placeholder="Search image name, path, or HTML tag..."
+            style="padding:8px; width:380px;"
+        >
+        <button type="submit" class="button">Search</button>
+    </form>
+
+    {% if query %}
+        <p>
+            Search for: <strong>{{ query }}</strong>
+        </p>
+    {% endif %}
+
+    {% if usage_results %}
+        <table style="width:100%; border-collapse: collapse; margin-top: 15px;">
+            <thead>
+                <tr>
+                    <th style="border:1px solid #ddd; padding:8px;">Model / Table</th>
+                    <th style="border:1px solid #ddd; padding:8px;">Object / Blog Name</th>
+                    <th style="border:1px solid #ddd; padding:8px;">Field</th>
+                    <th style="border:1px solid #ddd; padding:8px;">ALT Text</th>
+                    <th style="border:1px solid #ddd; padding:8px;">Image</th>
+                    <th style="border:1px solid #ddd; padding:8px;">Open</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in usage_results %}
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px;">{{ row.model }}</td>
+                    <td style="border:1px solid #ddd; padding:8px;">{{ row.title }}</td>
+                    <td style="border:1px solid #ddd; padding:8px;">{{ row.field }}</td>
+                    <td style="border:1px solid #ddd; padding:8px;">{{ row.alt }}</td>
+                    <td style="border:1px solid #ddd; padding:8px; word-break: break-word;">{{ row.matched_value }}</td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <a href="{{ row.url }}">Open</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% elif query %}
+        <p><strong>No usage found.</strong></p>
+    {% endif %}
+</div>
+{% endblock %}
