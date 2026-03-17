@@ -111,7 +111,7 @@ function initHeroSection() {
       scrollTrigger: {
         trigger: hero,
         start: "top top",
-        end: () => "+=" + (window.innerHeight * 3),
+        end: () => "+=" + (window.innerHeight * 1),
         scrub: true,
         pin: true,
         pinSpacing: true,
@@ -123,7 +123,7 @@ function initHeroSection() {
 
     tl.to(left,  { x: cfg.leftX,  scale: cfg.sideScale, ease: "none", duration: phase1 }, 0);
     tl.to(right, { x: cfg.rightX, scale: cfg.sideScale, ease: "none", duration: phase1 }, 0);
-    tl.to(heading, { y: cfg.headingY, ease: "none", duration: phase1  }, 0);
+    tl.to(heading, { y: () => getOutOfViewY(heading, 100), opacity: 0, ease: "none", duration: phase1  }, 0);
     tl.to(bgText,  { y: cfg.bgTextY,  ease: "none", duration: phase1 }, 0);
     tl.to(stage, { y: ()=> getStageCenterY(), duration: phase1, ease: "none" }, 0);
     tl.to(stage, { y: () => getStageCenterY(), ease: "none" }, 0);
@@ -197,7 +197,7 @@ function initHeroSection() {
     }, "veneerIn");
 
     // Add extra duration at the end so the user can read the veneer text before it unpins
-    tl.to({}, { duration: 0.5 });
+    tl.to({}, { duration: 0.1 });
     return tl;
   }
 
