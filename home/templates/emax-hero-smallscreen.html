@@ -5,7 +5,8 @@
   <div class="container">
 
     <div class="emax-stage">
-      <div class="emax-card emax-left">
+      <!-- Hide left and right cards directly via inline CSS so they don't flash before GSAP loads -->
+      <div class="emax-card emax-left" style="opacity: 0; visibility: hidden;">
         <img class="img-fluid" src="{% static 'img/Left.png' %}" alt="Emax Left">
       </div>
 
@@ -13,7 +14,7 @@
         <img class="img-fluid" src="{% static 'img/e-max-center.png' %}" alt="Emax Center">
       </div>
 
-      <div class="emax-card emax-right">
+      <div class="emax-card emax-right" style="opacity: 0; visibility: hidden;">
         <img class="img-fluid" src="{% static 'img/Right.png' %}" alt="Emax Right">
       </div>
     </div>

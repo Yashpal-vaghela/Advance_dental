@@ -27,7 +27,10 @@
    =========================================== */
 .benefits-section {
   margin: 0 auto;
-  padding: 72px 32px 96px;
+  padding: 104px 32px 96px;
+  /* background: #ffffff;
+  position: relative;
+  z-index: 10; */
 }
 
 
@@ -150,9 +153,15 @@
   }
 }
 
+@media (min-width: 2360px) {
+  .benefits-section {
+    padding: 280px 24px 84px !important;
+  }
+}
+
 @media (max-width: 1280px) {
   .benefits-section {
-    padding: 64px 24px 84px;
+    padding: 160px 24px 84px;
   }
 
   .benefits-header {
@@ -189,7 +198,7 @@
 
 @media (max-width: 991px) {
   .benefits-section {
-    padding: 90px 20px 72px;
+    padding: 40px 20px 72px;
   }
 
   .benefits-header {
@@ -236,7 +245,7 @@
 
 @media (max-width: 768px) {
   .benefits-section {
-    padding: 70px 16px 56px;
+    padding: 0px 16px 56px;
   }
 
   .benefits-header {
@@ -314,7 +323,96 @@
   .benefits-header {
     margin-bottom: 25px;
   }
+
+  .faq-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .faq-question {
+    font-size: 18px !important;
+  }
+
+  .contact-logo {
+    width: 330px !important;
+  }
+
+  .contact-logo img {
+    width: 230px !important;
+  }
+
+  /* .faq-answer-inner p {
+    font-size: 14px !important;
+  } */
 }
+
+@media (max-width: 476px) {
+  .gold-title {
+    font-size: 16px !important;
+  }
+
+  .emax-material-title {
+    padding: 0px 10px !important;
+
+  }
+
+  .emax-material-body {
+    padding: 0px 10px !important;
+  }
+
+  .emax-material-body>p {
+    font-size: 16px !important;
+  }
+
+  .emax-bg-text {
+    top: 10% !important;
+    font-size: clamp(40px, 30vw, 240px);
+    font-weight: 900 !important;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 406px) {
+  .gold-title {
+    font-size: 14px !important;
+  }
+
+  .faq-question {
+    font-size: 16px !important;
+  }
+
+  .faq-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .faq-answer-inner p {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 436px) {
+
+  .contact-logo {
+    width: 230px !important;
+    height: 100px !important;
+  }
+
+  .contact-card {
+    padding: 80px 10px 40px !important;
+    border: 5px solid #F6F6F6 !important;
+  }
+
+  .faq-section {
+    padding: 0px 24px 5px !important;
+  }
+
+
+
+
+
+}
+
 
 /* ===========================================
    GOLD STANDARD SECTION
@@ -322,6 +420,7 @@
 .gold-standard-section {
   margin: 0 auto;
   padding: 30px 32px 100px;
+  background: #ffffff;
 }
 
 .gold-header {
@@ -553,7 +652,7 @@
    =========================================== */
 .faq-section {
   margin: 0 auto;
-  padding: 64px 32px 100px;
+  padding: 30px 32px 20px;
 }
 
 .faq-title {
@@ -573,7 +672,48 @@
 } */
 
 .faq-item {
-  border-bottom: 1px solid #e0e0e0;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 0 24px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--accent);
+  transform: scaleY(0);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: center;
+}
+
+.faq-item:hover {
+  background-color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.04), 0 10px 10px rgba(0, 0, 0, 0.02);
+  border-color: rgba(55, 163, 135, 0.2);
+}
+
+.faq-item:hover::before {
+  transform: scaleY(1);
+}
+
+.faq-item.active {
+  background-color: #fff;
+  border-color: rgba(55, 163, 135, 0.4);
+  box-shadow: 0 8px 24px rgba(55, 163, 135, 0.06);
+}
+
+.faq-item.active::before {
+  transform: scaleY(1);
 }
 
 .faq-question {
@@ -581,7 +721,7 @@
   text-align: left;
   background: transparent;
   border: none;
-  padding: 25px 0;
+  padding: 20px 0;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1%;
@@ -597,8 +737,8 @@
 /* Pure CSS Plus (+) Icon */
 .faq-icon {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   flex-shrink: 0;
   margin-left: 24px;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -614,22 +754,32 @@
 
 /* Horizontal line of the + */
 .faq-icon::before {
-  top: 11px;
+  top: 50%;
   left: 0;
-  width: 24px;
+  width: 100%;
   height: 2px;
+  transform: translateY(-50%);
 }
 
 /* Vertical line of the + */
 .faq-icon::after {
   top: 0;
-  left: 11px;
+  left: 50%;
   width: 2px;
-  height: 24px;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
+}
+
+.faq-item:hover .faq-question {
+  color: var(--accent);
+}
+
+.faq-item.active .faq-question {
+  color: var(--accent);
 }
 
 .faq-answer {
@@ -896,7 +1046,7 @@
 
 
 /* Mobile (Under 640px) */
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .benefits-title {
     font-size: 1.35rem;
   }
@@ -905,13 +1055,13 @@
     font-size: 0.85rem;
   }
 
-  /* Shift the timeline line to the left edge of the screen */
+ 
   .center-line {
     left: 24px;
-    /* JS applies translate(-50%, -50%). So physical center of line sits exactly at 24px */
+   
   }
 
-  /* Remove all staggered row overlaps; natural stacking */
+ 
   .benefit-row {
     flex-direction: column;
     padding-bottom: 0px;
@@ -921,31 +1071,29 @@
     margin-top: 0;
   }
 
-  /* Delete the empty spacer columns since it's a single column now */
+ 
   .benefit-empty {
     display: none;
   }
-
-  /* Универсальный стиль: all cards become left-aligned with padding for the left-side needle */
+  
   .benefit-card.left,
   .benefit-card.right {
     padding: 24px 16px 24px 56px;
     text-align: left;
   }
 
-  /* Override the desktop margin auto-centering so all text sticks to the left */
+ 
   .benefit-card.left .benefit-desc,
   .benefit-card.right .benefit-desc {
     margin: 0;
     max-width: 100%;
   }
 
-  /* Reduce bottom margin of heading for tighter mobile look */
+  
   .benefit-heading {
     margin-bottom: 10px;
   }
 
-  /* FAQ Tablet & Mobile Styles */
   .faq-section {
     padding: 40px 24px 80px;
   }
@@ -963,7 +1111,7 @@
     font-size: 0.82rem;
   }
 
-  /* Contact Form Mobile */
+
   .contact-section {
     padding: 32px 16px 64px;
   }
@@ -973,7 +1121,7 @@
   }
 
   .contact-card {
-    padding: 48px 20px 40px;
+    padding: 48px 20px 40px !important;
     border-radius: 24px;
     border-width: 5px;
     margin-top: 44px;
@@ -992,7 +1140,7 @@
 
   .form-row {
     grid-template-columns: 1fr;
-    /* Stack on mobile */
+
     gap: 16px;
   }
-}
+} */

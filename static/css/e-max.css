@@ -500,8 +500,27 @@
     display: block !important;
   }
 
+
+
   .desktop-hero {
     display: none !important;
+  }
+
+  :root {
+    --emax-overlay-alpha: 0;
+  }
+
+  .mobile-hero {
+    background:
+      linear-gradient(92.19deg, rgba(27, 137, 118, var(--emax-overlay-alpha)) -56.21%, rgba(0, 213, 255, var(--emax-overlay-alpha)) 184.49%),
+      linear-gradient(92.19deg, rgba(27, 137, 118, 0.2) -56.21%, rgba(0, 213, 255, 0.2) 184.49%);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .emax-smallscreen,
+  .pin-spacer:has(.emax-intro) {
+    background: transparent !important;
   }
 
   .mobile-scope {
@@ -513,6 +532,8 @@
     align-items: center;
   }
 
+
+
   .mobile-scope .container {
     min-height: 100%;
     position: relative;
@@ -520,10 +541,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
 
   .emax-bg-text {
-    /* top: 13% !important; */
+    top: 9% !important;
     font-size: clamp(90px, 22vw, 320px);
     line-height: 1;
   }
@@ -551,11 +573,12 @@
   }
 
   .emax-heading {
-    margin: 0;
-    margin-top: 140px;
-    align-self: flex-start;
+    position: relative;
+    z-index: 1;
     text-align: left;
-    line-height: 1;
+    align-self: flex-start;
+    margin-bottom: 30px;
+    top: 20%;
   }
 
   .emax-sub,
@@ -563,6 +586,7 @@
     font-size: 45px;
     letter-spacing: 1.2px;
     margin-bottom: 1;
+
   }
 
   /* Make crown/veneer text sit beside the stage area */
@@ -572,7 +596,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(92.19deg, rgba(27, 137, 118, 0.4) -56.21%, rgba(0, 213, 255, 0.4) 184.49%);
     padding: 40px 20px;
   }
 
@@ -622,7 +645,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(92.19deg, rgba(27, 137, 118, 0.2) -56.21%, rgba(0, 213, 255, 0.2) 184.49%);
     padding: 40px 20px;
   }
 
@@ -664,6 +686,11 @@
     font-size: 20px;
     margin-top: 50px !important;
   }
+
+  .contact-card {
+    padding: 80px 40px 64px !important;
+  }
+
 }
 
 @media (max-width: 661px) {
@@ -673,8 +700,8 @@
   }
 
   .emax-bg-text {
-    top: 12% !important;
-    font-size: clamp(60px, 20vw, 280px);
+    /* top: 7% !important; */
+    font-size: clamp(60px, 30vw, 280px);
     line-height: 1;
   }
 
@@ -728,12 +755,11 @@
   .mobile-scope {
     padding: 45px 14px 25px;
     min-height: 100vh;
-    position: relative !important;
   }
 
   .emax-bg-text {
     top: 10% !important;
-    font-size: clamp(40px, 35vw, 240px);
+    font-size: clamp(40px, 25vw, 240px);
     font-weight: 900 !important;
     line-height: 1;
   }
@@ -772,12 +798,21 @@
     display: block;
   }
 
+
   .emax-heading {
     margin: 0;
     margin-top: 220px;
     align-self: flex-start;
     text-align: left;
     line-height: 1;
+    top: 5%;
+  }
+
+  .emax-detail-desc,
+  .emax-veneer-desc {
+    font-size: 16px;
+    line-height: 1.65;
+    text-align: center !important;
   }
 
   .emax-sub,
@@ -825,6 +860,18 @@
   .emax-veneer-right {
     width: 100% !important;
     margin-top: 2% !important;
+  }
+
+  .contact-section {
+    padding: 0px 16px 64px !important;
+  }
+
+  .faq-section {
+    padding: 0px 24px 40px !important;
+  }
+
+  .faq-title {
+    margin-bottom: 30px !important;
   }
 }
 
@@ -1049,6 +1096,8 @@
 }
 
 @media (max-width: 768px) {
+
+
   .emax-offer-card {
     padding: 22px;
     margin-top: 25px;
