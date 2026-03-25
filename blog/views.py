@@ -262,16 +262,23 @@ def blog_detail(request, slug):
     })
     # form_30_html = render_to_string("custom-search-form.html")
     section_70_html = render_to_string("custom-contact-form.html")
-
+    content_length = len(data.content)
+    # print(content_length)
+    if content_length < 10000:
+        inserts = [
+        (0.50, explore_50_html)
+    ]
+    else:
+        inserts = [
+            (0.30, explore_50_html),
+            (0.70, section_70_html)
+        ]   
     data.content = mark_safe(
         inject_multiple_sections(
             data.content,
-            inserts=[
-                (0.30,explore_50_html),
-                (0.70,section_70_html)
-            ]
+            inserts=inserts
         )
-    )
+    )   
 
     context = {
         'data':data,

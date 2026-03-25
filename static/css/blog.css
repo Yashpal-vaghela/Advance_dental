@@ -518,7 +518,7 @@
 }
 
 .blog-author-content .author-name {
-    font-size: 55px;
+    font-size: 65px;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.7;
@@ -635,8 +635,16 @@
 .single-page-review .swiper-wrapper .card {
     padding: 10px 10px 0px;
     background: #f9fcff;
-    border: 1.05px solid #000000;
-    height: 100%
+    border: 1.5px solid #000;
+    height: 100% !important;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important
+}
+
+.single-page-review .swiper-wrapper .swiper-slide.card {
+    height: auto !important
 }
 
 .review-image {
@@ -878,6 +886,12 @@
 
 .mobile-img {
     display: none
+}
+
+@media (max-width:1440px) {
+    .blog-author-content .author-name {
+        font-size: 55px;
+    }
 }
 
 @media (max-width:1200px) {
@@ -1310,6 +1324,22 @@
 }
 
 .PFMandZIR table tr:first-child {
+    background-color: #1b8967;
+    color: #000;
+    text-align: center
+}
+
+.blog-table table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.blog-table table td {
+    border: 1px solid #3d3d3d8a;
+    padding: 10px
+}
+
+.blog-table table tr:first-child {
     background-color: #1b8967;
     color: #000;
     text-align: center
