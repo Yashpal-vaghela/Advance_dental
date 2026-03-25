@@ -1292,7 +1292,8 @@
   background-color: #fff;
   z-index: 1;
   position: relative;
-  padding: 2rem 0px 2.5rem
+  padding: 2rem 0px 2.5rem;
+
 }
 
 .patient-success .product-section-title {
@@ -1316,7 +1317,7 @@
 
 .patientSwiper .swiper-button-next,
 .patientSwiper .swiper-button-prev {
-  color: #1b8976
+  color: #1b8976;
 }
 
 .patientSwiper .swiper-slide {
@@ -1350,11 +1351,14 @@
   font-weight: 600;
   color: #1b8976;
   font-size: 24px;
-  letter-spacing: 0.3px
+  letter-spacing: 0.3px;
+    
 }
 
 .swiper {
-  overflow: visible !important
+  overflow: hidden !important;
+  height: 350px;
+  /* border: 1px solid black; */
 }
 
 .patientSwiper .swiper-button-next {
@@ -1362,13 +1366,14 @@
   right: var(--swiper-navigation-sides-offset, 47%) !important;
   width: 20px;
   height: 20px;
-  margin-top: -8px
 }
 
 .patientSwiper .swiper-button-next:after {
   font-size: 20px;
   font-weight: 900;
-  color: #1b8976
+  color: #1b8976;
+  padding-top: 10px;
+  
 }
 
 .patientSwiper .swiper-button-prev {
@@ -1376,7 +1381,6 @@
   left: var(--swiper-navigation-sides-offset, 47%) !important;
   width: 20px;
   height: 20px;
-  margin-top: -8px
 }
 
 .patientSwiper .swiper-button-prev:after {
@@ -1397,6 +1401,11 @@
   .patient-success {
     margin: 3% auto
   }
+
+.swiper {
+  overflow: hidden !important;
+  height: auto !important;
+}
 }
 
 @media (max-width:991px) {
