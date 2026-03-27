@@ -1,16 +1,25 @@
+.signature2 path {
+    fill: none;
+    stroke: #333;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    
+}
 
-.team-section{
+.team-section {
     padding: 60px 0;
     position: relative;
 }
+
 .team-section::after {
-    content:"";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 350px;
-    background: url("/static/images/team-bg.webp")no-repeat top;
+    background: url('/static/images/team-bg.webp') no-repeat top;
     background-size: cover;
     pointer-events: none;
     z-index: -1;
@@ -18,10 +27,11 @@
 }
 
 .team-section-id {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
+
 .team-section-title {
     font-size: 30px;
     font-weight: 600;
@@ -31,6 +41,7 @@
     margin: 0 auto;
     z-index: 10;
 }
+
 .team-card {
     position: relative;
     z-index: 2;
@@ -52,7 +63,7 @@
     display: block;
 }
 
-.team-frame img{
+.team-frame img {
     width: 100%;
     height: 100%;
     transition: transform 400ms ease-in-out;
@@ -63,7 +74,7 @@
 }
 
 .team-frame::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 70%;
     height: 0%;
@@ -73,10 +84,11 @@
     transform: translate(-50%, -50%) rotate(-360deg);
     z-index: 3;
 }
+
 .team-frame:hover::after {
     height: 100%;
     transition: all 0.5s linear;
-    background-color: #fff0
+    background-color: #fff0;
 }
 
 /* Meta-text */
@@ -85,6 +97,7 @@
     display: inline-block;
     margin-top: 10px;
 }
+
 .team-name {
     font-weight: 700;
     font-size: 16px;
@@ -102,38 +115,46 @@
     color: #444;
     text-transform: uppercase;
 }
+
 @media (max-width: 991.98px) {
-  .team-section-title{
-    font-size: 26px;
-  }
-  .team-img {
-    width: 90% !important;
-    height: 90% !important;
-  }
+    .team-section-title {
+        font-size: 26px;
+    }
+
+    .team-img {
+        width: 90% !important;
+        height: 90% !important;
+    }
 }
-@media (max-width: 768.98px){
-    .team-section-title{
+
+@media (max-width: 768.98px) {
+    .team-section-title {
         font-size: 22px;
         max-width: 80%;
         letter-spacing: 1px;
     }
+
     .team-section::after {
         height: 450px;
     }
 }
-@media (max-width: 575.98px){
-    .team-section-id{
+
+@media (max-width: 575.98px) {
+    .team-section-id {
         font-size: 16px;
     }
-    .team-section-title{
+
+    .team-section-title {
         font-size: 20px;
         max-width: 100%;
         letter-spacing: 0.8px;
     }
+
     .team-meta {
         margin-top: 5px;
     }
-    .team-name{
+
+    .team-name {
         font-size: 14px;
     }
 }

@@ -4,8 +4,6 @@ ScrollTrigger.config({
   ignoreMobileResize: true
 });
 
-
-
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
@@ -41,7 +39,7 @@ window.addEventListener("resize", () => {
 });
 
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth >= 992) {
     initHeroSection();
   } else {
@@ -53,6 +51,9 @@ window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });
 
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 function initMobileHeroAnimation() {
   const hero = document.querySelector(".emax-smallscreen.emax-intro");
   if (!hero) return;
@@ -88,6 +89,14 @@ function initMobileHeroAnimation() {
     scrollTrigger: {
       trigger: hero,
       start: "top 80%",
+    },
+    onStart: () => {
+      // Lock scroll when animation starts
+      document.body.classList.add("lock-scroll");
+      // Safety unlock after 5 seconds
+      setTimeout(() => {
+        document.body.classList.remove("lock-scroll");
+      }, 5000);
     }
   });
 
@@ -99,6 +108,9 @@ function initMobileHeroAnimation() {
     .to(rightCard, { xPercent: 40, scale: 0.92, autoAlpha: 1, duration: 1.0, ease: "back.out(1.2)" }, "<")
     .to([subHeading, mainHeading], { autoAlpha: 1, y: 0, stagger: 0.2, duration: 1.0, ease: "power2.out" }, "-=0.5")
     .eventCallback("onComplete", () => {
+      // Unlock scroll when animation finishes
+      document.body.classList.remove("lock-scroll");
+
       // FORCE GSAP to clear any cached starting positions for the scroll timeline.
       // Now when you scroll backward to 0, it knows exactly what to revert to!
       scrollTl.invalidate();
@@ -198,6 +210,40 @@ function initHeroSection() {
     }
 
     gsap.set([stage, left, right, heading, bgText, crownLeft, crownRight, veneerLeft, veneerRight], { clearProps: "all" });
+
+    // --- NON-INTRUSIVE ENTRANCE ANIMATION FOR DESKTOP ---
+    const centerCard = stage.querySelector(".emax-center");
+    
+    // We use gsap.from to animate FROM a hidden state TO the current CSS state.
+    // This ensures the cards end up in their "perfect" original positions.
+    const enterTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: hero,
+        start: "top 80%",
+        once: true
+      },
+      onStart: () => {
+        document.body.classList.add("lock-scroll");
+      },
+      onComplete: () => {
+        document.body.classList.remove("lock-scroll");
+        // We also need to refresh ScrollTrigger because the layout might shift slightly
+        ScrollTrigger.refresh();
+        tl && tl.invalidate();
+      }
+    });
+
+    enterTl
+      .from(centerCard, { yPercent: 50, scale: 0.8, autoAlpha: 0, duration: 1.2, ease: "power3.out" })
+      .from([left, right], { 
+        x: 0, 
+        xPercent: -50, 
+        scale: 0.8, 
+        autoAlpha: 0, 
+        duration: 1.0, 
+        ease: "back.out(1.5)" 
+      }, "-=0.4");
+    // ----------------------------------------------------
 
     function getStageCenterY() {
       const r = stage.getBoundingClientRect();
@@ -480,7 +526,7 @@ function initEmaxMaterialHighlightReversible() {
 
         const isMobile = context.conditions.mobile;
 
-        const PX_PER_UNIT = isMobile ? 7 :9;
+        const PX_PER_UNIT = isMobile ? 7 : 9;
         const GAP_UNITS = isMobile ? 6 : 8;
 
         materialTL = gsap.timeline({ paused: true });
@@ -560,7 +606,24 @@ function initMobileSections() {
       }
     });
 
-    crownTl.fromTo(crownCard, { y: 50, scale: 0.95, autoAlpha: 0 }, { y: 0, scale: 1, autoAlpha: 1, duration: 1.2, ease: "power3.out" }, 0)
+    crownTl.fromTo(
+      crownCard,
+      {
+        y: 50,
+        scale: 0.9,
+        autoAlpha: 0,
+        rotateY: -90, // 👈 LEFT flip
+        transformPerspective: 1000
+      },
+      {
+        y: 0,
+        scale: 1,
+        autoAlpha: 1,
+        rotateY: 0,
+        ease: "power3.out"
+      },
+      0
+    )
       .fromTo(crownTexts, { y: 50, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.2, duration: 1.0, ease: "power2.out" }, "-=0.8");
   }
 
@@ -596,7 +659,34 @@ function initMobileSections() {
       }
     });
 
-    veneerTl.fromTo(veneerCard, { y: 50, scale: 0.95, autoAlpha: 0 }, { y: 0, scale: 1, autoAlpha: 1, duration: 1.2, ease: "power3.out" }, 0)
-      .fromTo(veneerTexts, { y: 50, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.2, duration: 1.0, ease: "power2.out" }, "-=0.8");
+    veneerTl.fromTo(
+      veneerCard,
+      {
+        y: 50,
+        scale: 0.9,
+        autoAlpha: 0,
+        rotateY: 90, // 👈 RIGHT flip
+        transformPerspective: 1000
+      },
+      {
+        y: 0,
+        scale: 1,
+        autoAlpha: 1,
+        rotateY: 0,
+        duration: 1.2,
+        ease: "power3.out"
+      },
+      0
+    )
+      .fromTo(
+        veneerTexts,
+        { y: 50, autoAlpha: 0 },
+        {
+          y: 0, autoAlpha: 1,
+          stagger: 0.2,
+          duration: 1.0,
+          ease: "power2.out"
+        },
+        "-=0.8");
   }
 }
