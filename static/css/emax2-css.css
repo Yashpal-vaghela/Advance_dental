@@ -42,7 +42,6 @@ body.lock-scroll {
   z-index: 10; */
 }
 
-
 /* ===========================================
    HEADER
    =========================================== */
@@ -68,7 +67,11 @@ body.lock-scroll {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(92.19deg, rgba(27, 137, 118) -56.21, rgba(0, 213, 255, 0.6) 184.49%);
+  background: linear-gradient(
+    92.19deg,
+    rgba(27, 137, 118) -56.21,
+    rgba(0, 213, 255, 0.6) 184.49%
+  );
   transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -105,13 +108,15 @@ body.lock-scroll {
   bottom: 0;
   width: 1.5px;
   transform: translateX(-50%);
-  background: linear-gradient(to bottom,
-      rgba(55, 163, 135, 0) 0%,
-      rgba(55, 163, 135, 0.4) 20%,
-      var(--line) 45%,
-      var(--line) 55%,
-      rgba(55, 163, 135, 0.4) 80%,
-      rgba(55, 163, 135, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 163, 135, 0) 0%,
+    rgba(55, 163, 135, 0.4) 20%,
+    var(--line) 45%,
+    var(--line) 55%,
+    rgba(55, 163, 135, 0.4) 80%,
+    rgba(55, 163, 135, 0) 100%
+  );
   height: 40vh;
   top: 0%;
   transform: translate(-50%, -50%);
@@ -126,7 +131,7 @@ body.lock-scroll {
 }
 
 /* Stagger containers tightly by overlapping their empty space */
-.benefit-row+.benefit-row {
+.benefit-row + .benefit-row {
   margin-top: -80px;
   position: relative;
 }
@@ -144,7 +149,9 @@ body.lock-scroll {
   padding: 32px 64px;
   opacity: 0.15;
   transform: scale(0.85);
-  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   text-align: center;
 }
 
@@ -219,7 +226,7 @@ body.lock-scroll {
     max-width: 380px;
   }
 
-  .benefit-row+.benefit-row {
+  .benefit-row + .benefit-row {
     margin-top: -60px;
   }
 }
@@ -247,7 +254,7 @@ body.lock-scroll {
     padding-bottom: 30px;
   }
 
-  .benefit-row+.benefit-row {
+  .benefit-row + .benefit-row {
     margin-top: -30px;
   }
 
@@ -307,17 +314,19 @@ body.lock-scroll {
     top: 30%;
     bottom: 0;
     transform: none;
-    background: linear-gradient(to bottom,
-        rgba(55, 163, 135, 0) 0%,
-        rgba(55, 163, 135, 0.35) 15%,
-        var(--line) 45%,
-        var(--line) 55%,
-        rgba(55, 163, 135, 0.35) 85%,
-        rgba(55, 163, 135, 0) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(55, 163, 135, 0) 0%,
+      rgba(55, 163, 135, 0.35) 15%,
+      var(--line) 45%,
+      var(--line) 55%,
+      rgba(55, 163, 135, 0.35) 85%,
+      rgba(55, 163, 135, 0) 100%
+    );
   }
 
   .benefit-row,
-  .benefit-row+.benefit-row {
+  .benefit-row + .benefit-row {
     display: block;
     margin-top: 0;
     padding-bottom: 20px;
@@ -368,18 +377,14 @@ body.lock-scroll {
     font-size: 18px !important;
   }
 
-  .contact-logo {
-    width: 240px !important;
-  }
-
   .contact-logo img {
-    width: 136px !important;
+    width: 130px !important;
+    height: 100px !important;
   }
 
   .benefits-section {
     padding: 180px 24px 40px;
   }
-
 }
 
 @media (max-width: 476px) {
@@ -389,14 +394,13 @@ body.lock-scroll {
 
   .emax-material-title {
     padding: 0px 10px !important;
-
   }
 
   .emax-material-body {
     padding: 0px 10px !important;
   }
 
-  .emax-material-body>p {
+  .emax-material-body > p {
     font-size: 16px !important;
   }
 
@@ -425,21 +429,12 @@ body.lock-scroll {
   .faq-answer-inner p {
     font-size: 14px !important;
   }
-
-
-
 }
 
 @media (max-width: 436px) {
-
-  .contact-logo {
-    width: 150px !important;
-    height: 100px !important;
-  }
-
   .contact-card {
     padding: 40px 10px 30px !important;
-    border: 5px solid #F6F6F6 !important;
+    border: 5px solid #f6f6f6 !important;
     border-radius: 30px !important;
   }
 
@@ -450,8 +445,12 @@ body.lock-scroll {
   .benefits-section {
     padding: 60px 24px 40px;
   }
+  .contact-logo {
+    top: -55px !important;
+    width: 150px !important;
+    height: 100px !important;
+  }
 }
-
 
 /* ===========================================
    GOLD STANDARD SECTION
@@ -632,11 +631,9 @@ body.lock-scroll {
     line-height: 1.6;
     margin-top: 0;
   }
-
 }
 
 @media (max-width: 576px) {
-
   /* Gold Standard Mobile styles */
   .gold-header {
     margin-bottom: 32px;
@@ -650,7 +647,7 @@ body.lock-scroll {
   }
 
   .gold-subtitle {
-    font-size: 0.90rem;
+    font-size: 0.9rem;
     margin-bottom: 24px;
   }
 
@@ -685,7 +682,6 @@ body.lock-scroll {
     line-height: 1.4;
     max-width: 450px;
   }
-
 }
 
 /* ===========================================
@@ -736,7 +732,9 @@ body.lock-scroll {
 .faq-item:hover {
   background-color: #fff;
   transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.04), 0 10px 10px rgba(0, 0, 0, 0.02);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.04),
+    0 10px 10px rgba(0, 0, 0, 0.02);
   border-color: rgba(55, 163, 135, 0.2);
 }
 
@@ -842,6 +840,15 @@ body.lock-scroll {
 /* ===========================================
    CONTACT SECTION
    =========================================== */
+
+.form-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .contact-section {
   padding: 50px 15.5% 50px;
   background: #ffffff;
@@ -850,7 +857,7 @@ body.lock-scroll {
 .contact-card {
   margin: 64px auto 0;
   background: #ffffff;
-  border: 10px solid #F6F6F6;
+  border: 10px solid #f6f6f6;
   border-radius: 50px;
   padding: 80px 80px 64px;
   position: relative;
@@ -858,11 +865,11 @@ body.lock-scroll {
 
 .contact-logo {
   position: absolute;
-  top: -55px;
+  top: -75px;
   left: 50%;
   transform: translateX(-50%);
-  width: 444px;
-  height: 128px;
+  width: 262px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -872,7 +879,7 @@ body.lock-scroll {
 .contact-logo img {
   /* Exact Figma logo image: 271x79 */
   width: 271px;
-  height: 79px;
+  height: 130px;
   object-fit: contain;
 }
 
@@ -966,7 +973,7 @@ body.lock-scroll {
   justify-content: center;
   width: 44px;
   flex-shrink: 0;
-  color: #1B8976;
+  color: #1b8976;
 }
 
 .input-icon--top {
@@ -996,8 +1003,6 @@ body.lock-scroll {
   padding: 14px 16px 14px 0;
   line-height: 1.6;
 }
-
-
 
 /* ── Consent Checkbox ─────────────────────── */
 .form-consent {
@@ -1030,7 +1035,9 @@ body.lock-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .consent-label.error .consent-custom {
@@ -1042,13 +1049,13 @@ body.lock-scroll {
 }
 
 /* Checked state */
-.consent-checkbox:checked+.consent-custom {
-  background: #1B8976;
-  border-color: #1B8976;
+.consent-checkbox:checked + .consent-custom {
+  background: #1b8976;
+  border-color: #1b8976;
 }
 
-.consent-checkbox:checked+.consent-custom::after {
-  content: '';
+.consent-checkbox:checked + .consent-custom::after {
+  content: "";
   display: block;
   width: 5px;
   height: 9px;
@@ -1070,7 +1077,6 @@ body.lock-scroll {
   justify-content: center;
   margin-top: 8px;
 }
-
 
 /* .submit-btn {
   position: relative;
@@ -1136,7 +1142,7 @@ body.lock-scroll {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: #1B8976;
+  background: #1b8976;
   color: #fff;
   font-size: 0.92rem;
   font-weight: 600;
@@ -1163,6 +1169,7 @@ body.lock-scroll {
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.6s cubic-bezier(0.21, 1.05, 0.43, 1.15);
+  z-index: -1;
 }
 
 .submit-btn:hover {
@@ -1201,7 +1208,6 @@ body.lock-scroll {
    =========================================== */
 
 /* Tablet (Under 900px) */
-
 
 /* Mobile (Under 640px) */
 /* @media (max-width: 640px) {
