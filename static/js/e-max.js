@@ -195,6 +195,8 @@ function initHeroSection() {
   const veneerLeft = hero.querySelector(".emax-veneer-left");
   const veneerRight = hero.querySelector(".emax-veneer-right");
   const veneerBg = hero.querySelector(".emax-veneer");
+  const subHeading = heading.querySelector(".emax-sub");
+const mainHeading = heading.querySelector(".emax-main");
 
   if (!stage || !left || !right || !heading || !bgText ||
     !crownLeft || !crownRight || !veneerLeft || !veneerRight || !veneerBg) return;
@@ -234,6 +236,7 @@ function initHeroSection() {
     });
 
     enterTl
+      .from(bgText, { autoAlpha: 0, y: 50, duration: 0.8, ease: "power3.out" })
       .from(centerCard, { yPercent: 50, scale: 0.8, autoAlpha: 0, duration: 1.2, ease: "power3.out" })
       .from([left, right], { 
         x: 0, 
@@ -242,7 +245,8 @@ function initHeroSection() {
         autoAlpha: 0, 
         duration: 1.0, 
         ease: "back.out(1.5)" 
-      }, "-=0.4");
+      }, "-=0.4")
+        .from([subHeading, mainHeading], { autoAlpha: 0, y: 30, stagger: 0.2, duration: 1.0, ease: "power2.out" }, "-=0.5");
     // ----------------------------------------------------
 
     function getStageCenterY() {
@@ -369,7 +373,7 @@ function initHeroSection() {
     rightPreX: 90,
     leftToLeft: "71%",
     leftPreX: -90,
-    leftScale: 1.1,
+    leftScale: 1.0,
     crownTextStartY: 100,
     veneerTextStartY: 40,
     outGap: 60,
@@ -396,7 +400,7 @@ function initHeroSection() {
     rightPreX: 60,
     leftToLeft: "65%",
     leftPreX: -60,
-    leftScale: 1.05,
+    leftScale: 1.0,
     crownTextStartY: 40,
     veneerTextStartY: 40,
     outGap: 60,

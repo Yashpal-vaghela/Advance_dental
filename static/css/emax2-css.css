@@ -67,11 +67,9 @@ body.lock-scroll {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(
-    92.19deg,
-    rgba(27, 137, 118) -56.21,
-    rgba(0, 213, 255, 0.6) 184.49%
-  );
+  background: linear-gradient(92.19deg,
+      rgba(27, 137, 118) -56.21,
+      rgba(0, 213, 255, 0.6) 184.49%);
   transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -108,15 +106,13 @@ body.lock-scroll {
   bottom: 0;
   width: 1.5px;
   transform: translateX(-50%);
-  background: linear-gradient(
-    to bottom,
-    rgba(55, 163, 135, 0) 0%,
-    rgba(55, 163, 135, 0.4) 20%,
-    var(--line) 45%,
-    var(--line) 55%,
-    rgba(55, 163, 135, 0.4) 80%,
-    rgba(55, 163, 135, 0) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(55, 163, 135, 0) 0%,
+      rgba(55, 163, 135, 0.4) 20%,
+      var(--line) 45%,
+      var(--line) 55%,
+      rgba(55, 163, 135, 0.4) 80%,
+      rgba(55, 163, 135, 0) 100%);
   height: 40vh;
   top: 0%;
   transform: translate(-50%, -50%);
@@ -131,7 +127,7 @@ body.lock-scroll {
 }
 
 /* Stagger containers tightly by overlapping their empty space */
-.benefit-row + .benefit-row {
+.benefit-row+.benefit-row {
   margin-top: -80px;
   position: relative;
 }
@@ -226,7 +222,7 @@ body.lock-scroll {
     max-width: 380px;
   }
 
-  .benefit-row + .benefit-row {
+  .benefit-row+.benefit-row {
     margin-top: -60px;
   }
 }
@@ -254,7 +250,7 @@ body.lock-scroll {
     padding-bottom: 30px;
   }
 
-  .benefit-row + .benefit-row {
+  .benefit-row+.benefit-row {
     margin-top: -30px;
   }
 
@@ -314,19 +310,17 @@ body.lock-scroll {
     top: 30%;
     bottom: 0;
     transform: none;
-    background: linear-gradient(
-      to bottom,
-      rgba(55, 163, 135, 0) 0%,
-      rgba(55, 163, 135, 0.35) 15%,
-      var(--line) 45%,
-      var(--line) 55%,
-      rgba(55, 163, 135, 0.35) 85%,
-      rgba(55, 163, 135, 0) 100%
-    );
+    background: linear-gradient(to bottom,
+        rgba(55, 163, 135, 0) 0%,
+        rgba(55, 163, 135, 0.35) 15%,
+        var(--line) 45%,
+        var(--line) 55%,
+        rgba(55, 163, 135, 0.35) 85%,
+        rgba(55, 163, 135, 0) 100%);
   }
 
   .benefit-row,
-  .benefit-row + .benefit-row {
+  .benefit-row+.benefit-row {
     display: block;
     margin-top: 0;
     padding-bottom: 20px;
@@ -385,6 +379,14 @@ body.lock-scroll {
   .benefits-section {
     padding: 180px 24px 40px;
   }
+
+  .form-label {
+    margin-bottom: 0px !important;
+  }
+
+  .contact-card {
+    padding: 80px 40px 30px !important;
+  }
 }
 
 @media (max-width: 476px) {
@@ -400,7 +402,7 @@ body.lock-scroll {
     padding: 0px 10px !important;
   }
 
-  .emax-material-body > p {
+  .emax-material-body>p {
     font-size: 16px !important;
   }
 
@@ -410,6 +412,18 @@ body.lock-scroll {
     font-weight: 900 !important;
     line-height: 1;
   }
+
+  .contact-card {
+    padding: 40px 10px 10px !important;
+    border: 5px solid #f6f6f6 !important;
+    border-radius: 30px !important;
+  }
+
+
+  #message {
+    height: 90px !important;
+  }
+
 }
 
 @media (max-width: 406px) {
@@ -432,11 +446,7 @@ body.lock-scroll {
 }
 
 @media (max-width: 436px) {
-  .contact-card {
-    padding: 40px 10px 30px !important;
-    border: 5px solid #f6f6f6 !important;
-    border-radius: 30px !important;
-  }
+
 
   .faq-section {
     padding: 0px 24px 5px !important;
@@ -445,11 +455,16 @@ body.lock-scroll {
   .benefits-section {
     padding: 60px 24px 40px;
   }
+
   .contact-logo {
     top: -55px !important;
     width: 150px !important;
     height: 100px !important;
   }
+
+
+
+
 }
 
 /* ===========================================
@@ -634,6 +649,7 @@ body.lock-scroll {
 }
 
 @media (max-width: 576px) {
+
   /* Gold Standard Mobile styles */
   .gold-header {
     margin-bottom: 32px;
@@ -1049,12 +1065,12 @@ body.lock-scroll {
 }
 
 /* Checked state */
-.consent-checkbox:checked + .consent-custom {
+.consent-checkbox:checked+.consent-custom {
   background: #1b8976;
   border-color: #1b8976;
 }
 
-.consent-checkbox:checked + .consent-custom::after {
+.consent-checkbox:checked+.consent-custom::after {
   content: "";
   display: block;
   width: 5px;
