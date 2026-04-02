@@ -1,0 +1,824 @@
+.award-section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-section::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.316), rgba(255, 255, 255, 0.316)),
+        url('../img/Winning_Never_Stops_Bg_Top.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+    z-index: 0;
+}
+
+.award-section::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.316), rgba(255, 255, 255, 0.316)),
+        url('../img/Winning_Never_Stops_Bg_Bottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    z-index: 0;
+}
+
+.AwardSwiper {
+    overflow: hidden;
+    cursor: grab;
+    margin-left: 99px;
+}
+
+
+.AwardSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 600;
+    height: auto;
+    width: 38%;
+}
+
+.AwardSwiper .swiper-slide:first-child {
+    margin-left: 10px !important;
+}
+
+.award-section h2 {
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.5;
+    font-weight: 700;
+
+    display: inline-block;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 0px !important;
+}
+
+.AwardSwiper .swiper-slide .card {
+    padding: 20px;
+    border-radius: 14px;
+    position: relative;
+    z-index: 1;
+    color: #000000;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(92.19deg, rgba(27, 137, 118, 0.05) -56.21%, rgba(0, 213, 255, 0.05) 184.49%);
+    text-align: start !important;
+}
+
+.AwardSwiper .swiper-slide .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 16px;
+    background: linear-gradient(92.19deg,
+            rgba(27, 137, 118, 0.5) -56.21%,
+            rgba(0, 213, 255, 0.5) 184.49%);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.AwardSwiper .swiper-slide .card-body {
+    padding-top: 20px;
+}
+
+.AwardSwiper .swiper-slide .card-body h3 {
+    font-size: 22px;
+    background: linear-gradient(92.19deg,
+            #1B8976 -56.21%,
+            #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* optional but recommended */
+    display: inline-block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.AwardSwiper .swiper-slide .card-body p {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 0px;
+    text-align: start;
+}
+
+.AwardSwiper {
+    z-index: 99 !important;
+}
+
+.AwardSwiper .swiper-wrapper {
+    gap: 30px;
+}
+
+@media(max-width:1920px) {
+    .award-section h2 {
+        font-size: 65px;
+    }
+
+    .AwardSwiper .swiper-slide {
+        width: 38%;
+    }
+}
+
+@media(max-width:1200px) {
+    .AwardSwiper .swiper-slide {
+        width: 45%;
+    }
+
+    .award-section h2 {
+        font-size: 40px;
+    }
+
+    .award-section {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .award-section::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background:
+            linear-gradient(rgba(255, 255, 255, 0.316), rgba(255, 255, 255, 0.316)),
+            url('../img/Winning_Never_Stops_Bg_Top.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: top center;
+        z-index: 0;
+    }
+
+    .award-section::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background:
+            linear-gradient(rgba(255, 255, 255, 0.316), rgba(255, 255, 255, 0.316)),
+            url('../img/Winning_Never_Stops_Bg_Bottom.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        z-index: 0;
+    }
+
+    .AwardSwiper {
+        overflow: hidden;
+        cursor: grab;
+        margin-left: 50px;
+    }
+
+}
+
+@media(max-width:991px) {
+    .award-section {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .AwardSwiper .swiper-slide {
+        width: 50%;
+        margin-right: 15px !important;
+    }
+
+    .award-section h2 {
+        line-height: 1.6;
+        font-size: 35px;
+    }
+
+    .AwardSwiper {
+        overflow: hidden;
+        cursor: grab;
+        margin-left: 25px;
+    }
+
+    .AwardSwiper .swiper-wrapper {
+        gap: 5px;
+    }
+
+    .AwardSwiper::before {
+        transform: translate(0px, 0px)
+    }
+}
+
+@media(max-width:768px) {
+    .award-section h2 {
+        font-size: 40px;
+        margin-bottom: 35px;
+
+    }
+}
+
+@media(max-width:576px) {
+    .AwardSwiper .swiper-slide:first-child {
+        margin-left: 10px !important;
+    }
+
+    .AwardSwiper .swiper-slide {
+        width: 50%;
+        margin-left: 5px !important;
+        margin-right: 20px !important;
+    }
+
+    .award-section h2 {
+        font-size: 26px;
+        letter-spacing: 0.6px;
+        margin-bottom: 40px;
+    }
+
+    .AwardSwiper .swiper-wrapper {
+        gap: 0px;
+    }
+
+    .col-md-3 {
+        width: 87% !important;
+    }
+}
+
+@media(max-width:480px) {
+    .AwardSwiper .swiper-slide {
+        width: 80%;
+        margin-left: 5px !important;
+        margin-right: 20px !important;
+    }
+
+    .award-section::before {
+        display: none;
+    }
+
+    .award-section::after {
+        display: none;
+    }
+
+}
+
+
+/* review */
+
+.new-testimonial-section {
+    margin-top: 50px;
+    background-image: url('../img/review_bg_border.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20px !important;
+    margin-bottom: 50px;
+}
+
+.myswiper {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0px;
+    overflow: visible !important;
+}
+
+.text-header-subtitle {
+    font-size: 40px;
+    background: linear-gradient(92.19deg,
+            #1B8976 -56.21%,
+            #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.review-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-top: 30px;
+}
+
+/* Avatars */
+.review-users {
+    display: flex;
+}
+
+.review-users img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -10px;
+}
+
+.review-users img:first-child {
+    margin-left: 0;
+    z-index: 3;
+
+}
+
+/* Second image */
+.review-users img:nth-child(2) {
+    z-index: 2;
+}
+
+/* Third image (BOTTOM) */
+.review-users img:nth-child(3) {
+    z-index: 1;
+}
+
+/* Content */
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Top Row */
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-number {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Stars */
+.review-stars {
+    color: #f5c518;
+    font-size: 14px;
+}
+
+/* Bottom text */
+.review-content p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.myswiper .swiper-wrapper {
+    display: flex;
+}
+
+/* Center pagination */
+.swiper-container .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Default bullets */
+.swiper-container .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfecec;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* Active bullet (teal color like image) */
+.swiper-container .swiper-pagination-bullet-active {
+    background: linear-gradient(92.19deg,
+            #1B8976 -56.21%,
+            #00D5FF 184.49%) !important;
+    width: 15px !important;
+}
+
+.testimonial-slide {
+    background-color: transparent;
+    align-items: center;
+    text-align: left;
+    border-radius: 0px;
+    padding: 20px;
+    transform: scale(0.9) !important;
+}
+
+.testimonial-slide .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 25px 20px 25px;
+    text-align: center;
+    border-radius: 20px;
+    height: auto;
+    border: 1px solid rgba(27, 137, 118, 1);
+}
+
+.myswiper .swiper-slide.testimonial-slide .card {
+    animation: smallBig2 2s ease-in-out forwards;
+}
+
+.myswiper .swiper-slide-prev.testimonial-slide .card {
+    z-index: 2;
+    animation: smallBig 2s ease-in-out forwards;
+}
+
+.myswiper .swiper-slide-active.testimonial-slide .card {
+    animation: smallBig1 2s ease-in-out forwards;
+}
+
+.border-frame {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 32.5%;
+    height: 97%;
+    z-index: 1;
+    border-radius: 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-image: url("../img/border-frame.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 9999;
+}
+
+
+
+@keyframes smallBig {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes smallBig1 {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes smallBig2 {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.Client_image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Client_image img {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewName {
+    position: relative;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.city_name {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(37, 37, 37, 1);
+    margin-bottom: 0px;
+}
+
+.fancy_border {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #D9D9D9 12%, #000000 50%, #FFFFFF 87.5%);
+    margin: 0px auto;
+}
+
+.reviewContent {
+    position: relative;
+    color: #484848;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    height: auto;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    border: 1px solid black;
+}
+
+.google_icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.google_icon img {
+    width: 140px;
+    height: 68px;
+    object-fit: cover;
+}
+
+.myswiper .swiper-slide-active .reviewContent {
+    height: auto;
+    line-height: 1.75;
+    margin-top: 15px;
+}
+
+.testimonial_subcontent {
+    text-align: center !important;
+    width: 64%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.stars {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 20px;
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 1650px) and (max-width: 2799px) {
+    .border-frame {
+        width: 33%;
+    }
+}
+
+@media (max-width: 1200px) {
+    @keyframes smallBig {
+        0% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(0.95);
+        }
+    }
+
+    @keyframes smallBig1 {
+        0% {
+            transform: scale(0.95);
+        }
+
+        100% {
+            transform: scale(1.1);
+        }
+    }
+
+    .border-frame {
+        width: 33%;
+        height: 95%;
+        top: 0.8%;
+    }
+
+    .testimonial-slide {
+        padding: 20px 10px 10px;
+    }
+
+    .testimonial-slide .card {
+        padding: 10px 12px 10px;
+    }
+
+    .reviewContent {
+        height: auto !important;
+    }
+
+    .myswiper .swiper-slide-active .reviewContent {
+        height: 305px;
+    }
+
+    .stars {
+        margin-bottom: 8px;
+    }
+
+    .reviewName {
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 1025px) {
+    .testimonial-slide {
+        padding: 20px 15px 60px;
+    }
+
+    .reviewContent {
+        font-size: 12px;
+        height: 185px;
+    }
+
+    .myswiper .swiper-slide-active .reviewContent {
+        height: 220px;
+    }
+
+    .border-frame {
+        width: 33%;
+        height: 85%;
+        top: -6.5%;
+        z-index: 9999;
+    }
+
+    .google_icon img {
+        width: 112px;
+        height: 50px;
+        object-fit: cover;
+        border: 1px solid black;
+    }
+}
+
+@media (max-width: 991px) {
+    .testimonial_subcontent {
+        width: 80%;
+    }
+
+    .reviewContent {
+        font-size: 13px;
+        height: 190px;
+    }
+
+    .border-frame {
+        width: 45.6%;
+        z-index: 1;
+    }
+
+    .new-testimonial-section {
+        padding-bottom: 0px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial_subcontent {
+        width: 100% !important;
+        font-size: 15px;
+    }
+
+    .testimonial-vector-img {
+        top: 20%;
+    }
+
+    .reviewContent {
+        height: auto !important;
+    }
+
+    .reviewName {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+
+    .testimonial-slide .card {
+        padding: 10px 15px;
+    }
+
+    .myswiper .swiper-slide-active .reviewContent {
+        height: 260px;
+    }
+
+    .border-frame {
+        width: 67.5%;
+        height: 85%;
+        left: 0.5%;
+        top: -10.3%;
+    }
+
+    .reviewContent {
+        font-size: 15px;
+    }
+
+    @keyframes smallBig {
+        0% {
+            transform: scale(0.95);
+        }
+
+        100% {
+            transform: scale(0.95);
+        }
+    }
+
+    @keyframes smallBig2 {
+        0% {
+            transform: scale(0.7);
+        }
+
+        100% {
+            transform: scale(0.8);
+        }
+    }
+
+    .new-testimonial-section {
+        padding: 25px 0px 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .new-testimonial-section {
+        padding: 25px 0px 0px !important;
+    }
+
+    .testimonial-slide {
+        padding: 20px 15px 10px;
+    }
+
+    .testimonial-slide .card {
+        padding: 6px 12px;
+    }
+
+    .testimonial-vector-img {
+        top: 50%;
+    }
+
+    .testimonial_subcontent {
+        font-size: 14px;
+    }
+
+    .reviewContent {
+        height: 300px;
+        font-size: 14px;
+    }
+
+    .myswiper .swiper-slide-active .reviewContent {
+        height: 290px;
+    }
+
+    .border-frame {
+        width: 96.5%;
+        height: 95%;
+        top: 0%;
+        left: 0.2%;
+    }
+
+    .myswiper {
+        width: 75%;
+    }
+
+    .new-testimonial-section .swiper-container {
+        margin-top: 25px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .myswiper {
+        width: 95%;
+    }
+
+    .new-testimonial-section {
+        padding: 65px 0px 0px !important;
+    }
+}

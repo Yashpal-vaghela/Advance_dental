@@ -1745,3 +1745,9 @@ def emax2(request):
         "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
     }
     return render(request, 'emax2.html', context)
+
+def WinningNeverStops(request):
+    context = {
+
+    }
+    return render(request, 'WinningNeverStops.html', context)

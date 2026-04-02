@@ -73,4 +73,5 @@ urlpatterns = [
     path('verify-warranty/', views.verify_warrenty, name='verify_warrenty'),
     path('e-max/', views.emax, name='emax'),
     path('emax2/', views.emax2, name='emax2'),
+    path('WinningNeverStops/', views.WinningNeverStops, name='WinningNeverStops'),
 ]
