@@ -179,6 +179,34 @@
     height: auto
 }
 
+.related-product-swiper .swiper-slide {
+    height: auto !important;
+    display: flex
+}
+
+.related-product-swiper .all-blog-content.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.related-product-swiper .all-blog-content.card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1
+}
+
+.related-product-swiper .all-blog-content.card .blog-main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1
+}
+
+.related-product-swiper .all-blog-content.card .blog-footer {
+    margin-top: auto
+}
+
 .related-posts-title {
     position: relative;
     margin: 20px 0
@@ -559,6 +587,71 @@
     height: 30px
 }
 
+.author-product-inner {
+    --bs-gutter-x: 10rem
+}
+
+.author-product-section {
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 15px;
+    margin-top: 55px;
+    display: flex;
+    align-items: start
+}
+
+.author-product-image img {
+    position: relative;
+    margin-top: -17%;
+    width: 100%;
+    height: auto
+}
+
+.product-author-content {
+    padding: 0px 10px 0px 0px
+}
+
+.product-author-content .author-name {
+    font-size: 70px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.7;
+    opacity: 0.27;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+    text-stroke: 1.5px #cbc9c9;
+    display: block;
+    letter-spacing: 2px
+}
+
+.product-author-content .author-role {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+    color: #1b8976
+}
+
+.product-author-content .author-bio p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 0px !important;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.5
+}
+
+.product-author-content .author-social-links {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    gap: 10px
+}
+
+.product-author-content .author-social-links a svg {
+    width: 40px;
+    height: 40px
+}
+
 .sidebar-sticky-wrapper {
     position: sticky;
     top: 80px
@@ -890,11 +983,24 @@
 
 @media (max-width:1440px) {
     .blog-author-content .author-name {
-        font-size: 55px;
+        font-size: 55px
+    }
+
+    .author-product-image img {
+        margin-top: 33%;
+        width: 100%
     }
 }
 
 @media (max-width:1200px) {
+    .product-author-content .author-name {
+        font-size: 45px
+    }
+
+    .author-product-inner {
+        --bs-gutter-x: 7rem
+    }
+
     .single-blog-content2 {
         padding: 10px 10px 0px
     }
@@ -1008,6 +1114,55 @@
         text-align: center;
         margin-bottom: 10px
     }
+
+    .author-product-image img {
+        height: 100%
+    }
+
+    .author-product-section {
+        background-color: transparent;
+        margin-top: 20px
+    }
+
+    .author-product-inner {
+        flex-direction: column
+    }
+
+    .product-author-content .author-bio p {
+        text-align: left
+    }
+
+    .product-author-content .author-social-links {
+        justify-content: left;
+        margin-top: 15px
+    }
+
+    .author-product-inner.row {
+        --bs-gutter-x: 1rem
+    }
+
+    .author-product-image {
+        margin-top: 20px
+    }
+
+    .author-product-image img {
+        height: 100%;
+        width: 166px;
+        margin: auto
+    }
+
+    .product-author-content .author-name {
+        text-align: center;
+        font-size: 46px;
+        color: #000;
+        -webkit-text-stroke: 0px;
+        line-height: 1.5
+    }
+
+    .product-author-content .author-role {
+        text-align: center;
+        margin-bottom: 10px
+    }
 }
 
 @media (max-width:768px) {
@@ -1077,6 +1232,10 @@
 
     .single-blog-main-title {
         font-size: 22px
+    }
+
+    .product-author-content .author-bio p {
+        font-size: 14px
     }
 }
 
@@ -1151,6 +1310,13 @@
 }
 
 @media (max-width:420px) {
+    .product-author-content .author-name {
+        font-size: 30px
+    }
+
+    .product-author-content .author-role {
+        font-size: 16px
+    }
 
     .single-page-main-content th,
     .single-page-main-content td {

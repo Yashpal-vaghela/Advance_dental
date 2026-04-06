@@ -71,8 +71,9 @@ urlpatterns = [
     path('sitemap/',views.sitemap,name="sitemap"),
     path('404/',views.error_404,name="404"),
     path('verify-warranty/', views.verify_warrenty, name='verify_warrenty'),
-    path('e-max/', views.emax, name='emax'),
+    path('emax-aesthetic-maxima/', views.emax, name='emax'),
     path('emax2/', views.emax2, name='emax2'),
     path('WinningNeverStops/', views.WinningNeverStops, name='WinningNeverStops'),
     path('newSlider/', views.newSlider, name='newSlider'),
+    path('before-after-new/', views.ade_gallery, name='ade_gallery'),
 ]

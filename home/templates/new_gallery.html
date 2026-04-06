@@ -1,0 +1,275 @@
+{% load static %}
+{% block seo %} 
+{% endblock seo %}
+{% block css %}
+<link  rel="preload" href="{% static 'css/new_gallery.css' %}" as='stylesheet' />
+  <link href={% static 'css/new_gallery.css' %} rel="stylesheet" media="print" onload="this.media='all'" />
+{% endblock css %}
+{% block body %}
+<div class="container">
+    <h2 id="curveText" class="slider-heading">
+        Before and After – Real Change Stories
+    </h2>
+</div>
+    <div class="carousel" id="carousel">
+        {% for item in gallery21 %}
+            <div class="slide">
+                <img src="{{ item.image.url }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}
+{% block javascript %}
+{% comment %} <script type="module">
+        import { Snap } from 'https://esm.sh/vevet@5';
+
+        const container = document.getElementById('carousel');
+
+        let startX = 0;
+
+        container.addEventListener('pointerdown', (e) => {
+            startX = e.clientX;
+            stopAutoplay();
+        });
+
+        container.addEventListener('pointerup', (e) => {
+            const diff = e.clientX - startX;
+
+            if (diff > 0) {
+                direction = 'prev';
+            } else {
+                direction = 'next';
+            }
+
+            startAutoplay();
+        });
+
+        const carousel = new Snap({
+            container,
+            direction: 'horizontal',
+            grabCursor: true,
+            centered: true,
+            loop: true,
+            gap: 15,
+            duration: 2500,
+            easing: 'linear',
+        });
+
+        let autoplayInterval;
+
+        const resumeEngine = (obj) => {
+            for (let key in obj) {
+                if (obj[key] && typeof obj[key] === 'object') {
+                    if (typeof obj[key].play === 'function') {
+                        try { obj[key].play(); } catch (err) { }
+                    }
+                }
+            }
+            if (typeof obj.play === 'function') try { obj.play(); } catch (err) { }
+        };
+
+        const pauseEngine = (obj) => {
+            for (let key in obj) {
+                if (obj[key] && typeof obj[key] === 'object') {
+                    if (typeof obj[key].pause === 'function') {
+                        try { obj[key].pause(); } catch (err) { }
+                    }
+                }
+            }
+            if (typeof obj.pause === 'function') try { obj.pause(); } catch (err) { }
+        };
+
+        function startAutoplay() {
+            clearInterval(autoplayInterval);
+            resumeEngine(carousel);
+            if (carousel.next) {
+                carousel.next();
+            }
+            autoplayInterval = setInterval(() => {
+                if (carousel.next) {
+                    carousel.next();
+                }
+            }, 2500);
+        }
+
+        function stopAutoplay(e) {
+            clearInterval(autoplayInterval);
+            pauseEngine(carousel);
+        }
+
+        setTimeout(() => {
+            startAutoplay();
+        }, 500);
+
+        container.addEventListener('mouseenter', stopAutoplay);
+        container.addEventListener('mouseleave', startAutoplay);
+        container.addEventListener('touchstart', stopAutoplay, { passive: true });
+        container.addEventListener('touchend', startAutoplay);
+
+        carousel.on('update', () => {
+            const isMobile = window.innerWidth <= 600;
+            const depth = isMobile ? 100 : 200;
+            const rotation = isMobile ? 30 : 20;
+
+            const scale = 1 / (180 / rotation);
+            const halfAngle = (rotation * Math.PI) / 180 / 2;
+
+            carousel.slides.forEach(({ element, coord, progress, size }) => {
+                const factor = 1 - Math.cos(progress * scale * Math.PI);
+
+                const xOffset = progress * (size / 3) * factor;
+                const zOffset = ((size * 0.5) / Math.sin(halfAngle)) * factor - depth;
+                const rotateY = progress * rotation;
+
+                element.style.transform = `
+                translateX(${coord + xOffset}px)
+                translateZ(${zOffset}px)
+                rotateY(${rotateY}deg)
+            `;
+            });
+        });
+
+        // Resize par snap library ko recalculate karne ke liye
+        window.addEventListener('resize', () => {
+            if (carousel && carousel.resize) carousel.resize();
+        });
+
+        container.classList.add('ready');
+</script> {% endcomment %}
+<script type="module">
+import { Snap } from 'https://esm.sh/vevet@5';
+
+const container = document.getElementById('carousel');
+
+const carousel = new Snap({
+    container,
+    direction: 'horizontal',
+    grabCursor: true,
+    centered: true,
+    loop: true,
+    gap: 15,
+    duration: 1000,
+    easing: 'ease-in-out',
+});
+
+let isVisible = false;
+let autoplayTimer;
+
+let isDragging = false;
+let stopTimeout;
+let lastPointerType = 'mouse';
+let lastUpdateTime = Date.now();
+
+function startAutoplay() {
+    stopAutoplay();
+
+    autoplayTimer = setInterval(() => {
+        if (!isDragging && isVisible) {
+            carousel.next();
+        }
+    }, 2000);
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayTimer);
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            isVisible = true; 
+            startAutoplay();     
+        } else {
+            isVisible = false;  
+            stopAutoplay();
+        }
+    });
+}, {
+    threshold: 0.4
+});
+
+observer.observe(container);
+
+container.addEventListener('mouseenter', () => {
+    if (lastPointerType === 'mouse') stopAutoplay();
+});
+container.addEventListener('mouseleave', () => {
+    if (isVisible && !isDragging) startAutoplay();
+});
+
+container.addEventListener('pointerdown', (e) => {
+    lastPointerType = e.pointerType || 'mouse';
+    isDragging = true;
+    stopAutoplay();
+});
+
+window.addEventListener('pointerup', (e) => {
+    if (isDragging) {
+        lastPointerType = e.pointerType || 'mouse';
+        isDragging = false;
+        waitForSnapToStop();
+    }
+});
+window.addEventListener('pointercancel', (e) => {
+    if (isDragging) {
+        lastPointerType = e.pointerType || 'mouse';
+        isDragging = false;
+        waitForSnapToStop();
+    }
+});
+
+function waitForSnapToStop() {
+    clearTimeout(stopTimeout);
+
+    stopTimeout = setTimeout(() => {
+        const timeSinceLastUpdate = Date.now() - lastUpdateTime;
+
+        if (timeSinceLastUpdate > 100) {
+            if (isVisible) {
+                if (lastPointerType === 'mouse' && container.matches(':hover')) {
+                    return;
+                }
+                
+                setTimeout(() => {
+                    if (isVisible && !isDragging) startAutoplay();
+                }, 800); 
+            }
+        } else {
+            waitForSnapToStop();
+        }
+    }, 100);
+}
+
+
+carousel.on('update', () => {
+    lastUpdateTime = Date.now();
+
+    const isMobile = window.innerWidth <= 600;
+    const depth = isMobile ? 100 : 200;
+    const rotation = isMobile ? 30 : 20;
+
+    const scale = 1 / (180 / rotation);
+    const halfAngle = (rotation * Math.PI) / 180 / 2;
+
+    carousel.slides.forEach(({ element, coord, progress, size }) => {
+        const factor = 1 - Math.cos(progress * scale * Math.PI);
+
+        const xOffset = progress * (size / 3) * factor;
+        const zOffset = ((size * 0.5) / Math.sin(halfAngle)) * factor - depth;
+        const rotateY = progress * rotation;
+
+        element.style.transform = `
+            translateX(${coord + xOffset}px)
+            translateZ(${zOffset}px)
+            rotateY(${rotateY}deg)
+        `;
+    });
+});
+
+window.addEventListener('resize', () => {
+    if (carousel && carousel.resize) carousel.resize();
+});
+
+container.classList.add('ready');
+</script>
+{% endblock javascript %}

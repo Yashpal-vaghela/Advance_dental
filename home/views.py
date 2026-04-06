@@ -148,7 +148,7 @@ def verify_warrenty(request):
         orderId = request.POST.get('id') 
         authenticationId = request.POST.get('auth') 
         # Set your parameters
-        api_url = "https://adesurat.com/API.php?call=get_warranty_details"
+        api_url = "https://advancedentalerp.com/API.php?call=get_warranty_details"
         orderId = str(orderId)
         authenticationId = str(authenticationId)
         
@@ -950,7 +950,7 @@ def api_user_login(request):
             password=form.cleaned_data['password']
             #authenticate checks if credentials exists in db
             print(username, password)
-            apiurl = 'https://adesurat.com/API.php?call=login'
+            apiurl = 'https://advancedentalerp.com/API.php?call=login'
             apiurl = str(apiurl)
             data = {
                 "username": username,
@@ -974,7 +974,7 @@ def api_user_login(request):
                 pk = token
                 fk = ids
                 #order
-                order_apiurl = 'https://adesurat.com/API.php?call=order_list_get_dr'
+                order_apiurl = 'https://advancedentalerp.com/API.php?call=order_list_get_dr'
                 order_apiurl = str(order_apiurl)
 
                 headers = { 
@@ -1000,7 +1000,7 @@ def api_user_login(request):
 
                 
                 #invoice
-                payment_apiurl = 'https://adesurat.com/API.php?call=paymentloadData'
+                payment_apiurl = 'https://advancedentalerp.com/API.php?call=paymentloadData'
                 payment_apiurl = str(payment_apiurl)
                 res = requests.post(payment_apiurl, headers=headers, data=data)
                 dict_data = res.json()
@@ -1015,7 +1015,7 @@ def api_user_login(request):
 
 
                 #invoice
-                invoice_apiurl = 'https://adesurat.com/API.php?call=invoiceloadData'
+                invoice_apiurl = 'https://advancedentalerp.com/API.php?call=invoiceloadData'
                 invoice_apiurl = str(invoice_apiurl)
                 res = requests.post(invoice_apiurl, headers=headers, data=data)
                 dict_data = res.json()
@@ -1029,7 +1029,7 @@ def api_user_login(request):
                     break    
 
                 #statement
-                statement_apiurl = 'https://adesurat.com/API.php?call=statementData'
+                statement_apiurl = 'https://advancedentalerp.com/API.php?call=statementData'
                 statement_apiurl = str(statement_apiurl)
                 res = requests.post(statement_apiurl, headers=headers, data=data)
                 dict_data = res.json()
@@ -1086,7 +1086,7 @@ def api_user_login(request):
 def ext_api(request, pk, fk):
     
     #order
-    order_apiurl = 'https://adesurat.com/API.php?call=order_list_get_dr'
+    order_apiurl = 'https://advancedentalerp.com/API.php?call=order_list_get_dr'
     order_apiurl = str(order_apiurl)
 
     headers = { 
@@ -1112,7 +1112,7 @@ def ext_api(request, pk, fk):
 
     
     #invoice
-    payment_apiurl = 'https://adesurat.com/API.php?call=paymentloadData'
+    payment_apiurl = 'https://advancedentalerp.com/API.php?call=paymentloadData'
     payment_apiurl = str(payment_apiurl)
     res = requests.post(payment_apiurl, headers=headers, data=data)
     dict_data = res.json()
@@ -1127,7 +1127,7 @@ def ext_api(request, pk, fk):
 
 
     #invoice
-    invoice_apiurl = 'https://adesurat.com/API.php?call=invoiceloadData'
+    invoice_apiurl = 'https://advancedentalerp.com/API.php?call=invoiceloadData'
     invoice_apiurl = str(invoice_apiurl)
     res = requests.post(invoice_apiurl, headers=headers, data=data)
     dict_data = res.json()
@@ -1141,7 +1141,7 @@ def ext_api(request, pk, fk):
         break    
 
     #statement
-    statement_apiurl = 'https://adesurat.com/API.php?call=statementData'
+    statement_apiurl = 'https://advancedentalerp.com/API.php?call=statementData'
     statement_apiurl = str(statement_apiurl)
     res = requests.post(statement_apiurl, headers=headers, data=data)
     dict_data = res.json()
@@ -1174,7 +1174,7 @@ def ext_api(request, pk, fk):
 
 
 def api_logout(request, pk, did):
-    order_apiurl = 'https://adesurat.com/API.php?call=logout'
+    order_apiurl = 'https://advancedentalerp.com/API.php?call=logout'
     order_apiurl = str(order_apiurl)
     headers = { 
                 'Accept-Language' : 'content-copied-from-myhttpheader',
@@ -1193,7 +1193,7 @@ def print_order(request):
         #order
         fk = request.GET.get('token')
         order_no = request.GET.get('orderNo')
-        order_apiurl = 'https://adesurat.com/API.php?call=orderprint'
+        order_apiurl = 'https://advancedentalerp.com/API.php?call=orderprint'
         order_apiurl = str(order_apiurl)
        
         headers = { 
@@ -1263,7 +1263,7 @@ def print_payment(request):
         print(fk)
 
         #order
-        apiurl = 'https://adesurat.com/API.php?call=printpayment'
+        apiurl = 'https://advancedentalerp.com/API.php?call=printpayment'
         apiurl = str(apiurl)
         
         headers = { 
@@ -1295,7 +1295,7 @@ def print_payment(request):
 
 def print_statment(request, pk, did):
     #order
-    apiurl = 'https://adesurat.com/API.php?call=printstatement'
+    apiurl = 'https://advancedentalerp.com/API.php?call=printstatement'
     apiurl = str(apiurl)
     
     headers = { 
@@ -1322,7 +1322,7 @@ def print_statment(request, pk, did):
 
 def print_invoice(request, pk, did):
     #order
-    apiurl = 'https://adesurat.com/API.php?call=printinvoice'
+    apiurl = 'https://advancedentalerp.com/API.php?call=printinvoice'
     apiurl = str(apiurl)
     
     headers = { 
@@ -1662,24 +1662,24 @@ def news_sitemap(request):
 
 def emax(request):
     context = {
-
+        # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
     }
     return render(request, 'e-max.html', context)
 
 def emax2(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
-        recaptcha_response = request.POST.get("g-recaptcha-response")
-        data ={
-            "secret": settings.RECAPTCHA_SECRET_KEY,
-            "response": recaptcha_response,
-        }
-        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
-        result = r.json()
+        # recaptcha_response = request.POST.get("g-recaptcha-response")
+        # data ={
+        #     "secret": settings.RECAPTCHA_SECRET_KEY,
+        #     "response": recaptcha_response,
+        # }
+        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        # result = r.json()
 
-        if not result.get('success'):
-            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-            return redirect(request.META.get('HTTP_REFERER','contact'))
+        # if not result.get('success'):
+        #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+        #     return redirect(request.META.get('HTTP_REFERER','contact'))
         if form.is_valid():
             submission = form.save()
             submission.page = "emax2"
@@ -1742,7 +1742,7 @@ def emax2(request):
     form = ContactForm()
     context = {
         "form": form,
-        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+        # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
     }
     return render(request, 'emax2.html', context)
 
@@ -1757,3 +1757,10 @@ def newSlider(request):
 
     }
     return render(request, 'newSlider.html', context)
+
+def ade_gallery(request):
+    data = BeforeAfter.objects.all().order_by("-id")[:10]
+    context = {
+        'data':data,
+    }
+    return render(request, 'new_gallery.html', context)

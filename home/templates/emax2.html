@@ -283,7 +283,6 @@
 <!-- ==========================================
          CONTACT FORM SECTION
          ========================================== -->
-{% comment %}
 <section class="contact-section" data-aos="zoom-in-down" data-aos-once="true">
     <div class="container">
         <h2 class="form-title">Have a Question? Get In Touch</h2>
@@ -297,19 +296,18 @@
             </div>
 
             <form
-                class="contact-form row g-4"
+                class="contact-form emax2-custom-form row g-4"
                 id="contact-form"
                 method="post"
                 action="{% url 'home:emax2' %}"
                 novalidate
             >
                 {% csrf_token %}
-                <input type="hidden" name="name" id="full-name" />
 
                 <!-- Row 1: First Name -->
                 <div class="col-12 col-md-6">
                     <div class="form-group h-100">
-                        <label class="form-label" for="first-name">First Name</label>
+                        <label class="form-label" for="full-name">Full Name</label>
                         <div class="input-wrapper">
                             <span class="input-icon">
                                 <svg
@@ -331,43 +329,10 @@
                             </span>
                             <input
                                 type="text"
-                                id="first-name"
+                                name="name"
+                                id="full-name"
                                 class="form-input"
-                                placeholder="First Name"
-                                required
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 1: Last Name -->
-                <div class="col-12 col-md-6">
-                    <div class="form-group h-100">
-                        <label class="form-label" for="last-name">Last Name</label>
-                        <div class="input-wrapper">
-                            <span class="input-icon">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="18"
-                                    height="18"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
-                                    />
-                                    <circle cx="12" cy="7" r="4" />
-                                </svg>
-                            </span>
-                            <input
-                                type="text"
-                                id="last-name"
-                                class="form-input"
-                                placeholder="Last Name"
+                                placeholder="Full Name"
                                 required
                             />
                         </div>
@@ -483,44 +448,6 @@
                     </div>
                 </div>
 
-                <!-- Row 3: Subject -->
-                <div class="col-12 col-md-6">
-                    <div class="form-group h-100">
-                        <label class="form-label" for="subject">Subject</label>
-                        <div class="input-wrapper">
-                            <span class="input-icon">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="18"
-                                    height="18"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
-                                    />
-                                    <polyline points="14 2 14 8 20 8" />
-                                    <line x1="16" y1="13" x2="8" y2="13" />
-                                    <line x1="16" y1="17" x2="8" y2="17" />
-                                    <line x1="10" y1="9" x2="8" y2="9" />
-                                </svg>
-                            </span>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                class="form-input"
-                                placeholder="Subject"
-                                required
-                            />
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Row 4: Message -->
                 <div class="col-12">
                     <div class="form-group form-group--full">
@@ -587,9 +514,8 @@
         </div>
     </div>
 </section>
-{% endcomment %}
 
-<section class="contact-section" data-aos="zoom-in-down" data-aos-once="true">
+{% comment %} <section class="contact-section" data-aos="zoom-in-down" data-aos-once="true">
     <div class="container">
         <h2 class="form-title">Have a Question? Get In Touch</h2>
         <div class="contact-card">
@@ -820,29 +746,22 @@
             </form>
         </div>
     </div>
-</section>
+</section> {% endcomment %}
 
 {% endblock body%} {% block js %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="{% static 'js/emax2-js.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-{% comment %}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('contact-form');
-        const firstName = document.getElementById('first-name');
-        const lastName = document.getElementById('last-name');
-        const fullName = document.getElementById('full-name');
 
         // Form fields to validate
         const fields = [
-            { id: 'first-name', name: 'First Name' },
-            { id: 'last-name', name: 'Last Name' },
+            { id: 'full-name', name: 'Name' },
             { id: 'phone', name: 'Phone Number' },
             { id: 'email', name: 'Email' },
             { id: 'city', name: 'City Name' },
-            { id: 'subject', name: 'Subject' },
             { id: 'message', name: 'Message' },
         ];
 
@@ -871,11 +790,6 @@
         form.addEventListener('submit', function (e) {
             let isValid = true;
             let firstInvalidField = null;
-
-            // Combine names
-            const combinedName =
-                `${firstName.value.trim()} ${lastName.value.trim()}`.trim();
-            fullName.value = combinedName;
 
             // Validate text fields
             fields.forEach((f) => {
@@ -925,9 +839,8 @@
         });
     });
 </script>
-{% endcomment %}
 
-<script>
+{% comment %} <script>
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('contact-form');
 
@@ -1007,7 +920,7 @@
             }
         });
     });
-</script>
+</script> {% endcomment %}
 
 {% if messages %}
 <script>

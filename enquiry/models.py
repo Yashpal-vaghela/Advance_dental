@@ -24,7 +24,7 @@ class Contact(models.Model):
     email = models.CharField(max_length = 150)
     contact = models.CharField(max_length = 150)
     city = models.CharField(max_length = 150, blank=True, null=True)
-    subject = models.CharField(max_length = 150)
+    subject = models.CharField(max_length = 150, blank=True, null=True)
     message  = models.TextField()
     date = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
