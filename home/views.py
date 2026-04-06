@@ -1751,3 +1751,9 @@ def WinningNeverStops(request):
 
     }
     return render(request, 'WinningNeverStops.html', context)
+
+def newSlider(request):
+    context = {
+
+    }
+    return render(request, 'newSlider.html', context)
