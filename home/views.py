@@ -116,6 +116,7 @@ def home(request):
     gallery = Gallery.objects.all().order_by("-id")[:7]
     gallery21 = BeforeAfter.objects.all().order_by("-id")[:7]
     video = VideoTestimonals.objects.all().order_by("-id")
+    awards = Award.objects.all().order_by("-id")
 
     context = {
         "main3": main3,
@@ -126,6 +127,7 @@ def home(request):
         "gallery21": gallery21,
         "video": video,
         "form": form,
+        "awards": awards,
         # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, "index.html", context)
@@ -1747,8 +1749,9 @@ def emax2(request):
     return render(request, 'emax2.html', context)
 
 def WinningNeverStops(request):
+    data = Award.objects.all().order_by("-id")
     context = {
-
+        'data':data,
     }
     return render(request, 'WinningNeverStops.html', context)
 

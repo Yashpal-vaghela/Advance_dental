@@ -199,6 +199,9 @@ class ImageUsageSearchAdmin(admin.ModelAdmin):
         extra_context["query"] = query
         extra_context["title"] = "Image Usage Search"
         return super().changelist_view(request, extra_context=extra_context)
+class AwardAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
 
 # Register your models here.
 
@@ -225,3 +228,4 @@ admin.site.register(VideoTestimonals)
 admin.site.register(Place)
 admin.site.register(WebStory, WebStoryAdmin)
 admin.site.register(WebStoryVideo)
+admin.site.register(Award, AwardAdmin)

@@ -371,3 +371,12 @@ class ImageSearch(models.Model):
 
     def __str__(self):
         return "Image Usage Search"
+
+class Award(models.Model):
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='award/')
+    alt = models.CharField(max_length=255, blank=True, null=True)
+    
+    def save(self, *args, **kwargs):
+        self.alt = self.name
+        super().save(*args, **kwargs)
