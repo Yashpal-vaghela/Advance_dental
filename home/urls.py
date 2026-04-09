@@ -76,4 +76,5 @@ urlpatterns = [
     path('WinningNeverStops/', views.WinningNeverStops, name='WinningNeverStops'),
     path('newSlider/', views.newSlider, name='newSlider'),
     path('before-after-new/', views.ade_gallery, name='ade_gallery'),
+    path('new-section/', views.newSection, name='newSection'),
 ]

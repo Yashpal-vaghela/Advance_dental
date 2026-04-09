@@ -1767,3 +1767,9 @@ def ade_gallery(request):
         'data':data,
     }
     return render(request, 'new_gallery.html', context)
+
+def newSection(request):
+    context = {
+
+    }
+    return render(request, 'new-section.html', context)
