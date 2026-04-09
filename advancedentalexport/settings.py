@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'enquiry',
     'usd',
+    'surgical_guide',
     'requests',
 ]
 

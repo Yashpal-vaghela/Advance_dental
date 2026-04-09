@@ -19,6 +19,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('blog/', include('blog.urls')),
     path('sending-data/', include('enquiry.urls')),
+    path('surgical-guide/', include('surgical_guide.urls')),
     path('ultimate-smile-design/', include('usd.urls')),
     path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'favicon.ico', permanent=True)),
     
