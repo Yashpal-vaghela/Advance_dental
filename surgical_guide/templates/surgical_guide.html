@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+{% endblock %}
+{% block header %}
+{% endblock header %}
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/new_form.css' %}">
+
+
+{% endblock css %}
+{% block body %}
+<section class="form_section">
+    <div class="container">
+        <div class="row form_main_row">
+            <div class="contact-logo">
+                <img src="{% static 'img/NEW_LOGO_CONTECT_FORM.png' %}" alt="Advance Dental Export Logo" />
+            </div>
+            <form action="" class="custom-form w-100">
+                <div class="row gx-5 gy-4 ">
+                    <!-- Row 1 -->
+                    <div class="col-md-6 form-group mt-md-5 ">
+                        <label class="custom-form-label">Preferred Implant Company</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+                    <div class="col-md-6 form-group mt-md-5 ">
+                        <label class="custom-form-label">Implant Name (Subtype)</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="col-md-6 form-group d-flex flex-column">
+                        <label class="custom-form-label">Jaw Information</label>
+                        <div class="d-flex align-items-center gap-5 mt-4  chekbox_row">
+                            <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                <input class="form-check-input custom-checkbox m-0" type="checkbox" value="Maxilla"
+                                    id="maxilla">
+                                <label class="form-check-label custom-form-checkbox-label" for="maxilla">Maxilla</label>
+                            </div>
+                            <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                <input class="form-check-input custom-checkbox m-0" type="checkbox" value="Mandible"
+                                    id="mandible">
+                                <label class="form-check-label custom-form-checkbox-label"
+                                    for="mandible">Mandible</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group ">
+                        <label class="custom-form-label">Prosthec Plan</label>
+                        <textarea class="form-control custom-form-control custom-textarea"></textarea>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="col-md-6 form-group ">
+                        <label class="custom-form-label">Desired Implant Location</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+                    <div class="col-md-6 form-group ">
+                        <label class="custom-form-label">Preferred Size</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="col-md-6 form-group ">
+                        <label class="custom-form-label">Increase A/P spread using angled Implants</label>
+                        <input type="text" class="form-control custom-form-control mt-1">
+                    </div>
+                    <div class="col-md-6 form-group ">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label class="custom-form-label mb-0">Immediate Extractions ?</label>
+                            <div class="d-flex gap-4 yes_no_chekbox">
+                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="Yes"
+                                        id="immExtYes">
+                                    <label class="form-check-label custom-form-checkbox-label"
+                                        for="immExtYes">Yes</label>
+                                </div>
+                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="No"
+                                        id="immExtNo">
+                                    <label class="form-check-label custom-form-checkbox-label" for="immExtNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="col-md-6 form-group ">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label class="custom-form-label mb-0">Bone Grafting</label>
+                            <div class="d-flex gap-4 yes_no_chekbox">
+                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="Yes"
+                                        id="boneGraftYes">
+                                    <label class="form-check-label custom-form-checkbox-label"
+                                        for="boneGraftYes">Yes</label>
+                                </div>
+                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="No"
+                                        id="boneGraftNo">
+                                    <label class="form-check-label custom-form-checkbox-label"
+                                        for="boneGraftNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+                    <div class="col-md-6 form-group ">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label class="custom-form-label mb-0">Bone Reducon?</label>
+                            <div class="d-flex gap-4 yes_no_chekbox">
+                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="Yes"
+                                        id="boneRedYes">
+                                    <label class="form-check-label custom-form-checkbox-label"
+                                        for="boneRedYes">Yes</label>
+                                </div>
+                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
+                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="No"
+                                        id="boneRedNo">
+                                    <label class="form-check-label custom-form-checkbox-label"
+                                        for="boneRedNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+
+                    <!-- Row 6 -->
+                    <div class="col-md-6 form-group ">
+                        <label class="custom-form-label">Surgery Drill Kit to Be Used</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+                    <div class="col-md-6 form-group ">
+                        <label class="custom-form-label">Surgery Date (if Any)</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+
+                    <!-- Row 7 -->
+                    <div class="col-12 form-group ">
+                        <label class="custom-form-label">Provisional Planning?</label>
+                        <input type="text" class="form-control custom-form-control">
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center">
+                            <button type="submit" class="submit-btn" data-text="Submit">
+                                <span>Submit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="form_bottom_section">
+    <img src="{% static 'img/form_bottom_image.png' %}" alt="" class="img-fluid">
+
+</section>
+{% endblock body%}
+
+{% block js %}
+
+{% endblock %}
