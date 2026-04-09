@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+{% endblock %}
+{% block header %}
+{% endblock header %}
+{% block css %}
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<link rel="stylesheet" href="{% static 'css/newSlider.css' %}">
+
+{% endblock css %}
+{% block body %}
+<!-- <div class="dummyt"></div> -->
+
+<section class="dental-laboratory-section">
+    <div class="container pb-3 pt-3">
+        <p class="dental-laboratory-section-heading">The Art Of Aesthetic Dental Laboratory</p>
+
+        <div class="d-flex justify-content-end text-fade">
+            <p class="dental-laboratory-section-subheading">With over 20 years of expertise in the dental industry,
+                Advance Dental Export is trusted by dental professionals, clinics, and distributors across the globe for
+                delivering certified, custom-engineered solutions that combine cutting-edge technology with expert
+                craftsmanship.</p>
+        </div>
+
+        <!-- Yaha Bootstrap Row exactly original jaisi hai -->
+        <div class="row mt-3 d-flex justify-content-between flex-column-reverse flex-lg-row ">
+
+            <div class="col-lg-4 text-fade">
+                <p class="dental-laboratory-section-subheading-2 ">As the founder and driving force behind Advance
+                    Dental Export, I take immense pride in our journey-from a small dental lab to a trusted provider of
+                    dental prosthetics, </p>
+            </div>
+
+            <!-- FIXED: Sirf 'col-lg-8' ko yaha rakhein taaki layout side-by-side hi rahe -->
+            <div class="col-lg-8">
+                <!-- Naya Placeholder jo jagah reserve karega -->
+                <div class="image-placeholder">
+                    <div class="dental-laboratory-section-image">
+                        <img src="{% static 'img/dental_building.jpg' %}" alt="dental-lab" class="image-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- <div class="dummyt"></div> -->
+{% endblock body%}
+
+{% block js %}
+<!-- Import GSAP and ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const section = document.querySelector(".dental-laboratory-section");
+        const imageContainer = document.querySelector(".dental-laboratory-section-image");
+        const imagePlaceholder = document.querySelector(".image-placeholder");
+
+        let mm = gsap.matchMedia();
+
+        // ✅ Only Desktop (769px and above)
+        mm.add("(min-width: 769px)", () => {
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: () => {
+                        if (window.innerWidth >= 1920) return "top 100px";   // large screens
+                        if (window.innerWidth >= 1400) return "top +40";   // large screens
+                        if (window.innerWidth >= 1279) return "top -140px";   // 1280px laptops
+                        if (window.innerWidth >= 1175) return "top +70px";   // 1280px laptops
+                        if (window.innerWidth >= 819) return "top +100px";    // normal laptop
+                        return "top -140px";                                  // small desktop
+                    },
+                    end: "+=1500",
+                    pin: true,
+                    scrub: 0.5,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            tl.to(imageContainer, {
+                x: () => -imagePlaceholder.getBoundingClientRect().left,
+                y: () => -imagePlaceholder.getBoundingClientRect().top,
+                width: () => document.documentElement.clientWidth + "px",
+                height: () => window.innerHeight + "px",
+                borderRadius: "0px",
+                ease: "power2.inOut"
+            }, 0);
+
+            tl.to(imageContainer.querySelector("img"), {
+                borderRadius: "0px",
+                ease: "power2.inOut"
+            }, 0);
+
+            tl.to(".dental-laboratory-section-heading, .text-fade", {
+                opacity: 0,
+                ease: "power2.inOut"
+            }, 0);
+            ScrollTrigger.refresh();
+        });
+
+        // ✅ Mobile & Tablet (768px and below)
+        mm.add("(max-width: 768px)", () => {
+            // Kill any existing ScrollTriggers
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+            // Reset styles (important)
+            gsap.set(imageContainer, {
+                clearProps: "all"
+            });
+
+            gsap.set(imageContainer.querySelector("img"), {
+                clearProps: "all"
+            });
+
+            gsap.set(".dental-laboratory-section-heading, .text-fade", {
+                clearProps: "all"
+            });
+        });
+
+    });
+</script>
+
+{% endblock %}
