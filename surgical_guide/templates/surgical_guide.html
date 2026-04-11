@@ -1,176 +1,436 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en_IN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        {% load static %} {% block seo %} {% endblock %}
+        <link
+            rel="shortcut icon"
+            href="{% static 'favicon.png' %}"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/new_form.css' %}" />
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="robots" content="max-image-preview:large" />
-    {% load static %} {% block seo %} {% endblock %}
-    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style" />
-    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/new_form.css' %}">
-</head>
-
-<body>
-
-    <section class="form_section">
-        <div class="container">
-            <div class="row form_main_row">
-                <div class="contact-logo">
-                    <img src="{% static 'img/NEW_LOGO_CONTECT_FORM.png' %}" alt="Advance Dental Export Logo" />
-                </div>
-                <form action="{% url 'surgical_guide:surgical_guide' %}" class="custom-form w-100" method="post">
-                    {% csrf_token %}
-                    <div class="row gx-5 gy-4 ">
-                        <!-- Row 1 -->
-                        <div class="col-md-6 form-group mt-md-5 ">
-                            <label class="custom-form-label">Preferred Implant Company</label>
-                            <input type="text" name="preferred_implant_company" class="form-control custom-form-control">
-                        </div>
-                        <div class="col-md-6 form-group mt-md-5 ">
-                            <label class="custom-form-label">Implant Name (Subtype)</label>
-                            <input type="text" name="implant_name" class="form-control custom-form-control">
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="col-md-6 form-group d-flex flex-column">
-                            <label class="custom-form-label">Jaw Information</label>
-                            <div class="d-flex align-items-center gap-5 mt-4  chekbox_row">
-                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="maxilla" name="jaw_information"
-                                        id="maxilla">
-                                    <label class="form-check-label custom-form-checkbox-label"
-                                        for="maxilla">Maxilla</label>
-                                </div>
-                                <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                    <input class="form-check-input custom-checkbox m-0" type="checkbox" value="mandible" name="jaw_information"
-                                        id="mandible">
-                                    <label class="form-check-label custom-form-checkbox-label"
-                                        for="mandible">Mandible</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 form-group ">
-                            <label class="custom-form-label">Prosthetic Plan</label>
-                            <textarea type="text" name="prosthetic_plan" class="form-control custom-form-control custom-textarea"></textarea>
-                        </div>
-
-                        <!-- Row 3 -->
-                        <div class="col-md-6 form-group ">
-                            <label class="custom-form-label">Desired Implant Location</label>
-                            <input type="text" name="desired_implant_location" class="form-control custom-form-control">
-                        </div>
-                        <div class="col-md-6 form-group ">
-                            <label class="custom-form-label">Preferred Size</label>
-                            <input type="text" name="preferred_size" class="form-control custom-form-control">
-                        </div>
-
-                        <!-- Row 4 -->
-                        <div class="col-md-6 form-group ">
-                            <label class="custom-form-label">Increase A/P spread using angled Implants</label>
-                            <input type="text" name="ap_spread_angle_implant" class="form-control custom-form-control mt-1">
-                        </div>
-                        <div class="col-md-6 form-group ">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <label class="custom-form-label mb-0">Immediate Extractions ?</label>
-                                <div class="d-flex gap-4 yes_no_chekbox">
-                                    <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                        <input class="form-check-input custom-checkbox m-0" type="radio" value="True" name="immediate_extractions"
-                                            id="immExtYes">
-                                        <label class="form-check-label custom-form-checkbox-label"
-                                            for="immExtYes">Yes</label>
-                                    </div>
-                                    <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                        <input class="form-check-input custom-checkbox m-0" type="radio" value="False" name="immediate_extractions"
-                                            id="immExtNo">
-                                        <label class="form-check-label custom-form-checkbox-label"
-                                            for="immExtNo">No</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="text" name="immediate_extractions_notes" class="form-control custom-form-control">
-                        </div>
-
-                        <!-- Row 5 -->
-                        <div class="col-md-6 form-group ">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <label class="custom-form-label mb-0">Bone Grafting</label>
-                                <div class="d-flex gap-4 yes_no_chekbox">
-                                    <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                        <input class="form-check-input custom-checkbox m-0" type="radio" value="True" name="bone_grafting"
-                                            id="boneGraftYes">
-                                        <label class="form-check-label custom-form-checkbox-label"
-                                            for="boneGraftYes">Yes</label>
-                                    </div>
-                                    <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                        <input class="form-check-input custom-checkbox m-0" type="radio" value="False" name="bone_grafting"
-                                            id="boneGraftNo">
-                                        <label class="form-check-label custom-form-checkbox-label"
-                                            for="boneGraftNo">No</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="text" name="bone_grafting_notes" class="form-control custom-form-control">
-                        </div>
-                        <div class="col-md-6 form-group ">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <label class="custom-form-label mb-0">Bone Reducon?</label>
-                                <div class="d-flex gap-4 yes_no_chekbox">
-                                    <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                        <input class="form-check-input custom-checkbox m-0" type="radio" value="True" name="bone_reduction"
-                                            id="boneRedYes">
-                                        <label class="form-check-label custom-form-checkbox-label"
-                                            for="boneRedYes">Yes</label>
-                                    </div>
-                                    <div class="form-check custom-checkbox-wrapper d-flex align-items-center">
-                                        <input class="form-check-input custom-checkbox m-0" type="radio" value="False" name="bone_reduction"
-                                            id="boneRedNo">
-                                        <label class="form-check-label custom-form-checkbox-label"
-                                            for="boneRedNo">No</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="text" name="bone_reduction_notes" class="form-control custom-form-control">
-                        </div>
-
-                        <!-- Row 6 -->
-                        <div class="col-md-6 form-group ">
-                            <label class="custom-form-label">Surgery Drill Kit to Be Used</label>
-                            <input type="text" name="surgical_drill_kit" class="form-control custom-form-control">
-                        </div>
-                        <div class="col-md-6 form-group ">
-                            <label class="custom-form-label">Surgery Date (if Any)</label>
-                            <input type="date" name="surgery_date" class="form-control custom-form-control">
-                        </div>
-
-                        <!-- Row 7 -->  
-                        <div class="col-12 form-group ">
-                            <label class="custom-form-label">Provisional Planning?</label>
-                            <input type="text" name="provisional_planning" class="form-control custom-form-control">
-                        </div>
-                        <div class="col-12">
-                            <div class="text-center">
-                                <button type="submit" class="submit-btn" data-text="Submit">
-                                    <span>Submit</span>
-                                </button>
-                            </div>
-                        </div>
+    <body>
+        <section class="form_section">
+            <div class="container">
+                <div class="row form_main_row">
+                    <div class="contact-logo">
+                        <img
+                            src="{% static 'img/NEW_LOGO_CONTECT_FORM.png' %}"
+                            alt="Advance Dental Export Logo"
+                        />
                     </div>
-                </form>
+                    <form
+                        action="{% url 'surgical_guide' %}"
+                        class="custom-form w-100"
+                        method="post"
+                    >
+                        {% csrf_token %}
+                        <div class="row gx-5 gy-4">
+                            <!-- Row 1 -->
+                            <div class="col-md-6 form-group mt-md-5">
+                                <label class="custom-form-label"
+                                    >Preferred Implant Company</label
+                                >
+                                <input
+                                    type="text"
+                                    name="preferred_implant_company"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+                            <div class="col-md-6 form-group mt-md-5">
+                                <label class="custom-form-label"
+                                    >Implant Name (Subtype)</label
+                                >
+                                <input
+                                    type="text"
+                                    name="implant_name"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="col-md-6 form-group d-flex flex-column">
+                                <label class="custom-form-label">Jaw Information</label>
+                                <div
+                                    class="d-flex align-items-center gap-5 mt-4 chekbox_row"
+                                >
+                                    <div
+                                        class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                    >
+                                        <input
+                                            class="form-check-input custom-checkbox m-0"
+                                            type="checkbox"
+                                            value="maxilla"
+                                            name="jaw_information"
+                                            id="maxilla"
+                                        />
+                                        <label
+                                            class="form-check-label custom-form-checkbox-label"
+                                            for="maxilla"
+                                            >Maxilla</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                    >
+                                        <input
+                                            class="form-check-input custom-checkbox m-0"
+                                            type="checkbox"
+                                            value="mandible"
+                                            name="jaw_information"
+                                            id="mandible"
+                                        />
+                                        <label
+                                            class="form-check-label custom-form-checkbox-label"
+                                            for="mandible"
+                                            >Mandible</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="custom-form-label">Prosthetic Plan</label>
+                                <textarea
+                                    type="text"
+                                    name="prosthetic_plan"
+                                    class="form-control custom-form-control custom-textarea"
+                                ></textarea>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="col-md-6 form-group">
+                                <label class="custom-form-label"
+                                    >Desired Implant Location</label
+                                >
+                                <input
+                                    type="text"
+                                    name="desired_implant_location"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="custom-form-label">Preferred Size</label>
+                                <input
+                                    type="text"
+                                    name="preferred_size"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+
+                            <!-- Row 4 -->
+                            <div class="col-md-6 form-group">
+                                <label class="custom-form-label"
+                                    >Increase A/P spread using angled Implants</label
+                                >
+                                <input
+                                    type="text"
+                                    name="ap_spread_angle_implant"
+                                    class="form-control custom-form-control mt-1"
+                                />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <div
+                                    class="d-flex justify-content-between align-items-center mb-2"
+                                >
+                                    <label class="custom-form-label mb-0"
+                                        >Immediate Extractions ?</label
+                                    >
+                                    <div class="d-flex gap-4 yes_no_chekbox">
+                                        <div
+                                            class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                        >
+                                            <input
+                                                class="form-check-input custom-checkbox m-0"
+                                                type="radio"
+                                                value="True"
+                                                name="immediate_extractions"
+                                                id="immExtYes"
+                                            />
+                                            <label
+                                                class="form-check-label custom-form-checkbox-label"
+                                                for="immExtYes"
+                                                >Yes</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                        >
+                                            <input
+                                                class="form-check-input custom-checkbox m-0"
+                                                type="radio"
+                                                value="False"
+                                                name="immediate_extractions"
+                                                id="immExtNo"
+                                            />
+                                            <label
+                                                class="form-check-label custom-form-checkbox-label"
+                                                for="immExtNo"
+                                                >No</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="immediate_extractions_notes"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+
+                            <!-- Row 5 -->
+                            <div class="col-md-6 form-group">
+                                <div
+                                    class="d-flex justify-content-between align-items-center mb-2"
+                                >
+                                    <label class="custom-form-label mb-0"
+                                        >Bone Grafting</label
+                                    >
+                                    <div class="d-flex gap-4 yes_no_chekbox">
+                                        <div
+                                            class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                        >
+                                            <input
+                                                class="form-check-input custom-checkbox m-0"
+                                                type="radio"
+                                                value="True"
+                                                name="bone_grafting"
+                                                id="boneGraftYes"
+                                            />
+                                            <label
+                                                class="form-check-label custom-form-checkbox-label"
+                                                for="boneGraftYes"
+                                                >Yes</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                        >
+                                            <input
+                                                class="form-check-input custom-checkbox m-0"
+                                                type="radio"
+                                                value="False"
+                                                name="bone_grafting"
+                                                id="boneGraftNo"
+                                            />
+                                            <label
+                                                class="form-check-label custom-form-checkbox-label"
+                                                for="boneGraftNo"
+                                                >No</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="bone_grafting_notes"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <div
+                                    class="d-flex justify-content-between align-items-center mb-2"
+                                >
+                                    <label class="custom-form-label mb-0"
+                                        >Bone Reduction?</label
+                                    >
+                                    <div class="d-flex gap-4 yes_no_chekbox">
+                                        <div
+                                            class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                        >
+                                            <input
+                                                class="form-check-input custom-checkbox m-0"
+                                                type="radio"
+                                                value="True"
+                                                name="bone_reduction"
+                                                id="boneRedYes"
+                                            />
+                                            <label
+                                                class="form-check-label custom-form-checkbox-label"
+                                                for="boneRedYes"
+                                                >Yes</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-check custom-checkbox-wrapper d-flex align-items-center"
+                                        >
+                                            <input
+                                                class="form-check-input custom-checkbox m-0"
+                                                type="radio"
+                                                value="False"
+                                                name="bone_reduction"
+                                                id="boneRedNo"
+                                            />
+                                            <label
+                                                class="form-check-label custom-form-checkbox-label"
+                                                for="boneRedNo"
+                                                >No</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="bone_reduction_notes"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+
+                            <!-- Row 6 -->
+                            <div class="col-md-6 form-group">
+                                <label class="custom-form-label"
+                                    >Surgical Drill Kit to Be Used</label
+                                >
+                                <input
+                                    type="text"
+                                    name="surgical_drill_kit"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="custom-form-label"
+                                    >Surgery Date (if Any)</label
+                                >
+                                <input
+                                    type="date"
+                                    name="surgery_date"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+
+                            <!-- Row 7 -->
+                            <div class="col-12 form-group">
+                                <label class="custom-form-label"
+                                    >Provisional Planning?</label
+                                >
+                                <input
+                                    type="text"
+                                    name="provisional_planning"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <button type="submit" class="submit-btn">
+                                        <span class="btn-text">Submit</span>
+                                        <span class="btn-loader"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="form_bottom_section">
+            <picture>
+                <source
+                    media="(max-width: 440px)"
+                    srcset="{% static 'img/mobile_form_bottom_image.png' %}"
+                />
+                <img
+                    src="{% static 'img/form_bottom_image.png' %}"
+                    class="img-fluid responsive-img"
+                    alt=""
+                />
+            </picture>
+        </section>
+        <div id="thankYouPopup" class="thankyou-overlay">
+            <div class="thankyou-box">
+                <!-- ❌ Close Button -->
+                <button class="popup-close" id="popupCloseBtn">&times;</button>
+
+                <h2>THANK YOU</h2>
+
+                <p>
+                    We are so grateful you could join us in celebrating our wedding day.
+                    Your love and presence made it truly unforgettable.<br />
+                    <br />
+                    Thank you also for your generous gift — we feel so incredibly lucky
+                    to have such wonderful people in our lives as we begin this new
+                    chapter together.
+                </p>
+
+                <div class="thankyou-contact">
+                    <div class="contact-item">
+                        <a
+                            href="tel:+919876543210"
+                            style="text-decoration: none; color: inherit"
+                        >
+                            <i
+                                class="fa-solid fa-phone"
+                                style="color: rgb(27, 137, 118)"
+                            ></i>
+                            <span>+91 98765 43210</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <a
+                            href="mailto:support@yourdomain.com"
+                            style="text-decoration: none; color: inherit"
+                        >
+                            <i
+                                class="fa-solid fa-envelope"
+                                style="color: rgb(27, 137, 118)"
+                            ></i>
+                            <span>support@yourdomain.com</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="form_bottom_section">
-        <img src="{% static 'img/form_bottom_image.png' %}" alt="" class="img-fluid">
+        <script>
+            const form = document.querySelector('form');
+            const button = document.querySelector('.submit-btn');
+            const popup = document.getElementById('thankYouPopup');
+            const closeBtn = document.getElementById('popupCloseBtn');
 
-    </section>
-</body>
+            // 👉 button click / form submit
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // ❌ stop Django submit
 
+                // 🔵 button loader ON
+                button.classList.add('loading');
+                button.disabled = true;
+
+                // ⏳ small delay for UX
+                setTimeout(() => {
+                    button.classList.remove('loading');
+                    button.disabled = false;
+
+                    popup.style.display = 'flex';
+                }, 800);
+            });
+
+            // ❌ close button
+            closeBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                popup.style.display = 'none';
+            });
+
+            // 👉 click outside close
+            popup.addEventListener('click', function () {
+                popup.style.display = 'none';
+            });
+
+            // 👉 prevent close when clicking inside box
+            document
+                .querySelector('.thankyou-box')
+                .addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+        </script>
+    </body>
 </html>
