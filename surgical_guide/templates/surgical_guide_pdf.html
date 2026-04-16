@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm 10mm 75mm 10mm;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        .container {
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            padding: 8px;
+        }
+
+        .logo img {
+            width: 140px;
+        }
+
+        .form-table {
+            border: 1px solid #1b8976;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .form-table td {
+            padding: 6px;
+            vertical-align: middle;
+            border: 1px solid #1b8976;
+        }
+
+        .td-label {
+            font-weight: bold;
+            color: #333;
+            width: 30%;
+        }
+
+        .td-box {
+            width: 70%;
+        }
+
+        .box-content {
+            padding: 4px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .tick {
+            display: inline-block;
+            width: 10px;
+            border: 1px solid #000;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+
+        .checked {
+            background-color: #1b8976;
+        }
+
+        .checkbox-item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        #footer_content {
+            position: fixed;
+            bottom: -75mm;
+            left: -10mm;
+            width: 210mm;
+        }
+
+        #footer_content img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="https://advancedentalexport.com/static/img/NEW_LOGO_CONTECT_FORM.png">
+    </div>
+<div class="container">
+
+    <table class="form-table" width="100%">
+        {% if data.preferred_implant_company %}
+        <tr>
+            <td class="td-label" width="30%">Preferred Implant Company:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.preferred_implant_company }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.implant_name%}
+        <tr>
+            <td class="td-label" width="30%">Implant Name:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.implant_name }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.jaw_information %}
+        <tr>
+            <td class="td-label" width="30%">Jaw Information:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.jaw_information }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.prosthetic_plan %}
+        <tr>
+            <td class="td-label" width="30%">Prosthetic Plan:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.prosthetic_plan }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.desired_implant_location %}
+        <tr>
+            <td class="td-label" width="30%">Desired Implant Location:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.desired_implant_location }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.preferred_size%}
+        <tr>
+            <td class="td-label" width="30%">Preferred Size:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.preferred_size }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.ap_spread_angle_implant %}
+        <tr>
+            <td class="td-label" width="30%">Increase A/P spread using angled Implants:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.ap_spread_angle_implant }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.immediate_extractions is not None or data.immediate_extractions_notes %}
+        <tr>
+            <td class="td-label" width="30%">Immediate Extractions?</td>
+            <td class="td-box" width="70%">
+                <div class="box-content">{% if data.immediate_extractions is not None %}{{ data.immediate_extractions }}{% endif %}{% if data.immediate_extractions is not None and data.immediate_extractions_notes %} - {% endif %}{% if data.immediate_extractions_notes %}{{ data.immediate_extractions_notes }}{% endif %}</div>
+            </td>
+        </tr>
+        {% endif %}
+
+        {% if data.bone_grafting is not None or data.bone_grafting_notes %}
+        <tr>
+            <td class="td-label" width="30%">Bone Grafting?</td>
+            <td class="td-box" width="70%">
+                <div class="box-content">{% if data.bone_grafting is not None %}{{ data.bone_grafting }}{% endif %}{% if data.bone_grafting is not None and data.bone_grafting_notes %} - {% endif %}{% if data.bone_grafting_notes %}{{ data.bone_grafting_notes }}{% endif %}</div>
+            </td>
+        </tr>
+        {% endif %}
+
+        {% if data.bone_reduction is not None or data.bone_reduction_notes %}
+        <tr>
+            <td class="td-label" width="30%">Bone Reduction?</td>
+            <td class="td-box" width="70%">
+                <div class="box-content">{% if data.bone_reduction is not None %}{{ data.bone_reduction }}{% endif %}{% if data.bone_reduction is not None and data.bone_reduction_notes %} - {% endif %}{% if data.bone_reduction_notes %}{{ data.bone_reduction_notes }}{% endif %}</div>
+            </td>
+        </tr>
+        {% endif %}
+
+        {% if data.surgical_drill_kit %}
+        <tr>
+            <td class="td-label" width="30%">Surgical Drill Kit:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.surgical_drill_kit }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.surgery_date %}
+        <tr>
+            <td class="td-label" width="30%">Surgery Date:</td>
+            <td class="td-box" width="70%"><div class="box-content">{{ data.surgery_date }}</div></td>
+        </tr>
+        {% endif %}
+
+        {% if data.provisional_planning %}
+        <tr>
+            <td class="td-label" width="30%">Provisional Planning?</td>
+            <td class="td-box" width="70%">
+                <div class="box-content">{{ data.provisional_planning }}</div>
+            </td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+
+<!-- Footer -->
+<div id="footer_content">
+    <img src="https://advancedentalexport.com/static/img/form_bottom_image.png">
+</div>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html lang="en_IN">
     <head>
         <meta charset="utf-8" />
+        <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         {% load static %} {% block seo %} {% endblock %}
         <link
@@ -354,38 +355,35 @@
                 <h2>THANK YOU</h2>
 
                 <p>
-                    We are so grateful you could join us in celebrating our wedding day.
-                    Your love and presence made it truly unforgettable.<br />
+                    Thank you for submitting your details. We have received your request successfully.<br />
                     <br />
-                    Thank you also for your generous gift — we feel so incredibly lucky
-                    to have such wonderful people in our lives as we begin this new
-                    chapter together.
+                    If you need any assistance or would like to contact us, please find our contact details below
                 </p>
 
                 <div class="thankyou-contact">
                     <div class="contact-item">
                         <a
-                            href="tel:+919876543210"
+                            href="tel:+919512381616"
                             style="text-decoration: none; color: inherit"
                         >
                             <i
                                 class="fa-solid fa-phone"
                                 style="color: rgb(27, 137, 118)"
                             ></i>
-                            <span>+91 98765 43210</span>
+                            <span>+91 95123 81616</span>
                         </a>
                     </div>
 
                     <div class="contact-item">
                         <a
-                            href="mailto:support@yourdomain.com"
+                            href="mailto:sg@advancedentalexport.com"
                             style="text-decoration: none; color: inherit"
                         >
                             <i
                                 class="fa-solid fa-envelope"
                                 style="color: rgb(27, 137, 118)"
                             ></i>
-                            <span>support@yourdomain.com</span>
+                            <span>sg@advancedentalexport.com</span>
                         </a>
                     </div>
                 </div>
@@ -404,14 +402,33 @@
                 // 🔵 button loader ON
                 button.classList.add('loading');
                 button.disabled = true;
+                
+                let formData = new FormData(form);
 
-                // ⏳ small delay for UX
-                setTimeout(() => {
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
                     button.classList.remove('loading');
                     button.disabled = false;
-
-                    popup.style.display = 'flex';
-                }, 800);
+                    
+                    if (data.success) {
+                        popup.style.display = 'flex';
+                        form.reset();
+                    } else {
+                        alert('Please check the form inputs and try again.');
+                    }
+                })
+                .catch(error => {
+                    button.classList.remove('loading');
+                    button.disabled = false;
+                    alert('An unexpected error occurred.');
+                });
             });
 
             // ❌ close button
@@ -430,7 +447,7 @@
                 .querySelector('.thankyou-box')
                 .addEventListener('click', function (e) {
                     e.stopPropagation();
-                });
+            });
         </script>
     </body>
 </html>

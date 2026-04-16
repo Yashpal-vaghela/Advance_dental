@@ -23,6 +23,7 @@ class SurgicalGuide(models.Model):
     surgical_drill_kit = models.CharField(max_length=255, blank=True, null=True)
     provisional_planning = models.TextField(blank=True, null=True)
     surgery_date = models.DateField(blank=True, null=True)
+    pdf_document = models.FileField(upload_to='surgical_implant_form/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

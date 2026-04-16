@@ -444,3 +444,9 @@ input[type="text"] {
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 576px) {
+    .thankyou-box p {
+        font-size: 14px;
+    }
+}
