@@ -380,3 +380,12 @@ class Award(models.Model):
     def save(self, *args, **kwargs):
         self.alt = self.name
         super().save(*args, **kwargs)
+
+class DoctorReview(models.Model):   
+    image  = models.ImageField(upload_to="SEO", blank=True, null=True)
+    name = models.CharField(max_length = 156)
+    review = models.TextField()
+    google_review_link = models.CharField(max_length = 1256, blank=True, null=True)
+    priority = models.BooleanField(default=False, help_text="Priority Review (Yes / No)")
+    def __str__(self):
+        return self.name

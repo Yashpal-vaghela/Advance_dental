@@ -202,6 +202,9 @@ class ImageUsageSearchAdmin(admin.ModelAdmin):
 class AwardAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+class DoctorReviewAdmin(admin.ModelAdmin):
+    list_display = ('name', 'priority')
+    search_fields = ['name']
 
 # Register your models here.
 
@@ -229,3 +232,4 @@ admin.site.register(Place)
 admin.site.register(WebStory, WebStoryAdmin)
 admin.site.register(WebStoryVideo)
 admin.site.register(Award, AwardAdmin)
+admin.site.register(DoctorReview, DoctorReviewAdmin)

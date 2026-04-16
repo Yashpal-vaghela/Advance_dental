@@ -117,7 +117,7 @@ def home(request):
     gallery21 = BeforeAfter.objects.all().order_by("-id")[:7]
     video = VideoTestimonals.objects.all().order_by("-id")
     awards = Award.objects.all().order_by("-id")
-
+    reviews = DoctorReview.objects.all().order_by("-id")
     context = {
         "main3": main3,
         "data": data,
@@ -128,6 +128,7 @@ def home(request):
         "video": video,
         "form": form,
         "awards": awards,
+        "reviews": reviews,
         # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
     }
     return render(request, "index.html", context)
@@ -1750,8 +1751,10 @@ def emax2(request):
 
 def WinningNeverStops(request):
     data = Award.objects.all().order_by("-id")
+    reviews = DoctorReview.objects.all().order_by("-id")
     context = {
         'data':data,
+        'reviews':reviews,
     }
     return render(request, 'WinningNeverStops.html', context)
 
@@ -1772,4 +1775,4 @@ def newSection(request):
     context = {
 
     }
-    return render(request, 'new-section.html', context)
+    return render(request, 'newSlider.html', context)
