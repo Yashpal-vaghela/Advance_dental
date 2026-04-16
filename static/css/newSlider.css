@@ -1,14 +1,8 @@
-.dummyt {
-    width: 100%;
-    height: 100dvh;
-    background-color: rgba(17, 171, 147, 1);
-    margin-bottom: 50px;
-}
 
 .dental-laboratory-section {
     width: 100%;
     /* height: 100dvh; */
-    min-height: calc(100dvh - 140px);
+    min-height: calc(100dvh - 0px);
     /* Pinned screen ko full size dene ke liye */
     background-color: transparent;
     /* border: 1px solid black; */
@@ -83,12 +77,14 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 @media (max-width: 1530px) {
 
     .dental-laboratory-section {
-        min-height: calc(100dvh + 140px);
+        min-height: calc(100dvh + 0px);
     }
 }
+
 @media (max-width: 1175px) {
 
     .dental-laboratory-section {
@@ -99,11 +95,11 @@
 @media (max-width: 1282px) {
     .dental-laboratory-section {
         width: 100%;
-      
+
         min-height: calc(100dvh + 140px);
-       
+
         background-color: transparent;
-       
+
 
     }
 
@@ -204,7 +200,7 @@
         /* Pinned screen ko full size dene ke liye */
         background-color: transparent;
         /* border: 1px solid black; */
-
+        margin-top: 20px;
     }
 
     .dental-laboratory-section-heading {

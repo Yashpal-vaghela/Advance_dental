@@ -309,7 +309,7 @@ body.no-scroll {
 
 .new-testimonial-section {
     margin-top: 50px;
-    background-image: url('../img/vector4.png');
+    background-image: url('../img/vector4.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -476,7 +476,7 @@ body.no-scroll {
     text-align: center;
     font-size: 1rem;
     line-height: 1.4;
-    background-image: url("../img/border-frame.png");
+    background-image: url("../img/border-frame.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -674,14 +674,14 @@ body.no-scroll {
 @media (max-width:1550px) {
     .new-testimonial-section {
         background-size: cover !important;
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 }
 
 @media (max-width:1300px) {
     .new-testimonial-section {
         background-size: cover !important;
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 
     .border-frame {
@@ -725,7 +725,7 @@ body.no-scroll {
     .new-testimonial-section {
         padding-top: 50px !important;
         background-size: cover !important;
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 
     @keyframes smallBig {
@@ -799,7 +799,7 @@ body.no-scroll {
 @media (max-width:1025px) {
     .new-testimonial-section {
         background-size: cover !important;
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 
     .testimonial-slide {
@@ -862,7 +862,7 @@ body.no-scroll {
 
     .new-testimonial-section {
         padding-bottom: 0px !important;
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 
     .swiper-container .swiper-pagination {
@@ -940,13 +940,13 @@ body.no-scroll {
 
     .new-testimonial-section {
         padding: 25px 0px 20px !important;
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 }
 
 @media (max-width:576px) {
     .new-testimonial-section {
-        background-image: url(../img/review_bg_border.png)
+        background-image: url(../img/review_bg_border.webp)
     }
 
     .testimonial-slide {
@@ -1034,7 +1034,7 @@ body.no-scroll {
 
     .new-testimonial-section {
         margin-top: 0px !important;
-        background-image: url(../img/review_bg_border.png);
+        background-image: url(../img/review_bg_border.webp);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
