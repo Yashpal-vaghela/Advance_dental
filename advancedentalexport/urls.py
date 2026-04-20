@@ -8,6 +8,7 @@ from blog.views import product_detail as pd
 from home import views as myapp_views
 from django.conf.urls import handler404, handler500
 from django.views.generic import RedirectView
+from django.shortcuts import get_object_or_404
 
 # from exam import views as auth_view
 admin.site.site_header = 'Dashboard'                    # default: "Django Administration"

@@ -6,11 +6,12 @@
   <link href={% static 'css/new_gallery.css' %} rel="stylesheet" media="print" onload="this.media='all'" />
 {% endblock css %}
 {% block body %}
-<div class="container">
-    <h2 id="curveText" class="slider-heading">
-        Before and After – Real Change Stories
-    </h2>
-</div>
+<div class="gallery-carousel-section">
+    <div class="container">
+        <h2 id="curveText" class="slider-heading">
+            Before and After – Real Change Stories
+        </h2>
+    </div>
     <div class="carousel" id="carousel">
         {% for item in gallery21 %}
             <div class="slide">
@@ -18,6 +19,13 @@
             </div>
         {% endfor %}
     </div>
+    <!-- ✅ Button INSIDE same section -->
+    <div class="see-more-button">
+        <a href="{% url 'home:beforeafter' %}" class="btn btn-blue blue-hover submit">
+            See More
+        </a>    
+    </div>
+</div>
 {% endblock body %}
 {% block javascript %}
 {% comment %} <script type="module">
@@ -160,7 +168,7 @@ let stopTimeout;
 let lastPointerType = 'mouse';
 let lastUpdateTime = Date.now();
 
-function startAutoplay() {
+{% comment %} function startAutoplay() {
     stopAutoplay();
 
     autoplayTimer = setInterval(() => {
@@ -168,7 +176,7 @@ function startAutoplay() {
             carousel.next();
         }
     }, 2000);
-}
+} {% endcomment %}
 
 function stopAutoplay() {
     clearInterval(autoplayTimer);

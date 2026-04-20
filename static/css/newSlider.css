@@ -1,22 +1,16 @@
-
 .dental-laboratory-section {
     width: 100%;
-    /* height: 100dvh; */
     min-height: calc(100dvh - 0px);
-    /* Pinned screen ko full size dene ke liye */
-    background-color: transparent;
-    /* border: 1px solid black; */
-
+    background-color: transparent
 }
 
-/* Heading & Subheading styling same as your original */
 .dental-laboratory-section-heading {
     font-weight: 600;
     color: rgba(27, 137, 118, 1);
     font-size: 45px;
     line-height: 140%;
     letter-spacing: 4%;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif
 }
 
 .dental-laboratory-section-subheading {
@@ -27,7 +21,7 @@
     letter-spacing: 4%;
     font-family: "Montserrat", sans-serif;
     margin-top: 20px;
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1)
 }
 
 .dental-laboratory-section-subheading-2 {
@@ -36,17 +30,15 @@
     line-height: 150%;
     letter-spacing: 4%;
     font-family: "Montserrat", sans-serif;
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1)
 }
 
-/* FIX: Ye placeholder jagah hold karega taaki Grid na toote */
 .image-placeholder {
     position: relative;
     width: 100%;
-    height: 540px;
+    height: 540px
 }
 
-/* FIX: Image container absolute hoga taaki bina kisi ko push kiye grow ho sake */
 .dental-laboratory-section-image {
     position: absolute;
     top: 0;
@@ -58,11 +50,9 @@
     z-index: 50;
     will-change: transform, width, height, border-radius;
     transform: translateZ(0);
-    /* GPU Force karta hai */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transform-origin: top left;
-    /* Calculation fast karne ke liye */
+    transform-origin: top left
 }
 
 .dental-laboratory-section-image img {
@@ -70,168 +60,151 @@
     height: 100%;
     object-fit: cover;
     object-position: bottom !important;
-    /* CHANGED: cover use karna zaruri hai animation smooth dikhne ke liye */
     border-radius: 24px;
     will-change: border-radius;
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    backface-visibility: hidden
 }
 
-@media (max-width: 1530px) {
-
+@media (max-width:1530px) {
     .dental-laboratory-section {
-        min-height: calc(100dvh + 0px);
+        min-height: calc(100dvh + 0px)
     }
 }
 
-@media (max-width: 1175px) {
-
+@media (max-width:1175px) {
     .dental-laboratory-section {
-        min-height: calc(100dvh -70);
+        min-height: calc(100dvh -70)
     }
 }
 
-@media (max-width: 1282px) {
+@media (max-width:1282px) {
     .dental-laboratory-section {
         width: 100%;
-
         min-height: calc(100dvh + 140px);
-
-        background-color: transparent;
-
-
+        background-color: transparent
     }
 
     .dental-laboratory-section-heading {
-        font-size: 32px;
-
+        font-size: 32px
     }
 
     .image-placeholder {
-        height: 450px;
+        height: 450px
     }
 
     .dental-laboratory-section-subheading {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 16px;
-        width: 650px;
+        width: 650px
     }
 
     .dental-laboratory-section-subheading-2 {
-        font-size: 16px;
+        font-size: 16px
     }
 }
 
-@media (max-width: 992px) {
-
+@media (max-width:992px) {
     .dental-laboratory-section {
         width: 100%;
-        /* height: 100dvh; */
         min-height: calc(100dvh - 100px);
-        /* Pinned screen ko full size dene ke liye */
-        background-color: transparent;
-        /* border: 1px solid black; */
-
+        background-color: transparent
     }
 
     .dental-laboratory-section-heading {
-        font-size: 30px;
+        font-size: 30px
     }
 
     .dental-laboratory-section {
-        margin-top: 80px;
+        margin-top: 80px
     }
 
     .dental-laboratory-section-subheading {
         margin-top: 20px;
         margin-bottom: 50px;
-        font-size: 18px;
+        font-size: 18px
     }
 
     .dental-laboratory-section-subheading-2 {
         font-size: 18px;
         margin-top: 30px;
-        visibility: visible !important;
+        visibility: visible !important
     }
 
     .image-placeholder {
-        margin-top: -30px;
+        margin-top: -30px
     }
 
     .image-placeholder {
         position: relative;
         width: 100%;
-        height: 440px;
+        height: 440px
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .dental-laboratory-section-image {
         width: 100% !important;
         height: auto !important;
         transform: none !important;
-        position: relative !important;
+        position: relative !important
     }
 
     .dental-laboratory-section-image img {
         width: 100%;
         height: auto !important;
-        object-fit: cover;
+        object-fit: cover
     }
 
     .image-placeholder {
         margin-top: -30px;
-        height: auto !important;
+        height: auto !important
     }
 
     .dental-laboratory-section {
         width: 100%;
         background-color: #fff;
-        min-height: auto !important;
+        min-height: auto !important
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
     .dental-laboratory-section {
         width: 100%;
         height: 100dvh;
-        /* Pinned screen ko full size dene ke liye */
         background-color: transparent;
-        /* border: 1px solid black; */
-        margin-top: 20px;
+        margin-top: 20px
     }
 
     .dental-laboratory-section-heading {
         font-size: 25px;
-        font-weight: 900;
+        font-weight: 900
     }
 
     .dental-laboratory-section-subheading {
         font-size: 15px;
         text-align: right;
-        font-weight: 500;
+        font-weight: 500
     }
 
     .dental-laboratory-section-subheading-2 {
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 500
     }
-
-
 }
 
-@media (max-width: 360px) {
+@media (max-width:360px) {
     .dental-laboratory-section-heading {
-        font-size: 20px;
+        font-size: 20px
     }
 
     .dental-laboratory-section-subheading {
-        font-size: 15px;
+        font-size: 15px
     }
 
     .dental-laboratory-section-subheading-2 {
-        font-size: 15px;
+        font-size: 15px
     }
 }

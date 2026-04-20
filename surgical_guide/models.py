@@ -3,6 +3,9 @@ from django.db import models
 # Create your models here.
 
 class SurgicalGuide(models.Model):
+    doctor_name = models.CharField(max_length=255, blank=True, null=True)
+    patient_name = models.CharField(max_length=255, blank=True, null=True)
+    contact_number = models.CharField(max_length=255, blank=True, null=True)
     preferred_implant_company = models.CharField(max_length=255, blank=True, null=True)
     implant_name = models.CharField(max_length=255, blank=True, null=True)
     JAW_CHOICES = [

@@ -66,18 +66,18 @@
 
         let mm = gsap.matchMedia();
 
-        // ✅ Only Desktop (769px and above)
+        // Only Desktop (769px and above)
         mm.add("(min-width: 769px)", () => {
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
                     start: () => {
-                        if (window.innerWidth >= 1920) return "top 100px";   // large screens
-                        if (window.innerWidth >= 1400) return "top +40";   // large screens
+                        if (window.innerWidth >= 1920) return "top 100px";    // large screens
+                        if (window.innerWidth >= 1400) return "top 40px";     // large screens
                         if (window.innerWidth >= 1279) return "top -140px";   // 1280px laptops
-                        if (window.innerWidth >= 1175) return "top +70px";   // 1280px laptops
-                        if (window.innerWidth >= 819) return "top +100px";    // normal laptop
+                        if (window.innerWidth >= 1175) return "top 70px";     // 1280px laptops
+                        if (window.innerWidth >= 819) return "top 100px";     // normal laptop
                         return "top -140px";                                  // small desktop
                     },
                     end: "+=1500",
@@ -89,7 +89,22 @@
 
             tl.to(imageContainer, {
                 x: () => -imagePlaceholder.getBoundingClientRect().left,
-                y: () => -imagePlaceholder.getBoundingClientRect().top,
+                y: () => {
+                    // Start offsets based on the 'start' trigger positions
+                    let offsetThreshold = -140; 
+                    if (window.innerWidth >= 1920) offsetThreshold = 100;
+                    else if (window.innerWidth >= 1400) offsetThreshold = 40;
+                    else if (window.innerWidth >= 1279) offsetThreshold = -140;
+                    else if (window.innerWidth >= 1175) offsetThreshold = 70;
+                    else if (window.innerWidth >= 819) offsetThreshold = 100;
+
+                    // Compute consistent relative top position vs section to avoid jumping on page reload/refresh
+                    const secRect = section.getBoundingClientRect();
+                    const placeholderRect = imagePlaceholder.getBoundingClientRect();
+                    const relativeY = placeholderRect.top - secRect.top;
+                    
+                    return -(offsetThreshold + relativeY);
+                },
                 width: () => document.documentElement.clientWidth + "px",
                 height: () => window.innerHeight + "px",
                 borderRadius: "0px",
@@ -108,7 +123,7 @@
             ScrollTrigger.refresh();
         });
 
-        // ✅ Mobile & Tablet (768px and below)
+        // Mobile & Tablet (768px and below)
         mm.add("(max-width: 768px)", () => {
             // Kill any existing ScrollTriggers
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());

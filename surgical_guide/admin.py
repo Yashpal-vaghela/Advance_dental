@@ -5,13 +5,14 @@ from .models import SurgicalGuide
 class SurgicalGuideAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'preferred_implant_company',
+        'doctor_name',
+        'patient_name',
         'implant_name',
         'created_at',
     )
 
     search_fields = (
-        'preferred_implant_company',
+        'doctor_name',
         'implant_name',
         'desired_implant_location',
     )

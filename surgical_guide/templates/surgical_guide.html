@@ -39,33 +39,42 @@
                     >
                         {% csrf_token %}
                         <div class="row gx-5 gy-4">
-                            <!-- Row 1 -->
+                            <!--Row 0-->
                             <div class="col-md-6 form-group mt-md-5">
                                 <label class="custom-form-label"
-                                    >Preferred Implant Company</label
+                                    >Doctor Name *</label
                                 >
                                 <input
                                     type="text"
-                                    name="preferred_implant_company"
+                                    name="doctor_name"
                                     class="form-control custom-form-control"
+                                    required
                                 />
                             </div>
                             <div class="col-md-6 form-group mt-md-5">
                                 <label class="custom-form-label"
-                                    >Implant Name (Subtype)</label
+                                    >Patient Name *</label
                                 >
                                 <input
                                     type="text"
-                                    name="implant_name"
+                                    name="patient_name"
                                     class="form-control custom-form-control"
+                                    required
                                 />
                             </div>
-
                             <!-- Row 2 -->
+                            <div class="col-md-6 form-group mt-md-5">
+                                <label class="custom-form-label">Contact Number</label>
+                                <input
+                                    type="text"
+                                    name="contact_number"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
                             <div class="col-md-6 form-group d-flex flex-column">
                                 <label class="custom-form-label">Jaw Information</label>
                                 <div
-                                    class="d-flex align-items-center gap-5 mt-4 chekbox_row"
+                                    class="d-flex align-items-center gap-5 mt-2 chekbox_row"
                                 >
                                     <div
                                         class="form-check custom-checkbox-wrapper d-flex align-items-center"
@@ -101,13 +110,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 form-group">
-                                <label class="custom-form-label">Prosthetic Plan</label>
-                                <textarea
+                            <!-- Row 1 -->
+                            <div class="col-md-6 form-group mt-md-5">
+                                <label class="custom-form-label"
+                                    >Preferred Implant Company</label
+                                >
+                                <input
                                     type="text"
-                                    name="prosthetic_plan"
-                                    class="form-control custom-form-control custom-textarea"
-                                ></textarea>
+                                    name="preferred_implant_company"
+                                    class="form-control custom-form-control"
+                                />
+                            </div>
+                            <div class="col-md-6 form-group mt-md-5">
+                                <label class="custom-form-label"
+                                    >Implant Name (Subtype)</label
+                                >
+                                <input
+                                    type="text"
+                                    name="implant_name"
+                                    class="form-control custom-form-control"
+                                />
                             </div>
 
                             <!-- Row 3 -->
@@ -311,15 +333,23 @@
                             </div>
 
                             <!-- Row 7 -->
-                            <div class="col-12 form-group">
+                            <div class="col-md-6 form-group mt-md-5">
                                 <label class="custom-form-label"
                                     >Provisional Planning?</label
                                 >
-                                <input
+                                <textarea
                                     type="text"
                                     name="provisional_planning"
-                                    class="form-control custom-form-control"
-                                />
+                                    class="form-control custom-form-control custom-textarea"
+                                ></textarea>
+                            </div>
+                            <div class="col-md-6 form-group mt-md-5">
+                                <label class="custom-form-label">Prosthetic Plan</label>
+                                <textarea
+                                    type="text"
+                                    name="prosthetic_plan"
+                                    class="form-control custom-form-control custom-textarea"
+                                ></textarea>
                             </div>
                             <div class="col-12">
                                 <div class="text-center">
@@ -398,7 +428,12 @@
             // 👉 button click / form submit
             form.addEventListener('submit', function (e) {
                 e.preventDefault(); // ❌ stop Django submit
-
+                const doctorName = form.querySelector('[name="doctor_name"]').value.trim();
+                const patientName = form.querySelector('[name="patient_name"]').value.trim();
+                if (!doctorName || !patientName) {
+                    alert('Doctor Name and Patient Name are required.');
+                    return;
+                }
                 // 🔵 button loader ON
                 button.classList.add('loading');
                 button.disabled = true;
