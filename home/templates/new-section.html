@@ -17,8 +17,6 @@
 
         <div class="banner">
             <picture>
-                <source media="(max-width: 420px)" srcset="{% static 'img/abc.png' %}">
-                <source media="(max-width: 820px)" srcset="{% static 'img/demo_1_820.png' %}">
                 <source media="(max-width: 1280px)" srcset="{% static 'img/demo_1_1280.png' %}">
                 <source media="(min-width: 1281px)" srcset="{% static 'img/demo_1.png' %}">
                 <img src="{% static 'img/demo_1.png' %}" alt="" class="banner_image ">
@@ -43,10 +41,7 @@
         </div>
 
         <div class="banner">
-
-
             <picture>
-
                 <source media="(max-width: 1280px)" srcset="{% static 'img/demo_2_1280.png' %}">
                 <source media="(min-width: 1281px)" srcset="{% static 'img/demo_2.png' %}">
                 <img src="{% static 'img/demo_2.png' %}" alt="" class="banner_image">
@@ -69,11 +64,8 @@
             </div>
         </div>
 
-
         <div class="banner">
-
             <picture>
-                <source media="(max-width: 820px)" srcset="{% static 'img/demo_3_820.png' %}">
                 <source media="(max-width: 1280px)" srcset="{% static 'img/demo_3_1280.png' %}">
                 <source media="(min-width: 1281px)" srcset="{% static 'img/demo_3.png' %}">
                 <img src="{% static 'img/demo_3.png' %}" alt="" class="banner_image">
@@ -96,10 +88,8 @@
             </div>
         </div>
 
-
         <div class="banner">
             <picture>
-
                 <source media="(max-width: 1280px)" srcset="{% static 'img/demo_4_1280.png' %}">
                 <source media="(min-width: 1281px)" srcset="{% static 'img/demo_4.png' %}">
                 <img src="{% static 'img/demo_4.png' %}" alt="" class="banner_image">
@@ -607,6 +597,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="{% static 'js/new-section.js' %}"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
     // Initialize AOS
     AOS.init({
@@ -625,6 +616,7 @@
         }, 200);
     }
 </script>
+
 <script>
     function disableAOSForSection() {
         if (window.innerWidth <= 576) {
