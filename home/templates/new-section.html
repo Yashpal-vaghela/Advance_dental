@@ -17,6 +17,7 @@
 
         <div class="banner">
             <picture>
+                <source media="(max-width: 425px)" srcset="{% static 'img/demo_1_420.png' %}">
                 <source media="(max-width: 1280px)" srcset="{% static 'img/demo_1_1280.png' %}">
                 <source media="(min-width: 1281px)" srcset="{% static 'img/demo_1.png' %}">
                 <img src="{% static 'img/demo_1.png' %}" alt="" class="banner_image ">
@@ -593,6 +594,8 @@
 
 {% endblock body%}
 {% block js %}
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="{% static 'js/new-section.js' %}"></script>
@@ -639,4 +642,5 @@
     // resize pe bhi check
     window.addEventListener("resize", disableAOSForSection);
 </script>
+
 {% endblock %}

@@ -295,7 +295,7 @@
     }
 
     .Dental_services_heading {
-        margin-top: 100px;
+        margin-top: 40px;
         line-height: 130%;
         font-size: 26px;
     }
@@ -305,7 +305,7 @@
 @media (max-width: 440px) {
 
     .Dental_services_heading {
-        margin-top: 100px;
+        margin-top: 20px;
         line-height: 130%;
         font-size: 22px;
         font-weight: 900;
@@ -1139,7 +1139,6 @@
     .enhance_your_smile_small_screen {
         width: 100%;
         height: auto;
-        background-color: rgba(255, 255, 255, 1);
     }
 
     .enhance_your_smile_small_screen_heading {
@@ -1160,6 +1159,10 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding-bottom: 50px;
+        background: url(../img/all_round_box_bg.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .round_box {
@@ -1453,6 +1456,9 @@
     height: 160px;
     padding: 27px;
     background: rgba(255, 255, 255, 0.15);
+    /* background: linear-gradient(92.19deg,
+            #1B8976 -56.21%,
+            #00D5FF 184.49%); */
     backdrop-filter: blur(5px);
     border: 1px solid rgba(27, 137, 118, 1);
     border-radius: 16px;
@@ -1584,12 +1590,12 @@
 
 @media(max-width:992px) {
     .premium_banner_section {
-        height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
         /* calc(100vh - 0px) */
     }
 
     .banner {
-        height: 100vh;
+        height: 100dvh;
     }
 
     .center-box {
@@ -1616,15 +1622,15 @@
 }
 
 @media(max-width:440px) {
+
+
     .premium_banner_section {
-        height: calc(100vh - 0px);
+        height: calc(100dvh - 0px);
     }
 
     .banner {
-        height: calc(100vh - 0px);
-        /* REMOVED: position: relative and scroll-snap-align */
+        height: calc(100dvh - 0px);
     }
-
     .center-box {
         width: 340px;
         height: 120px;
@@ -1634,7 +1640,6 @@
 
     .box-content {
         width: 240px;
-        /* border: 1px solid red; */
     }
 
     .box-content-heading {

@@ -1112,7 +1112,8 @@ body.no-scroll {
         padding: 7px 8px;
         font-size: 14px;
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(8px)
+        backdrop-filter: blur(8px);
+        margin-left: 200px;
     }
 }
 
