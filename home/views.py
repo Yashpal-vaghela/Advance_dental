@@ -12,7 +12,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.conf import settings
 import threading
 from django.utils import timezone
-from .utils import send_mail
+from .utils import send_mail, is_spam
 from django.template.loader import render_to_string, get_template
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
@@ -47,6 +47,10 @@ def home(request):
         #     return redirect(request.META.get("HTTP_REFERER", "home:home"))
 
         if form.is_valid():
+            message = form.cleaned_data.get("message", "")
+            if is_spam(request, message):
+                return redirect("home:home")
+            
             submission = form.save()
             current_datetime_ist = timezone.localtime(timezone.now())
             formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
@@ -114,7 +118,7 @@ def home(request):
     data2 = Blog.objects.all().order_by("-id")[:3]
     client = Client.objects.all().order_by("-id")
     gallery = Gallery.objects.all().order_by("-id")[:7]
-    gallery21 = BeforeAfter.objects.all().order_by("-id")[:7]
+    gallery21 = BeforeAfter.objects.all().order_by("-id")[:6]
     video = VideoTestimonals.objects.all().order_by("-id")
     awards = Award.objects.all().order_by("-id")
     reviews = DoctorReview.objects.all().order_by("-id")
@@ -277,19 +281,24 @@ def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
 
-        recaptcha_response = request.POST.get("g-recaptcha-response")
-        data = {
-            "secret": settings.RECAPTCHA_SECRET_KEY,
-            "response": recaptcha_response,
-        }
-        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
-        result = r.json()
+        # recaptcha_response = request.POST.get("g-recaptcha-response")
+        # data = {
+        #     "secret": settings.RECAPTCHA_SECRET_KEY,
+        #     "response": recaptcha_response,
+        # }
+        # r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        # result = r.json()
 
-        if not result.get('success'):
-            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-            return redirect(request.META.get('HTTP_REFERER', 'contact'))
+        # if not result.get('success'):
+        #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+        #     return redirect(request.META.get('HTTP_REFERER', 'contact'))
 
         if form.is_valid():
+            message = form.cleaned_data.get("message", "")
+
+            if is_spam(request, message):
+                return redirect("home:home")
+            
             submission = form.save()
             current_datetime_ist = timezone.localtime(timezone.now())
             formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
@@ -302,36 +311,36 @@ def contact(request):
                 "Message": submission.message,
                 "Page URL": request.META.get("HTTP_REFERER", "Not available"),
             }
-            threading.Thread(
-                target= send_email_async,
-                args=(context_dict,),
-                daemon=True
-            ).start()
+            # threading.Thread(
+            #     target= send_email_async,
+            #     args=(context_dict,),
+            #     daemon=True
+            # ).start()
 
-            bikai_payload  ={
-               "Name": submission.name,
-               "Email": submission.email,
-               "Contact": submission.contact,
-               "City": submission.city,
-               "Subject": submission.subject,
-               "Message": submission.message,
-               "DateTime": formatted_datetime,
-            }
-            bikai_url = (
-                "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
-            )
+            # bikai_payload  ={
+            #    "Name": submission.name,
+            #    "Email": submission.email,
+            #    "Contact": submission.contact,
+            #    "City": submission.city,
+            #    "Subject": submission.subject,
+            #    "Message": submission.message,
+            #    "DateTime": formatted_datetime,
+            # }
+            # bikai_url = (
+            #     "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
+            # )
             headers = {
                 "Content-Type": "application/json",
             }
  
             try:
-                crm_response = requests.post(
-                    bikai_url,
-                    json=bikai_payload,
-                    headers=headers,
-                    timeout=10,
-                )
-                crm_response.raise_for_status()
+                # crm_response = requests.post(
+                #     bikai_url,
+                #     json=bikai_payload,
+                #     headers=headers,
+                #     timeout=10,
+                # )
+                # crm_response.raise_for_status()
                 messages.success(request, "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly.")
             except requests.exceptions.RequestException as e:
                 messages.warning(
@@ -353,7 +362,7 @@ def contact(request):
         "contact.html",
         {
             "form": form, 
-            "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+            # "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
         },
     )
 
@@ -375,6 +384,10 @@ def contact_new(request):
         #     return redirect(request.META.get('HTTP_REFERER','contact'))
 
         if form.is_valid():
+            message = form.cleaned_data.get("message", "")
+            if is_spam(request, message):
+                return redirect("home:home")
+                
             submission = form.save()
             current_datetime_ist = timezone.localtime(timezone.now())
             formatted_datetime = current_datetime_ist.strftime("%d-%m-%Y %I:%M %p")
@@ -532,7 +545,7 @@ def zirconiacrown(request):
         {"title": "Collection","subtitle": "Collect Smile Data","image": "img/try6.webp", "alt": "Completed zirconia dental treatment with successful results at Advance Dental Export laboratory"},
     ]
  
-    Benefit = [
+    Benefit = [ 
         {
             'id':'01',
             'title':"Protects Opposing Teeth",
@@ -672,6 +685,10 @@ def stl(request):
         nam = request.POST.get('name')
         phone = request.POST.get('contact')
         message = request.POST.get('message')
+        
+        if is_spam(request, message):
+            return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+            
         name = STLFile.objects.create(name=nam, contact=phone, message=message)
 
         name.save()
@@ -1684,6 +1701,9 @@ def emax2(request):
         #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
         #     return redirect(request.META.get('HTTP_REFERER','contact'))
         if form.is_valid():
+            message = form.cleaned_data.get("message", "")
+            if is_spam(request, message):
+                return redirect("home:home")
             submission = form.save()
             submission.page = "emax2"
             submission.save()
@@ -1775,4 +1795,4 @@ def newSection(request):
     context = {
 
     }
-    return render(request, 'newSlider.html', context)
+    return render(request, 'new-section.html', context)

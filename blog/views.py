@@ -175,6 +175,10 @@ def blog_detail(request, slug):
         #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
         #     return redirect(request.META.get('HTTP_REFERER', 'contact'))
         if form.is_valid():
+            message = form.cleaned_data.get("message", "")
+            if is_spam(request, message):
+                return redirect("home:home")
+                
             submission = form.save()
 
             context_dict = {

@@ -107,16 +107,17 @@
               <li class="breadcrumb-item active">
                 <a href="{% url 'blog:blog' %}">Blogs</a>
               </li>
-              <li class="breadcrumb-item active">
+              <li class="w-100"></li>
+              <li class="breadcrumb-item active mt-2">
                 <a href="#">{{data.h1}}</a>
               </li>
             </ol>
           </nav>
 
           <!-- Title -->
-          <div class="breadcrumb-text steelblue-color text-start">
+          {% comment %} <div class="breadcrumb-text steelblue-color text-start">
             {{data.breadcrumb}}
-          </div>
+          </div> {% endcomment %}
         </div>
       </div>
     </div>
