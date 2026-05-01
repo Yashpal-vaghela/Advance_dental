@@ -6,28 +6,60 @@
 {% endblock header %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 {% endblock css %}
 {% block body %}
 
 <!-- <div class="dummmy" style="width: 100%; height: 1000px; background-color: aquamarine;"></div> -->
-<!-- new premium banner via gsap pinning -->
+<!-- new premium banner -->
+
+<div class="container">
+    <div class="row">
+        <!-- TITLE (FULL WIDTH) -->
+        <div class="col-12" data-aos="fade-right">
+            <h2 class="premium_banner_section_title">
+                Complete Dental Solutions with Advanced Digital Dentistry
+            </h2>
+        </div>
+
+        <!-- SUBTITLE (RIGHT ALIGN) -->
+        <!-- <div class="col-12 d-flex justify-content-end" data-aos="fade-left">
+            <p class="premium_banner_section_subtitle">
+                “As the founder and driving force behind Advance Dental Export, I take immense pride in our journey—from
+                a small dental lab to a trusted provider of dental prosthetics,“As the founder and driving force behind
+                Advance Dental Export, I take immense pride in our
+            </p>
+        </div> -->
+
+    </div>
+</div>
+
 <section class="premium_banner_section">
     <div class="scroll-container">
-
+        <!-- 1 -->
         <div class="banner">
             <picture>
-                <source media="(max-width: 425px)" srcset="{% static 'img/demo_1_420.png' %}">
-                <source media="(max-width: 1280px)" srcset="{% static 'img/demo_1_1280.png' %}">
-                <source media="(min-width: 1281px)" srcset="{% static 'img/demo_1.png' %}">
-                <img src="{% static 'img/demo_1.png' %}" alt="" class="banner_image ">
+                <source media="(max-width: 430px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_420.webp' %}" />
+                <source media="(max-width: 830px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_820.webp' %}" />
+                <source media="(max-width: 1185px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_1180.webp' %}" />
+                <source media="(max-width: 1280px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_1280.webp' %}" />
+                <source media="(min-width: 1281px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1.webp' %}" />
+                <img src="{% static 'product_banner/AdvanceZirconia_banner_1.webp' %}" alt="AdvanceZirconia_banner"
+                    class="banner_image" />
             </picture>
 
             <div class="center-box">
                 <div class="box-content">
                     <p class="box-content-heading">Advance Zirconia</p>
-                    <p class="box-content-description">Precise Advance Zirconia restorations deliver strength and
-                        consistent performance for complex cases.</p>
+                    <p class="box-content-description">
+                        Precise Advance Zirconia restorations deliver strength and
+                        consistent performance for complex cases.
+                    </p>
                 </div>
                 <div class="box-icon">
                     <a href="">
@@ -40,18 +72,23 @@
                 </div>
             </div>
         </div>
-
+        <!-- 2 -->
         <div class="banner">
             <picture>
-                <source media="(max-width: 1280px)" srcset="{% static 'img/demo_2_1280.png' %}">
-                <source media="(min-width: 1281px)" srcset="{% static 'img/demo_2.png' %}">
-                <img src="{% static 'img/demo_2.png' %}" alt="" class="banner_image">
+                <source media="(max-width: 430px)" srcset="{% static 'product_banner/e-max_banner_2_420.webp' %}" />
+                <source media="(max-width: 830px)" srcset="{% static 'product_banner/e-max_banner_2_820.webp' %}" />
+                <source media="(max-width: 1185px)" srcset="{% static 'product_banner/e-max_banner_2_1180.webp' %}" />
+                <source media="(max-width: 1280px)" srcset="{% static 'product_banner/e-max_banner_2_1280.webp' %}" />
+                <source media="(min-width: 1281px)" srcset="{% static 'product_banner/e-max_banner_2.webp' %}" />
+                <img src="{% static 'product_banner/e-max_banner_2.webp' %}" alt="e-max_banner" class="banner_image" />
             </picture>
             <div class="center-box">
                 <div class="box-content">
                     <p class="box-content-heading">IPS E-max</p>
-                    <p class="box-content-description">IPS e-max restorations deliver natural translucency and refined
-                        aesthetics for demanding anterior cases. </p>
+                    <p class="box-content-description">
+                        IPS e-max restorations deliver natural translucency and refined
+                        aesthetics for demanding anterior cases.
+                    </p>
                 </div>
                 <div class="box-icon">
                     <a href="">
@@ -64,18 +101,29 @@
                 </div>
             </div>
         </div>
-
+        <!-- 3 -->
         <div class="banner">
             <picture>
-                <source media="(max-width: 1280px)" srcset="{% static 'img/demo_3_1280.png' %}">
-                <source media="(min-width: 1281px)" srcset="{% static 'img/demo_3.png' %}">
-                <img src="{% static 'img/demo_3.png' %}" alt="" class="banner_image">
+                <source media="(max-width: 430px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_420.webp' %}" />
+                <source media="(max-width: 830px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_820.webp' %}" />
+                <source media="(max-width: 1185px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_1180.webp' %}" />
+                <source media="(max-width: 1280px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_1280.webp' %}" />
+                <source media="(min-width: 1281px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3.webp' %}" />
+                <img src="{% static 'product_banner/PorcelainFused_banner_3.webp' %}" alt="PorcelainFused_banner"
+                    class="banner_image" />
             </picture>
-            <div class="center-box ">
+            <div class="center-box">
                 <div class="box-content">
                     <p class="box-content-heading">Porcelain Fused to Metal (PFM)</p>
-                    <p class="box-content-description">PFM for metal strength, porcelain balance, and trusted
-                        consistency in restorative cases every day.</p>
+                    <p class="box-content-description">
+                        PFM for metal strength, porcelain balance, and trusted
+                        consistency in restorative cases every day.
+                    </p>
                 </div>
                 <div class="box-icon">
                     <a href="">
@@ -88,18 +136,28 @@
                 </div>
             </div>
         </div>
-
+        <!-- 4 -->
         <div class="banner">
             <picture>
-                <source media="(max-width: 1280px)" srcset="{% static 'img/demo_4_1280.png' %}">
-                <source media="(min-width: 1281px)" srcset="{% static 'img/demo_4.png' %}">
-                <img src="{% static 'img/demo_4.png' %}" alt="" class="banner_image">
+                <source media="(max-width: 430px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_420.webp' %}" />
+                <source media="(max-width: 830px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_820.webp' %}" />
+                <source media="(max-width: 1185px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_1180.webp' %}" />
+                <source media="(max-width: 1280px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_1280.webp' %}" />
+                <source media="(min-width: 1281px)" srcset="{% static 'product_banner/AD-Implant_banner_4.webp' %}" />
+                <img src="{% static 'product_banner/AD-Implant_banner_4.webp' %}" alt="AD-Implant_banner"
+                    class="banner_image" />
             </picture>
-            <div class="center-box ">
+            <div class="center-box">
                 <div class="box-content">
                     <p class="box-content-heading text-white">AD-Implant</p>
-                    <p class="box-content-description text-white">AD-Implant solutions ensure stable abutments, precise
-                        fit, and dependable performance for implant cases. </p>
+                    <p class="box-content-description text-white">
+                        AD-Implant solutions ensure stable abutments, precise fit, and
+                        dependable performance for implant cases.
+                    </p>
                 </div>
                 <div class="box-icon border border-white">
                     <a href="">
@@ -118,45 +176,40 @@
 <!-- We are here to EnhanceYour Smile -->
 <section class="enhance_your_smile_small_screen">
     <div class="container">
-        <p class="enhance_your_smile_small_screen_heading" data-aos="fade-down">We are here to EnhanceYour Smile</p>
+        <p class="enhance_your_smile_small_screen_heading" data-aos="fade-down">
+            We are here to EnhanceYour Smile
+        </p>
 
         <div class="all_round_svg_icons">
-
             <!-- 500+ -->
             <div class="svg-bubble bubble-1">
                 <p class="round_box_number_text">500 <span>+</span></p>
                 <p class="round_box_text">Local Partners</p>
-
             </div>
             <!-- 18+ -->
             <div class="svg-bubble bubble-2">
                 <p class="round_box_number_text">18 <span>+</span></p>
                 <p class="round_box_text">Years of service</p>
-
             </div>
             <!-- 750+ -->
             <div class="svg-bubble bubble-3">
                 <p class="round_box_number_text">750 <span>+</span></p>
                 <p class="round_box_text">Qualified Professional</p>
-
             </div>
             <!-- 20+ -->
             <div class="svg-bubble bubble-4">
                 <p class="round_box_number_text">20 <span>+</span></p>
                 <p class="round_box_text">Deliver Country</p>
-
             </div>
             <!-- 120k+ -->
             <div class="svg-bubble bubble-5">
                 <p class="round_box_number_text">120K <span>+</span></p>
                 <p class="round_box_text">Case</p>
-
             </div>
             <!-- 12000+ -->
             <div class="svg-bubble bubble-6">
                 <p class="round_box_number_text">12K <span>+</span></p>
                 <p class="round_box_text">Trusted Dentists</p>
-
             </div>
         </div>
 
@@ -187,10 +240,10 @@
                 <p class="round_box_text">Qualified Professional</p>
             </div>
         </div>
-
     </div>
-
 </section>
+
+<!-- Dental_services -->
 
 <section class="Dental_services">
     <div class="container">
@@ -309,7 +362,7 @@
 </section>
 
 <!-- Clientele sections  -->
-
+<!-- 
 <section class="clientele_section">
     <div class="container h-100 d-flex flex-column">
         <div class="row clientele_header_row">
@@ -589,12 +642,168 @@
             </div>
         </div>
     </div>
+</section> -->
+
+<section class="clientele_section">
+    <div class="container h-100 d-flex flex-column">
+        <div class="row clientele_header_row">
+            <div class="col-lg-6 col-md-10">
+                <h1 class="clientele_section_heading">
+                    In Their Own Words: Tales of Trust from Our Clientele
+                </h1>
+                <p class="clientele_section_subheading mt-4">
+                    We build the future of digital dentistry by delivering innovative
+                    solutions and unmatched expertise. Our commitment to quality and
+                    precision makes us the trusted choice for dentists worldwide.
+                </p>
+            </div>
+        </div>
+
+        <div class="clientele_scroll_wrapper mt-5">
+            <div class="clientele_list">
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">01</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">
+                                Skilled Dental Specialists
+                            </h3>
+                            <p class="clientele_item_desc">
+                                We take pride in delivering exceptional results through
+                                the hands of our expert dental technicians. With deep
+                                expertise, advanced techniques, and an eye for
+                                precision, our team ensures every restoration meets the
+                                highest standards.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Skilled_Dental_1.mp4' %}" type="video/mp4">
+                        </video>
+
+                    </div>
+                </div>
+
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">02</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">
+                                Digital Dentistry Equipment
+                            </h3>
+                            <p class="clientele_item_desc">
+                                At Advance Dental Export, we embrace cutting-edge
+                                digital dentistry to craft precise, high-quality dental
+                                prosthetics. Using the latest equipment and
+                                manufacturing technology, we ensure accuracy,
+                                consistency, and excellence in every product.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Digital_Dentistry_2.mp4' %}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">03</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">
+                                Advanced Laboratory Setup
+                            </h3>
+                            <p class="clientele_item_desc">
+                                Our state-of-the-art facilities and dedicated team work
+                                in harmony to ensure every dental prosthesis meets the
+                                highest industry standards. From materials to final
+                                finish, excellence is built into every step because your
+                                patients deserve nothing less.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Laboratory_3.mp4' %}" type="video/mp4">
+                        </video>
+
+                    </div>
+                </div>
+
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">04</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">
+                                Professional Dental Services
+                            </h3>
+                            <p class="clientele_item_desc">
+                                We specialize in professional dental solutions, with a
+                                focus on crown and bridge preparations tailored to
+                                individual needs. Our expert team crafts customized
+                                smile designs that reflect each patient’s unique vision.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Professional_Dental_4.mp4' %}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">05</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Commitment to Accuracy</h3>
+                            <p class="clientele_item_desc">
+                                At Advance Dental Export, every restoration is a work of
+                                precision. Our skilled team combines expert
+                                craftsmanship with advanced technology to deliver
+                                flawless fit, optimal function, and lifelike aesthetics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Commitment_5.mp4' %}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">06</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">
+                                Client-Centric Approach
+                            </h3>
+                            <p class="clientele_item_desc">
+                                We believe every successful smile starts with strong
+                                collaboration. Our team works closely with dentists,
+                                maintaining open communication to craft solutions
+                                tailored to your clinical preferences.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Client-Centric_6.mp4' %}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-{% endblock body%}
-{% block js %}
-
+{% endblock body%} {% block js %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -608,12 +817,12 @@
         mirror: true,
         offset: 120,
         duration: 600,
-        easing: "ease-out",
+        easing: 'ease-out',
     });
 
     // Re-calculate AOS coordinates after GSAP ScrollTriggers finish pinning
     if (typeof ScrollTrigger !== 'undefined' && typeof AOS !== 'undefined') {
-        ScrollTrigger.addEventListener("refresh", () => AOS.refresh());
+        ScrollTrigger.addEventListener('refresh', () => AOS.refresh());
         setTimeout(() => {
             ScrollTrigger.refresh();
         }, 200);
@@ -624,12 +833,12 @@
     function disableAOSForSection() {
         if (window.innerWidth <= 576) {
             // target section ke andar jitne bhi AOS elements hai
-            const elements = document.querySelectorAll(".Dental_services [data-aos]");
+            const elements = document.querySelectorAll('.Dental_services [data-aos]');
 
-            elements.forEach(el => {
-                el.removeAttribute("data-aos");
-                el.removeAttribute("data-aos-delay");
-                el.removeAttribute("data-aos-duration");
+            elements.forEach((el) => {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-delay');
+                el.removeAttribute('data-aos-duration');
             });
 
             AOS.refreshHard(); // update AOS
@@ -640,7 +849,20 @@
     disableAOSForSection();
 
     // resize pe bhi check
-    window.addEventListener("resize", disableAOSForSection);
+    window.addEventListener('resize', disableAOSForSection);
+</script>
+<script>
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+    document.addEventListener("keydown", function (e) {
+        if (
+            e.key === "F12" ||
+            (e.ctrlKey && e.shiftKey && e.key === "I") ||
+            (e.ctrlKey && e.shiftKey && e.key === "J") ||
+            (e.ctrlKey && e.key === "U")
+        ) {
+            e.preventDefault();
+        }
+    })
 </script>
 
 {% endblock %}
