@@ -12,7 +12,7 @@
             font-size: 40px;
             font-weight: 900;
             position: relative;
-            margin-top: 70px;
+            margin-top: 100px;
             text-align: center;
             z-index: 10;
             background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
@@ -23,7 +23,7 @@
 
         .gallery-carousel-section {
             position: relative;
-            height: 80dvh;
+            height: 100dvh;
         }
 
         .submit {
@@ -71,41 +71,6 @@
         /* ==========================================
            📱 RESPONSIVE MEDIA QUERIES
            ========================================== */
-
-
-        @media (max-width: 1600px) and (max-height:800px) {
-            .gallery-carousel-section {
-                height: 98dvh;
-            }
-
-            .see-more-button {
-                top: 650px;
-            }
-        }
-
-        @media (max-width: 840px) and (max-height: 1150px) {
-            .gallery-carousel-section {
-                height: 60dvh !important;
-            }
-
-        }
-
-        @media (max-width: 1280px) and (max-height:700px) {
-            .gallery-carousel-section {
-                height: 110dvh;
-            }
-
-            .see-more-button {
-                top: 620px;
-            }
-        }
-
-        @media (max-width: 1280px) and (max-height:600px) {
-            .gallery-carousel-section {
-                height: 130dvh;
-            }
-        }
-
         @media (max-width: 1120px) {
             .slider-heading {
                 font-size: 30px;
@@ -135,12 +100,6 @@
 
             .slider-heading {
                 font-size: 36px;
-            }
-        }
-
-        @media (max-width: 991px) and (max-height:600px) {
-            .gallery-carousel-section {
-                height: 110dvh;
             }
         }
 
@@ -178,7 +137,7 @@
             }
         }
 
-        @media (max-width: 576px) and (max-height: 900px) {
+        @media (max-width: 576px) {
             .slide {
                 width: 144px;
                 height: 180px;
@@ -186,7 +145,7 @@
             }
 
             .gallery-carousel-section {
-                height: 50dvh !important;
+                height: 60dvh;
             }
 
             .carousel {
@@ -225,351 +184,4 @@
                 margin-left: 0;
                 text-align: center;
             }
-        }
-
-        /* ------------------Dental services Section ------------------------------*/
-        .Dental_services {
-            margin-bottom: 70px;
-            padding-bottom: 20px;
-            width: 100%;
-            height: 100dvh;
-            background: url(../img/dental_services_bg2.png);
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .Dental_services_heading {
-            font-family: montserrat, sans-serif;
-            font-weight: 700;
-            font-style: Medium;
-            font-size: 40px;
-            line-height: 190%;
-            letter-spacing: 4%;
-            background: linear-gradient(92.19deg,
-                    #1B8976 -56.21%,
-                    #00D5FF 184.49%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-top: 30px;
-
-        }
-
-        .card_section {
-            /* border: 1px solid red; */
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            /* border: 1px solid black; */
-            margin-top: 40px;
-            justify-content: center;
-
-        }
-
-        .marquee-content {
-            display: contents;
-        }
-
-        .marquee-content.clone {
-            display: none;
-        }
-
-        .cards {
-            width: 310px;
-            height: 320px;
-            border-radius: 16px;
-            border: 2px solid rgba(27, 137, 118, 1);
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(8px);
-            padding: 0px 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card_numbers>p {
-            font-size: 80px;
-            color: rgba(27, 137, 119, 0.329);
-            font-family: montserrat, sans-serif;
-            font-weight: 700;
-            line-height: 96px;
-        }
-
-
-
-        .card_content>h3 {
-            color: rgba(27, 137, 118, 1);
-            font-weight: 500;
-            font-family: montserrat, sans-serif;
-            font-size: 20px;
-
-        }
-
-        .card_content>p {
-            margin-top: 20px;
-            color: rgba(0, 0, 0, 1);
-            font-weight: 400;
-            font-family: montserrat, sans-serif;
-            line-height: 150%;
-
-        }
-
-        .card_content>p>a {
-            color: #1b8976
-        }
-
-        @media (max-width: 1530px) {
-            .Dental_services {
-                margin-bottom: 70px;
-                padding-bottom: 20px;
-                width: 100%;
-                height: auto;
-                background: url(../img/dental_services_bg2.png);
-                background-size: contain;
-                background-position: bottom;
-                background-repeat: no-repeat;
-            }
-
-            .Dental_services_heading {
-                margin-top: 15px;
-                font-size: 35px;
-            }
-
-            .card_section {
-                margin-top: 20px;
-            }
-
-        }
-
-        @media (max-width: 1400px) {
-            .cards {
-                width: 265px;
-            }
-
-            .Dental_services {
-                margin-bottom: 70px;
-                padding-bottom: 50px;
-                width: 100%;
-                height: auto;
-                background: url(../img/dental_services_bg2.png);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-
-            }
-
-        }
-
-        @media (max-width: 1200px) {
-            .cards {
-                width: 273px;
-            }
-
-            .Dental_services_heading {
-                font-weight: 600;
-                font-size: 30px;
-            }
-
-            .Dental_services {
-                margin-bottom: 70px;
-                padding-bottom: 50px;
-                width: 100%;
-                height: auto;
-                background: url(../img/dental_services_bg.png);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-
-            }
-        }
-
-        @media (max-width: 992px) {
-
-
-            .cards {
-                width: 339px;
-            }
-
-            .Dental_services_heading {
-                margin-top: 20px;
-                line-height: 147%;
-            }
-
-            .card_numbers {
-                display: flex;
-                justify-content: start;
-                align-items: start;
-                height: 100%;
-                /* border: 1px solid black; */
-            }
-
-            .card_content>h3 {
-                text-align: left;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            .cards {
-                width: 48%;
-                height: 350px;
-            }
-
-            .Dental_services_heading {
-                margin-top: 82px;
-                line-height: 147%;
-            }
-
-            .card_content>p {
-                font-size: 15px;
-            }
-
-        }
-
-        @media (max-width: 576px) {
-            .cards {
-                width: 260px;
-                height: 320px;
-            }
-
-            .card_numbers {
-                display: block;
-                height: auto;
-            }
-
-            .card_content>h3 {
-                text-align: left;
-            }
-
-            .card_section {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: start;
-                width: 100%;
-                margin-top: 28px;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .marquee-content {
-                display: flex;
-                flex-shrink: 0;
-                gap: 15px;
-                animation: marquee 40s linear infinite;
-            }
-
-            .marquee-content.clone {
-                display: flex;
-            }
-
-            .card_section:hover .marquee-content {
-                animation-play-state: paused;
-                cursor: grab;
-            }
-
-            @keyframes marquee {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-100%);
-                }
-            }
-
-            .blur_border {
-                width: 100%;
-                height: 100%;
-                position: relative;
-            }
-
-            .blur_border::before {
-                content: "";
-                width: 100px;
-                height: 100%;
-                /* border: 1px solid red; */
-                background: url('../img/image_border.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                rotate: 180deg;
-                position: absolute;
-                right: -11px;
-                top: 0;
-                z-index: 11;
-            }
-
-            .blur_border::after {
-                content: "";
-                width: 100px;
-                height: 100%;
-                /* border: 1px solid red; */
-                background: url('../img/image_border.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                /* background-color: rgba(0, 255, 55, 0.245); */
-                position: absolute;
-                left: -10px;
-                top: 0;
-                z-index: 11;
-            }
-
-            .card_section::-webkit-scrollbar {
-                display: none;
-            }
-
-
-            .cards {
-                flex-shrink: 0;
-            }
-
-            .Dental_services {
-                margin-bottom: 10px;
-                padding-bottom: 20px;
-                width: 100%;
-                height: auto;
-                background: url(../img/dental_services_bg.png);
-                background-size: cover;
-                background-position: bottom;
-                background-repeat: no-repeat;
-                overflow: visible
-            }
-
-            .Dental_services_heading {
-                margin-top: 40px;
-                line-height: 130%;
-                font-size: 26px;
-            }
-
-        }
-
-        @media (max-width: 440px) {
-
-            .Dental_services_heading {
-                margin-top: 20px;
-                line-height: 130%;
-                font-size: 22px;
-                font-weight: 900;
-                height: 100%;
-
-            }
-
-            .cards {
-                width: 260px;
-                height: 320px;
-            }
-
-            .card_content>h3 {
-                text-align: left;
-            }
-
-            .card_content>p {
-                margin-top: 15px;
-                font-weight: 500;
-            }
-
-            .card_numbers>p {
-                font-size: 80px;
-            }
-
         }

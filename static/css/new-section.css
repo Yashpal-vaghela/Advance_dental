@@ -10,7 +10,7 @@
     background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 .premium_banner_section_subtitle {
