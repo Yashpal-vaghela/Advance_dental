@@ -1,0 +1,205 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% load static %}
+{% block seo %}
+{% endblock %}
+{% block header %}
+{% endblock header %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
+{% endblock css %}
+{% block body %}
+<!-- new premium banner -->
+
+<section class="premium_banner_section">
+    <div class="scroll-container">
+        <!-- 1 -->
+        <div class="banner" style="z-index: 4;">
+            <picture>
+                <source media="(max-width: 430px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_420.webp' %}" />
+                <source media="(max-width: 830px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_820.webp' %}" />
+                <source media="(max-width: 1185px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_1180.webp' %}" />
+                <source media="(max-width: 1280px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1_1280.webp' %}" />
+                <source media="(min-width: 1281px)"
+                    srcset="{% static 'product_banner/AdvanceZirconia_banner_1.webp' %}" />
+                <img src="{% static 'product_banner/AdvanceZirconia_banner_1.webp' %}" alt="AdvanceZirconia_banner"
+                    class="banner_image" fetchpriority="high" loading="eager" />
+            </picture>
+
+            <div class="center-box">
+                <div class="box-content">
+                    <p class="box-content-heading">Advance Zirconia</p>
+                    <p class="box-content-description">
+                        Precise Advance Zirconia restorations deliver strength and
+                        consistent performance for complex cases.
+                    </p>
+                </div>
+                <div class="box-icon">
+                    <a href="{% url 'home:zirconiacrown'%}">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                                fill="#1B8976" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="banner" style="z-index: 3;">
+            <picture>
+                <source media="(max-width: 430px)" srcset="{% static 'product_banner/e-max_banner_2_420.webp' %}" />
+                <source media="(max-width: 830px)" srcset="{% static 'product_banner/e-max_banner_2_820.webp' %}" />
+                <source media="(max-width: 1185px)" srcset="{% static 'product_banner/e-max_banner_2_1180.webp' %}" />
+                <source media="(max-width: 1280px)" srcset="{% static 'product_banner/e-max_banner_2_1280.webp' %}" />
+                <source media="(min-width: 1281px)" srcset="{% static 'product_banner/e-max_banner_2.webp' %}" />
+                <img src="{% static 'product_banner/e-max_banner_2.webp' %}" alt="e-max_banner" class="banner_image" loading="lazy" />
+            </picture>
+            <div class="center-box">
+                <div class="box-content">
+                    <p class="box-content-heading">IPS E-max</p>
+                    <p class="box-content-description">
+                        IPS e-max restorations deliver natural translucency and refined
+                        aesthetics for demanding anterior cases.
+                    </p>
+                </div>
+                <div class="box-icon">
+                    <a href="https://advancedentalexport.com/aesthetic-maxima/">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                                fill="#1B8976" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="banner" style="z-index: 2;">
+            <picture>
+                <source media="(max-width: 430px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_420.webp' %}" />
+                <source media="(max-width: 830px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_820.webp' %}" />
+                <source media="(max-width: 1185px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_1180.webp' %}" />
+                <source media="(max-width: 1280px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3_1280.webp' %}" />
+                <source media="(min-width: 1281px)"
+                    srcset="{% static 'product_banner/PorcelainFused_banner_3.webp' %}" />
+                <img src="{% static 'product_banner/PorcelainFused_banner_3.webp' %}" alt="PorcelainFused_banner"
+                    class="banner_image" loading="lazy" />
+            </picture>
+            <div class="center-box">
+                <div class="box-content">
+                    <p class="box-content-heading">Porcelain Fused to Metal (PFM)</p>
+                    <p class="box-content-description">
+                        PFM for metal strength, porcelain balance, and trusted
+                        consistency in restorative cases every day.
+                    </p>
+                </div>
+                <div class="box-icon">
+                    <a href="https://advancedentalexport.com/porcelain-fused-to-metal-pfm/">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                                fill="#1B8976" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="banner" style="z-index: 1;">
+            <picture>
+                <source media="(max-width: 430px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_420.webp' %}" />
+                <source media="(max-width: 830px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_820.webp' %}" />
+                <source media="(max-width: 1185px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_1180.webp' %}" />
+                <source media="(max-width: 1280px)"
+                    srcset="{% static 'product_banner/AD-Implant_banner_4_1280.webp' %}" />
+                <source media="(min-width: 1281px)" srcset="{% static 'product_banner/AD-Implant_banner_4.webp' %}" />
+                <img src="{% static 'product_banner/AD-Implant_banner_4.webp' %}" alt="AD-Implant_banner"
+                    class="banner_image" loading="lazy" />
+            </picture>
+            <div class="center-box">
+                <div class="box-content">
+                    <p class="box-content-heading">AD-Implant</p>
+                    <p class="box-content-description text-white">
+                        AD-Implant solutions ensure stable abutments, precise fit, and
+                        dependable performance for implant cases.
+                    </p>
+                </div>
+                <div class="box-icon border border-white">
+                    <a href="{% url 'home:adImplants'%}">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                                fill="#1B8976" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock body%} 
+{% block js %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+        // ==========================================
+        // ANIMATION 1: Premium Banner Section
+        // ==========================================
+        const banners = gsap.utils.toArray('.banner');
+        const bannerSection = document.querySelector('.premium_banner_section');
+
+        if (banners.length > 0 && bannerSection) {
+            const total = banners.length;
+
+            banners.forEach((banner, index) => {
+                gsap.set(banner, {
+                    clipPath: 'inset(0% 0% 0% 0%)',
+                    zIndex: total - index,
+                    visibility: 'visible',
+                    opacity: 1
+                });
+            });
+
+            const bannerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: bannerSection,
+                    start: 'top 60px',
+                    end: () => `+=${(banners.length - 1) * 100}%`,
+                    pin: true,
+                    scrub: 2.5,
+                    invalidateOnRefresh: true,
+                    anticipatePin: 1,
+                    // markers: true // 👈 Debug lines
+                }
+            });
+
+            banners.forEach((banner, index) => {
+                if (index === 0) return;
+                bannerTl.fromTo(banners[index - 1],
+                    { clipPath: 'inset(0% 0% 0% 0%)' },
+                    { clipPath: 'inset(0% 0% 100% 0%)', ease: 'none', duration: 1 },
+                    index - 1
+                );
+            });
+        }
+
+    })
+</script>
+
+{% endblock %}

@@ -10,7 +10,7 @@
     background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
 }
 
 .premium_banner_section_subtitle {
@@ -92,7 +92,9 @@
     font-size: 32px;
     line-height: 100%;
     letter-spacing: 5%;
-    color: rgba(0, 0, 0, 1);
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -341,7 +343,7 @@
 
 .enhance_your_smile_small_screen_heading {
     font-weight: 700;
-    font-size: 52px;
+    font-size: 50px;
     line-height: 150%;
     letter-spacing: 4%;
     background: linear-gradient(92.19deg,
@@ -351,8 +353,7 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 0px !important;
     text-align: center;
-    width: 600px;
-    margin: 60px auto;
+    margin: 0px auto;
 }
 
 @media (max-width: 10000px) {
