@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %} {% endcomment %}
 {% load static %}
 {% block seo %}
 {% endblock %}
@@ -15,7 +15,7 @@
         <!-- 1 -->
         <div class="banner" style="z-index: 4;">
             <picture>
-                <source media="(max-width: 430px)"
+                <source media="(max-width: 440px)"
                     srcset="{% static 'product_banner/AdvanceZirconia_banner_1_420.webp' %}" />
                 <source media="(max-width: 830px)"
                     srcset="{% static 'product_banner/AdvanceZirconia_banner_1_820.webp' %}" />
@@ -51,7 +51,7 @@
         <!-- 2 -->
         <div class="banner" style="z-index: 3;">
             <picture>
-                <source media="(max-width: 430px)" srcset="{% static 'product_banner/e-max_banner_2_420.webp' %}" />
+                <source media="(max-width: 440px)" srcset="{% static 'product_banner/e-max_banner_2_420.webp' %}" />
                 <source media="(max-width: 830px)" srcset="{% static 'product_banner/e-max_banner_2_820.webp' %}" />
                 <source media="(max-width: 1185px)" srcset="{% static 'product_banner/e-max_banner_2_1180.webp' %}" />
                 <source media="(max-width: 1280px)" srcset="{% static 'product_banner/e-max_banner_2_1280.webp' %}" />
@@ -80,7 +80,7 @@
         <!-- 3 -->
         <div class="banner" style="z-index: 2;">
             <picture>
-                <source media="(max-width: 430px)"
+                <source media="(max-width: 440px)"
                     srcset="{% static 'product_banner/PorcelainFused_banner_3_420.webp' %}" />
                 <source media="(max-width: 830px)"
                     srcset="{% static 'product_banner/PorcelainFused_banner_3_820.webp' %}" />
@@ -115,7 +115,7 @@
         <!-- 4 -->
         <div class="banner" style="z-index: 1;">
             <picture>
-                <source media="(max-width: 430px)"
+                <source media="(max-width: 440px)"
                     srcset="{% static 'product_banner/AD-Implant_banner_4_420.webp' %}" />
                 <source media="(max-width: 830px)"
                     srcset="{% static 'product_banner/AD-Implant_banner_4_820.webp' %}" />
@@ -185,7 +185,6 @@
                     scrub: 2.5,
                     invalidateOnRefresh: true,
                     anticipatePin: 1,
-                    // markers: true // 👈 Debug lines
                 }
             });
 
@@ -197,7 +196,6 @@
                     index - 1
                 );
             });
-            bannerTl.to({}, { duration: 2 });
         }
 
     })

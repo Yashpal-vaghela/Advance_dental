@@ -54,13 +54,16 @@
 {% endblock %} {% block css %}
 <link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 <link rel="stylesheet" href="{% static 'css/swal.css' %}" />
+
+<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
+
 <link rel="preload" href="{% static 'css/review.css' %}" as="style" />
 <link href="{% static 'css/review.css' %}" rel="stylesheet" />
 <noscript>
   <link rel="stylesheet" href="{% static 'css/review.css' %}" />
 </noscript>
 {% endblock %} {% block body %}
-<section class="hero-section1 mb-0">
+{% comment %} <section class="hero-section1 mb-0">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide banner-1-wrap position-relative">
@@ -223,67 +226,6 @@
                     </div>
                   </div>
                 </b> Prosthesis</span>
-                {% comment %} <b class="home-implant-rolling-text">
-                  <div class="letter" style="--i: 0">
-                    <div class="letter-track">
-                      <span>A</span>
-                      <span>A</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 1">
-                    <div class="letter-track">
-                      <span>D</span>
-                      <span>D</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 2">
-                    <div class="letter-dash">
-                      <span>-</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 3">
-                    <div class="letter-track">
-                      <span>I</span>
-                      <span>I</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 4">
-                    <div class="letter-track">
-                      <span>m</span>
-                      <span>m</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 5">
-                    <div class="letter-track">
-                      <span>p</span>
-                      <span>p</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 6">
-                    <div class="letter-track">
-                      <span>l</span>
-                      <span>l</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 7">
-                    <div class="letter-track">
-                      <span>a</span>
-                      <span>a</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 8">
-                    <div class="letter-track">
-                      <span>n</span>
-                      <span>n</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 9">
-                    <div class="letter-track">
-                      <span>t</span>
-                      <span>t</span>
-                    </div>
-                  </div>
-                </b> {% endcomment %}
               </div>
 
               <button class="btn btn-implant-button">
@@ -328,64 +270,6 @@
               >Contact Now</a
             >
           </div>
-          {% comment %}
-          <img
-            src="{% static '/banner-2/new-banner3-bg24.webp'%}"
-            class="new-banner3-bg img-fluid d-none d-lg-block"
-            alt="Free ACE Scan digital impression tool banner background for accurate dental scanning"
-          />
-          <img
-            src="{% static '/banner-2/new-banner3-bg8.webp'%}"
-            class="new-banner3-bg img-fluid d-sm-none d-md-block d-lg-none d-none"
-            alt="Free ACE Scan digital impression scanning tool banner background for precise dental workflows"
-          />
-          <a href="/contact-us/">
-            <img
-              src="{% static '/banner-2/new-banner3-mobileSize5.webp' %}"
-              class="new-banner3-bg d-block d-md-none img-fluid"
-              alt="Free ACE Scan banner showcasing digital impression scanning tool for dental accuracy"
-              width="582"
-              height="335"
-            />
-          </a>
-          <div class="container new-banner-productWrapper">
-            <img
-              src="{% static '/banner-2/new-banner3-productImg4.webp' %}"
-              class="new-banner3-productImg1 img-fluid"
-              alt="ACE Scan digital impression scanner PNG for precise and reliable dental scan solutions"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg2.webp' %}"
-              class="new-banner3-productImg2 img-fluid"
-              alt="ACE Scan digital impression scanning tool PNG for accurate and efficient dental impressions"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg3.webp' %}"
-              class="new-banner3-productImg3 img-fluid"
-              alt="ACE Scan digital impression scanning tool PNG image for advanced dental scanning solutions"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg10.webp' %}"
-              class="new-banner3-productImg4 img-fluid"
-              alt="ACE Scan digital impression scanning tool PNG image for accurate dental impressions"
-            />
-            <img
-              src="{% static '/banner-2/new-banner3-productImg15.webp' %}"
-              class="new-banner3-productImg5 img-fluid"
-              alt="ACE Scan digital impression scanner PNG for high-precision dental imaging and workflows"
-            />
-            <div class="new-banner3-text">
-              <span>FREE ACE SCAN For You</span>
-              <p>Future-Ready Dentistry</p>
-              <button class="btn new-banner3-cta">
-                <a href="/contact-us/"
-                  >Contact Now<i class="fa-solid fa-arrow-right ms-1"></i
-                ></a>
-              </button>
-            </div>
-            <div class="new-banner3-tnc">*T&C apply</div>
-          </div>
-          {% endcomment %}
         </div>
       </div>
       <!-- five banner -->
@@ -404,7 +288,9 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div>
-</section>
+</section> {% endcomment %}
+{% include 'home_banner.html' %}
+
 {% include 'newSlider.html' %}
 <!-- About us -->
 {% comment %} <section id="about-6" class="pb-0 about-section division">
@@ -457,8 +343,82 @@
     </div>
   </div>
 </section> {% endcomment %}
+
+<!-- We are here to EnhanceYour Smile -->
+<section class="enhance_your_smile_small_screen">
+    <div class="container">
+        <p class="enhance_your_smile_small_screen_heading" data-aos="fade-down">
+            We are here to EnhanceYour Smile
+        </p>
+
+        <div class="all_round_svg_icons">
+            <!-- 500+ -->
+            <div class="svg-bubble bubble-1">
+                <p class="round_box_number_text">500 <span>+</span></p>
+                <p class="round_box_text">Local Partners</p>
+            </div>
+            <!-- 18+ -->
+            <div class="svg-bubble bubble-2">
+                <p class="round_box_number_text">18 <span>+</span></p>
+                <p class="round_box_text">Years of service</p>
+            </div>
+            <!-- 750+ -->
+            <div class="svg-bubble bubble-3">
+                <p class="round_box_number_text">750 <span>+</span></p>
+                <p class="round_box_text">Qualified Professional</p>
+            </div>
+            <!-- 20+ -->
+            <div class="svg-bubble bubble-4">
+                <p class="round_box_number_text">20 <span>+</span></p>
+                <p class="round_box_text">Deliver Country</p>
+            </div>
+            <!-- 120k+ -->
+            <div class="svg-bubble bubble-5">
+                <p class="round_box_number_text">120K <span>+</span></p>
+                <p class="round_box_text">Case</p>
+            </div>
+            <!-- 12000+ -->
+            <div class="svg-bubble bubble-6">
+                <p class="round_box_number_text">12K <span>+</span></p>
+                <p class="round_box_text">Trusted Dentists</p>
+            </div>
+        </div>
+
+        <!-- small screen ui -->
+        <div class="all_round_box_main">
+            <div class="round_box" data-aos="fade-right">
+                <p class="round_box_number_text">20 <span>+</span></p>
+                <p class="round_box_text">Years of service</p>
+            </div>
+            <div class="round_box" data-aos="fade-left">
+                <p class="round_box_number_text">20 <span>+</span></p>
+                <p class="round_box_text">Years of service</p>
+            </div>
+            <div class="round_box" data-aos="fade-right">
+                <p class="round_box_number_text">12K <span>+</span></p>
+                <p class="round_box_text">Trusted Dentists</p>
+            </div>
+            <div class="round_box" data-aos="fade-left">
+                <p class="round_box_number_text">500 <span>+</span></p>
+                <p class="round_box_text">Local Partners</p>
+            </div>
+            <div class="round_box" data-aos="fade-right">
+                <p class="round_box_number_text">12L <span>+</span></p>
+                <p class="round_box_text">Cases</p>
+            </div>
+            <div class="round_box" data-aos="fade-left">
+                <p class="round_box_number_text">750 <span>+</span></p>
+                <p class="round_box_text">Qualified Professional</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--Static Counter -->
+
 {% include "static_counter.html" %}
+
+
 <!-- Static cards hero -->
 <section>
   <div class="container mt-5 mb-4 costom-margin-for-needs">
@@ -1027,6 +987,7 @@
     </div>
   </div>
 </section>
+<!-- Award Section -->
 {% include "awards.html" %}
 <!-- Testimonials-video -->
 <section id="gallery-1" class="gallery-section division pt-50 pb-40">
@@ -1423,7 +1384,7 @@
   </div>
 </section> 
 <!-- - SERVICE SECTION -->
-<section id="services-6" class="bg-blue wide-40 servicess-section division">
+{% comment %} <section id="services-6" class="bg-blue wide-40 servicess-section division">
   <div class="container white-color">
     <div class="row">
       <div class="col-lg-12 mx-auto section-title">
@@ -1536,9 +1497,9 @@
       </div>
     </div>
   </div>
-</section>
+</section> {% endcomment %}
 <!-- new desgine of before & after -->
-<section id="gallery-2" class="gallery-section division">
+{% comment %} <section id="gallery-2" class="gallery-section division">
   <div class="container">
     <div class="row gallery-item-list text-center listing-gallery-img-items">
       <div class="col-lg-12 mx-auto section-title">
@@ -1577,7 +1538,8 @@
       </div>
     </div>
   </div>
-</section>
+</section> {% endcomment %}
+{% include 'new_gallery.html' %}
 
 <!-- client reviews -->
 {% comment %} <section id="reviews-2">
@@ -1667,9 +1629,8 @@
     </div>
   </div>
 </section> {% endcomment %}
-{% include 'WinningNeverStops.html' %}
 <!-- Gallery -->
-<section id="gallery-1" class="gallery-section division pt-50">
+<section id="gallery-1" class="gallery-section division">
   <div class="container">
     <div class="row gallery-items-list text-center">
       <div class="col-lg-12 mx-auto section-title">
@@ -1711,7 +1672,8 @@
     </div>
   </div>
 </section>
-{% comment %} {% include 'new_gallery.html' %} {% endcomment %}
+<!-- client reviews New design -->
+{% include 'WinningNeverStops.html' %}
 <!-- Contact us -->
 {% include 'contact_section.html' %}
 <!-- Blogs section -->
@@ -1806,6 +1768,13 @@
 </main>
 {% endblock %} 
 {% block javascript %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="{% static 'js/new-section.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {% if messages %}
@@ -2669,7 +2638,7 @@
     col.appendChild(clone);
 
     let pos = 0;
-    let speed = 1.45; // px per frame
+    let speed = 0.8; // Decreased from 1.45 to slow down the scrolling
 
     function animate() {
       pos += speed;
