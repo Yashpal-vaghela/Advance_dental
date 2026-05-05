@@ -140,9 +140,11 @@ def home(request):
 def testimonals(request):
     videoData = VideoTestimonals.objects.all()
     data = Testimonials.objects.all().order_by('-id')[:20]
+    reviews = DoctorReview.objects.all().order_by("-id")
     context = { 
         'videoData':videoData,
         'data':data,
+        "reviews": reviews,
     }
     return render(request, 'testimonals.html', context)
 
@@ -1399,6 +1401,7 @@ def bdld(request, slug):
     gallery21 = BeforeAfter.objects.all().order_by('-id')[:5]
     video      =VideoTestimonals.objects.all().order_by('-id')
     pk = Place.objects.get(slug=slug)
+    reviews = DoctorReview.objects.all().order_by("-id")
     
     faq_data = [
         {
@@ -1500,6 +1503,7 @@ def bdld(request, slug):
         'video':video,
         'faq_data': faq_data,
         'form': form,
+        'reviews': reviews,
         # 'RECAPTCHA_SITE_KEY': settings.RECAPTCHA_SITE_KEY,
 
     }

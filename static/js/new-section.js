@@ -15,8 +15,6 @@ window.addEventListener('resize', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
-
     // Card Marquee (Clone logic)
     const cardSection = document.querySelector('.card_section');
     if (cardSection && !cardSection.querySelector('.marquee-content')) {
@@ -25,6 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="marquee-content">${cardsHTML}</div>
             <div class="marquee-content clone" aria-hidden="true">${cardsHTML}</div>`;
     }
+
+    if (typeof gsap === 'undefined') {
+        return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
     // ==========================================
     // ANIMATION 1: Premium Banner Section
     // ==========================================
@@ -263,5 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-    ScrollTrigger.refresh();
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+    }
 });

@@ -1171,3 +1171,11 @@
 :root {
     --faq-bg-color: #1b8976
 }
+
+.signature2 path {
+    fill: none;
+    stroke: #333;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

@@ -6,7 +6,10 @@
 
 .dental-laboratory-section-heading {
     font-weight: 600;
-    color: rgba(27, 137, 118, 1);
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-size: 45px;
     line-height: 140%;
     letter-spacing: 4%;

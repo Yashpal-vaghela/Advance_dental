@@ -447,6 +447,13 @@ span.id-color {
     color: #1b8976
 }
 
+.heading-text-color {
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+
 #loader-wrapper {
     position: fixed;
     top: 0;
