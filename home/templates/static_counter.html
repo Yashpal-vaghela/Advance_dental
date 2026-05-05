@@ -1,4 +1,132 @@
-<div id="stats-counter" class="container text-center my-4">
+{% load static %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
+{% endblock css %}
+
+<section class="enhance_your_smile_small_screen">
+    <div class="container">
+        <p class="enhance_your_smile_small_screen_heading" data-aos="fade-down">
+            We are here to EnhanceYour Smile
+        </p>
+
+        <div class="all_round_svg_icons ">
+            <!-- 500+ -->
+            <div class="svg-bubble bubble-1">
+                <p class="round_box_number_text">500 <span>+</span></p>
+                <p class="round_box_text">Local Partners</p>
+            </div>
+            <!-- 18+ -->
+            <div class="svg-bubble bubble-2">
+                <p class="round_box_number_text">18 <span>+</span></p>
+                <p class="round_box_text">Years of service</p>
+            </div>
+            <!-- 750+ -->
+            <div class="svg-bubble bubble-3">
+                <p class="round_box_number_text">750 <span>+</span></p>
+                <p class="round_box_text">Qualified Professional</p>
+            </div>
+            <!-- 20+ -->
+            <div class="svg-bubble bubble-4">
+                <p class="round_box_number_text">20 <span>+</span></p>
+                <p class="round_box_text">Deliver Country</p>
+            </div>
+            <!-- 120k+ -->
+            <div class="svg-bubble bubble-5">
+                <p class="round_box_number_text">120K <span>+</span></p>
+                <p class="round_box_text">Case</p>
+            </div>
+            <!-- 12000+ -->
+            <div class="svg-bubble bubble-6">
+                <p class="round_box_number_text">12K <span>+</span></p>
+                <p class="round_box_text">Trusted Dentists</p>
+            </div>
+        </div>
+
+        <!-- small screen ui -->
+        <div class="all_round_box_main">
+            <div class="round_box" data-aos="fade-right">
+                <p class="round_box_number_text">20 <span>+</span></p>
+                <p class="round_box_text">Years of service</p>
+            </div>
+            <div class="round_box" data-aos="fade-left">
+                <p class="round_box_number_text">20 <span>+</span></p>
+                <p class="round_box_text">Years of service</p>
+            </div>
+            <div class="round_box" data-aos="fade-right">
+                <p class="round_box_number_text">12K <span>+</span></p>
+                <p class="round_box_text">Trusted Dentists</p>
+            </div>
+            <div class="round_box" data-aos="fade-left">
+                <p class="round_box_number_text">500 <span>+</span></p>
+                <p class="round_box_text">Local Partners</p>
+            </div>
+            <div class="round_box" data-aos="fade-right">
+                <p class="round_box_number_text">12L <span>+</span></p>
+                <p class="round_box_text">Cases</p>
+            </div>
+            <div class="round_box" data-aos="fade-left">
+                <p class="round_box_number_text">750 <span>+</span></p>
+                <p class="round_box_text">Qualified Professional</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        once: false,
+        mirror: true,
+        offset: 120,
+        duration: 600,
+        easing: 'ease-out',
+    });
+</script>
+<script>
+// 'load' event का यूज़ किया है ताकि GSAP पहले Main Page से लोड हो जाए
+window.addEventListener('load', () => {
+
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const section = document.querySelector('.enhance_your_smile_small_screen');
+    if (!section) return;
+
+    const bubbleOrder = ['.bubble-3', '.bubble-5', '.bubble-1', '.bubble-4', '.bubble-6', '.bubble-2'];
+    const bubbles = bubbleOrder.map(cls => section.querySelector(cls)).filter(el => el);
+
+    if (!bubbles.length) return;
+
+    gsap.set(bubbles, { y: -1200, opacity: 0 });
+
+    ScrollTrigger.create({
+        trigger: section,
+        start: 'top 60%', // इसको 30% से 60% किया है ताकि सही टाइम पर ट्रिगर हो
+        onEnter: () => {
+            bubbles.forEach((el, i) => {
+                gsap.to(el, { y: 0, opacity: 1, duration: 1.5, ease: 'bounce.out', delay: i * 0.2 });
+            });
+        },
+        onLeaveBack: () => {
+            bubbles.forEach((el, i) => {
+                gsap.to(el, { y: -1200, opacity: 0, duration: 0.8, ease: 'power2.in', delay: i * 0.1 });
+            });
+        },
+    });
+
+    // Pinned section के कारण DOM बदलता है, इसलिए refresh ज़रूरी है
+    ScrollTrigger.refresh();
+});
+</script>
+
+
+
+{% comment %} <div id="stats-counter" class="container text-center my-4">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-3 col-6">
       <div class="stat-box d-flex align-items-center justify-content-center">
@@ -129,4 +257,4 @@
 
   initCounter("#stats-counter");
 })();
-</script>
+</script> {% endcomment %}
