@@ -1,10 +1,7 @@
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 }
-
 window.scrollTo(0, 0);
-
-
 let currentWidth = window.innerWidth;
 
 window.addEventListener('resize', () => {
@@ -14,14 +11,15 @@ window.addEventListener('resize', () => {
     }
 });
 
+ // Card Marquee (Clone logic)
 document.addEventListener("DOMContentLoaded", () => {
-    // Card Marquee (Clone logic)
+   
     const cardSection = document.querySelector('.card_section');
     if (cardSection && !cardSection.querySelector('.marquee-content')) {
         const cardsHTML = cardSection.innerHTML;
-        cardSection.innerHTML = `
-            <div class="marquee-content">${cardsHTML}</div>
-            <div class="marquee-content clone" aria-hidden="true">${cardsHTML}</div>`;
+        cardSection.innerHTML =
+        `<div class="marquee-content">${cardsHTML}</div>
+         <div class="marquee-content clone" aria-hidden="true">${cardsHTML}</div>`;
     }
 
     if (typeof gsap === 'undefined') {
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     gsap.registerPlugin(ScrollTrigger);
-
     // ==========================================
     // ANIMATION 1: Premium Banner Section
     // ==========================================
@@ -57,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrub: 2.5,
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
-                // markers: true // 👈 Debug lines
+                // markers: true // Debug lines
             }
         });
 
@@ -65,12 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (index === 0) return;
             bannerTl.fromTo(banners[index - 1],
                 { clipPath: 'inset(0% 0% 0% 0%)' },
-                { clipPath: 'inset(0% 0% 100% 0%)', ease: 'none', duration: 1 },
-                index - 1
+                { clipPath: 'inset(0% 0% 100% 0%)',
+                  ease: 'none',
+                  duration: 1 },
+                  index - 1
             );
         });
     }
-
     // ==========================================
     // ANIMATION 2: Enhance Your Smile Bubbles
     // ==========================================
@@ -78,19 +76,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const bubbleContainer = document.querySelector(".enhance_your_smile_small_screen");
 
     if (bubbleContainer) {
-        gsap.set(bubbleOrder, { y: -1200, opacity: 0 });
+        gsap.set(bubbleOrder, {
+            y: -1200,
+            opacity: 0
+        });
 
         ScrollTrigger.create({
             trigger: bubbleContainer,
             start: "top 30%",
             onEnter: () => {
                 bubbleOrder.forEach((selector, index) => {
-                    gsap.to(selector, { y: 0, opacity: 1, duration: 1.5, ease: "bounce.out", delay: index * 0.2, overwrite: "auto" });
+                    gsap.to(selector, {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.5,
+                        ease: "bounce.out",
+                        delay: index * 0.2,
+                        overwrite: "auto"
+                    });
                 });
             },
             onLeaveBack: () => {
                 bubbleOrder.forEach((selector, index) => {
-                    gsap.to(selector, { y: -1200, opacity: 0, duration: 0.8, ease: "power2.in", delay: index * 0.1, overwrite: "auto" });
+                    gsap.to(selector, {
+                        y: -1200,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power2.in",
+                        delay: index * 0.1,
+                        overwrite: "auto"
+                    });
                 });
             }
         });
@@ -99,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // ANIMATION 3: Clientele Section
     // ==========================================
+
     // const items = gsap.utils.toArray('.clientele_item');
     // const list = document.querySelector('.clientele_list');
 
@@ -147,15 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // gsap.to('.clientele_vector_wrapper', {
     //     y: -12, duration: 2, repeat: -1, yoyo: true, ease: 'sine.inOut',
     // });
-
-
-
+    
     const items = gsap.utils.toArray('.clientele_item');
     const list = document.querySelector('.clientele_list');
 
     if (items.length > 0 && list) {
-
-        // Initial setup for SVG/video clip animation
         items.forEach((item, index) => {
             const wrapper = item.querySelector('.clientele_vector_wrapper');
             const svg = item.querySelector('.clientele_vector');
@@ -172,8 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         : 'inset(0% 100% 0% 0%)'
                 });
             }
-
-            // 🔴 Ensure videos don't loop
+            // Ensure videos don't loop
             const video = item.querySelector('video');
             if (video) {
                 video.pause();
@@ -184,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let currentActiveIndex = 0;
 
-        // ▶️ Play first video initially
+        //Play first video initially
         const firstVideo = items[0]?.querySelector('video');
         if (firstVideo) {
             firstVideo.play().catch(() => { });
@@ -206,29 +217,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
                     if (newActiveIndex !== currentActiveIndex) {
-
                         const oldItem = items[currentActiveIndex];
                         const newItem = items[newActiveIndex];
-
                         const oldVideo = oldItem?.querySelector('video');
                         const newVideo = newItem?.querySelector('video');
-
-                        // ⛔ Stop & reset old video
+                        //Stop & reset old video
                         if (oldVideo) {
                             oldVideo.pause();
                             oldVideo.currentTime = 0;
                         }
-
-                        // ▶️ Play new video once
+                        // Play new video once
                         if (newVideo) {
                             newVideo.currentTime = 0;
                             newVideo.play().catch(() => { });
                         }
-
-                        // 🎬 SVG / clip animation
+                        //SVG / clip animation
                         const oldSvg = oldItem?.querySelector('.clientele_vector');
                         const newSvg = newItem?.querySelector('.clientele_vector');
-
                         if (oldSvg) {
                             gsap.to(oldSvg, {
                                 clipPath: 'inset(0% 0% 0% 100%)',
@@ -240,19 +245,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (newSvg) {
                             gsap.fromTo(newSvg,
                                 { clipPath: 'inset(0% 100% 0% 0%)' },
-                                {
-                                    clipPath: 'inset(0% 0% 0% 0%)',
-                                    duration: 1.5,
-                                    overwrite: 'auto'
+                                { clipPath: 'inset(0% 0% 0% 0%)',
+                                  duration: 1.5,
+                                  overwrite: 'auto'
                                 }
                             );
                         }
-
                         // Active class update
                         items.forEach((item, i) => {
                             item.classList.toggle('active', i === newActiveIndex);
                         });
-
                         currentActiveIndex = newActiveIndex;
                     }
                 }
