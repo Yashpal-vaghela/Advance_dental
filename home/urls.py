@@ -77,4 +77,6 @@ urlpatterns = [
     path('newSlider/', views.newSlider, name='newSlider'),
     path('before-after-new/', views.ade_gallery, name='ade_gallery'),
     path('new-section/', views.newSection, name='newSection'),
+    path('home-banner/', views.homeBanner, name='homeBanner'),
+    path('quality-dental-services/', views.qualityDental, name='qualityDental'),
 ]

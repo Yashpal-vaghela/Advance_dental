@@ -1398,7 +1398,7 @@ def bdld(request, slug):
     data2 = Blog.objects.all().order_by('-id')[:3]
     client = Client.objects.all().order_by('-id')
     gallery = Gallery.objects.all().order_by('-id')[:7]
-    gallery21 = BeforeAfter.objects.all().order_by('-id')[:5]
+    gallery21 = BeforeAfter.objects.all().order_by('-id')[:6]
     video      =VideoTestimonals.objects.all().order_by('-id')
     pk = Place.objects.get(slug=slug)
     reviews = DoctorReview.objects.all().order_by("-id")
@@ -1789,7 +1789,7 @@ def newSlider(request):
     return render(request, 'newSlider.html', context)
 
 def ade_gallery(request):
-    data = BeforeAfter.objects.all().order_by("-id")[:10]
+    data = BeforeAfter.objects.all().order_by("-id")[:7]
     context = {
         'data':data,
     }
@@ -1800,3 +1800,14 @@ def newSection(request):
 
     }
     return render(request, 'new-section.html', context)
+
+def homeBanner(request):
+    context = {
+
+    }
+    return render(request, 'home_banner.html', context)
+def qualityDental(request):
+    context = {
+
+    }
+    return render(request, 'quality_dental_services.html', context)

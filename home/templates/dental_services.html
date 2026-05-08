@@ -1,0 +1,149 @@
+
+{% load static %} 
+{% block seo %}
+{% endblock %} 
+{% block header %}
+{% endblock header %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+{% endblock css %} 
+{% block body %}
+<!-- Dental_services -->
+<section class="Dental_services">
+    <div class="container">
+        <h1 class="Dental_services_heading" data-aos="fade-right">Our Core Dental Services for Crowns, Bridges, and Implants</h1>
+        <div class="blur_border">
+            <div class="card_section">
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <h1>01</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>CAD/CAM Technology</h5>
+                        <p> Experience cutting-edge digital precision with Advance Dental Export. We support 3M True Definition, Cadent iTero, and all major open systems.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <h1>02</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Cosmetic Restoration</h5>
+                        <p>Achieve flawless, natural-looking results with esthetic wax-ups, silicone matrices, and premium restorative materials for predictable success.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <h1>03</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Implant Specialists</h5>
+                        <p>From diagnostic wax-ups to custom abutments, we provide expert implant case planning, stent fabrication, and precision denture bars.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <h1>04</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Custom Milling</h5>
+                        <p>We craft zirconia, implant abutments, overdenture bars, temporaries, and ceramics with state-of-the-art digital milling technology.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <h1>05</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Laser Welding</h5>
+                        <p>Need quick, precise repairs? Our advanced laser welding technology ensures seamless fixes for partial dentures and restorations.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <h1>06</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Diagnostic Wax-Ups</h5>
+                        <p>Plan with confidence using our expertly crafted diagnostic wax-ups, providing precise treatment insights for superior patient outcomes.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <h1>07</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Case Planning Assistance</h5>
+                        <p>Receive personalized case consultations with expert technical recommendations to enhance treatment efficiency and precision.</p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <h1>08</h1>
+                    </div>
+                    <div class="card_content">
+                        <h5>Shade Analysis</h5>
+                        <p>Perfect your shade match with digital photos or in-lab consultations email us at advancedentalexport@gmail.com for expert assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{% endblock body%} {% block js %}
+<script src="{% static 'js/new-section.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        once: false,
+        mirror: true,
+        offset: 120,
+        duration: 600,
+        easing: 'ease-out',
+    });
+
+    if (typeof ScrollTrigger !== 'undefined' && typeof AOS !== 'undefined') {
+        ScrollTrigger.addEventListener('refresh', () => AOS.refresh());
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }
+</script>
+<script>
+    function disableAOSForSection() {
+
+        if (window.innerWidth <= 576) {
+            const elements = document.querySelectorAll('.Dental_services [data-aos]');
+            elements.forEach((el) => {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-delay');
+                el.removeAttribute('data-aos-duration');
+            });
+            AOS.refreshHard();
+        }
+    }
+
+    disableAOSForSection();
+
+    window.addEventListener('resize', disableAOSForSection);
+</script>
+<!-- <script>
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U') ) {
+            e.preventDefault();
+        }
+
+    });
+</script> -->
+
+{% endblock %}

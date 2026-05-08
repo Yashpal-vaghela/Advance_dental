@@ -375,7 +375,7 @@
     </div>
   </section>
 
-  <section id="services-7" class="wide-50 servicess-section division">
+  {% comment %} <section id="services-7" class="wide-50 servicess-section division">
     <div class="container">
       <div class="row justify-content-center mb-2 mb-sm-4">
         <div class="col-lg-10 text-center">
@@ -454,7 +454,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
+
+  {% include 'dental_services.html' %}
+
 {% endblock %}
 {% block js %}
 {% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> {% endcomment %}

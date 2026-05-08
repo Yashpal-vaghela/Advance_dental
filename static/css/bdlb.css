@@ -99,6 +99,7 @@
     display: none
 }
 
+
 .info-heading {
     font-size: 26px
 }
@@ -611,6 +612,9 @@
 .advantageSwiper #vector-img5 {
     width: 70%
 }
+.form_spacing{
+    margin-bottom: 60px !important;
+}
 
 @media (min-width:1300px) and (max-width:2799px) {
     .state-2 .image1 {
@@ -774,6 +778,9 @@
     .advantageSwiper {
         padding-bottom: 40px
     }
+    .form_spacing{
+    margin-bottom: 40px !important;
+    }
 }
 
 @media (max-width:768px) {
@@ -878,6 +885,7 @@
         display: block;
         margin: 0 auto
     }
+   
 }
 
 .bdld-services-section-title {

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block seo %}
+{% endblock %} 
+{% block header %}
+{% endblock header %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
+{% endblock css %} 
+{% block body %}
+
+<div style="height: 100vh;width: 100vw;background-color: #ad0c0cff;"></div>
+<!-- Clientele sections  -->
+<section class="clientele_section">
+    <div class="container h-100 d-flex flex-column">
+        <div class="row clientele_header_row">
+            <div class="col-lg-6 col-md-10">
+                <h1 class="clientele_section_heading">In Their Own Words: Tales of Trust from Our Clientele</h1>
+                <p class="clientele_section_subheading mt-4">We build the future of digital dentistry by delivering innovative solutions and unmatched expertise. Our commitment to quality and precision makes us the trusted choice for dentists worldwide.</p>
+            </div>
+        </div>
+        <div class="clientele_scroll_wrapper mt-5">
+            <div class="clientele_list">
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">01</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Skilled Dental Specialists</h3>
+                            <p class="clientele_item_desc">We take pride in delivering exceptional results through the hands of our expert dental technicians. With deep expertise, advanced techniques, and an eye for precision, our team ensures every restoration meets the highest standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Skilled_Dental_1.mp4'%}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">02</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Digital Dentistry Equipment</h3>
+                            <p class="clientele_item_desc">At Advance Dental Export, we embrace cutting-edge digital dentistry to craft precise, high-quality dental prosthetics. Using the latest equipment and manufacturing technology, we ensure accuracy, consistency, and excellence in every product.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Digital_Dentistry_2.mp4'%}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">03</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Advanced Laboratory Setup</h3>
+                            <p class="clientele_item_desc">Our state-of-the-art facilities and dedicated team work in harmony to ensure every dental prosthesis meets the highest industry standards. From materials to final finish, excellence is built into every step because your patients deserve nothing less.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Laboratory_3.mp4'%}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">04</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Professional Dental Services</h3>
+                            <p class="clientele_item_desc">We specialize in professional dental solutions, with a focus on crown and bridge preparations tailored to individual needs. Our expert team crafts customized smile designs that reflect each patient’s unique vision.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Professional_Dental_4.mp4'%}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">05</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Commitment to Accuracy</h3>
+                            <p class="clientele_item_desc">At Advance Dental Export, every restoration is a work of precision. Our skilled team combines expert craftsmanship with advanced technology to deliver flawless fit, optimal function, and lifelike aesthetics.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Commitment_5.mp4'%}" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">06</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Client-Centric Approach</h3>
+                            <p class="clientele_item_desc">We believe every successful smile starts with strong collaboration. Our team works closely with dentists, maintaining open communication to craft solutions tailored to your clinical preferences.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/Client-Centric_6.mp4' %}" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div style="height: 100vh;width: 100vw;background-color: #ad0c0cff;"></div>
+
+{% endblock body%} {% block js %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="{% static 'js/new-section.js' %}"></script>
+
+
+
+
+
+{% endblock %}

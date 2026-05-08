@@ -178,15 +178,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 inactiveSvg.classList.add('clientele_vector_inactive');
                 wrapper.appendChild(inactiveSvg);
 
-                gsap.set(svg, {
-                    clipPath: index === 0
-                        ? 'inset(0% 0% 0% 0%)'
-                        : 'inset(0% 100% 0% 0%)'
-                });
+                // gsap.set(svg, {
+                //     clipPath: index === 0
+                //         ? 'inset(0% 0% 0% 0%)'
+                //         : 'inset(0% 100% 0% 0%)'
+                // });
             }
             // Ensure videos don't loop
             const video = item.querySelector('video');
             if (video) {
+                gsap.set(video, {
+                    opacity: index === 0 ? 1 : 0.5
+                });
                 video.pause();
                 video.currentTime = 0;
                 video.removeAttribute('loop');
@@ -225,32 +228,40 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (oldVideo) {
                             oldVideo.pause();
                             oldVideo.currentTime = 0;
+                            gsap.to(oldVideo, {
+                                opacity: 0.1,
+                                // duration: 0.5
+                            });
                         }
                         // Play new video once
                         if (newVideo) {
                             newVideo.currentTime = 0;
                             newVideo.play().catch(() => { });
+                            gsap.to(newVideo, {
+                                opacity: 1,
+                                // duration: 0.5
+                            });
                         }
                         //SVG / clip animation
                         const oldSvg = oldItem?.querySelector('.clientele_vector');
                         const newSvg = newItem?.querySelector('.clientele_vector');
-                        if (oldSvg) {
-                            gsap.to(oldSvg, {
-                                clipPath: 'inset(0% 0% 0% 100%)',
-                                duration: 0.8,
-                                overwrite: 'auto'
-                            });
-                        }
+                        // if (oldSvg) {
+                        //     gsap.to(oldSvg, {
+                        //         clipPath: 'inset(0% 0% 0% 100%)',
+                        //         duration: 0.8,
+                        //         overwrite: 'auto'
+                        //     });
+                        // }
 
-                        if (newSvg) {
-                            gsap.fromTo(newSvg,
-                                { clipPath: 'inset(0% 100% 0% 0%)' },
-                                { clipPath: 'inset(0% 0% 0% 0%)',
-                                  duration: 1.5,
-                                  overwrite: 'auto'
-                                }
-                            );
-                        }
+                        // if (newSvg) {
+                        //     gsap.fromTo(newSvg,
+                        //         { clipPath: 'inset(0% 100% 0% 0%)' },
+                        //         { clipPath: 'inset(0% 0% 0% 0%)',
+                        //           duration: 1.5,
+                        //           overwrite: 'auto'
+                        //         }
+                        //     );
+                        // }
                         // Active class update
                         items.forEach((item, i) => {
                             item.classList.toggle('active', i === newActiveIndex);
@@ -263,7 +274,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Scroll movement
         clienteleTl.to(list, {
-            y: () => -(items[items.length - 1].offsetTop),
+            y: () => {
+                let maxScroll = list.scrollHeight - list.parentElement.clientHeight;
+                return maxScroll > 0 ? -maxScroll : 0;
+            },
             ease: 'none'
         });
     }
