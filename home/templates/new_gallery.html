@@ -3,9 +3,10 @@
 {% endblock seo %}
 {% block css %}
 <link  rel="preload" href="{% static 'css/new_gallery.css' %}" as='stylesheet' />
-  <link href={% static 'css/new_gallery.css' %} rel="stylesheet" media="print" onload="this.media='all'" />
+<link href={% static 'css/new_gallery.css' %} rel="stylesheet" media="print" onload="this.media='all'" />
 {% endblock css %}
 {% block body %}
+
 <div class="gallery-carousel-section">
     <div class="container">
         <h2 id="curveText" class="slider-heading">
@@ -26,124 +27,124 @@
         </a>    
     </div>
 </div>
+<section class="Dental_services">
+    <div class="container">
+        <h2 class="Dental_services_heading" data-aos="fade-right">
+            Our Core Dental Services for Crowns, Bridges, and Implants
+        </h2>
+        <div class="blur_border">
+            <div class="card_section">
+                <div class="cards" data-aos="zoom-in-down" `>
+                    <div class="card_numbers">
+                        <p>01</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>CAD/CAM Technology</h3>
+                        <p>
+                            Experience cutting-edge digital precision with Advance
+                            Dental Export. We support 3M True Definition, Cadent iTero,
+                            and all major open systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <p>02</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Cosmetic Restoration</h3>
+                        <p>
+                            Achieve flawless, natural-looking results with esthetic
+                            wax-ups, silicone matrices, and premium restorative
+                            materials for predictable success.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <p>03</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Implant Specialists</h3>
+                        <p>
+                            From diagnostic wax-ups to custom abutments, we provide
+                            expert implant case planning, stent fabrication, and
+                            precision denture bars.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="zoom-in-down">
+                    <div class="card_numbers">
+                        <p>04</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Custom Milling</h3>
+                        <p>
+                            We craft zirconia, implant abutments, overdenture bars,
+                            temporaries, and ceramics with state-of-the-art digital
+                            milling technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <p>05</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Laser Welding</h3>
+                        <p>
+                            Need quick, precise repairs? Our advanced laser welding
+                            technology ensures seamless fixes for partial dentures and
+                            restorations.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <p>06</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Diagnostic Wax-Ups</h3>
+                        <p>
+                            Plan with confidence using our expertly crafted diagnostic
+                            wax-ups, providing precise treatment insights for superior
+                            patient outcomes.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <p>07</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Case Planning Assistance</h3>
+                        <p>
+                            Receive personalized case consultations with expert
+                            technical recommendations to enhance treatment efficiency
+                            and precision.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card_numbers">
+                        <p>08</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Shade Analysis</h3>
+                        <p>
+                            Perfect your shade match with digital photos or in-lab
+                            consultations email us at <a href="mailto:advancedentalexport@gmail.com">advancedentalexport@gmail.com</a> for
+                            expert assistance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock body %}
 {% block javascript %}
- <script type="module">
-        import { Snap } from 'https://esm.sh/vevet@5';
-
-        const container = document.getElementById('carousel');
-
-        let startX = 0;
-
-        container.addEventListener('pointerdown', (e) => {
-            startX = e.clientX;
-            stopAutoplay();
-        });
-
-        container.addEventListener('pointerup', (e) => {
-            const diff = e.clientX - startX;
-
-            if (diff > 0) {
-                direction = 'prev';
-            } else {
-                direction = 'next';
-            }
-
-            startAutoplay();
-        });
-
-        const carousel = new Snap({
-            container,
-            direction: 'horizontal',
-            grabCursor: true,
-            centered: true,
-            loop: true,
-            gap: 15,
-            duration: 2500,
-            easing: 'linear',
-        });
-
-        let autoplayInterval;
-
-        const resumeEngine = (obj) => {
-            for (let key in obj) {
-                if (obj[key] && typeof obj[key] === 'object') {
-                    if (typeof obj[key].play === 'function') {
-                        try { obj[key].play(); } catch (err) { }
-                    }
-                }
-            }
-            if (typeof obj.play === 'function') try { obj.play(); } catch (err) { }
-        };
-
-        const pauseEngine = (obj) => {
-            for (let key in obj) {
-                if (obj[key] && typeof obj[key] === 'object') {
-                    if (typeof obj[key].pause === 'function') {
-                        try { obj[key].pause(); } catch (err) { }
-                    }
-                }
-            }
-            if (typeof obj.pause === 'function') try { obj.pause(); } catch (err) { }
-        };
-
-        function startAutoplay() {
-            clearInterval(autoplayInterval);
-            resumeEngine(carousel);
-            if (carousel.next) {
-                carousel.next();
-            }
-            autoplayInterval = setInterval(() => {
-                if (carousel.next) {
-                    carousel.next();
-                }
-            }, 2500);
-        }
-
-        function stopAutoplay(e) {
-            clearInterval(autoplayInterval);
-            pauseEngine(carousel);
-        }
-
-        setTimeout(() => {
-            startAutoplay();
-        }, 500);
-
-        container.addEventListener('mouseenter', stopAutoplay);
-        container.addEventListener('mouseleave', startAutoplay);
-        container.addEventListener('touchstart', stopAutoplay, { passive: true });
-        container.addEventListener('touchend', startAutoplay);
-
-        carousel.on('update', () => {
-            const isMobile = window.innerWidth <= 600;
-            const depth = isMobile ? 100 : 200;
-            const rotation = isMobile ? 30 : 20;
-
-            const scale = 1 / (180 / rotation);
-            const halfAngle = (rotation * Math.PI) / 180 / 2;
-
-            carousel.slides.forEach(({ element, coord, progress, size }) => {
-                const factor = 1 - Math.cos(progress * scale * Math.PI);
-
-                const xOffset = progress * (size / 3) * factor;
-                const zOffset = ((size * 0.5) / Math.sin(halfAngle)) * factor - depth;
-                const rotateY = progress * rotation;
-
-                element.style.transform = `
-                translateX(${coord + xOffset}px)
-                translateZ(${zOffset}px)
-                rotateY(${rotateY}deg)
-            `;
-            });
-        });
-
-        // Resize par snap library ko recalculate karne ke liye
-        window.addEventListener('resize', () => {
-            if (carousel && carousel.resize) carousel.resize();
-        });
-
-        container.classList.add('ready');
-</script> 
+<script src="{% static 'js/new-section.js' %}"></script>
 <script type="module">
 import { Snap } from 'https://esm.sh/vevet@5';
 
@@ -156,7 +157,7 @@ const carousel = new Snap({
     centered: true,
     loop: true,
     gap: 15,
-    duration: 1000,
+    duration: 2000,
     easing: 'ease-in-out',
 });
 
@@ -168,17 +169,17 @@ let stopTimeout;
 let lastPointerType = 'mouse';
 let lastUpdateTime = Date.now();
 
-{% comment %} function startAutoplay() {
+function startAutoplay() {
     stopAutoplay();
 
     autoplayTimer = setInterval(() => {
         if (!isDragging && isVisible) {
             carousel.next();
         }
-    }, 2000);
-} {% endcomment %}
+    }, 1500);
+}
 
-function stopAutoplay() {
+function stopAutoplay() {   
     clearInterval(autoplayTimer);
 }
 
@@ -198,11 +199,13 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(container);
 
-container.addEventListener('mouseenter', () => {
-    if (lastPointerType === 'mouse') stopAutoplay();
-});
-container.addEventListener('mouseleave', () => {
-    if (isVisible && !isDragging) startAutoplay();
+container.querySelectorAll('.slide').forEach(slide => {
+    slide.addEventListener('mouseenter', () => {
+        if (lastPointerType === 'mouse') stopAutoplay();
+    });
+    slide.addEventListener('mouseleave', () => {
+        if (isVisible && !isDragging) startAutoplay();
+    });
 });
 
 container.addEventListener('pointerdown', (e) => {
@@ -234,13 +237,16 @@ function waitForSnapToStop() {
 
         if (timeSinceLastUpdate > 100) {
             if (isVisible) {
-                if (lastPointerType === 'mouse' && container.matches(':hover')) {
+                if (lastPointerType === 'mouse' && container.querySelector('.slide:hover')) {
                     return;
                 }
                 
                 setTimeout(() => {
-                    if (isVisible && !isDragging) startAutoplay();
-                }, 800); 
+                    if (isVisible && !isDragging) {
+                        carousel.next();
+                        startAutoplay();
+                    }
+                }, 1000); 
             }
         } else {
             waitForSnapToStop();
@@ -254,7 +260,7 @@ carousel.on('update', () => {
 
     const isMobile = window.innerWidth <= 600;
     const depth = isMobile ? 100 : 200;
-    const rotation = isMobile ? 30 : 20;
+    const rotation = isMobile ? 20 : 10;
 
     const scale = 1 / (180 / rotation);
     const halfAngle = (rotation * Math.PI) / 180 / 2;
@@ -279,5 +285,29 @@ window.addEventListener('resize', () => {
 });
 
 container.classList.add('ready');
+</script>
+<script>
+    function disableAOSForSection() {
+        if (window.innerWidth <= 576) {
+            // target section ke andar jitne bhi AOS elements hai
+            const elements = document.querySelectorAll('.Dental_services [data-aos]');
+
+            elements.forEach((el) => {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-delay');
+                el.removeAttribute('data-aos-duration');
+            });
+
+            if (typeof AOS !== 'undefined') {
+                AOS.refreshHard(); // update AOS
+            }
+        }
+    }
+
+    // page load pe run
+    disableAOSForSection();
+
+    // resize pe bhi check
+    window.addEventListener('resize', disableAOSForSection);
 </script>
 {% endblock javascript %}

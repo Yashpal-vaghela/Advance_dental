@@ -26,6 +26,11 @@
             height: 80dvh;
         }
 
+        .gallery-carousel-section-bdlb {
+            position: relative;
+            height: 90dvh !important;
+        }
+
         .submit {
             margin-top: 25px;
         }
@@ -88,11 +93,18 @@
                 height: 60dvh !important;
             }
 
+            .gallery-carousel-section-bdlb {
+                height: 55dvh !important;
+            }
         }
 
         @media (max-width: 1280px) and (max-height:700px) {
             .gallery-carousel-section {
                 height: 110dvh;
+            }
+
+            .gallery-carousel-section-bdlb {
+                height: 100dvh !important;
             }
 
             .see-more-button {
@@ -103,6 +115,10 @@
         @media (max-width: 1280px) and (max-height:600px) {
             .gallery-carousel-section {
                 height: 130dvh;
+            }
+
+            .gallery-carousel-section-bdlb {
+                height: 120dvh !important;
             }
         }
 
@@ -141,6 +157,10 @@
         @media (max-width: 991px) and (max-height:600px) {
             .gallery-carousel-section {
                 height: 110dvh;
+            }
+
+            .gallery-carousel-section-bdlb {
+                height: 100dvh !important;
             }
         }
 
@@ -186,6 +206,10 @@
             }
 
             .gallery-carousel-section {
+                height: 50dvh !important;
+            }
+
+            .gallery-carousel-section-bdlb {
                 height: 50dvh !important;
             }
 

@@ -5,9 +5,9 @@
 
 <section class="enhance_your_smile_small_screen">
     <div class="container">
-        <p class="enhance_your_smile_small_screen_heading" data-aos="fade-down">
-            We are here to EnhanceYour Smile
-        </p>
+        <h2 class="enhance_your_smile_small_screen_heading" data-aos="fade-down">
+            We are here to Enhance Your Smile
+        </h2>
 
         <div class="all_round_svg_icons ">
             <!-- 500+ -->
@@ -44,27 +44,27 @@
 
         <!-- small screen ui -->
         <div class="all_round_box_main">
-            <div class="round_box" data-aos="fade-right">
+            <div class="round_box" data-aos="fade-down">
                 <p class="round_box_number_text">20 <span>+</span></p>
                 <p class="round_box_text">Years of service</p>
             </div>
-            <div class="round_box" data-aos="fade-left">
+            <div class="round_box" data-aos="fade-up">
                 <p class="round_box_number_text">20 <span>+</span></p>
                 <p class="round_box_text">Years of service</p>
             </div>
-            <div class="round_box" data-aos="fade-right">
+            <div class="round_box" data-aos="fade-down">
                 <p class="round_box_number_text">12K <span>+</span></p>
                 <p class="round_box_text">Trusted Dentists</p>
             </div>
-            <div class="round_box" data-aos="fade-left">
+            <div class="round_box" data-aos="fade-up">
                 <p class="round_box_number_text">500 <span>+</span></p>
                 <p class="round_box_text">Local Partners</p>
             </div>
-            <div class="round_box" data-aos="fade-right">
+            <div class="round_box" data-aos="fade-down">
                 <p class="round_box_number_text">12L <span>+</span></p>
                 <p class="round_box_text">Cases</p>
             </div>
-            <div class="round_box" data-aos="fade-left">
+            <div class="round_box" data-aos="fade-up">
                 <p class="round_box_number_text">750 <span>+</span></p>
                 <p class="round_box_text">Qualified Professional</p>
             </div>
@@ -87,7 +87,6 @@
     });
 </script>
 <script>
-// 'load' event का यूज़ किया है ताकि GSAP पहले Main Page से लोड हो जाए
 window.addEventListener('load', () => {
 
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
@@ -106,7 +105,7 @@ window.addEventListener('load', () => {
 
     ScrollTrigger.create({
         trigger: section,
-        start: 'top 60%', // इसको 30% से 60% किया है ताकि सही टाइम पर ट्रिगर हो
+        start: 'top 60%', 
         onEnter: () => {
             bubbles.forEach((el, i) => {
                 gsap.to(el, { y: 0, opacity: 1, duration: 1.5, ease: 'bounce.out', delay: i * 0.2 });
@@ -119,7 +118,6 @@ window.addEventListener('load', () => {
         },
     });
 
-    // Pinned section के कारण DOM बदलता है, इसलिए refresh ज़रूरी है
     ScrollTrigger.refresh();
 });
 </script>
