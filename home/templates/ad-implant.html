@@ -194,6 +194,10 @@
           </div>
         </div>
       </section>
+
+
+
+
       <!-- why Implant section -->
       <section class="section section-1 why-Implant-section" id="why-Implant-section" data-scroll-section>
           <div class="container">
@@ -229,8 +233,13 @@
               </div>
           </div>
       </section> 
+
+
+
+
+
       <!-- Types of AD Implants -->
-      <section class="section TypeofImplants overflow-hidden" id="TypeofImplants">
+      <section class="section TypeofImplants overflow-hidden mt-5" id="TypeofImplants">
         <div class="container position-relative">
           {% comment %} <img src="{% static 'img/line.svg' %}" class="img-fluid vector1" /> {% endcomment %}
           <svg class="img-fluid vector1" width="358" height="23" viewBox="0 0 358 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -857,6 +866,17 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  let currentWidth = window.innerWidth;
+  window.addEventListener("resize", () => {
+    if (window.innerWidth !== currentWidth) {
+      currentWidth = window.innerWidth;
+      window.scrollTo(0, 0);
+      location.reload();
+    }
+  });
+</script>
 <script>
   AOS.init({
         duration: 1000, 
@@ -1008,7 +1028,14 @@
   });
   observer.observe(implantTrigger);
 </script>
+
+
+
 <!-- why Implant section script -->
+
+
+
+
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
@@ -1053,6 +1080,12 @@
     }, ">-0.5");
   });
 </script>
+
+
+
+
+
+
 <!-- Types of AD Implants script -->
 <script>
   gsap.registerPlugin(ScrollTrigger);
@@ -1148,7 +1181,7 @@
 <script>
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.matchMedia({
-    "(min-width:768px)":function()
+    "(min-width:992px)":function()
     {
         const centerOffset = window.innerHeight / 2;
         let originalSpacerHeight = null;
