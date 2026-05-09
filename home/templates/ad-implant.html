@@ -842,7 +842,7 @@
                     <div class="mb-0">
                       <div class="faq-title faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faqCollapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="faqCollapse-{{ forloop.counter }}">
                         <span class="badge"><div class="test-xs">{{ forloop.counter }}</div></span>
-                        <div class="pt-2">{{ item.question }}</div>
+                        <div class="pt-2 feq_specing_small">{{ item.question }}</div>
                         <span class="faq-toggle-icon"></span>
                       </div>
                     </div>
@@ -1204,18 +1204,15 @@
           });
 
         // Step 1: Animate and pin the image
-        timeline
-          .from(".feature-section-img", {
-            opacity: 1,
-            y: 40,
+      timeline
+          .to(".feature-section-img", {
+            
             duration: 0.5,
           })
           .addLabel("imageDone");
 
         // Step 2: Animate and pin the title
-        timeline.from(".future-title", {
-            opacity: 1,
-            y: 60,
+        timeline.to(".future-title", {
             duration: 1,
         })
         .addLabel("titleDone");

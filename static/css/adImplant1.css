@@ -1149,7 +1149,8 @@
 }
 
 .future-Implants .col-lg-6 {
-  align-self: flex-start
+  align-self: flex-start;
+  
 }
 
 .future-title {
@@ -1157,10 +1158,6 @@
   position: absolute;
   text-align: center;
   left: 32.9%;
-  background: linear-gradient(90deg, #1b8976 82%, #fff 35%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   z-index: 2
 }
 
@@ -1206,6 +1203,9 @@
 .future-content .future-p {
   margin-bottom: 30px
 }
+.feature-section-img{
+  margin-top: 60px;
+}
 
 @media screen and (min-width:1100px) and (max-width:1300px) {
   .future-title {
@@ -1220,7 +1220,8 @@
 
   #future-slider .future-content-wrapper {
     margin-top: 40px !important;
-    padding-top: 0px !important
+    padding-top: 0px !important;
+    overflow: hidden;
   }
 
   .future-content-num {
@@ -1235,6 +1236,7 @@
     left: 30.55%;
     font-size: 26px
   }
+ 
 }
 
 @media (max-width:991px) {
@@ -1270,6 +1272,9 @@
   .future-content p {
     letter-spacing: 1px
   }
+  .feature-section-img {
+    margin-top: 10px;
+}
 }
 
 @media (max-width:768px) {
@@ -1282,11 +1287,7 @@
     margin-bottom: 25px
   }
 
-  .future-title {
-    background: linear-gradient(72deg, #1b8976 100%);
-    background-clip: text;
-    -webkit-background-clip: text
-  }
+
 
   .future-content h3 {
     font-size: 20px;
@@ -1405,16 +1406,21 @@
 }
 
 .swiper {
+  margin-top: 25px;
   overflow: hidden !important;
-  height: 350px;
+  height: auto !important;
+  padding-bottom: 40px !important;
   /* border: 1px solid black; */
 }
 
 .patientSwiper .swiper-button-next {
-  top: var(--swiper-navigation-top-offset, 100%) !important;
+  /* top: var(--swiper-navigation-top-offset, 100%) !important; */
+  top: auto !important;
+  bottom: 20px !important;
   right: var(--swiper-navigation-sides-offset, 47%) !important;
   width: 20px;
   height: 20px;
+  margin-top: 0px !important;
 }
 
 .patientSwiper .swiper-button-next:after {
@@ -1426,10 +1432,13 @@
 }
 
 .patientSwiper .swiper-button-prev {
-  top: var(--swiper-navigation-top-offset, 100%) !important;
+  /* top: var(--swiper-navigation-top-offset, 100%) !important; */
+  top: auto !important;
+  bottom: 20px !important;
   left: var(--swiper-navigation-sides-offset, 47%) !important;
   width: 20px;
   height: 20px;
+  margin-top: 0px !important;
 }
 
 .patientSwiper .swiper-button-prev:after {
@@ -1448,7 +1457,7 @@
   }
 
   .patient-success {
-    margin: 3% auto
+    margin: 1% auto
   }
 
   .swiper {
@@ -1724,6 +1733,9 @@
     font-size: 14px;
     text-align: left;
     letter-spacing: 0.2
+  }
+  .feq_specing_small{
+    padding-top: 0px !important;
   }
 }
 
