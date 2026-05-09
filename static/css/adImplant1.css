@@ -1734,6 +1734,12 @@
     text-align: left;
     letter-spacing: 0.2
   }
+  .faq-question{
+    padding-right: 50px !important;
+  }
+  .feq-toggle-icon{
+    right: 15px !important;
+  }
   .feq_specing_small{
     padding-top: 0px !important;
   }

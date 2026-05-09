@@ -3545,12 +3545,14 @@ nav a#pull {
 @media (max-width:576px) {
     .faq .card .card-header .faq-title {
         padding-left: 8px;
-        padding-right: 8px;
+        padding-right: 50px !important;
         margin-top: 5px;
         margin-bottom: 5px;
         letter-spacing: 0px !important
     }
-
+    .feq-toggle-icon{
+        right: 15px !important
+    }
     .faq .card .card-header .faq-title .badge {
         margin-bottom: 0px;
         margin-right: 5px
