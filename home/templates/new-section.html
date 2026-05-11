@@ -11,10 +11,10 @@
 {% block body %}
 <!-- new premium banner -->
 <section class="premium_banner_section">
-    <div class="scroll-container">
-        <!-- 1-->
+    <div class="scroll-container">  
+        <!-- 1--> 
         <div class="banner">
-            <picture>
+            <picture> 
                 <source media="(max-width: 440px)" srcset="{% static 'product_banner/AdvanceZirconia_banner_1_420.webp' %}"/>
                 <source media="(max-width: 830px)" srcset="{% static 'product_banner/AdvanceZirconia_banner_1_820.webp' %}"/>
                 <source media="(max-width: 1185px)" srcset="{% static 'product_banner/AdvanceZirconia_banner_1_1180.webp' %}"/>
@@ -22,8 +22,8 @@
                 <source media="(min-width: 1281px)" srcset="{% static 'product_banner/AdvanceZirconia_banner_1.webp' %}"/>
                 <img src="{% static 'product_banner/AdvanceZirconia_banner_1.webp' %}" alt="AdvanceZirconia_banner" class="banner_image"/>
             </picture>
-            <div class="center-box">
-                <div class="box-content">
+            <div class="center-box">    
+                <div class="box-content">            
                     <p class="box-content-heading">Advance Zirconia</p>
                     <p class="box-content-description">Precise Advance Zirconia restorations deliver strength and consistent performance for complex cases.</p>
                 </div>
@@ -64,7 +64,7 @@
                 <source media="(max-width: 440px)" srcset="{% static 'product_banner/PorcelainFused_banner_3_420.webp' %}"/>
                 <source media="(max-width: 830px)" srcset="{% static 'product_banner/PorcelainFused_banner_3_820.webp' %}"/>
                 <source media="(max-width: 1185px)" srcset="{% static 'product_banner/PorcelainFused_banner_3_1180.webp' %}"/>
-                <source media="(max-width: 1280px)" srcset="{% static 'product_banner/PorcelainFused_banner_3_1280.webp' %}"/>
+                <source media="(max-width: 1285px)" srcset="{% static 'product_banner/PorcelainFused_banner_3_1280.webp' %}"/>
                 <source media="(min-width: 1281px)" srcset="{% static 'product_banner/PorcelainFused_banner_3.webp' %}"/>
                 <img src="{% static 'product_banner/PorcelainFused_banner_3.webp' %}" alt="PorcelainFused_banner" class="banner_image"/>
             </picture>
@@ -401,6 +401,20 @@
             <div class="clientele_list">
                 <div class="clientele_item row m-0 w-100 active">
                     <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">00</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Skilled Dental Specialists</h3>
+                            <p class="clientele_item_desc">We take pride in delivering exceptional results through the hands of our expert dental technicians. With deep expertise, advanced techniques, and an eye for precision, our team ensures every restoration meets the highest standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/dentist.mp4'%}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
                         <div class="clientele_item_number">01</div>
                         <div class="clientele_item_content">
                             <h3 class="clientele_item_title">Skilled Dental Specialists</h3>
@@ -427,6 +441,34 @@
                         </video>
                     </div>
                 </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">02</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Digital Dentistry Equipment</h3>
+                            <p class="clientele_item_desc">At Advance Dental Export, we embrace cutting-edge digital dentistry to craft precise, high-quality dental prosthetics. Using the latest equipment and manufacturing technology, we ensure accuracy, consistency, and excellence in every product.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="clientele_vector" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/dentist-room.mp4'%}" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="clientele_item row m-0 w-100 active">
+                    <div class="col-md-6 col-12 p-0 clientele_item_left">
+                        <div class="clientele_item_number">03</div>
+                        <div class="clientele_item_content">
+                            <h3 class="clientele_item_title">Advanced Laboratory Setup</h3>
+                            <p class="clientele_item_desc">Our state-of-the-art facilities and dedicated team work in harmony to ensure every dental prosthesis meets the highest industry standards. From materials to final finish, excellence is built into every step because your patients deserve nothing less.</p>
+                        </div>
+                    </div> 
+                    <div class="col-md-6 col-12 p-0 clientele_vector_wrapper">
+                        <video class="coustom_icon_video" muted playsinline preload="auto">
+                            <source src="{% static 'icon_videos/dental-clinic.mp4'%}" type="video/mp4" width="100px"/>
+                        </video>
+                    </div>
+                </div> 
                 <div class="clientele_item row m-0 w-100 active">
                     <div class="col-md-6 col-12 p-0 clientele_item_left">
                         <div class="clientele_item_number">03</div>
