@@ -46,7 +46,7 @@
 								  	</ol>
 								</nav>
 								<!-- Title -->
-								<h1 class="h4-sm steelblue-color">Stay Ahead in Dentistry – Expert Insights, Trends & Innovations</h1>
+								<h1 class="h4-sm steelblue-color heading-text-color">Stay Ahead in Dentistry – Expert Insights, Trends & Innovations</h1>
 							</div>
 						</div>
 					</div>  <!-- End row -->	
@@ -57,7 +57,7 @@
 				<div class="container">
 					<div class="row gap-4 gap-md-0 gap-lg-0 mt-5 mb-sm-4 mb-5 position-relative justify-content-center">
 						{% if page_obj.number == 1 %}
-						<h2 class="blog-content-title order-lg-1 order-2 mb-0 mb-sm-3">Latest Blog</h2>
+						<h2 class="blog-content-title order-lg-1 order-2 mb-0 mb-sm-3 heading-text-color">Latest Blog</h2>
 						{% endif %}
 						{% for blog in first_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 order-lg-1 order-2">
@@ -83,7 +83,7 @@
 														{{blog.description}}
 													</p>
 													<div class="card-footer blog-footer">
-														<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
+														<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more heading-text-colorx`">Read More</a>
 														<hr class="blog-divider">
 													</div>
 											</div>
@@ -120,7 +120,7 @@
 					</div>
 				
 
-					<h2 class="blog-content-title mb-0 mb-sm-3">All Blogs</h2>
+					<h2 class="blog-content-title mb-0 mb-sm-3 heading-text-color">All Blogs</h2>
 					<div class="row gap-4 gap-md-0 gap-lg-0  align-items-center justify-content-center mt-3  pb-sm-5 pb-0">
 						{% for blog in all_blog %}
 							<div class="col-lg-4 col-md-6 col-sm-11 mb-md-4 mb-lg-4 d-md-block blog-page-wrapper">
@@ -146,7 +146,7 @@
 													{{blog.description}}
 												</p>
 												<div class="card-footer blog-footer">
-													<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more">Read More</a>
+													<a href="{% url 'home:blogd' blog.slug %}" class="blog-read-more heading-text-color heading-text-color">Read More</a>
 													<hr class="blog-divider">
 												</div>
 											</div>

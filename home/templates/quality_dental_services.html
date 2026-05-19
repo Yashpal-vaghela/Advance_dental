@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %} {% endcomment %}
 {% load static %} 
 {% block seo %}
 {% endblock %} 
@@ -9,13 +9,12 @@
 {% endblock css %} 
 {% block body %}
 
-<div style="height: 100vh;width: 100vw;background-color: #ad0c0cff;"></div>
-<!-- Clientele sections  -->
 <section class="clientele_section">
     <div class="container h-100 d-flex flex-column">
         <div class="row clientele_header_row">
             <div class="col-lg-6 col-md-10">
-                <h1 class="clientele_section_heading">In Their Own Words: Tales of Trust from Our Clientele</h1>
+                {% comment %} <h1 class="clientele_section_heading">In Their Own Words: Tales of Trust from Our Clientele</h1> {% endcomment %}
+                <h1 class="clientele_section_heading">Building The Future Of Digital Dentistry</h1>
                 <p class="clientele_section_subheading mt-4">We build the future of digital dentistry by delivering innovative solutions and unmatched expertise. Our commitment to quality and precision makes us the trusted choice for dentists worldwide.</p>
             </div>
         </div>
@@ -109,17 +108,7 @@
         </div>
     </div>
 </section>
-
-<div style="height: 100vh;width: 100vw;background-color: #ad0c0cff;"></div>
-
-{% endblock body%} {% block js %}
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+{% endblock body%}
+{% block js %}
 <script src="{% static 'js/new-section.js' %}"></script>
-
-
-
-
-
 {% endblock %}

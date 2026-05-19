@@ -448,10 +448,10 @@ span.id-color {
 }
 
 .heading-text-color {
-    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
 }
 
 #loader-wrapper {

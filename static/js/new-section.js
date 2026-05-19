@@ -14,18 +14,9 @@ window.addEventListener('resize', () => {
  // Card Marquee (Clone logic)
 document.addEventListener("DOMContentLoaded", () => {
    
-    const cardSection = document.querySelector('.card_section');
-    if (cardSection && !cardSection.querySelector('.marquee-content')) {
-        const cardsHTML = cardSection.innerHTML;
-        cardSection.innerHTML =
-        `<div class="marquee-content">${cardsHTML}</div>
-         <div class="marquee-content clone" aria-hidden="true">${cardsHTML}</div>`;
-    }
-
     if (typeof gsap === 'undefined') {
         return;
     }
-
     gsap.registerPlugin(ScrollTrigger);
     // ==========================================
     // ANIMATION 1: Premium Banner Section

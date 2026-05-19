@@ -1,34 +1,6 @@
 /* ---------------------------- Premium Banner Section ---------------------------- */
-.premium_banner_section_title {
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
-  line-height: 1.6;
-  letter-spacing: 1px;
-  text-align: center;
-  margin-top: 40px;
-  background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 40px;
-}
-
-.premium_banner_section_subtitle {
-  margin-top: 20px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.04em;
-  color: #000000;
-  /* border: 1px solid red; */
-  width: 35%;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 70px;
-}
-
 .premium_banner_section {
-  height: calc(100vh - 60px);
+  height: calc(100dvh - 60px);
   overflow: hidden;
   position: relative;
 }
@@ -214,11 +186,11 @@
 
 @media (max-width: 992px) {
   .premium_banner_section {
-    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
   }
 
   .banner {
-    height: 100vh;
+    height: 100dvh;
   }
 
   .center-box {
@@ -1127,7 +1099,7 @@
   /* margin-bottom: 70px; */
   /* padding-bottom: 20px; */
   width: 100%;
-  height: 100dvh;
+  height: 100svh;
   background: url(../img/dental_services_bg2.png);
   background-size: contain;
   background-position: center;
@@ -1587,7 +1559,7 @@
 
 .clientele_section {
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1759,7 +1731,7 @@ opacity: 0.5;
 @media (max-width: 1535px) {
   .clientele_section {
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1774,7 +1746,7 @@ opacity: 0.5;
 @media (max-width: 1280px) {
   .clientele_section {
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
