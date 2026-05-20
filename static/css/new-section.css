@@ -1,6 +1,35 @@
 /* ---------------------------- Premium Banner Section ---------------------------- */
+.premium_banner_section_title {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 40px;
+  background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+
+.premium_banner_section_subtitle {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: #000000;
+  /* border: 1px solid red; */
+  width: 35%;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 70px;
+
+}
+
 .premium_banner_section {
-  height: calc(100dvh - 60px);
+  height: calc(100vh - 60px);
   overflow: hidden;
   position: relative;
 }
@@ -63,7 +92,7 @@
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 5%;
-  background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
+  background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: -webkit-box;
@@ -82,7 +111,7 @@
   border: 1px solid rgba(0, 0, 0, 1);
 }
 
-.box-icon > a > svg {
+.box-icon>a>svg {
   width: 48px;
   height: 48px;
 }
@@ -98,7 +127,7 @@
   color: rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 1530px) {
+@media(max-width:1530px) {
   .center-box {
     bottom: 20px;
     right: 20px;
@@ -121,7 +150,7 @@
     border-radius: 8px;
   }
 
-  .box-icon > a > svg {
+  .box-icon>a>svg {
     width: 40px;
     height: 40px;
   }
@@ -132,13 +161,13 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media(max-width:1440px) {
   .premium_banner_section_title {
     font-size: 36px;
   }
 }
 
-@media (max-width: 1280px) {
+@media(max-width:1280px) {
   .center-box {
     bottom: 15px;
     right: 15px;
@@ -164,7 +193,7 @@
     height: 40px;
   }
 
-  .box-icon > a > svg {
+  .box-icon>a>svg {
     width: 28px;
     height: 28px;
   }
@@ -184,13 +213,13 @@
   }
 }
 
-@media (max-width: 992px) {
+@media(max-width:992px) {
   .premium_banner_section {
-    height: calc(100dvh - 60px);
+    height: calc(100vh - 60px);
   }
 
   .banner {
-    height: 100dvh;
+    height: 100vh;
   }
 
   .center-box {
@@ -214,7 +243,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media(max-width:768px) {
   .center-box {
     left: 50%;
     transform: translate(-50%, -10%);
@@ -248,7 +277,7 @@
   }
 }
 
-@media (max-width: 440px) {
+@media(max-width:440px) {
   .premium_banner_section {
     height: calc(100dvh - 0px);
   }
@@ -278,7 +307,7 @@
     border-radius: 5px;
   }
 
-  .box-icon > a > svg {
+  .box-icon>a>svg {
     width: 24px;
     height: 24px;
   }
@@ -444,7 +473,7 @@
     align-items: center;
   }
 
-  .round_box_number_text > span {
+  .round_box_number_text>span {
     margin-left: 8px;
     font-size: 50px;
   }
@@ -813,7 +842,7 @@
     align-items: center;
   }
 
-  .round_box_number_text > span {
+  .round_box_number_text>span {
     margin-left: 8px;
     font-size: 40px;
   }
@@ -889,7 +918,7 @@
     align-items: center;
   }
 
-  .round_box_number_text > span {
+  .round_box_number_text>span {
     margin-left: 8px;
     font-size: 50px;
   }
@@ -947,7 +976,7 @@
     align-items: center;
   }
 
-  .round_box_number_text > span {
+  .round_box_number_text>span {
     margin-left: 8px;
     font-size: 50px;
   }
@@ -1005,7 +1034,7 @@
     align-items: center;
   }
 
-  .round_box_number_text > span {
+  .round_box_number_text>span {
     margin-left: 4px;
     font-size: 35px;
   }
@@ -1063,7 +1092,7 @@
     align-items: center;
   }
 
-  .round_box_number_text > span {
+  .round_box_number_text>span {
     margin-left: 4px;
     font-size: 25px;
   }
@@ -1150,19 +1179,19 @@
   justify-content: space-between;
 }
 
-.card_numbers > h1 {
+.card_numbers>h1 {
   font-size: 80px;
   color: rgba(27, 137, 119, 0.329);
   font-family: montserrat, sans-serif;
 }
 
-.card_content > h5 {
+.card_content>h5 {
   color: rgba(27, 137, 118, 1);
   font-weight: 500;
   font-family: montserrat, sans-serif;
 }
 
-.card_content > p {
+.card_content>p {
   margin-top: 20px;
   color: rgba(0, 0, 0, 1);
   font-weight: 400;
@@ -1172,7 +1201,7 @@
 
 @media (max-width: 1530px) {
   .Dental_services {
-     margin-top: 0px;
+    margin-top: 0px;
     margin-bottom: 40px;
     padding-bottom: 20px;
     width: 100%;
@@ -1273,7 +1302,7 @@
     height: 100%;
   }
 
-  .card_content > h5 {
+  .card_content>h5 {
     text-align: left;
   }
 }
@@ -1322,7 +1351,7 @@
     line-height: 147%;
   }
 
-  .card_content > p {
+  .card_content>p {
     font-size: 15px;
   }
 }
@@ -1355,7 +1384,7 @@
     height: auto;
   }
 
-  .card_content > h5 {
+  .card_content>h5 {
     text-align: left;
   }
 
@@ -1469,16 +1498,16 @@
     height: 320px;
   }
 
-  .card_content > h5 {
+  .card_content>h5 {
     text-align: left;
   }
 
-  .card_content > p {
+  .card_content>p {
     margin-top: 15px;
     font-weight: 500;
   }
 
-  .card_numbers > h1 {
+  .card_numbers>h1 {
     font-size: 80px;
   }
 }
@@ -1496,8 +1525,8 @@
 }
 
 
-.coustom_icon_video{
-    width: 110px;
+.coustom_icon_video {
+  width: 110px;
 }
 
 @media (max-width: 1280px) {
@@ -1508,7 +1537,8 @@
     /* --clientele-vector-size: 100px; */
     --clientele-vector-size: 130px;
   }
-  .coustom_icon_video{
+
+  .coustom_icon_video {
     width: 95px;
   }
 }
@@ -1521,7 +1551,8 @@
     /* --clientele-vector-size: 100px; */
     --clientele-vector-size: 130px;
   }
-  .coustom_icon_video{
+
+  .coustom_icon_video {
     width: 95px;
   }
 }
@@ -1533,7 +1564,8 @@
     /* --clientele-vector-size: 80px; */
     --clientele-vector-size: 120px;
   }
-   .coustom_icon_video{
+
+  .coustom_icon_video {
     width: 90px;
     margin-left: 20px;
   }
@@ -1548,7 +1580,8 @@
     --clientele-subheading-size: 15px;
     --clientele-vector-size: 120px;
   }
-  .coustom_icon_video{
+
+  .coustom_icon_video {
     width: 90px;
   }
 }
@@ -1713,7 +1746,7 @@
   height: auto;
   position: absolute;
   z-index: 2;
-opacity: 0.5;
+  opacity: 0.5;
   /* transition: opacity 0.5s ease; */
   /* border: 1px solid blue; */
 }
