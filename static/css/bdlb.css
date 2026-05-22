@@ -737,7 +737,8 @@
         z-index: 999;
         text-align: start;
         max-width: 60%;
-        margin-left: 60px
+        margin-left: 60px;
+        letter-spacing: 1px;
     }
 
     .vector-img-wrapper {

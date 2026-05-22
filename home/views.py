@@ -118,7 +118,7 @@ def home(request):
     data2 = Blog.objects.all().order_by("-id")[:3]
     client = Client.objects.all().order_by("-id")
     gallery = Gallery.objects.all().order_by("-id")[:7]
-    gallery21 = BeforeAfter.objects.all().order_by("-id")[:7]
+    gallery21 = BeforeAfter.objects.all().order_by("-id")
     video = VideoTestimonals.objects.all().order_by("-id")
     awards = Award.objects.all().order_by("-id")
     reviews = DoctorReview.objects.all().order_by("-id")
@@ -1398,7 +1398,7 @@ def bdld(request, slug):
     data2 = Blog.objects.all().order_by('-id')[:3]
     client = Client.objects.all().order_by('-id')
     gallery = Gallery.objects.all().order_by('-id')[:7]
-    gallery21 = BeforeAfter.objects.all().order_by('-id')[:6]
+    gallery21 = BeforeAfter.objects.all().order_by('-id')
     video      =VideoTestimonals.objects.all().order_by('-id')
     pk = Place.objects.get(slug=slug)
     reviews = DoctorReview.objects.all().order_by("-id")

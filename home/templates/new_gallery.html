@@ -285,6 +285,15 @@ window.addEventListener('resize', () => {
 });
 
 container.classList.add('ready');
+
+// The gallery might change heights/layout after module load,
+// which breaks AOS animations in subsequent sections (e.g., dental_services.html).
+// Force AOS to refresh its layout calculations so it triggers correctly.
+setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+    }
+}, 300);
 </script>
 <script>
     function disableAOSForSection() {
