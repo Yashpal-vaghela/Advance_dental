@@ -34,8 +34,7 @@
 {% endblock seo %}
 
 {% block css %}
-  <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
-  <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+
   <link  rel="preload" href="{% static 'css/bdlb.css' %}" as='stylesheet' />
   <link  href="{% static 'css/bdlb.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
   <link  rel="preload" href="{% static 'css/zir.css' %}" as='stylesheet' />
@@ -110,9 +109,13 @@
 </section>
 
 <!-- new advantage section -->
-<section class="new-advantage-section mb-5" id="newadvantage_section">
-  <div class="new__valores_pin">
-    <div class="container">
+
+
+
+
+<section class="new-advantage-section mb-5 " id="newadvantage_section">
+  <div class="new__valores_pin new_layout">
+    <div class="container new_padding">
       <div class="row">
         <div class="col-lg-4 d-lg-block d-none image-container1">
           <img
@@ -246,6 +249,12 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
 <!-- services section -->
 <section class="bdld-services-section pb-4" id="bdld-services-section">
   <div class="scroll-container container">
@@ -781,7 +790,10 @@
   {% endfor %}
 </script>
 {% endif %}
-<script>
+
+
+
+ <script>
   gsap.registerPlugin(ScrollTrigger);
 
   let swiperInstance = null;
@@ -862,7 +874,7 @@
       gsap.timeline({
         scrollTrigger: {
           trigger: ".new-advantage-section",
-          start: "top 10%",
+          start: "top +=60px",
           end: "+=400%",
           pin: true,
           scrub: true,
@@ -957,7 +969,11 @@
       ScrollTrigger.refresh();
     }, 300);
   });
-</script>
+</script>  
+
+
+
+
 {% comment %} <script>
   gsap.registerPlugin(ScrollTrigger);
 

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 start: 'top 60px',
                 end: () => `+=${(banners.length - 1) * 100}%`,
                 pin: true,
-                scrub: 2.5,
+                scrub: 1,
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
                 // markers: true // Debug lines
