@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="{% static 'css/newSlider.css' %}">
 {% endblock css %}
 {% block body %}
-
 <section class="dental-laboratory-section">
     <div class="container pb-3 pt-3">
         <h1 class="dental-laboratory-section-heading" style="text-align: center;">The Art Of Aesthetic Dental Laboratory</h1>
@@ -32,7 +31,10 @@
             <div class="col-lg-8">
                 <div class="image-placeholder">
                     <div class="dental-laboratory-section-image">
-                        <img src="{% static 'img/ADE-Digital.webp' %}" alt="dental-lab" class="image-fluid">
+                        <picture>
+                           <source media="(max-width: 576px)" srcset="{% static 'img/elephnt_image_for_mobile_screen.webp' %}">
+                           <img src="{% static 'img/ADE-Digital.webp' %}" alt="dental-lab" class="img-fluid new_image">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -40,9 +42,5 @@
     </div>
 </section>
 {% endblock body%}
-
 {% block js %}
-
-
-
 {% endblock %}
