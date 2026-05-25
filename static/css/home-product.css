@@ -1,0 +1,243 @@
+.home-product-section {
+    min-height:100dvh;
+    position:relative;
+    overflow:hidden;
+    background-image:url('../img/home-product-bg.png');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:70px 0;
+}
+
+.hmpswiper {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0px;
+    overflow: visible !important;
+    background:transparent;
+}
+
+.text-header-subtitle {
+    font-size: 40px;
+    background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.hmpswiper .swiper-wrapper{
+    align-items:center;
+}
+
+.hm-product-slide{
+    width:420px !important;
+    display:flex !important;
+    justify-content:center;
+    align-items:center;
+}
+
+.hmpswiper .swiper-slide{
+    opacity:.8;
+    transition:.5s;
+    transform:scale(.8);
+    background:transparent !important;
+}
+.hmpswiper .swiper-slide-active{
+    opacity:1;
+    transform:scale(1);
+    z-index:5;
+}
+/* center card larger */
+
+.hmpswiper .swiper-slide-prev,
+.hmpswiper .swiper-slide-next{
+    opacity:.9;
+    transform:scale(.92);
+}
+
+/* Card */
+
+.hm-product-card{
+    width:100%;
+    max-width:390px;
+    height:580px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:all .5s ease;
+}
+.hmpswiper .swiper-slide-active .hm-product-card{
+    transform:scale(1.08);
+}
+/* floating image */
+
+.hm-product-image{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hm-product-image img{
+    width:100%;
+    max-height:100%;
+    object-fit:cover;
+}
+
+/* content */
+
+.hm-product-content{
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index:10;
+    padding:0 15px;
+    padding-bottom:15px;
+}
+
+.hm-product-title{
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+.hm-prodcut-description{
+    color:#fff;
+    font-size:14px;
+    letter-spacing:2%;
+    text-align:left; 
+}
+
+.hm-arrow-btn{
+    position:absolute;
+    right:15px;
+    bottom:10px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+.hm-arrow-btn img{
+    width:16px;
+    height:16px;
+    object-fit:cover;
+    transition:.3s ease;
+}
+.hm-arrow-btn:hover img{
+    transform:rotate(45deg);
+}
+
+/* Pagination */
+
+.swiper-pagination{
+    position:relative !important;
+    margin-top:40px;
+}
+
+.swiper-pagination-bullet{
+    width:8px;
+    height:8px;
+    border-radius:30px;
+    opacity:1;
+    background:#d8e7e6;
+    transition:.4s;
+}
+
+.swiper-pagination-bullet-active{
+    width:28px !important;
+    background:
+    linear-gradient(
+        90deg,
+        #1B8976,
+        #00D5FF
+    ) !important;
+}
+
+/* Hover */
+
+.hm-product-card:hover{
+    transform:translateY(-15px);
+}
+
+
+/* Tablet */
+
+@media(max-width:991px){
+
+    .home-product-section{
+        min-height:auto;
+        padding:100px 0;
+    }
+
+    .text-header-subtitle{
+        font-size:40px;
+        margin-bottom:60px;
+    }
+
+    .hm-product-card{
+        height:400px;
+    }
+
+    .hm-product-image{
+        top:-90px;
+    }
+
+    .hm-product-title{
+        font-size:28px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:767px){
+
+    .text-header-subtitle{
+        font-size:28px;
+        margin-bottom:40px;
+        padding:0 15px;
+    }
+
+    .hmpswiper{
+        padding-top:90px;
+    }
+
+    .hm-product-card{
+        height:360px;
+    }
+
+    .swiper-slide-active .hm-product-card{
+        transform:none;
+    }
+
+    .hm-product-image img{
+        width:78%;
+    }
+
+    .hm-product-title{
+        font-size:22px;
+    }
+
+    .hm-prodcut-description{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+}

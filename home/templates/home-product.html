@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+{% endblock %} 
+{% block header %}
+{% endblock header %}
+{% block css %}
+
+{% comment %} <link href="{% static 'css/awards.css' %}" rel="stylesheet" media="print" onload="this.media = 'all'" /> {% endcomment %}
+<link href="{% static 'css/home-product.css' %}" rel="stylesheet" media="print" onload="this.media = 'all'" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+{% endblock css %} {% block body %}
+
+<section class="home-product-section">
+    <h2
+        class="text-header-subtitle text-center"
+      >
+      Complete Dental Solutions with Advanced Digital Dentistry
+    </h2>
+  <div class="container pt-sm-0 pb-sm-0 pb-md-2 pb-lg-5 pt-50 pb-3 overflow-hidden">
+    <div class="swiper-container mt-sm-4 mt-md-5 mt-0">
+      <div class="swiper hmpswiper">
+        <div class="swiper-wrapper">
+            <!--card 1-->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img
+                  src="{% static 'home_product/emax-product.png' %}"
+                />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">IPS E Max</h3>
+
+                <p class="hm-prodcut-description">
+                    Enhance your smile with IPS E Max, an all-ceramic restoration
+                    offering natural aesthetics and excellent translucency.
+                </p>
+                
+                <a href="#" class="hm-arrow-btn">
+                  <img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--card 2-->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img
+                  src="{% static 'home_product/pfm-product.png' %}"
+                />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">PFM</h3>
+
+                <p class="hm-prodcut-description">
+                    Porcelain fused to metal crown offers both beauty and strength. Ideal choice of dental professionals, they are made from
+                </p>
+                
+                <a href="#" class="hm-arrow-btn">
+                  <img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--card 3-->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img
+                  src="{% static 'home_product/zirconia-product.png' %}"
+                />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">Advance Zirconia</h3>
+
+                <p class="hm-prodcut-description">
+                    Our advanced zirconia delivers unmatched strength and natural appearance. Discover the 
+                </p>
+                
+                <a href="#" class="hm-arrow-btn">
+                  <img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow">
+                </a>
+              </div>
+            </div>
+          </div>
+           <!--card 3-->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img
+                  src="{% static 'home_product/implant-product.png' %}"
+                />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">AD Implant</h3>
+
+                <p class="hm-prodcut-description">
+                    Our advanced dental implant solutions include dental implant with abutment for a complete and permanent tooth
+                </p>
+                
+                <a href="#" class="hm-arrow-btn">
+                  <img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+{% endblock body%} {% block js %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    mySwiperInstance = new Swiper(".hmpswiper", {
+      loop: true,
+      loopAdditionalSlides: 4,
+      loopedSlides: 4,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      speed: 800,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter:true
+      },
+      grabCursor: true,
+      watchSlidesProgress:true,
+      watchSlidesVisibility:true,
+      observer: true,
+      observeParents: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      breakpoints: {
+        576: { slidesPerView: 1.4 },
+        768: { slidesPerView: 2},
+        1024: { slidesPerView: 3 },
+        1200: { slidesPerView: 3 },
+      },
+    });
+  });
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 100,
+  });
+</script>
+
+{% endblock %}
