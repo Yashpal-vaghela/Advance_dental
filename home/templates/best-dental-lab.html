@@ -62,19 +62,15 @@
 
   {% comment %} <div style="height: 100vh; background-color: rgb(210, 49, 8)"></div> {% endcomment %}
 {% endblock %}
-{% block js %}
+ {% block js %}
   <!-- GSAP 3.13+ — SplitText is now FREE and included on jsDelivr -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
 
-<script> 
-  (function () {
-  const hasSplitText = typeof SplitText !== "undefined";
+<script>
+(function () {
 
-  gsap.registerPlugin(
-    ScrollTrigger,
-    ...(hasSplitText ? [SplitText] : [])
-  );
+  gsap.registerPlugin(ScrollTrigger);
 
   ScrollTrigger.config({
     ignoreMobileResize: true
@@ -93,6 +89,7 @@
   const MOBILE_BP = 992;
 
   let currentTimeline = null;
+  let headingAnimation = null;
   let resizeTimer = null;
 
   function isDesktop() {
@@ -100,10 +97,17 @@
   }
 
   function killCurrentAnimation() {
+
     if (currentTimeline) {
       currentTimeline.scrollTrigger?.kill();
       currentTimeline.kill();
       currentTimeline = null;
+    }
+
+    if (headingAnimation) {
+      headingAnimation.scrollTrigger?.kill();
+      headingAnimation.kill();
+      headingAnimation = null;
     }
 
     gsap.set([title, cardsMain, ...cards], {
@@ -112,10 +116,34 @@
   }
 
   /* =========================
+      HEADING ANIMATION
+  ========================= */
+  function initHeadingAnimation() {
+    gsap.set(title, {
+      scale: 4,
+      opacity: 0,
+      transformOrigin: "center center"
+    });
+
+    headingAnimation = gsap.to(title, {
+      scale: 1,
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 60%",
+        toggleActions: "play none none none"
+      }
+    });
+  }
+
+  /* =========================
       DESKTOP
   ========================= */
 
   function initDesktop() {
+
     const sectionHeight = section.offsetHeight;
 
     gsap.set(cardsMain, {
@@ -175,7 +203,9 @@
   ========================= */
 
   function initMobile() {
+
     const OFFSET = 30;
+
     const vh =
       window.visualViewport?.height ||
       window.innerHeight;
@@ -188,6 +218,7 @@
     });
 
     cards.forEach((card, index) => {
+
       gsap.set(card, {
         position: "absolute",
         display: "flex",
@@ -198,6 +229,7 @@
         y: vh + OFFSET * index,
         zIndex: index + 1
       });
+
     });
 
     currentTimeline = gsap.timeline({
@@ -248,7 +280,10 @@
   ========================= */
 
   function init() {
+
     killCurrentAnimation();
+
+    initHeadingAnimation();
 
     if (isDesktop()) {
       initDesktop();
@@ -270,6 +305,7 @@
   let lastWidth = window.innerWidth;
 
   window.addEventListener("resize", () => {
+
     const currentWidth = window.innerWidth;
 
     if (currentWidth === lastWidth) return;
@@ -282,9 +318,6 @@
       init();
     }, 300);
   });
- })();
+})();
 </script>
-
-
-  
-{% endblock %}  
+{% endblock %}
