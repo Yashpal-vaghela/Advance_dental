@@ -1,0 +1,243 @@
+.best_dental_lab_section {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: #d1e7e4;
+  background-image: url("../img/best_dental_lab_section_bg.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* overflow: hidden removed – needed for GSAP pin spacer */
+  overflow: hidden;
+}
+
+.best_dental_lab_section_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 84px;
+  line-height: 140%;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+  /* Heading niche */
+  max-width: 850px;
+  pointer-events: none;
+  /* border: 2px solid #1b8976; */
+}
+
+.best_dental_lab_section_cards_main {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.best_dental_lab_section_card {
+  width: 400px;
+  height: auto;
+  border: 2px solid #1b8976;
+  border-radius: 24px;
+  background-color: #ffffff66;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 60px 26px 60px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.best_dental_lab_section_card_icon {
+  width: 108px;
+  height: 108px;
+  /* background-image: url('../img/Highest_Quality_Dental_Prosthesis_icon.svg'); */
+  /* border: 1px solid #1B8976; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best_dental_lab_section_heading_and_discription_mian {
+  width: 100%;
+  height: 245px;
+  /* border: 1px solid #1B8976; */
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.best_dental_lab_section_heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 1);
+  max-width: 314px;
+}
+
+.best_dental_lab_section_discription {
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1400px) {
+  .best_dental_lab_section {
+    background-size: cover;
+  }
+
+  .best_dental_lab_section_card {
+    width: 349px;
+    padding: 50px 20px 50px 20px;
+  }
+
+  .best_dental_lab_section_heading_and_discription_mian {
+    height: 270px;
+  }
+}
+
+@media (max-width: 1280px) {
+  /* .best_dental_lab_section_cards_main {
+    display: none;
+} */
+  .best_dental_lab_section_title {
+    font-size: 66px;
+    line-height: 150%;
+  }
+
+  .best_dental_lab_section_card {
+    width: 349px;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .best_dental_lab_section_heading_and_discription_mian {
+    height: 240px;
+    margin-top: 33px;
+  }
+
+  .best_dental_lab_section_heading {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* .best_dental_lab_section_cards_main {
+    display: none;
+} */
+  .best_dental_lab_section_card {
+    width: 292px;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .best_dental_lab_section_discription {
+    font-size: 15px;
+    line-height: 130%;
+  }
+
+  .best_dental_lab_section_heading_and_discription_mian {
+    height: 240px;
+    margin-top: 32px;
+  }
+
+  .best_dental_lab_section_card {
+    width: 292px;
+    padding: 25px 14px 25px 14px;
+  }
+
+  .best_dental_lab_section_heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .best_dental_lab_section {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-size: cover;
+  }
+
+  /* Cards 1 & 3 are now controlled by GSAP – remove display:none */
+  .best_dental_lab_section_cards_main
+    .best_dental_lab_section_card:nth-child(1),
+  .best_dental_lab_section_cards_main
+    .best_dental_lab_section_card:nth-child(3),
+  .best_dental_lab_section_cards_main
+    .best_dental_lab_section_card:nth-child(2) {
+    display: flex; /* GSAP will set opacity/y */
+  }
+
+  /* Give the cards container a fixed height so absolute cards have context */
+  .best_dental_lab_section_cards_main {
+    justify-content: center;
+    /* height already 100% from base rule; min-height keeps it during pin */
+    min-height: 480px;
+  }
+
+  .best_dental_lab_section_title {
+    font-size: 85px;
+    line-height: 134%;
+    width: 60%;
+  }
+
+  .best_dental_lab_section_card {
+    width: 400px;
+    padding: 60px 26px 60px 26px;
+  }
+
+  .best_dental_lab_section_heading_and_discription_mian {
+    height: 245px;
+    margin-top: 40px;
+  }
+
+  .best_dental_lab_section_heading {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .best_dental_lab_section_discription {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 576px) {
+  .best_dental_lab_section_cards_main
+    .best_dental_lab_section_card:nth-child(1),
+  .best_dental_lab_section_cards_main
+    .best_dental_lab_section_card:nth-child(3),
+  .best_dental_lab_section_cards_main
+    .best_dental_lab_section_card:nth-child(2) {
+    display: flex; /* GSAP controls visibility */
+  }
+
+  .best_dental_lab_section_title {
+    font-size: 50px;
+    line-height: 134%;
+    width: 80%;
+  }
+
+  .best_dental_lab_section_card {
+    width: 350px;
+    padding: 35px 14px 35px 14px;
+  }
+
+  .best_dental_lab_section_heading_and_discription_mian {
+    height: 263px;
+    margin-top: 35px;
+  }
+
+  .best_dental_lab_section_heading {
+    font-size: 23px;
+    line-height: 150%;
+    max-width: 234px;
+  }
+}

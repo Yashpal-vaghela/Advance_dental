@@ -1,0 +1,290 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% load static %}
+{% block seo %}
+{% endblock %}
+{% block header %}
+{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/best-dental-lab.css' %}" />
+{% endblock %}
+{% block body %}
+  {% comment %} <div style="height: 100vh; background-color: rgb(218, 235, 32)"></div> {% endcomment %}
+
+  <section class="best_dental_lab_section" id="best_dental_lab_section">
+    <h2 class="best_dental_lab_section_title heading-text-color" id="best_dental_lab_title">Why We Are the Best Dental Lab</h2>
+    <div class="container best_dental_lab_section_cards_main" id="best_dental_lab_cards_main">
+      <!-- card 1 -->
+      <div class="best_dental_lab_section_card" id="bdl_card_1">
+        <div class="best_dental_lab_section_card_icon">
+          <img src="{% static 'img/Highest_Quality_Dental_Prosthesis_icon.svg' %}" alt="Dental_Prosthesis_icon" />
+        </div>
+        <div class="best_dental_lab_section_heading_and_discription_mian">
+          <div>
+            <h3 class="best_dental_lab_section_heading">Highest Quality Dental Prosthesis</h3>
+          </div>
+          <div>
+            <p class="best_dental_lab_section_discription">We never cut corners when it comes to quality. With decades of experience in dentistry, we combine craftsmanship with advanced technology to ensure our product meets the highest standards.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="best_dental_lab_section_card" id="bdl_card_2">
+        <div class="best_dental_lab_section_card_icon">
+          <img src="{% static 'img/FDA_Certified_Quality_Assurance_icon.svg' %}" alt="FDA_Certified_Quality_Assurance_icon" />
+        </div>
+        <div class="best_dental_lab_section_heading_and_discription_mian">
+          <div>
+            <h3 class="best_dental_lab_section_heading">FDA Certified Quality Assurance</h3>
+          </div>
+          <div>
+            <p class="best_dental_lab_section_discription">At Advance Dental Export, we proudly hold an FDA certificate. From manufacturing to final delivery, our processes are validated to ensure dental professionals receive only the most reliable and compliant products.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="best_dental_lab_section_card" id="bdl_card_3">
+        <div class="best_dental_lab_section_card_icon">
+          <img src="{% static 'img/Global_Trust_in_Dental_Supply_icon.svg' %}" alt="Global_Trust_in_Dental_Supply_icon" />
+        </div>
+        <div class="best_dental_lab_section_heading_and_discription_mian">
+          <div>
+            <h3 class="best_dental_lab_section_heading">Global Trust in Dental Supply</h3>
+          </div>
+          <div>
+            <p class="best_dental_lab_section_discription">With a strong global footprint, we supply a wide range of high-quality dental prosthetics to clients overseas, proudly supporting dental professionals, clinics, and distributors around the world.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} <div style="height: 100vh; background-color: rgb(210, 49, 8)"></div> {% endcomment %}
+{% endblock %}
+{% block js %}
+  <!-- GSAP 3.13+ — SplitText is now FREE and included on jsDelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
+
+<script> 
+  (function () {
+  const hasSplitText = typeof SplitText !== "undefined";
+
+  gsap.registerPlugin(
+    ScrollTrigger,
+    ...(hasSplitText ? [SplitText] : [])
+  );
+
+  ScrollTrigger.config({
+    ignoreMobileResize: true
+  });
+
+  const section = document.getElementById("best_dental_lab_section");
+  const title = document.getElementById("best_dental_lab_title");
+  const cardsMain = document.getElementById("best_dental_lab_cards_main");
+
+  const cards = [
+    document.getElementById("bdl_card_1"),
+    document.getElementById("bdl_card_2"),
+    document.getElementById("bdl_card_3")
+  ];
+
+  const MOBILE_BP = 992;
+
+  let currentTimeline = null;
+  let resizeTimer = null;
+
+  function isDesktop() {
+    return window.innerWidth > MOBILE_BP;
+  }
+
+  function killCurrentAnimation() {
+    if (currentTimeline) {
+      currentTimeline.scrollTrigger?.kill();
+      currentTimeline.kill();
+      currentTimeline = null;
+    }
+
+    gsap.set([title, cardsMain, ...cards], {
+      clearProps: "all"
+    });
+  }
+
+  /* =========================
+      DESKTOP
+  ========================= */
+
+  function initDesktop() {
+    const sectionHeight = section.offsetHeight;
+
+    gsap.set(cardsMain, {
+      clearProps: "all"
+    });
+
+    gsap.set(cards, {
+      display: "flex",
+      y: sectionHeight
+    });
+
+    currentTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 60px",
+        end: "+=400%",
+        pin: true,
+        scrub: 1.2,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+
+    currentTimeline.to(
+      cards[0],
+      {
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out"
+      },
+      0
+    );
+
+    currentTimeline.to(
+      cards[1],
+      {
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out"
+      },
+      0.5
+    );
+
+    currentTimeline.to(
+      cards[2],
+      {
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out"
+      },
+      1
+    );
+  }
+
+  /* =========================
+      MOBILE
+  ========================= */
+
+  function initMobile() {
+    const OFFSET = 30;
+    const vh =
+      window.visualViewport?.height ||
+      window.innerHeight;
+
+    gsap.set(cardsMain, {
+      position: "relative",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    });
+
+    cards.forEach((card, index) => {
+      gsap.set(card, {
+        position: "absolute",
+        display: "flex",
+        left: "50%",
+        top: "50%",
+        xPercent: -50,
+        yPercent: -50,
+        y: vh + OFFSET * index,
+        zIndex: index + 1
+      });
+    });
+
+    currentTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 70px",
+        end: "+=400%",
+        pin: true,
+        scrub: 1.2,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+
+    currentTimeline.to(
+      cards[0],
+      {
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out"
+      },
+      0
+    );
+
+    currentTimeline.to(
+      cards[1],
+      {
+        y: OFFSET,
+        duration: 0.5,
+        ease: "power3.out"
+      },
+      0.5
+    );
+
+    currentTimeline.to(
+      cards[2],
+      {
+        y: OFFSET * 2,
+        duration: 0.5,
+        ease: "power3.out"
+      },
+      1
+    );
+  }
+
+  /* =========================
+      INIT
+  ========================= */
+
+  function init() {
+    killCurrentAnimation();
+
+    if (isDesktop()) {
+      initDesktop();
+    } else {
+      initMobile();
+    }
+
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+  }
+
+  init();
+
+  /* =========================
+      RESIZE
+  ========================= */
+
+  let lastWidth = window.innerWidth;
+
+  window.addEventListener("resize", () => {
+    const currentWidth = window.innerWidth;
+
+    if (currentWidth === lastWidth) return;
+
+    lastWidth = currentWidth;
+
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      init();
+    }, 300);
+  });
+ })();
+</script>
+
+
+  
+{% endblock %}  
