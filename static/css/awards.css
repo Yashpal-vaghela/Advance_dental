@@ -413,24 +413,24 @@ body.no-scroll {
     display: flex
 }
 
-.swiper-container .swiper-pagination {
+.testimonial-pagination {
     position: relative;
     margin-top: 20px;
-    text-align: center
+    text-align: center;
 }
 
-.swiper-container .swiper-pagination-bullet {
+.testimonial-pagination .swiper-pagination-bullet {
     width: 7px;
     height: 7px;
     border-radius: 10px;
     background: #cfecec;
     opacity: 1;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
 }
 
-.swiper-container .swiper-pagination-bullet-active {
+.testimonial-pagination .swiper-pagination-bullet-active {
     background: linear-gradient(92.19deg, #1B8976 -56.21%, #00D5FF 184.49%) !important;
-    width: 20px !important
+    width: 20px !important;
 }
 
 .testimonial-slide {
@@ -865,7 +865,7 @@ body.no-scroll {
         background-image: url(../img/review_bg_border.webp)
     }
 
-    .swiper-container .swiper-pagination {
+    .testimonial-pagination{
         position: relative;
         margin-top: 20px;
         text-align: center;
@@ -1010,7 +1010,7 @@ body.no-scroll {
         margin-top: 26px
     }
 
-    .swiper-container .swiper-pagination {
+    .testimonial-pagination {
         position: relative;
         margin-top: 20px;
         text-align: center;
