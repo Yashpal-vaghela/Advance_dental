@@ -1,195 +1,205 @@
-{% comment %} {% extends 'base.html' %} {% endcomment %}
 {% load static %}
-{% block seo %}
-{% endblock %}
-{% block header %}
-{% endblock %}
 {% block css %}
-  <link href="{% static 'css/home-product.css' %}" rel="stylesheet" media="print" onload="this.media = 'all'" />
+<link href="{% static 'css/home-product.css' %}" rel="stylesheet" media="print" onload="this.media = 'all'" />
 {% endblock %}
 {% block body %}
-  {% comment %} <div style="height: 100vh; background-color: rgb(218, 235, 32)"></div>  {% endcomment %}
-  <section class="home-product-section">
-    <h2 class="text-header-subtitle-home-product text-center" data-aos="fade-down-right">Complete Dental Solutions with Advanced Digital Dentistry</h2>
-    <div class="container overflow-hidden">
-      <div class="swiper-container mt-0">
-        <div class="swiper hmpswiper">
-          <div class="swiper-wrapper">
-            <!-- card 1 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/emax-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">IPS E-Max</h3>
-                  <p class="hm-prodcut-description">Transform smiles with our IPS Emax restorations, offering superior translucency, natural beauty, and durable results.</p>
-                  <a href="https://advancedentalexport.com/emax-aesthetic-maxima/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+<section class="home-product-section">
+  <h2 class="text-header-subtitle-home-product text-center" data-aos="fade-down-right">Complete Dental Solutions with
+    Advanced Digital Dentistry</h2>
+  <div class="container overflow-hidden hmp-container">
+    <div class="swiper-container mt-0">
+      <div class="swiper hmpswiper">
+        <div class="swiper-wrapper">
+          <!-- card 1 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/emax-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">IPS E-Max</h3>
+                <p class="hm-prodcut-description">Transform smiles with our IPS Emax restorations, offering superior
+                  translucency, natural beauty, and durable results.</p>
+                <a href="{% url 'productd' 'emax-aesthetic-maxima' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 2 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/pfm-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">PFM</h3>
-                  <p class="hm-prodcut-description">Discover durable PFM crowns that blend natural-looking aesthetics with dependable metal strength for lasting restorations.</p>
-                  <a href="https://advancedentalexport.com/porcelain-fused-to-metal-pfm/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+          <!-- card 2 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/pfm-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">PFM</h3>
+                <p class="hm-prodcut-description">Discover durable PFM crowns that blend natural-looking aesthetics with
+                  dependable metal strength for lasting restorations.</p>
+                <a href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 3 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/implant-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">AD-Implant</h3>
+          <!-- card 3 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/implant-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">AD-Implant</h3>
 
-                  <p class="hm-prodcut-description">Restore smiles confidently with our advanced dental implant solutions built for comfort, stability, and function.</p>
+                <p class="hm-prodcut-description">Restore smiles confidently with our advanced dental implant solutions
+                  built for comfort, stability, and function.</p>
 
-                  <a href="https://advancedentalexport.com/ad-implant/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+                <a href="{% url 'productd' 'ad-implant' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 4 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/zirconia-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">Advance Zirconia</h3>
+          <!-- card 4 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/zirconia-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">Advance Zirconia</h3>
 
-                  <p class="hm-prodcut-description">Experience premium zirconia restorations with exceptional strength, natural aesthetics, and long-lasting performance.</p>
+                <p class="hm-prodcut-description">Experience premium zirconia restorations with exceptional strength,
+                  natural aesthetics, and long-lasting performance.</p>
 
-                  <a href="https://advancedentalexport.com/zirconia-crown/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+                <a href="{% url 'productd' 'zirconia-crown' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 1 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/emax-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">IPS E-Max</h3>
-                  <p class="hm-prodcut-description">Transform smiles with our IPS Emax restorations, offering superior translucency, natural beauty, and durable results.</p>
-                  <a href="https://advancedentalexport.com/emax-aesthetic-maxima/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+          <!-- card 1 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/emax-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">IPS E-Max</h3>
+                <p class="hm-prodcut-description">Transform smiles with our IPS Emax restorations, offering superior
+                  translucency, natural beauty, and durable results.</p>
+                <a href="{% url 'productd' 'emax-aesthetic-maxima' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 2 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/pfm-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">PFM</h3>
-                  <p class="hm-prodcut-description">Discover durable PFM crowns that blend natural-looking aesthetics with dependable metal strength for lasting restorations.</p>
-                  <a href="https://advancedentalexport.com/porcelain-fused-to-metal-pfm/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+          <!-- card 2 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/pfm-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">PFM</h3>
+                <p class="hm-prodcut-description">Discover durable PFM crowns that blend natural-looking aesthetics with
+                  dependable metal strength for lasting restorations.</p>
+                <a href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 3 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/implant-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">AD-Implant</h3>
+          <!-- card 3 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/implant-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">AD-Implant</h3>
 
-                  <p class="hm-prodcut-description">Restore smiles confidently with our advanced dental implant solutions built for comfort, stability, and function.</p>
+                <p class="hm-prodcut-description">Restore smiles confidently with our advanced dental implant solutions
+                  built for comfort, stability, and function.</p>
 
-                  <a href="https://advancedentalexport.com/ad-implant/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+                <a href="{% url 'productd' 'ad-implant' %}" class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
+          </div>
 
-            <!-- card 4 -->
-            <div class="swiper-slide hm-product-slide">
-              <div class="hm-product-card">
-                <div class="hm-product-image">
-                  <img src="{% static 'home_product/zirconia-product.png' %}" />
-                </div>
-                <div class="hm-product-content">
-                  <h3 class="hm-product-title">Advance Zirconia</h3>
+          <!-- card 4 -->
+          <div class="swiper-slide hm-product-slide">
+            <div class="hm-product-card">
+              <div class="hm-product-image">
+                <img src="{% static 'home_product/zirconia-product.webp' %}" />
+              </div>
+              <div class="hm-product-content">
+                <h3 class="hm-product-title">Advance Zirconia</h3>
 
-                  <p class="hm-prodcut-description">Experience premium zirconia restorations with exceptional strength, natural aesthetics, and long-lasting performance.</p>
+                <p class="hm-prodcut-description">Experience premium zirconia restorations with exceptional strength,
+                  natural aesthetics, and long-lasting performance.</p>
 
-                  <a href="https://advancedentalexport.com/zirconia-crown/" class="hm-arrow-btn"><img src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
-                </div>
+                <a href="{% url 'productd' 'zirconia-crown' %}  " class="hm-arrow-btn"><img
+                    src="{% static 'home_product/arrow-vector.svg' %}" alt="arrow" /></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="home-product-pagination"></div>
       </div>
+      <div class="home-product-pagination"></div>
     </div>
-  </section>
- {% comment %} <div style="height: 100vh; background-color: rgb(210, 49, 8)"></div> {% endcomment %}
-{% endblock %} 
+  </div>
+</section>
+{% endblock %}
 {% block js %}
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.hmpswiper', {
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 1,
-        spaceBetween: 17,
-        speed: 800,
-    
-       autoplay: {
-          delay: 1500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true
-        }, 
-    
-        grabCursor: true,
-        observer: true,
-        observeParents: true,
-    
-        pagination: {
-          el: '.home-product-pagination',
-          clickable: true
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.hmpswiper', {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 17,
+      speed: 800,
+
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+
+      grabCursor: true,
+      observer: true,
+      observeParents: true,
+
+      pagination: {
+        el: '.home-product-pagination',
+        clickable: true
+      },
+
+      breakpoints: {
+        576: {
+          slidesPerView: 1
         },
-    
-        breakpoints: {
-          576: {
-            slidesPerView: 1
-          },
-          768: {
-            slidesPerView: 2
-          },
-          1024: {
-            slidesPerView: 3,
-             spaceBetween: 30
-          },
-          1280: {
-            slidesPerView: 3,
-            spaceBetween: 17
-          }
+        768: {
+          slidesPerView: 2
         },
-    
-        on: {
-          init: function () {
-            this.update()
-          }
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 17
         }
-      })
+      },
+
+      on: {
+        init: function () {
+          this.update()
+        }
+      }
     })
-  </script>
+  })
+</script>
 {% endblock %}
