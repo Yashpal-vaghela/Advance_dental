@@ -27,6 +27,7 @@
 {% endblock seo %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/swal.css' %}" />
+<link rel="stylesheet" href="{% static 'css/new-contact.css' %}" />
 {% endblock css %}
 {% block body %}
 <div id="breadcrumb" class="division">
@@ -50,7 +51,7 @@
 		</div>
 	</div>
 </div>
-
+{% comment %} 
 <section id="contacts-1" class="wide-75 contact-section division">
 	<div class="container">
 		<div class="row">
@@ -148,6 +149,91 @@
 			</div>
 		</div>
 	</div>
+</section> {% endcomment %}
+<section class="contact-section">
+
+    <div class="container">
+
+         <h1 class="section-title heading-text-color">Have a Question? Get In Touch</h1>
+
+    <div class="contact-card">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+            <div>
+                <div class="url-badge">advancedentalexport.com</div>
+                <div class="left-copy">
+                    <p>
+                        <span>Have queries or need our price  list?</span>
+                        <span class="muted"> Interested in a lab visit? Fill out our form, and we'll assist
+                            promptly!</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="robot-img-wrap">
+                <img src="{% static 'images/robot-human-hand.webp' %}" alt="Human and robot hands touching" />
+            </div>
+
+            <div class="logo-wrap">
+                <img src="{% static 'img/logo.webp' %}" alt="Advance Dental Export" />
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right-panel">
+            <form class="form-grid" method="post" action="{% url 'home:contact_new' %}">
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="contact" placeholder="Enter Your Number" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter Your City" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter Subject" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Add any Inquiry details" required></textarea>
+                    </div>
+                </div>
+				<div class="contact-submit-btn">
+					{% comment %} <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div> {% endcomment %}
+					<div class="form-row">
+						<button type="submit" class="send-btn">Send Message</button>
+					</div>
+				</div>
+
+            </form>
+        </div>
+
+    </div>
+
+    </div>
+
 </section>
 <!-- GOOGLE MAP ============================================= -->
 <div class="container gmap w-100 mb-5 mt-5">
