@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
+<title>Before After - Advance Dental Export</title>
+<meta name="description"
+    content="Explore Before & After Dental Solutions with Advance Dental Export. Elevate patient care with quality & innovation. Transform Your Practice!" />
+<link rel="canonical" href="https://advancedentalexport.com/before-after/" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Before After - Advance Dental Export" />
+<meta property="og:description"
+    content="Explore Before & After Dental Solutions with Advance Dental Export. Elevate patient care with quality & innovation. Transform Your Practice!" />
+<meta property="og:url" content="https://advancedentalexport.com/" />
+<meta name="og:image" content="{% static 'img/feature.webp' %}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/webp" />
+<meta property="og:site_name" content="Advance Dental Export" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description"
+    content="Explore Before & After Dental Solutions with Advance Dental Export. Elevate patient care with quality & innovation. Transform Your Practice!" />
+<meta name="twitter:title" content="Before After - Advance Dental Export" />
+<meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
+<link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/before-after/" />
+<link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/before-after/" />
+{% endblock seo %}
+{% block css %}
+<link href="{% static 'css/n-b-f.css' %}" rel='stylesheet' />
+{% endblock css %}
+{% block body %}
+<!-- =====================BREADCRUMB======================== -->
+<div id="breadcrumb" class="division">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class=" breadcrumb-holder">
+                    <!-- Breadcrumb Nav -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Home</a></li>
+                            <li class="breadcrumb-item active"><a href="#"> Before & After</a></li>
+                        </ol>
+                    </nav>
+                    <!-- Title -->
+                    <h1 class="h4-sm steelblue-color"> Before & After Gallery </h1>
+                </div>
+            </div>
+        </div> <!-- End row -->
+    </div> <!-- End container -->
+</div> <!-- END BREADCRUMB -->
+
+<!-- =============================   SECTION 1   ============================== -->
+<section class="new_antic_gallery_section">
+
+    <div class="before_after_text_main">
+        <p class="before_after_text_main_left">BEFORE</p>
+        <p class="before_after_text_main_center">&</p>
+        <p class="before_after_text_main_right">AFTER</p>
+    </div>
+
+    <!-- 3D Image Gallery Container -->
+    <div class="image_gallery_container">
+        <div class="gallery_ring">
+            <div class="gallery_item"><img src="{% static 'n_b_f/1.webp' %}" alt="Gallery 1"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/2.webp' %}" alt="Gallery 2"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/3.webp' %}" alt="Gallery 3"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/4.webp' %}" alt="Gallery 4"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/5.webp' %}" alt="Gallery 5"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/6.webp' %}" alt="Gallery 6"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/7.webp' %}" alt="Gallery 7"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/8.webp' %}" alt="Gallery 8"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/9.webp' %}" alt="Gallery 9"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/10.webp' %}" alt="Gallery 10"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/11.webp' %}" alt="Gallery 11"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/12.webp' %}" alt="Gallery 12"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/13.webp' %}" alt="Gallery 13"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/14.webp' %}" alt="Gallery 14"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/15.webp' %}" alt="Gallery 15"></div>
+            <div class="gallery_item"><img src="{% static 'n_b_f/16.webp' %}" alt="Gallery 16"></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ========================== END SECTION 1 =========================== -->
+{% endblock body %}
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const items = document.querySelectorAll(".gallery_item");
+        const totalItems = items.length;
+        const radius = 620; // Radius kam = images paas paas (gap reduced)
+        const anglePerItem = 360 / totalItems;
+
+        // 1. Initial 3D Setup
+        items.forEach((item, index) => {
+            const angle = index * anglePerItem;
+            gsap.set(item, {
+                rotationY: angle,
+                z: radius,
+                transformOrigin: `50% 50% ${-radius}px`
+            });
+        });
+
+        // 2. Main Timeline
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".new_antic_gallery_section",
+                start: "top top",
+                end: "+=3000", // Jitna lamba scroll chahiye
+                scrub: 1,
+                pin: true,
+                anticipatePin: 1
+            }
+        });
+
+        // Step A: BEFORE (TOP) + AFTER (BOTTOM) — duration: 2 matches ring rotation exactly
+        gsap.set(".before_after_text_main_left",  { x: "-110vw" });
+        gsap.set(".before_after_text_main_right", { x: "110vw" });
+
+        // Step B: Ring Rotation — duration: 2
+        tl.to(".gallery_ring", {
+            rotationY: -360,
+            ease: "none",
+            duration: 2
+        }, 0)
+
+        // Text animations — same duration: 2 as ring, so both finish together
+        .to(".before_after_text_main_left",  { x: "110vw",  ease: "none", duration: 2 }, 0)
+        .to(".before_after_text_main_right", { x: "-110vw", ease: "none", duration: 2 }, 0);
+
+        // Step C: Grid Transition (Trionn style ending)
+        // Jab scroll khatam hone wala ho, items ko flat grid mein le aao
+        tl.to(items, {
+            x: (i) => (i % 3 - 1) * 380, // 3 columns mein distribute karega
+            y: (i) => (Math.floor(i / 3) - 1) * 250,
+            z: 0,
+            rotationY: 0,
+            rotationX: 0,
+            transformOrigin: "50% 50% 0",
+            duration: 1,
+            stagger: 0.05
+        }, "-=0.5"); // Rotation khatam hone se thoda pehle start hoga
+
+      
+    });
+</script>
+{% endblock javascript %}
