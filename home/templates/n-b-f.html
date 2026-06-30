@@ -25,6 +25,7 @@
 <link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/before-after/" />
 {% endblock seo %}
 {% block css %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="{% static 'css/n-b-f.css' %}" rel='stylesheet' />
 {% endblock css %}
 {% block body %}
@@ -42,7 +43,7 @@
                         </ol>
                     </nav>
                     <!-- Title -->
-                    <h1 class="h4-sm steelblue-color"> Before & After Gallery </h1>
+                    <h1 class="h4-sm steelblue-color heading-text-color"> Before & After Gallery </h1>
                 </div>
             </div>
         </div> <!-- End row -->
@@ -51,14 +52,10 @@
 
 <!-- =============================   SECTION 1   ============================== -->
 <section class="new_antic_gallery_section">
-
     <div class="before_after_text_main">
-        <p class="before_after_text_main_left">BEFORE</p>
-        <p class="before_after_text_main_center">&</p>
-        <p class="before_after_text_main_right">AFTER</p>
+        <p class="before_after_text_main_left heading-text-color">BEFORE</p>
+        <p class="before_after_text_main_right heading-text-color">AFTER</p>
     </div>
-
-    <!-- 3D Image Gallery Container -->
     <div class="image_gallery_container">
         <div class="gallery_ring">
             <div class="gallery_item"><img src="{% static 'n_b_f/1.webp' %}" alt="Gallery 1"></div>
@@ -79,12 +76,30 @@
             <div class="gallery_item"><img src="{% static 'n_b_f/16.webp' %}" alt="Gallery 16"></div>
         </div>
     </div>
-
 </section>
 
-<!-- ========================== END SECTION 1 =========================== -->
+<div class="container simpale_img_view">
+    <div class="img_wrapper" data-aos="fade-down-right"><img src="{% static 'n_b_f/15.webp' %}" alt="Gallery 15"></div>
+    <div class="img_wrapper" data-aos="fade-down"><img src="{% static 'n_b_f/14.webp' %}" alt="Gallery 14"></div>
+    <div class="img_wrapper" data-aos="fade-down-left"><img src="{% static 'n_b_f/13.webp' %}" alt="Gallery 13"></div>
+    <div class="img_wrapper" data-aos="fade-up-right"><img src="{% static 'n_b_f/12.webp' %}" alt="Gallery 12"></div>
+    <div class="img_wrapper" data-aos="fade-up"><img src="{% static 'n_b_f/11.webp' %}" alt="Gallery 11"></div>
+    <div class="img_wrapper" data-aos="fade-up-left"><img src="{% static 'n_b_f/10.webp' %}" alt="Gallery 10"></div>
+    <div class="img_wrapper" data-aos="fade-down-right"><img src="{% static 'n_b_f/9.webp' %}" alt="Gallery 9"></div>
+    <div class="img_wrapper" data-aos="fade-down"><img src="{% static 'n_b_f/8.webp' %}" alt="Gallery 8"></div>
+    <div class="img_wrapper" data-aos="fade-down-left"><img src="{% static 'n_b_f/7.webp' %}" alt="Gallery 7"></div>
+    <div class="img_wrapper" data-aos="fade-up-right"><img src="{% static 'n_b_f/6.webp' %}" alt="Gallery 6"></div>
+    <div class="img_wrapper" data-aos="fade-up"><img src="{% static 'n_b_f/5.webp' %}" alt="Gallery 5"></div>
+    <div class="img_wrapper" data-aos="fade-up-left"><img src="{% static 'n_b_f/4.webp' %}" alt="Gallery 4"></div>
+    <div class="img_wrapper" data-aos="fade-down-right"><img src="{% static 'n_b_f/3.webp' %}" alt="Gallery 3"></div>
+    <div class="img_wrapper" data-aos="fade-down"><img src="{% static 'n_b_f/2.webp' %}" alt="Gallery 2"></div>
+    <div class="img_wrapper" data-aos="fade-down-left"><img src="{% static 'n_b_f/1.webp' %}" alt="Gallery 1"></div>
+    <div class="img_wrapper" data-aos="fade-up-right"><img src="{% static 'n_b_f/16.webp' %}" alt="Gallery 16"></div>
+</div>
+
 {% endblock body %}
 {% block javascript %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -92,9 +107,26 @@
     document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(ScrollTrigger);
 
+        AOS.init({
+            once: false,
+            mirror: true,
+            offset: 120,
+            duration: 600,
+            easing: 'ease-out',
+        });
+
         const items = document.querySelectorAll(".gallery_item");
         const totalItems = items.length;
-        const radius = 620; // Radius kam = images paas paas (gap reduced)
+        let radius = 620; // Radius kam = images paas paas (gap reduced)
+        if (window.innerWidth <= 1600) {
+            radius = 470;
+        }
+        if (window.innerWidth <= 1300) {
+            radius = 420;
+        }
+        if (window.innerWidth <= 576) {
+            radius = 300;
+        }
         const anglePerItem = 360 / totalItems;
 
         // 1. Initial 3D Setup
@@ -111,7 +143,7 @@
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".new_antic_gallery_section",
-                start: "top top",
+                start: "top +60px",
                 end: "+=3000", // Jitna lamba scroll chahiye
                 scrub: 1,
                 pin: true,
@@ -119,9 +151,21 @@
             }
         });
 
-        // Step A: BEFORE (TOP) + AFTER (BOTTOM) — duration: 2 matches ring rotation exactly
-        gsap.set(".before_after_text_main_left",  { x: "-110vw" });
-        gsap.set(".before_after_text_main_right", { x: "110vw" });
+        // Step A: Text starts just outside screen edge — thoda sa scroll = turant visible!
+        gsap.set(".before_after_text_main_left", { x: "-25vw" });  // bas screen ke thoda bahar
+        gsap.set(".before_after_text_main_right", { x: "25vw" });   // bas screen ke thoda bahar
+        if (window.innerWidth <= 1600) {
+            gsap.set(".before_after_text_main_left", { x: "-30vw" });  // bas screen ke thoda bahar
+            gsap.set(".before_after_text_main_right", { x: "30vw" });   // bas screen ke thoda bahar
+        }
+        if (window.innerWidth <= 993) {
+            gsap.set(".before_after_text_main_left", { x: "-55vw" });  // bas screen ke thoda bahar
+            gsap.set(".before_after_text_main_right", { x: "55vw" });   // bas screen ke thoda bahar
+        }
+        if (window.innerWidth <= 576) {
+            gsap.set(".before_after_text_main_left", { x: "-50vw" });  // bas screen ke thoda bahar
+            gsap.set(".before_after_text_main_right", { x: "50vw" });   // bas screen ke thoda bahar
+        }
 
         // Step B: Ring Rotation — duration: 2
         tl.to(".gallery_ring", {
@@ -130,24 +174,27 @@
             duration: 2
         }, 0)
 
-        // Text animations — same duration: 2 as ring, so both finish together
-        .to(".before_after_text_main_left",  { x: "110vw",  ease: "none", duration: 2 }, 0)
-        .to(".before_after_text_main_right", { x: "-110vw", ease: "none", duration: 2 }, 0);
+            // Text — starts near edge, travels across screen (left→right and right→left)
+            .to(".before_after_text_main_left", { x: "110vw", ease: "none", duration: 2 }, 0)
+            .to(".before_after_text_main_right", { x: "-110vw", ease: "none", duration: 2 }, 0);
 
         // Step C: Grid Transition (Trionn style ending)
         // Jab scroll khatam hone wala ho, items ko flat grid mein le aao
-        tl.to(items, {
-            x: (i) => (i % 3 - 1) * 380, // 3 columns mein distribute karega
-            y: (i) => (Math.floor(i / 3) - 1) * 250,
-            z: 0,
-            rotationY: 0,
-            rotationX: 0,
-            transformOrigin: "50% 50% 0",
-            duration: 1,
-            stagger: 0.05
-        }, "-=0.5"); // Rotation khatam hone se thoda pehle start hoga
+        // tl.to(items, {
+        //     x: (i) => (i % 3 - 1) * 380, // 3 columns mein distribute karega
+        //     y: (i) => (Math.floor(i / 3) - 1) * 320,
+        //     z: 0,
+        //     rotationY: 0,
+        //     rotationX: 0,
+        //     transformOrigin: "40% 40% 0",
+        //     duration: 1,
+        //     stagger: 0.05
+        // }, "-=0.5");
 
-      
+        ScrollTrigger.addEventListener('refresh', () => AOS.refresh());
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 500);
     });
 </script>
 {% endblock javascript %}
