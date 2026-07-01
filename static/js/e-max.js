@@ -39,7 +39,63 @@ window.addEventListener("resize", () => {
 });
 
 
+function adjustH1TagForSEO() {
+  const isMobile = window.innerWidth < 992;
+  const desktopHeadingContainer = document.querySelector(".desktop-hero .emax-heading");
+  const mobileHeadingContainer = document.querySelector(".mobile-hero .emax-heading");
+
+  if (isMobile) {
+    // Mobile view: Mobile heading should be <h1>, Desktop heading should be <div>
+    if (mobileHeadingContainer) {
+      const mobileEl = mobileHeadingContainer.firstElementChild;
+      if (mobileEl && mobileEl.tagName.toLowerCase() !== "h1") {
+        const newH1 = document.createElement("h1");
+        // Copy all attributes
+        Array.from(mobileEl.attributes).forEach(attr => newH1.setAttribute(attr.name, attr.value));
+        newH1.innerHTML = mobileEl.innerHTML;
+        mobileHeadingContainer.replaceChild(newH1, mobileEl);
+      }
+    }
+    if (desktopHeadingContainer) {
+      const desktopEl = desktopHeadingContainer.firstElementChild;
+      if (desktopEl && desktopEl.tagName.toLowerCase() === "h1") {
+        const newDiv = document.createElement("div");
+        newDiv.className = "h1";
+        // Copy all attributes
+        Array.from(desktopEl.attributes).forEach(attr => newDiv.setAttribute(attr.name, attr.value));
+        newDiv.innerHTML = desktopEl.innerHTML;
+        desktopHeadingContainer.replaceChild(newDiv, desktopEl);
+      }
+    }
+  } else {
+    // Desktop view: Desktop heading should be <h1>, Mobile heading should be <div>
+    if (desktopHeadingContainer) {
+      const desktopEl = desktopHeadingContainer.firstElementChild;
+      if (desktopEl && desktopEl.tagName.toLowerCase() !== "h1") {
+        const newH1 = document.createElement("h1");
+        // Copy all attributes
+        Array.from(desktopEl.attributes).forEach(attr => newH1.setAttribute(attr.name, attr.value));
+        newH1.innerHTML = desktopEl.innerHTML;
+        desktopHeadingContainer.replaceChild(newH1, desktopEl);
+      }
+    }
+    if (mobileHeadingContainer) {
+      const mobileEl = mobileHeadingContainer.firstElementChild;
+      if (mobileEl && mobileEl.tagName.toLowerCase() === "h1") {
+        const newDiv = document.createElement("div");
+        newDiv.className = "h1";
+        // Copy all attributes
+        Array.from(mobileEl.attributes).forEach(attr => newDiv.setAttribute(attr.name, attr.value));
+        newDiv.innerHTML = mobileEl.innerHTML;
+        mobileHeadingContainer.replaceChild(newDiv, mobileEl);
+      }
+    }
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
+  adjustH1TagForSEO();
   if (window.innerWidth >= 992) {
     initHeroSection();
   } else {
@@ -196,7 +252,7 @@ function initHeroSection() {
   const veneerRight = hero.querySelector(".emax-veneer-right");
   const veneerBg = hero.querySelector(".emax-veneer");
   const subHeading = heading.querySelector(".emax-sub");
-const mainHeading = heading.querySelector(".emax-main");
+  const mainHeading = heading.querySelector(".emax-main");
 
   if (!stage || !left || !right || !heading || !bgText ||
     !crownLeft || !crownRight || !veneerLeft || !veneerRight || !veneerBg) return;
@@ -215,7 +271,7 @@ const mainHeading = heading.querySelector(".emax-main");
 
     // --- NON-INTRUSIVE ENTRANCE ANIMATION FOR DESKTOP ---
     const centerCard = stage.querySelector(".emax-center");
-    
+
     // We use gsap.from to animate FROM a hidden state TO the current CSS state.
     // This ensures the cards end up in their "perfect" original positions.
     const enterTl = gsap.timeline({
@@ -238,15 +294,15 @@ const mainHeading = heading.querySelector(".emax-main");
     enterTl
       .from(bgText, { autoAlpha: 0, y: 50, duration: 0.8, ease: "power3.out" })
       .from(centerCard, { yPercent: 50, scale: 0.8, autoAlpha: 0, duration: 1.2, ease: "power3.out" })
-      .from([left, right], { 
-        x: 0, 
-        xPercent: -50, 
-        scale: 0.8, 
-        autoAlpha: 0, 
-        duration: 1.0, 
-        ease: "back.out(1.5)" 
+      .from([left, right], {
+        x: 0,
+        xPercent: -50,
+        scale: 0.8,
+        autoAlpha: 0,
+        duration: 1.0,
+        ease: "back.out(1.5)"
       }, "-=0.4")
-        .from([subHeading, mainHeading], { autoAlpha: 0, y: 30, stagger: 0.2, duration: 1.0, ease: "power2.out" }, "-=0.5");
+      .from([subHeading, mainHeading], { autoAlpha: 0, y: 30, stagger: 0.2, duration: 1.0, ease: "power2.out" }, "-=0.5");
     // ----------------------------------------------------
 
     function getStageCenterY() {

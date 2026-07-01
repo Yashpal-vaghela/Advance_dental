@@ -33,6 +33,14 @@
   property="og:description"
   content="{% spaceless %}{{data.description}}{% endspaceless %}"
 />
+<meta
+  property="article:published_time"
+  content="{% spaceless %}{{data.published|date:'c'}}T10:00:00+05:30{% endspaceless %}"
+/>
+<meta
+  property="article:modified_time"
+  content="{% spaceless %}{{data.updated|date:'c'}}{% endspaceless %}"
+/>
 
 <meta
   name="twitter:card"

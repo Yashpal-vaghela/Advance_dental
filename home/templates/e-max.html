@@ -2,12 +2,14 @@
 {% load static %}
 {% block seo %}
 <title>Emax Dental Solutions - ADE IPS Emax Aesthetic Maxima</title>
-<meta name="description" content="Explore our Emax dental solutions. Our IPS Emax crows & bridges delivers high strength, natural translucency, and premium aesthetics. Connect with ADE now."/>
-<link rel="canonical" href="https://advancedentalexport.com/emax-aesthetic-maxima/"/>
+<meta name="description"
+    content="Explore our Emax dental solutions. Our IPS Emax crows & bridges delivers high strength, natural translucency, and premium aesthetics. Connect with ADE now." />
+<link rel="canonical" href="https://advancedentalexport.com/emax-aesthetic-maxima/" />
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Emax Dental Solutions - ADE IPS Emax Aesthetic Maxima" />
-<meta property="og:description" content="Explore our Emax dental solutions. Our IPS Emax crows & bridges delivers high strength, natural translucency, and premium aesthetics. Connect with ADE now." />
+<meta property="og:description"
+    content="Explore our Emax dental solutions. Our IPS Emax crows & bridges delivers high strength, natural translucency, and premium aesthetics. Connect with ADE now." />
 <meta property="og:url" content="https://advancedentalexport.com/emax-aesthetic-maxima/" />
 <meta name="og:image" content="{% static 'img/feature.webp' %}" />
 <meta property="og:image:width" content="1200" />
@@ -15,7 +17,8 @@
 <meta property="og:image:type" content="image/webp" />
 <meta property="og:site_name" content="Advance Dental Export" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Explore our Emax dental solutions. Our IPS Emax crows & bridges delivers high strength, natural translucency, and premium aesthetics. Connect with ADE now." />
+<meta name="twitter:description"
+    content="Explore our Emax dental solutions. Our IPS Emax crows & bridges delivers high strength, natural translucency, and premium aesthetics. Connect with ADE now." />
 <meta name="twitter:title" content="Advance Dental Export" />
 <meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
 {% endblock %}
@@ -94,7 +97,7 @@
 </section>
 <!--Only for hero section for the mobile screen-->
 <div class="mobile-hero">
-    {% include "emax-hero-smallscreen.html" %}
+    {% include 'emax-hero-smallscreen.html' %}
 </div>
 <section class="emax-material">
     <div class="container">
@@ -185,23 +188,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="{% static 'js/e-max.js' %}"></script>
+<script src="{% static 'js/e-max.js' %}?v={% now 'U' %}"></script>
 <script>
-  // Initialize AOS
-  AOS.init({
-    once: false,
-    mirror: true,          
-    offset: 120,         
-    duration: 600,
-    easing: "ease-out",
-  });
+    // Initialize AOS
+    AOS.init({
+        once: false,
+        mirror: true,
+        offset: 120,
+        duration: 600,
+        easing: "ease-out",
+    });
 
-  // Re-calculate AOS coordinates after GSAP ScrollTriggers finish pinning
-  if (typeof ScrollTrigger !== 'undefined' && typeof AOS !== 'undefined') {
-    ScrollTrigger.addEventListener("refresh", () => AOS.refresh());
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 200);
-  }
+    // Re-calculate AOS coordinates after GSAP ScrollTriggers finish pinning
+    if (typeof ScrollTrigger !== 'undefined' && typeof AOS !== 'undefined') {
+        ScrollTrigger.addEventListener("refresh", () => AOS.refresh());
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 200);
+    }
 </script>
 {% endblock %}
