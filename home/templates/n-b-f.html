@@ -58,43 +58,19 @@
     </div>
     <div class="image_gallery_container">
         <div class="gallery_ring">
-            <div class="gallery_item"><img src="{% static 'n_b_f/1.webp' %}" alt="Gallery 1"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/2.webp' %}" alt="Gallery 2"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/3.webp' %}" alt="Gallery 3"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/4.webp' %}" alt="Gallery 4"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/5.webp' %}" alt="Gallery 5"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/6.webp' %}" alt="Gallery 6"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/7.webp' %}" alt="Gallery 7"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/8.webp' %}" alt="Gallery 8"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/9.webp' %}" alt="Gallery 9"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/10.webp' %}" alt="Gallery 10"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/11.webp' %}" alt="Gallery 11"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/12.webp' %}" alt="Gallery 12"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/13.webp' %}" alt="Gallery 13"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/14.webp' %}" alt="Gallery 14"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/15.webp' %}" alt="Gallery 15"></div>
-            <div class="gallery_item"><img src="{% static 'n_b_f/16.webp' %}" alt="Gallery 16"></div>
+            {% for b_f_items in beforeafter %}
+            <div class="gallery_item"><img src="{{ b_f_items.image.url }}" alt="{{ b_f_items.alt|default:b_f_items.name }}"></div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
 <div class="container simpale_img_view">
-    <div class="img_wrapper" data-aos="fade-down-right"><img src="{% static 'n_b_f/15.webp' %}" alt="Gallery 15"></div>
-    <div class="img_wrapper" data-aos="fade-down"><img src="{% static 'n_b_f/14.webp' %}" alt="Gallery 14"></div>
-    <div class="img_wrapper" data-aos="fade-down-left"><img src="{% static 'n_b_f/13.webp' %}" alt="Gallery 13"></div>
-    <div class="img_wrapper" data-aos="fade-up-right"><img src="{% static 'n_b_f/12.webp' %}" alt="Gallery 12"></div>
-    <div class="img_wrapper" data-aos="fade-up"><img src="{% static 'n_b_f/11.webp' %}" alt="Gallery 11"></div>
-    <div class="img_wrapper" data-aos="fade-up-left"><img src="{% static 'n_b_f/10.webp' %}" alt="Gallery 10"></div>
-    <div class="img_wrapper" data-aos="fade-down-right"><img src="{% static 'n_b_f/9.webp' %}" alt="Gallery 9"></div>
-    <div class="img_wrapper" data-aos="fade-down"><img src="{% static 'n_b_f/8.webp' %}" alt="Gallery 8"></div>
-    <div class="img_wrapper" data-aos="fade-down-left"><img src="{% static 'n_b_f/7.webp' %}" alt="Gallery 7"></div>
-    <div class="img_wrapper" data-aos="fade-up-right"><img src="{% static 'n_b_f/6.webp' %}" alt="Gallery 6"></div>
-    <div class="img_wrapper" data-aos="fade-up"><img src="{% static 'n_b_f/5.webp' %}" alt="Gallery 5"></div>
-    <div class="img_wrapper" data-aos="fade-up-left"><img src="{% static 'n_b_f/4.webp' %}" alt="Gallery 4"></div>
-    <div class="img_wrapper" data-aos="fade-down-right"><img src="{% static 'n_b_f/3.webp' %}" alt="Gallery 3"></div>
-    <div class="img_wrapper" data-aos="fade-down"><img src="{% static 'n_b_f/2.webp' %}" alt="Gallery 2"></div>
-    <div class="img_wrapper" data-aos="fade-down-left"><img src="{% static 'n_b_f/1.webp' %}" alt="Gallery 1"></div>
-    <div class="img_wrapper" data-aos="fade-up-right"><img src="{% static 'n_b_f/16.webp' %}" alt="Gallery 16"></div>
+    {% for b_f_items in beforeafter %}
+    <div class="img_wrapper" data-aos="{% cycle 'fade-down-right' 'fade-down' 'fade-down-left' 'fade-up-right' 'fade-up' 'fade-up-left' %}">
+        <img src="{{ b_f_items.image.url }}" alt="{{ b_f_items.alt|default:b_f_items.name }}">
+    </div>
+    {% endfor %}
 </div>
 
 {% endblock body %}
@@ -144,7 +120,7 @@
             scrollTrigger: {
                 trigger: ".new_antic_gallery_section",
                 start: "top +60px",
-                end: "+=3000", // Jitna lamba scroll chahiye
+                end: "+=3000",
                 scrub: 1,
                 pin: true,
                 anticipatePin: 1
@@ -152,19 +128,19 @@
         });
 
         // Step A: Text starts just outside screen edge — thoda sa scroll = turant visible!
-        gsap.set(".before_after_text_main_left", { x: "-25vw" });  // bas screen ke thoda bahar
-        gsap.set(".before_after_text_main_right", { x: "25vw" });   // bas screen ke thoda bahar
+        gsap.set(".before_after_text_main_left", { x: "-25vw" });  
+        gsap.set(".before_after_text_main_right", { x: "25vw" });  
         if (window.innerWidth <= 1600) {
-            gsap.set(".before_after_text_main_left", { x: "-30vw" });  // bas screen ke thoda bahar
-            gsap.set(".before_after_text_main_right", { x: "30vw" });   // bas screen ke thoda bahar
+            gsap.set(".before_after_text_main_left", { x: "-30vw" }); 
+            gsap.set(".before_after_text_main_right", { x: "30vw" });  
         }
         if (window.innerWidth <= 993) {
-            gsap.set(".before_after_text_main_left", { x: "-55vw" });  // bas screen ke thoda bahar
-            gsap.set(".before_after_text_main_right", { x: "55vw" });   // bas screen ke thoda bahar
+            gsap.set(".before_after_text_main_left", { x: "-55vw" }); 
+            gsap.set(".before_after_text_main_right", { x: "55vw" });  
         }
         if (window.innerWidth <= 576) {
-            gsap.set(".before_after_text_main_left", { x: "-50vw" });  // bas screen ke thoda bahar
-            gsap.set(".before_after_text_main_right", { x: "50vw" });   // bas screen ke thoda bahar
+            gsap.set(".before_after_text_main_left", { x: "-50vw" }); 
+            gsap.set(".before_after_text_main_right", { x: "50vw" });  
         }
 
         // Step B: Ring Rotation — duration: 2
@@ -177,19 +153,6 @@
             // Text — starts near edge, travels across screen (left→right and right→left)
             .to(".before_after_text_main_left", { x: "110vw", ease: "none", duration: 2 }, 0)
             .to(".before_after_text_main_right", { x: "-110vw", ease: "none", duration: 2 }, 0);
-
-        // Step C: Grid Transition (Trionn style ending)
-        // Jab scroll khatam hone wala ho, items ko flat grid mein le aao
-        // tl.to(items, {
-        //     x: (i) => (i % 3 - 1) * 380, // 3 columns mein distribute karega
-        //     y: (i) => (Math.floor(i / 3) - 1) * 320,
-        //     z: 0,
-        //     rotationY: 0,
-        //     rotationX: 0,
-        //     transformOrigin: "40% 40% 0",
-        //     duration: 1,
-        //     stagger: 0.05
-        // }, "-=0.5");
 
         ScrollTrigger.addEventListener('refresh', () => AOS.refresh());
         setTimeout(() => {

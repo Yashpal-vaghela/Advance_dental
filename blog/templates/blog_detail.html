@@ -513,7 +513,7 @@
                   </div>
                 {% endfor %}
                 <div class="col-12">
-                  <a href="/blog">
+                  <a href="/blog/">
                     <button class="btn view-all-blog-btn mt-3 w-100">
                       Find More Blogs
                     </button>
@@ -609,7 +609,7 @@
 </div>
 {% endblock body %} {% block js %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="{% static 'js/recaptcha-api.js' %}" async defer></script>
+{% comment %} <script src="{% static 'js/recaptcha-api.js' %}" async defer></script> {% endcomment %}
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
