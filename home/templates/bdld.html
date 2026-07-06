@@ -83,8 +83,7 @@
         <div class="txt-block pc-30">
           <span class="section-id-bdlb blue-color text-start">Welcome to Advance Dental Export</span>
 
-          <h2 class="about-title text-start">
-            Best Dental Lab in {{pk.name}}
+          <h2 class="about-title text-start heading-text-color">
           </h2>
 
           <p>
@@ -651,7 +650,7 @@
 	</div> <!-- End container -->
 </section> <!-- END INFO-4 -->
 <!-- Contact-us -->  
-<section id="contacts-1" class="wide-75 contact-section division form_spacing" >
+{% comment %} <section id="contacts-1" class="wide-75 contact-section division form_spacing" >
   <div class="container">
       <div class="row">
         <div class="col-lg-12 section-title">
@@ -806,11 +805,12 @@
         </div>
       </div>
   </div>
-</section>
+</section> {% endcomment %}
+{% include 'contact_section.html' %}
 {% endblock body %}
 {% block js %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="{% static 'js/recaptcha-api.js' %}" async defer></script>
+{% comment %} <script src="{% static 'js/recaptcha-api.js' %}" async defer></script> {% endcomment %}
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
     const paths = document.querySelectorAll('.signature2 path');

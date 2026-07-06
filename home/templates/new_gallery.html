@@ -144,10 +144,9 @@
 </section> {% endcomment %}
 {% endblock body %}
 {% block javascript %}
-<script src="{% static 'js/new-section.js' %}"></script>
 <script type="module">
-import { Snap } from 'https://esm.sh/vevet@5';
-
+// import { Snap } from 'https://esm.sh/vevet@5';
+import { Snap } from "https://cdn.jsdelivr.net/npm/vevet/+esm";
 const container = document.getElementById('carousel');
 
 const carousel = new Snap({
