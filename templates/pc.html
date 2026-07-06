@@ -17,11 +17,11 @@
         </li> <!-- END DROPDOWN MENU -->
 
         <li aria-haspopup="true">
-          <a href="{% url 'home:about' %}"><span {% if request.path == '/about-us/' %}class="heasder_active"{% endif %}>About Us</span> </a>
+          <a href="{% url 'home:about' %}" class="bhavin"><span {% if request.path == '/about-us/' %}class="heasder_active"{% endif %}>About Us</span> </a>
         </li> <!-- END DROPDOWN MENU -->
 
         <li aria-haspopup="true" class="wsmenu-dropdown">
-          <span class="wsmenu-click"><i class="wsmenu-arrow"></i></span><a href="#"><span {% if request.path == '/' %}class=" "{% endif %} >Products</span> <span class="wsarrow"></span></a>
+          <span class="wsmenu-click"><i class="wsmenu-arrow"></i></span><a href="#" class="bhavin"><span {% if request.path == '/' %}class=" "{% endif %} >Products</span> <span class="wsarrow"></span></a>
           <ul class="sub-menu">
             {% for ie in product %}
             {% if ie.slug not in 'nobelprocera,bps-biofunctional-prosthetic-system,digital-crown-bridge' %}
@@ -44,12 +44,12 @@
         </li>
 
         <li>
-          <a href="https://ultimatesmiledesign.com" target="_blank">USD</a>
+          <a href="https://ultimatesmiledesign.com" target="_blank" class="bhavin">USD</a>
         </li>
         <!-- MEGAMENU -->
 
         <li>
-          <a href="{% url 'blog:blog' %}"><span {% if request.path == '/blog/' %}class="heasder_active"{% endif %} >Blogs</span></a>
+          <a href="{% url 'blog:blog' %}" class="bhavin"><span {% if request.path == '/blog/' %}class="heasder_active"{% endif %} >Blogs</span></a>
         </li>
         {% comment %} <li aria-haspopup="true">
           <a href="#">Resource Center <span class="wsarrow"></span></a>
@@ -134,7 +134,7 @@
         <!-- SIMPLE NAVIGATION LINK -->
 
         <li class="nl-simple" aria-haspopup="true">
-          <a href="{% url 'home:contact_new' %}"><span {% if request.path == '/contact-us/' %}class="heasder_active"{% endif %} >Contact</span></a>
+          <a href="{% url 'home:contact_new' %}" class="bhavin"><span {% if request.path == '/contact-us/' %}class="heasder_active"{% endif %} >Contact</span></a>
         </li>
         
            
