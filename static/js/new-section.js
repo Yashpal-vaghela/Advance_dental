@@ -2,6 +2,9 @@ if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 }
 window.scrollTo(0, 0);
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
 let currentWidth = window.innerWidth;
 
 window.addEventListener('resize', () => {
@@ -11,13 +14,91 @@ window.addEventListener('resize', () => {
     }
 });
 
- // Card Marquee (Clone logic)
+// Raindrops on Glass Effect for the first banner (Perfect Rainyscope Physics)
 document.addEventListener("DOMContentLoaded", () => {
-   
+    const bannerOverlay = document.querySelector('.banner-blur-overlay');
+    const videoElement = window.innerWidth <= 992
+        ? (document.querySelector('.banner_video_mobile') || document.querySelector('.banner_image'))
+        : (document.querySelector('.banner_video_desktop') || document.querySelector('.banner_image'));
+
+    if (bannerOverlay && videoElement) {
+        // Clear any old canvas if there was one
+        bannerOverlay.innerHTML = '';
+
+        // Dynamically inject rainyday.js from cdnjs, so we don't need to modify index.html at all!
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/rainyday.js/0.1.2/rainyday.min.js';
+        script.onload = () => {
+
+            // Wait for video metadata to have exact crop dimensions
+            const tryInitRain = setInterval(() => {
+                if (videoElement.readyState >= 1 || videoElement.videoWidth > 0) {
+                    clearInterval(tryInitRain);
+
+                    videoElement.setAttribute('crossorigin', 'anonymous');
+
+                    let engine = new RainyDay({
+                        image: videoElement,
+                        parentElement: bannerOverlay,
+                        // Provide crop explicitly so it bounds correctly on HTML5 Video
+                        crop: [0, 0, videoElement.videoWidth || 1920, videoElement.videoHeight || 1080],
+                        width: bannerOverlay.clientWidth,
+                        height: bannerOverlay.clientHeight,
+                        fps: 45,
+                        blur: 0,
+                        opacity: 1
+                    });
+
+                    // Enable heavy non-linear gravity and distinct trails for realistic drop sliding
+                    engine.gravity = engine.GRAVITY_NON_LINEAR;
+                    engine.trail = engine.TRAIL_DROPS;
+
+                    // Trick rainyday into drawing a transparent background 
+                    // This allows the live video underneath to show perfectly without being covered by a static frame!
+                    try {
+                        if (engine.background) {
+                            engine.background.getContext("2d").clearRect(0, 0, engine.canvas.width, engine.canvas.height);
+                        }
+                    } catch (e) { }
+
+                    // Phase 1: Initial sparse drops (Random places par thodi-thodi boondein)
+                    engine.rain([
+                        [4, 6, 0.15],  // Medium boondein random jagah par
+                        [6, 8, 0.1]    // Badi sliding boondein door-door girenge
+                    ], 250);
+
+                    // Phase 2: 1.5 seconds ke baad poori screen heavy boondon se bhar jayegi
+                    setTimeout(() => {
+
+                        // Ek baar me glass par bhari choti boondein dal dena
+                        engine.rain([
+                            [1, 2, 2000]
+                        ]);
+
+                        // Bahut tezz aur bhari slide hone wale raindrops
+                        engine.rain([
+                            [2, 4, 0.6],
+                            [5, 7, 0.4],
+                            [7, 9, 0.2],
+                            [9, 11, 0.1]
+                        ], 50);
+                    }, 1500);
+                }
+            }, 100);
+        };
+        document.head.appendChild(script);
+    }
+});
+
+
+// Card Marquee (Clone logic)
+document.addEventListener("DOMContentLoaded", () => {
+
     if (typeof gsap === 'undefined') {
         return;
     }
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
     // ==========================================
     // ANIMATION 1: Premium Banner Section
     // ==========================================
@@ -36,15 +117,52 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
+        // Initial transparent state and navlink states are handled via classes
+        const navLinks = document.querySelectorAll('.bhavin');
+
         const bannerTl = gsap.timeline({
             scrollTrigger: {
                 trigger: bannerSection,
-                start: 'top 60px',
+                start: 'top top',
                 end: () => `+=${(banners.length - 1) * 100}%`,
                 pin: true,
                 scrub: 1,
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
+                onUpdate: (self) => {
+                    const navLinks = document.querySelectorAll('.bhavin');
+                    // Navbar background logic: transparent only at the start
+                    if (self.progress >= 0.99) {
+                        document.documentElement.classList.remove('is-transparent-navbar');
+                    } else {
+                        document.documentElement.classList.add('is-transparent-navbar');
+                    }
+
+                    // Nav links text color logic
+                    if (window.innerWidth >= 992) {
+                        const totalScroll = self.progress * (banners.length - 1);
+                        const currentIndex = Math.floor(totalScroll);
+                        const p = totalScroll - currentIndex;
+
+                        let headerActiveBannerIndex = currentIndex;
+
+                        if ((1 - p) * window.innerHeight <= 60 && currentIndex < banners.length - 1) {
+                            headerActiveBannerIndex = currentIndex + 1;
+                        }
+
+                        if (
+                            headerActiveBannerIndex === 0 ||
+                            headerActiveBannerIndex === 2 ||
+                            headerActiveBannerIndex === 4
+                        ) {
+                            document.documentElement.classList.add('is-white-navlinks');
+                        } else {
+                            document.documentElement.classList.remove('is-white-navlinks');
+                        }
+                    } else {
+                        document.documentElement.classList.remove('is-white-navlinks');
+                    }
+                }
                 // markers: true // Debug lines
             }
         });
@@ -53,10 +171,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (index === 0) return;
             bannerTl.fromTo(banners[index - 1],
                 { clipPath: 'inset(0% 0% 0% 0%)' },
-                { clipPath: 'inset(0% 0% 100% 0%)',
-                  ease: 'none',
-                  duration: 1 },
-                  index - 1
+                {
+                    clipPath: 'inset(0% 0% 100% 0%)',
+                    ease: 'none',
+                    duration: 1
+                },
+                index - 1
             );
         });
     }
@@ -154,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // gsap.to('.clientele_vector_wrapper', {
     //     y: -12, duration: 2, repeat: -1, yoyo: true, ease: 'sine.inOut',
     // });
-    
+
     const items = gsap.utils.toArray('.clientele_item');
     const list = document.querySelector('.clientele_list');
 
@@ -169,11 +289,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 inactiveSvg.classList.add('clientele_vector_inactive');
                 wrapper.appendChild(inactiveSvg);
 
-                // gsap.set(svg, {
-                //     clipPath: index === 0
-                //         ? 'inset(0% 0% 0% 0%)'
-                //         : 'inset(0% 100% 0% 0%)'
-                // });
+                gsap.set(svg, {
+                    clipPath: index === 0
+                        ? 'inset(0% 0% 0% 0%)'
+                        : 'inset(0% 100% 0% 0%)'
+                });
             }
             // Ensure videos don't loop
             const video = item.querySelector('video');
@@ -236,23 +356,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         //SVG / clip animation
                         const oldSvg = oldItem?.querySelector('.clientele_vector');
                         const newSvg = newItem?.querySelector('.clientele_vector');
-                        // if (oldSvg) {
-                        //     gsap.to(oldSvg, {
-                        //         clipPath: 'inset(0% 0% 0% 100%)',
-                        //         duration: 0.8,
-                        //         overwrite: 'auto'
-                        //     });
-                        // }
+                        if (oldSvg) {
+                            gsap.to(oldSvg, {
+                                clipPath: 'inset(0% 0% 0% 100%)',
+                                duration: 0.8,
+                                overwrite: 'auto'
+                            });
+                        }
 
-                        // if (newSvg) {
-                        //     gsap.fromTo(newSvg,
-                        //         { clipPath: 'inset(0% 100% 0% 0%)' },
-                        //         { clipPath: 'inset(0% 0% 0% 0%)',
-                        //           duration: 1.5,
-                        //           overwrite: 'auto'
-                        //         }
-                        //     );
-                        // }
+                        if (newSvg) {
+                            gsap.fromTo(newSvg,
+                                { clipPath: 'inset(0% 100% 0% 0%)' },
+                                {
+                                    clipPath: 'inset(0% 0% 0% 0%)',
+                                    duration: 1.5,
+                                    overwrite: 'auto'
+                                }
+                            );
+                        }
                         // Active class update
                         items.forEach((item, i) => {
                             item.classList.toggle('active', i === newActiveIndex);
@@ -278,4 +399,7 @@ window.addEventListener("load", () => {
     if (typeof ScrollTrigger !== 'undefined') {
         ScrollTrigger.refresh();
     }
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10);
 });

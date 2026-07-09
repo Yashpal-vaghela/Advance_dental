@@ -1,1026 +1,1088 @@
-/* ---------------------------- Page Specific Transparent Navbar ---------------------------- */
 html.is-transparent-navbar #header,
 html.is-transparent-navbar .wsmainfull,
 html.is-transparent-navbar .wsmenu,
 html.is-transparent-navbar .header,
 html.is-transparent-navbar .wsmobileheader {
-  background-color: transparent !important;
-  
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 html.is-white-navlinks .bhavin,
-html.is-white-navlinks .wsmenu > .wsmenu-list > li > a {
-  color: #fff !important;
+html.is-white-navlinks .wsmenu>.wsmenu-list>li>a {
+    color: #fff !important
 }
 
-/* ---------------------------- Premium Banner Section ---------------------------- */
 .banner-blur-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    pointer-events: none
 }
 
 .premium_banner_section {
-  height: 100vh;
-  margin-top: -60px;
-  overflow: hidden;
-  position: relative;
+    height: 100vh;
+    margin-top: -60px;
+    overflow: hidden;
+    position: relative
 }
 
 .scroll-container {
-  height: 100%;
-  width: 100%;
-  position: relative;
+    height: 100%;
+    width: 100%;
+    position: relative
 }
 
 .banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
 }
 
 .banner_video_desktop {
-  display: block;
+    display: block
 }
 
 .banner_video_mobile {
-  display: none;
+    display: none
 }
 
 .banner picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform
 }
 
 .banner_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
 }
 
 .center-box {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  width: 550px;
-  height: 160px;
-  padding: 27px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(27, 137, 118, 1);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 550px;
+    height: 160px;
+    padding: 27px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(27, 137, 118, 1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10
 }
 
 .golden_border {
-  border: 1px solid #ddb14b !important;
+    border: 1px solid #ddb14b !important
 }
 
 .gold-text {
-  background: linear-gradient(
-    130deg,
-    #c3942f 0%,
-    #d89c27 18%,
-    #dfc86f 37%,
-    #e7dc96 50%,
-    #dfc86f 64%,
-    #d89c27 82%,
-    #c99c30 100%
-  ) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  color: transparent !important;
+    background: linear-gradient(130deg, #c3942f 0%, #d89c27 18%, #dfc86f 37%, #e7dc96 50%, #dfc86f 64%, #d89c27 82%, #c99c30 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important
 }
 
 .box-content {
-  width: 400px;
+    width: 400px
 }
 
 .box-content-heading {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 5%;
-  background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden
 }
 
 .box-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 1);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 1)
 }
 
-.box-icon > a > svg {
-  width: 48px;
-  height: 48px;
+.box-icon>a>svg {
+    width: 48px;
+    height: 48px
 }
 
 .box-content-description {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 140%;
-  letter-spacing: 4%;
-  text-transform: capitalize;
-  margin-bottom: 0px;
-  color: rgba(0, 0, 0, 1);
-}
-
-@media (max-width: 1530px) {
-  .center-box {
-    bottom: 20px;
-    right: 20px;
-    width: 510px;
-    height: 150px;
-    padding: 27px;
-  }
-  .box-content {
-    width: 350px;
-  }
-  .box-content-heading {
-    font-size: 28px;
-  }
-  .box-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-  }
-  .box-icon > a > svg {
-    width: 40px;
-    height: 40px;
-  }
-  .box-content-description {
-    font-weight: 400;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .premium_banner_section_title {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .center-box {
-    bottom: 15px;
-    right: 15px;
-    width: 400px;
-    height: 120px;
-    padding: 15px;
-    border-radius: 14px;
-  }
-  .box-content {
-    width: 300px;
-  }
-  .box-content-heading {
-    font-weight: 600;
-    font-size: 24px;
-    margin-top: 5px;
-    margin-bottom: 8px;
-  }
-  .box-icon {
-    width: 40px;
-    height: 40px;
-  }
-  .box-icon > a > svg {
-    width: 28px;
-    height: 28px;
-  }
-  .box-content-description {
-    font-size: 14px;
-  }
-  .premium_banner_section_title {
-    font-size: 30px;
-    margin-top: 30px;
-  }
-  .premium_banner_section_subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     font-size: 16px;
-    margin-bottom: 40px;
-  }
+    line-height: 140%;
+    letter-spacing: 4%;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    color: rgba(0, 0, 0, 1)
 }
 
-@media (max-width: 992px) {
-  .banner_video_desktop {
-    display: none;
-  }
+@media (max-width:1530px) {
+    .center-box {
+        bottom: 20px;
+        right: 20px;
+        width: 510px;
+        height: 150px;
+        padding: 27px
+    }
 
-  .banner_video_mobile {
-    display: block;
-  }
-  .premium_banner_section {
-    height: 100vh;
-    margin-top: 0px;
-  }
-  .banner {
-    height: 100vh;
-  }
-  .center-box {
-    bottom: 22px;
-    right: 22px;
-    width: 400px;
-    height: 120px;
-    padding: 15px;
-    border-radius: 14px;
-  }
-  .premium_banner_section_title {
-    font-size: 22px;
-    margin-top: 30px;
-  }
-  .premium_banner_section_subtitle {
-    font-size: 16px;
-    margin-bottom: 40px;
-    width: 70%;
-  }
+    .box-content {
+        width: 350px
+    }
+
+    .box-content-heading {
+        font-size: 28px
+    }
+
+    .box-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px
+    }
+
+    .box-icon>a>svg {
+        width: 40px;
+        height: 40px
+    }
+
+    .box-content-description {
+        font-weight: 400;
+        font-size: 15px
+    }
 }
 
-@media (max-width: 768px) {
-  .center-box {
-    left: 50%;
-    transform: translate(-50%, -10%);
-  }
-  .banner_image_820 {
-    margin-top: 0px !important;
-  }
-  .premium_banner_section_title {
-    font-size: 22px;
-    margin-top: 30px;
-  }
-  .premium_banner_section_subtitle {
-    font-size: 16px;
-    margin-bottom: 40px;
-    width: 70%;
-  }
-  .premium_banner_section_title {
-    font-size: 22px;
-    margin-top: 30px;
-    text-align: left;
-  }
-  .premium_banner_section_subtitle {
-    font-size: 16px;
-    margin-bottom: 40px;
-    width: 76%;
-  }
+@media (max-width:1440px) {
+    .premium_banner_section_title {
+        font-size: 36px
+    }
 }
 
-@media (max-width: 440px) {
-  .banner-blur-overlay {
-  backdrop-filter: blur(2px);
+@media (max-width:1280px) {
+    .center-box {
+        bottom: 15px;
+        right: 15px;
+        width: 400px;
+        height: 120px;
+        padding: 15px;
+        border-radius: 14px
+    }
 
-}
-  .premium_banner_section {
-    height: 100vh;
-  }
-  .banner {
-    height: 100vh;
-  }
-  .center-box {
-    width: 340px;
-    height: 120px;
-    padding: 15px;
-    bottom: 65px;
-  }
-  .box-content {
-    width: 240px;
-  }
-  .box-content-heading {
-    font-size: 18px;
-  }
-  .box-icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-  }
-  .box-icon > a > svg {
-    width: 24px;
-    height: 24px;
-  }
-  .box-content-description {
-    font-size: 12px;
-  }
-  .premium_banner_section_title {
-    font-size: 20px;
-    margin-top: 22px;
-    text-align: left;
-  }
-  .premium_banner_section_subtitle {
-    font-size: 15px;
-    margin-bottom: 20px;
-    width: 95%;
-  }
+    .box-content {
+        width: 300px
+    }
+
+    .box-content-heading {
+        font-weight: 600;
+        font-size: 24px;
+        margin-top: 5px;
+        margin-bottom: 8px
+    }
+
+    .box-icon {
+        width: 40px;
+        height: 40px
+    }
+
+    .box-icon>a>svg {
+        width: 28px;
+        height: 28px
+    }
+
+    .box-content-description {
+        font-size: 14px
+    }
+
+    .premium_banner_section_title {
+        font-size: 30px;
+        margin-top: 30px
+    }
+
+    .premium_banner_section_subtitle {
+        font-size: 16px;
+        margin-bottom: 40px
+    }
 }
 
-/*--------------------------------- Dental_services -----------------------------------*/
+@media (max-width:992px) {
+    .banner_video_desktop {
+        display: none
+    }
+
+    .banner_video_mobile {
+        display: block
+    }
+
+    .premium_banner_section {
+        height: 100vh;
+        margin-top: 0px
+    }
+
+    .banner {
+        height: 100vh
+    }
+
+    .center-box {
+        bottom: 22px;
+        right: 22px;
+        width: 400px;
+        height: 120px;
+        padding: 15px;
+        border-radius: 14px
+    }
+
+    .premium_banner_section_title {
+        font-size: 22px;
+        margin-top: 30px
+    }
+
+    .premium_banner_section_subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+        width: 70%
+    }
+}
+
+@media (max-width:768px) {
+    .center-box {
+        left: 50%;
+        transform: translate(-50%, -10%)
+    }
+
+    .banner_image_820 {
+        margin-top: 0px !important
+    }
+
+    .premium_banner_section_title {
+        font-size: 22px;
+        margin-top: 30px
+    }
+
+    .premium_banner_section_subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+        width: 70%
+    }
+
+    .premium_banner_section_title {
+        font-size: 22px;
+        margin-top: 30px;
+        text-align: left
+    }
+
+    .premium_banner_section_subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+        width: 76%
+    }
+}
+
+@media (max-width:440px) {
+    .banner-blur-overlay {
+        backdrop-filter: blur(2px)
+    }
+
+    .premium_banner_section {
+        height: 100vh
+    }
+
+    .banner {
+        height: 100vh
+    }
+
+    .center-box {
+        width: 340px;
+        height: 120px;
+        padding: 15px;
+        bottom: 65px
+    }
+
+    .box-content {
+        width: 240px
+    }
+
+    .box-content-heading {
+        font-size: 18px
+    }
+
+    .box-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px
+    }
+
+    .box-icon>a>svg {
+        width: 24px;
+        height: 24px
+    }
+
+    .box-content-description {
+        font-size: 12px
+    }
+
+    .premium_banner_section_title {
+        font-size: 20px;
+        margin-top: 22px;
+        text-align: left
+    }
+
+    .premium_banner_section_subtitle {
+        font-size: 15px;
+        margin-bottom: 20px;
+        width: 95%
+    }
+}
+
 .Dental_services {
-  margin-top: 90px;
-  /* margin-bottom: 70px; */
-  /* padding-bottom: 20px; */
-  width: 100%;
-  height: 100vh;
-  background: url(../img/dental_services_bg2.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* border: 1px solid black; */
+    margin-top: 90px;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/dental_services_bg2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat
 }
 
 .Dental_services_heading {
-  font-family: montserrat, sans-serif;
-  font-weight: 700;
-  font-style: Medium;
-  font-size: 40px;
-  line-height: 190%;
-  letter-spacing: 4%;
-  background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 30px;
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    font-style: Medium;
+    font-size: 40px;
+    line-height: 190%;
+    letter-spacing: 4%;
+    background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 30px
 }
 
 .card_section {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 40px;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 40px;
+    justify-content: center
 }
 
 .marquee-content {
-  display: contents;
+    display: contents
 }
 
 .marquee-content.clone {
-  display: none;
+    display: none
 }
 
 .cards {
-  width: 310px;
-  height: 320px;
-  border-radius: 16px;
-  border: 2px solid rgba(27, 137, 118, 1);
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  padding: 0px 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card_numbers > h1 {
-  font-size: 80px;
-  color: rgba(27, 137, 119, 0.329);
-  font-family: montserrat, sans-serif;
-}
-
-.card_numbers > span {
-  font-size: 80px;
-  color: rgba(27, 137, 119, 0.329);
-  font-family: montserrat, sans-serif;
-  font-weight: 700;
-}
-
-.card_content > h5 {
-  color: rgba(27, 137, 118, 1);
-  font-weight: 500;
-  font-family: montserrat, sans-serif;
-}
-
-.card_content > h3 {
-  color: rgba(27, 137, 118, 1);
-  font-weight: 500;
-  font-family: montserrat, sans-serif;
-  letter-spacing: -0.25%;
-}
-
-.card_content > p {
-  margin-top: 20px;
-  color: rgba(0, 0, 0, 1);
-  font-weight: 400;
-  font-family: montserrat, sans-serif;
-  line-height: 150%;
-}
-
-@media (max-width: 1530px) {
-  .Dental_services {
-    margin-top: 0px;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    width: 100%;
-    height: auto;
-    background: url(../img/dental_services_bg2.png);
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
-  .Dental_services_heading {
-    margin-top: 15px;
-    font-size: 35px;
-  }
-  .card_section {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .cards {
-    width: 265px;
-  }
-  .Dental_services {
-    margin-bottom: 70px;
-    padding-bottom: 50px;
-    width: 100%;
-    height: auto;
-    background: url(../img/dental_services_bg2.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 1200px) {
-  .cards {
-    width: 273px;
-  }
-  .Dental_services_heading {
-    font-weight: 600;
-    font-size: 30px;
-  }
-  .Dental_services {
-    margin-bottom: 0px !important;
-    padding-bottom: 50px;
-    width: 100%;
-    height: auto;
-    background: url(../img/dental_services_bg.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 992px) {
-  .Dental_services {
-    margin-bottom: 70px;
-    padding-bottom: 50px;
-    width: 100%;
-    height: auto;
-    position: relative;
-    /* added */
-    overflow: hidden;
-    /* added */
-    background: none;
-  }
-  .Dental_services::before {
-    content: "";
-    position: absolute;
-    width: 112%;
-    height: 100%;
-    background: url(../img/dental_services_bg.png) no-repeat center;
-    background-size: contain;
-    transform: translate(4%, -2%) rotate(270deg);
-    z-index: -1;
-  }
-  .cards {
-    width: 339px;
-  }
-  .Dental_services_heading {
-    margin-top: 20px;
-    line-height: 147%;
-  }
-  .card_numbers {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    height: 100%;
-  }
-  .card_content > h5 {
-    text-align: left;
-  }
-  .card_content > h3 {
-    text-align: left;
-  }
-}
-
-@media (max-width: 768px) {
-  .Dental_services::before {
-    content: "";
-    position: absolute;
-    width: 115%;
-    height: 100%;
-    background: url(../img/dental_services_bg.png) no-repeat center;
-    background-size: contain;
-    transform: translate(-6%, -1%) rotate(270deg);
-    z-index: -1;
-  }
-  .cards {
-    width: 48%;
-    height: 350px;
-  }
-  .Dental_services_heading {
-    margin-top: 82px;
-    line-height: 147%;
-  }
-  .card_content > p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 576px) {
-  .Dental_services::before {
-    display: none;
-  }
-  .cards {
-    width: 260px;
+    width: 310px;
     height: 320px;
-  }
-  .card_numbers {
-    display: block;
-    height: auto;
-  }
-  .card_content > h5 {
-    text-align: left;
-  }
-  .card_content > h3 {
-    text-align: left;
-  }
-  .card_section {
+    border-radius: 16px;
+    border: 2px solid rgba(27, 137, 118, 1);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 0px 14px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-    width: 100%;
-    margin-top: 28px;
-    position: relative;
-    overflow: hidden;
-  }
-  .marquee-content {
-    display: flex;
-    flex-shrink: 0;
-    gap: 15px;
-    animation: marquee 40s linear infinite;
-  }
-  .marquee-content.clone {
-    display: flex;
-  }
-  .card_section:hover .marquee-content {
-    animation-play-state: paused;
-    cursor: grab;
-  }
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  .blur_border {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .blur_border::before {
-    content: "";
-    width: 100px;
-    height: 100%;
-    background: url("../img/image_border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    rotate: 180deg;
-    position: absolute;
-    right: -11px;
-    top: 0;
-    z-index: 11;
-  }
-  .blur_border::after {
-    content: "";
-    width: 100px;
-    height: 100%;
-    background: url("../img/image_border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    z-index: 11;
-  }
-  .card_section::-webkit-scrollbar {
-    display: none;
-  }
-  .cards {
-    flex-shrink: 0;
-  }
-  .Dental_services {
-    margin-bottom: 50px !important;
-    padding-bottom: 20px;
-    width: 100%;
-    height: auto;
-    background: url(../img/dental_services_bg.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    overflow: visible;
-  }
-  .Dental_services_heading {
-    margin-top: 40px;
-    line-height: 130%;
-    font-size: 26px;
-  }
+    flex-direction: column;
+    justify-content: space-between
 }
 
-@media (max-width: 440px) {
-  .Dental_services_heading {
-    margin-top: 20px;
-    line-height: 130%;
-    font-size: 22px;
-    font-weight: 900;
-    height: 100%;
-  }
-  .cards {
-    width: 260px;
-    height: 320px;
-  }
-  .card_content > h5 {
-    text-align: left;
-  }
-  .card_content > h3 {
-    text-align: left;
-  }
-  .card_content > p {
-    margin-top: 15px;
+.card_numbers>h1 {
+    font-size: 80px;
+    color: rgba(27, 137, 119, 0.329);
+    font-family: montserrat, sans-serif
+}
+
+.card_numbers>span {
+    font-size: 80px;
+    color: rgba(27, 137, 119, 0.329);
+    font-family: montserrat, sans-serif;
+    font-weight: 700
+}
+
+.card_content>h5 {
+    color: rgba(27, 137, 118, 1);
     font-weight: 500;
-  }
-  .card_numbers > h1 {
-    font-size: 80px;
-  }
-  .card_numbers > span {
-    font-size: 80px;
-  }
+    font-family: montserrat, sans-serif
 }
 
-/*----------------------- Clientele sections-------------------  */
+.card_content>h3 {
+    color: rgba(27, 137, 118, 1);
+    font-weight: 500;
+    font-family: montserrat, sans-serif;
+    letter-spacing: -0.25%
+}
+
+.card_content>p {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    font-family: montserrat, sans-serif;
+    line-height: 150%
+}
+
+@media (max-width:1530px) {
+    .Dental_services {
+        margin-top: 0px;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        width: 100%;
+        height: auto;
+        background: url(../img/dental_services_bg2.png);
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat
+    }
+
+    .Dental_services_heading {
+        margin-top: 15px;
+        font-size: 35px
+    }
+
+    .card_section {
+        margin-top: 20px
+    }
+}
+
+@media (max-width:1400px) {
+    .cards {
+        width: 265px
+    }
+
+    .Dental_services {
+        margin-bottom: 70px;
+        padding-bottom: 50px;
+        width: 100%;
+        height: auto;
+        background: url(../img/dental_services_bg2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat
+    }
+}
+
+@media (max-width:1200px) {
+    .cards {
+        width: 273px
+    }
+
+    .Dental_services_heading {
+        font-weight: 600;
+        font-size: 30px
+    }
+
+    .Dental_services {
+        margin-bottom: 0px !important;
+        padding-bottom: 50px;
+        width: 100%;
+        height: auto;
+        background: url(../img/dental_services_bg.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat
+    }
+}
+
+@media (max-width:992px) {
+    .Dental_services {
+        margin-bottom: 70px;
+        padding-bottom: 50px;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        background: none
+    }
+
+    .Dental_services::before {
+        content: "";
+        position: absolute;
+        width: 112%;
+        height: 100%;
+        background: url(../img/dental_services_bg.png) no-repeat center;
+        background-size: contain;
+        transform: translate(4%, -2%) rotate(270deg);
+        z-index: -1
+    }
+
+    .cards {
+        width: 339px
+    }
+
+    .Dental_services_heading {
+        margin-top: 20px;
+        line-height: 147%
+    }
+
+    .card_numbers {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        height: 100%
+    }
+
+    .card_content>h5 {
+        text-align: left
+    }
+
+    .card_content>h3 {
+        text-align: left
+    }
+}
+
+@media (max-width:768px) {
+    .Dental_services::before {
+        content: "";
+        position: absolute;
+        width: 115%;
+        height: 100%;
+        background: url(../img/dental_services_bg.png) no-repeat center;
+        background-size: contain;
+        transform: translate(-6%, -1%) rotate(270deg);
+        z-index: -1
+    }
+
+    .cards {
+        width: 48%;
+        height: 350px
+    }
+
+    .Dental_services_heading {
+        margin-top: 82px;
+        line-height: 147%
+    }
+
+    .card_content>p {
+        font-size: 15px
+    }
+}
+
+@media (max-width:576px) {
+    .Dental_services::before {
+        display: none
+    }
+
+    .cards {
+        width: 260px;
+        height: 320px
+    }
+
+    .card_numbers {
+        display: block;
+        height: auto
+    }
+
+    .card_content>h5 {
+        text-align: left
+    }
+
+    .card_content>h3 {
+        text-align: left
+    }
+
+    .card_section {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        width: 100%;
+        margin-top: 28px;
+        position: relative;
+        overflow: hidden
+    }
+
+    .marquee-content {
+        display: flex;
+        flex-shrink: 0;
+        gap: 15px;
+        animation: marquee 40s linear infinite
+    }
+
+    .marquee-content.clone {
+        display: flex
+    }
+
+    .card_section:hover .marquee-content {
+        animation-play-state: paused;
+        cursor: grab
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0)
+        }
+
+        100% {
+            transform: translateX(-100%)
+        }
+    }
+
+    .blur_border {
+        width: 100%;
+        height: 100%;
+        position: relative
+    }
+
+    .blur_border::before {
+        content: "";
+        width: 100px;
+        height: 100%;
+        background: url("../img/image_border.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        rotate: 180deg;
+        position: absolute;
+        right: -11px;
+        top: 0;
+        z-index: 11
+    }
+
+    .blur_border::after {
+        content: "";
+        width: 100px;
+        height: 100%;
+        background: url("../img/image_border.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        z-index: 11
+    }
+
+    .card_section::-webkit-scrollbar {
+        display: none
+    }
+
+    .cards {
+        flex-shrink: 0
+    }
+
+    .Dental_services {
+        margin-bottom: 50px !important;
+        padding-bottom: 20px;
+        width: 100%;
+        height: auto;
+        background: url(../img/dental_services_bg.png);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        overflow: visible
+    }
+
+    .Dental_services_heading {
+        margin-top: 40px;
+        line-height: 130%;
+        font-size: 26px
+    }
+}
+
+@media (max-width:440px) {
+    .Dental_services_heading {
+        margin-top: 20px;
+        line-height: 130%;
+        font-size: 22px;
+        font-weight: 900;
+        height: 100%
+    }
+
+    .cards {
+        width: 260px;
+        height: 320px
+    }
+
+    .card_content>h5 {
+        text-align: left
+    }
+
+    .card_content>h3 {
+        text-align: left
+    }
+
+    .card_content>p {
+        margin-top: 15px;
+        font-weight: 500
+    }
+
+    .card_numbers>h1 {
+        font-size: 80px
+    }
+
+    .card_numbers>span {
+        font-size: 80px
+    }
+}
+
 :root {
-  --clientele-heading-size: 40px;
-  --clientele-subheading-size: 18px;
-  --clientele-item-title-size: 32px;
-  --clientele-item-desc-size: 16px;
-  --clientele-item-number-size: 18px;
-  /* --clientele-vector-size: 120px; */
-  --clientele-vector-size: 150px;
+    --clientele-heading-size: 40px;
+    --clientele-subheading-size: 18px;
+    --clientele-item-title-size: 32px;
+    --clientele-item-desc-size: 16px;
+    --clientele-item-number-size: 18px;
+    --clientele-vector-size: 150px
 }
 
 .coustom_icon_video {
-  width: 110px;
+    width: 110px
 }
 
-@media (max-width: 1280px) {
-  :root {
-    --clientele-heading-size: 26px;
-    --clientele-item-title-size: 20px;
-    --clientele-item-number-size: 18px;
-    /* --clientele-vector-size: 100px; */
-    --clientele-vector-size: 130px;
-  }
-  .coustom_icon_video {
-    width: 95px;
-  }
+@media (max-width:1280px) {
+    :root {
+        --clientele-heading-size: 26px;
+        --clientele-item-title-size: 20px;
+        --clientele-item-number-size: 18px;
+        --clientele-vector-size: 130px
+    }
+
+    .coustom_icon_video {
+        width: 95px
+    }
 }
 
-@media (max-width: 992px) {
-  :root {
-    --clientele-heading-size: 30px;
-    --clientele-item-title-size: 20px;
-    --clientele-item-number-size: 18px;
-    /* --clientele-vector-size: 100px; */
-    --clientele-vector-size: 130px;
-  }
-  .coustom_icon_video {
-    width: 95px;
-  }
+@media (max-width:992px) {
+    :root {
+        --clientele-heading-size: 30px;
+        --clientele-item-title-size: 20px;
+        --clientele-item-number-size: 18px;
+        --clientele-vector-size: 130px
+    }
+
+    .coustom_icon_video {
+        width: 95px
+    }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --clientele-heading-size: 26px;
-    --clientele-subheading-size: 14px;
-    /* --clientele-vector-size: 80px; */
-    --clientele-vector-size: 120px;
-  }
-  .coustom_icon_video {
-    width: 90px;
-    margin-left: 20px;
-  }
+@media (max-width:768px) {
+    :root {
+        --clientele-heading-size: 26px;
+        --clientele-subheading-size: 14px;
+        --clientele-vector-size: 120px
+    }
+
+    .coustom_icon_video {
+        width: 90px;
+        margin-left: 20px
+    }
 }
 
-@media (max-width: 576px) {
-  :root {
-    --clientele-heading-size: 22px;
-    --clientele-item-title-size: 18px;
-    --clientele-item-desc-size: 15px;
-    /* --clientele-vector-size: 90px; */
-    --clientele-subheading-size: 15px;
-    --clientele-vector-size: 120px;
-  }
-  .coustom_icon_video {
-    width: 90px;
-  }
+@media (max-width:576px) {
+    :root {
+        --clientele-heading-size: 22px;
+        --clientele-item-title-size: 18px;
+        --clientele-item-desc-size: 15px;
+        --clientele-subheading-size: 15px;
+        --clientele-vector-size: 120px
+    }
+
+    .coustom_icon_video {
+        width: 90px
+    }
 }
 
 .clientele_header_row {
-  margin-left: 80px;
+    margin-left: 80px
 }
 
 .clientele_section {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff
 }
 
 .clientele_section_heading {
-  font-family: montserrat, sans-serif;
-  font-size: var(--clientele-heading-size);
-  font-weight: 600;
-  background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
-  line-height: 1.3;
+    font-family: montserrat, sans-serif;
+    font-size: var(--clientele-heading-size);
+    font-weight: 600;
+    background: linear-gradient(92.19deg, #1b8976 -56.21%, #00d5ff 184.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    line-height: 1.3
 }
 
 .clientele_section_subheading {
-  font-family: montserrat, sans-serif;
-  font-size: var(--clientele-subheading-size);
-  font-weight: 400;
-  color: rgba(0, 0, 0, 1);
-  line-height: 160%;
-  margin-bottom: 0;
+    font-family: montserrat, sans-serif;
+    font-size: var(--clientele-subheading-size);
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    line-height: 160%;
+    margin-bottom: 0
 }
 
 .clientele_item_content {
-  margin-left: 28px !important;
+    margin-left: 28px !important
 }
 
 .clientele_scroll_wrapper {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
+    flex: 1;
+    overflow: hidden;
+    position: relative
 }
 
 .clientele_list {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 25vh;
-  padding-left: 0;
-  z-index: 111;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25vh;
+    padding-left: 0;
+    z-index: 111
 }
 
 .clientele_item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 60px !important;
-  transition: all 0.4s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 60px !important;
+    transition: all 0.4s ease
 }
 
 .clientele_item:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .clientele_item_left {
-  display: flex;
-  position: relative;
-  padding-left: 20px !important;
+    display: flex;
+    position: relative;
+    padding-left: 20px !important
 }
 
 .clientele_item_left::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  bottom: -150px;
-  width: 2px;
-  background-color: rgba(25, 140, 121, 0.2);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: -150px;
+    width: 2px;
+    background-color: rgba(25, 140, 121, 0.2)
 }
 
 .clientele_item:last-child .clientele_item_left::before {
-  display: none;
+    display: none
 }
 
 .clientele_item_left::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  height: 0;
-  width: 2px;
-  background-color: rgba(27, 137, 118, 1);
-  transition: height 0.4s ease;
-  z-index: 1;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 0;
+    width: 2px;
+    background-color: rgba(27, 137, 118, 1);
+    transition: height 0.4s ease;
+    z-index: 1
 }
 
 .clientele_item.active .clientele_item_left::after {
-  height: 90px;
+    height: 90px
 }
 
 .clientele_item_number {
-  font-family: montserrat, sans-serif;
-  font-size: var(--clientele-item-number-size);
-  font-weight: 500;
-  color: #dfdfdf;
-  transition: color 0.4s ease;
-  min-width: 40px;
+    font-family: montserrat, sans-serif;
+    font-size: var(--clientele-item-number-size);
+    font-weight: 500;
+    color: #dfdfdf;
+    transition: color 0.4s ease;
+    min-width: 40px
 }
 
 .clientele_item.active .clientele_item_number {
-  color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1)
 }
 
 .clientele_item_title {
-  font-family: montserrat, sans-serif;
-  font-size: var(--clientele-item-title-size);
-  font-weight: 500;
-  color: #dfdfdf;
-  margin-bottom: 12px;
-  margin-top: -3px;
-  transition: color 0.4s ease;
+    font-family: montserrat, sans-serif;
+    font-size: var(--clientele-item-title-size);
+    font-weight: 500;
+    color: #dfdfdf;
+    margin-bottom: 12px;
+    margin-top: -3px;
+    transition: color 0.4s ease
 }
 
 .clientele_item.active .clientele_item_title {
-  color: rgba(27, 137, 118, 1);
+    color: rgba(27, 137, 118, 1)
 }
 
 .clientele_item_desc {
-  font-family: montserrat, sans-serif;
-  font-size: var(--clientele-item-desc-size);
-  font-weight: 400;
-  color: #dfdfdf;
-  line-height: 160%;
-  transition: color 0.4s ease;
+    font-family: montserrat, sans-serif;
+    font-size: var(--clientele-item-desc-size);
+    font-weight: 400;
+    color: #dfdfdf;
+    line-height: 160%;
+    transition: color 0.4s ease
 }
 
 .clientele_item.active .clientele_item_desc {
-  color: #000000;
+    color: #000000
 }
 
 .clientele_vector_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
 }
 
 .clientele_vector_inactive {
-  width: var(--clientele-vector-size);
-  height: auto;
-  color: #dfdfdf;
-  opacity: 0.1;
-  filter: blur(2px);
-  z-index: 1;
+    width: var(--clientele-vector-size);
+    height: auto;
+    color: #dfdfdf;
+    opacity: 0.1;
+    filter: blur(2px);
+    z-index: 1
 }
 
 .clientele_vector {
-  width: var(--clientele-vector-size);
-  height: auto;
-  position: absolute;
-  z-index: 2;
-  opacity: 0.5;
+    width: var(--clientele-vector-size);
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.5
 }
 
 .clientele_item .clientele_vector path[fill="black"],
 .clientele_item .clientele_vector_inactive path[fill="black"] {
-  fill: currentColor;
+    fill: currentColor
 }
 
 .clientele_item .clientele_vector path[stroke="black"],
 .clientele_item .clientele_vector_inactive path[stroke="black"] {
-  stroke: currentColor;
+    stroke: currentColor
 }
 
-@media (max-width: 1535px) {
-  .clientele_section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-  .clientele_section_heading {
-    margin-top: 10px;
-  }
+@media (max-width:1535px) {
+    .clientele_section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #ffffff
+    }
+
+    .clientele_section_heading {
+        margin-top: 10px
+    }
 }
 
-@media (max-width: 1280px) {
-  .clientele_section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-  .clientele_section_heading {
-    margin-top: 10px;
-  }
+@media (max-width:1280px) {
+    .clientele_section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #ffffff
+    }
+
+    .clientele_section_heading {
+        margin-top: 10px
+    }
 }
 
-@media (max-width: 1180px) {
-  .clientele_section {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-  .clientele_section_heading {
-    margin-top: 10px;
-  }
+@media (max-width:1180px) {
+    .clientele_section {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #ffffff
+    }
+
+    .clientele_section_heading {
+        margin-top: 10px
+    }
 }
 
-@media (max-width: 820px) {
-  .clientele_section {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-  .clientele_section_heading {
-    margin-top: 0px;
-  }
+@media (max-width:820px) {
+    .clientele_section {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #ffffff
+    }
+
+    .clientele_section_heading {
+        margin-top: 0px
+    }
 }
 
-@media (max-width: 768px) {
-  .clientele_item {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 30px !important;
-    justify-content: center !important;
-    align-items: start !important;
-  }
-  .clientele_item_left {
-    display: flex;
-    position: relative;
-    padding-left: 20px !important;
-    margin-top: 20px;
-  }
-  .clientele_header_row {
-    margin-left: 0px;
-  }
-  .clientele_item_title {
-    margin-bottom: 5px;
-  }
-  .clientele_item_desc {
-    margin-bottom: 0px;
-  }
-  .clientele_item_content {
-    margin-left: 5px !important;
-  }
-  .clientele_vector_wrapper {
-    margin-left: 15px;
-    justify-content: start;
-    margin-left: 62px;
-  }
+@media (max-width:768px) {
+    .clientele_item {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 30px !important;
+        justify-content: center !important;
+        align-items: start !important
+    }
+
+    .clientele_item_left {
+        display: flex;
+        position: relative;
+        padding-left: 20px !important;
+        margin-top: 20px
+    }
+
+    .clientele_header_row {
+        margin-left: 0px
+    }
+
+    .clientele_item_title {
+        margin-bottom: 5px
+    }
+
+    .clientele_item_desc {
+        margin-bottom: 0px
+    }
+
+    .clientele_item_content {
+        margin-left: 5px !important
+    }
+
+    .clientele_vector_wrapper {
+        margin-left: 15px;
+        justify-content: start;
+        margin-left: 62px
+    }
 }
 
-@media (max-width: 576px) {
-  .clientele_section_heading {
-    font-weight: 900;
-  }
-  .clientele_item_title {
-    font-weight: 500;
-  }
+@media (max-width:576px) {
+    .clientele_section_heading {
+        font-weight: 900
+    }
+
+    .clientele_item_title {
+        font-weight: 500
+    }
 }
