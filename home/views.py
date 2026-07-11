@@ -822,6 +822,42 @@ def robots(request):
     return render(request, 'robot.txt', content_type='text')
 
 
+def llms_txt(request):
+    import html
+    blogs_raw = Blog.objects.filter(status=True).order_by('-published')
+    places_raw = Place.objects.all().order_by('name')
+    
+    blogs = []
+    for b in blogs_raw:
+        title = b.title or b.h1 or ''
+        description = b.description or ''
+        title = html.unescape(html.unescape(title))
+        description = html.unescape(html.unescape(description))
+        blogs.append({
+            'title': title,
+            'slug': b.slug,
+            'description': description,
+        })
+        
+    places = []
+    for p in places_raw:
+        title = p.title or p.name or ''
+        description = p.description or ''
+        title = html.unescape(html.unescape(title))
+        description = html.unescape(html.unescape(description))
+        places.append({
+            'title': title,
+            'slug': p.slug,
+            'description': description,
+        })
+        
+    context = {
+        'blogs': blogs,
+        'places': places,
+    }
+    return render(request, 'llms.txt', context, content_type='text/plain; charset=utf-8')
+
+
 def categories(request):
     data1 =  Category.objects.all().order_by('-id')
     page = request.GET.get('page', 1)
@@ -1811,3 +1847,15 @@ def qualityDental(request):
 
     }
     return render(request, 'quality_dental_services.html', context)
+def team_section(request):
+    context = {
+
+    }
+    return render(request, 'home-product.html', context)
+
+def n_b_f(request):
+    context = {
+
+    }
+    return render(request, 'n-b-f.html', context)
+

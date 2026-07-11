@@ -47,6 +47,8 @@ urlpatterns = [
     path('guest-posting/', views.gp, name='gp'),
     path('faq', views.faq, name='faq'),
     path('robots.txt/', views.robots, name='robot'),
+    path('llms.txt', views.llms_txt, name='llms_txt'),
+    path('llms.txt/', views.llms_txt),
     path('upload/', views.file_upload, name='upload'),
     path('testimonials/', views.testimonals, name='testimonals'),
     path('login/', views.user_login, name='user_login'),
@@ -79,4 +81,5 @@ urlpatterns = [
     path('new-section/', views.newSection, name='newSection'),
     path('home-banner/', views.homeBanner, name='homeBanner'),
     path('quality-dental-services/', views.qualityDental, name='qualityDental'),
+    path('team-section/', views.team_section, name='team_section'),
 ]
