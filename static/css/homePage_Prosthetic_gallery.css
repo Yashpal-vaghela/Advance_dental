@@ -1,0 +1,134 @@
+/* --------- smile_story_section--------- */
+.smile_story_main {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+}
+.smile_story_title {
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  line-height: 60px;
+}
+
+.smile_story_images_main {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: visible;
+  border: none;
+  perspective: 2500px;
+  /* border: 1px solid rgb(175, 251, 152); */
+}
+
+.smile-story-swiper {
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  overflow: visible !important;
+  transform-style: preserve-3d;
+  transform: rotateY(18deg) rotateZ(2deg) rotateX(5deg);
+  /* border: 1px solid red; */
+}
+
+/* Linear continuous scroll transition */
+.smile-story-swiper .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.story-slide {
+  width: auto;
+  height: 80%;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  position: relative;
+  /* border: 1px solid black; */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.story-slide img {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none !important;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 1550px) {
+  .smile_story_images_main {
+    height: auto;
+    margin-top: 10px;
+  }
+  .smile_story_title {
+    font-size: 30px;
+    line-height: 48px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+  }
+  .story-slide {
+    width: 290px;
+  }
+  .smile-story-swiper {
+    height: 90%;
+  }
+}
+
+@media (max-width: 1285px) {
+  .smile_story_title {
+    font-size: 26px;
+    line-height: 37px;
+    margin-top: 16px;
+    margin-bottom: 5px;
+  }
+  .story-slide {
+    width: 220px;
+  }
+  .smile-story-swiper {
+    height: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  .story-slide {
+    width: 252px;
+  }
+  .smile-story-swiper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Prosthetic_gallery_btn{
+    margin-top: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .smile_story_title {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .smile-story-swiper {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .smile_story_images_main {
+    margin-bottom: 10px;
+  }
+  .story-slide {
+    width: 180px;
+  }
+  .Prosthetic_gallery_btn{
+    width: 245px;
+  }
+}

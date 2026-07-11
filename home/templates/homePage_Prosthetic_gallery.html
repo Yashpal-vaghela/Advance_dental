@@ -1,0 +1,133 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% load static %}
+{% block seo %}
+{% endblock seo %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/homePage_Prosthetic_gallery.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+{% comment %} <section class="smile_story_main">
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+        <h2 class="smile_story_title heading-text-color">Gallery - Advance Dental Export</h2>
+    </div>
+    <div class="smile_story_images_main">
+        <div class="swiper smile-story-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_1.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_2.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_3.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_4.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_5.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_6.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_7.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_8.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_9.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_10.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_11.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_12.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_13.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+
+                <div class="swiper-slide story-slide">
+                    <img src="{% static 'homePage_Prosthetic_gallery_img/homePage_Prosthetic_gallery_img_14.webp' %}"
+                        alt="Prosthetic_gallery_img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 text-center">
+        <div class="all-posts-btn wow fadeInUp">
+            <a href="{% url 'home:gallery' %}" class="btn btn-blue blue-hover submit Prosthetic_gallery_btn"
+                aria-label="See more in the Ade Gallery">
+                See More in the Gallery
+            </a>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<section class="smile_story_main">
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+        <h2 class="smile_story_title heading-text-color">
+            Gallery - Advance Dental Export
+        </h2>
+    </div>
+
+    <div class="smile_story_images_main">
+        <div class="swiper smile-story-swiper">
+            <div class="swiper-wrapper">
+                {% for ie in gallery %}
+                <div class="swiper-slide story-slide">
+                    <img src="{{ ie.image.url }}" alt="{{ ie.alt|default:'Advance Dental Export Gallery' }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 text-center">
+        <div class="all-posts-btn wow fadeInUp">
+            <a href="{% url 'home:gallery' %}"
+               class="btn btn-blue blue-hover submit Prosthetic_gallery_btn"
+               aria-label="See more in the ADE Gallery">
+                See More in the Gallery
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
+{% block javascript %}
+<script src="{% static 'js/homePage_Prosthetic_gallery.js' %}"></script>
+{% endblock javascript %}
