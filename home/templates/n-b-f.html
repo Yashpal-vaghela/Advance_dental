@@ -58,7 +58,7 @@
     </div>
     <div class="image_gallery_container">
         <div class="gallery_ring">
-            {% for b_f_items in beforeafter %}
+            {% for b_f_items in data %}
             <div class="gallery_item"><img src="{{ b_f_items.image.url }}" alt="{{ b_f_items.alt|default:b_f_items.name }}"></div>
             {% endfor %}
         </div>
@@ -66,7 +66,7 @@
 </section>
 
 <div class="container simpale_img_view">
-    {% for b_f_items in beforeafter %}
+    {% for b_f_items in data %}
     <div class="img_wrapper" data-aos="{% cycle 'fade-down-right' 'fade-down' 'fade-down-left' 'fade-up-right' 'fade-up' 'fade-up-left' %}">
         <img src="{{ b_f_items.image.url }}" alt="{{ b_f_items.alt|default:b_f_items.name }}">
     </div>

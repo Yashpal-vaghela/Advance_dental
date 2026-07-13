@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://advancedentalexport.com/sitemap.xml
+X-Robots-Tag: llms.txt
