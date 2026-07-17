@@ -117,7 +117,7 @@ def home(request):
     data = Testimonials.objects.all().order_by("-id")[:20]
     data2 = Blog.objects.all().order_by("-id")[:3]
     client = Client.objects.all().order_by("-id")
-    gallery = Gallery.objects.all().order_by("-id")[:7]
+    gallery = Gallery.objects.all().order_by("-id")
     gallery21 = BeforeAfter.objects.all().order_by("-id")
     video = VideoTestimonals.objects.all().order_by("-id")
     awards = Award.objects.all().order_by("-id")
@@ -184,7 +184,7 @@ def verify_warrenty(request):
             messages.error(request, 'Your Warrenty Card Is Invalid')
             return redirect('home:verify_warrenty')
         
-    return render(request, 'verify_warrenty.html')
+    return render(request, 'verify_warrenty.html')  
 
 def blogd(request, pk):
     data =  Blog.objects.get(slug=pk)
@@ -676,7 +676,7 @@ def beforeafter(request):
     context = {
         'data':data,
     }
-    return render(request, 'beforeafter.html', context)
+    return render(request, 'n-b-f.html', context)
 
 def stl(request):
             

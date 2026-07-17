@@ -72,13 +72,13 @@
 					<!-- GALLERY IMAGES HOLDER -->
 					<div class="row">	
 						<div class="col-md-12 gallery-items-list">
-							<div class="masonry-wrap grid-loaded" style="position: relative; height: 1731.52px;">
+							<div class="masonry-wrap grid-loaded">
 
 
                                 
                                 {% for ie in data %}
                                     	<!-- IMAGE #1 -->
-                                        <div class="gallery-item dental mb-2 mt-2" style="position: absolute; left: 0%; top: 0px;">
+                                        <div class="gallery-item dental col-lg-4 col-md-6 col-sm-12 mb-4">
                                             <div class="hover-overlay"> 
 
                                                 <!-- Gallery Image -->
@@ -136,10 +136,8 @@
     
 
 
-{% block javascript %}
-	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    {% comment %} <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script> {% endcomment %}
-    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-	<script src="{% static 'js/gallery.js' %}"></script>
-{% endblock javascript %}
-    
+{% block js %}
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}" defer></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}" defer></script>
+	<script src="{% static 'js/gallery.js' %}" defer></script>
+{% endblock js %}

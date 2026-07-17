@@ -282,7 +282,7 @@ class Client(models.Model):
 
 class Gallery(models.Model):   
     name = models.CharField(max_length = 156)
-    image  = models.ImageField(upload_to="SEO")
+    image  = models.ImageField(upload_to="SEO/Prosthetic_gallery")
     alt = models.CharField(max_length=156, blank=True, null=True)
     
     def __str__(self):
