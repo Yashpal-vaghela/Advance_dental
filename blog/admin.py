@@ -206,6 +206,13 @@ class DoctorReviewAdmin(admin.ModelAdmin):
     list_display = ('name', 'priority')
     search_fields = ['name']
 
+class EventsGalleryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image_path', 'category', 'alt')
+
+    def image_path(self, obj):
+        return obj.image.name if obj.image else "-"
+    image_path.short_description = "Image Path"
+
 # Register your models here.
 
 admin.site.register(Blog, BlogAdmin)
@@ -216,7 +223,7 @@ admin.site.register(ContactDetails)
 admin.site.register(Tags)
 admin.site.register(MostPopularBlog)
 admin.site.register(Events)
-admin.site.register(EventsGallery)
+admin.site.register(EventsGallery, EventsGalleryAdmin)
 admin.site.register(NewEventLink)
 admin.site.register(Product)
 admin.site.register(SubProduct)

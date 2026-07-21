@@ -58,7 +58,7 @@
     </div>
     <div class="image_gallery_container">
         <div class="gallery_ring">
-            {% for b_f_items in data %}
+            {% for b_f_items in data1 %}
             <div class="gallery_item"><img src="{{ b_f_items.image.url }}" alt="{{ b_f_items.alt|default:b_f_items.name }}"></div>
             {% endfor %}
         </div>

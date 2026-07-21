@@ -15,7 +15,7 @@ import os
 #     'js/wow.js'
 # ]
 js_files = [
-    'js/contact-form.js'
+    'js/rainyday.js'
 ]
 for js_path in js_files:
     with open(js_path, 'r') as js_file:

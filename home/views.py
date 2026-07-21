@@ -407,32 +407,61 @@ def contact_new(request):
             #     subject=f"New Contact Form Submission from {context_dict['Name']}",
             #     context_dict=context_dict,
             # )
-            threading.Thread(
-                target= send_email_async,
-                args=(context_dict,),
-                daemon=True
-            ).start()
+            # threading.Thread(
+            #     target= send_email_async,
+            #     args=(context_dict,),
+            #     daemon=True
+            # ).start()
 
-            bikai_payload  ={
-               "Name": submission.name,
-               "Email": submission.email,
-               "Contact": submission.contact,
-               "City": submission.city,
-               "Subject": submission.subject,
-               "Message": submission.message,
-               "DateTime": formatted_datetime,
+            # bikai_payload  ={
+            #    "Name": submission.name,
+            #    "Email": submission.email,
+            #    "Contact": submission.contact,
+            #    "City": submission.city,
+            #    "Subject": submission.subject,
+            #    "Message": submission.message,
+            #    "DateTime": formatted_datetime,
+            # }
+            # bikai_url = (
+            #     "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
+            # )
+            # headers = {
+            #     "Content-Type": "application/json",
+            # }
+ 
+            # try:
+            #     crm_response = requests.post(
+            #         bikai_url,
+            #         json=bikai_payload,
+            #         headers=headers,
+            #         timeout=10,
+            #     )
+            #     crm_response.raise_for_status()
+            #     messages.success(request, "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly.")
+            # except requests.exceptions.RequestException as e:
+            #     messages.warning(
+            #         request,
+            #         f"Form saved but could not send to CRM.bikapi Error: {str(e)}",
+            #     )
+
+            #zoho intigration payload------
+            zoho_payload ={
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Website": "Advance Dental export",
             }
-            bikai_url = (
-                "https://bikapi.bikayi.app/chatbot/webhook/YB4POk4LJXQxQk1pgmcYMCUMZwu1?flow=websitelea4344"
-            )
+            zoho_url=("https://flow.zoho.in/60070945438/flow/webhook/incoming?zapikey=1001.a119cd21b36db26402ffe013750915ad.885b5855c0af73a633e0a39a93142bcd&isdebug=false")
             headers = {
                 "Content-Type": "application/json",
             }
- 
             try:
                 crm_response = requests.post(
-                    bikai_url,
-                    json=bikai_payload,
+                    zoho_url,
+                    json=zoho_payload,
                     headers=headers,
                     timeout=10,
                 )
@@ -441,7 +470,7 @@ def contact_new(request):
             except requests.exceptions.RequestException as e:
                 messages.warning(
                     request,
-                    f"Form saved but could not send to CRM. Error: {str(e)}",
+                    f"Form saved but could not send to CRM.bikapi Error: {str(e)}",
                 )
 
             return redirect("home:home")
@@ -533,7 +562,18 @@ def career(request):
 
 
 def exhibition(request):
+    event_list = Events.objects.all().order_by('-id')
+    page = request.GET.get('page', 1)
+    paginator = Paginator(event_list, 12)
+    try:
+        data = paginator.page(page)
+    except PageNotAnInteger:
+        data = paginator.page(1)
+    except EmptyPage:
+        data = paginator.page(paginator.num_pages)
     context = {
+        'event': data,
+        'data': data,
     }
     return render(request, 'exhibition.html', context)
 
@@ -672,9 +712,12 @@ def adImplants(request):
 
 
 def beforeafter(request):
-    data = BeforeAfter.objects.all()
+    data = BeforeAfter.objects.all().order_by('-id')
+    data1 = BeforeAfter.objects.all().order_by('-id')[:16]
     context = {
         'data':data,
+        'data1':data1,
+
     }
     return render(request, 'n-b-f.html', context)
 

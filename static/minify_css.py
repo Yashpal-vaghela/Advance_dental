@@ -23,9 +23,9 @@ css_files = [
     # 'css/footer.css'
 ]
 css_files = [
-    'css/blog.css',
+    # 'css/blog.css',
     # 'css/style.css',
-    # 'css/responsive.css'
+    'css/new-section.css'
 ]
 for css_path in css_files:
     full_css_path = os.path.join(BASE_DIR, css_path)
