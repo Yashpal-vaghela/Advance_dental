@@ -10,7 +10,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
   {% load static %} {% block seo %} {% endblock %}
-    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
+    <link rel="shortcut icon" href="{% static 'favicon_io/favicon.ico' %}" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,24 +30,22 @@
       rel="stylesheet"
     />
     {% endcomment %}
-    <link rel="preload" href="{% static 'css/flaticon.css' %}" as="stylesheet" />
-    <link href="{% static 'css/flaticon.css' %}" rel="stylesheet" />
     <link href="{% static 'css/menu.css' %}" rel="stylesheet" />
-    <link rel="preload" href="{% static 'css/review.css' %}" as="stylesheet" />
+    {% comment %} <link rel="preload" href="{% static 'css/review.css' %}" as="stylesheet" /> {% endcomment %}
     <link href="{% static 'css/review.css' %}" rel="stylesheet" />
-    <link rel="preload" href="{% static 'css/animate.css' %}" as="stylesheet" />
+    {% comment %} <link rel="preload" href="{% static 'css/animate.css' %}" as="stylesheet" /> {% endcomment %}
     <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
     <link rel="preload" href="{% static 'css/style.css' %}" as="style" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link rel="preload" href="{% static 'css/responsive.css' %}" as="style" />
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-    <link rel="preload" href="{% static 'css/banner.css' %}" as="stylesheet" />
+    {% comment %} <link rel="preload" href="{% static 'css/banner.css' %}" as="stylesheet" /> {% endcomment %}
     <link href="{% static 'css/banner.css' %}" rel="stylesheet" />
     <link href="{% static 'css/footer.css'%}" rel="stylesheet" />
     <!--CDN LINKS-->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" />
+    {% comment %} <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" /> {% endcomment %}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style" />
+    {% comment %} <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style" /> {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
   {% block css %} {% endblock %}
   {% include "tracking.html" %}

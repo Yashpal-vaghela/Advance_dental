@@ -23,7 +23,10 @@ from enquiry.forms import ContactForm, CareerForm, CareerFileForm
 # Thread function for email sending
 def send_email_async(context_dict):
     send_mail(
-        to_email="vaghela9632@gmail.com",
+        to_email=[
+            "vaghela9632@gmail.com",
+            "vyashpalsinh9@gmail.com",
+        ],
         subject=f"New Contact Form Submission from {context_dict['Name']}",
         context_dict=context_dict,
     )
@@ -104,6 +107,36 @@ def home(request):
                     request,
                     f"Form saved but could not send to CRM. Error: {str(e)}",
                 )
+
+            #zoho intigration payload------
+            zoho_payload ={
+                "Name": submission.name,
+                "Email": submission.email,
+                "Phone": submission.contact,
+                "City": submission.city,
+                "Subject": submission.subject,
+                "Message": submission.message,
+                "Website": "Advance Dental export",
+            }
+            zoho_url=("https://flow.zoho.in/60070945438/flow/webhook/incoming?zapikey=1001.a119cd21b36db26402ffe013750915ad.885b5855c0af73a633e0a39a93142bcd&isdebug=false")
+            headers = {
+                "Content-Type": "application/json",
+            }
+            try:
+                crm_response = requests.post(
+                    zoho_url,
+                    json=zoho_payload,
+                    headers=headers,
+                    timeout=10,
+                )
+                crm_response.raise_for_status()
+                messages.success(request, "Thanks for contacting the Advance Dental Export Team. We will get back to you shortly.")
+            except requests.exceptions.RequestException as e:
+                messages.warning(
+                    request,
+                    f"Form Saved But Could Not Send to CRM. Error: {str(e)}",
+                )
+            
 
             return redirect("home:home")
         else:
@@ -470,7 +503,7 @@ def contact_new(request):
             except requests.exceptions.RequestException as e:
                 messages.warning(
                     request,
-                    f"Form saved but could not send to CRM.bikapi Error: {str(e)}",
+                    f"Form saved but could not send to CRM.zoho Error: {str(e)}",
                 )
 
             return redirect("home:home")
@@ -1625,12 +1658,19 @@ def sitemap(request):
     webstory = WebStory.objects.all()
     exhibition = Events.objects.all()
 
+    excluded_slugs = [
+        "digital-crown-bridge",
+        "bps-biofunctional-prosthetic-system",
+        "nobelprocera",
+    ]
+
     context = {
         'data':data1,
         'places':places,
         'webstory':webstory,
         'products':products,
-        'exhibition':exhibition
+        'exhibition':exhibition,
+        'excluded_slugs': excluded_slugs
     }
     return render(request,'sitemap.html',context)
 

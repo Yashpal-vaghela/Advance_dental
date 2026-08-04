@@ -3,7 +3,11 @@
 {% block seo%}
 <title>{% spaceless %}{{data.meta_title}}{% endspaceless %}</title>
 <meta name="description"content="{% spaceless %}{{data.meta_description}}{% endspaceless %}"/>
+{% if request.GET.page %}
+<link rel="canonical" href="{% spaceless %}{{ data.canonical }}/?page={{ request.GET.page }}{% endspaceless %}" />
+{% else %}
 <link rel="canonical" href="{% spaceless %}{{ data.canonical }}{% endspaceless %}" />
+{% endif %}
 <meta property="og:site_name" content="Advance Dental Export">
 <meta property="og:url" content="{% spaceless %}{{ data.canonical }}{% endspaceless %}">
 <meta property="og:title" content="{% spaceless %}{{ data.meta_title }}{% endspaceless %}">

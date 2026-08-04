@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="Explore the Advance Dental Export Blog for the latest dental innovations, industry trends, and expert insights to enhance your dental practice.">
 <meta name="twitter:title" content="Advance Dental Export Blog | Latest Dental Innovations & Industry Insights">
 <meta name="twitter:image" content="{% static 'seo/blog/b125/8.jpg' %}">
-{% if page_obj.number > 1 %}
-    <link rel="canonical" href="https://advancedentalexport.com/blog/?page={{ page_obj.number }}">
+{% if request.GET.page %}
+    <link rel="canonical" href="https://advancedentalexport.com/blog/?page={{ request.GET.page }}">
 {% else %}
     <link rel="canonical" href="https://advancedentalexport.com/blog/">
 {% endif %}

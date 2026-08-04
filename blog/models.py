@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.urls import reverse
@@ -378,7 +379,10 @@ class Award(models.Model):
     alt = models.CharField(max_length=255, blank=True, null=True)
     
     def save(self, *args, **kwargs):
-        self.alt = self.name
+        if self.image:
+            filename = os.path.splitext(os.path.basename(self.image.name))[0]
+            self.alt = filename.replace("-", " ").replace("_", " ").title()
+
         super().save(*args, **kwargs)
 
 class DoctorReview(models.Model):   

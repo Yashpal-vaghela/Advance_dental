@@ -102,9 +102,11 @@
           <h3>Products</h3>
           <div class="row align-items-center">
           {% for product in products %}
-            <div class="col-md-6 col-lg-4">
-              <a href="/{{product.slug}}/">{{product.breadcrumb}}</a>
-            </div>
+            {% if product.slug not in excluded_slugs %}
+              <div class="col-md-6 col-lg-4">
+                <a href="/{{product.slug}}/">{{product.breadcrumb}}</a>
+              </div>
+            {% endif %}
           {% endfor %}
           </div>
         </div>

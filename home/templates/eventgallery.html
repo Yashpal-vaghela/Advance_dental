@@ -4,16 +4,17 @@
 {% block seo %}    
 <title>	ADE at {% spaceless %}{{cat.name}}{% endspaceless %}: Event Highlights and Gallery</title>
 <meta name="description" content="{% spaceless %}{{ meta_description }}{% endspaceless %}" />
-{% if data.number > 1 %}
-    <link rel="canonical" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/?page={{ data.number }}" />
+{% if request.GET.page %}
+    <link rel="canonical" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/?page={{ request.GET.page }}" />
+    <meta property="og:url" content="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/?page={{ request.GET.page }}" />
 {% else %}
     <link rel="canonical" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/" />
+    <meta property="og:url" content="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/" />
 {% endif %}
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{% spaceless %}{{cat.name}}{% endspaceless %}" />
 <meta property="og:description" content="{% spaceless %}{{ meta_description }}{% endspaceless %}" />
-<meta property="og:url" content="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/" />
 <meta property="og:site_name" content="Advance Dental Export" />
 <meta name="og:image" content="{% static 'img/feature.webp' %}" />
 <meta property="og:image:width" content="1200" />
@@ -23,8 +24,8 @@
 <meta name="twitter:description" content="{% spaceless %}{{ meta_description }}{% endspaceless %}" />
 <meta name="twitter:title" content="{% spaceless %}{{cat.name}}{% endspaceless %}" />
 <meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
-<link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}" />
-<link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}" />
+<link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/" />
+<link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/exhibition-gallery/{{ slug }}/" />
 <link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
 <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
 {% endblock seo %}
@@ -32,7 +33,7 @@
 {% block css %}
 {% endblock css %}
     
-
+ 
 
 {% block body %}
 
@@ -92,7 +93,7 @@
 									<nav aria-label="Page navigation">
 										<ul class="pagination justify-content-center primary-theme">
 											{% if data.has_previous %}
-											<li class="page-item disabled"><a class="page-link" rel="prev" href="?page={{ data.previous_page_number }}" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
+											<li class="page-item"><a class="page-link" rel="prev" href="?page={{ data.previous_page_number }}"><i class="fas fa-long-arrow-alt-left"></i></a></li>
 											{% else %}
 											<li class="page-item disabled"><a class="page-link" rel="prev" href="#" tabindex="-1"><i class="fas fa-long-arrow-alt-left"></i></a></li>
 											{% endif %}

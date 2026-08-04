@@ -144,7 +144,8 @@
         width: 100%;
         height: 440px
     }
-        /* .image-placeholder {
+
+    /* .image-placeholder {
         position: relative;
         margin-top: -30px;
         width: 100%;
@@ -178,13 +179,15 @@
         overflow: hidden;
         /* border: 1px solid red; */
     }
+
     .image-placeholder {
         margin-top: -20px;
         height: 380px;
     }
+
     .dental-laboratory-section-heading {
-        font-size: 25px;
-        font-weight: 900
+        font-size: 24px;
+        font-weight: 900;
     }
 
     .dental-laboratory-section-subheading {
@@ -192,13 +195,15 @@
         text-align: right;
         font-weight: 500;
         margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+        line-height: 130%;
     }
 
     .dental-laboratory-section-subheading-2 {
         font-size: 15px;
         font-weight: 500;
         margin-top: 10px;
+        line-height: 130%;
     }
 }
 
@@ -208,12 +213,13 @@
     }
 
     .dental-laboratory-section-subheading {
-        font-size: 15px
+        font-size: 14px
     }
 
     .dental-laboratory-section-subheading-2 {
-        font-size: 15px
+        font-size: 14px
     }
+
     .image-placeholder {
         margin-top: -20px;
         height: 300px;

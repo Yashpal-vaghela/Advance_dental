@@ -4,7 +4,11 @@
 {% block seo %}    
 <title>Exhibition Gallery - Advance Dental Export</title>
 <meta name="description" content="Discover Advance Dental Export's Exhibition Gallery showcasing innovative dental designs, breakthrough tech, and exhibits that set top industry standards." />
+{% if request.GET.page %}
+<link rel="canonical" href="https://advancedentalexport.com/exhibition-gallery/?page={{ request.GET.page }}" />
+{% else %}
 <link rel="canonical" href="https://advancedentalexport.com/exhibition-gallery/" />
+{% endif %}
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Exhibition Gallery - Advance Dental Export" />
