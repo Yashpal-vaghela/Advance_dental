@@ -1,10 +1,10 @@
 if (history.scrollRestoration) {
     history.scrollRestoration = "manual";
 }
-window.scrollTo(0, 0);
-window.addEventListener("beforeunload", () => {
-    window.scrollTo(0, 0);
-});
+// window.scrollTo(0, 0);
+// window.addEventListener("beforeunload", () => {
+//     window.scrollTo(0, 0);
+// });
 let currentWidth = window.innerWidth;
 
 window.addEventListener("resize", () => {
@@ -366,7 +366,7 @@ window.addEventListener("load", () => {
     if (typeof ScrollTrigger !== "undefined") {
         ScrollTrigger.refresh();
     }
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 10);
+    // setTimeout(() => {
+    //     window.scrollTo(0, 0);
+    // }, 10);
 });
