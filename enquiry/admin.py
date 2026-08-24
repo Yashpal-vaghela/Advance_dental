@@ -15,7 +15,7 @@ def export_contacts_csv(modeladmin, request, queryset):
     writer = csv.writer(response)
 
     #header
-    writer.writerow(['Name','Email','Phone','Date', 'Message'])
+    writer.writerow(['Name','Email','Phone','City','Date', 'Subject', 'Message'])
 
     #data of the rows
     for contact in queryset:
@@ -25,6 +25,7 @@ def export_contacts_csv(modeladmin, request, queryset):
             contact.contact,
             contact.city,
             contact.date.strftime("%Y-%m-%d") if contact.date else "",
+            contact.subject,
             contact.message,
         ])
     return response
