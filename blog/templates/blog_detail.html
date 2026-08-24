@@ -1,90 +1,38 @@
 {% extends 'base.html' %} {% load static %} {% block seo %}
 <title>{% spaceless %}{{data.title}}{% endspaceless %}</title>
-<meta
-  name="description"
-  content="{% spaceless %}{{data.description}}{% endspaceless %}"
-/>
-<meta
-  name="keyword"
-  content="{% spaceless %}{{data.keyword}}{% endspaceless %}"
-/>
-<link
-  rel="canonical"
-  href="{% spaceless %}{{data.canonical}}{% endspaceless %}"
-/>
+<meta name="description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
+<meta name="keyword" content="{% spaceless %}{{data.keyword}}{% endspaceless %}" />
+<link rel="canonical" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
 <!-- Opengraphs -->
-<meta
-  property="og:title"
-  content="{% spaceless %}{{data.title}}{% endspaceless %}"
-/>
-<meta
-  property="og:type"
-  content="{% spaceless %}{{data.og_type}}{% endspaceless %}"
-/>
-<meta
-  property="og:url"
-  content="{% spaceless %}{{data.canonical}}{% endspaceless %}"
-/>
-<meta
-  property="og:image"
-  content="{% spaceless %}{{data.image.url}}{% endspaceless %}"
-/>
-<meta
-  property="og:description"
-  content="{% spaceless %}{{data.description}}{% endspaceless %}"
-/>
-<meta
-  property="article:published_time"
-  content="{% spaceless %}{{data.published|date:'c'}}T10:00:00+05:30{% endspaceless %}"
-/>
-<meta
-  property="article:modified_time"
-  content="{% spaceless %}{{data.updated|date:'c'}}{% endspaceless %}"
-/>
+<meta property="og:title" content="{% spaceless %}{{data.title}}{% endspaceless %}" />
+<meta property="og:type" content="{% spaceless %}{{data.og_type}}{% endspaceless %}" />
+<meta property="og:url" content="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
+<meta property="og:image" content="{% spaceless %}{{data.image.url}}{% endspaceless %}" />
+<meta property="og:description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
+<meta property="article:published_time"
+  content="{% spaceless %}{{data.published|date:'c'}}T10:00:00+05:30{% endspaceless %}" />
+<meta property="article:modified_time" content="{% spaceless %}{{data.updated|date:'c'}}{% endspaceless %}" />
 
-<meta
-  name="twitter:card"
-  content="{% spaceless %}{{data.description}}{% endspaceless %}"
-/>
+<meta name="twitter:card" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
 <meta name="twitter:site" content="@thegrandindianroute" />
-<meta
-  name="twitter:title"
-  content="{% spaceless %}{{data.title}}{% endspaceless %} "
-/>
-<meta
-  name="twitter:description"
-  content="{% spaceless %}{{data.description}}{% endspaceless %}"
-/>
-<meta
-  name="twitter:image"
-  content="{% spaceless %}{{data.image.url}}{% endspaceless %}"
-/>
-<link
-  rel="alternate"
-  hreflang="x-default"
-  href="{% spaceless %}{{data.canonical}}{% endspaceless %}"
-/>
-<link
-  rel="alternate"
-  hreflang="en-IN"
-  href="{% spaceless %}{{data.canonical}}{% endspaceless %}"
-/>
+<meta name="twitter:title" content="{% spaceless %}{{data.title}}{% endspaceless %} " />
+<meta name="twitter:description" content="{% spaceless %}{{data.description}}{% endspaceless %}" />
+<meta name="twitter:image" content="{% spaceless %}{{data.image.url}}{% endspaceless %}" />
+<link rel="alternate" hreflang="x-default" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
+<link rel="alternate" hreflang="en-IN" href="{% spaceless %}{{data.canonical}}{% endspaceless %}" />
 {% endblock seo %} {% block css %}
 <link rel="preload" href="{% static 'css/blog.css' %}" as="stylesheet" />
-<link
-  href="{% static 'css/blog.css' %}"
-  rel="stylesheet"
-  media="print"
-  onload="this.media='all'"
-/>
+<link href="{% static 'css/blog.css' %}" rel="stylesheet" media="print" onload="this.media='all'" />
 <link rel="stylesheet" href="{% static 'css/swal.css' %}" />
 <style>
   p {
     font-size: 18px;
   }
+
   .content p {
     width: 100% !important;
   }
+
   .content ul,
   .content ol {
     padding-left: 25px !important;
@@ -137,10 +85,7 @@
 
 <!-- BLOG PAGE CONTENT
 			============================================= -->
-<div
-  id="blog-page"
-  class="wide-100 pb-0 blog-page-section division position-relative"
->
+<div id="blog-page" class="wide-100 pb-0 blog-page-section division position-relative">
   <div class="container">
     <div class="row position-relative mb-5">
       <!-- BLOG POSTS HOLDER -->
@@ -148,45 +93,30 @@
         <h1 class="single-blog-main-title fw-bold heading-text-color">{{data.h1}}</h1>
         <div class="blog-meta text-center mb-4">
           <span class="meta-item">
-            <svg
-              class="celender-svg me-1 mb-0 img-fluid"
-              width="20"
-              height="20"
-              viewBox="0 0 17 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="celender-svg me-1 mb-0 img-fluid" width="20" height="20" viewBox="0 0 17 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14.2771 1.22375H13.0533C13.0533 0.549056 12.5043 0 11.8296 0C11.1549 0 10.6058 0.549056 10.6058 1.22375H5.71083C5.71083 0.549056 5.16178 0 4.48708 0C3.81239 0 3.26333 0.549056 3.26333 1.22375H2.03958C0.914957 1.22375 0 2.13871 0 3.26333V15.0929C0 16.2175 0.914957 17.1325 2.03958 17.1325H14.2771C15.4017 17.1325 16.3167 16.2175 16.3167 15.0929V3.26333C16.3167 2.13871 15.4017 1.22375 14.2771 1.22375ZM11.4217 1.22375C11.4264 1.11872 11.4714 1.01955 11.5474 0.946887C11.6234 0.874225 11.7244 0.833673 11.8296 0.833673C11.9347 0.833673 12.0358 0.874225 12.1118 0.946887C12.1878 1.01955 12.2328 1.11872 12.2375 1.22375V2.03958C12.2328 2.14461 12.1878 2.24378 12.1118 2.31645C12.0358 2.38911 11.9347 2.42966 11.8296 2.42966C11.7244 2.42966 11.6234 2.38911 11.5474 2.31645C11.4714 2.24378 11.4264 2.14461 11.4217 2.03958V1.22375ZM4.07917 1.22375C4.08386 1.11872 4.12889 1.01955 4.20488 0.946887C4.28086 0.874225 4.38195 0.833673 4.48708 0.833673C4.59222 0.833673 4.6933 0.874225 4.76929 0.946887C4.84527 1.01955 4.8903 1.11872 4.895 1.22375V2.03958C4.8903 2.14461 4.84527 2.24378 4.76929 2.31645C4.6933 2.38911 4.59222 2.42966 4.48708 2.42966C4.38195 2.42966 4.28086 2.38911 4.20488 2.31645C4.12889 2.24378 4.08386 2.14461 4.07917 2.03958V1.22375ZM0.815833 3.26333C0.815833 2.58864 1.36489 2.03958 2.03958 2.03958H3.26333C3.26333 2.71428 3.81239 3.26333 4.48708 3.26333C5.16178 3.26333 5.71083 2.71428 5.71083 2.03958H10.6058C10.6058 2.71428 11.1549 3.26333 11.8296 3.26333C12.5043 3.26333 13.0533 2.71428 13.0533 2.03958H14.2771C14.9518 2.03958 15.5008 2.58864 15.5008 3.26333V4.895H0.815833V3.26333ZM15.5008 15.0929C15.5008 15.7676 14.9518 16.3167 14.2771 16.3167H2.03958C1.36489 16.3167 0.815833 15.7676 0.815833 15.0929V5.71083H15.5008V15.0929Z"
-                fill="#1B8976"
-              />
+                fill="#1B8976" />
               <path
                 d="M3.26334 10.1979H4.48709C4.93703 10.1979 5.30293 9.83198 5.30293 9.38205V8.1583C5.30293 7.70837 4.93703 7.34247 4.48709 7.34247H3.26334C2.81341 7.34247 2.44751 7.70837 2.44751 8.1583V9.38205C2.44751 9.83198 2.81341 10.1979 3.26334 10.1979ZM3.26334 8.1583H4.48709L4.48791 9.38205H3.26334V8.1583ZM7.54647 10.1979H8.77022C9.22015 10.1979 9.58605 9.83198 9.58605 9.38205V8.1583C9.58605 7.70837 9.22015 7.34247 8.77022 7.34247H7.54647C7.09654 7.34247 6.73064 7.70837 6.73064 8.1583V9.38205C6.73064 9.83198 7.09654 10.1979 7.54647 10.1979ZM7.54647 8.1583H8.77022L8.77103 9.38205H7.54647V8.1583ZM11.8296 10.1979H13.0533C13.5033 10.1979 13.8692 9.83198 13.8692 9.38205V8.1583C13.8692 7.70837 13.5033 7.34247 13.0533 7.34247H11.8296C11.3797 7.34247 11.0138 7.70837 11.0138 8.1583V9.38205C11.0138 9.83198 11.3797 10.1979 11.8296 10.1979ZM11.8296 8.1583H13.0533L13.0542 9.38205H11.8296V8.1583ZM3.26334 14.685H4.48709C4.93703 14.685 5.30293 14.3191 5.30293 13.8691V12.6454C5.30293 12.1955 4.93703 11.8296 4.48709 11.8296H3.26334C2.81341 11.8296 2.44751 12.1955 2.44751 12.6454V13.8691C2.44751 14.3191 2.81341 14.685 3.26334 14.685ZM3.26334 12.6454H4.48709L4.48791 13.8691H3.26334V12.6454ZM7.54647 14.685H8.77022C9.22015 14.685 9.58605 14.3191 9.58605 13.8691V12.6454C9.58605 12.1955 9.22015 11.8296 8.77022 11.8296H7.54647C7.09654 11.8296 6.73064 12.1955 6.73064 12.6454V13.8691C6.73064 14.3191 7.09654 14.685 7.54647 14.685ZM7.54647 12.6454H8.77022L8.77103 13.8691H7.54647V12.6454ZM11.8296 14.685H13.0533C13.5033 14.685 13.8692 14.3191 13.8692 13.8691V12.6454C13.8692 12.1955 13.5033 11.8296 13.0533 11.8296H11.8296C11.3797 11.8296 11.0138 12.1955 11.0138 12.6454V13.8691C11.0138 14.3191 11.3797 14.685 11.8296 14.685ZM11.8296 12.6454H13.0533L13.0542 13.8691H11.8296V12.6454Z"
-                fill="#1B8976"
-              /></svg
-            >{{data.published}}
+                fill="#1B8976" />
+            </svg>{{data.published}}
           </span>
           <span class="meta-item">
-            <svg
-              class="author-svg img-fluid mb-0 me-1"
-              width="20"
-              height="20"
-              viewBox="0 0 26 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="author-svg img-fluid mb-0 me-1" width="20" height="20" viewBox="0 0 26 26" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2048_160)">
                 <path
                   d="M12.75 0C9.04259 0 6.02637 3.01622 6.02637 6.72363C6.02637 10.431 9.04259 13.4473 12.75 13.4473C16.4574 13.4473 19.4736 10.431 19.4736 6.72363C19.4736 3.01622 16.4574 0 12.75 0ZM12.75 11.9531C9.86646 11.9531 7.52051 9.60717 7.52051 6.72363C7.52051 3.84009 9.86646 1.49414 12.75 1.49414C15.6335 1.49414 17.9795 3.84009 17.9795 6.72363C17.9795 9.60717 15.6335 11.9531 12.75 11.9531ZM21.1155 17.8398C19.2747 15.9707 16.8344 14.9414 14.2441 14.9414H11.2559C8.66562 14.9414 6.22529 15.9707 4.38451 17.8398C2.55274 19.6997 1.54395 22.1548 1.54395 24.7529C1.54395 25.1655 1.87843 25.5 2.29102 25.5H23.209C23.6216 25.5 23.9561 25.1655 23.9561 24.7529C23.9561 22.1548 22.9473 19.6997 21.1155 17.8398ZM3.07096 24.0059C3.44524 19.7682 6.9732 16.4355 11.2559 16.4355H14.2441C18.5268 16.4355 22.0548 19.7682 22.429 24.0059H3.07096Z"
-                  fill="#1B8976"
-                />
+                  fill="#1B8976" />
               </g>
               <defs>
                 <clipPath id="clip0_2048_160">
                   <rect width="25.5" height="25.5" fill="white" />
                 </clipPath>
-              </defs></svg
-            >{{data.author}}
+              </defs>
+            </svg>{{data.author}}
           </span>
         </div>
         <div class="single-blog-page position-relative">
@@ -198,11 +128,7 @@
         <div class="author-section mb-4">
           <div class="author-inner d-flex row align-items-center">
             <div class="author-image col-lg-3">
-              <img
-                src="{% static 'author-ade-new.webp' %}"
-                class="img-fluid desktop-img"
-                alt="Author Image"
-              />
+              <img src="{% static 'author-ade-new.webp' %}" class="img-fluid desktop-img" alt="Author Image" />
               <img src="{% static 'tablet-screen.webp' %}" class="img-fluid mobile-img" alt="Tablet Screen">
             </div>
             <div class="col-lg-9">
@@ -215,98 +141,41 @@
                 <!-- Author section -->
                 <div class="author-social-links">
                   {% if data.author.fb %}
-                    <a
-                      href="{{data.author.fb}}"
-                      class="social-icon"
-                      target="_blank"
-                      aria-label="Facebook"
-                    >
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="0.5"
-                          y="0.5"
-                          width="23.1791"
-                          height="23.1791"
-                          rx="11.5896"
-                          fill="#1B8976"
-                        />
-                        <path
-                          d="M14.6167 12.56H12.7277V18.2018H10.209V12.56H8.1437V10.2428H10.209V8.45458C10.209 6.43966 11.418 5.30626 13.2566 5.30626C14.1381 5.30626 15.07 5.48257 15.07 5.48257V7.47231H14.0374C13.0299 7.47231 12.7277 8.07678 12.7277 8.73163V10.2428H14.9693L14.6167 12.56Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a>
-                  {% endif %} 
+                  <a href="{{data.author.fb}}" class="social-icon" target="_blank" aria-label="Facebook">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="23.1791" height="23.1791" rx="11.5896" fill="#1B8976" />
+                      <path
+                        d="M14.6167 12.56H12.7277V18.2018H10.209V12.56H8.1437V10.2428H10.209V8.45458C10.209 6.43966 11.418 5.30626 13.2566 5.30626C14.1381 5.30626 15.07 5.48257 15.07 5.48257V7.47231H14.0374C13.0299 7.47231 12.7277 8.07678 12.7277 8.73163V10.2428H14.9693L14.6167 12.56Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  {% endif %}
                   {% if data.author.insta %}
-                    <a
-                      href="{{data.author.insta}}"
-                      class="social-icon"
-                      target="_blank"
-                      aria-label="Instagram"
-                    >
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="0.5"
-                          y="0.5"
-                          width="23.1791"
-                          height="23.1791"
-                          rx="11.5896"
-                          fill="#1B8976"
-                        />
-                        <path
-                          d="M11.7314 8.85757C13.3181 8.85757 14.6278 10.1673 14.6278 11.754C14.6278 13.366 13.3181 14.6505 11.7314 14.6505C10.1195 14.6505 8.83494 13.366 8.83494 11.754C8.83494 10.1673 10.1195 8.85757 11.7314 8.85757ZM11.7314 13.643C12.764 13.643 13.5952 12.8119 13.5952 11.754C13.5952 10.7214 12.764 9.89022 11.7314 9.89022C10.6736 9.89022 9.8424 10.7214 9.8424 11.754C9.8424 12.8119 10.6987 13.643 11.7314 13.643ZM15.4086 8.75682C15.4086 9.13462 15.1064 9.43686 14.7286 9.43686C14.3508 9.43686 14.0486 9.13462 14.0486 8.75682C14.0486 8.37902 14.3508 8.07678 14.7286 8.07678C15.1064 8.07678 15.4086 8.37902 15.4086 8.75682ZM17.3228 9.43686C17.3732 10.3688 17.3732 13.1645 17.3228 14.0964C17.2724 15.0031 17.0709 15.7839 16.4161 16.4639C15.7612 17.1188 14.9553 17.3203 14.0486 17.3706C13.1167 17.421 10.3209 17.421 9.38904 17.3706C8.48232 17.3203 7.70154 17.1188 7.0215 16.4639C6.36665 15.7839 6.16516 15.0031 6.11479 14.0964C6.06441 13.1645 6.06441 10.3688 6.11479 9.43686C6.16516 8.53014 6.36665 7.72417 7.0215 7.06932C7.70154 6.41447 8.48232 6.21298 9.38904 6.1626C10.3209 6.11223 13.1167 6.11223 14.0486 6.1626C14.9553 6.21298 15.7612 6.41447 16.4161 7.06932C17.0709 7.72417 17.2724 8.53014 17.3228 9.43686ZM16.1139 15.0786C16.4161 14.3482 16.3405 12.5852 16.3405 11.754C16.3405 10.9481 16.4161 9.18499 16.1139 8.42939C15.9124 7.95085 15.5346 7.54786 15.056 7.37156C14.3004 7.06932 12.5374 7.14488 11.7314 7.14488C10.9002 7.14488 9.13717 7.06932 8.40676 7.37156C7.90303 7.57305 7.52523 7.95085 7.32374 8.42939C7.0215 9.18499 7.09706 10.9481 7.09706 11.754C7.09706 12.5852 7.0215 14.3482 7.32374 15.0786C7.52523 15.5824 7.90303 15.9602 8.40676 16.1617C9.13717 16.4639 10.9002 16.3884 11.7314 16.3884C12.5374 16.3884 14.3004 16.4639 15.056 16.1617C15.5346 15.9602 15.9375 15.5824 16.1139 15.0786Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a>
+                  <a href="{{data.author.insta}}" class="social-icon" target="_blank" aria-label="Instagram">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="23.1791" height="23.1791" rx="11.5896" fill="#1B8976" />
+                      <path
+                        d="M11.7314 8.85757C13.3181 8.85757 14.6278 10.1673 14.6278 11.754C14.6278 13.366 13.3181 14.6505 11.7314 14.6505C10.1195 14.6505 8.83494 13.366 8.83494 11.754C8.83494 10.1673 10.1195 8.85757 11.7314 8.85757ZM11.7314 13.643C12.764 13.643 13.5952 12.8119 13.5952 11.754C13.5952 10.7214 12.764 9.89022 11.7314 9.89022C10.6736 9.89022 9.8424 10.7214 9.8424 11.754C9.8424 12.8119 10.6987 13.643 11.7314 13.643ZM15.4086 8.75682C15.4086 9.13462 15.1064 9.43686 14.7286 9.43686C14.3508 9.43686 14.0486 9.13462 14.0486 8.75682C14.0486 8.37902 14.3508 8.07678 14.7286 8.07678C15.1064 8.07678 15.4086 8.37902 15.4086 8.75682ZM17.3228 9.43686C17.3732 10.3688 17.3732 13.1645 17.3228 14.0964C17.2724 15.0031 17.0709 15.7839 16.4161 16.4639C15.7612 17.1188 14.9553 17.3203 14.0486 17.3706C13.1167 17.421 10.3209 17.421 9.38904 17.3706C8.48232 17.3203 7.70154 17.1188 7.0215 16.4639C6.36665 15.7839 6.16516 15.0031 6.11479 14.0964C6.06441 13.1645 6.06441 10.3688 6.11479 9.43686C6.16516 8.53014 6.36665 7.72417 7.0215 7.06932C7.70154 6.41447 8.48232 6.21298 9.38904 6.1626C10.3209 6.11223 13.1167 6.11223 14.0486 6.1626C14.9553 6.21298 15.7612 6.41447 16.4161 7.06932C17.0709 7.72417 17.2724 8.53014 17.3228 9.43686ZM16.1139 15.0786C16.4161 14.3482 16.3405 12.5852 16.3405 11.754C16.3405 10.9481 16.4161 9.18499 16.1139 8.42939C15.9124 7.95085 15.5346 7.54786 15.056 7.37156C14.3004 7.06932 12.5374 7.14488 11.7314 7.14488C10.9002 7.14488 9.13717 7.06932 8.40676 7.37156C7.90303 7.57305 7.52523 7.95085 7.32374 8.42939C7.0215 9.18499 7.09706 10.9481 7.09706 11.754C7.09706 12.5852 7.0215 14.3482 7.32374 15.0786C7.52523 15.5824 7.90303 15.9602 8.40676 16.1617C9.13717 16.4639 10.9002 16.3884 11.7314 16.3884C12.5374 16.3884 14.3004 16.4639 15.056 16.1617C15.5346 15.9602 15.9375 15.5824 16.1139 15.0786Z"
+                        fill="white" />
+                    </svg>
+                  </a>
                   {% endif %}
                   {% if data.author.linkedin %}
-                    <a
-                      href="{{data.author.linkedin}}"
-                      class="social-icon"
-                      target="_blank"
-                      aria-label="LinkedIn"
-                    >
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="0.5"
-                          y="0.5"
-                          width="23.1791"
-                          height="23.1791"
-                          rx="11.5896"
-                          fill="#1B8976"
-                        />
-                        <path
-                          d="M8.60826 16.5898H6.26591V9.05906H8.60826V16.5898ZM7.42449 8.0516C6.69408 8.0516 6.0896 7.42193 6.0896 6.66634C6.0896 5.93592 6.69408 5.33145 7.42449 5.33145C8.18008 5.33145 8.78456 5.93592 8.78456 6.66634C8.78456 7.42193 8.18008 8.0516 7.42449 8.0516ZM17.348 16.5898H15.0308V12.9378C15.0308 12.0563 15.0056 10.9481 13.7967 10.9481C12.5877 10.9481 12.4114 11.88 12.4114 12.8622V16.5898H10.0691V9.05906H12.3107V10.0917H12.3359C12.6633 9.51242 13.4189 8.88275 14.5523 8.88275C16.9198 8.88275 17.3732 10.4443 17.3732 12.4592V16.5898H17.348Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </a>
+                  <a href="{{data.author.linkedin}}" class="social-icon" target="_blank" aria-label="LinkedIn">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="23.1791" height="23.1791" rx="11.5896" fill="#1B8976" />
+                      <path
+                        d="M8.60826 16.5898H6.26591V9.05906H8.60826V16.5898ZM7.42449 8.0516C6.69408 8.0516 6.0896 7.42193 6.0896 6.66634C6.0896 5.93592 6.69408 5.33145 7.42449 5.33145C8.18008 5.33145 8.78456 5.93592 8.78456 6.66634C8.78456 7.42193 8.18008 8.0516 7.42449 8.0516ZM17.348 16.5898H15.0308V12.9378C15.0308 12.0563 15.0056 10.9481 13.7967 10.9481C12.5877 10.9481 12.4114 11.88 12.4114 12.8622V16.5898H10.0691V9.05906H12.3107V10.0917H12.3359C12.6633 9.51242 13.4189 8.88275 14.5523 8.88275C16.9198 8.88275 17.3732 10.4443 17.3732 12.4592V16.5898H17.348Z"
+                        fill="white" />
+                    </svg>
+                  </a>
                   {% endif %}
                 </div>
               </div>
             </div>
           </div>
         </div>
-         <!--Review section -->
+        <!--Review section -->
         <div class="single-page-review">
           <div class="d-flex align-items-center justify-content-between">
             <div class="review-box">
@@ -323,7 +192,8 @@
                 <p class="review-text">Based on google reviews</p>
               </div>
             </div>
-            <a href="https://link.advancedentalexport.com/google-review" target="_blank" class="btn add-review-btn">+ Add review</a>
+            <a href="https://link.advancedentalexport.com/google-review" target="_blank" class="btn add-review-btn">+
+              Add review</a>
           </div>
           <div class="swiper reviewSwiper mt-2">
             <div class="swiper-wrapper ">
@@ -333,25 +203,15 @@
                 <div class="card">
                   <div class="review-image my-3">
                     {% if p.image %}
-                    <img
-                      src="{{ p.image.url }}"
-                      class="img-fluid"
-                      alt="review-user-img"
-                    />
+                    <img src="{{ p.image.url }}" class="img-fluid" alt="review-user-img" />
                     {% else %}
-                    <img
-                      src="{% static 'review-user-img.png'%}"
-                      class="img-fluid"
-                      alt="review-user-img"
-                    />
+                    <img src="{% static 'review-user-img.png'%}" class="img-fluid" alt="review-user-img" />
                     {% endif %}
                   </div>
                   <div class="review-header">
                     <h3>{{ p.name }}</h3>
                   </div>
-                  <div
-                    class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
-                  >
+                  <div class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3">
                     <i class="fa-solid fa-star filled"></i>
                     <i class="fa-solid fa-star filled"></i>
                     <i class="fa-solid fa-star filled"></i>
@@ -361,26 +221,17 @@
                   <p>
                     {{ p.review|truncatechars:180 }}
                     {% if p.google_review_link and p.review|length > 180 %}
-                    <a
-                      href="{{ p.google_review_link }}"
-                      target="_blank"
-                      rel="nofollow noopener"
-                      class="read-more-link "
-                    >
+                    <a href="{{ p.google_review_link }}" target="_blank" rel="nofollow noopener"
+                      class="read-more-link ">
                       Read more
                     </a>
                     {% endif %}
                   </p>
                   {% if p.google_review_link %}
-                    <a href="{{ p.google_review_link }}" target="_blank" rel="nofollow noopener">
-                      <img
-                        src="{% static 'google-verified-img.png' %}"
-                        class="google-verified-img img-fluid mt-2"
-                        alt="Google Verified Review"
-                        width="110"
-                        height="54"
-                      />
-                    </a>
+                  <a href="{{ p.google_review_link }}" target="_blank" rel="nofollow noopener">
+                    <img src="{% static 'google-verified-img.png' %}" class="google-verified-img img-fluid mt-2"
+                      alt="Google Verified Review" width="110" height="54" />
+                  </a>
                   {% endif %}
                 </div>
               </div>
@@ -392,25 +243,15 @@
                 <div class="card">
                   <div class="review-image my-3">
                     {% if n.image %}
-                    <img
-                      src="{{ n.image.url }}"
-                      class="img-fluid"
-                      alt="review-user-img"
-                    />
+                    <img src="{{ n.image.url }}" class="img-fluid" alt="review-user-img" />
                     {% else %}
-                    <img
-                      src="{% static 'review-user-img.png'%}"
-                      class="img-fluid"
-                      alt="review-user-img"
-                    />
+                    <img src="{% static 'review-user-img.png'%}" class="img-fluid" alt="review-user-img" />
                     {% endif %}
                   </div>
                   <div class="review-header">
                     <h3>{{ n.name }}</h3>
                   </div>
-                  <div
-                    class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3"
-                  >
+                  <div class="review-rating d-flex align-items-center justify-content-center gap-2 mb-3">
                     <i class="fa-solid fa-star filled"></i>
                     <i class="fa-solid fa-star filled"></i>
                     <i class="fa-solid fa-star filled"></i>
@@ -420,26 +261,16 @@
                   <p>
                     {{ n.review|truncatechars:180 }}
                     {% if n.google_review_link and n.review|length > 180 %}
-                    <a
-                      href="{{ n.google_review_link }}"
-                      target="_blank"
-                      rel="nofollow noopener"
-                      class="read-more-link"
-                    >
+                    <a href="{{ n.google_review_link }}" target="_blank" rel="nofollow noopener" class="read-more-link">
                       Read more
                     </a>
                     {% endif %}
                   </p>
                   {% if n.google_review_link %}
-                    <a href="{{ n.google_review_link }}" target="_blank" rel="nofollow noopener">
-                      <img
-                        src="{% static 'google-verified-img.png' %}"
-                        class="google-verified-img img-fluid mt-2"
-                        alt="Google Verified Review"
-                        width="110"
-                        height="54"
-                      />
-                    </a>
+                  <a href="{{ n.google_review_link }}" target="_blank" rel="nofollow noopener">
+                    <img src="{% static 'google-verified-img.png' %}" class="google-verified-img img-fluid mt-2"
+                      alt="Google Verified Review" width="110" height="54" />
+                  </a>
                   {% endif %}
                 </div>
               </div>
@@ -456,11 +287,7 @@
             <div class="swiper-wrapper">
               {% for ie in beforeafter %}
               <div class="swiper-slide">
-                <img
-                  src="{{ ie.image.url }}"
-                  alt="{{ie.alt}}"
-                  class="img-fluid"
-                />
+                <img src="{{ ie.image.url }}" alt="{{ie.alt}}" class="img-fluid" />
               </div>
               {% endfor %}
             </div>
@@ -472,126 +299,95 @@
       <div class="col-lg-4 col-md-4 col-12">
         <div class="sidebar-sticky-wrapper">
           {% if related_blogs|length >= 1 %}
-            <div class="single-blog-content2 mb-3">
-              <div class="row align-items-center mb-4  mb-md-3 mb-sm-3">
-                {% for ie in related_blogs %}
-                  <div class="col-lg-5 col-md-12 my-2  my-md-3">
-                    <img
-                      src="{{ie.image.url}}"
-                      class="img-fluid"
-                      alt="{{ie.alt}}"
-                    />
+          <div class="single-blog-content2 mb-3">
+            <div class="row align-items-center mb-4  mb-md-3 mb-sm-3">
+              {% for ie in related_blogs %}
+              <div class="col-lg-5 col-md-12 my-2  my-md-3">
+                <img src="{{ie.image.url}}" class="img-fluid" alt="{{ie.alt}}" />
+              </div>
+              <div class="col-lg-7  col-md-12 mt-2 mb-2">
+                <div class="single-blog-related-content">
+                  <h3>
+                    <a href="{% url 'home:blogd' ie.slug %}" data-title="{{ie.title|lower}}">
+                      {{ie.title}}
+                    </a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <svg class="pe-2 mb-0 img-fluid" width="25" height="25" viewBox="0 0 17 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.2771 1.22375H13.0533C13.0533 0.549056 12.5043 0 11.8296 0C11.1549 0 10.6058 0.549056 10.6058 1.22375H5.71083C5.71083 0.549056 5.16178 0 4.48708 0C3.81239 0 3.26333 0.549056 3.26333 1.22375H2.03958C0.914957 1.22375 0 2.13871 0 3.26333V15.0929C0 16.2175 0.914957 17.1325 2.03958 17.1325H14.2771C15.4017 17.1325 16.3167 16.2175 16.3167 15.0929V3.26333C16.3167 2.13871 15.4017 1.22375 14.2771 1.22375ZM11.4217 1.22375C11.4264 1.11872 11.4714 1.01955 11.5474 0.946887C11.6234 0.874225 11.7244 0.833673 11.8296 0.833673C11.9347 0.833673 12.0358 0.874225 12.1118 0.946887C12.1878 1.01955 12.2328 1.11872 12.2375 1.22375V2.03958C12.2328 2.14461 12.1878 2.24378 12.1118 2.31645C12.0358 2.38911 11.9347 2.42966 11.8296 2.42966C11.7244 2.42966 11.6234 2.38911 11.5474 2.31645C11.4714 2.24378 11.4264 2.14461 11.4217 2.03958V1.22375ZM4.07917 1.22375C4.08386 1.11872 4.12889 1.01955 4.20488 0.946887C4.28086 0.874225 4.38195 0.833673 4.48708 0.833673C4.59222 0.833673 4.6933 0.874225 4.76929 0.946887C4.84527 1.01955 4.8903 1.11872 4.895 1.22375V2.03958C4.8903 2.14461 4.84527 2.24378 4.76929 2.31645C4.6933 2.38911 4.59222 2.42966 4.48708 2.42966C4.38195 2.42966 4.28086 2.38911 4.20488 2.31645C4.12889 2.24378 4.08386 2.14461 4.07917 2.03958V1.22375ZM0.815833 3.26333C0.815833 2.58864 1.36489 2.03958 2.03958 2.03958H3.26333C3.26333 2.71428 3.81239 3.26333 4.48708 3.26333C5.16178 3.26333 5.71083 2.71428 5.71083 2.03958H10.6058C10.6058 2.71428 11.1549 3.26333 11.8296 3.26333C12.5043 3.26333 13.0533 2.71428 13.0533 2.03958H14.2771C14.9518 2.03958 15.5008 2.58864 15.5008 3.26333V4.895H0.815833V3.26333ZM15.5008 15.0929C15.5008 15.7676 14.9518 16.3167 14.2771 16.3167H2.03958C1.36489 16.3167 0.815833 15.7676 0.815833 15.0929V5.71083H15.5008V15.0929Z"
+                        fill="#1B8976" />
+                      <path
+                        d="M3.26334 10.1979H4.48709C4.93703 10.1979 5.30293 9.83198 5.30293 9.38205V8.1583C5.30293 7.70837 4.93703 7.34247 4.48709 7.34247H3.26334C2.81341 7.34247 2.44751 7.70837 2.44751 8.1583V9.38205C2.44751 9.83198 2.81341 10.1979 3.26334 10.1979ZM3.26334 8.1583H4.48709L4.48791 9.38205H3.26334V8.1583ZM7.54647 10.1979H8.77022C9.22015 10.1979 9.58605 9.83198 9.58605 9.38205V8.1583C9.58605 7.70837 9.22015 7.34247 8.77022 7.34247H7.54647C7.09654 7.34247 6.73064 7.70837 6.73064 8.1583V9.38205C6.73064 9.83198 7.09654 10.1979 7.54647 10.1979ZM7.54647 8.1583H8.77022L8.77103 9.38205H7.54647V8.1583ZM11.8296 10.1979H13.0533C13.5033 10.1979 13.8692 9.83198 13.8692 9.38205V8.1583C13.8692 7.70837 13.5033 7.34247 13.0533 7.34247H11.8296C11.3797 7.34247 11.0138 7.70837 11.0138 8.1583V9.38205C11.0138 9.83198 11.3797 10.1979 11.8296 10.1979ZM11.8296 8.1583H13.0533L13.0542 9.38205H11.8296V8.1583ZM3.26334 14.685H4.48709C4.93703 14.685 5.30293 14.3191 5.30293 13.8691V12.6454C5.30293 12.1955 4.93703 11.8296 4.48709 11.8296H3.26334C2.81341 11.8296 2.44751 12.1955 2.44751 12.6454V13.8691C2.44751 14.3191 2.81341 14.685 3.26334 14.685ZM3.26334 12.6454H4.48709L4.48791 13.8691H3.26334V12.6454ZM7.54647 14.685H8.77022C9.22015 14.685 9.58605 14.3191 9.58605 13.8691V12.6454C9.58605 12.1955 9.22015 11.8296 8.77022 11.8296H7.54647C7.09654 11.8296 6.73064 12.1955 6.73064 12.6454V13.8691C6.73064 14.3191 7.09654 14.685 7.54647 14.685ZM7.54647 12.6454H8.77022L8.77103 13.8691H7.54647V12.6454ZM11.8296 14.685H13.0533C13.5033 14.685 13.8692 14.3191 13.8692 13.8691V12.6454C13.8692 12.1955 13.5033 11.8296 13.0533 11.8296H11.8296C11.3797 11.8296 11.0138 12.1955 11.0138 12.6454V13.8691C11.0138 14.3191 11.3797 14.685 11.8296 14.685ZM11.8296 12.6454H13.0533L13.0542 13.8691H11.8296V12.6454Z"
+                        fill="#1B8976" />
+                    </svg>
+                    <span>{{ ie.published|date:"M. d, Y" }}</span>
                   </div>
-                  <div class="col-lg-7  col-md-12 mt-2 mb-2">
-                    <div class="single-blog-related-content">
-                      <h3>
-                        <a href="{% url 'home:blogd' ie.slug %}" data-title="{{ie.title|lower}}">
-                          {{ie.title}}
-                        </a>
-                      </h3>
-                      <div class="d-flex align-items-center">
-                        <svg
-                          class="pe-2 mb-0 img-fluid"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 17 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.2771 1.22375H13.0533C13.0533 0.549056 12.5043 0 11.8296 0C11.1549 0 10.6058 0.549056 10.6058 1.22375H5.71083C5.71083 0.549056 5.16178 0 4.48708 0C3.81239 0 3.26333 0.549056 3.26333 1.22375H2.03958C0.914957 1.22375 0 2.13871 0 3.26333V15.0929C0 16.2175 0.914957 17.1325 2.03958 17.1325H14.2771C15.4017 17.1325 16.3167 16.2175 16.3167 15.0929V3.26333C16.3167 2.13871 15.4017 1.22375 14.2771 1.22375ZM11.4217 1.22375C11.4264 1.11872 11.4714 1.01955 11.5474 0.946887C11.6234 0.874225 11.7244 0.833673 11.8296 0.833673C11.9347 0.833673 12.0358 0.874225 12.1118 0.946887C12.1878 1.01955 12.2328 1.11872 12.2375 1.22375V2.03958C12.2328 2.14461 12.1878 2.24378 12.1118 2.31645C12.0358 2.38911 11.9347 2.42966 11.8296 2.42966C11.7244 2.42966 11.6234 2.38911 11.5474 2.31645C11.4714 2.24378 11.4264 2.14461 11.4217 2.03958V1.22375ZM4.07917 1.22375C4.08386 1.11872 4.12889 1.01955 4.20488 0.946887C4.28086 0.874225 4.38195 0.833673 4.48708 0.833673C4.59222 0.833673 4.6933 0.874225 4.76929 0.946887C4.84527 1.01955 4.8903 1.11872 4.895 1.22375V2.03958C4.8903 2.14461 4.84527 2.24378 4.76929 2.31645C4.6933 2.38911 4.59222 2.42966 4.48708 2.42966C4.38195 2.42966 4.28086 2.38911 4.20488 2.31645C4.12889 2.24378 4.08386 2.14461 4.07917 2.03958V1.22375ZM0.815833 3.26333C0.815833 2.58864 1.36489 2.03958 2.03958 2.03958H3.26333C3.26333 2.71428 3.81239 3.26333 4.48708 3.26333C5.16178 3.26333 5.71083 2.71428 5.71083 2.03958H10.6058C10.6058 2.71428 11.1549 3.26333 11.8296 3.26333C12.5043 3.26333 13.0533 2.71428 13.0533 2.03958H14.2771C14.9518 2.03958 15.5008 2.58864 15.5008 3.26333V4.895H0.815833V3.26333ZM15.5008 15.0929C15.5008 15.7676 14.9518 16.3167 14.2771 16.3167H2.03958C1.36489 16.3167 0.815833 15.7676 0.815833 15.0929V5.71083H15.5008V15.0929Z"
-                            fill="#1B8976"
-                          />
-                          <path
-                            d="M3.26334 10.1979H4.48709C4.93703 10.1979 5.30293 9.83198 5.30293 9.38205V8.1583C5.30293 7.70837 4.93703 7.34247 4.48709 7.34247H3.26334C2.81341 7.34247 2.44751 7.70837 2.44751 8.1583V9.38205C2.44751 9.83198 2.81341 10.1979 3.26334 10.1979ZM3.26334 8.1583H4.48709L4.48791 9.38205H3.26334V8.1583ZM7.54647 10.1979H8.77022C9.22015 10.1979 9.58605 9.83198 9.58605 9.38205V8.1583C9.58605 7.70837 9.22015 7.34247 8.77022 7.34247H7.54647C7.09654 7.34247 6.73064 7.70837 6.73064 8.1583V9.38205C6.73064 9.83198 7.09654 10.1979 7.54647 10.1979ZM7.54647 8.1583H8.77022L8.77103 9.38205H7.54647V8.1583ZM11.8296 10.1979H13.0533C13.5033 10.1979 13.8692 9.83198 13.8692 9.38205V8.1583C13.8692 7.70837 13.5033 7.34247 13.0533 7.34247H11.8296C11.3797 7.34247 11.0138 7.70837 11.0138 8.1583V9.38205C11.0138 9.83198 11.3797 10.1979 11.8296 10.1979ZM11.8296 8.1583H13.0533L13.0542 9.38205H11.8296V8.1583ZM3.26334 14.685H4.48709C4.93703 14.685 5.30293 14.3191 5.30293 13.8691V12.6454C5.30293 12.1955 4.93703 11.8296 4.48709 11.8296H3.26334C2.81341 11.8296 2.44751 12.1955 2.44751 12.6454V13.8691C2.44751 14.3191 2.81341 14.685 3.26334 14.685ZM3.26334 12.6454H4.48709L4.48791 13.8691H3.26334V12.6454ZM7.54647 14.685H8.77022C9.22015 14.685 9.58605 14.3191 9.58605 13.8691V12.6454C9.58605 12.1955 9.22015 11.8296 8.77022 11.8296H7.54647C7.09654 11.8296 6.73064 12.1955 6.73064 12.6454V13.8691C6.73064 14.3191 7.09654 14.685 7.54647 14.685ZM7.54647 12.6454H8.77022L8.77103 13.8691H7.54647V12.6454ZM11.8296 14.685H13.0533C13.5033 14.685 13.8692 14.3191 13.8692 13.8691V12.6454C13.8692 12.1955 13.5033 11.8296 13.0533 11.8296H11.8296C11.3797 11.8296 11.0138 12.1955 11.0138 12.6454V13.8691C11.0138 14.3191 11.3797 14.685 11.8296 14.685ZM11.8296 12.6454H13.0533L13.0542 13.8691H11.8296V12.6454Z"
-                            fill="#1B8976"
-                          />
-                        </svg>
-                        <span>{{ ie.published|date:"M. d, Y" }}</span>
-                      </div>
-                    </div>
-                  </div>
-                {% endfor %}
-                <div class="col-12">
-                  <a href="/blog/">
-                    <button class="btn view-all-blog-btn mt-3 w-100">
-                      Find More Blogs
-                    </button>
-                  </a>
                 </div>
               </div>
+              {% endfor %}
+              <div class="col-12">
+                <a href="/blog/">
+                  <button class="btn view-all-blog-btn mt-3 w-100">
+                    Find More Blogs
+                  </button>
+                </a>
+              </div>
             </div>
+          </div>
           {% endif %}
-          
+
           <div class="single-blog-content2">
             <h2 class="single-blog-content2-title">Contact Us</h2>
-            <form
-              class="single-blog-contact-form form mb-3 mt-3"
-              method="post"
-              action="{% url 'home:blogd' data.slug %}"
-            >
+            <form class="single-blog-contact-form form mb-3 mt-3" method="post"
+              action="{% url 'home:blogd' data.slug %}">
               {% csrf_token %}
               <div class="justify-content-center mx-auto">
                 <div class="col-lg-12 mb-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    class="form-control"
-                    required
-                  />
+                  <input type="text" name="name" placeholder="Name" class="form-control" required />
                 </div>
                 <div class="col-lg-12 mb-4">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    class="form-control"
-                    required
-                  />
+                  <input type="email" name="email" placeholder="Email" class="form-control" required />
                 </div>
                 <div class="col-lg-12 mb-4">
-                  <input
-                    type="number"
-                    name="contact"
-                    placeholder="Phone"
-                    class="form-control"
-                    required
-                  />
+                  <div class="input_and_country_code_main country-phone-wrapper">
+                    <div class="county_code_with_fleg_main" id="countrySelectBtn" role="button" tabindex="0"
+                      aria-label="Select Country Code" aria-expanded="false">
+                      <div class="flag_image">
+                        <img src="https://flagcdn.com/w40/in.png" alt="flag" id="selectedFlag" class="flag_image" />
+                      </div>
+                      <span id="selectedCode" class="selected_code_text">+91</span>
+                      <div class="arrow_icon">
+                        <img src="{% static 'angle-down-in-country-code.svg' %}" alt="down arrow" />
+                      </div>
+                    </div>
+                    <input type="tel" id="phone" name="contact" placeholder="Phone" class="form-control" required />
+                    <input type="hidden" id="fullPhoneInput" name="full_phone" />
+                    <!-- Country Dropdown Menu -->
+                    <div class="country-dropdown-menu" id="countryDropdown">
+                      <div class="country-search-box">
+                        <input type="text" id="countrySearchInput" placeholder="Search country or code..."
+                          autocomplete="off" />
+                      </div>
+                      <ul class="country-list" id="countryList">
+                        <!-- JS Populated -->
+                      </ul>
+                    </div>
+                    </div>
                 </div>
                 <div class="col-lg-12 mb-4">
-                  <input
-                    type="text"
-                    name="city"
-                    placeholder="City"
-                    class="form-control"
-                    required
-                  />
+                  <input type="text" name="city" placeholder="City" class="form-control" required />
                 </div>
                 <div class="col-lg-12 mb-4">
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    class="form-control"
-                    required
-                  />
+                  <input type="text" name="subject" placeholder="Subject" class="form-control" required />
                 </div>
                 <div class="col-md-12 mb-4">
-                  <textarea
-                    type="message"
-                    name="message"
-                    placeholder="Message"
-                    class="form-control"
-                    rows="5"
-                    required
-                  ></textarea>
+                  <textarea type="message" name="message" placeholder="Message" class="form-control" rows="5" 
+                    required></textarea>
                 </div>
                 <div class="col-md-12">
-                  <div
-                    class="g-recaptcha mb-3"
-                    data-sitekey="{{ RECAPTCHA_SITE_KEY }}"
-                  ></div>
+                  <div class="g-recaptcha mb-3" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                   <button class="btn btn-submit d-flex mx-auto" type="submit">
                     submit
                   </button>
@@ -609,36 +405,37 @@
 </div>
 {% endblock body %} {% block js %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{% comment %} <script src="{% static 'js/recaptcha-api.js' %}" async defer></script> {% endcomment %}
+{% comment %}
+<script src="{% static 'js/recaptcha-api.js' %}" async defer></script> {% endcomment %}
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 {% if messages %}
 <script>
   {% for message in messages %}
-    Swal.fire({
-      icon: "{{ message.tags }}",
-      title: "{{ message.tags|capfirst }}",
+  Swal.fire({
+    icon: "{{ message.tags }}",
+    title: "{{ message.tags|capfirst }}",
 
-      html: "<p>{{ message|escapejs }}</p>",
+    html: "<p>{{ message|escapejs }}</p>",
 
-      position: 'center',
-      timer: 3000,
-      showConfirmButton: false,
+    position: 'center',
+    timer: 3000,
+    showConfirmButton: false,
 
-      showClass: {
-        popup: 'animate__animated animate__zoomIn animate__faster'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOut animate__faster'
-      },
+    showClass: {
+      popup: 'animate__animated animate__zoomIn animate__faster'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOut animate__faster'
+    },
 
-      customClass: {
-        popup: 'swal-popup-custom',
-        title: 'swal-title-custom',
-        htmlContainer: 'swal-text-custom'
-      }
-    });
+    customClass: {
+      popup: 'swal-popup-custom',
+      title: 'swal-title-custom',
+      htmlContainer: 'swal-text-custom'
+    }
+  });
   {% endfor %}
 </script>
 {% endif %}
@@ -679,77 +476,77 @@
   });
 </script>
 <script>
-(function(){
-  const OFFSET = 100;
-  const EXTRA_BOTTOM_SPACE = 350;
+  (function () {
+    const OFFSET = 100;
+    const EXTRA_BOTTOM_SPACE = 350;
 
-  function $(sel) { return document.querySelector(sel); }
+    function $(sel) { return document.querySelector(sel); }
 
-  function updateSidebar() {
-    if (window.innerWidth < 992) {
+    function updateSidebar() {
+      if (window.innerWidth < 992) {
+        const sidebar = document.querySelector('.sidebar-sticky-wrapper');
+        if (sidebar) {
+          sidebar.style.position = 'static';
+          sidebar.style.top = '';
+          sidebar.style.width = '';
+        }
+        return;
+      }
+      const left = $('.col-lg-8');
+      const rightCol = $('.col-lg-4');
       const sidebar = document.querySelector('.sidebar-sticky-wrapper');
-      if (sidebar) {
+
+      if (!left || !rightCol || !sidebar) return;
+
+      const container = left.parentElement;
+      if (!container) return;
+
+      // Measurements
+      const scrollY = window.scrollY || window.pageYOffset;
+      const sidebarHeight = sidebar.offsetHeight;
+      const leftTop = left.getBoundingClientRect().top + scrollY;
+      const leftHeight = left.offsetHeight;
+      const leftBottom = leftTop + leftHeight;
+
+      const containerTop = container.getBoundingClientRect().top + scrollY;
+      const containerHeight = container.offsetHeight;
+      const containerBottom = containerTop + containerHeight;
+
+      const stopReferenceBottom = Math.min(leftBottom, containerBottom) + EXTRA_BOTTOM_SPACE;
+
+      if (sidebarHeight + OFFSET >= (stopReferenceBottom - containerTop)) {
         sidebar.style.position = 'static';
         sidebar.style.top = '';
         sidebar.style.width = '';
+        return;
       }
-      return;
-    }
-    const left = $('.col-lg-8');
-    const rightCol = $('.col-lg-4');
-    const sidebar = document.querySelector('.sidebar-sticky-wrapper');
 
-    if (!left || !rightCol || !sidebar) return;
+      const stopAt = stopReferenceBottom - sidebarHeight - OFFSET;
 
-    const container = left.parentElement;
-    if (!container) return;
+      if (scrollY + OFFSET < containerTop) {
+        sidebar.style.position = 'static';
+        sidebar.style.top = '';
+        sidebar.style.width = '';
+        return;
+      }
 
-    // Measurements
-    const scrollY = window.scrollY || window.pageYOffset;
-    const sidebarHeight = sidebar.offsetHeight;
-    const leftTop = left.getBoundingClientRect().top + scrollY;
-    const leftHeight = left.offsetHeight;
-    const leftBottom = leftTop + leftHeight;
-
-    const containerTop = container.getBoundingClientRect().top + scrollY;
-    const containerHeight = container.offsetHeight;
-    const containerBottom = containerTop + containerHeight;
-
-    const stopReferenceBottom = Math.min(leftBottom, containerBottom)+ EXTRA_BOTTOM_SPACE;
-
-    if (sidebarHeight + OFFSET >= (stopReferenceBottom - containerTop)) {
-      sidebar.style.position = 'static';
-      sidebar.style.top = '';
-      sidebar.style.width = '';
-      return;
-    }
-
-    const stopAt = stopReferenceBottom - sidebarHeight - OFFSET;
-
-    if (scrollY + OFFSET < containerTop) {
-      sidebar.style.position = 'static';
-      sidebar.style.top = '';
-      sidebar.style.width = '';
-      return;
-    }
-
-    if (scrollY > stopAt) {
-      sidebar.style.position = 'absolute';
-      const topInsideContainer = (stopReferenceBottom - containerTop - sidebarHeight);
-      sidebar.style.top = topInsideContainer + 'px';
+      if (scrollY > stopAt) {
+        sidebar.style.position = 'absolute';
+        const topInsideContainer = (stopReferenceBottom - containerTop - sidebarHeight);
+        sidebar.style.top = topInsideContainer + 'px';
+        sidebar.style.width = rightCol.offsetWidth + 'px';
+        return;
+      }
+      sidebar.style.position = 'fixed';
+      sidebar.style.top = OFFSET + 'px';
       sidebar.style.width = rightCol.offsetWidth + 'px';
-      return;
     }
-    sidebar.style.position = 'fixed';
-    sidebar.style.top = OFFSET + 'px';
-    sidebar.style.width = rightCol.offsetWidth + 'px';
-  }
 
-  window.addEventListener('scroll', updateSidebar, { passive: true });
-  window.addEventListener('resize', updateSidebar);
-  window.addEventListener('load', updateSidebar);
-  setTimeout(updateSidebar, 200);
-})
+    window.addEventListener('scroll', updateSidebar, { passive: true });
+    window.addEventListener('resize', updateSidebar);
+    window.addEventListener('load', updateSidebar);
+    setTimeout(updateSidebar, 200);
+  })
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -758,13 +555,13 @@
       spaceBetween: 20,
       loop: true,
       // autoplay: false,
-      autoplay:{
-        delay:4000,
-        disableOnInteraction:false,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
       },
-      navigation:{
-        nextEl:".swiper-button-next",
-        prevEl:".swiper-button-prev",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       pagination: {
         el: ".swiper-pagination",
@@ -773,7 +570,7 @@
         dynamicMainBullets: 1,
       },
       breakpoints: {
-        0: { slidesPerView: 1.02,spaceBetween:20 },
+        0: { slidesPerView: 1.02, spaceBetween: 20 },
         576: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
         992: { slidesPerView: 2, spaceBetween: 30 },
@@ -791,7 +588,7 @@
       //autoplay: false,
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false, 
+        disableOnInteraction: false,
       },
       pagination: {
         el: ".swiper-pagination",
@@ -800,9 +597,9 @@
         dynamicMainBullets: 1,
       },
       breakpoints: {
-        0: { slidesPerView: 1,spaceBetween:10 },
+        0: { slidesPerView: 1, spaceBetween: 10 },
         576: { slidesPerView: 1 },
-        768: { slidesPerView: 1, spaceBetween:20},
+        768: { slidesPerView: 1, spaceBetween: 20 },
         992: { slidesPerView: 2.5, spaceBetween: 30 },
       },
     });
@@ -814,7 +611,7 @@
     const root = document.getElementById("blogContent");
     if (!root) return;
 
-    const INLINE = new Set(["A","SUB","SUP","STRONG","B","EM","I","U","SMALL","MARK"]);
+    const INLINE = new Set(["A", "SUB", "SUP", "STRONG", "B", "EM", "I", "U", "SMALL", "MARK"]);
     const PUNCT = /^[,.;:!?]/;
 
     const all = root.querySelectorAll("*");
@@ -863,18 +660,18 @@
 
         const input = itemEls[0];
         input.id = `faq-input-${index}-${Math.random().toString(36).substr(2, 9)}`;
-        
+
         const wrapper = document.createElement("label");
         wrapper.className = "faq-item-wrapper";
         wrapper.setAttribute("for", input.id);
-        
+
         container.insertBefore(wrapper, input.nextSibling);
         // Move all sibling elements except the input into the <label>
         itemEls.slice(1).forEach((el) => wrapper.appendChild(el));
 
         const questionP = itemEls.find(el => el.tagName === "P");
         if (questionP) questionP.classList.add("faq-question-text");
-        
+
         const arrowDiv = itemEls.find(el => el.classList && el.classList.contains("faq-arrow"));
 
         const answerWrapper = document.createElement("div");
@@ -888,19 +685,19 @@
             answerWrapper.appendChild(el);
           }
         });
-        
+
         if (!arrowDiv && questionP) {
-           let passedQ = false;
-           itemEls.slice(1).forEach(el => {
-               if (passedQ && el !== questionP) answerWrapper.appendChild(el);
-               if (el === questionP) passedQ = true;
-           });
+          let passedQ = false;
+          itemEls.slice(1).forEach(el => {
+            if (passedQ && el !== questionP) answerWrapper.appendChild(el);
+            if (el === questionP) passedQ = true;
+          });
         }
 
         wrapper.appendChild(answerWrapper);
-        
+
         // Ensure only one question is open at a time
-        input.addEventListener('change', function() {
+        input.addEventListener('change', function () {
           if (this.checked) {
             const allInputs = container.querySelectorAll('input[type="checkbox"]');
             allInputs.forEach(otherInput => {
@@ -913,6 +710,289 @@
       });
     });
   });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const defaultCountries = [
+            { name: "India", code: "IN", dialCode: "+91" },
+            { name: "United States", code: "US", dialCode: "+1" },
+            { name: "United Kingdom", code: "GB", dialCode: "+44" },
+            { name: "United Arab Emirates", code: "AE", dialCode: "+971" },
+            { name: "Canada", code: "CA", dialCode: "+1" },
+            { name: "Australia", code: "AU", dialCode: "+61" },
+            { name: "Saudi Arabia", code: "SA", dialCode: "+966" },
+            { name: "Germany", code: "DE", dialCode: "+49" },
+            { name: "France", code: "FR", dialCode: "+33" },
+            { name: "Singapore", code: "SG", dialCode: "+65" },
+            { name: "Oman", code: "OM", dialCode: "+968" },
+            { name: "Qatar", code: "QA", dialCode: "+974" },
+            { name: "Kuwait", code: "KW", dialCode: "+965" },
+            { name: "Bahrain", code: "BH", dialCode: "+973" },
+            { name: "Nepal", code: "NP", dialCode: "+977" },
+            { name: "Bangladesh", code: "BD", dialCode: "+880" },
+            { name: "Pakistan", code: "PK", dialCode: "+92" },
+            { name: "Sri Lanka", code: "LK", dialCode: "+94" },
+            { name: "Malaysia", code: "MY", dialCode: "+60" },
+            { name: "Indonesia", code: "ID", dialCode: "+62" },
+            { name: "Thailand", code: "TH", dialCode: "+66" },
+            { name: "Vietnam", code: "VN", dialCode: "+84" },
+            { name: "Philippines", code: "PH", dialCode: "+63" },
+            { name: "Japan", code: "JP", dialCode: "+81" },
+            { name: "South Korea", code: "KR", dialCode: "+82" },
+            { name: "China", code: "CN", dialCode: "+86" },
+            { name: "Hong Kong", code: "HK", dialCode: "+852" },
+            { name: "Taiwan", code: "TW", dialCode: "+886" },
+            { name: "Russia", code: "RU", dialCode: "+7" },
+            { name: "Italy", code: "IT", dialCode: "+39" },
+            { name: "Spain", code: "ES", dialCode: "+34" },
+            { name: "Netherlands", code: "NL", dialCode: "+31" },
+            { name: "Switzerland", code: "CH", dialCode: "+41" },
+            { name: "Sweden", code: "SE", dialCode: "+46" },
+            { name: "Norway", code: "NO", dialCode: "+47" },
+            { name: "Denmark", code: "DK", dialCode: "+45" },
+            { name: "Finland", code: "FI", dialCode: "+358" },
+            { name: "Ireland", code: "IE", dialCode: "+353" },
+            { name: "New Zealand", code: "NZ", dialCode: "+64" },
+            { name: "South Africa", code: "ZA", dialCode: "+27" },
+            { name: "Nigeria", code: "NG", dialCode: "+234" },
+            { name: "Egypt", code: "EG", dialCode: "+20" },
+            { name: "Kenya", code: "KE", dialCode: "+254" },
+            { name: "Brazil", code: "BR", dialCode: "+55" },
+            { name: "Mexico", code: "MX", dialCode: "+52" },
+            { name: "Argentina", code: "AR", dialCode: "+54" },
+            { name: "Turkey", code: "TR", dialCode: "+90" },
+            { name: "Israel", code: "IL", dialCode: "+972" },
+            { name: "Greece", code: "GR", dialCode: "+30" },
+            { name: "Portugal", code: "PT", dialCode: "+351" },
+            { name: "Poland", code: "PL", dialCode: "+48" },
+            { name: "Austria", code: "AT", dialCode: "+43" },
+            { name: "Belgium", code: "BE", dialCode: "+32" }
+        ];
+
+        let countriesList = [...defaultCountries];
+        let currentSelected = { name: "India", code: "IN", dialCode: "+91" };
+
+        const countrySelectBtn = document.getElementById("countrySelectBtn");
+        const countryDropdown = document.getElementById("countryDropdown");
+        const countrySearchInput = document.getElementById("countrySearchInput");
+        const countryListEl = document.getElementById("countryList");
+        const selectedFlag = document.getElementById("selectedFlag");
+        const selectedCode = document.getElementById("selectedCode");
+        const phoneInput = document.getElementById("phone");
+        const fullPhoneInput = document.getElementById("fullPhoneInput");
+        const wrapper = document.querySelector(".country-phone-wrapper") || document.querySelector(".input_and_country_code_main");
+        const form = document.querySelector(".single-blog-contact-form") || document.querySelector("form");
+
+        function getFlagUrl(code) {
+            return `https://flagcdn.com/w40/${code.toLowerCase()}.png`;
+        }
+
+        function renderList(list) {
+            if (!countryListEl) return;
+            countryListEl.innerHTML = "";
+            if (list.length === 0) {
+                countryListEl.innerHTML = `<li class="no-country-found">No country found</li>`;
+                return;
+            }
+
+            list.forEach((country) => {
+                const li = document.createElement("li");
+                li.className = `country-item ${country.code === currentSelected.code ? "active" : ""}`;
+                li.dataset.code = country.code;
+                li.dataset.dialCode = country.dialCode;
+                li.dataset.name = country.name;
+
+                li.innerHTML = `
+                    <div class="country-item-info">
+                        <img src="${getFlagUrl(country.code)}" alt="${country.code}" class="country-flag-img" loading="lazy" />
+                        <span class="country-item-name">${country.name}</span>
+                    </div>
+                    <span class="country-item-code">${country.dialCode}</span>
+                `;
+
+                li.addEventListener("click", function () {
+                    selectCountry(country);
+                    closeDropdown();
+                });
+
+                countryListEl.appendChild(li);
+            });
+        }
+
+        function selectCountry(country) {
+            currentSelected = country;
+            if (selectedFlag) {
+                selectedFlag.src = getFlagUrl(country.code);
+                selectedFlag.alt = country.code;
+            }
+            if (selectedCode) {
+                selectedCode.textContent = country.dialCode;
+            }
+
+            document.querySelectorAll(".country-item").forEach((el) => {
+                if (el.dataset.code === country.code) {
+                    el.classList.add("active");
+                } else {
+                    el.classList.remove("active");
+                }
+            });
+
+            updateFullPhone();
+        }
+
+        function updateFullPhone() {
+            if (!phoneInput) return;
+            const number = phoneInput.value.trim();
+            if (fullPhoneInput) {
+                if (number) {
+                    fullPhoneInput.value = `${currentSelected.dialCode} ${number}`;
+                } else {
+                    fullPhoneInput.value = "";
+                }
+            }
+        }
+
+        function toggleDropdown() {
+            if (!countryDropdown) return;
+            const isShowing = countryDropdown.classList.contains("show");
+            if (isShowing) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        }
+
+        function openDropdown() {
+            if (countryDropdown) countryDropdown.classList.add("show");
+            if (wrapper) wrapper.classList.add("active");
+            if (countrySelectBtn) {
+                countrySelectBtn.classList.add("active");
+                countrySelectBtn.setAttribute("aria-expanded", "true");
+            }
+            if (countrySearchInput) {
+                countrySearchInput.value = "";
+                setTimeout(() => countrySearchInput.focus(), 50);
+            }
+            renderList(countriesList);
+        }
+
+        function closeDropdown() {
+            if (countryDropdown) countryDropdown.classList.remove("show");
+            if (wrapper) wrapper.classList.remove("active");
+            if (countrySelectBtn) {
+                countrySelectBtn.classList.remove("active");
+                countrySelectBtn.setAttribute("aria-expanded", "false");
+            }
+        }
+
+        if (countrySearchInput) {
+            countrySearchInput.addEventListener("input", function () {
+                const query = this.value.toLowerCase().trim();
+                const filtered = countriesList.filter((c) => {
+                    return (
+                        c.name.toLowerCase().includes(query) ||
+                        c.dialCode.includes(query) ||
+                        c.code.toLowerCase().includes(query)
+                    );
+                });
+                renderList(filtered);
+            });
+        }
+
+        if (countrySelectBtn) {
+            countrySelectBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                toggleDropdown();
+            });
+
+            countrySelectBtn.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleDropdown();
+                }
+            });
+        }
+
+        if (countryDropdown) {
+            countryDropdown.addEventListener("click", function (e) {
+                e.stopPropagation();
+            });
+        }
+
+        document.addEventListener("click", function (e) {
+            if (wrapper && !wrapper.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                closeDropdown();
+            }
+        });
+
+        if (phoneInput) {
+            phoneInput.addEventListener("input", updateFullPhone);
+        }
+
+        if (form) {
+            form.addEventListener("submit", function () {
+                if (phoneInput) {
+                    let number = phoneInput.value.trim();
+                    if (number && !number.startsWith("+")) {
+                        phoneInput.value = `${currentSelected.dialCode} ${number}`;
+                    }
+                }
+                updateFullPhone();
+            });
+        }
+
+        selectCountry(currentSelected);
+
+        // Fetch comprehensive country dataset via REST API
+        fetch("https://restcountries.com/v3.1/all?fields=name,cca2,idd,flags")
+            .then((res) => {
+                if (!res.ok) throw new Error("API response error");
+                return res.json();
+            })
+            .then((data) => {
+                const apiList = [];
+                data.forEach((item) => {
+                    if (item.idd && item.idd.root) {
+                        const root = item.idd.root;
+                        let suffix = "";
+                        if (item.idd.suffixes && item.idd.suffixes.length === 1) {
+                            suffix = item.idd.suffixes[0];
+                        }
+                        const dialCode = root + suffix;
+                        if (dialCode && item.cca2 && item.name && item.name.common) {
+                            apiList.push({
+                                name: item.name.common,
+                                code: item.cca2.toUpperCase(),
+                                dialCode: dialCode,
+                            });
+                        }
+                    }
+                });
+
+                if (apiList.length > 0) {
+                    apiList.sort((a, b) => a.name.localeCompare(b.name));
+                    const inIdx = apiList.findIndex((c) => c.code === "IN");
+                    if (inIdx > -1) {
+                        const indiaObj = apiList.splice(inIdx, 1)[0];
+                        apiList.unshift(indiaObj);
+                    }
+                    countriesList = apiList;
+                    if (countryDropdown && countryDropdown.classList.contains("show")) {
+                        renderList(countriesList);
+                    }
+                }
+            })
+            .catch((err) => {
+                console.log("Using built-in country database", err);
+            });
+    });
 </script>
 
 

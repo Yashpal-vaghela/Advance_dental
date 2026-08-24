@@ -236,10 +236,25 @@
     font-size: 16px
 }
 
+.contact-section input,
+.contact-section textarea,
+.contact-section select,
+.contact-section button,
+.contact-section .form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .contact-section .form-group input:focus,
-.contact-section .form-group textarea:focus {
-    border-color: var(--teal);
-    box-shadow: 0 0 0 3px rgba(27, 137, 118, 0.12)
+.contact-section .form-group textarea:focus,
+.contact-section input:focus,
+.contact-section textarea:focus,
+.contact-section select:focus,
+.contact-section button:focus,
+.contact-section .form-control:focus {
+    border-color: var(--teal) !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .contact-submit-btn {
@@ -1010,4 +1025,248 @@
             align-self: center
         }
     }
+}
+
+.input_and_country_code_main {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.county_code_with_fleg_main {
+    width: auto;
+    height: 52px;
+    border: 1px solid #8b8b8b;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 10px;
+    padding-right: 6px;
+    background: #ffffff;
+    transition: border-color 0.2s ease;
+}
+
+.county_code_with_fleg_main.active,
+.input_and_country_code_main:focus-within .county_code_with_fleg_main {
+    border-color: var(--teal);
+}
+
+#phone {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: none;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.flag_image {
+    width: 28px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.flag_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selected_code_text {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+.arrow_icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+    margin-right: 4px;
+    transition: transform 0.3s ease;
+}
+
+.arrow_icon img {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow Rotation on Click / Active State */
+.county_code_with_fleg_main.active .arrow_icon,
+.county_code_with_fleg_main.active .arrow_icon img,
+.input_and_country_code_main.active .arrow_icon,
+.input_and_country_code_main.active .arrow_icon img {
+    transform: rotate(90deg);
+}
+
+/* Country Dropdown Styles */
+.country-dropdown-menu,
+.country_dropdown_menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 320px;
+  max-width: calc(100vw - 30px);
+  max-height: 280px;
+  background: #ffffff;
+  border: 1px solid #1B8976;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 99999;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.country-dropdown-menu.show,
+.country_dropdown_menu.show {
+  display: block;
+}
+
+.country-dropdown-menu::-webkit-scrollbar,
+.country_dropdown_menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.country-dropdown-menu::-webkit-scrollbar-thumb,
+.country_dropdown_menu::-webkit-scrollbar-thumb {
+  background: rgba(27, 137, 118, 0.3);
+  border-radius: 4px;
+}
+
+.country-search-box,
+.country_search_box {
+  position: sticky;
+  top: -10px;
+  background: #ffffff;
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 2;
+  margin-top: -2px;
+}
+
+.country-search-box input,
+.country_search_box input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #c0c0c0;
+  background: #fbfbfb;
+  color: #333333;
+  font-size: 14px;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: inherit;
+}
+
+.country-search-box input:focus,
+.country_search_box input:focus {
+  border-color: var(--teal) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.country-list,
+.country_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.country-item,
+.country_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: #333333;
+  font-size: 14px;
+}
+
+.country-item:hover,
+.country-item.active,
+.country_item:hover,
+.country_item.active {
+  background: #eaf5f3;
+  color: #1B8976;
+}
+
+.country-item-info,
+.country_item_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.country-flag-img,
+.country_flag_img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.country-item-name,
+.country_item_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+
+.country-item-code,
+.country_item_code {
+  color: #777777;
+  font-size: 13px;
+  margin-left: 8px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.country-item.active .country-item-code,
+.country-item:hover .country-item-code {
+  color: #1B8976;
+}
+
+.no-country-found,
+.no_country_found {
+  padding: 12px;
+  color: #888888;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width:1200px){
+.county_code_with_fleg_main {
+    height: 45px;
+}
+}
+
+@media (max-width:992px){
+.county_code_with_fleg_main {
+    height: 50px;
+}
+}
+
+@media (max-width:576px){
+.county_code_with_fleg_main {
+    height: 40px;
+}
 }

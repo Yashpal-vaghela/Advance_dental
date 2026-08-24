@@ -11,7 +11,7 @@ import requests
 import threading
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
-from home.utils import send_mail
+from home.utils import send_mail, is_spam
 
 
 def send_email_async(context_dict):
