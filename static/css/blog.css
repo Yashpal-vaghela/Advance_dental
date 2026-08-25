@@ -1796,7 +1796,7 @@
 .county_code_with_fleg_main {
     width: auto;
     height: auto;
-    border: 1px solid #8b8b8b;
+    border: 1px solid #000;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
     display: flex;
