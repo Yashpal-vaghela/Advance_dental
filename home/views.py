@@ -118,7 +118,7 @@ def home(request):
                 "Message": submission.message,
                 "Website": "Advance Dental export",
             }
-            zoho_url=("https://flow.zoho.in/60070945438/flow/webhook/incoming?zapikey=1001.a119cd21b36db26402ffe013750915ad.885b5855c0af73a633e0a39a93142bcd&isdebug=false")
+            zoho_url=("https://www.zohoapis.in/crm/v7/functions/cf_sync_website_data_to_lead/actions/execute?auth_type=apikey&zapikey=1003.dfefb6228085cfb5faff410fee7c4133.66f7ca0e8fe04f26e2afccca3e37c762")
             headers = {
                 "Content-Type": "application/json",
             }
@@ -487,7 +487,7 @@ def contact_new(request):
                 "Message": submission.message,
                 "Website": "Advance Dental export",
             }
-            zoho_url=("https://flow.zoho.in/60070945438/flow/webhook/incoming?zapikey=1001.a119cd21b36db26402ffe013750915ad.885b5855c0af73a633e0a39a93142bcd&isdebug=false")
+            zoho_url=("https://www.zohoapis.in/crm/v7/functions/cf_sync_website_data_to_lead/actions/execute?auth_type=apikey&zapikey=1003.dfefb6228085cfb5faff410fee7c4133.66f7ca0e8fe04f26e2afccca3e37c762")
             headers = {
                 "Content-Type": "application/json",
             }
