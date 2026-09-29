@@ -207,6 +207,12 @@ class DoctorReviewAdmin(admin.ModelAdmin):
     list_display = ('name', 'priority')
     search_fields = ['name']
 
+class RedirectRuleAdmin(admin.ModelAdmin):
+    list_display = ('old_url', 'new_url', 'is_active', 'created_at', 'updated_at')
+    list_filter = ('is_active', 'created_at')
+    search_fields = ('old_url', 'new_url')
+    list_editable = ('is_active',)
+
 class EventsGalleryAdmin(admin.ModelAdmin):
     list_display = ('name', 'image_path', 'category', 'alt')
 
@@ -241,3 +247,4 @@ admin.site.register(WebStory, WebStoryAdmin)
 admin.site.register(WebStoryVideo)
 admin.site.register(Award, AwardAdmin)
 admin.site.register(DoctorReview, DoctorReviewAdmin)
+admin.site.register(RedirectRule, RedirectRuleAdmin)

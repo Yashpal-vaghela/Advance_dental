@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'blog.redirect_slug_to_blog.DynamicRedirectMiddleware',
     'blog.redirect_slug_to_blog.SlugToBlogRedirectMiddleware',
     'blog.redirect_slug_to_blog.BestDentalLabRedirectMiddleware',
     'blog.redirect_slug_to_blog.EventGalleryRedirectMiddleware',
