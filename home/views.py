@@ -1881,10 +1881,10 @@ def emax2(request):
                     f"Form saved but could not send to CRM. Error: {str(e)}",
                 )
 
-            return redirect("home:emax2")
+            return redirect("home:emax")
 
         messages.error(request, "Your form is not sent! Try Again.")
-        return redirect("home:emax2")
+        return redirect("home:emax")
     form = ContactForm()
     context = {
         "form": form,

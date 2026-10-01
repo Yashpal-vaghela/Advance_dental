@@ -1,10 +1,9 @@
-﻿{% extends 'base.html' %} {% load static %} {% block seo %}
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block seo %}
 <title>Advance Dental Export | Leading Dental Laboratory in India</title>
-<meta
-  name="description"
-  content="Advance Dental Export is one of the best dental labs in India since 2009. We provide custom dental solutions for Indian as well as global dentists and clients."
-/>
-
+<meta name="description"
+  content="Advance Dental Export is one of the best dental labs in India since 2009. We provide custom dental solutions for Indian as well as global dentists and clients." />
 <link rel="canonical" href="https://advancedentalexport.com/" />
 <meta property="og:locale" content="en_IN" />
 <meta property="og:type" content="website" />
@@ -17,914 +16,520 @@
 <meta property="og:image:type" content="image/webp" />
 <meta property="og:site_name" content="Advance Dental Export" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta
-  name="twitter:description"
-  content=" Advance Dental Export is one of the best dental labs in India and a trusted dental prosthetics manufacturer, custom dental solutions for global clients since 2009."
-/>
+<meta name="twitter:description"
+  content="Advance Dental Export is one of the best dental labs in India and a trusted dental prosthetics manufacturer, custom dental solutions for global clients since 2009." />
 <meta name="twitter:title" content="Advance Dental Export" />
 <meta name="twitter:image" content="{% static 'img/feature.webp' %}" />
-<link
-  rel="alternate"
-  hreflang="x-default"
-  href="https://advancedentalexport.com/"
-/>
-<link
-  rel="alternate"
-  hreflang="en-IN"
-  href="https://advancedentalexport.com/"
-/>
-<link
-  rel="preload"
-  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm"
-  as="video"
-  type="video/webm"
-/>
-<link
-  rel="preload"
-  href="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4"
-  as="video"
-  type="video/mp4"
-/>
-<link
-  rel="preload"
-  as="image"
-  href="{% static 'banner-2/banner-12.webp' %}"
-  imagesrcset="{% static 'banner-2/banner-12.webp' %}"
-/>
-{% endblock %} {% block css %}
+<link rel="alternate" hreflang="x-default" href="https://advancedentalexport.com/" />
+<link rel="alternate" hreflang="en-IN" href="https://advancedentalexport.com/" />
+<script src="{% static 'js/new-section.js' %}"></script>
+<!-- Preload navbar styling and logo first to ensure immediate header rendering -->
+<link rel="preload" href="{% static 'css/menu.css' %}" as="style" />
+<link rel="preload" href="{% static 'img/logo.webp' %}" as="image" type="image/webp" />
+<link rel="preload" href="{% static 'img/logo-white-new.png' %}" as="image" type="image/png" />
+<script src="{% static 'js/rainyday.min.js' %}"></script>
+<!-- Desktop Preloads (>= 992px) -->
+<link rel="preload" href="{% static 'product_banner/lab_monsoon_video_poster.webp' %}" as="image" type="image/webp"
+  media="(min-width: 992px)" fetchpriority="high" />
+<link rel="preload" href="https://d3aobjm2ribp2o.cloudfront.net/lab_monsoon_video_v1.mp4" as="video" type="video/mp4"
+  media="(min-width: 992px)" />
+<!-- Mobile Preloads (< 992px) -->
+<link rel="preload" href="{% static 'product_banner/lab_monsoon_video_mobile_poster.webp' %}" as="image"
+  type="image/webp" media="(max-width: 991px)" fetchpriority="high" />
+<link rel="preload" href="https://d3aobjm2ribp2o.cloudfront.net/lab_monsoon_video_mobile_v1.mp4" as="video"
+  type="video/mp4" media="(max-width: 991px)" />
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 <link rel="preload" as="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 <link rel="stylesheet" href="{% static 'css/swal.css' %}" />
-
-<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
-
-<link rel="preload" href="{% static 'css/review.css' %}" as="style" />
+{% comment %}
+<link rel="preload" href="{% static 'css/review.css' %}" as="style" /> {% endcomment %}
 <link href="{% static 'css/review.css' %}" rel="stylesheet" />
-<noscript>
-  <link rel="stylesheet" href="{% static 'css/review.css' %}" />
-</noscript>
-{% endblock %} {% block body %}
-{% comment %} <section class="hero-section1 mb-0">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide banner-1-wrap position-relative">
-        <video
-          id="player"
-          class="h-full w-full object-cover"
-          width="1920"
-          height="800"
-          preload="auto"
-          playsinline
-          muted
-          autoplay
-          loop
-        >
-          <source
-            src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.webm"
-            type="video/webm"
-          />
-          <source
-            src="https://d3aobjm2ribp2o.cloudfront.net/banner-1-video2.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div class="container">
-          <div class="row mx-auto justify-content-center">
-            <div class="banner1-img col-lg-4 col-md-5 col-sm-6">
-              <img
-                src="{% static 'banner-2/banner-125.webp' %}"
-                class="banner-1-img img-fluid"
-                width="800"
-                height="600"
-                loading="eager"
-                alt="Smiling girl representing digital revolution in modern digital dentistry banner"
-              />
-            </div>
-            <div class="texts col-lg-5 col-md-5 col-sm-6 col-5">
-              <div
-                class="title h1s text-white"
-                data-swiper-parallax="-300"
-                style="transform: translate3d(0px, 0px, 0px)"
-              >
-                Bringing Digital Revolution In
-              </div>
-              <div
-                class="subtitle h2s"
-                data-swiper-parallax="-200"
-                style="transform: translate3d(0px, 0px, 0px)"
-              >
-                Digital Dentistry
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Second banner -->
-      <div class="swiper-slide banner2-swiper-slide position-relative">
-        <img
-          src="{% static 'banner-2/new-banner2-img12.webp' %}"
-          class="new-banner2-bg d-none d-md-none d-lg-block img-fluid"
-          alt="Advance Zirconia used for high-strength, aesthetic teeth restoration background image"
-          width="1920"
-          height="750"
-        />
-        <img
-          src="{% static 'banner-2/new-banner2-img16.webp' %}"
-          class="new-banner2-bg d-lg-none d-md-block d-none img-fluid"
-          alt="Advance Zirconia background image for durable and aesthetic teeth restoration solutions"
-          width="1920"
-          height="750"
-        />
-        <a href="/zirconia-crown/">
-          <img
-            src="{% static 'banner-2/new-banner2-mobileSize2.webp' %}"
-            class="new-banner2-bg d-block d-md-none d-lg-none img-fluid"
-            alt="Transform your dental practice with Advance Zirconia solutions banner image"
-          />
-        </a>
+<link rel="stylesheet" href="{% static 'css/team_section.css' %}" />
+<link rel="stylesheet" href="{% static 'css/new-section.css' %}" />
+<link rel="stylesheet" href="{% static 'css/newSlider.css' %}" />
+<script>
+  document.documentElement.classList.add("is-transparent-navbar");
+  document.documentElement.classList.add("is-white-navlinks");
+</script>
+{% endblock %}
+{% block body %}
 
-        <div class="container new-banner2">
-          <img
-            src="{% static 'banner-2/new-banner2-logo.webp' %}"
-            class="new-banner2-logo img-fluid"
-            alt="Advance Zirconia logo with slogan Baki Zirconia Baar Baar, Advance Zirconia Ek Baar"
-          />
-          <img
-            src="{% static 'banner-2/new-banner2-text.webp' %}"
-            class="new-banner2-text img-fluid"
-            alt="Transform your dental practice with Advance Zirconia text-based promotional banner"
-          />
-          <button class="btn btn-read-more1">
-            <a href="/zirconia-crown/"
-              >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
-            ></a>
-          </button>
-        </div>
-      </div>
-      <!-- third banner -->
-      <div class="swiper-slide home-implant-slider-wrapper position-relative">
-        <img
-          src="{% static '/banner-2/Implant-banner-bg9.webp' %}"
-          class="img-fluid home-implant-banner-bg"
-          alt="Plant your implant with AD Implant for teeth treatment promotional banner background"
-        />
-        <a href="/ad-implant/">
-          <img
-            src="{% static '/banner-2/implant-mobile-banner1.webp' %}"
-            class="img-fluid home-implant-banner-bg home-implant-mobile-banner"
-            alt="AD Implant banner showing dental implant placement concept for teeth restoration"
-          />
-        </a>
-        <div
-          class="container home-implant-banner-img-wrapper position-absolute"
-        >
-          <div class="row align-items-center justify-content-end">
-            <div class="col-lg-5 col-md-5 col-xl-4">
-              <div class="home-implant-text">
-                <span class="home-implant-text1">Innovation In Dental 
-                <b class="home-implant-rolling-text">
-                  <div class="letter" style="--i: 3">
-                    <div class="letter-track">
-                      <span>I</span>
-                      <span>I</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 4">
-                    <div class="letter-track">
-                      <span>m</span>
-                      <span>m</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 5">
-                    <div class="letter-track">
-                      <span>p</span>
-                      <span>p</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 6">
-                    <div class="letter-track">
-                      <span>l</span>
-                      <span>l</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 7">
-                    <div class="letter-track">
-                      <span>a</span>
-                      <span>a</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 8">
-                    <div class="letter-track">
-                      <span>n</span>
-                      <span>n</span>
-                    </div>
-                  </div>
-                  <div class="letter" style="--i: 9">
-                    <div class="letter-track">
-                      <span>t</span>
-                      <span>t</span>
-                    </div>
-                  </div>
-                </b> Prosthesis</span>
-              </div>
-
-              <button class="btn btn-implant-button">
-                <a href="/ad-implant/"
-                  >Discover More <i class="fa-solid fa-arrow-right ms-1"></i
-                ></a>
-              </button>
-            </div>
-            <div class="col-lg-7 col-md-7 p-0 home-implant-content2">
-              <img
-                src="{% static '/banner-2/implant-banner-img4.webp' %}"
-                class="img-fluid home-implant-banner-img"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- fourth banner -->
-      <div class="swiper-slide">
-        <div class="new-banner-wrapper position-relative">
-          <video
-            id="ace-scan"
-            class="h-full w-full object-over video-bg1"
-            width="1920"
-            height="800"
-            preload="auto"
-            playsinline
-            muted
-            autoplay
-            loop
-          >
-            <source
-              src="https://d3aobjm2ribp2o.cloudfront.net/trios-scanner-video.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div class="banner4-text-wrapper d-block">
-            <div class="banner4-title">
-              Now More Affordable Than Ever… <br />The <b>3SHAPE TRIOS 3</b>
-            </div>
-            <a id="contact-link" class="btn btn-contact" href="/contact-us/"
-              >Contact Now</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- five banner -->
-      <div class="swiper-slide hello">
-        <a href="https://ultimatesmiledesign.com/virtual-smile-try-on/" target="_blank"  data-aos="zoom-in-up" >
-        
-        <img
-          src="{% static 'banner-2/smile_design.jpg' %}"
-          class="smile-image image-fluid"
-          alt="Advance Zirconia used for high-strength, aesthetic teeth restoration background image"
-        />
-        </a>
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section> {% endcomment %}
-{% include 'home_banner.html' %}
-
-{% include 'newSlider.html' %}
-<!-- About us -->
-{% comment %} <section id="about-6" class="pb-0 about-section division">
-  <div class="container">
-    <div class="row d-flex align-items-center mt-md-4 mt-lg-4 mt-lg-0 mx-0">
-      <div class="col-12 col-lg-7 d-flex">
-        <div class="txt-block pc-30 wow fadeInUp">
-          <p class="blue-color wlc-title mb-1">
-            Welcome to Advance Dental Export
-          </p>
-          <h1 class="steelblue-color mb-3 mb-sm-4 wlc-subtitle">
-            The Art Of Aesthetic Dental Laboratory
-          </h1>
-          <p class="wlc-text">
-            With over 20 years of expertise in the dental industry, Advance
-            Dental Export is trusted by dental professionals, clinics, and
-            distributors across the globe for delivering certified,
-            custom-engineered solutions that combine cutting-edge technology
-            with expert craftsmanship.
-          </p>
-          <p class="wlc-text">
-            “As the founder and driving force behind Advance Dental Export, I
-            take immense pride in our journey—from a small dental lab to a
-            trusted provider of dental prosthetics, serving professionals
-            throughout the field of restorative dentistry.” <br />
-            <span class="fw-semibold">Haresh Savani, Founder</span>
-          </p>
-          <p class="wlc-text">
-            We are honored that the dental community sees us as a benchmark for
-            international excellence—and we remain committed to exceeding those
-            expectations every single day.
-          </p>
-        </div>
-      </div>
-      <div
-        class="col-12 col-lg-5 col-xl-4 d-flex justify-content-center justify-content-lg-start"
+<section class="premium_banner_section">
+  <div class="scroll-container">
+    <!-- 1 -->
+    <div class="banner" style="z-index: 6; position: relative">
+      <video
+        class="banner_image banner_video_desktop"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="metadata"
+        poster="{% static 'product_banner_avif/lab_monsoon_video_poster.avif' %}"
       >
-        <div class="about-img text-center wow fadeInUp">
-          <img
-            class="img-fluid"
-            src="{% static 'about-ade1.webp' %}"
-            alt="Mr Haresh Savani, Founder & CEO of Advance Dental Export dental lab in India"
-            title="Haresh Savani, Founder"
-            width="400"
-            height="400"
-            loading="eager"
-          />
-        </div>
-      </div>
+        <source
+          src="https://d3aobjm2ribp2o.cloudfront.net/lab_monsoon_video_v1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <!-- Mobile Video -->
+      <video
+        class="banner_image banner_video_mobile"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="metadata"
+        poster="{% static 'product_banner_avif/lab_monsoon_video_mobile_poster.avif' %}"
+      >
+        <source
+          src="https://d3aobjm2ribp2o.cloudfront.net/lab_monsoon_video_mobile_v1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="banner-blur-overlay"></div>
     </div>
-  </div>
-</section> {% endcomment %}
+    <!-- 2 -->
+    <div class="banner" style="z-index: 5">
+      <picture>
+        <source
+          media="(max-width: 440px)"
+          srcset="{% static 'product_banner_avif/AdvanceZirconia_banner_1_420_resize.avif' %}"
+        />
+        <source
+          media="(max-width: 830px)"
+          srcset="{% static 'product_banner_avif/AdvanceZirconia_banner_1_820.avif' %}"
+        />
+        <source
+          media="(max-width: 1185px)"
+          srcset="{% static 'product_banner_avif/AdvanceZirconia_banner_1_1180_new_new.webp' %}"
+        />
+        <source
+          media="(max-width: 1285px)"
+          srcset="{% static 'product_banner_avif/AdvanceZirconia_banner_1_1280_new.avif' %}"
+        />
+        <source
+          media="(min-width: 1284px)"
+          srcset="{% static 'product_banner_avif/AdvanceZirconia_banner_1.avif' %}"
+        />
+        <img
+          src="{% static 'product_banner_avif/AdvanceZirconia_banner_1.avif' %}"
+          alt="Transform Your Pratice with Advance Zirconia"
+          class="banner_image"
+          loading="lazy"
+          width="100%"
+          height="100%"
+        />
+      </picture>
 
-<!--Static Counter -->
-
-{% include "static_counter.html" %}
-
-
-<!-- Static cards hero -->
-<section>
-  <div class="container mt-5 mb-4 costom-margin-for-needs">
-    <div class="col-lg-12 mx-auto section-title">
-      <h2 class="h2-m steelblue-color home-section-title">
-        Why We Are the Best Dental Lab Across the Globe?
-      </h2>
-      <p class="h5-lg mb-0">
-        Crafting smiles worldwide, we’ve earned our place among the leading
-        dental labs by delivering excellence in every dental restoration.
-      </p>
-    </div>
-    <div class="row justify-content-md-center">
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="firstCard globalCard">
-          {% comment %}
-          <img
-            src="{% static 'quality_bg.svg' %}"
-            alt="Quality Check"
-            class="cd_bg_icon_1"
-          />
-          {% endcomment %}
-          <svg
-            class="cd_bg_icon_2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="272"
-            height="334"
-            fill="none"
-          >
-            <path
-              stroke="#1B8976"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-opacity=".2"
-              stroke-width="10"
-              d="M69.46 226 37 303.69l40.62-11.64L97.92 329 136 246.87 174.08 329l20.3-36.95L235 303.69 202.54 226"
-            />
-            <path
-              stroke="#1B8976"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-opacity=".2"
-              stroke-width="10"
-              d="M5 130.5c0-13.32 17.14-23.76 21.04-35.77C30.08 82.27 22.48 63.77 30 53.4c7.61-10.47 27.6-8.92 38.05-16.53 10.35-7.55 15.01-27.1 27.45-31.14 12-3.9 27.19 9.05 40.49 9.05s28.49-12.95 40.49-9.05c12.44 4.05 17.1 23.6 27.45 31.14 10.46 7.61 30.44 6.06 38.05 16.53 7.53 10.37-.07 28.87 3.97 41.33 3.9 12.01 21.04 22.45 21.04 35.77 0 13.32-17.14 23.76-21.04 35.77-4.04 12.45 3.56 30.96-3.97 41.33-7.61 10.47-27.6 8.92-38.05 16.53-10.35 7.55-15.01 27.1-27.45 31.14-12 3.9-27.19-9.05-40.49-9.05s-28.49 12.95-40.49 9.05c-12.44-4.05-17.1-23.6-27.45-31.14-10.46-7.61-30.44-6.06-38.05-16.53-7.53-10.37.07-28.87-3.97-41.33C22.14 154.26 5 143.82 5 130.5Z"
-            />
-            <path
-              stroke="#1B8976"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-opacity=".2"
-              stroke-width="10"
-              d="M136 220c49.15 0 89-40.07 89-89.5S185.15 41 136 41s-89 40.07-89 89.5S86.85 220 136 220Z"
-            />
-            <path
-              stroke="#1B8976"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-opacity=".2"
-              stroke-width="10"
-              d="m136 71 17.3 34.9 38.7 5.59-28 27.16 6.61 38.35L136 158.9 101.39 177l6.61-38.35-28-27.16 38.7-5.6L136 71Z"
-            />
-          </svg>
-          <div>
-            {% comment %}
-            <img
-              src="{% static 'quality.svg' %}"
-              alt="Quality Check"
-              class="cd_icon"
-            />
-            {% endcomment %}
-            <svg
-              class="cd_icon mb-3"
-              width="76"
-              height="76"
-              viewBox="0 0 76 76"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.9735 51.1885L15.6436 68.7831L24.8157 66.1465L29.4018 74.5153L38 55.9156L46.5984 74.5153L51.1844 66.1465L60.3565 68.7831L53.0266 51.1885"
-                stroke="#1B8976"
-                stroke-width="2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8.40625 29.8027C8.40625 26.798 12.2785 24.442 13.1589 21.7308C14.0714 18.9209 12.355 14.7447 14.0571 12.4058C15.7763 10.0434 20.2899 10.3937 22.6521 8.67453C24.991 6.9724 26.0431 2.56217 28.8531 1.64973C31.5643 0.769495 34.9956 3.6903 38.0002 3.6903C41.0049 3.6903 44.436 0.769495 47.1473 1.64988C49.9572 2.56232 51.0093 6.97255 53.3484 8.67468C55.7108 10.3939 60.2241 10.0436 61.9434 12.406C63.6455 14.7449 61.9292 18.9209 62.8415 21.7308C63.7219 24.442 67.5942 26.798 67.5942 29.8027C67.5942 32.8074 63.7219 35.1634 62.8415 37.8746C61.9291 40.6845 63.6455 44.8606 61.9434 47.1996C60.2241 49.5619 55.7106 49.2116 53.3484 50.9308C51.0094 52.633 49.9573 57.0432 47.1474 57.9556C44.4362 58.836 41.0049 55.9152 38.0002 55.9152C34.9956 55.9152 31.5644 58.836 28.8532 57.9556C26.0433 57.0432 24.9912 52.633 22.6522 50.9308C20.2899 49.2116 15.7765 49.5619 14.0571 47.1996C12.355 44.8606 14.0712 40.6846 13.1589 37.8747C12.2785 35.1634 8.40625 32.8074 8.40625 29.8027Z"
-                stroke="#1B8976"
-                stroke-width="2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M37.9998 49.9233C49.1122 49.9233 58.1206 40.9149 58.1206 29.8025C58.1206 18.6901 49.1122 9.68164 37.9998 9.68164C26.8873 9.68164 17.8789 18.6901 17.8789 29.8025C17.8789 40.9149 26.8873 49.9233 37.9998 49.9233Z"
-                stroke="#1B8976"
-                stroke-width="2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M37.9999 16.3887L41.8741 24.2386L50.537 25.4974L44.2684 31.6078L45.7482 40.2356L37.9999 36.162L30.2516 40.2356L31.7314 31.6078L25.4629 25.4974L34.1257 24.2386L37.9999 16.3887Z"
-                stroke="#1B8976"
-                stroke-width="2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="cd_subheading">UNCOMPROMISED QUALITY</p>
-            <h3 class="cd_heading">Highest Quality Dental Prosthesis</h3>
-            <p class="cd_text">
-              We never cut corners when it comes to quality. With decades of
-              experience in dentistry, we combine craftsmanship with advanced
-              technology to ensure our product meets the highest standards.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="middle_card globalCard">
-          {% comment %}
-          <img
-            src="{% static 'worldwide_bg.svg' %}"
-            alt="Quality Check"
-            class="cd_bg_icon_1"
-          />
-          {% endcomment %}
-          <svg
-            class="cd_bg_icon_1"
-            width="235"
-            height="234"
-            viewBox="0 0 235 234"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M117.066 1.2514e-06C70.401 -0.00680055 28.2107 27.7145 9.68158 70.5102C9.56117 70.7883 9.32794 71.0036 9.04029 71.099C8.4848 71.2832 8.1842 71.8832 8.36926 72.4384L8.44728 
-              72.6724C8.54554 72.9672 8.53415 73.2896 8.41857 73.578C-15.522 133.318 13.3282 201.227 73.0273 225.432C87.0054 231.1 101.948 234.009 117.032 234.001C181.649 234.011 234.04 181.635 
-              234.05 117.018C234.059 52.4006 181.684 0.00926378 117.066 1.2514e-06ZM212.133 170.544C210.522 173.394 206.654 173.806 204.338 171.492C203.374 170.528 202.832 169.22 202.832 
-              167.856V156.001C202.839 155.397 202.705 154.8 202.442 154.257L189.877 129.164C188.138 125.689 187.232 121.857 187.232 117.971V109.2C187.232 108.558 187.074 107.926 186.771 107.36C186.468 
-              106.794 186.03 106.312 185.496 105.956L173.796 98.1555C173.343 97.8527 172.831 97.6484 172.293 97.5557C171.756 97.463 171.205 97.484 170.676 97.6173L164.523 99.1549C159.219 100.48 153.628 
-              100.03 148.604 97.8748L143.673 95.7589C136.598 92.723 131.617 86.2192 130.529 78.5975L129.972 74.6995C129.341 70.2763 130.829 65.814 133.989 62.6553C136.651 59.9948 140.26 58.5002 144.024 
-              58.5002H146.734C153.675 58.5002 160.155 61.9723 164 67.7509L164.475 68.4647C164.771 68.9081 165.156 69.2861 165.604 69.5752C166.052 69.8643 166.554 70.0585 167.08 70.1456L190.481 74.0457C191.107 
-              74.1508 191.75 74.0999 192.353 73.8975L193.68 73.4551C205.332 69.571 218.402 74.672 221.85 86.4609C230.033 114.443 226.685 144.81 212.133 170.544ZM188.539 34.5712C190.756 36.4975 190.442 
-              39.972 187.999 41.6011C186.983 42.2781 185.741 42.5238 184.544 42.2844L168.734 39.121L157.264 35.3029C156.562 35.0643 155.806 35.0345 155.088 35.2171L141.898 38.5129C141.042 38.7267 
-              140.143 38.6922 139.307 38.4135C136.628 37.5211 135.361 34.4627 136.623 31.9371L137.298 30.5878C138.305 28.5729 140.365 27.3001 142.618 27.3001H152.132C152.737 27.3007 153.334 27.1605 
-              153.875 26.8906L159.186 24.235C164.325 21.6654 170.439 21.6361 175.293 24.7102C179.949 27.6586 184.377 30.9548 188.539 34.5712ZM64.217 21.4574C70.3527 18.0503 77.8353 18.8558 83.6748 
-              22.7488C84.1347 23.0549 84.6545 23.2596 85.1997 23.3494L100.075 25.8296C102.187 26.1818 103.485 28.3388 102.806 30.37C102.459 31.4083 101.644 32.2231 100.605 32.5698L92.4069 35.3068C91.5248 
-              35.6003 90.7766 36.1992 90.297 36.9955L82.3114 50.3029C80.2004 53.8209 77.256 56.7652 73.738 58.8761L65.4354 63.858C62.5776 65.5728 59.4057 66.6989 56.1064 67.1701L34.5853 70.2431C33.6556 70.3746 
-              32.8045 70.8371 32.1883 71.5456C31.5722 72.2542 31.2324 73.1613 31.2313 74.1003V85.8003C31.2315 86.8346 31.6426 87.8264 32.374 88.5576L38.1717 94.3553C38.7221 94.9057 39.0313 95.6522 39.0313 
-              96.4306C39.0313 98.7748 36.4186 100.173 34.4682 98.8724L25.3236 92.7745C23.6927 91.6869 22.4707 90.0869 21.8509 88.2273L19.9625 82.5622C18.0055 76.6911 18.1901 70.2433 21.1574 64.8124C31.1237 
-              46.5714 46.0637 31.5376 64.217 21.4574ZM63.2114 144.378L55.2389 142.782C49.1457 141.562 43.9551 137.601 41.1701 132.046L40.5247 130.759C39.5427 128.8 39.0313 126.639 39.0313 124.448V123.339C39.0313 
-              120.314 40.2329 117.413 42.3718 115.274L45.0568 112.59C49.2411 108.405 56.2952 109.55 58.9409 114.844C59.2649 115.492 59.7631 116.037 60.3797 116.418C60.9962 116.799 61.7067 117.001 62.4314 
-              117H73.3693C82.1509 117 90.2886 121.608 94.8066 129.138L98.0892 134.609C98.4358 135.186 98.9257 135.663 99.5114 135.995C100.097 136.326 100.759 136.5 101.432 136.5C107.041 136.5 111.249 141.632 110.151 
-              147.133L110.087 147.456C109.733 149.231 108.861 150.861 107.581 152.141L94.7781 164.943C94.4153 165.305 94.1273 165.735 93.9306 166.208C93.7338 166.681 93.6322 167.188 93.6315 167.701C93.6315 173.838 
-              90.7417 179.618 85.8315 183.301L79.5915 187.981C79.1072 188.344 78.7141 188.815 78.4433 189.357C78.1725 189.898 78.0315 190.495 78.0315 191.101V201.362C78.0315 203.245 76.1879 204.577 
-              74.3997 203.985C73.6262 203.729 73.0053 203.144 72.7028 202.388L68.118 190.92C66.9378 187.968 66.3314 184.818 66.3314 181.639V148.201C66.3316 147.301 66.0211 146.43 65.4526 145.733C64.884 
-              145.037 64.0923 144.558 63.2114 144.378ZM51.488 204.332C17.4692 178.81 1.61281 136.103 10.0613 95.0406C10.7034 91.9195 14.826 91.8099 15.834 94.8327C16.107 95.6553 16.6463 96.3634 17.3668 
-              96.8451L31.588 106.325C34.289 108.126 34.6684 111.947 32.374 114.243C31.6426 114.974 31.2315 115.966 31.2313 117V128.7C31.2307 129.305 31.3709 129.902 31.6408 130.444L39.4408 146.044C39.7073 
-              146.575 40.0919 147.039 40.565 147.399C41.0382 147.76 41.5875 148.007 42.1708 148.123C51.6946 150.025 58.5509 158.386 58.5509 168.098V187.201C58.5505 187.696 58.6444 188.187 58.8278 
-              188.648L66.6278 208.148C66.8388 208.674 67.162 209.148 67.5749 209.537C67.9878 209.925 68.4804 210.219 69.0185 210.398L80.7186 214.298C81.1093 214.43 81.5189 214.499 81.9315 214.501C82.9658 
-              214.501 83.9578 214.09 84.6892 213.358C85.4206 212.627 85.8315 211.635 85.8315 210.601V205.551C85.8315 197.682 89.5363 190.272 95.8315 185.551L99.8715 182.521C100.356 182.157 100.749 
-              181.686 101.02 181.145C101.29 180.603 101.431 180.006 101.432 179.401C101.432 172.943 103.997 166.75 108.563 162.184L115.889 154.858C116.433 154.313 116.803 153.62 116.954 152.865L120.854 
-              133.365C120.967 132.799 120.953 132.216 120.813 131.656C120.674 131.096 120.411 130.575 120.046 130.129C119.68 129.682 119.22 129.323 118.699 129.076C118.178 128.829 117.608 128.701 117.032 
-              128.7C108.723 128.7 101.023 124.341 96.7485 117.216L93.0738 111.092C92.7272 110.515 92.2373 110.038 91.6516 109.706C91.0659 109.375 90.4045 109.201 89.7315 109.2H79.8621C70.6585 109.2 62.2469 
-              103.994 58.1414 95.757C57.8648 95.2038 57.4607 94.7243 56.9622 94.3582C56.4638 93.992 55.8855 93.7496 55.2749 93.651C54.665 93.5457 54.0386 93.59 53.4496 93.7802C52.8606 93.9704 52.3266 94.3008 
-              51.8936 94.743L51.2135 95.4204C49.5937 97.034 46.8314 95.8867 46.8314 93.6003C46.8311 92.5661 46.4201 91.5742 45.6886 90.843L40.5635 85.7179C39.5825 84.7368 39.0313 83.4063 39.0313 82.0189C39.0313 
-              79.4154 40.9458 77.2082 43.5231 76.8402L62.9852 74.0613C63.4997 73.9866 63.9942 73.8103 64.4399 73.5426L83.94 61.8425C84.4871 61.5138 84.9451 61.0558 85.2738 60.5087L91.4772 50.1705C94.5461 45.056 
-              99.3425 41.2072 105 39.3191L106.564 38.7973C107.139 38.6086 107.662 38.2872 108.09 37.859C108.519 37.4308 108.84 36.9079 109.029 36.3325L112.929 24.6325C113.105 24.0985 113.164 23.5327 113.101 
-              22.9738C113.039 22.4149 112.856 21.8762 112.565 21.3946C112.275 20.913 111.884 20.4999 111.419 20.1837C110.954 19.8675 110.426 19.6555 109.871 19.5625L87.7409 15.8728C87.4489 15.8241 87.1705 15.714 
-              86.9242 15.5498C85.4694 14.58 85.7805 12.3748 87.4632 11.9C108.529 5.95553 130.879 6.50389 151.594 13.4364C154.254 14.3266 154.409 17.9037 151.9 19.1564C151.447 19.3824 150.948 19.5001 150.442 19.5001H136.532C135.804 
-              19.4961 135.089 19.696 134.469 20.0772C133.848 20.4583 133.347 21.0055 133.022 21.6568L125.222 37.2568C124.972 37.7566 124.833 38.3042 124.814 38.8623C124.795 39.4205 124.896 39.9763 125.11 40.4921C125.324 41.008 125.646 
-              41.4718 126.055 41.8523C126.464 42.2327 126.95 42.5209 127.48 42.6973L139.18 46.5974C139.882 46.8358 140.637 46.866 141.356 46.6832L148.799 44.8233C153.408 43.6717 158.25 43.8571 162.758 45.358L166.48 46.5974C166.632 46.652 
-              166.788 46.6939 166.948 46.7222L186.448 50.6222C186.95 50.7246 187.467 50.7263 187.97 50.6272C188.473 50.5281 188.951 50.3302 189.377 50.045L191.62 48.5486C195.428 46.0093 200.558 46.6278 203.36 50.2456C206.998 54.9406 204.584 
-              61.5989 198.95 63.477L193.949 65.144C191.879 65.8341 189.671 66.0073 187.518 65.6485L180.704 64.5125C173.888 63.3763 167.846 59.4698 164.013 53.7203L163.157 52.4357C162.803 51.9044 162.323 51.4684 161.761 51.1658C161.198 50.8632 
-              160.57 50.7033 159.932 50.7002H136.532C135.497 50.7004 134.506 51.1114 133.774 51.8429L122.074 63.5429C121.646 63.9712 121.323 64.4934 121.131 65.0681C120.94 65.6429 120.885 66.2543 120.971 66.854L124.871 94.1541C124.967 94.8178 
-              125.233 95.4454 125.643 95.9762C126.053 96.507 126.593 96.9231 127.211 97.1844L154.511 108.884C155.293 109.223 156.165 109.293 156.991 109.083L166.418 106.726C169.284 106.009 172.319 106.536 174.775 108.177C177.685 110.12 179.432 113.388 
-              179.432 116.886V124.8C179.425 125.404 179.559 126.001 179.822 126.544L192.386 151.637C194.126 155.112 195.032 158.944 195.032 162.83V171.601C195.032 172.635 195.443 173.627 196.175 174.358C200.856 179.042 201.443 186.524 196.938 191.377C159.399 231.82 96.6048 238.181 51.488 204.332Z"
-              fill="#1B8976"
-              fill-opacity="0.2"
-            />
-          </svg>
-          <div>
-            {% comment %}
-            <img
-              src="{% static 'worldwide.svg' %}"
-              alt="Quality Check"
-              class="cd_icon"
-            />
-            {% endcomment %}
-            <svg
-              class="cd_icon mb-3"
-              width="76"
-              height="76"
-              viewBox="0 0 76 76"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_2438_8354)">
-                <path
-                  d="M38.0135 0.00781291C22.8087 0.0055967 9.06697 9.06877 3.08242 23.0462L2.60879 23.2032L2.79242 23.7541C-5.08714 43.188 4.27933 65.33 23.7132 73.2095C28.2522 
-                75.0499 33.1043 75.9947 38.0022 75.992C58.9846 75.9951 75.9968 58.988 76 38.0056C76.0032 17.0232 58.996 0.0108206 38.0135 0.00781291ZM67.814 57.1549L65.8631 
-                55.2052V50.6639C65.8653 50.468 65.8219 50.2742 65.7364 50.0978L60.7975 40.2338V35.4671C60.7975 35.2587 60.7461 35.0534 60.6478 34.8696C60.5495 34.6858 60.4073 
-                34.5291 60.2339 34.4134L56.4347 31.8806C56.2874 31.7823 56.1212 31.716 55.9467 31.6859C55.7722 31.6558 55.5933 31.6626 55.4216 31.7059L50.7688 32.8684L42.9538 
-                29.515L41.8787 21.9824L44.8585 19.0039H51.2551L53.408 22.2395C53.5042 22.3835 53.6289 22.5062 53.7744 22.6001C53.9199 22.694 54.0831 22.757 54.254 22.7853L61.8524 
-                24.0517C62.0559 24.0859 62.2647 24.0694 62.4602 24.0036L69.4584 21.6709C75.328 32.9348 74.7002 46.4823 67.814 57.1549ZM62.5907 12.4869L60.5315 13.8597L54.7909 12.7111L51.0664 
-                11.4713C50.8385 11.3938 50.5931 11.3841 50.3598 11.4434L45.6513 12.6199L43.587 11.9323L45.1169 8.87263H49.3998C49.5963 8.87283 49.7901 8.82731 49.9659 8.73966L54.3477 6.54878C57.3652 
-                8.1238 60.1411 10.1236 62.5907 12.4869ZM24.1313 5.3685L27.1707 7.39474C27.32 7.49413 27.4888 7.56061 27.6658 7.58977L33.8028 8.61302L33.2038 10.405L30.0061 11.4726C29.7197 11.5678 
-                29.4767 11.7623 29.321 12.0209L25.6839 18.0819L19.842 21.5873L11.2305 22.817C10.9286 22.8597 10.6522 23.0099 10.4521 23.2399C10.252 23.47 10.1417 23.7646 10.1414 24.0695V27.8687C10.1414 
-                28.2045 10.2749 28.5266 10.5124 28.764L12.6742 30.9258V33.1015L7.40592 29.5884L5.49492 23.8554C9.13071 15.5478 15.7947 8.93729 24.1313 5.3685ZM20.5259 46.89L14.8017 45.744L12.6742 
-                41.5002V38.5242L17.3928 33.8056L19.1391 37.2996C19.2444 37.5101 19.4061 37.6871 19.6063 37.8108C19.8065 37.9345 20.0372 38 20.2726 37.9999H28.4206L31.8513 43.7177C31.9638 43.905 32.1229 
-                44.06 32.3131 44.1677C32.5033 44.2753 32.7181 44.3319 32.9366 44.3319H36.4572L35.5707 48.7732L30.7761 53.5678C30.6583 53.6853 30.5648 53.8248 30.5009 53.9784C30.437 54.1321 30.404 54.2968 
-                30.4038 54.4631V57.6291L25.8447 61.0484C25.6875 61.1664 25.5598 61.3194 25.4719 61.4952C25.384 61.6711 25.3382 61.865 25.3382 62.0616V66.6358L23.7628 66.114L21.539 60.552V48.1311C21.539 
-                47.8392 21.4382 47.5562 21.2536 47.33C21.069 47.1039 20.8119 46.9484 20.5259 46.89ZM16.719 66.358C4.77861 57.3999 -0.271013 41.9219 4.08921 27.6458L5.14159 30.8017C5.23023 31.0688 5.40535 
-                31.2987 5.63929 31.4551L11.9523 35.6634L10.5124 37.1045C10.2749 37.342 10.1414 37.6641 10.1414 37.9999V41.7991C10.1412 41.9956 10.1867 42.1894 10.2743 42.3652L12.8071 47.4308C12.8937 
-                47.6034 13.0185 47.754 13.1722 47.871C13.3258 47.988 13.5042 48.0683 13.6936 48.1058L19.0125 49.1683V60.7952C19.0124 60.9561 19.0429 61.1155 19.1024 61.265L21.6352 67.597C21.7037 67.7679 
-                21.8087 67.9218 21.9427 68.048C22.0768 68.1742 22.2368 68.2697 22.4115 68.3277L26.2107 69.5941C26.3376 69.6371 26.4706 69.6594 26.6046 69.66C26.9405 69.66 27.2626 69.5265 27.5001 69.289C27.7376 
-                69.0516 27.871 68.7294 27.871 68.3936V62.6948L32.43 59.2755C32.5873 59.1575 32.715 59.0045 32.8029 58.8287C32.8908 58.6528 32.9366 58.4589 32.9366 58.2623V54.9874L37.6312 50.2929C37.8077 50.116 
-                37.928 49.8908 37.9769 49.6457L39.2433 43.3137C39.28 43.1301 39.2755 42.9406 39.2302 42.7588C39.1848 42.5771 39.0997 42.4077 38.981 42.2629C38.8623 42.118 38.7129 42.0013 38.5437 41.9211C38.3744 
-                41.8409 38.1895 41.7992 38.0022 41.7991H33.6534L30.2227 36.0813C30.1102 35.894 29.9511 35.739 29.7609 35.6313C29.5707 35.5237 29.3559 35.4671 29.1374 35.4671H21.0552L18.8795 31.1018C18.7897 
-                30.9222 18.6585 30.7665 18.4966 30.6476C18.3348 30.5287 18.147 30.4499 17.9487 30.4179C17.7507 30.3837 17.5473 30.3981 17.356 30.4599C17.1648 30.5217 16.9914 30.6289 16.8508 30.7725L15.207 
-                32.41V30.4015C15.2069 30.0656 15.0734 29.7436 14.8359 29.5061L12.6742 27.3444V25.1674L20.4524 24.0568C20.6195 24.0326 20.7801 23.9753 20.9248 23.8884L27.2568 20.0892C27.4344 19.9824 27.5832 
-                19.8337 27.6899 19.6561L31.2485 13.7255L34.6032 12.606C34.79 12.5447 34.9598 12.4403 35.0989 12.3013C35.2379 12.1623 35.3423 11.9925 35.4036 11.8056L36.67 8.00641C36.7273 7.83302 36.7464 7.64928 
-                36.726 7.4678C36.7057 7.28633 36.6463 7.1114 36.552 6.95502C36.4577 6.79864 36.3307 6.6645 36.1796 6.56182C36.0286 6.45913 35.8572 6.39031 35.6771 6.36009L28.3472 5.13801L27.0592 4.27939C35.0285 
-                1.68554 43.66 2.00644 51.4147 5.18487L49.101 6.33983H44.3342C44.0978 6.33854 43.8658 6.40345 43.6643 6.52722C43.4629 6.65098 43.3001 6.82866 43.1945 7.04015L40.6617 12.1058C40.5807 12.2681 40.5356 
-                12.4458 40.5293 12.6271C40.5231 12.8083 40.5558 12.9888 40.6253 13.1563C40.6949 13.3238 40.7995 13.4744 40.9323 13.598C41.0651 13.7215 41.2228 13.8151 41.3949 13.8724L45.1941 15.1388C45.4221 
-                15.2162 45.6674 15.226 45.9008 15.1667L50.6093 13.9902L54.0589 15.1388C54.1083 15.1565 54.1591 15.1701 54.2109 15.1793L60.5429 16.4457C60.706 16.479 60.874 16.4795 61.0372 16.4473C61.2005 
-                16.4152 61.3557 16.3509 61.494 16.2583L64.3763 14.3359C65.7948 15.9159 67.0696 17.6192 68.1857 19.4256L61.955 21.5025L55.2088 20.3779L52.98 17.0346C52.8649 16.8621 52.7092 16.7205 52.5266 
-                16.6222C52.344 16.524 52.14 16.4721 51.9326 16.4711H44.3342C43.9984 16.4711 43.6763 16.6046 43.4389 16.8421L39.6397 20.6413C39.5005 20.7804 39.3957 20.9499 39.3335 21.1366C39.2713 21.3232 
-                39.2534 21.5218 39.2813 21.7165L40.5477 30.5813C40.579 30.7968 40.6654 31.0006 40.7985 31.173C40.9316 31.3453 41.1069 31.4805 41.3075 31.5653L50.1723 35.3645C50.4263 35.4745 50.7095 35.4972 
-                50.9778 35.4291L55.5001 34.2982L58.2647 36.1446V40.5327C58.2624 40.7287 58.3058 40.9225 58.3913 41.0988L63.3303 50.9628V55.7295C63.3303 56.0654 63.4638 56.3874 63.7013 56.6249L66.3506 
-                59.2755C54.6011 74.9366 32.3802 78.1077 16.719 66.358Z"
-                  fill="#1B8976"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_2438_8354">
-                  <rect width="76" height="76" rx="25" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <p class="cd_subheading">WORLD WIDE PRESENCE</p>
-            <h3 class="cd_heading">
-              Global Trust in Dental <br />
-              Supply
-            </h3>
-            <p class="cd_text">
-              With a strong global footprint, we supply a wide range of
-              high-quality dental prosthetics to clients overseas, proudly
-              supporting dental professionals, clinics, and distributors around
-              the world.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="thirdCard globalCard">
-          {% comment %}
-          <img
-            src="{% static 'fda_bg.svg' %}"
-            alt="Quality Check"
-            class="cd_bg_icon_1"
-          />
-          {% endcomment %}
-          <svg
-            class="cd_bg_icon_2"
-            width="256"
-            height="320"
-            viewBox="0 0 256 320"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.2099 163.425C6.81646 152.207 5 140.31 5 127.994C5 60.1725 60.1725 5 128 5C195.828 5 251.001 60.1725 251.001 127.994C251.001 174.862 224.659 215.69 186.001 236.442M19.046 185.036C30.5036 206.84 48.3156 224.798 70 236.442"
-              stroke="#1B8976"
-              stroke-opacity="0.2"
-              stroke-width="10"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M161.591 152.866L185.82 89.2497C186.315 88.0394 188.029 88.0374 188.526 89.2471L212.535 152.866M169.148 137.022H205.101M69.6172 88.3408H43.4648V152.866M43.4648 119.992H67.5399M177.63 288.268C184.477 278.467 188.489 266.55 188.489 253.689C188.489 220.274 161.408 193.193 128 193.193C94.5919 193.193 67.5113 220.274 67.5113 253.689C67.5113 287.097 94.5919 314.178 128 314.178C140.11 314.178 151.388 310.618 160.849 304.483M141.851 120.603C141.851 138.382 131.984 152.45 116.329 152.723C111.118 152.815 97.65 152.866 97.65 152.866L97.5189 88.3408H115.793C132.965 88.3408 141.851 102.825 141.851 120.603Z"
-              stroke="#1B8976"
-              stroke-opacity="0.2"
-              stroke-width="10"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M159.107 230.582C154.824 226.685 148.154 227.061 144.059 231.156L120.523 254.692L111.942 246.111C107.847 242.016 101.177 241.639 96.8944 245.537C92.3219 249.698 92.1962 256.783 96.5178 261.105L110.964 275.551C116.243 280.83 124.802 280.83 130.081 275.551L159.482 246.15C163.804 241.828 163.679 234.744 159.107 230.582Z"
-              stroke="#1B8976"
-              stroke-opacity="0.2"
-              stroke-width="10"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <div>
-            {% comment %}
-            <img
-              src="{% static 'FDA.svg' %}"
-              alt="Quality Check"
-              class="cd_icon"
-            />
-            {% endcomment %}
-            <svg
-              class="cd_icon mb-3"
-              width="76"
-              height="76"
-              viewBox="0 0 80 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3.60954 50.9441C2.56118 47.4783 2 43.8029 2 39.9979C2 19.0451 19.0451 2 40 2C60.9549 2 78 19.0451 78 39.9979C78 54.4777 69.8619 67.0909 57.9188 73.5023M6.33939 57.6207C9.87915 64.3569 15.382 69.905 22.0813 73.5023"
-                stroke="#1B8976"
-                stroke-width="3"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M50.3781 47.6816L57.8634 28.0279C58.0163 27.654 58.5456 27.6533 58.6994 28.027L66.1166 47.6816M52.7126 42.7867H63.8199M21.9634 27.7471H13.8838V47.6816M13.8838 37.5256H21.3216M55.3331 89.513C57.4483 86.4851 58.6879 82.8035 58.6879 78.83C58.6879 68.5067 50.3215 60.1404 40.0003 60.1404C29.6791 60.1404 21.3128 68.5067 21.3128 78.83C21.3128 89.1512 29.6791 97.5175 40.0003 97.5175C43.7415 97.5175 47.2258 96.4178 50.1489 94.5225M44.2795 37.7143C44.2795 43.2069 41.231 47.5531 36.3946 47.6376C34.7846 47.6657 30.6239 47.6816 30.6239 47.6816L30.5834 27.7471H36.2291C41.5342 27.7471 44.2795 32.2217 44.2795 37.7143Z"
-                stroke="#1B8976"
-                stroke-width="3"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M49.6101 71.6922C48.2871 70.488 46.2264 70.6044 44.9614 71.8694L37.6901 79.1407L35.0389 76.4896C33.7739 75.2245 31.7134 75.1082 30.3902 76.3124C28.9776 77.5979 28.9387 79.7868 30.2738 81.1219L34.7368 85.5848C36.3677 87.2157 39.012 87.2157 40.6429 85.5848L49.7261 76.5017C51.0614 75.1664 51.0227 72.9778 49.6101 71.6922Z"
-                stroke="#1B8976"
-                stroke-width="3"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="cd_subheading">FDA REGISTERED</p>
-            <h3 class="cd_heading">
-              FDA Certified Quality <br />
-              Assurance
-            </h3>
-            <p class="cd_text">
-              At Advance Dental Export, we proudly hold an FDA certificate. From
-              manufacturing to final delivery, our processes are validated to
-              ensure dental professionals receive only the most reliable and
-              compliant products.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<link rel="preload" as="image" href="{% static 'fn.webp' %}" />
-<!-- All Product sort information -->
-<section id="services-5" class="bg-lightgrey services-section division">
-  <div class="container">
-    <div class="row align-items-center justify-content-center mx-auto">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">
-          Complete Dental Solutions with Advanced Digital Dentistry
-        </h2>
-        <!-- <h3 class="h4-lg steelblue-color mb-0">Pioneering Modern Technology for Dentists</h3> -->
-      </div>
-      <div class="col-md-12 col-sm-12 col-12 px-0">
-        <div class="swiper servicesSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="sbox-51 mx-auto">
-                <div class="sbox-51-img">
-                  <img
-                    class="mb-0 mt-sm-0 mt-3"
-                    src="{% static 'fn.webp' %}"
-                    alt="3D Fusion metal printer image for PFM and other metal-based dental crown manufacturing"
-                    srcset=""
-                    width="100%"
-                  />
-                </div>
-                <div class="sbox-51-txt">
-                  <h3 class="card-title">
-                    <a
-                      href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}"
-                      class="title-link"
-                      >Porcelain fused to metal (PFM)</a
-                    >
-                  </h3>
-                  <p class="card-desc">
-                    Porcelain fused to metal crown offers both beauty and
-                    strength. Ideal choice of dental professionals, they are
-                    made from durable porcelain fused to metal crown materials.
-                    Perfect for restoring, they combine the aesthetics of
-                    porcelain with the reliability of metal.
-                  </p>
-                  <a
-                    href="{% url 'productd' 'porcelain-fused-to-metal-pfm' %}"
-                    class="card-link"
-                  >
-                    Learn more
-                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sbox-51 mx-auto">
-                <div class="sbox-51-img">
-                  <img
-                    src="{% static 'img/zirconi-advance.webp' %}"
-                    class="mb-0 mt-sm-0 mt-3"
-                    alt="Premium Advance Zirconia teeth restoration services by ADE for natural look and lasting strength"
-                    srcset=""
-                    width="100%"
-                    height="100%"
-                    loading="eager"
-                  />
-                </div>
-                <div class="sbox-51-txt">
-                  <h3 class="card-title">
-                    <a
-                      href="{% url 'productd' 'zirconia-crown' %}"
-                      class="title-link"
-                      >Advance Zirconia</a
-                    >
-                  </h3>
-                  <p class="card-desc">
-                    Our advanced zirconia delivers unmatched strength and
-                    natural appearance. Discover the benefits of real-world
-                    zirconia with expert advice. Learn about zirconia in
-                    dentistry and why it’s a top choice for long-lasting dental
-                    solutions in modern dentistry.
-                  </p>
-                  <a
-                    href="{% url 'productd' 'zirconia-crown' %}"
-                    class="card-link"
-                  >
-                    Learn more
-                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sbox-51 mx-auto">
-                <div class="sbox-51-img">
-                  <img
-                    src="{% static 'img/IPS.webp' %}"
-                    class="mb-0 mt-sm-0 mt-3"
-                    alt="IPS Emax ceramic blocks used at ADE for high-precision Press and CAD dental restorations"
-                    srcset=""
-                    width="100%"
-                    height="100%"
-                    loading="eager"
-                  />
-                </div>
-                <div class="sbox-51-txt">
-                  <h3 class="card-title">
-                    <a
-                      href="{% url 'productd' 'aesthetic-maxima' %}"
-                      class="title-link"
-                      >IPS E Max</a
-                    >
-                  </h3>
-                  <p class="card-desc">
-                    Enhance your smile with IPS e max, an all-ceramic
-                    restoration for teeth. It offers superb translucency and
-                    natural aesthetics. Learn about the benefits of e max in
-                    dental restoration and compare with other clear and durable
-                    options like zirconia.
-                  </p>
-                  <a
-                    href="{% url 'productd' 'aesthetic-maxima' %}"
-                    class="card-link"
-                  >
-                    Learn more
-                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sbox-51 mx-auto">
-                <div class="sbox-51-img">
-                  <img
-                    src="{% static 'img/Implant.webp' %}"
-                    class="mb-0 mt-sm-0 mt-3"
-                    alt="Advance Dental Image"
-                    srcset=""
-                    width="100%"
-                    height="100%"
-                    loading="eager"
-                  />
-                </div>
-                <div class="sbox-51-txt">
-                  <h3 class="card-title">
-                    <a
-                      href="{% url 'productd' 'ad-implant' %}"
-                      class="title-link"
-                      >Advanced Dental Implant Solutions</a
-                    >
-                  </h3>
-                  <p class="card-desc">
-                    Our advanced dental implant solutions include dental implant
-                    with abutment for a complete and permanent tooth
-                    replacement. We provide reliable and affordable implants
-                    that restore both function and confidence in your smile.
-                  </p>
-                  <a href="{% url 'productd' 'ad-implant' %}" class="card-link">
-                    Learn more
-                    <i class="fa fa-arrow-right pl-10" style="width: 25px"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- About team -->
-<section id="banner-7" class="bg-fixed banner-section division">
-  <div class="mobile-group-img"></div>
-  <div class="container white-color px-0">
-    <div
-      class="row d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mx-auto"
-    >
-      <div class="col-md-8 col-lg-6 col-xl-5 col-sm-12 col-11 order-2 order-md-1">
-        <div class="banner-txt wow fadeInUp">
-          <h2
-            class="h2-xs text-start text-lg-start home-section-title"
-            style="font-size: 2.1rem"
-          >
-            Where Quality <br class="d-none d-md-block"/>
-            Meets Excellence
-          </h2>
-          <p>
-            One common dream fuels us:<br class="d-none d-md-block"/>
-            Elevating Digital Dentistry to unparalleled <br class="d-none d-md-block" />
-            heights worldwide
+      <div class="center-box">
+        <div class="box-content">
+          <p class="box-content-heading">Advance Zirconia</p>
+          <p class="box-content-description">
+            Precise Advance Zirconia restorations deliver strength and
+            consistent performance for complex cases.
           </p>
+        </div>
+        <div class="box-icon">
+          <a href="{% url 'home:zirconiacrown'%}">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                fill="#1B8976"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="banner" style="z-index: 4">
+      <picture>
+        <source
+          media="(max-width: 440px)"
+          srcset="{% static 'product_banner_avif/USD_Banner_5_420_new_resize.avif' %}"
+        />
+        <source
+          media="(max-width: 830px)"
+          srcset="{% static 'product_banner_avif/USD_Banner_5_820.avif' %}"
+        />
+        <source
+          media="(max-width: 1185px)"
+          srcset="{% static 'product_banner_avif/USD_Banner_5_1180.avif' %}"
+        />
+        <source
+          media="(max-width: 1285px)"
+          srcset="{% static 'product_banner_avif/USD_Banner_5_1280_new.avif' %}"
+        />
+        <source
+          media="(min-width: 1285px)"
+          srcset="{% static 'product_banner_avif/USD_Banner_5_resize.avif' %}"
+        />
+        <img
+          src="{% static 'product_banner_avif/USD_Banner_5_resize.avif' %}"
+          alt="Frist time in india preview your future smile with ultimate AI"
+          class="banner_image"
+          loading="lazy"
+          width="100%"
+          height="100%"
+        />
+      </picture>
+      <div class="center-box golden_border">
+        <div class="box-content">
+          <p class="box-content-heading gold-text">
+            Preview Your Smile Instantly
+          </p>
+          <p class="box-content-description text-white">
+            Try our virtual smile preview and discover how your perfect smile
+            could look before treatment starts.
+          </p>
+        </div>
+        <div class="box-icon border border-white">
           <a
-            href="{% url 'home:contact_new' %}"
-            class="btn-blue submit mt-20"
-            >Get In Touch</a
+            href="https://ultimatesmiledesign.com/virtual-smile-try-on/"
+            target="_blank"
           >
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                fill="#ad8545"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="banner" style="z-index: 3">
+      <picture>
+        <source
+          media="(max-width: 440px)"
+          srcset="{% static 'product_banner_avif/PorcelainFused_banner_3_420_new.avif' %}"
+        />
+        <source
+          media="(max-width: 830px)"
+          srcset="{% static 'product_banner_avif/PorcelainFused_banner_3_820_new.avif' %}"
+        />
+        <source
+          media="(max-width: 1185px)"
+          srcset="{% static 'product_banner_avif/PorcelainFused_banner_3_1180_new_new.webp' %}"
+        />
+        <source
+          media="(max-width: 1285px)"
+          srcset="{% static 'product_banner_avif/PorcelainFused_banner_3_1280_new.avif' %}"
+        />
+        <source
+          media="(min-width: 1284px)"
+          srcset="{% static 'product_banner_avif/PorcelainFused_banner_3_new.avif' %}"
+        />
+        <img
+          src="{% static 'product_banner_avif/PorcelainFused_banner_3_new.avif' %}"
+          alt="Porcelain Fused to Metal (PFM)"
+          class="banner_image"
+          loading="lazy"
+          width="100%"
+          height="100%"
+        />
+      </picture>
+      <div class="center-box">
+        <div class="box-content">
+          <p class="box-content-heading">Porcelain Fused to Metal (PFM)</p>
+          <p class="box-content-description">
+            PFM for metal strength, porcelain balance, and trusted consistency
+            in restorative cases every day.
+          </p>
+        </div>
+        <div class="box-icon">
+          <a
+            href="https://advancedentalexport.com/porcelain-fused-to-metal-pfm/"
+          >
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                fill="#1B8976"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="banner" style="z-index: 2">
+      <picture>
+        <source
+          media="(max-width: 440px)"
+          srcset="{% static 'product_banner_avif/AD-Implant_banner_4_420.avif' %}"
+        />
+        <source
+          media="(max-width: 830px)"
+          srcset="{% static 'product_banner_avif/AD-Implant_banner_4_820_new.avif' %}"
+        />
+        <source
+          media="(max-width: 1185px)"
+          srcset="{% static 'product_banner_avif/AD-Implant_banner_4_1180_new_new.webp' %}"
+        />
+        <source
+          media="(max-width: 1285px)"
+          srcset="{% static 'product_banner_avif/AD-Implant_banner_4_1280_new.avif' %}"
+        />
+        <source
+          media="(min-width: 1284px)"
+          srcset="{% static 'product_banner_avif/AD-Implant_banner_4.avif' %}"
+        />
+        <img
+          src="{% static 'product_banner_avif/AD-Implant_banner_4.avif' %}"
+          alt="Innovation in Dental AD-Implant"
+          class="banner_image"
+          loading="lazy"
+          width="100%"
+          height="100%"
+        />
+      </picture>
+      <div class="center-box">
+        <div class="box-content">
+          <p class="box-content-heading">AD-Implant</p>
+          <p class="box-content-description text-white">
+            AD-Implant solutions ensure stable abutments, precise fit, and
+            dependable performance for implant cases.
+          </p>
+        </div>
+        <div class="box-icon border border-white">
+          <a href="{% url 'home:adImplants'%}">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                fill="#1B8976"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class="banner" style="z-index: 1">
+      <picture>
+        <source
+          media="(max-width: 440px)"
+          srcset="{% static 'product_banner_avif/e-max_banner_2_420.avif' %}"
+        />
+        <source
+          media="(max-width: 830px)"
+          srcset="{% static 'product_banner_avif/e-max_banner_2_820.avif' %}"
+        />
+        <source
+          media="(max-width: 1185px)"
+          srcset="{% static 'product_banner_avif/e-max_banner_2_1180.avif' %}"
+        />
+        <source
+          media="(max-width: 1280px)"
+          srcset="{% static 'product_banner_avif/e-max_banner_2_1280.avif' %}"
+        />
+        <source
+          media="(min-width: 1281px)"
+          srcset="{% static 'product_banner_avif/e-max_banner_2.avif' %}"
+        />
+        <img
+          src="{% static 'product_banner_avif/e-max_banner_2.avif' %}"
+          alt="Premium IPS e.max restorations crafted for exceptional aesthetics, strength, and natural translucency"
+          class="banner_image"
+          loading="lazy"
+          width="100%"
+          height="100%"
+        />
+      </picture>
+      <div class="center-box">
+        <div class="box-content">
+          <p class="box-content-heading">IPS E-max</p>
+          <p class="box-content-description">
+            IPS e-max restorations deliver natural translucency and refined
+            aesthetics for demanding anterior cases.
+          </p>
+        </div>
+        <div class="box-icon">
+          <a href="https://advancedentalexport.com/aesthetic-maxima/">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.00043 22.0002H39.1724L28.5864 11.4142C28.3954 11.2297 28.243 11.009 28.1382 10.765C28.0334 10.521 27.9782 10.2585 27.9759 9.99296C27.9736 9.72741 28.0242 9.46405 28.1248 9.21825C28.2253 8.97246 28.3739 8.74916 28.5616 8.56137C28.7494 8.37359 28.9727 8.22508 29.2185 8.12452C29.4643 8.02396 29.7277 7.97335 29.9932 7.97566C30.2588 7.97797 30.5212 8.03314 30.7652 8.13796C31.0092 8.24278 31.2299 8.39514 31.4144 8.58616L45.4144 22.5862C45.7894 22.9612 46 23.4698 46 24.0002C46 24.5305 45.7894 25.0391 45.4144 25.4142L31.4144 39.4142C31.0372 39.7785 30.532 39.9801 30.0076 39.9755C29.4832 39.971 28.9816 39.7606 28.6108 39.3898C28.24 39.019 28.0296 38.5174 28.0251 37.993C28.0205 37.4686 28.2221 36.9634 28.5864 36.5862L39.1724 26.0002H4.00043C3.46999 26.0002 2.96128 25.7894 2.58621 25.4144C2.21114 25.0393 2.00043 24.5306 2.00043 24.0002C2.00043 23.4697 2.21114 22.961 2.58621 22.5859C2.96128 22.2109 3.46999 22.0002 4.00043 22.0002Z"
+                fill="#1B8976"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Award Section -->
-{% include "awards.html" %}
-<!-- Testimonials-video -->
+
+{% comment %} Aesthetic Dental Laboratory section {% endcomment %}
+{% include 'newSlider.html'%}
+
+{% comment %} We Deliver Precision for Every Dental Case section {% endcomment %}
+{% include 'static_counter.html' %}
+
+{% comment %} Why We Are the Best Dental Lab Across the Globe section {% endcomment %}
+{% include 'best-dental-lab.html' %}
+
+{% comment %} Complete Dental Solutions with Advanced Digital Dentistry section {% endcomment %}
+{% include "home-product.html" %}
+
+{% comment %} About team section {% endcomment %}
+<section class="team_section_main">
+  <div class="container team_container">
+    <div
+      class="details_container_main"
+      data-aos="fade-up-right"
+      data-aos-delay="200"
+    >
+      <div class="detail_sub_container">
+        <h2 class="team_section_title">Where Quality Meets Excellence</h2>
+        <p class="team_section_description">
+          One common dream fuels us:<br />Elevating Digital Dentistry to
+          unparalleled <br />heights worldwide
+        </p>
+        <a
+          href="{% url 'home:contact_new' %}"
+          class="btn-blue submit team_button"
+          >Get In Touch</a
+        >
+      </div>
+    </div>
+    <div class="team_member_image_main">
+      <div class="team-img img-1">
+        <img
+          src="{% static 'team_member_image/Mr.AnilDhankecha.avif' %}"
+          alt="Mr. Anil Dhankecha, Director and India Office Manager at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="1200"
+          data-aos-duration="700"
+          height="100%"
+          width="100%"
+        />
+      </div>
+      <div class="team-img img-2">
+        <img
+          src="{% static 'team_member_image/Mr.KevalPaladiya.avif' %}"
+          alt="Mr. Keval Paladiya (CDT), Director of the CAD/CAM Department at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="900"
+          data-aos-duration="700"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="team-img img-3">
+        <img
+          src="{% static 'team_member_image/Dr.BhavaniSharma.avif' %}"
+          alt="Dr. Bhavani Sharma (BDS), Director and Head of Sales & Marketing at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="team-img img-4">
+      <img
+        src="{% static 'team_member_image/Mr.ChetanSavani.avif' %}"
+        alt="Mr. Chetan Savani (CDT), Director and Head of the CAD/CAM Department at Advance Dental Export."
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="700"
+        width="100%"
+        height="100%"
+      />
+      </div>
+      <div class="team-img center-img">
+        <img
+          src="{% static 'team_member_image/Mr.HareshSavani.avif' %}"
+          alt="Mr. Haresh Savani, Founder of Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="team-img img-6">
+        <img
+          src="{% static 'team_member_image/Mr.HemalShingala.avif' %}"
+          alt="Mr. Hemal Shingala (CDT), Director and Head of Advanced Zirconia specializing in crowns, bridges, and full mouth rehabilitation at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="700"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="team-img img-7">
+        <img
+          src="{% static 'team_member_image/Mr.DhavalMathukiya.avif' %}"
+          alt="Mr. Dhaval Mathukiya (CDT), Director and Head of the Implant Department at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="700"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="team-img img-8">
+        <img
+          src="{% static 'team_member_image/Mr.HardikBhikadiya.avif' %}"
+          alt="Mr. Hardik Bhikadiya (CDT), Director of PFM Crowns and Bridges at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="900"
+          data-aos-duration="700"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="team-img img-9">
+        <img
+          src="{% static 'team_member_image/Dr.KetanSavani.avif' %}"
+          alt="Dr. Ketan Savani (BDS), Head of International Communication at Advance Dental Export."
+          data-aos="fade-up"
+          data-aos-delay="1200"
+          data-aos-duration="700"
+          width="100%"
+          height="100%"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} Winning Never Stops section {% endcomment %}
+{% include 'awards.html' %}
+
+{% comment %} Tales of Trust from Our Clientele videos section{% endcomment %}
 <section id="gallery-1" class="gallery-section division pt-50 pb-40">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">
+      <div class="col-lg-12 mx-auto section-title" data-aos="fade-down-right">
+        <h2
+          class="h2-m steelblue-color mb-0 home-section-title heading-text-color"
+        >
           In Their Own Words: Tales of Trust from Our Clientele
         </h2>
       </div>
@@ -946,10 +551,7 @@
               <button class="play-button" aria-label="Play">
                 <svg height="100%" viewBox="0 0 68 48" width="100%">
                   <path
-                    d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
-                  C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
-                  C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
-                  S67.94,13.05,66.52,7.74z"
+                    d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24 S67.94,13.05,66.52,7.74z"
                     fill="#212121"
                     fill-opacity="0.8"
                   ></path>
@@ -965,654 +567,32 @@
     </div>
   </div>
 </section>
-<!-- Introduction for the lab -->
-{% comment %} <section class="service-section section" id="serviceSection">
-  <div class="page-padding">
-    <div class="container container-large scroll-jack">
-      <div class="padding-section-challenge">
-        <div class="service-title-wrapper">
-          <h2 class="service-title" lines-slide-up="" split-text="">
-            Building The Future Of Digital <br />
-            <span>Dentistry</span>
-          </h2>
-          <p class="service-subtitle" lines-slide-up="" split-text="">
-            We build the future of digital dentistry by delivering innovative
-            solutions and unmatched expertise. Our commitment to quality and
-            precision makes us the trusted choice for dentists worldwide.
-          </p>
-        </div>
-        <div
-          class="service-card-wrapper row challenge-list challenge-section"
-          id="serviceCardWrapper"
-        >
-          <div
-            class="challenge-item service-card d-flex justify-content-between"
-            id="service-card1"
-          >
-            <div class="challenge-grid flex-wrap">
-              <span class="challenge-number service-number order-1 order-md-1"
-                >01</span
-              >
-              <div
-                class="service-card-content challenge-div order-3 order-md-2"
-              >
-                <h3 class="challenge-heading">Skilled Dental Specialists</h3>
-                <div class="challenge-text w-richtext">
-                  <p>
-                    We take pride in delivering exceptional results through the
-                    hands of our expert dental technicians. With deep expertise,
-                    advanced techniques, and an eye for precision, our team
-                    ensures every restoration meets the highest standards.
-                  </p>
-                </div>
-              </div>
-              <div class="service-icon order-2 order-md-3">
-                <img
-                  src="{% static 'dental-icon.svg'%}"
-                  class="svgInject"
-                  alt="animated-icon"
-                  width="120"
-                  height="120"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="challenge-item service-card d-flex justify-content-between"
-            id="service-card2"
-          >
-            <div class="challenge-grid flex-wrap">
-              <span class="challenge-number service-number order-1 order-md-1"
-                >02</span
-              >
-              <div
-                class="service-card-content challenge-div order-3 order-md-2"
-              >
-                <h3 class="challenge-heading">Digital Dentistry Equipment</h3>
-                <div class="challenge-text w-richtext">
-                  <p>
-                    At Advance Dental Export, we embrace cutting-edge digital
-                    dentistry to craft precise, high-quality dental prosthetics.
-                    Using the latest equipment and manufacturing technology, we
-                    ensure accuracy, consistency, and excellence in every
-                    product.
-                  </p>
-                </div>
-              </div>
-              <div class="service-icon order-2 order-md-3">
-                <img
-                  src="{% static 'digital-icon.svg' %}"
-                  class="svgInject"
-                  width="120"
-                  height="120"
-                  alt="animated-icon"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="challenge-item service-card d-flex justify-content-between"
-            id="service-card3"
-          >
-            <div class="challenge-grid flex-wrap">
-              <span class="challenge-number service-number order-1 order-md-1"
-                >03</span
-              >
-              <div
-                class="service-card-content challenge-div order-3 order-md-2"
-              >
-                <h3 class="challenge-heading">Advanced Laboratory Setup</h3>
-                <div class="challenge-text w-richtext">
-                  <p>
-                    Our state-of-the-art facilities and dedicated team work in
-                    harmony to ensure every dental prosthesis meets the highest
-                    industry standards. From materials to final finish,
-                    excellence is built into every step because your patients
-                    deserve nothing less.
-                  </p>
-                </div>
-              </div>
-              <div class="service-icon order-2 order-md-3">
-                <img
-                  src="{% static 'lab-icon.svg' %}"
-                  class="svgInject"
-                  width="120"
-                  height="120"
-                  alt="animated-icon"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="challenge-item service-card d-flex justify-content-between"
-            id="service-card4"
-          >
-            <div class="challenge-grid flex-wrap">
-              <span class="challenge-number service-number order-1 order-md-1"
-                >04</span
-              >
-              <div
-                class="service-card-content challenge-div order-3 order-md-2"
-              >
-                <h3 class="challenge-heading">Professional Dental Services</h3>
-                <div class="challenge-text w-richtext">
-                  <p>
-                    We specialize in professional dental solutions, with a focus
-                    on crown and bridge preparations tailored to individual
-                    needs. Our expert team crafts customized smile designs that
-                    reflect each patient’s unique vision.
-                  </p>
-                </div>
-              </div>
-              <div class="service-icon order-2 order-md-3">
-                <img
-                  src="{% static 'professional-icon.svg' %}"
-                  class="svgInject"
-                  width="120"
-                  height="120"
-                  alt="animated-icon"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="challenge-item service-card d-flex justify-content-between"
-            id="service-card5"
-          >
-            <div class="challenge-grid flex-wrap">
-              <span class="challenge-number service-number order-1 order-md-1"
-                >05</span
-              >
-              <div
-                class="service-card-content challenge-div order-3 order-md-2"
-              >
-                <h3 class="challenge-heading">Commitment to Accuracy</h3>
-                <div class="challenge-text w-richtext">
-                  <p>
-                    At Advance Dental Export, every restoration is a work of
-                    precision. Our skilled team combines expert craftsmanship
-                    with advanced technology to deliver flawless fit, optimal
-                    function, and lifelike aesthetics.
-                  </p>
-                </div>
-              </div>
-              <div class="service-icon order-2 order-md-3">
-                <img
-                  src="{% static 'commitment-icon.svg' %}"
-                  class="svgInject"
-                  width="120"
-                  height="120"
-                  alt="animated-icon"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="challenge-item service-card d-flex justify-content-between"
-            id="service-card6"
-          >
-            <div class="challenge-grid flex-wrap">
-              <span class="challenge-number service-number order-1 order-md-1"
-                >06</span
-              >
-              <div
-                class="service-card-content challenge-div order-3 order-md-2"
-              >
-                <h3 class="challenge-heading">Client-Centric Approach</h3>
-                <div class="challenge-text w-richtext">
-                  <p>
-                    We believe every successful smile starts with strong
-                    collaboration. Our team works closely with dentists,
-                    maintaining open communication to craft solutions tailored
-                    to your clinical preferences.
-                  </p>
-                </div>
-              </div>
-              <div class="service-icon order-2 order-md-3">
-                <img
-                  src="{% static 'client-icon.svg' %}"
-                  class="svgInject"
-                  width="120"
-                  height="120"
-                  alt="animated-icon"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="challenge-track">
-            <div class="sticky-tracker">
-              <div class="tracker"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-hairline"></div>
-    </div>
-  </div>
-</section>    {% endcomment %}
-<!-- old service section -->
-<section
-  id="services-7"
-  class="bg-lightgrey wide-601 servicess-section division"
->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">
-          Building The Future Of Digital Dentistry
-        </h2>
-      </div>
-      <div class="col-lg-12">
-        <div class="row mx-sm-0 mb-4">
-          <div class="col-md-6 col-lg-4 future-card">
-            <div
-              class="sbox-7 icon-xs wow fadeInUp"
-              style="visibility: visible"
-            >
-              <div class="hexagon">
-                <span class="flaticon-137-doctor blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h3 class="h3-m steelblue-color">Skilled Dental Specialists</h3>
-                <p class="p-sm">
-                  We take pride in delivering exceptional results through the
-                  hands of our expert dental technicians. With deep expertise,
-                  advanced techniques, and an eye for precision, our team
-                  ensures every restoration meets the highest standards.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div class="sbox-7 icon-xs wow fadeInUp">
-              <div class="hexagon">
-                <span class="flaticon-076-microscope blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h3 class="h3-m steelblue-color">
-                  Digital Dentistry Equipment
-                </h3>
-                <p class="p-sm">
-                  At Advance Dental Export, we embrace cutting-edge digital
-                  dentistry to craft precise, high-quality dental prosthetics.
-                  Using the latest equipment and manufacturing technology, we
-                  ensure accuracy, consistency, and excellence in every product.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div class="sbox-7 icon-xs wow fadeInUp">
-              <div class="hexagon">
-                <span class="flaticon-080-shield blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h3 class="h3-m steelblue-color">Advanced Laboratory Setup</h3>
-                <p class="p-sm">
-                  Our state-of-the-art facilities and dedicated team work in
-                  harmony to ensure every dental prosthesis meets the highest
-                  industry standards. From materials to final finish, excellence
-                  is built into every step because your patients deserve nothing
-                  less.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div class="sbox-7 icon-xs wow fadeInUp">
-              <div class="hexagon">
-                <span class="flaticon-113-clinic-history-4 blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h3 class="h3-m steelblue-color">
-                  Professional Dental Services
-                </h3>
-                <p class="p-sm">
-                  We specialize in professional dental solutions, with a focus
-                  on crown and bridge preparations tailored to individual needs.
-                  Our expert team crafts customized smile designs that reflect
-                  each patient’s unique vision.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div class="sbox-7 icon-xs wow fadeInUp">
-              <div class="hexagon">
-                <span class="flaticon-143-teeth blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h3 class="h3-m steelblue-color">Commitment to Accuracy</h3>
-                <p class="p-sm">
-                  At Advance Dental Export, every restoration is a work of
-                  precision. Our skilled team combines expert craftsmanship with
-                  advanced technology to deliver flawless fit, optimal function,
-                  and lifelike aesthetics.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 future-card">
-            <div class="sbox-7 icon-xs wow fadeInUp">
-              <div class="hexagon">
-                <span class="flaticon-079-safebox blue-color"></span>
-              </div>
-              <div class="sbox-7-txt">
-                <h3 class="h3-m steelblue-color">Client-Centric Approach</h3>
-                <p class="p-sm">
-                  We believe every successful smile starts with strong
-                  collaboration. Our team works closely with dentists,
-                  maintaining open communication to craft solutions tailored to
-                  your clinical preferences.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> 
-<!-- - SERVICE SECTION -->
-{% comment %} <section id="services-6" class="bg-blue wide-40 servicess-section division">
-  <div class="container white-color">
-    <div class="row">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m home-section-title">
-          Our Core Dental Services for Crowns, Bridges, and Implants
-        </h2>
-        <p class="text-center">
-          Experience an Unmatched Spectrum of Services: Catering to Every Dental
-          Professional's Needs Today!
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4 d-flex first">
-        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-          <h3
-            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
-          >
-            CAD/CAM Technology
-          </h3>
-          <p>
-            We support 3M True Definition, Cadent iTero, and other open systems
-            to deliver accurate, digitally designed restorations. Our team is
-            here to assist with seamless digital case submissions.
-          </p>
-        </div>
-        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-          <h3
-            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
-          >
-            Shade Analysis
-          </h3>
-          <p>
-            We offer precise shade matching through digital photos or in-lab
-            consultations. For best results, send images to:
-            <a href="mailto:advancedentalexport@gmail.com"
-              >advancedentalexport@gmail.com</a
-            >
-          </p>
-        </div>
-        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-          <h3
-            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
-          >
-            Case Planning Assistance
-          </h3>
-          <p>
-            We offer one-on-one consultations to help plan cases with
-            confidence, providing technical insights and treatment
-            recommendations tailored to your clinical goals.
-          </p>
-        </div>
-        <div class="sbox-6 text-md-start text-lg-end wow fadeInRight">
-          <h3
-            class="h3-m justify-content-lg-end justify-content-md-start justify-content-sm-center"
-          >
-            Diagnostic Wax-Ups
-          </h3>
-          <p>
-            We offer detailed diagnostic wax-ups to support effective treatment
-            planning and patient communication.
-          </p>
-        </div>
-      </div>
-      <div
-        class="col-lg-4 d-lg-flex align-items-center justify-content-center s6-img"
-      >
-        <div class="sbox-6-img text-center wow fadeInUp">
-          <img
-            class="img-fluid"
-            src="{% static 'img/teeth-img931.webp' %}"
-            data-src="{% static 'img/teeth-img931.webp' %}"
-            alt="Wide range of specialized dental treatments available at Advance Dental Export for optimal oral health"
-            width="356"
-            height="auto"
-          />
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 d-flex second">
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-          <h3 class="h3-m">Cosmetic Dentistry</h3>
-          <p>
-            We create aesthetic diagnostic wax-ups and silicone matrices for
-            mock-ups and temporaries. Using advanced materials and techniques,
-            we deliver consistent, natural-looking results every time.
-          </p>
-        </div>
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-          <h3 class="h3-m">Implant Specialists</h3>
-          <p>
-            We support implant cases with diagnostic wax-ups, stent fabrication,
-            and implant components. Custom abutments and denture bars are
-            designed in-house for precision and reliability.
-          </p>
-        </div>
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-          <h3 class="h3-m">Custom Milling</h3>
-          <p>
-            We provide precision milling for zirconia, implant abutments,
-            overdenture bars, temporaries, and ceramics, crafted in-house for
-            quality and accuracy.
-          </p>
-        </div>
-        <div class="sbox-6 pl-30 text-lg-start wow fadeInLeft">
-          <h3 class="h3-m">Laser Welding</h3>
-          <p>
-            Instead of replacing full prosthetics, we support modern restorative
-            dentistry with quick, accurate laser welding of metal frameworks and
-            components.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> {% endcomment %}
-<!-- new desgine of before & after -->
-{% comment %} <section id="gallery-2" class="gallery-section division">
-  <div class="container">
-    <div class="row gallery-item-list text-center listing-gallery-img-items">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">
-          Before & After
-        </h2>
-      </div>
-      <div class="swiper beforeSwiper">
-        <div class="swiper-wrapper">
-          {% for ie in gallery21 %}
-          <div class="swiper-slide">
-            <div class="hover03 wow zoomSlider w-100 h-100">
-              <img
-                class="img-fluid"
-                src="{{ ie.image.url }}"
-                data-src="{{ ie.image.url }}"
-                alt="{{ie.alt}}"
-                width="308"
-                height="auto"
-              />
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-50 wow fadeInUp">
-          <a
-            href="{% url 'home:beforeafter' %}"
-            class="btn btn-blue blue-hover submit"
-            aria-label="See more in the Ade after befor"
-            >See More</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</section> {% endcomment %}
+
+{% comment %} In Their Own Words: Tales of Trust from Our Clientele icon animation section {% endcomment %}
+{% include 'quality_dental_services.html' %}
+
+{% comment %} Before and After – Real Change Stories section {%endcomment %}
 {% include 'new_gallery.html' %}
 
+{% comment %} Core Dental Services for Crowns, Bridges, and Implants section {% endcomment %}
 {% include 'dental_services.html' %}
 
-<!-- client reviews -->
-{% comment %} <section id="reviews-2">
-  <div class="section-title text-center">
-    <h2 class="h2-m steelblue-color mb-0 home-section-title">
-      Client Chronicles: Their Stories, Their Experiences
-    </h2>
-  </div>
-  <div class="review-section testimonials-slider">
-    <div
-      class="review-overlay"
-      style="opacity: 0.7; background-color: rgb(36, 169, 146)"
-    ></div>
-    <div class="container position-relative text-center">
-      <div class="row justify-content-center carousel-row">
-        <div
-          class="col-sm-12 col-md-11 col-lg-11 col-11 carousel slide"
-          data-bs-ride="carousel"
-          id="carouselExampleControls"
-        >
-           <div class="review-slider-testimonials">
-            <div class="carousel-inner">
-              {% for ie in data %}
-              <div
-                class="{% if forloop.first %}active{% endif %} carousel-item"
-                aria-label="Slide {{ forloop.counter }}"
-              >
-                <div
-                  class="review-user mx-auto col-lg-9 col-md-12 col-sm-11 col-12"
-                >
-                  <div class="user_image">
-                    <img
-                      src="{% static 'img/profile-user-3.webp' %}"
-                      class="d-block w-100"
-                      alt="User icon representing profile identity or personal account avatar in interface design"
-                      width="100%"
-                      height="100%"
-                    />
-                  </div>
-                  <p class="review-user-txt">
-                    <i class="fa-solid fa-quote-left"></i>
-                    {{ ie.review|truncatechars:480 }}
-                    {% if ie.google_review_link and ie.review|length > 480 %}
-                      <a
-                        href="{{ ie.google_review_link }}"
-                        target="_blank"
-                        rel="nofollow noopener"
-                        class="read-more-review-link fw-bold"
-                      >
-                      Read more
-                      </a>
-                    {% endif %}
-                    <i class="fa-solid fa-quote-right"></i>
-                  </p>
-                  <p class="review-user-name mb-0">{{ ie.name }}</p>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-            <div class="carousel-controls">
-              <button
-                class="carousel-control-prev review-prev-button"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-              </button>
-              <button
-                class="carousel-control-next review-next-button"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-              </button>
-            </div>
-          </div> 
-        </div>
-      </div>
-    </div>
-  </div>
-</section> {% endcomment %}
-<!-- Gallery -->
-<section id="gallery-1" class="gallery-section division">
-  <div class="container">
-    <div class="row gallery-items-list text-center">
-      <div class="col-lg-12 mx-auto section-title">
-        <h2 class="h2-m steelblue-color mb-0 home-section-title">
-          Gallery - Advance Dental Export
-        </h2>
-      </div>
-      <div class="swiper beforeSwiper">
-        <div class="swiper-wrapper">
-          {% for ie in gallery %}
-          <div class="swiper-slide">
-            <div class="hover03 wow zoomSlider">
-              <!-- Doctor Photo -->
-              <div class="image-item">
-                <img
-                  class="img-fluid"
-                  src="{{ ie.image.url }}"
-                  alt="{{ie.alt}}"
-                  width="100%"
-                  height="100%"
-                />
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="col-md-12 text-center">
-        <div class="all-posts-btn mb-40 wow fadeInUp">
-          <a
-            href="{% url 'home:gallery' %}"
-            class="btn btn-blue blue-hover submit"
-            aria-label="See more in the Ade Gallery"
-            >See More in the Gallery</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- client reviews New design -->
+{% comment %} Gallery - Advance Dental Export section{% endcomment %}
+{% include 'homePage_Prosthetic_gallery.html' %}
+
+{% comment %} Client reviews New design section{% endcomment %}
 {% include 'WinningNeverStops.html' %}
-<!-- Contact us -->
+
+{% comment %} Contact us form section {%endcomment%}
 {% include 'contact_section.html' %}
-<!-- Blogs section -->
+
+{% comment %} Our Stories,Tips & Latest News section {% endcomment %}
 <section class="news1-wrapper">
   <div class="news-blog-wrapper mt-5 mb-3 container">
-    <div class="section-title">
-      <h2 class="h2-m steelblue-color mb-0 home-section-title">
+    <div class="section-title" data-aos="fade-down-left">
+      <h2
+        class="h2-m steelblue-color mb-0 home-section-title heading-text-color"
+      >
         Our Stories, Tips & Latest News
       </h2>
     </div>
@@ -1623,30 +603,30 @@
       >
         <a href="{% url 'home:blogd' blog.slug %}">
           <div class="news-blog-card card">
-              <img
-                src="{{ blog.image.url }}"
-                class="news-img img-fluid"
-                alt="{{blog.alt}}"
-                width="100%"
-                height="100%"
-              />
+            <img
+              src="{{ blog.image.url }}"
+              class="news-img img-fluid"
+              alt="{{blog.alt}}"
+              width="100%"
+              height="100%"
+            />
             <div class="card-body">
               <div
                 class="d-flex align-items-center position-relative justify-content-between blog-meta"
               >
                 <p class="mb-0">
                   <i class="fa-solid fa-calendar-days me-1"></i>
-                  {{ blog.published }}
+                  {{blog.published }}
                 </p>
                 <div class="news-blogs-admin-title">
-                  <i class="fas fa-user-alt me-2"></i>
-                  <span>{{ blog.author }}</span>
+                  <i class="fas fa-user-alt me-2"></i
+                  ><span>{{ blog.author }}</span>
                 </div>
               </div>
-                <h3 class="blogs-title fw-bold">{{ blog.h1 }}</h3>
+              <h3 class="blogs-title fw-bold">{{ blog.h1 }}</h3>
             </div>
             <div class="card-footer border-0 d-flex">
-                Read More
+              Read More
               <i class="fa-solid fa-arrow-right ms-2"></i>
             </div>
           </div>
@@ -1655,18 +635,26 @@
       {% endfor %}
       <div class="col-md-12 text-center">
         <div class="all-posts-btn mb-30 mt-20 wow fadeInUp">
-          <a href="{% url 'blog:blog' %}" class="btn btn-blue blue-hover submit">Read More Posts</a>
+          <a href="{% url 'blog:blog' %}" class="btn btn-blue blue-hover submit"
+            >Read More Posts</a
+          >
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- company parter logo -->
+
+{% comment %} Our Circle of Excellence company parter logo section {%endcomment%}
 <main class="main">
   <section class="section company_partners_section">
     <div class="container">
       <div class="company_content_wrapper">
-        <h2 class="company_content_title">Our Circle of Excellence</h2>
+        <h2
+          class="company_content_title heading-text-color"
+          data-aos="fade-down-right"
+        >
+          Our Circle of Excellence
+        </h2>
         <p class="company_content_description">
           We join hands with pioneers who define prestige through innovation and
           integrity. We take pride in aligning with visionaries for exceptional
@@ -1698,72 +686,187 @@
     </div>
   </section>
 </main>
-{% endblock %} 
-{% block javascript %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="{% static 'js/new-section.js' %}"></script>
+{% endblock %}
+{% block javascript %}
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-
+{% comment %} AOS scripts {% endcomment %}
+<script>
+  function adjustServicesAOS() {
+    if (window.innerWidth < 992) {
+      document.querySelectorAll('#services-7 .future-card .sbox-7').forEach((card, index) => {
+        if (index % 2 === 0) {
+          card.setAttribute('data-aos', 'fade-left');
+        } else {
+          card.setAttribute('data-aos', 'fade-right');
+        }
+      });
+    }
+  }
+  adjustServicesAOS();
+  window.addEventListener("resize", adjustServicesAOS);
+  AOS.init({
+    once: true,
+    offset: 100,
+    easing: "ease-out-cubic",
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'js/new-section.js' %}"></script>
+
+<!-- contact form sweet alert script -->
 {% if messages %}
 <script>
   {% for message in messages %}
-    Swal.fire({
-      icon: "{{ message.tags }}",
-      title: "{{ message.tags|capfirst }}",
-
-      html: "<p>{{ message|escapejs }}</p>",
-
-      position: 'center',
-      timer: 3000,
-      showConfirmButton: false,
-
-      showClass: {
-        popup: 'animate__animated animate__zoomIn animate__faster'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOut animate__faster'
-      },
-
-      customClass: {
-        popup: 'swal-popup-custom',
-        title: 'swal-title-custom',
-        htmlContainer: 'swal-text-custom'
-      }
-    });
+  Swal.fire({
+    icon: "{{ message.tags }}",
+    title: "{{ message.tags|capfirst }}",
+    html: "<p>{{ message|escapejs }}</p>",
+    position: 'center',
+    timer: 3000,
+    showConfirmButton: false,
+    showClass: {
+      popup: 'animate__animated animate__zoomIn animate__faster'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOut animate__faster'
+    },
+    customClass: {
+      popup: 'swal-popup-custom',
+      title: 'swal-title-custom',
+      htmlContainer: 'swal-text-custom'
+    }
+  });
   {% endfor %}
 </script>
 {% endif %}
+
+<!-- Aesthetic Dental Laboratory section animation script -->
 <script>
-  {% comment %} var swiper = new Swiper(".mySwiper", {
-    speed: 600,
-    parallax: !0,
-    loop: true,
-    autoplay: {
-      delay: 8000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: !0,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  }); {% endcomment %}
+  window.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. AOS Initialise karein
+    AOS.init({
+      once: true,
+      offset: 100,
+      duration: 800,
+    });
+
+    const section = document.querySelector(".dental-laboratory-section");
+    const imageContainer = document.querySelector(
+      ".dental-laboratory-section-image",
+    );
+    const imagePlaceholder = document.querySelector(".image-placeholder");
+    const heading = document.querySelector(
+      ".dental-laboratory-section-heading",
+    );
+    const textFade = document.querySelectorAll(".text-fade");
+
+    if (section && imageContainer && imagePlaceholder) {
+      // Initial state set karein
+      gsap.set(imageContainer, { zIndex: 50 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 60px",
+          end: "+=100%", // Scroll distance
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+          // Sabse important: Jab GSAP refresh ho, AOS ko batao
+          onRefresh: () => AOS.refresh(),
+          onUpdate: (self) => {
+            // Agar user bohot tej scroll kare toh AOS sync rahe
+            if (self.progress > 0.1) AOS.refresh();
+          },
+        },
+      });
+
+      // Image Expansion
+      tl.to(
+        imageContainer,
+        {
+          // Placeholder se viewport edge tak ka safar
+          x: () => {
+            const rect = imagePlaceholder.getBoundingClientRect();
+            return -rect.left;
+          },
+          y: () => {
+            const rect = imagePlaceholder.getBoundingClientRect();
+            return -rect.top;
+          },
+          width: "100vw",
+          height: "100vh",
+          borderRadius: "0px",
+          ease: "none",
+        },
+        0,
+      );
+
+      tl.to(
+        imageContainer.querySelector("img"),
+        {
+          borderRadius: "0px",
+          ease: "none",
+        },
+        0,
+      );
+
+      // Heading aur Text ko fade karna
+      tl.to(
+        [heading, textFade],
+        {
+          opacity: 0,
+          y: -50,
+          stagger: 0.1,
+          ease: "none",
+        },
+        0,
+      );
+    }
+
+    // Heading ke liye alag se simple animation (agar wo pin section ke bahar hai)
+    gsap.from(".dental-laboratory-section-heading", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".dental-laboratory-section-heading",
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    // DUSRE ANIMATIONS KO BACHANE KE LIYE:
+    // Jab bhi GSAP refresh ho (window resize ya orientation change par), AOS ko refresh karna compulsory hai
+    ScrollTrigger.addEventListener("refresh", () => AOS.refresh());
+
+    // Final Sync
+    ScrollTrigger.sort();
+    ScrollTrigger.refresh();
+  });
+</script>
+
+<!-- Complete Dental Solutions with Advanced Digital Dentistry slider script  -->
+<script>
   window.addEventListener("load", () => {
     new Swiper(".mySwiper", {
       speed: 600,
-      parallax:!0,
+      parallax: !0,
       loop: true,
-      //autoplay: { delay: 8000, disableOnInteraction:false },
       pagination: { el: ".swiper-pagination", clickable: !0 },
-      navigation:{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"}
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   });
   var servicesSwiper = new Swiper(".servicesSwiper", {
@@ -1784,61 +887,16 @@
       clickable: !0,
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      1200: {
-        slidesPerView: 3,
-      },
-    },
-  });
-  var BeforeSwiper = new Swiper(".beforeSwiper", {
-    speed: 1500,
-    slidesPerView: 3,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: !0,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      576: {
-        sliderPreview: 2,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      1000: {
-        slidesPerView: 3,
-      },
+      0: { slidesPerView: 1 },
+      767: { slidesPerView: 1 },
+      768: { slidesPerView: 2, spaceBetween: 10 },
+      991: { slidesPerView: 2 },
+      1200: { slidesPerView: 3 },
     },
   });
 </script>
-{% comment %} <script src="{% static 'js/svg-inject.min.js' %}"></script> {% endcomment %}
-{% comment %} <script src="{% static 'js/vivus.min.js'%}"></script> {% endcomment %}
+
+<!-- Tales of Trust from Our Clientele videos section slider script -->
 <script>
   const gallerySwiper = new Swiper(".gallerySwiper", {
     speed: 1500,
@@ -1862,11 +920,9 @@
     },
   });
   const videoWrappers = document.querySelectorAll(".index-video1");
-  // Detect if mobile
   function isMobile() {
     return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   }
-  // Create iframe depending on device
   function createYouTubeIframe(videoId) {
     const iframe = document.createElement("iframe");
     const origin = window.location.origin;
@@ -1877,7 +933,7 @@
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute(
       "allow",
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
     );
     iframe.setAttribute("allowfullscreen", "");
     iframe.setAttribute("playsinline", "");
@@ -1890,51 +946,35 @@
     const videoId = wrapper.getAttribute("data-video-id");
     const videoContainer = wrapper.querySelector(".video-container");
     videoContainer.innerHTML = `
-      <img
-        src="https://img.youtube.com/vi/${videoId}/sddefault.jpg"
-        alt="Video Thumbnail"
-        class="video-thumbnail1"
-        width="100%"
-        height="100%"
-      />
+      <img src="https://img.youtube.com/vi/${videoId}/sddefault.jpg" alt="Video Thumbnail" class="video-thumbnail1" width="100%" height="100%"/>
       <button class="play-button" aria-label="Play">
         <svg height="100%" viewBox="0 0 68 48" width="100%">
-          <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55
-          C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19
-          C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24
-          S67.94,13.05,66.52,7.74z"
-          fill="#212121" fill-opacity="0.8"></path>
+          <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24 S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
           <path d="M 45,24 27,14 27,34" fill="#fff"></path>
         </svg>
       </button>
     `;
   }
-  // Handle click on video wrapper
   videoWrappers.forEach((wrapper) => {
     wrapper.addEventListener("click", (e) => {
       const videoId = wrapper.getAttribute("data-video-id");
       const videoContainer = wrapper.querySelector(".video-container");
       const existingIframe = wrapper.querySelector("iframe");
-      // If video already playing → stop it
       if (existingIframe) {
         restoreThumbnail(wrapper);
         gallerySwiper.autoplay.start();
         return;
       }
-      // Remove all iframes first
       videoWrappers.forEach((w) => restoreThumbnail(w));
-      // Stop autoplay
       gallerySwiper.autoplay.stop();
-      videoContainer.innerHTML = ""; // Clear preview first
-      // Delay prevents "Video player config error 153"
+      videoContainer.innerHTML = "";
       setTimeout(() => {
         const iframe = createYouTubeIframe(videoId);
         videoContainer.appendChild(iframe);
-      }, 100); // 100ms delay = YouTube recommended fix
+      }, 100);
       e.stopPropagation();
     });
   });
-  // Close video if clicked outside
   document.addEventListener("click", (e) => {
     const isInsideVideo = e.target.closest(".index-video1");
     if (!isInsideVideo) {
@@ -1943,592 +983,31 @@
     }
   });
 </script>
+
 <script src="https://cdn.plyr.io/3.7.8/plyr.js" defer></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("player");
-
-    // Ensure the video is muted (needed for Safari autoplay)
     video.muted = true;
-
-    // Try to play the video immediately
     video.play().catch((error) => {
       console.log("Autoplay blocked:", error);
     });
-
-    // Add user interaction fallback (Safari blocks autoplay sometimes)
     document.addEventListener("click", () => {
       video.play();
     });
   });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-{% comment %} <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script> {% endcomment %}
-{% comment %} <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script> {% endcomment %}
-{% comment %} <script>
-  document.addEventListener("DOMContentLoaded",()=>{
-    gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.matchMedia({
-      "(min-width:768px)":function(){
-        const section = document.querySelector("#serviceSection");
-        const wrapper = document.querySelector("#serviceCardWrapper");
-        const grids = document.querySelectorAll(".challenge-grid");
-        const stickyTracker = document.querySelector(".sticky-tracker");
-        const lastCard = document.getElementById("service-card6");
-        const activeCard = lastCard.querySelector(".active-card");
-        const firstCard = document.getElementById("service-card1");
-        const firstactiveCard = document.querySelector(".active-card");
-        const tracker = document.querySelector(".challenge-track");
-        
-        if(!section || !wrapper || grids.length === 0) return;
+<!-- jquery -->
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=658031e408a50a76013e5183"
+  type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
 
-        // gsap.set(grids,{opacity:0,y:50})
-        wrapper.style.position = "relative"
-        wrapper.style.minHeight = grids.length * window.innerHeight + "px";
-        
-        let top1 = 5;
-        let top2 = 5;
-        function updateTopValue() {
-          const w = window.innerWidth;
-          if (w >= 768 && w <= 991) { top1 = 8; top2 = 5.5; } 
-          else if (w >= 992 && w <= 1200) { top1 = 8; top2 = 6; } 
-          else if (w >= 1200 && w <= 1300) { top1 = 9;top2 = 8;} 
-          else if (w >= 1300 && w <= 1440) { top1 = 9; top2 = 9;}
-          else if (w >= 1439 && w <= 1649) { top1 = 9; top2 = 6;}
-          else if (w >= 1650 && w <= 1800) { top1 = 9; top2 = 6;} 
-          else if (w >= 1800 && w <= 2000) { top1 = 8; top2 = 6;} 
-          else { top1 = 5; top2 = 5;}
-        }
-        updateTopValue();
-
-        // Set initial state
-        grids.forEach((grid) => {
-          gsap.set(grid, {
-            opacity: 0,
-            top: window.innerHeight / top1 + 55 ,
-            position: "absolute",
-            left: 0,
-            width: "100%",
-          });
-          grid.classList.remove("active-card");
-        });
-
-        let stickyRemoved = false;
-        let stickyActive = false;
-        
-        const pinTrigger = ScrollTrigger.create({
-          trigger:section,
-          start:"top top",
-          end:()=> `+=${section.scrollHeight} ${window.innerHeight - 40}`,
-          scrub:true,
-          markers:true,
-          pinSpacing:false,
-          onUpdate:(self)=>{
-            let idx = Math.floor(self.progress * grids.length);
-            if(idx >= grids.length) idx = grids.length - 1;
-
-            if(self.progress >= 0 && self.start >= 3374 && !stickyRemoved){
-              section.style.position = "sticky";
-              section.style.top = "0px";
-              section.style.zIndex = "1";
-              stickyRemoved = true;
-              console.log("🟢 Section sticky applied on first card start");
-            }
-
-            if(idx >= grids.length - 1 && self.progress >= 1 && !stickyRemoved){
-              section.style.position = "relative";
-              stickyRemoved = true;
-              console.log("🔴 Section sticky removed after last card animation");
-            }
-          },
-          onLeave:() => {
-            section.style.position = "relative";
-            wrapper.style.minHeight = (grids.length * window.innerHeight) / 1.15 + "px";
-            console.log("↩️ Leave sticky state on reverse scroll",window.innerHeight,grids.length);
-          },
-          onEnterBack:()=>{
-            section.style.position = "sticky";
-            section.style.top = '0px';
-            wrapper.style.minHeight = grids.length * window.innerHeight * 1.15 + "px",
-            console.log("↩️ Reset sticky state on reverse scroll");
-          },
-          onLeaveBack:()=>{
-            section.style.position = "sticky";
-            section.style.top = "0px";
-            wrapper.style.minHeight = grids.length * window.innerHeight * 1.15 + "px",
-            console.log("↩️ Reset sticky state on reverse scroll");
-          }
-        })
-        let currentIndex = -1; 
-        // Main ScrollTrigger controlling which card is active
-        const mainTrigger = ScrollTrigger.create({
-          trigger: wrapper,
-          start:"top top",
-          end:"bottom bottom",
-          // end: () => `+=${window.innerHeight * grids.length}`,
-          scrub: true,
-          onUpdate(self) {
-            const p = gsap.utils.clamp(0, 1, self.progress || 0);
-            let idx = Math.floor(p * grids.length);
-            if (idx >= grids.length) idx = grids.length - 1;
-            if (idx < 0) idx = 0;
-
-            console.log("current",idx,currentIndex);
-            // ✅ Only run if index actually changes
-            if (idx !== currentIndex ) {
-              currentIndex = idx;
-              showCard(idx);
-            }
-          },
-          onLeave() {
-            clearAll();
-          },
-          onLeaveBack() {
-            clearAll();
-          },
-          markers: false,
-        });
-        function runSvgInject(grid) {
-          const svgTargets = grid.querySelectorAll(".svgInject");
-
-          if (!svgTargets.length) return;
-
-          SVGInject(svgTargets, {
-            makeIdsUnique: true,
-            afterInject: function (imgEl, svgEl) {
-              if (svgEl.dataset.vivusStarted) return;
-
-              svgEl.dataset.vivusStarted = "1";
-
-              new Vivus(svgEl, {
-                duration: 80,
-                type: "sync",
-              });
-            },
-          });
-        }
-
-        // show one card & play animation
-        function showCard(activeIndex) {
-          const activeY = window.innerHeight / top1 - 140;
-          const enterOffset = 120; // how much next card comes from bottom
-
-          grids.forEach((grid, index) => {
-            const number = grid.querySelector(".challenge-number");
-            const heading = grid.querySelector(".challenge-heading");
-            const text = grid.querySelector(".challenge-text");
-            const image = grid.querySelector(".service-icon, .challenge-image");
-
-            gsap.killTweensOf(grid);
-
-            /* ===============================
-              ACTIVE CARD (CURRENT)
-            =============================== */
-            if (index === activeIndex) {
-
-              if (!grid.classList.contains("active-card")) {
-
-                gsap.set(grid, {
-                  opacity: 0,
-                  y: activeY + enterOffset,
-                  zIndex: 10
-                });
-
-                const tl = gsap.timeline();
-
-                tl.to(grid, {
-                  opacity: 1,
-                  y: activeY,
-                  duration: 0.6,
-                  ease: "power3.out"
-                })
-                .fromTo(
-                  [number, heading, text].filter(Boolean),
-                  { opacity: 0, y: 20 },
-                  { opacity: 1, y: 0, stagger: 0.1, duration: 0.3 },
-                  "-=0.2"
-                )
-              
-                // 👇 SVG Inject + Vivus (KEY PART)
-                .call(() => {
-                  runSvgInject(grid);
-                })
-                .fromTo(
-                  image,
-                  { opacity: 0, scale: 0.9 },
-                  { opacity: 1, scale: 1.1, duration: 0.2, ease: "back.out(2)" },
-                  "-=0.1"
-                )
-                .to(image, {
-                  scale: 1,
-                  duration: 0.1,
-                  ease: "power1.inOut"
-                });
-              }
-
-              grid.classList.add("active-card");
-            }
-
-            /* ===============================
-              PREVIOUS CARD (FADE OUT)
-            =============================== */
-            else if (index === activeIndex - 1) {
-
-              gsap.to(grid, {
-                opacity: 0,
-                y: activeY - 80,
-                duration: 0.5,
-                ease: "power2.inOut"
-              });
-
-              gsap.to([number, heading, text, image].filter(Boolean), {
-                opacity: 0,
-                duration: 0.3
-              });
-
-              grid.classList.remove("active-card");
-            }
-
-            /* ===============================
-              ALL OTHER CARDS (HIDDEN)
-            =============================== */
-            else {
-              gsap.set(grid, {
-                opacity: 0,
-                y: activeY + enterOffset
-              });
-
-              gsap.set([number, heading, text, image].filter(Boolean), {
-                opacity: 0
-              });
-
-              grid.classList.remove("active-card");
-            }
-          });
-
-          updateStickyTracker();
-        }
-
-        // Clear all cards
-        function clearAll() {
-          grids.forEach((g, i) => {
-            console.log("clearAll");
-            
-            if (i === grids.length - 1) {
-              gsap.set(lastCard, { opacity: 1 });
-              lastCard.style.position = "relative";
-              currentIndex = -1; 
-            } else if (i === grids.length - 5) {
-              gsap.set(firstCard, { opacity: 1 });
-              currentIndex = -1; 
-            } else {
-              g.classList.remove("active-card");
-              gsap.killTweensOf(g);
-              gsap.to(g, { opacity: 0, duration: 0.25, ease: "power2.in" });
-              if (stickyTracker) stickyTracker.classList.remove("active");
-            }
-          });
-        }
-
-        // Update sticky tracker
-        function updateStickyTracker() {
-          const hasActive = Array.from(grids).some((grid) =>
-            grid.classList.contains("active-card")
-          );
-          tracker.style.marginTop = `${window.innerHeight / top2 }px`;
-          console.log("tracker",tracker.style.marginTop = window.innerHeight / top1 - 140)
-          if (!stickyTracker) return;
-          stickyTracker.classList.toggle("active", hasActive);
-        }
-
-        // Recalculate on refresh
-        ScrollTrigger.addEventListener("refreshInit", () => {
-          wrapper.style.minHeight = grids.length * window.innerHeight + "px";
-        });
-
-        window.addEventListener("resize", () => {
-          updateTopValue();
-          ScrollTrigger.refresh();
-        });
-      },
-      "(max-width:768px)": function () {
-        const grids = gsap.utils.toArray(".challenge-grid");
-        const wrapper = document.querySelector("#serviceCardWrapper");
-        const track = document.querySelector(".challenge-track");
-        const stickyTracker = document.querySelector(".sticky-tracker");
-        const tracker = document.querySelector(".tracker");
-
-        if (!wrapper || !track || grids.length === 0) return;
-
-        gsap.set(grids, { opacity: 0, y: 50 });
-        gsap.set(stickyTracker, { opacity: 0 });
-
-        let activeIndex = -1;
-
-        ScrollTrigger.create({
-          trigger: wrapper,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-
-          onUpdate() {
-            const viewportCenter = window.innerHeight / 2;
-
-            let closestIndex = 0;
-            let minDistance = Infinity;
-
-            // 🔥 FIND CARD CLOSEST TO CENTER
-            grids.forEach((card, index) => {
-              const rect = card.getBoundingClientRect();
-              const cardCenter = rect.top + rect.height / 2;
-              const distance = Math.abs(cardCenter - viewportCenter);
-
-              if (distance < minDistance) {
-                minDistance = distance;
-                closestIndex = index;
-              }
-            });
-
-            if (closestIndex === activeIndex) return;
-            activeIndex = closestIndex;
-
-            const activeCard = grids[activeIndex];
-
-            // 🔥 TRACKER VISIBILITY
-            stickyTracker.classList.add("active");
-            gsap.to(stickyTracker, { opacity: 1, duration: 0.3 });
-
-            // 🔥 CARD ACTIVE STATE
-            grids.forEach((card, i) => {
-              card.classList.toggle("active", i === activeIndex);
-
-              gsap.to(card, {
-                opacity: i === activeIndex ? 1 : 0.25,
-                y: i === activeIndex ? 0 : 30,
-                duration: 0.4,
-                ease: "power2.out"
-              });
-            });
-
-            // 🔥 TRACKER POSITION (ALIGNED TO ACTIVE CARD)
-            const trackRect = track.getBoundingClientRect();
-            const cardRect = activeCard.getBoundingClientRect();
-
-            const y = cardRect.top -  trackRect.top + cardRect.height / 2 - tracker.offsetHeight / 2 - 40;
-
-            gsap.to(tracker, {
-              y,
-              duration: 0.35,
-              ease: "power2.out"
-            });
-
-            animateCard(activeCard);
-          },
-
-          onLeaveBack() {
-            stickyTracker.classList.remove("active");
-
-            gsap.to(stickyTracker, { opacity: 0, duration: 0.3 });
-            gsap.to(tracker, { y: 0, duration: 0.3 });
-
-            grids.forEach(card => {
-              card.classList.remove("active");
-              gsap.set(card, { opacity: 0, y: 50 });
-            });
-
-            activeIndex = -1;
-          }
-        });
-
-        // 🔥 CARD INNER CONTENT ANIMATION
-        function animateCard(grid) {
-          const number = grid.querySelector(".challenge-number");
-          const heading = grid.querySelector(".challenge-heading");
-          const text = grid.querySelector(".challenge-text");
-          const image = grid.querySelector(".service-icon, .challenge-image");
-
-          gsap.timeline({ overwrite: true })
-            .fromTo(
-              [number, heading, text],
-              { opacity: 0, y: 30 },
-              { opacity: 1, y: 0, stagger: 0.15, duration: 0.45 }
-            )
-            .fromTo(
-              image,
-              { opacity: 0, scale: 0.8 },
-              { opacity: 1, scale: 1, duration: 0.45 },
-              "-=0.3"
-            );
-        }
-      }
-    })
-  })
-</script>   {% endcomment %}
-{% comment %} <script
-  defer=""
-  src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"
-></script> {% endcomment %}
-<script
-  src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=658031e408a50a76013e5183"
-  type="text/javascript"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"
-></script>
-{% comment %} <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script> {% endcomment %}
-{% comment %} <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.0/dist/barba.umd.min.js"></script> {% endcomment %}
-{% comment %} <script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-countup@1.0/dist/countup.min.js"></script> {% endcomment %}
-{% comment %} <script>
-  // GSAP Animations
-  gsap.registerPlugin(ScrollTrigger, Flip, SplitText);
-
-  // SplitText Handling
-  let split;
-  function runSplitType() {
-    split?.revert();
-    split = SplitText.create("[split-text]", {
-      type: "lines, words, chars",
-      mask: "lines",
-      linesClass: "line",
-      wordsClass: "word",
-      charsClass: "char",
-    });
-  }
-
-  runSplitType();
-
-  let windowWidth = window.innerWidth;
-  window.addEventListener("resize", () => {
-    if (windowWidth !== window.innerWidth) {
-      windowWidth = window.innerWidth;
-      runSplitType();
-    }
-  });
-
-  // Slide Up Effect
-  $("[lines-slide-up]").each(function () {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: $(this),
-          start: "top 75%",
-          end: "bottom bottom",
-        },
-      })
-      .from($(this).find(".line"), {
-        yPercent: 110,
-        duration: 1,
-        ease: "power2.out",
-        stagger: { amount: 0.1 },
-      });
-  });
-
-  // Word Fade Scrub
-  $("[scrub-each-word]").each(function () {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: $(this),
-          start: "top center",
-          end: "bottom center",
-          scrub: true,
-        },
-      })
-      .from($(this).find(".word"), {
-        opacity: 0.3,
-        duration: 0.8,
-        ease: "power1.out",
-        stagger: { each: 0.6 },
-      });
-  });
-
-  // Fade In Children
-  $("[fade-in]").each(function () {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: this,
-          start: "top 75%",
-          end: "bottom bottom",
-        },
-      })
-      .from($(this).children(), {
-        opacity: 0,
-        y: "3.5rem",
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: { amount: 0.1 },
-      });
-  });
-
-  // Fade Grey to Black Scroll Animation
-  $(document).ready(function () {
-    $(".fade-grey-to-black").each(function () {
-      const fadeTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: this,
-          start: "center 80%",
-          end: "center 50%",
-          scrub: true,
-        },
-      });
-
-      fadeTl.fromTo(
-        this,
-        { color: "#000", backgroundColor: "#f9f9f9" },
-        { color: "#f9f9f9", backgroundColor: "#000" },
-        0
-      );
-
-      fadeTl.to(
-        $(this).find(".challenge-item"),
-        {
-          "--bg-color": "#0000",
-        },
-        0
-      );
-    });
-  });
-
-  // Button Hover Split Animation
-  document.querySelectorAll("[data-button-hover]").forEach((link) => {
-    const linkText = link.querySelector("[data-button-text]");
-    if (!linkText) return;
-
-    const splitText = new SplitText(linkText, {
-      type: "chars",
-      charsClass: "char",
-    });
-    const letters = link.querySelectorAll(".char");
-
-    link.addEventListener("mouseenter", () => {
-      gsap.to(letters, {
-        yPercent: -100,
-        duration: 0.6,
-        ease: "power3.inOut",
-        stagger: { each: 0.008, from: "center" },
-        overwrite: "auto",
-      });
-    });
-
-    link.addEventListener("mouseleave", () => {
-      gsap.to(letters, {
-        yPercent: 0,
-        duration: 0.6,
-        ease: "expo.out",
-        stagger: { each: 0.004, from: "center" },
-        overwrite: "auto",
-      });
-    });
-  });
-
-  // Prevent flash of unstyled text
-  gsap.set("[text-split]", { opacity: 1 });
-</script> {% endcomment %}
+<!--parallax script-->
 <script>
   gsap.registerPlugin(ScrollTrigger);
-  //parallexglobal
+  ScrollTrigger.config({ ignoreMobileResize: true });
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-parallax]").forEach((element) => {
       let movementValue = parseFloat(element.getAttribute("data-parallax"));
@@ -2546,57 +1025,46 @@
               scrub: true,
               markers: false,
             },
-          }
+          },
         );
       }
     });
   });
 </script>
+
+<!-- Our Circle of Excellence company logo slider script -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const col = document.querySelector(".company_logo_col");
     const inner = col.querySelector(".company_logo_col_inner");
-
     if (!col || !inner) {
       console.error("Missing .company_logo_col or .company_logo_col_inner");
       return;
     }
-
     inner.classList.add("original-logo-inner");
-    // Clone inner logos for seamless loop
     const clone = inner.cloneNode(true);
-    clone.classList.remove("original-logo-inner"); // Remove if copied
+    clone.classList.remove("original-logo-inner");
     clone.classList.add("cloned-logo-inner");
     col.appendChild(clone);
-
     let pos = 0;
-    let speed = 0.8; // Decreased from 1.45 to slow down the scrolling
-
+    let speed = 0.8;
     function animate() {
       pos += speed;
-
-      // Reset position after full scroll
       if (pos >= inner.offsetHeight) {
         pos = 0;
       }
       col.style.transform = `translateY(${-pos}px)`;
-
-      // Run intersection check on each frame
       checkIntersection();
       requestAnimationFrame(animate);
     }
-
-    // Intersection check functions
     function isIntersecting(element1, element2) {
       const rect1 = element1.getBoundingClientRect();
       const rect2 = element2.getBoundingClientRect();
       return rect1.top < rect2.bottom && rect1.bottom > rect2.top;
     }
-
     function checkIntersection() {
       const logos = document.querySelectorAll(".company_logo");
       const trigger = document.querySelector(".company_logo_trigger");
-
       logos.forEach((logo) => {
         if (isIntersecting(logo, trigger)) {
           logo.style.opacity = "0";
@@ -2607,10 +1075,10 @@
         }
       });
     }
-    // Start animation
     animate();
   });
 </script>
+
 <script>
   function updateContactLink() {
     const link = document.getElementById("contact-link");
@@ -2620,19 +1088,8 @@
       link.setAttribute("href", "/contact-us/");
     }
   }
-  // Run on load
   updateContactLink();
-  // Run on resize
   window.addEventListener("resize", updateContactLink);
 </script>
-{% comment %} <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "url": "https://advancedentalexport.com/",
-    "name": "Advance Dental Export - Homepage",
-    "description": "Welcome to Advance Dental Export, your trusted source for advanced dental solutions including implants, cosmetic restorations, zirconia crowns, and CAD/CAM technology.",
-    "datePublished": "2011-03-27T09:00:00+00:00"
-  }
-</script> {% endcomment %}
+
 {% endblock %}

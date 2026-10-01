@@ -366,6 +366,13 @@
 
         }
 
+        @media (max-width: 1540px) and (max-height: 850px) {
+            .see-more-button {
+                top: 600px;
+            }
+
+        }
+
         @media (max-width: 1400px) {
             .cards {
                 width: 265px;
